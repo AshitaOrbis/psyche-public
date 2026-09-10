@@ -1,0 +1,4342 @@
+========== web/src/instruments/types.ts ==========
+/** Tier levels for the instrument battery */
+export type Tier = 'lite' | 'standard' | 'heavy';
+
+/** Response format for an item */
+export type ResponseFormat =
+  | { type: "likert"; min: number; max: number; labels: string[] }
+  | { type: "binary"; labels: [string, string] }
+  | { type: "numeric" }
+  | { type: "text"; minWords?: number }
+  | { type: "multiple-choice"; options: string[] };
+
+/** A single test item */
+export interface Item {
+  id: string;
+  text: string;
+  response: ResponseFormat;
+  /** Scale/domain this item belongs to */
+  scaleId: string;
+  /** If true, score is reversed before aggregation */
+  reversed?: boolean;
+}
+
+/** A measurement scale (e.g. a Big Five domain or facet) */
+export interface Scale {
+  id: string;
+  name: string;
+  description?: string;
+  /** Parent scale ID for facets */
+  parentId?: string;
+}
+
+/** Score interpretation tier */
+export interface ScoreTier {
+  min: number;
+  max: number;
+  label: string;
+  description: string;
+}
+
+/** A complete instrument definition */
+export interface Instrument {
+  id: string;
+  name: string;
+  shortName: string;
+  description: string;
+  citation: string;
+  itemCount: number;
+  estimatedMinutes: number;
+  scales: Scale[];
+  items: Item[];
+  /** Interpretation tiers per scale */
+  interpretations?: Record<string, ScoreTier[]>;
+  /** True for CAT-based adaptive instruments */
+  adaptive?: boolean;
+}
+
+/** A single response to an item */
+export interface ItemResponse {
+  itemId: string;
+  value: number | string;
+  timestamp: number;
+}
+
+/** Completed session for an instrument */
+export interface InstrumentSession {
+  instrumentId: string;
+  startedAt: number;
+  completedAt?: number;
+  responses: ItemResponse[];
+}
+
+/** Computed score for a scale */
+export interface ScaleScore {
+  scaleId: string;
+  scaleName: string;
+  raw: number;
+  /** Normalized to 0-100 */
+  normalized: number;
+  /** Number of items that contributed */
+  itemCount: number;
+  /** Cronbach's alpha if computable */
+  alpha?: number;
+  /** IRT theta estimate (CAT only) */
+  theta?: number;
+  /** Standard error of theta (CAT only) */
+  se?: number;
+  /** Number of items administered (CAT only) */
+  itemsAdministered?: number;
+}
+
+/** Full results for an instrument */
+export interface InstrumentResult {
+  instrumentId: string;
+  completedAt: number;
+  scores: ScaleScore[];
+}
+
+========== web/src/instruments/registry.ts ==========
+import type { Instrument, InstrumentSession, InstrumentResult } from "./types";
+
+type ScoringFn = (
+  instrument: Instrument,
+  session: InstrumentSession
+) => InstrumentResult;
+
+interface RegisteredInstrument {
+  instrument: Instrument;
+  score: ScoringFn;
+}
+
+const registry = new Map<string, RegisteredInstrument>();
+
+export function registerInstrument(
+  instrument: Instrument,
+  score: ScoringFn
+): void {
+  // Warn if any scale has items with differing response format ranges
+  for (const scale of instrument.scales) {
+    const scaleItems = instrument.items.filter((i) => i.scaleId === scale.id);
+    if (scaleItems.length > 0 && scaleItems[0]?.response.type === "likert") {
+      const first = scaleItems[0].response as { min: number; max: number };
+      for (const item of scaleItems) {
+        if (item.response.type === "likert") {
+          const resp = item.response as { min: number; max: number };
+          if (resp.min !== first.min || resp.max !== first.max) {
+            console.warn(
+              `[Psyche] Instrument "${instrument.id}" scale "${scale.id}" ` +
+              `has items with differing min/max (${first.min}-${first.max} vs ${resp.min}-${resp.max}). ` +
+              `Normalization assumes uniform ranges.`
+            );
+            break;
+          }
+        }
+      }
+    }
+  }
+  registry.set(instrument.id, { instrument, score });
+}
+
+export function getInstrument(id: string): RegisteredInstrument | undefined {
+  return registry.get(id);
+}
+
+export function getAllInstruments(): RegisteredInstrument[] {
+  return Array.from(registry.values());
+}
+
+export function getInstrumentIds(): string[] {
+  return Array.from(registry.keys());
+}
+
+/** Check if an instrument is adaptive (CAT-based) */
+export function isAdaptiveInstrument(id: string): boolean {
+  const reg = registry.get(id);
+  return reg?.instrument.adaptive === true;
+}
+
+========== web/src/instruments/tiers.ts ==========
+/**
+ * Tier configuration for the instrument battery.
+ *
+ * Tiers are additive: Standard includes Lite instruments (with replacements),
+ * Heavy includes Standard instruments (with replacements).
+ *
+ * The `replaces` map handles instruments superseded by a strictly better version.
+ * Heavy adds NEO-120 alongside NEO-300 (not replacing it) for cross-instrument comparison.
+ */
+
+import type { Tier } from "./types";
+
+interface TierDef {
+  /** Instruments added at this tier level */
+  instruments: string[];
+  /** Instruments replaced by better versions: old -> new */
+  replaces: Record<string, string>;
+}
+
+const TIER_DEFS: Record<Tier, TierDef> = {
+  lite: {
+    instruments: [
+      "ipip-neo-60",
+      "crt-7",
+      "ncs-18",
+      "rosenberg",
+      "sd3",
+      "phq9-gad7",
+      "ecr-r",
+      "erq-10",
+      "iri-28",
+      "self-monitoring-18",
+      "loc-ie4",
+      "grit-s",
+      "riasec-48",
+      "bpns-9",
+      "open-ended",
+    ],
+    replaces: {},
+  },
+  standard: {
+    instruments: [
+      "ipip-neo-300",
+      "hexaco-60",
+      "swls",
+      "aaq-ii",
+      "dweck-itis",
+      "cei-ii",
+    ],
+    replaces: {
+      "ipip-neo-60": "ipip-neo-300",
+    },
+  },
+  heavy: {
+    // CAT instruments (cat-big5, cat-hexaco) are included here but require
+    // validated IRT item banks before use. The standalone app will emit a
+    // console warning if CAT instruments are loaded with synthetic parameters.
+    // See cat-controller.ts validateItemBank() and BACKLOG.md #CAT.
+    instruments: [
+      "ipip-neo-120",
+      "hexaco-200",
+      "grit-o",
+      "bpns-21",
+      "levenson-ipc-24",
+      "snyder-sm-25",
+      "cat-big5",
+      "cat-hexaco",
+      "aot-13",
+      "ius-12",
+      "scs-26",
+      "mfq-2",
+      "frost-mps",
+      "maas",
+      "authenticity",
+      "tangney-scs",
+      "maximization",
+      "ztpi",
+    ],
+    replaces: {
+      "hexaco-60": "hexaco-200",
+      "grit-s": "grit-o",
+      "bpns-9": "bpns-21",
+      "loc-ie4": "levenson-ipc-24",
+      "self-monitoring-18": "snyder-sm-25",
+    },
+  },
+};
+
+/** Ordered list of tiers from lowest to highest */
+const TIER_ORDER: Tier[] = ["lite", "standard", "heavy"];
+
+/**
+ * Get the list of instrument IDs for a given tier.
+ *
+ * Accumulates instruments from lite through the target tier,
+ * applying replacement rules at each level.
+ */
+export function getInstrumentsForTier(tier: Tier): string[] {
+  const instruments = new Set<string>();
+  const targetIdx = TIER_ORDER.indexOf(tier);
+
+  for (let i = 0; i <= targetIdx; i++) {
+    const def = TIER_DEFS[TIER_ORDER[i]!]!;
+
+    // Apply replacements: remove old instruments
+    for (const oldId of Object.keys(def.replaces)) {
+      instruments.delete(oldId);
+    }
+
+    // Add new instruments
+    for (const id of def.instruments) {
+      instruments.add(id);
+    }
+  }
+
+  return Array.from(instruments);
+}
+
+/** Estimated item counts and times per tier */
+export const TIER_META: Record<Tier, { label: string; estimatedItems: string; estimatedTime: string }> = {
+  lite: { label: "Lite", estimatedItems: "~260 items", estimatedTime: "~35 min" },
+  standard: { label: "Standard", estimatedItems: "~590 items", estimatedTime: "~80 min" },
+  heavy: { label: "Heavy", estimatedItems: "~1,130+ items", estimatedTime: "~160 min" },
+};
+
+/** Instrument category groupings for display */
+export const INSTRUMENT_CATEGORIES: { name: string; instrumentIds: string[] }[] = [
+  { name: "Personality", instrumentIds: ["ipip-neo-60", "ipip-neo-120", "ipip-neo-300", "hexaco-60", "hexaco-200", "cat-big5", "cat-hexaco"] },
+  { name: "Cognitive", instrumentIds: ["crt-7", "ncs-18", "aot-13", "dweck-itis"] },
+  { name: "Wellbeing", instrumentIds: ["phq9-gad7", "rosenberg", "swls", "scs-26", "maas"] },
+  { name: "Interpersonal", instrumentIds: ["ecr-r", "iri-28", "self-monitoring-18", "snyder-sm-25", "authenticity"] },
+  { name: "Self-Regulation", instrumentIds: ["erq-10", "tangney-scs", "aaq-ii", "frost-mps"] },
+  { name: "Motivation", instrumentIds: ["grit-s", "grit-o", "bpns-9", "bpns-21", "loc-ie4", "levenson-ipc-24", "riasec-48", "cei-ii"] },
+  { name: "Values & Morals", instrumentIds: ["sd3", "mfq-2"] },
+  { name: "Decision Style", instrumentIds: ["maximization", "ius-12", "ztpi"] },
+  { name: "Qualitative", instrumentIds: ["open-ended"] },
+];
+
+========== web/src/instruments/init-lite.ts ==========
+// Side-effect imports to register Lite tier instruments only.
+// Base layer imported by init-standard.ts (and eventually init-heavy.ts).
+
+import "./ipip-neo-60";
+import "./crt-7";
+import "./ncs-18";
+import "./rosenberg";
+import "./sd3";
+import "./phq9-gad7";
+import "./ecr-r";
+import "./erq-10";
+import "./iri-28";
+import "./self-monitoring-18";
+import "./loc-ie4";
+import "./grit-s";
+import "./riasec-48";
+import "./bpns-9";
+import "./open-ended";
+
+========== web/src/instruments/init-standard.ts ==========
+// Side-effect imports to register Standard tier instruments.
+// Includes all Lite instruments plus Standard-tier additions.
+
+import "./init-lite";
+import "./ipip-neo-300";
+import "./hexaco-60";
+import "./swls";
+import "./aaq-ii";
+import "./dweck-itis";
+import "./cei-ii";
+
+========== web/src/instruments/init.ts ==========
+// Side-effect imports to register all instruments.
+// Add new instruments here as they are implemented.
+
+// Phase 1:
+import "./ipip-neo-120";
+
+// Phase 2:
+import "./crt-7";
+import "./ncs-18";
+import "./rosenberg";
+import "./sd3";
+import "./phq9-gad7";
+import "./open-ended";
+
+// Phase 3 — Extended Battery:
+import "./ipip-neo-300";
+import "./hexaco-60";
+import "./ecr-r";
+import "./erq-10";
+import "./iri-28";
+import "./self-monitoring-18";
+import "./loc-ie4";
+import "./grit-s";
+import "./riasec-48";
+import "./bpns-9";
+
+// Phase 4 — Tiered Battery (Lite + Heavy):
+import "./ipip-neo-60";      // Lite Big Five
+import "./hexaco-200";        // Heavy HEXACO
+import "./grit-o";            // Heavy Grit
+import "./bpns-21";           // Heavy Needs
+import "./levenson-ipc-24";   // Heavy LOC
+import "./snyder-sm-25";      // Heavy Self-Monitoring
+
+// Phase 5 — Computerized Adaptive Testing (Heavy only):
+import "./cat-big5";          // Adaptive Big Five
+import "./cat-hexaco";        // Adaptive HEXACO
+
+// Phase 6 — Extended Assessment Battery (Standard + Heavy):
+import "./swls";              // Standard: Life Satisfaction
+import "./aaq-ii";            // Standard: Psychological Flexibility
+import "./dweck-itis";        // Standard: Growth Mindset
+import "./cei-ii";            // Standard: Curiosity
+import "./aot-13";            // Heavy: Open-Minded Thinking
+import "./ius-12";            // Heavy: Intolerance of Uncertainty
+import "./scs-26";            // Heavy: Self-Compassion
+import "./mfq-2";             // Heavy: Moral Foundations
+import "./frost-mps";         // Heavy: Perfectionism
+import "./maas";              // Heavy: Mindfulness
+import "./authenticity";      // Heavy: Authenticity
+import "./tangney-scs";       // Heavy: Self-Control
+import "./maximization";      // Heavy: Maximization
+import "./ztpi";              // Heavy: Time Perspective
+
+========== web/src/instruments/open-ended.ts ==========
+import type { Instrument, InstrumentSession, InstrumentResult } from "./types";
+import { registerInstrument } from "./registry";
+
+/**
+ * Open-Ended Qualitative Prompts
+ * Semi-structured self-reflection questions for qualitative analysis.
+ * No scoring — responses are exported for LLM analysis.
+ */
+
+export const INTERVIEW_PROMPTS = [
+  "Describe yourself as you would to a stranger who will never see you. Be as honest as possible.",
+  "What are you most proud of? What are you least proud of?",
+  "How do you typically respond to conflict or disagreement?",
+  "Describe a decision you made recently that you found difficult. What made it hard?",
+  "What gives you energy? What drains you?",
+  "How have you changed in the last five years? What caused the change?",
+  "What do your closest friends value most about you? What do they wish you'd change?",
+  "Describe your relationship with uncertainty and ambiguity.",
+  "What topic could you talk about for hours? Why does it matter to you?",
+  "If you could design your ideal day with no obligations, what would it look like?",
+];
+
+const openEnded: Instrument = {
+  id: "open-ended",
+  name: "Self-Reflection Prompts",
+  shortName: "Reflection",
+  description:
+    "Open-ended questions for qualitative personality analysis. No right answers — write freely.",
+  citation: "Custom instrument for qualitative triangulation.",
+  itemCount: INTERVIEW_PROMPTS.length,
+  estimatedMinutes: 15,
+  scales: [
+    { id: "qualitative", name: "Qualitative Responses" },
+    { id: "word-count", name: "Total Word Count" },
+  ],
+  items: INTERVIEW_PROMPTS.map((text, idx) => ({
+    id: `open-${idx + 1}`,
+    text,
+    response: { type: "text" as const, minWords: 30 },
+    scaleId: "qualitative",
+  })),
+};
+
+/** No scoring — just record completeness */
+function scoreOpenEnded(_instrument: Instrument, session: InstrumentSession): InstrumentResult {
+  const answered = session.responses.filter(
+    (r) => typeof r.value === "string" && r.value.trim().length > 0
+  ).length;
+
+  const totalWords = session.responses.reduce((sum, r) => {
+    if (typeof r.value === "string") {
+      const words = r.value.trim();
+      return sum + (words.length > 0 ? words.split(/\s+/).length : 0);
+    }
+    return sum;
+  }, 0);
+
+  return {
+    instrumentId: "open-ended",
+    completedAt: session.completedAt ?? Date.now(),
+    scores: [
+      {
+        scaleId: "qualitative",
+        scaleName: "Qualitative Responses",
+        raw: answered,
+        normalized: (answered / INTERVIEW_PROMPTS.length) * 100,
+        itemCount: answered,
+      },
+      {
+        scaleId: "word-count",
+        scaleName: "Total Word Count",
+        raw: totalWords,
+        normalized: Math.min((totalWords / 1000) * 100, 100), // 1000 words = 100%
+        itemCount: answered,
+      },
+    ],
+  };
+}
+
+registerInstrument(openEnded, scoreOpenEnded);
+
+export default openEnded;
+
+========== web/src/scoring/engine.ts ==========
+import type {
+  Instrument,
+  InstrumentSession,
+  InstrumentResult,
+  ScaleScore,
+  Item,
+  ItemResponse,
+} from "../instruments/types";
+import type { CATSession } from "./cat-controller";
+import { catSessionToScores } from "./cat-controller";
+
+/**
+ * Build a response map and group scored values by scale.
+ * Shared between scoreBinary and scoreLikert.
+ */
+function groupResponsesByScale(
+  instrument: Instrument,
+  session: InstrumentSession,
+  reverser: (value: number, item: Item) => number,
+): Map<string, { item: Item; value: number }[]> {
+  const responseMap = new Map<string, ItemResponse>();
+  for (const r of session.responses) {
+    responseMap.set(r.itemId, r);
+  }
+
+  const scaleItems = new Map<string, { item: Item; value: number }[]>();
+  for (const item of instrument.items) {
+    const resp = responseMap.get(item.id);
+    if (!resp || typeof resp.value !== "number") continue;
+
+    const value = item.reversed ? reverser(resp.value, item) : resp.value;
+    const existing = scaleItems.get(item.scaleId) ?? [];
+    existing.push({ item, value });
+    scaleItems.set(item.scaleId, existing);
+  }
+
+  return scaleItems;
+}
+
+/**
+ * Aggregate grouped scale items into ScaleScore[].
+ * Shared between scoreBinary and scoreLikert.
+ */
+function aggregateScales(
+  instrument: Instrument,
+  scaleItems: Map<string, { item: Item; value: number }[]>,
+  normalizer: (raw: number, scaleId: string, instrument: Instrument) => number,
+): ScaleScore[] {
+  const scores: ScaleScore[] = [];
+  for (const scale of instrument.scales) {
+    const items = scaleItems.get(scale.id);
+    if (!items || items.length === 0) continue;
+
+    const raw = items.reduce((sum, i) => sum + i.value, 0) / items.length;
+    const normalized = normalizer(raw, scale.id, instrument);
+
+    scores.push({
+      scaleId: scale.id,
+      scaleName: scale.name,
+      raw,
+      normalized,
+      itemCount: items.length,
+    });
+  }
+  return scores;
+}
+
+/**
+ * Generic binary (True/False) scoring engine.
+ * True = 1, False = 0; reverse scoring supported.
+ */
+export function scoreBinary(
+  instrument: Instrument,
+  session: InstrumentSession
+): InstrumentResult {
+  const scaleItems = groupResponsesByScale(
+    instrument, session,
+    (value) => 1 - value,
+  );
+
+  const scores = aggregateScales(
+    instrument, scaleItems,
+    (raw) => raw * 100, // 0-1 → 0-100
+  );
+
+  return {
+    instrumentId: instrument.id,
+    completedAt: session.completedAt ?? Date.now(),
+    scores,
+  };
+}
+
+/**
+ * Generic Likert scoring engine.
+ * Handles reverse scoring, scale aggregation, and normalization.
+ */
+export function scoreLikert(
+  instrument: Instrument,
+  session: InstrumentSession
+): InstrumentResult {
+  const scaleItems = groupResponsesByScale(
+    instrument, session,
+    (value, item) => {
+      if (item.response.type === "likert") {
+        const { min, max } = item.response;
+        return max + min - value;
+      }
+      return value;
+    },
+  );
+
+  const scores = aggregateScales(
+    instrument, scaleItems,
+    (raw, scaleId, inst) => {
+      const firstItem = inst.items.find((i) => i.scaleId === scaleId);
+      if (firstItem?.response.type === "likert") {
+        const { min, max } = firstItem.response;
+        if (max === min) return raw === min ? 0 : 100;
+        return Math.max(0, Math.min(100, ((raw - min) / (max - min)) * 100));
+      }
+      return Math.max(0, Math.min(100, raw));
+    },
+  );
+
+  return {
+    instrumentId: instrument.id,
+    completedAt: session.completedAt ?? Date.now(),
+    scores,
+  };
+}
+
+/**
+ * Convert a completed CAT session into an InstrumentResult.
+ * Theta estimates are converted to 0-100 percentile scores via normal CDF.
+ */
+export function scoreAdaptive(
+  instrumentId: string,
+  catSession: CATSession,
+  scaleNames?: Map<string, string>,
+): InstrumentResult {
+  const scores = catSessionToScores(catSession);
+  // Map scale names if provided
+  if (scaleNames) {
+    for (const score of scores) {
+      score.scaleName = scaleNames.get(score.scaleId) ?? score.scaleId;
+    }
+  }
+  return {
+    instrumentId,
+    completedAt: Date.now(),
+    scores,
+  };
+}
+
+========== web/src/scoring/grm-engine.ts ==========
+/**
+ * Graded Response Model (GRM) engine for Computerized Adaptive Testing.
+ *
+ * Implements Samejima's (1969) GRM for polytomous items (e.g., 5-point Likert).
+ * Uses Expected A Posteriori (EAP) estimation with Gauss-Hermite quadrature.
+ *
+ * Mathematical basis:
+ *   P*(k|θ) = 1 / (1 + exp(-a * (θ - b_k)))
+ *   P(X=k|θ) = P*(k|θ) - P*(k+1|θ)  where P*(0)=1, P*(K)=0
+ *   I(θ) = a² * Σ_k [P'(X=k|θ)² / P(X=k|θ)]
+ */
+
+/** IRT parameters for a single GRM item. */
+export interface GRMItem {
+  /** Unique item identifier */
+  id: string;
+  /** Item text for display */
+  text: string;
+  /** Discrimination parameter (a > 0) */
+  discrimination: number;
+  /** Threshold parameters [b₁, b₂, ..., b_{K-1}], strictly ordered */
+  thresholds: number[];
+  /** Number of response categories (e.g., 5 for 1-5 Likert) */
+  numCategories: number;
+  /** Dimension/facet this item measures */
+  dimensionId: string;
+  /**
+   * Whether to reverse-score this item.
+   * Note: In GRM, reverse scoring is metadata for response mapping (flipping
+   * the response before computing probabilities). The IRT model handles
+   * directionality via the discrimination sign and threshold ordering, so
+   * `reverse` is NOT used in the GRM probability computation itself.
+   */
+  reverse?: boolean;
+}
+
+/** Response to a CAT item. */
+export interface CATResponse {
+  itemId: string;
+  /** 0-indexed category (0 = lowest, numCategories-1 = highest) */
+  category: number;
+}
+
+/** Quadrature point for EAP estimation. */
+interface QuadPoint {
+  theta: number;
+  weight: number;
+}
+
+// ── Constants ──────────────────────────────────────────────────
+
+const CLAMP_MIN = 1e-10;
+const CLAMP_MAX = 1 - 1e-10;
+const QUAD_RANGE = 4.0; // ±4 SD
+const QUAD_POINTS = 41;  // Odd for symmetry
+
+// ── Core GRM Functions ─────────────────────────────────────────
+
+/**
+ * Cumulative probability P*(k|θ) = 1 / (1 + exp(-a*(θ - b_k))).
+ * P*(0) = 1, P*(K) = 0 by convention.
+ */
+function cumulativeProb(item: GRMItem, theta: number, k: number): number {
+  if (k <= 0) return 1.0;
+  if (k >= item.numCategories) return 0.0;
+  const threshold = item.thresholds[k - 1];
+  if (threshold === undefined) return 0.0;
+  const z = item.discrimination * (theta - threshold);
+  // Numerically stable logistic
+  if (z > 30) return 1.0;
+  if (z < -30) return 0.0;
+  return 1.0 / (1.0 + Math.exp(-z));
+}
+
+/**
+ * Category probability P(X=k|θ) = P*(k) - P*(k+1).
+ * Returns a clamped value in [CLAMP_MIN, CLAMP_MAX].
+ */
+export function categoryProbability(item: GRMItem, theta: number, category: number): number {
+  const pStar = cumulativeProb(item, theta, category);
+  const pStarNext = cumulativeProb(item, theta, category + 1);
+  return Math.max(CLAMP_MIN, Math.min(CLAMP_MAX, pStar - pStarNext));
+}
+
+/**
+ * All category probabilities for an item. Normalized to sum to 1.
+ */
+export function categoryProbabilities(item: GRMItem, theta: number): number[] {
+  const probs: number[] = [];
+  let sum = 0;
+  for (let k = 0; k < item.numCategories; k++) {
+    const p = categoryProbability(item, theta, k);
+    probs.push(p);
+    sum += p;
+  }
+  // Normalize
+  if (sum > 0) {
+    for (let i = 0; i < probs.length; i++) {
+      probs[i] = probs[i]! / sum;
+    }
+  }
+  return probs;
+}
+
+/**
+ * Fisher information I(θ) for a single item.
+ * Uses numerical approximation via category probabilities.
+ *
+ * I(θ) = a² * Σ_k [(P*_k(1-P*_k) - P*_{k+1}(1-P*_{k+1}))² / P(X=k)]
+ */
+export function itemInformation(item: GRMItem, theta: number): number {
+  const a = item.discrimination;
+  let info = 0;
+  for (let k = 0; k < item.numCategories; k++) {
+    const pk = categoryProbability(item, theta, k);
+    const pStarK = cumulativeProb(item, theta, k);
+    const pStarK1 = cumulativeProb(item, theta, k + 1);
+    // Derivative terms
+    const dPstarK = pStarK * (1 - pStarK);
+    const dPstarK1 = pStarK1 * (1 - pStarK1);
+    const numerator = (dPstarK - dPstarK1) ** 2;
+    info += numerator / pk;
+  }
+  return a * a * info;
+}
+
+/**
+ * Total test information at θ for a set of items.
+ */
+export function testInformation(items: GRMItem[], theta: number): number {
+  return items.reduce((sum, item) => sum + itemInformation(item, theta), 0);
+}
+
+// ── Theta Estimation ───────────────────────────────────────────
+
+/**
+ * Build quadrature grid for EAP estimation.
+ * Uses equidistant points with normal prior weights.
+ */
+function buildQuadGrid(
+  priorMean: number,
+  priorSD: number,
+  nPoints: number = QUAD_POINTS,
+  range: number = QUAD_RANGE,
+): QuadPoint[] {
+  const points: QuadPoint[] = [];
+  const lo = priorMean - range * priorSD;
+  const hi = priorMean + range * priorSD;
+  const step = (hi - lo) / (nPoints - 1);
+
+  let totalWeight = 0;
+  for (let i = 0; i < nPoints; i++) {
+    const theta = lo + i * step;
+    const z = (theta - priorMean) / priorSD;
+    const weight = Math.exp(-0.5 * z * z);
+    points.push({ theta, weight });
+    totalWeight += weight;
+  }
+  // Normalize weights
+  for (const p of points) {
+    p.weight /= totalWeight;
+  }
+  return points;
+}
+
+/**
+ * Expected A Posteriori (EAP) theta estimation.
+ *
+ * Computes posterior mean of θ given observed responses and a normal prior.
+ * Uses Gauss-Hermite quadrature for numerical integration.
+ *
+ * Returns { theta, se } where se is the posterior standard deviation.
+ */
+export function estimateTheta(
+  items: GRMItem[],
+  responses: CATResponse[],
+  priorMean: number = 0,
+  priorSD: number = 1,
+): { theta: number; se: number } {
+  if (responses.length === 0) {
+    return { theta: priorMean, se: priorSD };
+  }
+
+  const responseMap = new Map<string, number>();
+  for (const r of responses) {
+    responseMap.set(r.itemId, r.category);
+  }
+
+  const grid = buildQuadGrid(priorMean, priorSD);
+
+  // Compute log-likelihood at each quadrature point
+  const logLikelihoods: number[] = [];
+  let maxLL = -Infinity;
+
+  for (const point of grid) {
+    let logL = 0;
+    for (const item of items) {
+      const cat = responseMap.get(item.id);
+      if (cat === undefined) continue;
+      const p = categoryProbability(item, point.theta, cat);
+      logL += Math.log(p);
+    }
+    logLikelihoods.push(logL);
+    if (logL > maxLL) maxLL = logL;
+  }
+
+  // Compute posterior (prior * likelihood) with log-sum-exp for stability
+  let posteriorSum = 0;
+  let thetaSum = 0;
+  let thetaSqSum = 0;
+
+  for (let i = 0; i < grid.length; i++) {
+    const point = grid[i]!;
+    const logL = logLikelihoods[i]!;
+    // posterior ∝ prior_weight * exp(logL - maxLL)
+    const posterior = point.weight * Math.exp(logL - maxLL);
+    posteriorSum += posterior;
+    thetaSum += point.theta * posterior;
+    thetaSqSum += point.theta * point.theta * posterior;
+  }
+
+  if (posteriorSum === 0) {
+    return { theta: priorMean, se: priorSD };
+  }
+
+  const thetaHat = thetaSum / posteriorSum;
+  const variance = thetaSqSum / posteriorSum - thetaHat * thetaHat;
+  const se = Math.sqrt(Math.max(0, variance));
+
+  return { theta: thetaHat, se: se || priorSD };
+}
+
+// ── Utility ────────────────────────────────────────────────────
+
+/**
+ * Convert IRT theta to 0-100 percentile scale via normal CDF.
+ * theta=0 → 50, theta=1 → ~84, theta=-1 → ~16.
+ *
+ * Uses Abramowitz & Stegun approximation (7-digit accuracy).
+ */
+export function thetaToPercentile(theta: number): number {
+  if (theta < -6) return 0;
+  if (theta > 6) return 100;
+
+  const t = 1.0 / (1.0 + 0.2316419 * Math.abs(theta));
+  const d = 0.3989422804014327; // 1/sqrt(2π)
+  const p = d * Math.exp(-0.5 * theta * theta);
+  const poly = t * (0.319381530 + t * (-0.356563782 + t * (1.781477937 + t * (-1.821255978 + t * 1.330274429))));
+  const cdf = theta >= 0 ? 1.0 - p * poly : p * poly;
+  return Math.round(cdf * 10000) / 100; // Two decimal places
+}
+
+/**
+ * Select the most informative item for a given theta from an item bank,
+ * excluding already-administered items.
+ */
+export function selectNextItem(
+  bank: GRMItem[],
+  theta: number,
+  administered: Set<string>,
+): GRMItem | null {
+  let bestItem: GRMItem | null = null;
+  let bestInfo = -Infinity;
+
+  for (const item of bank) {
+    if (administered.has(item.id)) continue;
+    const info = itemInformation(item, theta);
+    if (info > bestInfo) {
+      bestInfo = info;
+      bestItem = item;
+    }
+  }
+  return bestItem;
+}
+
+========== web/src/scoring/cat-controller.ts ==========
+/**
+ * CAT Controller — orchestrates per-facet adaptive testing.
+ *
+ * Manages multiple independent mini-CATs (one per dimension/facet).
+ * Uses fixed-form theta as informative prior when available.
+ * Excludes fixed-form items from the CAT item pool.
+ */
+
+import type { GRMItem, CATResponse } from "./grm-engine";
+import { estimateTheta, thetaToPercentile, selectNextItem } from "./grm-engine";
+import type { ScaleScore } from "../instruments/types";
+
+/** Stopping criteria for adaptive testing. */
+export interface StoppingCriteria {
+  /** Target standard error (stop when SE ≤ this) */
+  seThreshold: number;
+  /** Minimum items per dimension before stopping is allowed */
+  minItems: number;
+  /** Maximum items per dimension (hard stop) */
+  maxItems: number;
+}
+
+/** State for a single dimension's CAT session. */
+export interface DimensionSession {
+  dimensionId: string;
+  /** Current theta estimate */
+  theta: number;
+  /** Current standard error */
+  se: number;
+  /** Items administered for this dimension */
+  administered: CATResponse[];
+  /** Set of administered item IDs */
+  administeredIds: Set<string>;
+  /** Whether this dimension is complete */
+  complete: boolean;
+  /** Prior theta (from fixed-form if available) */
+  priorMean: number;
+  /** Prior SD (from fixed-form SE if available) */
+  priorSD: number;
+}
+
+/** Full CAT session state. */
+export interface CATSession {
+  instrumentId: string;
+  /** Per-dimension sessions */
+  dimensions: Map<string, DimensionSession>;
+  /** Order in which dimensions are tested */
+  dimensionOrder: string[];
+  /** Index of current dimension being tested */
+  currentDimensionIndex: number;
+  /** Total items administered across all dimensions */
+  totalItemsAdministered: number;
+  /** Whether the entire CAT is complete */
+  complete: boolean;
+}
+
+/** Default stopping criteria for personality assessment. */
+export const DEFAULT_STOPPING: StoppingCriteria = {
+  seThreshold: 0.30,
+  minItems: 3,
+  maxItems: 10,
+};
+
+/**
+ * Validate that an item bank has real IRT parameters (not synthetic placeholders).
+ * Call this before initializing a CAT session to warn about invalid banks.
+ */
+export function validateItemBank(itemBank: GRMItem[]): boolean {
+  if (itemBank.length === 0) return false;
+  // Synthetic banks typically have uniform discrimination (a) values
+  const aValues = new Set(itemBank.map(item => item.discrimination));
+  if (aValues.size === 1) {
+    console.warn(
+      '[Psyche CAT] Item bank appears to use synthetic/placeholder parameters ' +
+      '(all discrimination values are identical). CAT results will not be psychometrically valid. ' +
+      'See BACKLOG.md for validated item bank requirements.'
+    );
+    return false;
+  }
+  return true;
+}
+
+/**
+ * Initialize a CAT session for a set of dimensions.
+ *
+ * @param instrumentId - Identifier for this CAT instrument
+ * @param itemBank - Full item bank with GRM parameters
+ * @param fixedFormScores - Optional scores from fixed-form instruments (theta estimates used as priors)
+ * @param fixedFormItemIds - Item IDs from fixed-form instruments to exclude from CAT pool
+ * @param stopping - Stopping criteria
+ */
+export function initCATSession(
+  instrumentId: string,
+  itemBank: GRMItem[],
+  fixedFormScores?: ScaleScore[],
+  fixedFormItemIds?: Set<string>,
+  stopping: StoppingCriteria = DEFAULT_STOPPING,
+): CATSession {
+  // Group items by dimension
+  const dimensionItems = new Map<string, GRMItem[]>();
+  for (const item of itemBank) {
+    // Skip items already administered in fixed form
+    if (fixedFormItemIds?.has(item.id)) continue;
+    const items = dimensionItems.get(item.dimensionId) ?? [];
+    items.push(item);
+    dimensionItems.set(item.dimensionId, items);
+  }
+
+  // Build dimension sessions
+  const dimensions = new Map<string, DimensionSession>();
+  const dimensionOrder: string[] = [];
+
+  // Build fixed-form theta lookup
+  const fixedTheta = new Map<string, { theta: number; se: number }>();
+  if (fixedFormScores) {
+    for (const score of fixedFormScores) {
+      if (score.theta !== undefined && score.se !== undefined) {
+        fixedTheta.set(score.scaleId, { theta: score.theta, se: score.se });
+      }
+    }
+  }
+
+  for (const [dimId] of dimensionItems) {
+    // Skip dimension if fixed-form already meets SE threshold
+    const prior = fixedTheta.get(dimId);
+    if (prior && prior.se <= stopping.seThreshold) {
+      continue; // Fixed form good enough, skip CAT for this facet
+    }
+
+    const priorMean = prior?.theta ?? 0;
+    const priorSD = prior?.se ?? 1;
+
+    dimensions.set(dimId, {
+      dimensionId: dimId,
+      theta: priorMean,
+      se: priorSD,
+      administered: [],
+      administeredIds: new Set(),
+      complete: false,
+      priorMean,
+      priorSD,
+    });
+    dimensionOrder.push(dimId);
+  }
+
+  return {
+    instrumentId,
+    dimensions,
+    dimensionOrder,
+    currentDimensionIndex: 0,
+    totalItemsAdministered: 0,
+    complete: dimensionOrder.length === 0,
+  };
+}
+
+/**
+ * Get the next item to administer.
+ * Returns null if all dimensions are complete.
+ * Returns a new session state to reflect any dimension advancement.
+ */
+export function getNextItem(
+  session: CATSession,
+  itemBank: GRMItem[],
+): { item: GRMItem; dimensionId: string; session: CATSession } | null {
+  if (session.complete) return null;
+
+  let currentIndex = session.currentDimensionIndex;
+  let updatedDims = session.dimensions;
+
+  // Find next incomplete dimension
+  while (currentIndex < session.dimensionOrder.length) {
+    const dimId = session.dimensionOrder[currentIndex]!;
+    const dimSession = updatedDims.get(dimId);
+    if (!dimSession) {
+      currentIndex++;
+      continue;
+    }
+
+    if (dimSession.complete) {
+      currentIndex++;
+      continue;
+    }
+
+    // Filter bank to this dimension
+    const dimBank = itemBank.filter(
+      (item) => item.dimensionId === dimId && !dimSession.administeredIds.has(item.id),
+    );
+
+    if (dimBank.length === 0) {
+      updatedDims = new Map(updatedDims);
+      updatedDims.set(dimId, { ...dimSession, complete: true });
+      currentIndex++;
+      continue;
+    }
+
+    const nextItem = selectNextItem(dimBank, dimSession.theta, dimSession.administeredIds);
+    if (!nextItem) {
+      updatedDims = new Map(updatedDims);
+      updatedDims.set(dimId, { ...dimSession, complete: true });
+      currentIndex++;
+      continue;
+    }
+
+    const newSession: CATSession = {
+      ...session,
+      dimensions: updatedDims,
+      currentDimensionIndex: currentIndex,
+    };
+    return { item: nextItem, dimensionId: dimId, session: newSession };
+  }
+
+  // All dimensions complete
+  return null;
+}
+
+/**
+ * Register a response and update theta estimate.
+ * Returns a new session state. If itemId was already administered, returns unchanged session.
+ */
+export function registerResponse(
+  session: CATSession,
+  itemBank: GRMItem[],
+  itemId: string,
+  category: number,
+  stopping: StoppingCriteria = DEFAULT_STOPPING,
+): CATSession {
+  // Find which dimension this item belongs to
+  const item = itemBank.find((i) => i.id === itemId);
+  if (!item) return session;
+
+  const dimSession = session.dimensions.get(item.dimensionId);
+  if (!dimSession) return session;
+
+  // Double-submit guard: if already administered, return unchanged
+  if (dimSession.administeredIds.has(itemId)) return session;
+
+  // Build new dimension session with the response added
+  const response: CATResponse = { itemId, category };
+  const newAdministered = [...dimSession.administered, response];
+  const newAdministeredIds = new Set([...dimSession.administeredIds, itemId]);
+
+  // Get all items for this dimension that have been administered
+  const administeredItems = itemBank.filter(
+    (i) => i.dimensionId === item.dimensionId && newAdministeredIds.has(i.id),
+  );
+
+  // Re-estimate theta
+  const estimate = estimateTheta(
+    administeredItems,
+    newAdministered,
+    dimSession.priorMean,
+    dimSession.priorSD,
+  );
+
+  // Check stopping criteria
+  const nItems = newAdministered.length;
+  let isComplete = false;
+  if (nItems >= stopping.maxItems) {
+    isComplete = true;
+  } else if (nItems >= stopping.minItems && estimate.se <= stopping.seThreshold) {
+    isComplete = true;
+  }
+
+  const newDimSession: DimensionSession = {
+    ...dimSession,
+    administered: newAdministered,
+    administeredIds: newAdministeredIds,
+    theta: estimate.theta,
+    se: estimate.se,
+    complete: isComplete,
+  };
+
+  const newDims = new Map(session.dimensions);
+  newDims.set(item.dimensionId, newDimSession);
+
+  let newIndex = session.currentDimensionIndex;
+  let sessionComplete = session.complete;
+  if (isComplete) {
+    newIndex++;
+    if ([...newDims.values()].every((d) => d.complete)) {
+      sessionComplete = true;
+    }
+  }
+
+  return {
+    ...session,
+    dimensions: newDims,
+    currentDimensionIndex: newIndex,
+    totalItemsAdministered: session.totalItemsAdministered + 1,
+    complete: sessionComplete,
+  };
+}
+
+/**
+ * Get progress summary for all dimensions.
+ */
+export function getCATProgress(session: CATSession): {
+  dimensionId: string;
+  theta: number;
+  se: number;
+  itemsAdministered: number;
+  complete: boolean;
+  percentile: number;
+}[] {
+  return session.dimensionOrder.map((dimId) => {
+    const dim = session.dimensions.get(dimId)!;
+    return {
+      dimensionId: dimId,
+      theta: dim.theta,
+      se: dim.se,
+      itemsAdministered: dim.administered.length,
+      complete: dim.complete,
+      percentile: thetaToPercentile(dim.theta),
+    };
+  });
+}
+
+/**
+ * Convert completed CAT session to ScaleScore array for storage.
+ */
+export function catSessionToScores(session: CATSession): ScaleScore[] {
+  const scores: ScaleScore[] = [];
+  for (const [dimId, dim] of session.dimensions) {
+    scores.push({
+      scaleId: dimId,
+      scaleName: dimId, // Will be mapped to proper names by the instrument definition
+      raw: dim.theta,
+      normalized: thetaToPercentile(dim.theta),
+      itemCount: dim.administered.length,
+      theta: dim.theta,
+      se: dim.se,
+      itemsAdministered: dim.administered.length,
+    });
+  }
+  return scores;
+}
+
+========== web/src/state/store.ts ==========
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
+import type {
+  InstrumentSession,
+  InstrumentResult,
+  ItemResponse,
+  Tier,
+} from "../instruments/types";
+import { getInstrument } from "../instruments/registry";
+
+interface PsycheState {
+  /** Active sessions keyed by instrument ID */
+  sessions: Record<string, InstrumentSession>;
+  /** Computed results keyed by instrument ID */
+  results: Record<string, InstrumentResult>;
+  /** Current instrument being taken */
+  activeInstrumentId: string | null;
+  /** Current item index within the active instrument */
+  currentItemIndex: number;
+  /** Selected tier for the instrument battery */
+  selectedTier: Tier;
+
+  // Actions
+  setTier: (tier: Tier) => void;
+  startInstrument: (instrumentId: string) => void;
+  recordResponse: (response: ItemResponse) => void;
+  advanceItem: () => void;
+  goBackItem: () => void;
+  completeInstrument: (result: InstrumentResult) => void;
+  setActiveInstrument: (id: string | null) => void;
+  resetInstrument: (instrumentId: string) => void;
+  exportData: () => string;
+  importData: (json: string) => void;
+}
+
+export const usePsycheStore = create<PsycheState>()(
+  persist(
+    (set, get) => ({
+      sessions: {},
+      results: {},
+      activeInstrumentId: null,
+      currentItemIndex: 0,
+      selectedTier: "standard",
+
+      setTier: (tier) => set(() => ({ selectedTier: tier })),
+
+      startInstrument: (instrumentId) =>
+        set((state) => ({
+          activeInstrumentId: instrumentId,
+          currentItemIndex: 0,
+          sessions: {
+            ...state.sessions,
+            [instrumentId]: state.sessions[instrumentId] ?? {
+              instrumentId,
+              startedAt: Date.now(),
+              responses: [],
+            },
+          },
+        })),
+
+      recordResponse: (response) =>
+        set((state) => {
+          const id = state.activeInstrumentId;
+          if (!id) return state;
+          const session = state.sessions[id];
+          if (!session) return state;
+
+          // Replace existing response for this item or append
+          const existing = session.responses.findIndex(
+            (r) => r.itemId === response.itemId
+          );
+          const responses = [...session.responses];
+          if (existing >= 0) {
+            responses[existing] = response;
+          } else {
+            responses.push(response);
+          }
+
+          return {
+            sessions: {
+              ...state.sessions,
+              [id]: { ...session, responses },
+            },
+          };
+        }),
+
+      advanceItem: () =>
+        set((state) => ({
+          currentItemIndex: state.currentItemIndex + 1,
+        })),
+
+      goBackItem: () =>
+        set((state) => ({
+          currentItemIndex: Math.max(0, state.currentItemIndex - 1),
+        })),
+
+      completeInstrument: (result) =>
+        set((state) => {
+          const id = state.activeInstrumentId;
+          if (!id) return state;
+          const session = state.sessions[id];
+          if (!session) return state;
+
+          return {
+            activeInstrumentId: null,
+            currentItemIndex: 0,
+            sessions: {
+              ...state.sessions,
+              [id]: { ...session, completedAt: Date.now() },
+            },
+            results: {
+              ...state.results,
+              [id]: result,
+            },
+          };
+        }),
+
+      setActiveInstrument: (id) =>
+        set(() => ({
+          activeInstrumentId: id,
+          currentItemIndex: 0,
+        })),
+
+      resetInstrument: (instrumentId) =>
+        set((state) => {
+          const { [instrumentId]: _s, ...sessions } = state.sessions;
+          const { [instrumentId]: _r, ...results } = state.results;
+          return { sessions, results };
+        }),
+
+      exportData: () => {
+        const { sessions, results, selectedTier } = get();
+        return JSON.stringify({ sessions, results, selectedTier, exportedAt: Date.now() }, null, 2);
+      },
+
+      importData: (json) => {
+        let data: Record<string, unknown>;
+        try {
+          data = JSON.parse(json);
+        } catch {
+          throw new Error("Invalid JSON");
+        }
+        if (
+          !data ||
+          typeof data !== "object" ||
+          !data.sessions ||
+          typeof data.sessions !== "object" ||
+          !data.results ||
+          typeof data.results !== "object"
+        ) {
+          throw new Error("Invalid data: sessions and results must be objects");
+        }
+        if (
+          data.selectedTier !== undefined &&
+          data.selectedTier !== "lite" &&
+          data.selectedTier !== "standard" &&
+          data.selectedTier !== "heavy"
+        ) {
+          throw new Error("Invalid data: selectedTier must be lite, standard, or heavy");
+        }
+        // Merge with existing data (don't overwrite completed results)
+        const currentState = get();
+        const mergedSessions = { ...(data.sessions as Record<string, InstrumentSession>), ...currentState.sessions };
+        const mergedResults = { ...(data.results as Record<string, InstrumentResult>), ...currentState.results };
+        set({ sessions: mergedSessions, results: mergedResults });
+        // Auto-score any sessions that have all responses but no result
+        autoScoreCompleted();
+      },
+    }),
+    {
+      name: "psyche-store",
+      onRehydrateStorage: () => (state) => {
+        if (state) autoScoreCompleted();
+      },
+    }
+  )
+);
+
+/** Score any sessions that have all responses but no result yet. */
+function autoScoreCompleted(): void {
+  const { sessions, results } = usePsycheStore.getState();
+  const newResults: Record<string, InstrumentResult> = {};
+
+  for (const [id, session] of Object.entries(sessions)) {
+    if (results[id]) continue; // already scored
+    const registered = getInstrument(id);
+    if (!registered) continue; // instrument not in registry
+    const { instrument, score } = registered;
+    if (new Set(session.responses.map(r => r.itemId)).size >= instrument.items.length) {
+      try {
+        newResults[id] = score(instrument, session);
+      } catch {
+        // scoring failed — skip
+      }
+    }
+  }
+
+  if (Object.keys(newResults).length > 0) {
+    const current = usePsycheStore.getState();
+    usePsycheStore.setState({
+      results: { ...current.results, ...newResults },
+      sessions: Object.fromEntries(
+        Object.entries(current.sessions).map(([id, s]) =>
+          newResults[id] ? [id, { ...s, completedAt: s.completedAt ?? Date.now() }] : [id, s]
+        )
+      ),
+    });
+  }
+}
+
+========== web/src/App.tsx ==========
+import { useState } from "react";
+import { usePsycheStore } from "./state/store";
+import { getAllInstruments, isAdaptiveInstrument } from "./instruments/registry";
+import { TestRunner } from "./components/TestRunner";
+import { AdaptiveTestRunner } from "./components/AdaptiveTestRunner";
+import { ResultsViewer } from "./components/ResultsViewer";
+import { ProfileDashboard } from "./components/ProfileDashboard";
+import { getInstrumentsForTier, TIER_META, INSTRUMENT_CATEGORIES } from "./instruments/tiers";
+import type { Tier } from "./instruments/types";
+
+// Register instruments (side-effect imports)
+import "./instruments/init";
+
+type View = "instruments" | "dashboard";
+
+function getInitialView(): View {
+  return window.location.hash === "#dashboard" ? "dashboard" : "instruments";
+}
+
+const TIERS: Tier[] = ["lite", "standard", "heavy"];
+
+export default function App() {
+  const [view, setView] = useState<View>(getInitialView);
+  const activeId = usePsycheStore((s) => s.activeInstrumentId);
+  const results = usePsycheStore((s) => s.results);
+  const sessions = usePsycheStore((s) => s.sessions);
+  const startInstrument = usePsycheStore((s) => s.startInstrument);
+  const resetInstrument = usePsycheStore((s) => s.resetInstrument);
+  const exportData = usePsycheStore((s) => s.exportData);
+  const importData = usePsycheStore((s) => s.importData);
+  const selectedTier = usePsycheStore((s) => s.selectedTier);
+  const setTier = usePsycheStore((s) => s.setTier);
+
+  const allInstruments = getAllInstruments();
+  const tierInstrumentIds = getInstrumentsForTier(selectedTier);
+  const filteredInstruments = allInstruments.filter(({ instrument }) =>
+    tierInstrumentIds.includes(instrument.id)
+  );
+
+  const setActiveInstrument = usePsycheStore((s) => s.setActiveInstrument);
+
+  // Active test in progress — dispatch to appropriate runner
+  if (activeId) {
+    if (isAdaptiveInstrument(activeId)) {
+      const itemBankUrl = activeId === "cat-big5"
+        ? "/item-banks/big5-grm-params.json"
+        : "/item-banks/hexaco-grm-params.json";
+      const instrumentName = activeId === "cat-big5" ? "CAT Big Five" : "CAT HEXACO";
+      return (
+        <AdaptiveTestRunner
+          instrumentId={activeId}
+          instrumentName={instrumentName}
+          itemBankUrl={itemBankUrl}
+          onComplete={() => setActiveInstrument(null)}
+          onExit={() => setActiveInstrument(null)}
+        />
+      );
+    }
+    return <TestRunner />;
+  }
+
+  // Profile Dashboard view
+  if (view === "dashboard") {
+    return (
+      <div>
+        <div style={{ maxWidth: 960, margin: "0 auto", padding: "1rem 2rem 0" }}>
+          <button onClick={() => setView("instruments")} style={btnLink}>
+            &larr; Back to Instruments
+          </button>
+        </div>
+        <ProfileDashboard />
+      </div>
+    );
+  }
+
+  // Instruments view
+  const handleExport = () => {
+    const json = exportData();
+    const blob = new Blob([json], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `psyche-data-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleImport = () => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = ".json";
+    input.onchange = (e) => {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (typeof reader.result === "string") {
+          importData(reader.result);
+        }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  };
+
+  // Group instruments by category
+  const groupedInstruments = INSTRUMENT_CATEGORIES
+    .map((cat) => ({
+      name: cat.name,
+      instruments: filteredInstruments.filter(({ instrument }) =>
+        cat.instrumentIds.includes(instrument.id)
+      ),
+    }))
+    .filter((group) => group.instruments.length > 0);
+
+  return (
+    <div style={{ maxWidth: 800, margin: "0 auto", padding: "2rem" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div>
+          <h1 style={{ marginBottom: "0.25rem" }}>Psyche</h1>
+          <p style={{ color: "#6b7280", marginTop: 0 }}>
+            Psychometric persona profiling framework
+          </p>
+        </div>
+        <div style={{ display: "flex", gap: "0.5rem" }}>
+          <button onClick={() => setView("dashboard")} style={btnPrimary}>
+            Profile Dashboard
+          </button>
+          <button onClick={handleExport} style={btnSecondary}>
+            Export JSON
+          </button>
+          <button onClick={handleImport} style={btnSecondary}>
+            Import
+          </button>
+        </div>
+      </div>
+
+      {/* Tier selector */}
+      <div style={{ margin: "1rem 0", display: "flex", gap: "0.5rem", alignItems: "center" }}>
+        <span style={{ fontSize: "0.875rem", color: "#6b7280", marginRight: "0.5rem" }}>Tier:</span>
+        <div style={{ display: "flex", borderRadius: "0.375rem", border: "1px solid #d1d5db", overflow: "hidden" }}>
+          {TIERS.map((tier) => {
+            const meta = TIER_META[tier];
+            const isActive = selectedTier === tier;
+            return (
+              <button
+                key={tier}
+                onClick={() => setTier(tier)}
+                style={{
+                  padding: "0.5rem 1rem",
+                  background: isActive ? "#2563eb" : "transparent",
+                  color: isActive ? "#fff" : "#374151",
+                  border: "none",
+                  borderRight: tier !== "heavy" ? "1px solid #d1d5db" : "none",
+                  cursor: "pointer",
+                  fontSize: "0.875rem",
+                  fontWeight: isActive ? 600 : 400,
+                }}
+                title={`${meta.estimatedItems}, ${meta.estimatedTime}`}
+              >
+                {meta.label}
+              </button>
+            );
+          })}
+        </div>
+        <span style={{ fontSize: "0.75rem", color: "#9ca3af", marginLeft: "0.5rem" }}>
+          {TIER_META[selectedTier].estimatedItems} &middot; {TIER_META[selectedTier].estimatedTime}
+        </span>
+      </div>
+
+      <h2>Instrument Battery</h2>
+      {groupedInstruments.length === 0 ? (
+        <p>No instruments registered yet.</p>
+      ) : (
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+          {groupedInstruments.map((group) => (
+            <div key={group.name}>
+              <h3 style={{ fontSize: "0.875rem", color: "#6b7280", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.5rem" }}>
+                {group.name}
+              </h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                {group.instruments.map(({ instrument: inst }) => {
+                  const session = sessions[inst.id];
+                  const result = results[inst.id];
+                  const status = result
+                    ? "completed"
+                    : session
+                      ? "in-progress"
+                      : "not-started";
+
+                  // Check if a lower-tier version of this instrument was completed
+                  const lowerTierNote = getLowerTierNote(inst.id, results);
+
+                  return (
+                    <div
+                      key={inst.id}
+                      style={{
+                        padding: "1rem 1.5rem",
+                        border: "1px solid #e5e7eb",
+                        borderRadius: "0.5rem",
+                        borderLeft: `4px solid ${
+                          status === "completed"
+                            ? "#10b981"
+                            : status === "in-progress"
+                              ? "#f59e0b"
+                              : "#d1d5db"
+                        }`,
+                      }}
+                    >
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                        <div>
+                          <strong>{inst.name}</strong>
+                          <span style={{ color: "#9ca3af", marginLeft: "0.5rem" }}>
+                            {inst.itemCount} items, ~{inst.estimatedMinutes} min
+                          </span>
+                        </div>
+                        <div style={{ display: "flex", gap: "0.5rem" }}>
+                          {status === "completed" && (
+                            <button onClick={() => resetInstrument(inst.id)} style={btnSecondary}>
+                              Retake
+                            </button>
+                          )}
+                          {status !== "completed" && (
+                            <button onClick={() => startInstrument(inst.id)} style={btnPrimary}>
+                              {status === "in-progress" ? "Resume" : "Start"}
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                      <p style={{ fontSize: "0.875rem", color: "#6b7280", margin: "0.5rem 0 0" }}>
+                        {inst.description}
+                      </p>
+                      {status === "in-progress" && session && (
+                        <p style={{ fontSize: "0.75rem", color: "#f59e0b", margin: "0.25rem 0 0" }}>
+                          {session.responses.length} of {inst.itemCount} answered
+                        </p>
+                      )}
+                      {lowerTierNote && status === "not-started" && (
+                        <p style={{ fontSize: "0.75rem", color: "#6366f1", margin: "0.25rem 0 0" }}>
+                          {lowerTierNote}
+                        </p>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Results section */}
+      {Object.keys(results).length > 0 && (
+        <div style={{ marginTop: "3rem" }}>
+          <h2>Results</h2>
+          {Object.values(results).map((result) => (
+            <ResultsViewer key={result.instrumentId} result={result} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/** Check if a lower-precision version of this instrument was completed */
+function getLowerTierNote(
+  instrumentId: string,
+  results: Record<string, unknown>,
+): string | null {
+  const upgradePaths: Record<string, { from: string; label: string }[]> = {
+    "ipip-neo-300": [{ from: "ipip-neo-60", label: "NEO-60 completed (Lite)" }],
+    "ipip-neo-120": [{ from: "ipip-neo-60", label: "NEO-60 completed (Lite)" }],
+    "hexaco-200": [{ from: "hexaco-60", label: "HEXACO-60 completed (Standard)" }],
+    "grit-o": [{ from: "grit-s", label: "Grit-S completed" }],
+    "bpns-21": [{ from: "bpns-9", label: "BPNS-9 completed" }],
+    "levenson-ipc-24": [{ from: "loc-ie4", label: "IE-4 completed" }],
+    "snyder-sm-25": [{ from: "self-monitoring-18", label: "SM-18 completed" }],
+  };
+
+  const paths = upgradePaths[instrumentId];
+  if (!paths) return null;
+
+  for (const { from, label } of paths) {
+    if (results[from]) {
+      return `${label} — take this for higher precision`;
+    }
+  }
+  return null;
+}
+
+const btnPrimary: React.CSSProperties = {
+  padding: "0.5rem 1rem",
+  background: "#2563eb",
+  color: "#fff",
+  border: "none",
+  borderRadius: "0.375rem",
+  cursor: "pointer",
+  fontSize: "0.875rem",
+  fontWeight: 500,
+};
+
+const btnSecondary: React.CSSProperties = {
+  padding: "0.5rem 1rem",
+  background: "transparent",
+  color: "#374151",
+  border: "1px solid #d1d5db",
+  borderRadius: "0.375rem",
+  cursor: "pointer",
+  fontSize: "0.875rem",
+};
+
+const btnLink: React.CSSProperties = {
+  padding: "0.25rem 0",
+  background: "transparent",
+  color: "#2563eb",
+  border: "none",
+  cursor: "pointer",
+  fontSize: "0.875rem",
+};
+
+========== web/src/main.tsx ==========
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
+
+========== web/src/components/AdaptiveTestRunner.tsx ==========
+/**
+ * AdaptiveTestRunner — CAT-based test runner.
+ *
+ * Fundamentally different from TestRunner:
+ * - No fixed item sequence — next item selected dynamically by CATController
+ * - Per-dimension flow: cycles through facets until SE threshold met
+ * - Shows SE convergence bars instead of "X of Y"
+ * - Real-time theta update after each response
+ */
+
+import { useCallback, useEffect, useRef, useState } from "react";
+import { usePsycheStore } from "../state/store";
+import type { GRMItem } from "../scoring/grm-engine";
+import {
+  initCATSession,
+  getNextItem,
+  registerResponse,
+  getCATProgress,
+  DEFAULT_STOPPING,
+  type CATSession,
+} from "../scoring/cat-controller";
+import { scoreAdaptive } from "../scoring/engine";
+import { TestItemDisplay } from "./TestItemDisplay";
+import { AdaptiveProgress } from "./AdaptiveProgress";
+
+interface AdaptiveTestRunnerProps {
+  instrumentId: string;
+  instrumentName: string;
+  itemBankUrl: string;
+  onComplete: () => void;
+  onExit: () => void;
+}
+
+const LIKERT_LABELS = [
+  "Very Inaccurate",
+  "Moderately Inaccurate",
+  "Neither",
+  "Moderately Accurate",
+  "Very Accurate",
+];
+
+export function AdaptiveTestRunner({
+  instrumentId,
+  instrumentName,
+  itemBankUrl,
+  onComplete,
+  onExit,
+}: AdaptiveTestRunnerProps) {
+  const completeInstrument = usePsycheStore((s) => s.completeInstrument);
+  const results = usePsycheStore((s) => s.results);
+
+  const [itemBank, setItemBank] = useState<GRMItem[] | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const sessionRef = useRef<CATSession | null>(null);
+  const [currentItem, setCurrentItem] = useState<{ item: GRMItem; dimensionId: string } | null>(null);
+  const [progress, setProgress] = useState<ReturnType<typeof getCATProgress>>([]);
+  const [totalItems, setTotalItems] = useState(0);
+
+  // Load item bank
+  useEffect(() => {
+    fetch(itemBankUrl)
+      .then((r) => {
+        if (!r.ok) throw new Error(`Failed to load item bank: ${r.status}`);
+        return r.json();
+      })
+      .then((data: GRMItem[]) => {
+        setItemBank(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
+  }, [itemBankUrl]);
+
+  // Initialize CAT session when item bank is loaded
+  useEffect(() => {
+    if (!itemBank || sessionRef.current) return;
+
+    // Check for fixed-form scores to use as priors
+    const fixedFormScores = instrumentId === "cat-big5"
+      ? results["ipip-neo-300"]?.scores ?? results["ipip-neo-120"]?.scores
+      : results["hexaco-200"]?.scores ?? results["hexaco-60"]?.scores;
+
+    const session = initCATSession(
+      instrumentId,
+      itemBank,
+      fixedFormScores,
+      undefined, // No fixed-form item ID exclusion for synthetic banks
+      DEFAULT_STOPPING,
+    );
+    sessionRef.current = session;
+
+    // Get first item
+    const next = getNextItem(session, itemBank);
+    setCurrentItem(next);
+    setProgress(getCATProgress(session));
+  }, [itemBank, instrumentId, results]);
+
+  const handleResponse = useCallback(
+    (value: number) => {
+      if (!sessionRef.current || !itemBank || !currentItem) return;
+
+      // Value is 1-5 for Likert, convert to 0-indexed category
+      const category = value - 1;
+
+      registerResponse(
+        sessionRef.current,
+        itemBank,
+        currentItem.item.id,
+        category,
+        DEFAULT_STOPPING,
+      );
+
+      setTotalItems(sessionRef.current.totalItemsAdministered);
+      setProgress(getCATProgress(sessionRef.current));
+
+      // Get next item after brief delay
+      setTimeout(() => {
+        if (!sessionRef.current || !itemBank) return;
+
+        if (sessionRef.current.complete) {
+          // All dimensions measured — compute scores
+          const result = scoreAdaptive(instrumentId, sessionRef.current);
+          completeInstrument(result);
+          onComplete();
+          return;
+        }
+
+        const next = getNextItem(sessionRef.current, itemBank);
+        setCurrentItem(next);
+
+        if (!next) {
+          // Shouldn't happen if session isn't complete, but handle gracefully
+          const result = scoreAdaptive(instrumentId, sessionRef.current);
+          completeInstrument(result);
+          onComplete();
+        }
+      }, 200);
+    },
+    [itemBank, currentItem, instrumentId, completeInstrument, onComplete],
+  );
+
+  // Keyboard shortcuts for Likert (1-5)
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === "INPUT" || target.tagName === "TEXTAREA") return;
+
+      const key = parseInt(e.key);
+      if (key >= 1 && key <= 5) {
+        e.preventDefault();
+        handleResponse(key);
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [handleResponse]);
+
+  if (loading) {
+    return (
+      <div style={{ maxWidth: 700, margin: "0 auto", padding: "2rem", textAlign: "center" }}>
+        <h2>{instrumentName}</h2>
+        <p>Loading adaptive item bank...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div style={{ maxWidth: 700, margin: "0 auto", padding: "2rem", textAlign: "center" }}>
+        <h2>{instrumentName}</h2>
+        <p style={{ color: "#dc2626" }}>Error: {error}</p>
+        <button onClick={onExit} style={exitBtnStyle}>Back to Dashboard</button>
+      </div>
+    );
+  }
+
+  if (!currentItem) {
+    return (
+      <div style={{ maxWidth: 700, margin: "0 auto", padding: "2rem", textAlign: "center" }}>
+        <h2>{instrumentName}</h2>
+        <p>Adaptive assessment complete!</p>
+        <button onClick={onExit} style={exitBtnStyle}>Back to Dashboard</button>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ maxWidth: 700, margin: "0 auto", padding: "2rem" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <h2 style={{ margin: 0 }}>{instrumentName}</h2>
+        <button onClick={onExit} style={exitBtnStyle}>Save & Exit</button>
+      </div>
+
+      <AdaptiveProgress
+        dimensions={progress}
+        targetSE={DEFAULT_STOPPING.seThreshold}
+        totalItemsAdministered={totalItems}
+        currentDimensionId={currentItem.dimensionId}
+      />
+
+      <div style={{
+        fontSize: "0.75rem",
+        color: "#9ca3af",
+        textAlign: "center",
+        marginBottom: "0.5rem",
+      }}>
+        Measuring: {currentItem.dimensionId}
+      </div>
+
+      <TestItemDisplay
+        text={currentItem.item.text}
+        responseType="likert"
+        likertMin={1}
+        likertMax={5}
+        likertLabels={LIKERT_LABELS}
+        selectedValue={null}
+        onSelect={handleResponse}
+      />
+
+      <div style={{ textAlign: "center", fontSize: "0.75rem", color: "#9ca3af" }}>
+        Press 1-5 or click to answer
+      </div>
+    </div>
+  );
+}
+
+const exitBtnStyle: React.CSSProperties = {
+  padding: "0.25rem 0.75rem",
+  background: "transparent",
+  border: "1px solid #d1d5db",
+  borderRadius: "0.25rem",
+  cursor: "pointer",
+  fontSize: "0.875rem",
+};
+
+========== web/src/components/TestRunner.tsx ==========
+import { useCallback, useEffect, useState } from "react";
+import { usePsycheStore } from "../state/store";
+import { getInstrument } from "../instruments/registry";
+import { LikertScale } from "./LikertScale";
+import { ProgressBar } from "./ProgressBar";
+
+export function TestRunner() {
+  const activeId = usePsycheStore((s) => s.activeInstrumentId);
+  const currentIndex = usePsycheStore((s) => s.currentItemIndex);
+  const sessions = usePsycheStore((s) => s.sessions);
+  const recordResponse = usePsycheStore((s) => s.recordResponse);
+  const advanceItem = usePsycheStore((s) => s.advanceItem);
+  const goBackItem = usePsycheStore((s) => s.goBackItem);
+  const completeInstrument = usePsycheStore((s) => s.completeInstrument);
+  const setActiveInstrument = usePsycheStore((s) => s.setActiveInstrument);
+
+  const registered = activeId ? getInstrument(activeId) : undefined;
+  const instrument = registered?.instrument;
+  const scoreFn = registered?.score;
+  const session = activeId ? sessions[activeId] : undefined;
+
+  const currentItem = instrument?.items[currentIndex];
+  const totalItems = instrument?.itemCount ?? 0;
+  const answeredCount = session?.responses.length ?? 0;
+
+  // Get existing response for current item
+  const existingResponse = currentItem
+    ? session?.responses.find((r) => r.itemId === currentItem.id)
+    : undefined;
+
+  // Local state for text/numeric inputs
+  const [textValue, setTextValue] = useState("");
+  const [numericValue, setNumericValue] = useState("");
+
+  // Sync local state with existing response when item changes
+  useEffect(() => {
+    if (existingResponse) {
+      if (typeof existingResponse.value === "string") {
+        setTextValue(existingResponse.value);
+        setNumericValue("");
+      } else if (typeof existingResponse.value === "number") {
+        setNumericValue(String(existingResponse.value));
+        setTextValue("");
+      }
+    } else {
+      setTextValue("");
+      setNumericValue("");
+    }
+  }, [existingResponse, currentIndex]);
+
+  const handleLikertResponse = useCallback(
+    (value: number) => {
+      if (!currentItem) return;
+      recordResponse({
+        itemId: currentItem.id,
+        value,
+        timestamp: Date.now(),
+      });
+
+      // Auto-advance after a brief delay
+      setTimeout(() => {
+        if (currentIndex < totalItems - 1) {
+          advanceItem();
+        }
+      }, 200);
+    },
+    [currentItem, currentIndex, totalItems, recordResponse, advanceItem]
+  );
+
+  const handleBinaryResponse = useCallback(
+    (value: number) => {
+      if (!currentItem) return;
+      recordResponse({
+        itemId: currentItem.id,
+        value,
+        timestamp: Date.now(),
+      });
+
+      // Auto-advance after a brief delay
+      setTimeout(() => {
+        if (currentIndex < totalItems - 1) {
+          advanceItem();
+        }
+      }, 200);
+    },
+    [currentItem, currentIndex, totalItems, recordResponse, advanceItem]
+  );
+
+  // Binary keyboard handler (T/F or 1/2)
+  useEffect(() => {
+    if (!currentItem || currentItem.response.type !== "binary") return;
+    const handler = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === "INPUT" || target.tagName === "TEXTAREA") return;
+      const key = e.key.toLowerCase();
+      if (key === "t" || key === "1") {
+        e.preventDefault();
+        handleBinaryResponse(1);
+      } else if (key === "f" || key === "2") {
+        e.preventDefault();
+        handleBinaryResponse(0);
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [currentItem, handleBinaryResponse]);
+
+  const handleTextSubmit = useCallback(() => {
+    if (!currentItem) return;
+    const value = currentItem.response.type === "numeric" ? numericValue : textValue;
+    if (!value.trim()) return;
+
+    recordResponse({
+      itemId: currentItem.id,
+      value: currentItem.response.type === "numeric" ? Number(value) : value,
+      timestamp: Date.now(),
+    });
+
+    if (currentIndex < totalItems - 1) {
+      advanceItem();
+    }
+  }, [currentItem, textValue, numericValue, currentIndex, totalItems, recordResponse, advanceItem]);
+
+  // Arrow key navigation (only for non-text inputs)
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      // Don't capture keys when typing in a text input
+      const target = e.target as HTMLElement;
+      if (target.tagName === "INPUT" || target.tagName === "TEXTAREA") return;
+
+      if (e.key === "ArrowLeft" || e.key === "Backspace") {
+        e.preventDefault();
+        goBackItem();
+      }
+      if (e.key === "ArrowRight" && existingResponse) {
+        e.preventDefault();
+        if (currentIndex < totalItems - 1) {
+          advanceItem();
+        }
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [goBackItem, advanceItem, currentIndex, totalItems, existingResponse]);
+
+  if (!instrument || !activeId || !session) {
+    return null;
+  }
+
+  // All items answered — show completion
+  if (currentIndex >= totalItems) {
+    const allAnswered = answeredCount >= totalItems;
+
+    return (
+      <div style={{ maxWidth: 600, margin: "0 auto", padding: "2rem", textAlign: "center" }}>
+        <h2>{instrument.name}</h2>
+        <ProgressBar current={answeredCount} total={totalItems} />
+        {allAnswered ? (
+          <>
+            <p>All {totalItems} items completed!</p>
+            <button
+              onClick={() => {
+                if (scoreFn) {
+                  const result = scoreFn(instrument, session);
+                  completeInstrument(result);
+                }
+              }}
+              style={{
+                padding: "0.75rem 2rem",
+                background: "#2563eb",
+                color: "#fff",
+                border: "none",
+                borderRadius: "0.5rem",
+                fontSize: "1rem",
+                cursor: "pointer",
+                marginTop: "1rem",
+              }}
+            >
+              Calculate Scores
+            </button>
+          </>
+        ) : (
+          <p>
+            {answeredCount} of {totalItems} answered. Go back to complete remaining items.
+          </p>
+        )}
+        <button
+          onClick={() => setActiveInstrument(null)}
+          style={{
+            padding: "0.5rem 1rem",
+            background: "transparent",
+            border: "1px solid #d1d5db",
+            borderRadius: "0.5rem",
+            cursor: "pointer",
+            marginTop: "1rem",
+            marginLeft: "0.5rem",
+          }}
+        >
+          Back to Dashboard
+        </button>
+      </div>
+    );
+  }
+
+  if (!currentItem) return null;
+
+  // Context-appropriate instruction text
+  const instructionText =
+    currentItem.response.type === "likert"
+      ? "How accurately does this describe you?"
+      : currentItem.response.type === "binary"
+        ? "Is this true or false for you?"
+        : currentItem.response.type === "numeric"
+          ? "Enter your answer:"
+          : "Write your response:";
+
+  const hintText =
+    currentItem.response.type === "likert"
+      ? `Press 1-${currentItem.response.max} or click to answer`
+      : currentItem.response.type === "binary"
+        ? "Press T/1 for True, F/2 for False"
+        : currentItem.response.type === "numeric"
+          ? "Type a number and press Enter"
+          : "Write freely, then click Next";
+
+  return (
+    <div style={{ maxWidth: 700, margin: "0 auto", padding: "2rem" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <h2 style={{ margin: 0 }}>{instrument.shortName}</h2>
+        <button
+          onClick={() => setActiveInstrument(null)}
+          style={{
+            padding: "0.25rem 0.75rem",
+            background: "transparent",
+            border: "1px solid #d1d5db",
+            borderRadius: "0.25rem",
+            cursor: "pointer",
+            fontSize: "0.875rem",
+          }}
+        >
+          Save & Exit
+        </button>
+      </div>
+
+      <ProgressBar
+        current={answeredCount}
+        total={totalItems}
+        label={`Question ${currentIndex + 1} of ${totalItems}`}
+      />
+
+      <div
+        style={{
+          textAlign: "center",
+          padding: "2rem 1rem",
+          marginBottom: "1.5rem",
+        }}
+      >
+        <p style={{ fontSize: "0.875rem", color: "#6b7280", marginBottom: "0.5rem" }}>
+          {instructionText}
+        </p>
+        <p style={{ fontSize: "1.5rem", fontWeight: 500, margin: "1rem 0 2rem" }}>
+          {currentItem.text}
+        </p>
+
+        {/* Likert response */}
+        {currentItem.response.type === "likert" && (
+          <LikertScale
+            min={currentItem.response.min}
+            max={currentItem.response.max}
+            labels={currentItem.response.labels}
+            value={typeof existingResponse?.value === "number" ? existingResponse.value : null}
+            onChange={handleLikertResponse}
+          />
+        )}
+
+        {/* Binary response (True/False) */}
+        {currentItem.response.type === "binary" && (
+          <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
+            {currentItem.response.labels.map((label, idx) => {
+              const btnValue = idx === 0 ? 1 : 0;
+              const isSelected = existingResponse?.value === btnValue;
+              return (
+                <button
+                  key={label}
+                  onClick={() => handleBinaryResponse(btnValue)}
+                  style={{
+                    padding: "1rem 2.5rem",
+                    border: isSelected ? "2px solid #2563eb" : "2px solid #d1d5db",
+                    borderRadius: "0.5rem",
+                    background: isSelected ? "#2563eb" : "#fff",
+                    color: isSelected ? "#fff" : "#374151",
+                    cursor: "pointer",
+                    fontSize: "1.125rem",
+                    fontWeight: isSelected ? 600 : 400,
+                    minWidth: "140px",
+                    transition: "all 0.15s",
+                  }}
+                >
+                  <div style={{ fontSize: "0.75rem", color: isSelected ? "#dbeafe" : "#9ca3af" }}>
+                    {idx === 0 ? "T / 1" : "F / 2"}
+                  </div>
+                  <div>{label}</div>
+                </button>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Numeric response */}
+        {currentItem.response.type === "numeric" && (
+          <div>
+            <input
+              type="number"
+              value={numericValue}
+              onChange={(e) => setNumericValue(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleTextSubmit();
+              }}
+              autoFocus
+              style={{
+                fontSize: "1.5rem",
+                padding: "0.5rem 1rem",
+                border: "2px solid #d1d5db",
+                borderRadius: "0.5rem",
+                textAlign: "center",
+                width: "200px",
+              }}
+            />
+            <br />
+            <button onClick={handleTextSubmit} style={{ ...btnNext, marginTop: "1rem" }}>
+              Next
+            </button>
+          </div>
+        )}
+
+        {/* Text response */}
+        {currentItem.response.type === "text" && (
+          <div style={{ textAlign: "left" }}>
+            <textarea
+              value={textValue}
+              onChange={(e) => setTextValue(e.target.value)}
+              rows={8}
+              autoFocus
+              style={{
+                width: "100%",
+                fontSize: "1rem",
+                padding: "0.75rem",
+                border: "2px solid #d1d5db",
+                borderRadius: "0.5rem",
+                resize: "vertical",
+                fontFamily: "inherit",
+              }}
+            />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginTop: "0.5rem",
+              }}
+            >
+              <span style={{ fontSize: "0.75rem", color: "#9ca3af" }}>
+                {textValue.trim().split(/\s+/).filter(Boolean).length} words
+                {currentItem.response.type === "text" && currentItem.response.minWords
+                  ? ` (min ${currentItem.response.minWords})`
+                  : ""}
+              </span>
+              <button onClick={handleTextSubmit} style={btnNext}>
+                Next
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          fontSize: "0.75rem",
+          color: "#9ca3af",
+        }}
+      >
+        <span>{currentIndex > 0 ? "← Backspace/Left to go back" : ""}</span>
+        <span>{hintText}</span>
+        <span>{existingResponse ? "→ Right to skip forward" : ""}</span>
+      </div>
+    </div>
+  );
+}
+
+const btnNext: React.CSSProperties = {
+  padding: "0.5rem 1.5rem",
+  background: "#2563eb",
+  color: "#fff",
+  border: "none",
+  borderRadius: "0.375rem",
+  cursor: "pointer",
+  fontSize: "0.875rem",
+  fontWeight: 500,
+};
+
+========== web/src/components/TestItemDisplay.tsx ==========
+/**
+ * Shared item display component for Likert and binary response widgets.
+ * Used by both TestRunner (fixed-form) and AdaptiveTestRunner (CAT).
+ */
+
+import { LikertScale } from "./LikertScale";
+
+interface TestItemDisplayProps {
+  /** Item text to display */
+  text: string;
+  /** Response format */
+  responseType: "likert" | "binary";
+  /** Likert range (required for likert type) */
+  likertMin?: number;
+  likertMax?: number;
+  likertLabels?: string[];
+  /** Binary labels (required for binary type) */
+  binaryLabels?: [string, string];
+  /** Currently selected value (null if unanswered) */
+  selectedValue: number | null;
+  /** Callback when a response is selected */
+  onSelect: (value: number) => void;
+  /** Instruction text override */
+  instruction?: string;
+}
+
+export function TestItemDisplay({
+  text,
+  responseType,
+  likertMin = 1,
+  likertMax = 5,
+  likertLabels,
+  binaryLabels = ["True", "False"],
+  selectedValue,
+  onSelect,
+  instruction,
+}: TestItemDisplayProps) {
+  const defaultInstruction = responseType === "likert"
+    ? "How accurately does this describe you?"
+    : "Is this true or false for you?";
+
+  return (
+    <div style={{ textAlign: "center", padding: "2rem 1rem", marginBottom: "1.5rem" }}>
+      <p style={{ fontSize: "0.875rem", color: "#6b7280", marginBottom: "0.5rem" }}>
+        {instruction ?? defaultInstruction}
+      </p>
+      <p style={{ fontSize: "1.5rem", fontWeight: 500, margin: "1rem 0 2rem" }}>
+        {text}
+      </p>
+
+      {responseType === "likert" && (
+        <LikertScale
+          min={likertMin}
+          max={likertMax}
+          labels={likertLabels ?? []}
+          value={selectedValue}
+          onChange={onSelect}
+        />
+      )}
+
+      {responseType === "binary" && (
+        <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
+          {binaryLabels.map((label, idx) => {
+            const btnValue = idx === 0 ? 1 : 0;
+            const isSelected = selectedValue === btnValue;
+            return (
+              <button
+                key={label}
+                onClick={() => onSelect(btnValue)}
+                style={{
+                  padding: "1rem 2.5rem",
+                  border: isSelected ? "2px solid #2563eb" : "2px solid #d1d5db",
+                  borderRadius: "0.5rem",
+                  background: isSelected ? "#2563eb" : "#fff",
+                  color: isSelected ? "#fff" : "#374151",
+                  cursor: "pointer",
+                  fontSize: "1.125rem",
+                  fontWeight: isSelected ? 600 : 400,
+                  minWidth: "140px",
+                  transition: "all 0.15s",
+                }}
+              >
+                <div style={{ fontSize: "0.75rem", color: isSelected ? "#dbeafe" : "#9ca3af" }}>
+                  {idx === 0 ? "T / 1" : "F / 2"}
+                </div>
+                <div>{label}</div>
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+========== web/src/components/LikertScale.tsx ==========
+import { useCallback, useEffect } from "react";
+
+interface LikertScaleProps {
+  min: number;
+  max: number;
+  labels: string[];
+  value: number | null;
+  onChange: (value: number) => void;
+}
+
+export function LikertScale({ min, max, labels, value, onChange }: LikertScaleProps) {
+  const options = Array.from({ length: max - min + 1 }, (_, i) => min + i);
+
+  const handleKeyPress = useCallback(
+    (e: KeyboardEvent) => {
+      const num = parseInt(e.key);
+      if (num >= min && num <= max) {
+        onChange(num);
+      }
+    },
+    [min, max, onChange]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, [handleKeyPress]);
+
+  return (
+    <div style={{ display: "flex", gap: "0.5rem", justifyContent: "center", flexWrap: "wrap" }}>
+      {options.map((opt, idx) => {
+        const isSelected = value === opt;
+        const label = labels[idx] ?? String(opt);
+
+        return (
+          <button
+            key={opt}
+            onClick={() => onChange(opt)}
+            style={{
+              padding: "0.75rem 1.25rem",
+              border: isSelected ? "2px solid #2563eb" : "2px solid #d1d5db",
+              borderRadius: "0.5rem",
+              background: isSelected ? "#2563eb" : "#fff",
+              color: isSelected ? "#fff" : "#374151",
+              cursor: "pointer",
+              fontSize: "0.875rem",
+              fontWeight: isSelected ? 600 : 400,
+              minWidth: "120px",
+              transition: "all 0.15s",
+            }}
+          >
+            <div style={{ fontSize: "1.25rem", fontWeight: 700 }}>{opt}</div>
+            <div style={{ fontSize: "0.75rem", marginTop: "0.25rem" }}>{label}</div>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+========== web/src/components/AdaptiveProgress.tsx ==========
+/**
+ * Adaptive progress display — shows SE convergence per dimension.
+ *
+ * Unlike fixed-form ProgressBar (X of Y items), this shows:
+ * - Per-dimension theta estimates with confidence
+ * - SE convergence bars (how close to stopping threshold)
+ * - Checkmarks on completed dimensions
+ */
+
+interface DimensionProgress {
+  dimensionId: string;
+  theta: number;
+  se: number;
+  itemsAdministered: number;
+  complete: boolean;
+  percentile: number;
+}
+
+interface AdaptiveProgressProps {
+  dimensions: DimensionProgress[];
+  targetSE: number;
+  totalItemsAdministered: number;
+  currentDimensionId?: string;
+}
+
+export function AdaptiveProgress({
+  dimensions,
+  targetSE,
+  totalItemsAdministered,
+  currentDimensionId,
+}: AdaptiveProgressProps) {
+  const completedCount = dimensions.filter((d) => d.complete).length;
+
+  return (
+    <div style={{ marginBottom: "1.5rem" }}>
+      <div style={{
+        display: "flex",
+        justifyContent: "space-between",
+        fontSize: "0.875rem",
+        color: "#6b7280",
+        marginBottom: "0.75rem",
+      }}>
+        <span>{completedCount}/{dimensions.length} facets measured</span>
+        <span>{totalItemsAdministered} items administered</span>
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(120px, 1fr))", gap: "0.5rem" }}>
+        {dimensions.map((dim) => {
+          const seProgress = Math.min(1, (1 - dim.se / Math.max(dim.se, targetSE * 3)));
+          const isCurrent = dim.dimensionId === currentDimensionId;
+
+          return (
+            <div
+              key={dim.dimensionId}
+              style={{
+                padding: "0.5rem",
+                borderRadius: "0.375rem",
+                border: isCurrent ? "2px solid #2563eb" : "1px solid #e5e7eb",
+                background: dim.complete ? "#f0fdf4" : isCurrent ? "#eff6ff" : "#fff",
+                fontSize: "0.75rem",
+              }}
+            >
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontWeight: 600 }}>{dim.dimensionId}</span>
+                {dim.complete ? (
+                  <span style={{ color: "#16a34a" }}>&#10003;</span>
+                ) : (
+                  <span style={{ color: "#9ca3af" }}>{dim.itemsAdministered} items</span>
+                )}
+              </div>
+
+              {/* SE convergence bar */}
+              <div style={{
+                height: "4px",
+                background: "#e5e7eb",
+                borderRadius: "2px",
+                marginTop: "0.25rem",
+                overflow: "hidden",
+              }}>
+                <div style={{
+                  height: "100%",
+                  width: `${seProgress * 100}%`,
+                  background: dim.complete ? "#16a34a" : "#2563eb",
+                  borderRadius: "2px",
+                  transition: "width 0.3s",
+                }} />
+              </div>
+
+              {dim.itemsAdministered > 0 && (
+                <div style={{ marginTop: "0.25rem", color: "#6b7280" }}>
+                  SE: {dim.se.toFixed(2)} / {targetSE.toFixed(2)}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+========== web/src/components/ProfileDashboard.tsx ==========
+import { useState, useEffect } from "react";
+import {
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Radar,
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  Legend,
+  Cell,
+} from "recharts";
+
+/** Manifest types for profile selector */
+interface ManifestEntry {
+  id: string;
+  name: string;
+  filename: string;
+  date: string;
+  description: string;
+}
+
+interface Manifest {
+  profiles: ManifestEntry[];
+  default: string;
+}
+
+/** Corpus comparison data for multi-level analysis tab */
+interface EmpathDimension {
+  z: number;
+  label: string;
+}
+
+interface ComparisonLevel {
+  level: string;
+  description: string;
+  llm_big_five?: Record<string, number | null>;
+  corpus_words?: number;
+  words_to_llm?: number;
+  empath_lexical?: Record<string, EmpathDimension>;
+  empath_words?: number;
+}
+
+interface ComparisonSummary {
+  levels: Record<string, ComparisonLevel>;
+}
+
+/** Profile JSON types matching Python schema */
+interface TraitEstimate {
+  score: number;
+  confidence: string;
+  method: string;
+  evidence: string[];
+}
+
+interface MergedTrait {
+  final_score: number;
+  ci_lower: number;
+  ci_upper: number;
+  confidence: string;
+  estimates: TraitEstimate[];
+  divergence: number;
+}
+
+interface ProfileData {
+  version: number;
+  created_at: string;
+  big_five: {
+    domains: Record<string, MergedTrait>;
+    facets: Record<string, unknown>;
+  };
+  values: {
+    values: Record<string, MergedTrait>;
+    top_3: string[];
+    bottom_3: string[];
+  };
+  cognitive: {
+    crt_score: number | null;
+    crt_percentile: number | null;
+    need_for_cognition: number | null;
+    self_esteem: number | null;
+  };
+  dark_triad: {
+    machiavellianism: number | null;
+    narcissism: number | null;
+    psychopathy: number | null;
+  };
+  clinical: {
+    phq9: number | null;
+    gad7: number | null;
+    phq9_severity: string | null;
+    gad7_severity: string | null;
+  };
+  // Phase 3: Extended battery
+  attachment?: {
+    anxiety: number | null;
+    avoidance: number | null;
+  };
+  emotion_reg?: {
+    reappraisal: number | null;
+    suppression: number | null;
+  };
+  empathy?: {
+    fantasy: number | null;
+    perspective_taking: number | null;
+    empathic_concern: number | null;
+    personal_distress: number | null;
+  };
+  social?: {
+    self_monitoring: number | null;
+    loc_internal: number | null;
+    loc_external: number | null;
+  };
+  grit?: {
+    perseverance: number | null;
+    interest_consistency: number | null;
+  };
+  vocational?: {
+    realistic: number | null;
+    investigative: number | null;
+    artistic: number | null;
+    social: number | null;
+    enterprising: number | null;
+    conventional: number | null;
+  };
+  needs?: {
+    autonomy: number | null;
+    competence: number | null;
+    relatedness: number | null;
+  };
+  hexaco?: {
+    honesty_humility: number | null;
+    emotionality: number | null;
+    extraversion: number | null;
+    agreeableness: number | null;
+    conscientiousness: number | null;
+    openness: number | null;
+  };
+  persona?: {
+    communication: Record<string, unknown>;
+    decision_making: Record<string, unknown>;
+    conflict_response: Record<string, unknown>;
+    motivation: Record<string, unknown>;
+    epistemic_style: Record<string, unknown>;
+    interpersonal: Record<string, unknown>;
+    characteristic_phrases: string[];
+    decision_examples: unknown[];
+    conflict_examples: unknown[];
+  };
+  metadata: {
+    methods_used: string[];
+    corpus_word_count: number;
+    corpus_sources: string[];
+    llm_tokens_used: number;
+    analysis_date: string | null;
+  };
+  narrative: string;
+  claude_md_snippet: string;
+}
+
+const DOMAIN_LABELS: Record<string, string> = {
+  O: "Openness",
+  C: "Conscientiousness",
+  E: "Extraversion",
+  A: "Agreeableness",
+  N: "Neuroticism",
+};
+
+const DOMAIN_ORDER = ["O", "C", "E", "A", "N"];
+
+const METHOD_COLORS: Record<string, string> = {
+  "self-report": "#2563eb",
+  interview: "#7c3aed",
+  "llm-claude": "#059669",
+  "llm-gpt": "#dc2626",
+  huggingface: "#6366f1",
+};
+
+const METHOD_LABELS: Record<string, string> = {
+  "self-report": "Self-Report (IPIP-NEO-120)",
+  interview: "Interview (Peters & Matz)",
+  "llm-claude": "LLM Corpus (Claude)",
+  "llm-gpt": "LLM Corpus (GPT)",
+  huggingface: "HuggingFace (BERT)",
+};
+
+const VALUE_LABELS: Record<string, string> = {
+  self_direction: "Self-Direction",
+  stimulation: "Stimulation",
+  hedonism: "Hedonism",
+  achievement: "Achievement",
+  power: "Power",
+  security: "Security",
+  conformity: "Conformity",
+  tradition: "Tradition",
+  benevolence: "Benevolence",
+  universalism: "Universalism",
+};
+
+function scoreLabel(n: number): string {
+  if (n >= 80) return "Very High";
+  if (n >= 60) return "High";
+  if (n >= 40) return "Average";
+  if (n >= 20) return "Low";
+  return "Very Low";
+}
+
+function confidenceColor(c: string): string {
+  if (c === "high") return "#059669";
+  if (c === "medium") return "#d97706";
+  return "#dc2626";
+}
+
+function severityColor(s: string | null): string {
+  if (!s) return "#9ca3af";
+  if (s === "none") return "#059669";
+  if (s === "mild") return "#d97706";
+  if (s === "moderate") return "#f59e0b";
+  return "#dc2626";
+}
+
+export function ProfileDashboard() {
+  const [profile, setProfile] = useState<ProfileData | null>(null);
+  const [expandedDomain, setExpandedDomain] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<"overview" | "methods" | "values" | "cognitive" | "extended" | "persona" | "narrative" | "corpus">("overview");
+  const [loading, setLoading] = useState(true);
+  const [profileList, setProfileList] = useState<ManifestEntry[]>([]);
+  const [selectedProfileId, setSelectedProfileId] = useState<string>("");
+
+  // Load manifest and default profile on mount
+  useEffect(() => {
+    fetch("/profiles/manifest.json")
+      .then((r) => {
+        if (!r.ok) throw new Error("Not found");
+        return r.json() as Promise<Manifest>;
+      })
+      .then((manifest) => {
+        setProfileList(manifest.profiles);
+        const defaultId = manifest.default;
+        const defaultEntry = manifest.profiles.find((p) => p.id === defaultId) ?? manifest.profiles[0];
+        if (defaultEntry) {
+          setSelectedProfileId(defaultEntry.id);
+          return fetch(`/profiles/${defaultEntry.filename}`).then((r) => r.json());
+        }
+        return null;
+      })
+      .then((data: ProfileData | null) => {
+        if (data?.big_five && data?.version) {
+          setProfile(data);
+        }
+      })
+      .catch(() => {
+        // Fallback: load /profile.json directly
+        fetch("/profile.json")
+          .then((r) => {
+            if (!r.ok) throw new Error("Not found");
+            return r.json();
+          })
+          .then((data: ProfileData) => {
+            if (data.big_five && data.version) {
+              setProfile(data);
+            }
+          })
+          .catch(() => {});
+      })
+      .finally(() => setLoading(false));
+  }, []);
+
+  const handleProfileSelect = (id: string) => {
+    if (id === "__import__") {
+      handleImport();
+      return;
+    }
+    const entry = profileList.find((p) => p.id === id);
+    if (!entry) return;
+    setSelectedProfileId(id);
+    fetch(`/profiles/${entry.filename}`)
+      .then((r) => r.json())
+      .then((data: ProfileData) => {
+        if (data.big_five && data.version) {
+          setProfile(data);
+        }
+      })
+      .catch(() => alert("Failed to load profile"));
+  };
+
+  const handleImport = () => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.accept = ".json";
+    input.onchange = (e) => {
+      const file = (e.target as HTMLInputElement).files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        if (typeof reader.result === "string") {
+          try {
+            const data = JSON.parse(reader.result) as ProfileData;
+            if (data.big_five && data.version) {
+              setProfile(data);
+            }
+          } catch {
+            alert("Invalid profile JSON");
+          }
+        }
+      };
+      reader.readAsText(file);
+    };
+    input.click();
+  };
+
+  if (loading) {
+    return (
+      <div style={{ textAlign: "center", padding: "4rem 2rem" }}>
+        <p style={{ color: "#6b7280" }}>Loading profile...</p>
+      </div>
+    );
+  }
+
+  if (!profile) {
+    return (
+      <div style={{ textAlign: "center", padding: "4rem 2rem" }}>
+        <h2 style={{ marginBottom: "0.5rem" }}>Profile Dashboard</h2>
+        <p style={{ color: "#6b7280", marginBottom: "2rem" }}>
+          Import a synthesized profile JSON to visualize your results.
+        </p>
+        <button onClick={handleImport} style={btnPrimary}>
+          Import Profile JSON
+        </button>
+      </div>
+    );
+  }
+
+  const radarData = DOMAIN_ORDER.map((key) => {
+    const d = profile.big_five.domains[key];
+    return {
+      trait: DOMAIN_LABELS[key] ?? key,
+      score: d ? Math.round(d.final_score) : 0,
+      ciLower: d ? Math.round(d.ci_lower) : 0,
+      ciUpper: d ? Math.round(d.ci_upper) : 0,
+    };
+  });
+
+  return (
+    <div style={{ maxWidth: 960, margin: "0 auto", padding: "2rem" }}>
+      {/* Header */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "2rem" }}>
+        <div>
+          <h1 style={{ marginBottom: "0.25rem" }}>Psyche Profile</h1>
+          <p style={{ color: "#6b7280", margin: 0, fontSize: "0.875rem" }}>
+            Generated {new Date(profile.created_at).toLocaleDateString()} | Methods: {profile.metadata.methods_used.join(", ")} | Corpus: {profile.metadata.corpus_word_count.toLocaleString()} words
+          </p>
+        </div>
+        {profileList.length > 0 ? (
+          <select
+            value={selectedProfileId}
+            onChange={(e) => handleProfileSelect(e.target.value)}
+            style={{
+              padding: "0.5rem 0.75rem",
+              border: "1px solid #d1d5db",
+              borderRadius: "0.375rem",
+              fontSize: "0.875rem",
+              background: "#fff",
+              cursor: "pointer",
+              minWidth: 200,
+            }}
+          >
+            {profileList.map((p) => (
+              <option key={p.id} value={p.id}>
+                {p.name} ({p.date})
+              </option>
+            ))}
+            <option value="__import__">Import from file...</option>
+          </select>
+        ) : (
+          <button onClick={handleImport} style={btnSecondary}>
+            Load Different Profile
+          </button>
+        )}
+      </div>
+
+      {/* Tab navigation */}
+      <div style={{ display: "flex", gap: "0.25rem", borderBottom: "2px solid #e5e7eb", marginBottom: "2rem" }}>
+        {(["overview", "methods", "values", "cognitive", "extended", "corpus", "persona", "narrative"] as const).map((tab) => (
+          <button
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            style={{
+              padding: "0.75rem 1.25rem",
+              background: "transparent",
+              border: "none",
+              borderBottom: activeTab === tab ? "2px solid #2563eb" : "2px solid transparent",
+              color: activeTab === tab ? "#2563eb" : "#6b7280",
+              fontWeight: activeTab === tab ? 600 : 400,
+              cursor: "pointer",
+              fontSize: "0.875rem",
+              textTransform: "capitalize",
+              marginBottom: "-2px",
+            }}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
+
+      {/* Tab content */}
+      {activeTab === "overview" && (
+        <OverviewTab profile={profile} radarData={radarData} expandedDomain={expandedDomain} setExpandedDomain={setExpandedDomain} />
+      )}
+      {activeTab === "methods" && <MethodsTab profile={profile} />}
+      {activeTab === "values" && <ValuesTab profile={profile} />}
+      {activeTab === "cognitive" && <CognitiveTab profile={profile} />}
+      {activeTab === "extended" && <ExtendedBatteryTab profile={profile} />}
+      {activeTab === "corpus" && <CorpusAnalysisTab />}
+      {activeTab === "persona" && <PersonaTab profile={profile} />}
+      {activeTab === "narrative" && <NarrativeTab profile={profile} />}
+    </div>
+  );
+}
+
+// ─── Overview Tab ────────────────────────────────────────────
+
+function OverviewTab({
+  profile,
+  radarData,
+  expandedDomain,
+  setExpandedDomain,
+}: {
+  profile: ProfileData;
+  radarData: { trait: string; score: number; ciLower: number; ciUpper: number }[];
+  expandedDomain: string | null;
+  setExpandedDomain: (d: string | null) => void;
+}) {
+  return (
+    <>
+      {/* Radar Chart */}
+      <div style={{ marginBottom: "2rem" }}>
+        <h2 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>Big Five Personality</h2>
+        <ResponsiveContainer width="100%" height={380}>
+          <RadarChart data={radarData}>
+            <PolarGrid />
+            <PolarAngleAxis dataKey="trait" tick={{ fontSize: 13 }} />
+            <PolarRadiusAxis domain={[0, 100]} tick={{ fontSize: 11 }} />
+            <Radar dataKey="ciUpper" stroke="none" fill="#2563eb" fillOpacity={0.08} isAnimationActive={false} />
+            <Radar dataKey="score" stroke="#2563eb" fill="#2563eb" fillOpacity={0.25} strokeWidth={2} dot isAnimationActive={false} />
+            <Radar dataKey="ciLower" stroke="none" fill="#ffffff" fillOpacity={0.9} isAnimationActive={false} />
+          </RadarChart>
+        </ResponsiveContainer>
+        <p style={{ textAlign: "center", fontSize: "0.75rem", color: "#9ca3af" }}>
+          Shaded band shows confidence interval. Click domains below for detail.
+        </p>
+      </div>
+
+      {/* Domain cards */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+        {DOMAIN_ORDER.map((key) => {
+          const d = profile.big_five.domains[key];
+          if (!d) return null;
+          const isExpanded = expandedDomain === key;
+          return (
+            <div
+              key={key}
+              style={{
+                border: "1px solid #e5e7eb",
+                borderRadius: "0.5rem",
+                overflow: "hidden",
+              }}
+            >
+              <button
+                onClick={() => setExpandedDomain(isExpanded ? null : key)}
+                style={{
+                  width: "100%",
+                  padding: "1rem 1.5rem",
+                  background: isExpanded ? "#f9fafb" : "#fff",
+                  border: "none",
+                  cursor: "pointer",
+                  textAlign: "left",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <div>
+                  <span style={{ fontWeight: 600, fontSize: "1rem" }}>{DOMAIN_LABELS[key]}</span>
+                  <span style={{ color: "#9ca3af", marginLeft: "0.75rem", fontSize: "0.875rem" }}>
+                    {scoreLabel(d.final_score)}
+                  </span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+                  {/* Score bar */}
+                  <div style={{ width: 180, position: "relative" }}>
+                    <div style={{ height: 8, background: "#f3f4f6", borderRadius: 4 }}>
+                      {/* CI band */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          left: `${d.ci_lower}%`,
+                          width: `${d.ci_upper - d.ci_lower}%`,
+                          height: 8,
+                          background: "#dbeafe",
+                          borderRadius: 4,
+                        }}
+                      />
+                      {/* Score dot */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          left: `${d.final_score}%`,
+                          top: -2,
+                          width: 12,
+                          height: 12,
+                          background: "#2563eb",
+                          borderRadius: "50%",
+                          transform: "translateX(-50%)",
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <span style={{ fontWeight: 700, fontSize: "1.25rem", minWidth: 32, textAlign: "right" }}>
+                    {Math.round(d.final_score)}
+                  </span>
+                  <span style={{ color: "#9ca3af", fontSize: "0.75rem" }}>
+                    {isExpanded ? "▲" : "▼"}
+                  </span>
+                </div>
+              </button>
+
+              {isExpanded && (
+                <div style={{ padding: "1rem 1.5rem", borderTop: "1px solid #e5e7eb", background: "#fafafa" }}>
+                  {/* Method comparison */}
+                  <div style={{ marginBottom: "1rem" }}>
+                    <h4 style={{ fontSize: "0.875rem", marginBottom: "0.5rem", color: "#374151" }}>Method Comparison</h4>
+                    {d.estimates.map((est) => (
+                      <div key={est.method} style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.5rem" }}>
+                        <span style={{ fontSize: "0.75rem", width: 140, color: "#6b7280" }}>
+                          {METHOD_LABELS[est.method] ?? est.method}
+                        </span>
+                        <div style={{ flex: 1, height: 6, background: "#e5e7eb", borderRadius: 3, position: "relative" }}>
+                          <div
+                            style={{
+                              height: 6,
+                              width: `${est.score}%`,
+                              background: METHOD_COLORS[est.method] ?? "#6b7280",
+                              borderRadius: 3,
+                            }}
+                          />
+                        </div>
+                        <span style={{ fontSize: "0.875rem", fontWeight: 600, minWidth: 28, textAlign: "right" }}>
+                          {Math.round(est.score)}
+                        </span>
+                        <span
+                          style={{
+                            fontSize: "0.625rem",
+                            color: confidenceColor(est.confidence),
+                            textTransform: "uppercase",
+                            fontWeight: 600,
+                            minWidth: 50,
+                          }}
+                        >
+                          {est.confidence}
+                        </span>
+                      </div>
+                    ))}
+                    {d.divergence > 0 && (
+                      <p style={{ fontSize: "0.75rem", color: d.divergence > 15 ? "#dc2626" : "#9ca3af", marginTop: "0.5rem" }}>
+                        Cross-method divergence: {d.divergence.toFixed(1)} SD
+                        {d.divergence > 15 && " — methods disagree significantly"}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Evidence quotes */}
+                  {d.estimates.some((e) => e.evidence.length > 0) && (
+                    <div>
+                      <h4 style={{ fontSize: "0.875rem", marginBottom: "0.5rem", color: "#374151" }}>Evidence</h4>
+                      {d.estimates
+                        .filter((e) => e.evidence.length > 0)
+                        .map((est) =>
+                          est.evidence.slice(0, 2).map((quote, i) => (
+                            <blockquote
+                              key={`${est.method}-${i}`}
+                              style={{
+                                borderLeft: `3px solid ${METHOD_COLORS[est.method] ?? "#d1d5db"}`,
+                                paddingLeft: "0.75rem",
+                                margin: "0.5rem 0",
+                                fontSize: "0.8rem",
+                                color: "#4b5563",
+                                lineHeight: 1.5,
+                              }}
+                            >
+                              "{quote}"
+                              <span style={{ color: "#9ca3af", fontSize: "0.7rem", marginLeft: "0.5rem" }}>
+                                — {est.method}
+                              </span>
+                            </blockquote>
+                          ))
+                        )}
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+}
+
+// ─── Methods Tab ─────────────────────────────────────────────
+
+function MethodsTab({ profile }: { profile: ProfileData }) {
+  const methods = profile.metadata.methods_used;
+
+  const comparisonData = DOMAIN_ORDER.map((key) => {
+    const d = profile.big_five.domains[key];
+    const row: Record<string, string | number> = { trait: DOMAIN_LABELS[key] ?? key };
+    if (d) {
+      for (const est of d.estimates) {
+        row[est.method] = Math.round(est.score);
+      }
+    }
+    return row;
+  });
+
+  return (
+    <>
+      <h2 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>Cross-Method Comparison</h2>
+      <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "1.5rem" }}>
+        Each bar shows a different assessment method's score for the same trait.
+        Divergence between methods reveals where self-perception differs from behavioral expression.
+      </p>
+
+      <ResponsiveContainer width="100%" height={350}>
+        <BarChart data={comparisonData} layout="vertical" barGap={2}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis type="number" domain={[0, 100]} />
+          <YAxis type="category" dataKey="trait" width={130} fontSize={13} />
+          <Tooltip />
+          <Legend />
+          {methods.map((method) => (
+            <Bar
+              key={method}
+              dataKey={method}
+              name={METHOD_LABELS[method] ?? method}
+              fill={METHOD_COLORS[method] ?? "#6b7280"}
+              radius={[0, 3, 3, 0]}
+              barSize={12}
+              isAnimationActive={false}
+            />
+          ))}
+        </BarChart>
+      </ResponsiveContainer>
+
+      {/* Divergence highlights */}
+      <div style={{ marginTop: "2rem" }}>
+        <h3 style={{ fontSize: "1rem", marginBottom: "0.75rem" }}>Notable Divergences</h3>
+        {DOMAIN_ORDER.map((key) => {
+          const d = profile.big_five.domains[key];
+          if (!d || d.divergence < 10) return null;
+          const sorted = [...d.estimates].sort((a, b) => b.score - a.score);
+          const highest = sorted[0]!;
+          const lowest = sorted[sorted.length - 1]!;
+          return (
+            <div key={key} style={{ padding: "0.75rem 1rem", background: "#fef3c7", borderRadius: "0.375rem", marginBottom: "0.5rem" }}>
+              <strong>{DOMAIN_LABELS[key]}</strong>: {METHOD_LABELS[highest.method] ?? highest.method} scored {Math.round(highest.score)} vs {METHOD_LABELS[lowest.method] ?? lowest.method} scored {Math.round(lowest.score)} (gap: {Math.round(highest.score - lowest.score)})
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Method reliability legend */}
+      <div style={{ marginTop: "2rem", padding: "1rem", background: "#f9fafb", borderRadius: "0.5rem" }}>
+        <h3 style={{ fontSize: "1rem", marginBottom: "0.75rem" }}>Method Weights</h3>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", fontSize: "0.875rem" }}>
+          {[
+            ["Self-Report", "35%", "Psychometric instruments (alpha ~.85+)"],
+            ["Interview", "20%", "Semi-structured assessment (r~.44)"],
+            ["LLM Corpus", "20%", "Assessment-optimized prompting"],
+          ].map(([name, weight, desc]) => (
+            <div key={name as string} style={{ display: "flex", gap: "0.5rem" }}>
+              <span style={{ fontWeight: 600, minWidth: 80 }}>{name}</span>
+              <span style={{ color: "#2563eb", minWidth: 32 }}>{weight}</span>
+              <span style={{ color: "#9ca3af" }}>{desc}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+// ─── Values Tab ──────────────────────────────────────────────
+
+function ValuesTab({ profile }: { profile: ProfileData }) {
+  const vals = profile.values.values;
+  const sortedKeys = Object.keys(vals).sort(
+    (a, b) => (vals[b]?.final_score ?? 0) - (vals[a]?.final_score ?? 0)
+  ) as string[];
+
+  const barData = sortedKeys.map((key) => ({
+    name: VALUE_LABELS[key] ?? key,
+    score: Math.round(vals[key]?.final_score ?? 0),
+    isTop: profile.values.top_3.includes(key),
+    isBottom: profile.values.bottom_3.includes(key),
+  }));
+
+  return (
+    <>
+      <h2 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>Schwartz Values</h2>
+      <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "1.5rem" }}>
+        Values represent broad motivational goals. Based on LLM corpus analysis + interview assessment.
+      </p>
+
+      <ResponsiveContainer width="100%" height={400}>
+        <BarChart data={barData} layout="vertical">
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis type="number" domain={[0, 100]} />
+          <YAxis type="category" dataKey="name" width={120} fontSize={13} />
+          <Tooltip />
+          <Bar dataKey="score" radius={[0, 4, 4, 0]} isAnimationActive={false}>
+            {barData.map((entry, index) => (
+              <Cell
+                key={index}
+                fill={entry.isTop ? "#059669" : entry.isBottom ? "#dc2626" : "#6b7280"}
+                fillOpacity={0.8}
+              />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+
+      {/* Value evidence cards */}
+      <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
+        {sortedKeys.slice(0, 3).map((key) => {
+          const v = vals[key] as MergedTrait | undefined;
+          if (!v) return null;
+          return (
+            <div key={key} style={{ padding: "1rem", border: "1px solid #d1fae5", borderRadius: "0.5rem", background: "#f0fdf4" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem" }}>
+                <strong style={{ color: "#059669" }}>{VALUE_LABELS[key] ?? key}</strong>
+                <span style={{ fontWeight: 700, color: "#059669" }}>{Math.round(v.final_score)}/100</span>
+              </div>
+              {v.estimates?.slice(0, 2).flatMap((est) =>
+                est.evidence.slice(0, 1).map((quote, i) => (
+                  <blockquote
+                    key={`${est.method}-${i}`}
+                    style={{ borderLeft: "3px solid #6ee7b7", paddingLeft: "0.75rem", margin: "0.25rem 0", fontSize: "0.8rem", color: "#4b5563" }}
+                  >
+                    "{quote}"
+                  </blockquote>
+                ))
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </>
+  );
+}
+
+// ─── Cognitive Tab ───────────────────────────────────────────
+
+function CognitiveTab({ profile }: { profile: ProfileData }) {
+  const { cognitive, dark_triad, clinical } = profile;
+  return (
+    <>
+      {/* Cognitive Profile */}
+      <h2 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>Cognitive Profile</h2>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem", marginBottom: "2.5rem" }}>
+        <MetricCard
+          label="Cognitive Reflection"
+          value={cognitive.crt_score !== null ? `${cognitive.crt_score}/7` : "—"}
+          sublabel={cognitive.crt_score === 7 ? "Perfect analytical thinking" : ""}
+          color="#2563eb"
+        />
+        <MetricCard
+          label="Need for Cognition"
+          value={cognitive.need_for_cognition !== null ? `${Math.round(cognitive.need_for_cognition)}` : "—"}
+          sublabel={cognitive.need_for_cognition !== null ? scoreLabel(cognitive.need_for_cognition) : ""}
+          color="#7c3aed"
+        />
+        <MetricCard
+          label="Self-Esteem"
+          value={cognitive.self_esteem !== null ? `${Math.round(cognitive.self_esteem)}` : "—"}
+          sublabel={cognitive.self_esteem !== null ? scoreLabel(cognitive.self_esteem) : ""}
+          color="#059669"
+        />
+      </div>
+
+      {/* Dark Triad */}
+      <h2 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>Dark Triad</h2>
+      <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "1rem" }}>
+        Short Dark Triad (SD3). Scores on 0-100 scale, 50 = population average.
+      </p>
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "2.5rem" }}>
+        {([
+          ["Machiavellianism", dark_triad.machiavellianism, "#374151"],
+          ["Narcissism", dark_triad.narcissism, "#374151"],
+          ["Psychopathy", dark_triad.psychopathy, "#374151"],
+        ] as const).map(([label, score, color]) => (
+          <div key={label} style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+            <span style={{ width: 150, fontSize: "0.875rem", fontWeight: 500 }}>{label}</span>
+            <div style={{ flex: 1, height: 10, background: "#f3f4f6", borderRadius: 5, position: "relative" }}>
+              <div style={{ height: 10, width: `${score ?? 0}%`, background: color, borderRadius: 5, opacity: 0.6 }} />
+              {/* 50 marker */}
+              <div style={{ position: "absolute", left: "50%", top: -2, height: 14, width: 1, background: "#d1d5db" }} />
+            </div>
+            <span style={{ fontWeight: 700, minWidth: 28, textAlign: "right" }}>{score !== null ? Math.round(score) : "—"}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Clinical Screens */}
+      <h2 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>Clinical Screens</h2>
+      <p style={{ color: "#dc2626", fontSize: "0.75rem", marginBottom: "1rem", fontStyle: "italic" }}>
+        These are screening tools, not diagnoses. Consult a professional for clinical interpretation.
+      </p>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+        <div style={{ padding: "1.25rem", border: "1px solid #e5e7eb", borderRadius: "0.5rem" }}>
+          <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.25rem" }}>PHQ-9 (Depression)</div>
+          <div style={{ fontSize: "2rem", fontWeight: 700 }}>
+            {clinical.phq9 !== null ? `${clinical.phq9}/27` : "—"}
+          </div>
+          {clinical.phq9_severity && (
+            <span style={{ fontSize: "0.8rem", color: severityColor(clinical.phq9_severity), fontWeight: 600, textTransform: "capitalize" }}>
+              {clinical.phq9_severity}
+            </span>
+          )}
+          {clinical.phq9 !== null && (
+            <div style={{ marginTop: "0.5rem", height: 6, background: "#f3f4f6", borderRadius: 3 }}>
+              <div style={{ height: 6, width: `${(clinical.phq9 / 27) * 100}%`, background: severityColor(clinical.phq9_severity), borderRadius: 3 }} />
+            </div>
+          )}
+        </div>
+        <div style={{ padding: "1.25rem", border: "1px solid #e5e7eb", borderRadius: "0.5rem" }}>
+          <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.25rem" }}>GAD-7 (Anxiety)</div>
+          <div style={{ fontSize: "2rem", fontWeight: 700 }}>
+            {clinical.gad7 !== null ? `${clinical.gad7}/21` : "—"}
+          </div>
+          {clinical.gad7_severity && (
+            <span style={{ fontSize: "0.8rem", color: severityColor(clinical.gad7_severity), fontWeight: 600, textTransform: "capitalize" }}>
+              {clinical.gad7_severity}
+            </span>
+          )}
+          {clinical.gad7 !== null && (
+            <div style={{ marginTop: "0.5rem", height: 6, background: "#f3f4f6", borderRadius: 3 }}>
+              <div style={{ height: 6, width: `${(clinical.gad7 / 21) * 100}%`, background: severityColor(clinical.gad7_severity), borderRadius: 3 }} />
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
+function MetricCard({ label, value, sublabel, color }: { label: string; value: string; sublabel: string; color: string }) {
+  return (
+    <div style={{ padding: "1.25rem", border: "1px solid #e5e7eb", borderRadius: "0.5rem", textAlign: "center" }}>
+      <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.5rem" }}>{label}</div>
+      <div style={{ fontSize: "2rem", fontWeight: 700, color }}>{value}</div>
+      {sublabel && <div style={{ fontSize: "0.75rem", color: "#9ca3af" }}>{sublabel}</div>}
+    </div>
+  );
+}
+
+// ─── Extended Battery Tab ────────────────────────────────────
+
+function ExtendedBatteryTab({ profile }: { profile: ProfileData }) {
+  return (
+    <>
+      <h2 style={{ fontSize: "1.25rem", marginBottom: "1rem" }}>Extended Battery</h2>
+      <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "2rem" }}>
+        Additional personality dimensions beyond the Big Five.
+      </p>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+        {/* Attachment */}
+        {profile.attachment && (profile.attachment.anxiety !== null || profile.attachment.avoidance !== null) && (
+          <ScoreSection title="Attachment Style (ECR-R)" subtitle="Patterns in close relationships">
+            {profile.attachment.anxiety !== null && (
+              <ScoreBar label="Anxiety" score={profile.attachment.anxiety} description="Fear of rejection and abandonment" />
+            )}
+            {profile.attachment.avoidance !== null && (
+              <ScoreBar label="Avoidance" score={profile.attachment.avoidance} description="Discomfort with closeness" />
+            )}
+          </ScoreSection>
+        )}
+
+        {/* Emotion Regulation */}
+        {profile.emotion_reg && (profile.emotion_reg.reappraisal !== null || profile.emotion_reg.suppression !== null) && (
+          <ScoreSection title="Emotion Regulation (ERQ)" subtitle="How you manage emotions">
+            {profile.emotion_reg.reappraisal !== null && (
+              <ScoreBar label="Reappraisal" score={profile.emotion_reg.reappraisal} description="Changing how you think about situations" color="#059669" />
+            )}
+            {profile.emotion_reg.suppression !== null && (
+              <ScoreBar label="Suppression" score={profile.emotion_reg.suppression} description="Inhibiting emotional expression" color="#d97706" />
+            )}
+          </ScoreSection>
+        )}
+
+        {/* Empathy */}
+        {profile.empathy && (
+          <ScoreSection title="Empathy (IRI)" subtitle="Multi-dimensional empathy decomposition">
+            {profile.empathy.fantasy !== null && (
+              <ScoreBar label="Fantasy" score={profile.empathy.fantasy} description="Identification with fictional characters" />
+            )}
+            {profile.empathy.perspective_taking !== null && (
+              <ScoreBar label="Perspective Taking" score={profile.empathy.perspective_taking} description="Cognitive empathy" />
+            )}
+            {profile.empathy.empathic_concern !== null && (
+              <ScoreBar label="Empathic Concern" score={profile.empathy.empathic_concern} description="Affective empathy for others" />
+            )}
+            {profile.empathy.personal_distress !== null && (
+              <ScoreBar label="Personal Distress" score={profile.empathy.personal_distress} description="Self-focused anxiety from others' distress" />
+            )}
+          </ScoreSection>
+        )}
+
+        {/* HEXACO */}
+        {profile.hexaco && profile.hexaco.honesty_humility !== null && (
+          <ScoreSection title="HEXACO" subtitle="Including Honesty-Humility (not measured by Big Five)">
+            {profile.hexaco.honesty_humility !== null && (
+              <ScoreBar label="Honesty-Humility" score={profile.hexaco.honesty_humility} description="Sincerity, fairness, greed avoidance" color="#7c3aed" />
+            )}
+            {profile.hexaco.emotionality !== null && (
+              <ScoreBar label="Emotionality" score={profile.hexaco.emotionality} description="Fearfulness, anxiety, sentimentality" />
+            )}
+            {profile.hexaco.extraversion !== null && (
+              <ScoreBar label="Extraversion" score={profile.hexaco.extraversion} />
+            )}
+            {profile.hexaco.agreeableness !== null && (
+              <ScoreBar label="Agreeableness" score={profile.hexaco.agreeableness} />
+            )}
+            {profile.hexaco.conscientiousness !== null && (
+              <ScoreBar label="Conscientiousness" score={profile.hexaco.conscientiousness} />
+            )}
+            {profile.hexaco.openness !== null && (
+              <ScoreBar label="Openness" score={profile.hexaco.openness} />
+            )}
+          </ScoreSection>
+        )}
+
+        {/* Self-Monitoring + LOC */}
+        {profile.social && (
+          <ScoreSection title="Social & Control" subtitle="Self-monitoring and locus of control">
+            {profile.social.self_monitoring !== null && (
+              <ScoreBar label="Self-Monitoring" score={profile.social.self_monitoring} description="High = social chameleon; Low = consistent" />
+            )}
+            {profile.social.loc_internal !== null && (
+              <ScoreBar label="Internal Locus" score={profile.social.loc_internal} description="Outcomes from own actions" color="#059669" />
+            )}
+            {profile.social.loc_external !== null && (
+              <ScoreBar label="External Locus" score={profile.social.loc_external} description="Outcomes from external forces" color="#d97706" />
+            )}
+          </ScoreSection>
+        )}
+
+        {/* Grit */}
+        {profile.grit && (profile.grit.perseverance !== null || profile.grit.interest_consistency !== null) && (
+          <ScoreSection title="Grit" subtitle="Sustained passion and perseverance">
+            {profile.grit.perseverance !== null && (
+              <ScoreBar label="Perseverance" score={profile.grit.perseverance} description="Finishing what you start" color="#059669" />
+            )}
+            {profile.grit.interest_consistency !== null && (
+              <ScoreBar label="Interest Consistency" score={profile.grit.interest_consistency} description="Maintaining focus on same goals" color="#2563eb" />
+            )}
+          </ScoreSection>
+        )}
+
+        {/* RIASEC */}
+        {profile.vocational && (
+          <ScoreSection title="Vocational Interests (RIASEC)" subtitle="Holland's 6 interest types">
+            {(["realistic", "investigative", "artistic", "social", "enterprising", "conventional"] as const).map((key) => {
+              const val = profile.vocational?.[key];
+              if (val === null || val === undefined) return null;
+              const labels: Record<string, string> = {
+                realistic: "Realistic", investigative: "Investigative", artistic: "Artistic",
+                social: "Social", enterprising: "Enterprising", conventional: "Conventional",
+              };
+              return <ScoreBar key={key} label={labels[key] ?? key} score={val} />;
+            })}
+          </ScoreSection>
+        )}
+
+        {/* BPNS */}
+        {profile.needs && (
+          <ScoreSection title="Basic Needs (BPNS)" subtitle="Self-Determination Theory needs satisfaction">
+            {profile.needs.autonomy !== null && (
+              <ScoreBar label="Autonomy" score={profile.needs.autonomy} description="Feeling free and volitional" />
+            )}
+            {profile.needs.competence !== null && (
+              <ScoreBar label="Competence" score={profile.needs.competence} description="Feeling effective and capable" />
+            )}
+            {profile.needs.relatedness !== null && (
+              <ScoreBar label="Relatedness" score={profile.needs.relatedness} description="Feeling connected to others" />
+            )}
+          </ScoreSection>
+        )}
+      </div>
+    </>
+  );
+}
+
+function ScoreSection({ title, subtitle, children }: { title: string; subtitle?: string; children: React.ReactNode }) {
+  return (
+    <div style={{ padding: "1.25rem", border: "1px solid #e5e7eb", borderRadius: "0.5rem" }}>
+      <h3 style={{ fontSize: "1rem", marginBottom: "0.25rem" }}>{title}</h3>
+      {subtitle && <p style={{ fontSize: "0.75rem", color: "#9ca3af", marginTop: 0, marginBottom: "1rem" }}>{subtitle}</p>}
+      <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function ScoreBar({ label, score, description, color }: { label: string; score: number; description?: string; color?: string }) {
+  const barColor = color ?? "#374151";
+  return (
+    <div>
+      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+        <span style={{ width: 160, fontSize: "0.875rem", fontWeight: 500 }}>{label}</span>
+        <div style={{ flex: 1, height: 10, background: "#f3f4f6", borderRadius: 5, position: "relative" }}>
+          <div style={{ height: 10, width: `${score}%`, background: barColor, borderRadius: 5, opacity: 0.6 }} />
+          <div style={{ position: "absolute", left: "50%", top: -2, height: 14, width: 1, background: "#d1d5db" }} />
+        </div>
+        <span style={{ fontWeight: 700, minWidth: 28, textAlign: "right" }}>{Math.round(score)}</span>
+        <span style={{ fontSize: "0.75rem", color: "#9ca3af", minWidth: 60 }}>{scoreLabel(score)}</span>
+      </div>
+      {description && (
+        <div style={{ marginLeft: 160 + 16, fontSize: "0.7rem", color: "#9ca3af", marginTop: "0.15rem" }}>{description}</div>
+      )}
+    </div>
+  );
+}
+
+// ─── Corpus Analysis Tab ────────────────────────────────────
+
+const DOMAIN_COLORS: Record<string, string> = {
+  O: "#f59e0b",
+  C: "#2563eb",
+  E: "#059669",
+  A: "#7c3aed",
+  N: "#dc2626",
+};
+
+const SOURCE_LABELS: Record<string, string> = {
+  academic: "Academic",
+  sms: "SMS",
+  messenger: "Messenger",
+  chatgpt: "ChatGPT",
+  claude_ai: "Claude AI",
+};
+
+const ERA_LABELS: Record<string, string> = {
+  "era-2008-2015": "2008-2015",
+  "era-2015-2019": "2015-2019",
+  "era-2019-2024": "2019-2024",
+  "era-2024-2026": "2024-2026",
+};
+
+const MEDIUM_LABELS: Record<string, string> = {
+  "medium-formal": "Formal",
+  "medium-messaging": "Messaging",
+  "medium-ai": "AI",
+};
+
+function CorpusAnalysisTab() {
+  const [data, setData] = useState<ComparisonSummary | null>(null);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetch("/profiles/corpus/comparison-summary.json")
+      .then((r) => {
+        if (!r.ok) throw new Error("Not found");
+        return r.json() as Promise<ComparisonSummary>;
+      })
+      .then(setData)
+      .catch(() => setError(true));
+  }, []);
+
+  if (error) {
+    return (
+      <div style={{ textAlign: "center", padding: "3rem", color: "#6b7280" }}>
+        <h2>Corpus Analysis</h2>
+        <p>No corpus analysis data available. Run the multi-level analysis pipeline first.</p>
+      </div>
+    );
+  }
+
+  if (!data) {
+    return <p style={{ color: "#6b7280", textAlign: "center", padding: "2rem" }}>Loading corpus data...</p>;
+  }
+
+  const sourceKeys = Object.keys(SOURCE_LABELS).filter((k) => k in data.levels);
+  const eraKeys = Object.keys(ERA_LABELS).filter((k) => k in data.levels);
+  const mediumKeys = Object.keys(MEDIUM_LABELS).filter((k) => k in data.levels);
+
+  const buildChartData = (keys: string[], labels: Record<string, string>) =>
+    keys.map((key) => {
+      const level = data.levels[key];
+      const bf = level?.llm_big_five ?? {};
+      return {
+        name: labels[key] ?? key,
+        O: bf.O ?? 0,
+        C: bf.C ?? 0,
+        E: bf.E ?? 0,
+        A: bf.A ?? 0,
+        N: bf.N ?? 0,
+        words: level?.corpus_words ?? 0,
+      };
+    });
+
+  const sourceData = buildChartData(sourceKeys, SOURCE_LABELS);
+  const eraData = buildChartData(eraKeys, ERA_LABELS);
+  const mediumData = buildChartData(mediumKeys, MEDIUM_LABELS);
+
+  // Build lexical profile data for the heatmap
+  const buildLexicalData = (keys: string[], labels: Record<string, string>) =>
+    keys
+      .filter((key) => data.levels[key]?.empath_lexical)
+      .map((key) => ({
+        name: labels[key] ?? key,
+        ...Object.fromEntries(
+          DOMAIN_ORDER.map((d) => [d, data.levels[key]?.empath_lexical?.[d]?.z ?? 0])
+        ),
+        labels: Object.fromEntries(
+          DOMAIN_ORDER.map((d) => [d, data.levels[key]?.empath_lexical?.[d]?.label ?? "average"])
+        ),
+      }));
+
+  const hasLexical = Object.values(data.levels).some((l) => l.empath_lexical);
+
+  return (
+    <>
+      <h2 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>Corpus Analysis</h2>
+      <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "2rem" }}>
+        Big Five personality scores across 13 analysis levels from a 1.47M word corpus (5 sources).
+        LLM scores are from Claude Opus inference on text chunks. Lexical profiles show relative
+        word-frequency patterns (what you write about varies by context, not who you are).
+      </p>
+
+      {/* By Source */}
+      <CorpusChart
+        title="By Source"
+        description="How personality expression varies by communication context. Note that Conscientiousness is much higher in AI conversations (71) than in messaging (35) — a register effect consistent with genre-influenced expression."
+        data={sourceData}
+      />
+
+      {/* By Era */}
+      <CorpusChart
+        title="By Era"
+        description="Longitudinal personality development across four time periods. The 2015-2019 era shows peak Neuroticism (76) during a turbulent life period, while the AI era (2024-2026) shows regression toward the mean."
+        data={eraData}
+      />
+
+      {/* By Medium */}
+      <CorpusChart
+        title="By Medium"
+        description="Register effects on personality expression. Conscientiousness is notably higher in AI conversations (72) vs casual messaging (35). Neuroticism is much higher in messaging (70) than in AI contexts (40) — people express anxiety differently across mediums."
+        data={mediumData}
+      />
+
+      {/* Lexical Profile */}
+      {hasLexical && (
+        <div style={{ marginTop: "2rem" }}>
+          <h2 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>Lexical Profile (Empath)</h2>
+          <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "1.5rem" }}>
+            Word frequency patterns across Big-Five-aligned dimensions. These are <strong>ordinal comparisons</strong> between
+            corpus segments — not personality scores. A &ldquo;high&rdquo; Openness label means more intellectual/creative
+            vocabulary relative to the corpus average, not a personality assessment.
+          </p>
+          <LexicalHeatmap title="By Source" data={buildLexicalData(sourceKeys, SOURCE_LABELS)} />
+          <LexicalHeatmap title="By Medium" data={buildLexicalData(mediumKeys, MEDIUM_LABELS)} />
+          <LexicalHeatmap title="By Era" data={buildLexicalData(eraKeys, ERA_LABELS)} />
+        </div>
+      )}
+    </>
+  );
+}
+
+function CorpusChart({
+  title,
+  description,
+  data,
+}: {
+  title: string;
+  description: string;
+  data: { name: string; O: number; C: number; E: number; A: number; N: number; words: number }[];
+}) {
+  return (
+    <div style={{ marginBottom: "2.5rem" }}>
+      <h3 style={{ fontSize: "1rem", marginBottom: "0.25rem" }}>{title}</h3>
+      <p style={{ fontSize: "0.8rem", color: "#6b7280", marginBottom: "1rem", lineHeight: 1.5 }}>{description}</p>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={data} barGap={1}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" fontSize={12} />
+          <YAxis domain={[0, 100]} fontSize={11} />
+          <Tooltip
+            formatter={(value: number, name: string) => [`${value}`, DOMAIN_LABELS[name] ?? name]}
+            labelFormatter={(label: string) => {
+              const entry = data.find((d) => d.name === label);
+              return entry ? `${label} (${entry.words.toLocaleString()} words)` : label;
+            }}
+          />
+          <Legend formatter={(value: string) => DOMAIN_LABELS[value] ?? value} />
+          {DOMAIN_ORDER.map((key) => (
+            <Bar
+              key={key}
+              dataKey={key}
+              fill={DOMAIN_COLORS[key]}
+              fillOpacity={0.8}
+              radius={[2, 2, 0, 0]}
+              barSize={16}
+              isAnimationActive={false}
+            />
+          ))}
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+const LEXICAL_Z_COLORS: Record<string, string> = {
+  high: "#166534",
+  "above average": "#4ade80",
+  average: "#e5e7eb",
+  "below average": "#fca5a5",
+  low: "#991b1b",
+};
+
+const LEXICAL_Z_TEXT: Record<string, string> = {
+  high: "#fff",
+  "above average": "#14532d",
+  average: "#374151",
+  "below average": "#7f1d1d",
+  low: "#fff",
+};
+
+function LexicalHeatmap({
+  title,
+  data,
+}: {
+  title: string;
+  data: { name: string; labels: Record<string, string>; [k: string]: unknown }[];
+}) {
+  if (!data.length) return null;
+
+  return (
+    <div style={{ marginBottom: "2rem" }}>
+      <h3 style={{ fontSize: "1rem", marginBottom: "0.75rem" }}>{title}</h3>
+      <div style={{ overflowX: "auto" }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.8rem" }}>
+          <thead>
+            <tr>
+              <th style={{ textAlign: "left", padding: "0.5rem", borderBottom: "2px solid #e5e7eb", minWidth: 100 }}></th>
+              {DOMAIN_ORDER.map((d) => (
+                <th key={d} style={{ padding: "0.5rem", borderBottom: "2px solid #e5e7eb", textAlign: "center", minWidth: 100 }}>
+                  {DOMAIN_LABELS[d]}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((row) => (
+              <tr key={row.name}>
+                <td style={{ padding: "0.5rem", fontWeight: 600, borderBottom: "1px solid #f3f4f6" }}>{row.name}</td>
+                {DOMAIN_ORDER.map((d) => {
+                  const label = (row.labels as Record<string, string>)[d] ?? "average";
+                  const z = row[d] as number;
+                  return (
+                    <td
+                      key={d}
+                      style={{
+                        padding: "0.5rem",
+                        textAlign: "center",
+                        borderBottom: "1px solid #f3f4f6",
+                        background: LEXICAL_Z_COLORS[label] ?? "#e5e7eb",
+                        color: LEXICAL_Z_TEXT[label] ?? "#374151",
+                        fontWeight: label === "average" ? 400 : 600,
+                        borderRadius: "0.25rem",
+                      }}
+                      title={`z = ${z >= 0 ? "+" : ""}${z.toFixed(2)}`}
+                    >
+                      {label}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+// ─── Persona Tab ────────────────────────────────────────────
+
+function PersonaTab({ profile }: { profile: ProfileData }) {
+  const persona = profile.persona;
+
+  if (!persona) {
+    return (
+      <div style={{ textAlign: "center", padding: "3rem", color: "#6b7280" }}>
+        <h2>Persona Model</h2>
+        <p>No persona model available. Run the synthesis pipeline with extended battery data.</p>
+      </div>
+    );
+  }
+
+  const sections: { title: string; data: Record<string, unknown> }[] = [
+    { title: "Communication Style", data: persona.communication },
+    { title: "Decision-Making", data: persona.decision_making },
+    { title: "Conflict Response", data: persona.conflict_response },
+    { title: "Motivation", data: persona.motivation },
+    { title: "Epistemic Style", data: persona.epistemic_style },
+    { title: "Interpersonal", data: persona.interpersonal },
+  ];
+
+  return (
+    <>
+      <h2 style={{ fontSize: "1.25rem", marginBottom: "0.5rem" }}>Persona Model</h2>
+      <p style={{ color: "#6b7280", fontSize: "0.875rem", marginBottom: "2rem" }}>
+        Structured behavioral patterns derived from psychometric scores, suitable for AI agent simulation.
+      </p>
+
+      <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+        {sections.map(({ title, data }) => {
+          const entries = Object.entries(data).filter(
+            ([, v]) => v && (typeof v === "string" ? v.length > 0 : Array.isArray(v) ? v.length > 0 : true)
+          );
+          if (entries.length === 0) return null;
+
+          return (
+            <div key={title} style={{ padding: "1.25rem", border: "1px solid #e5e7eb", borderRadius: "0.5rem" }}>
+              <h3 style={{ fontSize: "1rem", marginBottom: "0.75rem", color: "#2563eb" }}>{title}</h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                {entries.map(([key, value]) => (
+                  <div key={key} style={{ display: "flex", gap: "0.75rem", fontSize: "0.875rem" }}>
+                    <span style={{ fontWeight: 600, minWidth: 180, color: "#374151" }}>
+                      {key.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
+                    </span>
+                    <span style={{ color: "#4b5563", lineHeight: 1.5 }}>
+                      {Array.isArray(value) ? value.join(", ") : String(value)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          );
+        })}
+
+        {/* Characteristic Phrases */}
+        {persona.characteristic_phrases && persona.characteristic_phrases.length > 0 && (
+          <div style={{ padding: "1.25rem", border: "1px solid #e5e7eb", borderRadius: "0.5rem" }}>
+            <h3 style={{ fontSize: "1rem", marginBottom: "0.75rem", color: "#7c3aed" }}>Characteristic Phrases</h3>
+            {persona.characteristic_phrases.map((phrase, i) => (
+              <blockquote
+                key={i}
+                style={{
+                  borderLeft: "3px solid #7c3aed",
+                  paddingLeft: "0.75rem",
+                  margin: "0.5rem 0",
+                  fontSize: "0.85rem",
+                  color: "#4b5563",
+                  fontStyle: "italic",
+                }}
+              >
+                "{phrase}"
+              </blockquote>
+            ))}
+          </div>
+        )}
+      </div>
+    </>
+  );
+}
+
+// ─── Narrative Tab ───────────────────────────────────────────
+
+function NarrativeTab({ profile }: { profile: ProfileData }) {
+  const [showSnippet, setShowSnippet] = useState(false);
+
+  return (
+    <>
+      <div style={{ display: "flex", gap: "1rem", marginBottom: "1.5rem" }}>
+        <button
+          onClick={() => setShowSnippet(false)}
+          style={showSnippet ? btnSecondary : btnPrimary}
+        >
+          Full Report
+        </button>
+        <button
+          onClick={() => setShowSnippet(true)}
+          style={showSnippet ? btnPrimary : btnSecondary}
+        >
+          CLAUDE.md Snippet
+        </button>
+      </div>
+
+      <div
+        style={{
+          padding: "2rem",
+          background: "#fafafa",
+          borderRadius: "0.5rem",
+          fontSize: "0.875rem",
+          lineHeight: 1.7,
+          whiteSpace: "pre-wrap",
+          fontFamily: "system-ui, -apple-system, sans-serif",
+          maxHeight: "70vh",
+          overflow: "auto",
+        }}
+      >
+        {showSnippet ? profile.claude_md_snippet : profile.narrative}
+      </div>
+
+      <div style={{ marginTop: "1rem", display: "flex", gap: "0.5rem" }}>
+        <button
+          onClick={() => {
+            const text = showSnippet ? profile.claude_md_snippet : profile.narrative;
+            navigator.clipboard.writeText(text);
+          }}
+          style={btnSecondary}
+        >
+          Copy to Clipboard
+        </button>
+        <button
+          onClick={() => {
+            const text = showSnippet ? profile.claude_md_snippet : profile.narrative;
+            const blob = new Blob([text], { type: "text/markdown" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = showSnippet ? "claude-context.md" : "profile-report.md";
+            a.click();
+            URL.revokeObjectURL(url);
+          }}
+          style={btnSecondary}
+        >
+          Download .md
+        </button>
+      </div>
+    </>
+  );
+}
+
+// ─── Shared Styles ───────────────────────────────────────────
+
+const btnPrimary: React.CSSProperties = {
+  padding: "0.5rem 1rem",
+  background: "#2563eb",
+  color: "#fff",
+  border: "none",
+  borderRadius: "0.375rem",
+  cursor: "pointer",
+  fontSize: "0.875rem",
+  fontWeight: 500,
+};
+
+const btnSecondary: React.CSSProperties = {
+  padding: "0.5rem 1rem",
+  background: "transparent",
+  color: "#374151",
+  border: "1px solid #d1d5db",
+  borderRadius: "0.375rem",
+  cursor: "pointer",
+  fontSize: "0.875rem",
+};
+
+========== web/src/components/ResultsViewer.tsx ==========
+import {
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Radar,
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+} from "recharts";
+import type { InstrumentResult } from "../instruments/types";
+import { getInstrument } from "../instruments/registry";
+
+interface ResultsViewerProps {
+  result: InstrumentResult;
+}
+
+export function ResultsViewer({ result }: ResultsViewerProps) {
+  const registered = getInstrument(result.instrumentId);
+  if (!registered) return <p>Unknown instrument: {result.instrumentId}</p>;
+
+  const { instrument } = registered;
+
+  // Separate domain and facet scores
+  const domainScores = result.scores.filter(
+    (s) => instrument.scales.find((sc) => sc.id === s.scaleId && !sc.parentId)
+  );
+  const facetScores = result.scores.filter(
+    (s) => instrument.scales.find((sc) => sc.id === s.scaleId && sc.parentId)
+  );
+
+  // Group facets by domain
+  const facetsByDomain = new Map<string, typeof facetScores>();
+  for (const fs of facetScores) {
+    const scale = instrument.scales.find((s) => s.id === fs.scaleId);
+    if (!scale?.parentId) continue;
+    const existing = facetsByDomain.get(scale.parentId) ?? [];
+    existing.push(fs);
+    facetsByDomain.set(scale.parentId, existing);
+  }
+
+  const radarData = domainScores.map((s) => ({
+    trait: s.scaleName,
+    score: Math.round(s.normalized),
+    fullMark: 100,
+  }));
+
+  return (
+    <div style={{ maxWidth: 800, margin: "0 auto" }}>
+      <h3>{instrument.name} Results</h3>
+      <p style={{ color: "#6b7280", fontSize: "0.875rem" }}>
+        Completed {new Date(result.completedAt).toLocaleDateString()}
+      </p>
+
+      {/* Radar chart for domain scores */}
+      {domainScores.length >= 3 && (
+        <div style={{ marginBottom: "2rem" }}>
+          <h4>Domain Overview</h4>
+          <ResponsiveContainer width="100%" height={350}>
+            <RadarChart data={radarData}>
+              <PolarGrid />
+              <PolarAngleAxis dataKey="trait" />
+              <PolarRadiusAxis domain={[0, 100]} />
+              <Radar
+                dataKey="score"
+                stroke="#2563eb"
+                fill="#2563eb"
+                fillOpacity={0.3}
+              />
+            </RadarChart>
+          </ResponsiveContainer>
+        </div>
+      )}
+
+      {/* Domain score cards */}
+      <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
+        {domainScores.map((ds) => (
+          <div
+            key={ds.scaleId}
+            style={{
+              padding: "1rem",
+              border: "1px solid #e5e7eb",
+              borderRadius: "0.5rem",
+            }}
+          >
+            <div style={{ fontWeight: 600 }}>{ds.scaleName}</div>
+            <div style={{ fontSize: "2rem", fontWeight: 700, color: "#2563eb" }}>
+              {Math.round(ds.normalized)}
+            </div>
+            <div style={{ fontSize: "0.75rem", color: "#9ca3af" }}>
+              out of 100 ({scoreLabel(ds.normalized)})
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Facet breakdown per domain */}
+      {domainScores.map((ds) => {
+        const facets = facetsByDomain.get(ds.scaleId);
+        if (!facets || facets.length === 0) return null;
+
+        const barData = facets.map((f) => ({
+          name: f.scaleName,
+          score: Math.round(f.normalized),
+        }));
+
+        return (
+          <div key={ds.scaleId} style={{ marginTop: "2rem" }}>
+            <h4>{ds.scaleName} Facets</h4>
+            <ResponsiveContainer width="100%" height={200}>
+              <BarChart data={barData} layout="vertical">
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis type="number" domain={[0, 100]} />
+                <YAxis type="category" dataKey="name" width={130} fontSize={12} />
+                <Tooltip />
+                <Bar dataKey="score" fill="#2563eb" radius={[0, 4, 4, 0]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function scoreLabel(normalized: number): string {
+  if (normalized >= 80) return "Very High";
+  if (normalized >= 60) return "High";
+  if (normalized >= 40) return "Average";
+  if (normalized >= 20) return "Low";
+  return "Very Low";
+}
+
+========== web/src/components/ProgressBar.tsx ==========
+interface ProgressBarProps {
+  current: number;
+  total: number;
+  label?: string;
+}
+
+export function ProgressBar({ current, total, label }: ProgressBarProps) {
+  const pct = total > 0 ? Math.round((current / total) * 100) : 0;
+
+  return (
+    <div style={{ marginBottom: "1.5rem" }}>
+      {label && (
+        <div style={{ fontSize: "0.875rem", color: "#6b7280", marginBottom: "0.25rem" }}>
+          {label}
+        </div>
+      )}
+      <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+        <div
+          style={{
+            flex: 1,
+            height: "8px",
+            background: "#e5e7eb",
+            borderRadius: "4px",
+            overflow: "hidden",
+          }}
+        >
+          <div
+            style={{
+              width: `${pct}%`,
+              height: "100%",
+              background: "#2563eb",
+              borderRadius: "4px",
+              transition: "width 0.3s ease",
+            }}
+          />
+        </div>
+        <span style={{ fontSize: "0.875rem", color: "#374151", minWidth: "80px" }}>
+          {current} / {total} ({pct}%)
+        </span>
+      </div>
+    </div>
+  );
+}
+

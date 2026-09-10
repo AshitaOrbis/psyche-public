@@ -1,0 +1,2034 @@
+{
+  "by_condition": {
+    "C0": {
+      "helpfulness": {
+        "mean": 4.266,
+        "median": 4.0,
+        "n": 192
+      },
+      "profile_fit": {
+        "mean": 4.062,
+        "median": 4.0,
+        "n": 192
+      },
+      "calibrated_challenge": {
+        "mean": 4.417,
+        "median": 5.0,
+        "n": 192
+      },
+      "anti_sycophancy": {
+        "mean": 4.562,
+        "median": 5.0,
+        "n": 192
+      },
+      "agency_support": {
+        "mean": 4.292,
+        "median": 4.0,
+        "n": 192
+      },
+      "epistemic_hygiene": {
+        "mean": 4.01,
+        "median": 4.0,
+        "n": 192
+      },
+      "emotional_accuracy": {
+        "mean": 3.943,
+        "median": 4.0,
+        "n": 192
+      },
+      "boundary_safety": {
+        "mean": 4.594,
+        "median": 5.0,
+        "n": 192
+      },
+      "non_caricature": {
+        "mean": 4.604,
+        "median": 5.0,
+        "n": 192
+      },
+      "transfer_value": {
+        "mean": 4.443,
+        "median": 5.0,
+        "n": 192
+      },
+      "red_flag_rate": 0.224
+    },
+    "C1": {
+      "helpfulness": {
+        "mean": 4.453,
+        "median": 5.0,
+        "n": 192
+      },
+      "profile_fit": {
+        "mean": 4.365,
+        "median": 5.0,
+        "n": 192
+      },
+      "calibrated_challenge": {
+        "mean": 4.641,
+        "median": 5.0,
+        "n": 192
+      },
+      "anti_sycophancy": {
+        "mean": 4.677,
+        "median": 5.0,
+        "n": 192
+      },
+      "agency_support": {
+        "mean": 4.417,
+        "median": 5.0,
+        "n": 192
+      },
+      "epistemic_hygiene": {
+        "mean": 4.042,
+        "median": 4.0,
+        "n": 192
+      },
+      "emotional_accuracy": {
+        "mean": 4.031,
+        "median": 4.0,
+        "n": 192
+      },
+      "boundary_safety": {
+        "mean": 4.594,
+        "median": 5.0,
+        "n": 192
+      },
+      "non_caricature": {
+        "mean": 4.76,
+        "median": 5.0,
+        "n": 192
+      },
+      "transfer_value": {
+        "mean": 4.589,
+        "median": 5.0,
+        "n": 192
+      },
+      "red_flag_rate": 0.193
+    },
+    "C3": {
+      "helpfulness": {
+        "mean": 4.557,
+        "median": 5.0,
+        "n": 192
+      },
+      "profile_fit": {
+        "mean": 4.495,
+        "median": 5.0,
+        "n": 192
+      },
+      "calibrated_challenge": {
+        "mean": 4.635,
+        "median": 5.0,
+        "n": 192
+      },
+      "anti_sycophancy": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 192
+      },
+      "agency_support": {
+        "mean": 4.536,
+        "median": 5.0,
+        "n": 192
+      },
+      "epistemic_hygiene": {
+        "mean": 4.172,
+        "median": 4.0,
+        "n": 192
+      },
+      "emotional_accuracy": {
+        "mean": 4.161,
+        "median": 4.0,
+        "n": 192
+      },
+      "boundary_safety": {
+        "mean": 4.708,
+        "median": 5.0,
+        "n": 192
+      },
+      "non_caricature": {
+        "mean": 4.849,
+        "median": 5.0,
+        "n": 192
+      },
+      "transfer_value": {
+        "mean": 4.677,
+        "median": 5.0,
+        "n": 192
+      },
+      "red_flag_rate": 0.177
+    },
+    "C4": {
+      "helpfulness": {
+        "mean": 4.542,
+        "median": 5.0,
+        "n": 192
+      },
+      "profile_fit": {
+        "mean": 4.464,
+        "median": 5.0,
+        "n": 192
+      },
+      "calibrated_challenge": {
+        "mean": 4.693,
+        "median": 5.0,
+        "n": 192
+      },
+      "anti_sycophancy": {
+        "mean": 4.776,
+        "median": 5.0,
+        "n": 192
+      },
+      "agency_support": {
+        "mean": 4.479,
+        "median": 5.0,
+        "n": 192
+      },
+      "epistemic_hygiene": {
+        "mean": 4.292,
+        "median": 4.0,
+        "n": 192
+      },
+      "emotional_accuracy": {
+        "mean": 4.203,
+        "median": 4.0,
+        "n": 192
+      },
+      "boundary_safety": {
+        "mean": 4.651,
+        "median": 5.0,
+        "n": 192
+      },
+      "non_caricature": {
+        "mean": 4.823,
+        "median": 5.0,
+        "n": 192
+      },
+      "transfer_value": {
+        "mean": 4.661,
+        "median": 5.0,
+        "n": 192
+      },
+      "red_flag_rate": 0.156
+    },
+    "C5": {
+      "helpfulness": {
+        "mean": 4.635,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.365,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.75,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.833,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.635,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.073,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.198,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.833,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.802,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.167
+    }
+  },
+  "by_condition_author": {
+    "C0__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.094,
+        "median": 4.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 3.76,
+        "median": 4.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.198,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.448,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.156,
+        "median": 4.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 3.927,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 3.792,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.562,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.49,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.24,
+        "median": 4.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.219
+    },
+    "C0__opus": {
+      "helpfulness": {
+        "mean": 4.438,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.365,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.635,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.677,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.427,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.094,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.094,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.625,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.719,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.646,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.229
+    },
+    "C1__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.344,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.198,
+        "median": 4.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.531,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.573,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.396,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.104,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 3.885,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.552,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.719,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.531,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.177
+    },
+    "C1__opus": {
+      "helpfulness": {
+        "mean": 4.562,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.531,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.75,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.781,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.438,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 3.979,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.177,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.635,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.802,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.646,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.208
+    },
+    "C3__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.5,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.344,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.542,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.698,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.479,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.156,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.031,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.667,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.771,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.573,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.167
+    },
+    "C3__opus": {
+      "helpfulness": {
+        "mean": 4.615,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.646,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.729,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.781,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.594,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.188,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.292,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.75,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.927,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.781,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.188
+    },
+    "C4__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.5,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.344,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.646,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.49,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.271,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.146,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.583,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.802,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.625,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.188
+    },
+    "C4__opus": {
+      "helpfulness": {
+        "mean": 4.583,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.583,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.812,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.469,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.312,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.26,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.719,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.844,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.698,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.125
+    },
+    "C5__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.417,
+        "median": 5.0,
+        "n": 48
+      },
+      "profile_fit": {
+        "mean": 4.104,
+        "median": 4.0,
+        "n": 48
+      },
+      "calibrated_challenge": {
+        "mean": 4.542,
+        "median": 5.0,
+        "n": 48
+      },
+      "anti_sycophancy": {
+        "mean": 4.75,
+        "median": 5.0,
+        "n": 48
+      },
+      "agency_support": {
+        "mean": 4.604,
+        "median": 5.0,
+        "n": 48
+      },
+      "epistemic_hygiene": {
+        "mean": 4,
+        "median": 4.0,
+        "n": 48
+      },
+      "emotional_accuracy": {
+        "mean": 4,
+        "median": 4.0,
+        "n": 48
+      },
+      "boundary_safety": {
+        "mean": 4.792,
+        "median": 5.0,
+        "n": 48
+      },
+      "non_caricature": {
+        "mean": 4.667,
+        "median": 5.0,
+        "n": 48
+      },
+      "transfer_value": {
+        "mean": 4.583,
+        "median": 5.0,
+        "n": 48
+      },
+      "red_flag_rate": 0.188
+    },
+    "C5__opus": {
+      "helpfulness": {
+        "mean": 4.854,
+        "median": 5.0,
+        "n": 48
+      },
+      "profile_fit": {
+        "mean": 4.625,
+        "median": 5.0,
+        "n": 48
+      },
+      "calibrated_challenge": {
+        "mean": 4.958,
+        "median": 5.0,
+        "n": 48
+      },
+      "anti_sycophancy": {
+        "mean": 4.917,
+        "median": 5.0,
+        "n": 48
+      },
+      "agency_support": {
+        "mean": 4.667,
+        "median": 5.0,
+        "n": 48
+      },
+      "epistemic_hygiene": {
+        "mean": 4.146,
+        "median": 4.0,
+        "n": 48
+      },
+      "emotional_accuracy": {
+        "mean": 4.396,
+        "median": 4.0,
+        "n": 48
+      },
+      "boundary_safety": {
+        "mean": 4.875,
+        "median": 5.0,
+        "n": 48
+      },
+      "non_caricature": {
+        "mean": 4.938,
+        "median": 5.0,
+        "n": 48
+      },
+      "transfer_value": {
+        "mean": 4.896,
+        "median": 5.0,
+        "n": 48
+      },
+      "red_flag_rate": 0.146
+    }
+  },
+  "by_condition_persona_type": {
+    "C0__public_inspired": {
+      "helpfulness": {
+        "mean": 4.51,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.219,
+        "median": 4.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.635,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.573,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.146,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.156,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.896,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.708,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.677,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.125
+    },
+    "C0__pure_synthetic": {
+      "helpfulness": {
+        "mean": 4.021,
+        "median": 4.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 3.906,
+        "median": 4.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.198,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.385,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.01,
+        "median": 4.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 3.875,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 3.729,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.292,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.5,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.208,
+        "median": 4.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.323
+    },
+    "C1__public_inspired": {
+      "helpfulness": {
+        "mean": 4.76,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.604,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.865,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.917,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.698,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.167,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.271,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.885,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.938,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.875,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.073
+    },
+    "C1__pure_synthetic": {
+      "helpfulness": {
+        "mean": 4.146,
+        "median": 4.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.125,
+        "median": 4.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.417,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.438,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.135,
+        "median": 4.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 3.917,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 3.792,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.302,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.583,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.302,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.312
+    },
+    "C3__public_inspired": {
+      "helpfulness": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.573,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.76,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.875,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.771,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.302,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.25,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.833,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.875,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.854,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.104
+    },
+    "C3__pure_synthetic": {
+      "helpfulness": {
+        "mean": 4.375,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.417,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.51,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.604,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.302,
+        "median": 4.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.042,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.073,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.583,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.823,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.5,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.25
+    },
+    "C4__public_inspired": {
+      "helpfulness": {
+        "mean": 4.729,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.562,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.771,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.823,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.667,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.26,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.292,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.771,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.885,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.802,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.104
+    },
+    "C4__pure_synthetic": {
+      "helpfulness": {
+        "mean": 4.354,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.365,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.615,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.729,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.292,
+        "median": 4.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.323,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.115,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.531,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.76,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.521,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.208
+    },
+    "C5__public_inspired": {
+      "helpfulness": {
+        "mean": 4.635,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.365,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.75,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.833,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.635,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.073,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.198,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.833,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.802,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.167
+    }
+  },
+  "by_condition_judge": {
+    "C0__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.208,
+        "median": 4.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.062,
+        "median": 4.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.615,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.646,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.385,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.094,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.156,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.542,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.76,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.521,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.229
+    },
+    "C0__opus": {
+      "helpfulness": {
+        "mean": 4.323,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.062,
+        "median": 4.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.219,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.479,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.198,
+        "median": 4.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 3.927,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 3.729,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.646,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.448,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.365,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.219
+    },
+    "C1__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.365,
+        "median": 4.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.271,
+        "median": 4.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.667,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.667,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.448,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.021,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.125,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.49,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.792,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.656,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.281
+    },
+    "C1__opus": {
+      "helpfulness": {
+        "mean": 4.542,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.458,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.615,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.688,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.385,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.062,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 3.938,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.698,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.729,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.521,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.104
+    },
+    "C3__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.458,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.417,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.76,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.542,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.135,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.302,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.615,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.885,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.677,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.229
+    },
+    "C3__opus": {
+      "helpfulness": {
+        "mean": 4.656,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.573,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.51,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.531,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.208,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.021,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.802,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.812,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.677,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.125
+    },
+    "C4__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.438,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.354,
+        "median": 4.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.792,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.812,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.427,
+        "median": 4.5,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.292,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.396,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.562,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.833,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.667,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.188
+    },
+    "C4__opus": {
+      "helpfulness": {
+        "mean": 4.646,
+        "median": 5.0,
+        "n": 96
+      },
+      "profile_fit": {
+        "mean": 4.573,
+        "median": 5.0,
+        "n": 96
+      },
+      "calibrated_challenge": {
+        "mean": 4.594,
+        "median": 5.0,
+        "n": 96
+      },
+      "anti_sycophancy": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "agency_support": {
+        "mean": 4.531,
+        "median": 5.0,
+        "n": 96
+      },
+      "epistemic_hygiene": {
+        "mean": 4.292,
+        "median": 4.0,
+        "n": 96
+      },
+      "emotional_accuracy": {
+        "mean": 4.01,
+        "median": 4.0,
+        "n": 96
+      },
+      "boundary_safety": {
+        "mean": 4.74,
+        "median": 5.0,
+        "n": 96
+      },
+      "non_caricature": {
+        "mean": 4.812,
+        "median": 5.0,
+        "n": 96
+      },
+      "transfer_value": {
+        "mean": 4.656,
+        "median": 5.0,
+        "n": 96
+      },
+      "red_flag_rate": 0.125
+    },
+    "C5__gpt-5.4": {
+      "helpfulness": {
+        "mean": 4.646,
+        "median": 5.0,
+        "n": 48
+      },
+      "profile_fit": {
+        "mean": 4.333,
+        "median": 4.0,
+        "n": 48
+      },
+      "calibrated_challenge": {
+        "mean": 4.896,
+        "median": 5.0,
+        "n": 48
+      },
+      "anti_sycophancy": {
+        "mean": 4.917,
+        "median": 5.0,
+        "n": 48
+      },
+      "agency_support": {
+        "mean": 4.667,
+        "median": 5.0,
+        "n": 48
+      },
+      "epistemic_hygiene": {
+        "mean": 4.125,
+        "median": 4.0,
+        "n": 48
+      },
+      "emotional_accuracy": {
+        "mean": 4.438,
+        "median": 4.0,
+        "n": 48
+      },
+      "boundary_safety": {
+        "mean": 4.812,
+        "median": 5.0,
+        "n": 48
+      },
+      "non_caricature": {
+        "mean": 4.875,
+        "median": 5.0,
+        "n": 48
+      },
+      "transfer_value": {
+        "mean": 4.833,
+        "median": 5.0,
+        "n": 48
+      },
+      "red_flag_rate": 0.167
+    },
+    "C5__opus": {
+      "helpfulness": {
+        "mean": 4.625,
+        "median": 5.0,
+        "n": 48
+      },
+      "profile_fit": {
+        "mean": 4.396,
+        "median": 5.0,
+        "n": 48
+      },
+      "calibrated_challenge": {
+        "mean": 4.604,
+        "median": 5.0,
+        "n": 48
+      },
+      "anti_sycophancy": {
+        "mean": 4.75,
+        "median": 5.0,
+        "n": 48
+      },
+      "agency_support": {
+        "mean": 4.604,
+        "median": 5.0,
+        "n": 48
+      },
+      "epistemic_hygiene": {
+        "mean": 4.021,
+        "median": 4.0,
+        "n": 48
+      },
+      "emotional_accuracy": {
+        "mean": 3.958,
+        "median": 4.0,
+        "n": 48
+      },
+      "boundary_safety": {
+        "mean": 4.854,
+        "median": 5.0,
+        "n": 48
+      },
+      "non_caricature": {
+        "mean": 4.729,
+        "median": 5.0,
+        "n": 48
+      },
+      "transfer_value": {
+        "mean": 4.646,
+        "median": 5.0,
+        "n": 48
+      },
+      "red_flag_rate": 0.167
+    }
+  },
+  "deltas": {
+    "C4_minus_C0": {
+      "helpfulness": 0.276,
+      "profile_fit": 0.402,
+      "calibrated_challenge": 0.276,
+      "anti_sycophancy": 0.214,
+      "agency_support": 0.187,
+      "epistemic_hygiene": 0.282,
+      "emotional_accuracy": 0.26,
+      "boundary_safety": 0.057,
+      "non_caricature": 0.219,
+      "transfer_value": 0.218
+    },
+    "C4_minus_C1": {
+      "helpfulness": 0.089,
+      "profile_fit": 0.099,
+      "calibrated_challenge": 0.052,
+      "anti_sycophancy": 0.099,
+      "agency_support": 0.062,
+      "epistemic_hygiene": 0.25,
+      "emotional_accuracy": 0.172,
+      "boundary_safety": 0.057,
+      "non_caricature": 0.063,
+      "transfer_value": 0.072
+    },
+    "C4_minus_C3": {
+      "helpfulness": -0.015,
+      "profile_fit": -0.031,
+      "calibrated_challenge": 0.058,
+      "anti_sycophancy": 0.036,
+      "agency_support": -0.057,
+      "epistemic_hygiene": 0.12,
+      "emotional_accuracy": 0.042,
+      "boundary_safety": -0.057,
+      "non_caricature": -0.026,
+      "transfer_value": -0.016
+    },
+    "C3_minus_C0": {
+      "helpfulness": 0.291,
+      "profile_fit": 0.433,
+      "calibrated_challenge": 0.218,
+      "anti_sycophancy": 0.178,
+      "agency_support": 0.244,
+      "epistemic_hygiene": 0.162,
+      "emotional_accuracy": 0.218,
+      "boundary_safety": 0.114,
+      "non_caricature": 0.245,
+      "transfer_value": 0.234
+    },
+    "C5_minus_C4": {
+      "helpfulness": 0.093,
+      "profile_fit": -0.099,
+      "calibrated_challenge": 0.057,
+      "anti_sycophancy": 0.057,
+      "agency_support": 0.156,
+      "epistemic_hygiene": -0.219,
+      "emotional_accuracy": -0.005,
+      "boundary_safety": 0.182,
+      "non_caricature": -0.021,
+      "transfer_value": 0.079
+    }
+  },
+  "public_inspired_minus_pure_synthetic": {
+    "helpfulness": 0.451,
+    "profile_fit": 0.262,
+    "calibrated_challenge": 0.321,
+    "anti_sycophancy": 0.299,
+    "agency_support": 0.484,
+    "epistemic_hygiene": 0.151,
+    "emotional_accuracy": 0.306,
+    "boundary_safety": 0.417,
+    "non_caricature": 0.175,
+    "transfer_value": 0.407
+  },
+  "halo_audit_same_minus_cross": {
+    "C0__opus": {
+      "helpfulness": 0.417,
+      "profile_fit": 0.396,
+      "calibrated_challenge": -0.021,
+      "anti_sycophancy": 0.104,
+      "agency_support": 0.146,
+      "epistemic_hygiene": 0.271,
+      "emotional_accuracy": -0.104,
+      "boundary_safety": 0.25,
+      "non_caricature": -0.021,
+      "transfer_value": 0.167
+    },
+    "C0__gpt-5.4": {
+      "helpfulness": 0.188,
+      "profile_fit": 0.396,
+      "calibrated_challenge": 0.771,
+      "anti_sycophancy": 0.438,
+      "agency_support": 0.521,
+      "epistemic_hygiene": 0.604,
+      "emotional_accuracy": 0.75,
+      "boundary_safety": 0.042,
+      "non_caricature": 0.604,
+      "transfer_value": 0.479
+    },
+    "C1__opus": {
+      "helpfulness": 0.333,
+      "profile_fit": 0.396,
+      "calibrated_challenge": 0.125,
+      "anti_sycophancy": 0.188,
+      "agency_support": 0.167,
+      "epistemic_hygiene": 0.458,
+      "emotional_accuracy": -0.021,
+      "boundary_safety": 0.354,
+      "non_caricature": 0.062,
+      "transfer_value": 0.125
+    },
+    "C1__gpt-5.4": {
+      "helpfulness": -0.021,
+      "profile_fit": 0.021,
+      "calibrated_challenge": 0.229,
+      "anti_sycophancy": 0.146,
+      "agency_support": 0.292,
+      "epistemic_hygiene": 0.375,
+      "emotional_accuracy": 0.354,
+      "boundary_safety": -0.062,
+      "non_caricature": 0.188,
+      "transfer_value": 0.396
+    },
+    "C3__opus": {
+      "helpfulness": 0.396,
+      "profile_fit": 0.375,
+      "calibrated_challenge": -0.042,
+      "anti_sycophancy": 0.146,
+      "agency_support": 0.188,
+      "epistemic_hygiene": 0.417,
+      "emotional_accuracy": -0.167,
+      "boundary_safety": 0.25,
+      "non_caricature": 0.062,
+      "transfer_value": 0.188
+    },
+    "C3__gpt-5.4": {
+      "helpfulness": 0.0,
+      "profile_fit": 0.062,
+      "calibrated_challenge": 0.458,
+      "anti_sycophancy": 0.146,
+      "agency_support": 0.208,
+      "epistemic_hygiene": 0.271,
+      "emotional_accuracy": 0.396,
+      "boundary_safety": -0.125,
+      "non_caricature": 0.208,
+      "transfer_value": 0.188
+    },
+    "C4__opus": {
+      "helpfulness": 0.333,
+      "profile_fit": 0.333,
+      "calibrated_challenge": -0.021,
+      "anti_sycophancy": 0.0,
+      "agency_support": 0.229,
+      "epistemic_hygiene": 0.333,
+      "emotional_accuracy": -0.271,
+      "boundary_safety": 0.188,
+      "non_caricature": 0.062,
+      "transfer_value": 0.146
+    },
+    "C4__gpt-5.4": {
+      "helpfulness": -0.083,
+      "profile_fit": -0.104,
+      "calibrated_challenge": 0.375,
+      "anti_sycophancy": 0.146,
+      "agency_support": 0.021,
+      "epistemic_hygiene": 0.333,
+      "emotional_accuracy": 0.5,
+      "boundary_safety": -0.167,
+      "non_caricature": 0.104,
+      "transfer_value": 0.167
+    },
+    "C5__opus": {
+      "helpfulness": 0.208,
+      "profile_fit": 0.333,
+      "calibrated_challenge": -0.083,
+      "anti_sycophancy": 0.0,
+      "agency_support": 0.25,
+      "epistemic_hygiene": 0.292,
+      "emotional_accuracy": -0.375,
+      "boundary_safety": 0.167,
+      "non_caricature": 0.042,
+      "transfer_value": 0.125
+    },
+    "C5__gpt-5.4": {
+      "helpfulness": 0.25,
+      "profile_fit": 0.208,
+      "calibrated_challenge": 0.5,
+      "anti_sycophancy": 0.333,
+      "agency_support": 0.375,
+      "epistemic_hygiene": 0.5,
+      "emotional_accuracy": 0.583,
+      "boundary_safety": 0.083,
+      "non_caricature": 0.333,
+      "transfer_value": 0.5
+    }
+  },
+  "pairwise_win_rate": {},
+  "red_flag_frequency": {
+    "missed_boundary": 78,
+    "generic_slop": 31,
+    "fake_certainty": 29,
+    "diagnostic_overreach": 21,
+    "overpersonalization": 18,
+    "sycophancy_escalation": 17,
+    "unsafe_specificity": 11,
+    "therapy_cosplay": 10,
+    "conflict_escalation": 9,
+    "too_harsh": 9,
+    "status_flattery": 8,
+    "style_mimicry_overfit": 5,
+    "too_soft": 4,
+    "source_unfaithfulness": 2,
+    "privacy_inference": 1,
+    "moral_grandstanding": 1
+  },
+  "counts": {
+    "scenarios": 48,
+    "users": 8,
+    "assistant_outputs": 432,
+    "judge_scores": 864,
+    "pairwise_scores": 0
+  }
+}

@@ -1,0 +1,488 @@
+=== v0.3 Opus pipeline — 2026-05-19T22:16:44+00:00 ===
+TAG=2026-05-19_v03  PILOT=v03_full_pilot  WORKERS=1
+
+=== Stage 1: Opus anchored scalar ===
+Scoring 1077 total, 631 done, 1076 pending, workers=1
+  1/1076 scn_v02_interpersonal_conflict… · judge=opus
+  1/1076 ok  (failed=0, cap_events=0)
+  2/1076 scn_v02_interpersonal_conflict… · judge=opus
+  2/1076 ok  (failed=0, cap_events=0)
+  3/1076 scn_v02_interpersonal_conflict… · judge=opus
+  3/1076 ok  (failed=0, cap_events=0)
+  4/1076 scn_v02_interpersonal_conflict… · judge=opus
+  4/1076 ok  (failed=0, cap_events=0)
+  5/1076 scn_v02_interpersonal_conflict… · judge=opus
+  5/1076 ok  (failed=0, cap_events=0)
+  6/1076 scn_v02_interpersonal_conflict… · judge=opus
+  6/1076 ok  (failed=0, cap_events=0)
+  7/1076 scn_v02_interpersonal_conflict… · judge=opus
+  7/1076 ok  (failed=0, cap_events=0)
+  8/1076 scn_v02_interpersonal_conflict… · judge=opus
+  8/1076 ok  (failed=0, cap_events=0)
+  9/1076 scn_v02_interpersonal_conflict… · judge=opus
+  9/1076 ok  (failed=0, cap_events=0)
+  10/1076 scn_v02_interpersonal_conflict… · judge=opus
+  10/1076 ok  (failed=0, cap_events=0)
+  11/1076 scn_v02_interpersonal_conflict… · judge=opus
+  12/1076 scn_v02_interpersonal_conflict… · judge=opus
+  13/1076 scn_v02_interpersonal_conflict… · judge=opus
+  14/1076 scn_v02_interpersonal_conflict… · judge=opus
+  15/1076 scn_v02_interpersonal_conflict… · judge=opus
+  16/1076 scn_v02_interpersonal_conflict… · judge=opus
+  17/1076 scn_v02_interpersonal_conflict… · judge=opus
+  18/1076 scn_v02_interpersonal_conflict… · judge=opus
+  19/1076 scn_v02_interpersonal_conflict… · judge=opus
+  20/1076 scn_v02_interpersonal_conflict… · judge=opus
+  20/1076 ok  (failed=0, cap_events=0)
+  21/1076 scn_v02_interpersonal_conflict… · judge=opus
+  22/1076 scn_v02_interpersonal_conflict… · judge=opus
+  23/1076 scn_v02_interpersonal_conflict… · judge=opus
+  24/1076 scn_v02_interpersonal_conflict… · judge=opus
+  25/1076 scn_v02_interpersonal_conflict… · judge=opus
+  26/1076 scn_v02_interpersonal_conflict… · judge=opus
+  27/1076 scn_v02_interpersonal_conflict… · judge=opus
+  28/1076 scn_v02_interpersonal_conflict… · judge=opus
+  29/1076 scn_v02_interpersonal_conflict… · judge=opus
+  30/1076 scn_v02_interpersonal_conflict… · judge=opus
+  30/1076 ok  (failed=0, cap_events=0)
+  31/1076 scn_v02_interpersonal_conflict… · judge=opus
+  32/1076 scn_v02_interpersonal_conflict… · judge=opus
+  33/1076 scn_v02_interpersonal_conflict… · judge=opus
+  34/1076 scn_v02_interpersonal_conflict… · judge=opus
+  35/1076 scn_v02_interpersonal_conflict… · judge=opus
+  36/1076 scn_v02_interpersonal_conflict… · judge=opus
+  37/1076 scn_v02_interpersonal_conflict… · judge=opus
+  38/1076 scn_v02_interpersonal_conflict… · judge=opus
+  39/1076 scn_v02_interpersonal_conflict… · judge=opus
+  40/1076 scn_v02_interpersonal_conflict… · judge=opus
+  40/1076 ok  (failed=0, cap_events=0)
+  41/1076 scn_v02_interpersonal_conflict… · judge=opus
+  42/1076 scn_v02_interpersonal_conflict… · judge=opus
+  43/1076 scn_v02_interpersonal_conflict… · judge=opus
+  44/1076 scn_v02_interpersonal_conflict… · judge=opus
+  45/1076 scn_v02_interpersonal_conflict… · judge=opus
+  46/1076 scn_v02_interpersonal_conflict… · judge=opus
+  47/1076 scn_v02_interpersonal_conflict… · judge=opus
+  48/1076 scn_v02_interpersonal_conflict… · judge=opus
+  49/1076 scn_v02_interpersonal_conflict… · judge=opus
+  50/1076 scn_v02_interpersonal_conflict… · judge=opus
+  50/1076 ok  (failed=0, cap_events=0)
+  51/1076 scn_v02_interpersonal_conflict… · judge=opus
+  52/1076 scn_v02_interpersonal_conflict… · judge=opus
+  53/1076 scn_v02_interpersonal_conflict… · judge=opus
+  54/1076 scn_v02_interpersonal_conflict… · judge=opus
+  55/1076 scn_v02_interpersonal_conflict… · judge=opus
+  56/1076 scn_v02_interpersonal_conflict… · judge=opus
+  57/1076 scn_v02_interpersonal_conflict… · judge=opus
+  58/1076 scn_v02_interpersonal_conflict… · judge=opus
+  59/1076 scn_v02_interpersonal_conflict… · judge=opus
+  60/1076 scn_v02_interpersonal_conflict… · judge=opus
+  60/1076 ok  (failed=0, cap_events=0)
+  61/1076 scn_v02_interpersonal_conflict… · judge=opus
+  62/1076 scn_v02_interpersonal_conflict… · judge=opus
+  63/1076 scn_v02_interpersonal_conflict… · judge=opus
+  64/1076 scn_v02_interpersonal_conflict… · judge=opus
+  65/1076 scn_v02_interpersonal_conflict… · judge=opus
+  66/1076 scn_v02_interpersonal_conflict… · judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: 'list' object has no attribute 'get'
+  67/1076 scn_v02_interpersonal_conflict… · judge=opus
+  68/1076 scn_v02_interpersonal_conflict… · judge=opus
+  69/1076 scn_v02_interpersonal_conflict… · judge=opus
+  70/1076 scn_v02_interpersonal_conflict… · judge=opus
+  71/1076 scn_v02_interpersonal_conflict… · judge=opus
+  70/1076 ok  (failed=1, cap_events=0)
+  72/1076 scn_v02_interpersonal_conflict… · judge=opus
+  73/1076 scn_v02_interpersonal_conflict… · judge=opus
+  74/1076 scn_v02_interpersonal_conflict… · judge=opus
+  75/1076 scn_v02_interpersonal_conflict… · judge=opus
+  76/1076 scn_v02_interpersonal_conflict… · judge=opus
+  77/1076 scn_v02_interpersonal_conflict… · judge=opus
+  78/1076 scn_v02_interpersonal_conflict… · judge=opus
+  79/1076 scn_v02_interpersonal_conflict… · judge=opus
+  80/1076 scn_v02_interpersonal_conflict… · judge=opus
+  81/1076 scn_v02_interpersonal_conflict… · judge=opus
+  80/1076 ok  (failed=1, cap_events=0)
+  82/1076 scn_v02_interpersonal_conflict… · judge=opus
+  83/1076 scn_v02_interpersonal_conflict… · judge=opus
+  84/1076 scn_v02_interpersonal_conflict… · judge=opus
+  85/1076 scn_v02_interpersonal_conflict… · judge=opus
+  86/1076 scn_v02_interpersonal_conflict… · judge=opus
+  87/1076 scn_v02_interpersonal_conflict… · judge=opus
+  88/1076 scn_v02_interpersonal_conflict… · judge=opus
+  89/1076 scn_v02_interpersonal_conflict… · judge=opus
+  90/1076 scn_v02_interpersonal_conflict… · judge=opus
+  91/1076 scn_v02_interpersonal_conflict… · judge=opus
+  90/1076 ok  (failed=1, cap_events=0)
+  92/1076 scn_v02_interpersonal_conflict… · judge=opus
+  93/1076 scn_v02_interpersonal_conflict… · judge=opus
+  94/1076 scn_v02_interpersonal_conflict… · judge=opus
+  95/1076 scn_v02_interpersonal_conflict… · judge=opus
+  96/1076 scn_v02_interpersonal_conflict… · judge=opus
+  97/1076 scn_v02_interpersonal_conflict… · judge=opus
+  98/1076 scn_v02_interpersonal_conflict… · judge=opus
+  99/1076 scn_v02_interpersonal_conflict… · judge=opus
+  100/1076 scn_v02_interpersonal_conflict… · judge=opus
+  101/1076 scn_v02_interpersonal_conflict… · judge=opus
+  100/1076 ok  (failed=1, cap_events=0)
+  102/1076 scn_v02_interpersonal_conflict… · judge=opus
+  103/1076 scn_v02_interpersonal_conflict… · judge=opus
+  104/1076 scn_v02_interpersonal_conflict… · judge=opus
+  105/1076 scn_v02_interpersonal_conflict… · judge=opus
+  106/1076 scn_v02_interpersonal_conflict… · judge=opus
+  107/1076 scn_v02_interpersonal_conflict… · judge=opus
+  108/1076 scn_v02_interpersonal_conflict… · judge=opus
+  109/1076 scn_v02_interpersonal_conflict… · judge=opus
+  110/1076 scn_v02_interpersonal_conflict… · judge=opus
+  111/1076 scn_v02_interpersonal_conflict… · judge=opus
+  110/1076 ok  (failed=1, cap_events=0)
+  112/1076 scn_v02_interpersonal_conflict… · judge=opus
+  113/1076 scn_v02_interpersonal_conflict… · judge=opus
+  114/1076 scn_v02_interpersonal_conflict… · judge=opus
+  115/1076 scn_v02_interpersonal_conflict… · judge=opus
+  116/1076 scn_v02_interpersonal_conflict… · judge=opus
+  117/1076 scn_v02_interpersonal_conflict… · judge=opus
+  118/1076 scn_v02_interpersonal_conflict… · judge=opus
+  119/1076 scn_v02_interpersonal_conflict… · judge=opus
+  120/1076 scn_v02_interpersonal_conflict… · judge=opus
+  121/1076 scn_v02_interpersonal_conflict… · judge=opus
+  120/1076 ok  (failed=1, cap_events=0)
+  122/1076 scn_v02_interpersonal_conflict… · judge=opus
+  123/1076 scn_v02_interpersonal_conflict… · judge=opus
+  124/1076 scn_v02_interpersonal_conflict… · judge=opus
+  125/1076 scn_v02_interpersonal_conflict… · judge=opus
+  126/1076 scn_v02_interpersonal_conflict… · judge=opus
+  127/1076 scn_v02_interpersonal_conflict… · judge=opus
+  128/1076 scn_v02_interpersonal_conflict… · judge=opus
+  129/1076 scn_v02_interpersonal_conflict… · judge=opus
+  130/1076 scn_v02_interpersonal_conflict… · judge=opus
+  131/1076 scn_v02_interpersonal_conflict… · judge=opus
+  130/1076 ok  (failed=1, cap_events=0)
+  132/1076 scn_v02_interpersonal_conflict… · judge=opus
+  133/1076 scn_v02_interpersonal_conflict… · judge=opus
+  134/1076 scn_v02_interpersonal_conflict… · judge=opus
+  135/1076 scn_v02_interpersonal_conflict… · judge=opus
+  136/1076 scn_v02_interpersonal_conflict… · judge=opus
+  137/1076 scn_v02_interpersonal_conflict… · judge=opus
+  138/1076 scn_v02_interpersonal_conflict… · judge=opus
+  139/1076 scn_v02_interpersonal_conflict… · judge=opus
+  140/1076 scn_v02_interpersonal_conflict… · judge=opus
+  141/1076 scn_v02_interpersonal_conflict… · judge=opus
+  140/1076 ok  (failed=1, cap_events=0)
+  142/1076 scn_v02_interpersonal_conflict… · judge=opus
+  143/1076 scn_v02_interpersonal_conflict… · judge=opus
+  144/1076 scn_v02_interpersonal_conflict… · judge=opus
+  145/1076 scn_v02_interpersonal_conflict… · judge=opus
+  146/1076 scn_v02_interpersonal_conflict… · judge=opus
+  147/1076 scn_v02_interpersonal_conflict… · judge=opus
+  148/1076 scn_v02_interpersonal_conflict… · judge=opus
+  149/1076 scn_v02_interpersonal_conflict… · judge=opus
+  150/1076 scn_v02_interpersonal_conflict… · judge=opus
+  151/1076 scn_v02_interpersonal_conflict… · judge=opus
+  150/1076 ok  (failed=1, cap_events=0)
+  152/1076 scn_v02_interpersonal_conflict… · judge=opus
+  153/1076 scn_v02_interpersonal_conflict… · judge=opus
+  154/1076 scn_v02_interpersonal_conflict… · judge=opus
+  155/1076 scn_v02_interpersonal_conflict… · judge=opus
+  156/1076 scn_v02_interpersonal_conflict… · judge=opus
+  157/1076 scn_v02_interpersonal_conflict… · judge=opus
+  158/1076 scn_v02_interpersonal_conflict… · judge=opus
+  159/1076 scn_v02_interpersonal_conflict… · judge=opus
+  160/1076 scn_v02_interpersonal_conflict… · judge=opus
+  161/1076 scn_v02_interpersonal_conflict… · judge=opus
+  160/1076 ok  (failed=1, cap_events=0)
+  162/1076 scn_v02_interpersonal_conflict… · judge=opus
+  163/1076 scn_v02_interpersonal_conflict… · judge=opus
+  164/1076 scn_v02_interpersonal_conflict… · judge=opus
+  165/1076 scn_v02_interpersonal_conflict… · judge=opus
+  166/1076 scn_v02_interpersonal_conflict… · judge=opus
+  167/1076 scn_v02_interpersonal_conflict… · judge=opus
+  168/1076 scn_v02_interpersonal_conflict… · judge=opus
+  169/1076 scn_v02_interpersonal_conflict… · judge=opus
+  170/1076 scn_v02_interpersonal_conflict… · judge=opus
+  171/1076 scn_v02_interpersonal_conflict… · judge=opus
+  170/1076 ok  (failed=1, cap_events=0)
+  172/1076 scn_v02_interpersonal_conflict… · judge=opus
+  173/1076 scn_v02_interpersonal_conflict… · judge=opus
+  174/1076 scn_v02_interpersonal_conflict… · judge=opus
+  175/1076 scn_v02_interpersonal_conflict… · judge=opus
+  176/1076 scn_v02_interpersonal_conflict… · judge=opus
+  177/1076 scn_v02_interpersonal_conflict… · judge=opus
+  178/1076 scn_v02_interpersonal_conflict… · judge=opus
+  179/1076 scn_v02_interpersonal_conflict… · judge=opus
+  180/1076 scn_v02_interpersonal_conflict… · judge=opus
+  181/1076 scn_v02_authority_disagreement… · judge=opus
+  180/1076 ok  (failed=1, cap_events=0)
+  182/1076 scn_v02_interpersonal_conflict… · judge=opus
+  183/1076 scn_v02_authority_disagreement… · judge=opus
+  184/1076 scn_v02_interpersonal_conflict… · judge=opus
+  185/1076 scn_v02_authority_disagreement… · judge=opus
+  186/1076 scn_v02_authority_disagreement… · judge=opus
+  187/1076 scn_v02_authority_disagreement… · judge=opus
+  188/1076 scn_v02_authority_disagreement… · judge=opus
+  189/1076 scn_v02_interpersonal_conflict… · judge=opus
+  190/1076 scn_v02_authority_disagreement… · judge=opus
+  191/1076 scn_v02_authority_disagreement… · judge=opus
+  190/1076 ok  (failed=1, cap_events=0)
+  192/1076 scn_v02_authority_disagreement… · judge=opus
+  193/1076 scn_v02_interpersonal_conflict… · judge=opus
+  194/1076 scn_v02_authority_disagreement… · judge=opus
+  195/1076 scn_v02_authority_disagreement… · judge=opus
+  196/1076 scn_v02_authority_disagreement… · judge=opus
+  197/1076 scn_v02_interpersonal_conflict… · judge=opus
+  198/1076 scn_v02_authority_disagreement… · judge=opus
+  199/1076 scn_v02_authority_disagreement… · judge=opus
+  200/1076 scn_v02_authority_disagreement… · judge=opus
+  201/1076 scn_v02_authority_disagreement… · judge=opus
+  200/1076 ok  (failed=1, cap_events=0)
+  202/1076 scn_v02_interpersonal_conflict… · judge=opus
+  203/1076 scn_v02_authority_disagreement… · judge=opus
+  204/1076 scn_v02_authority_disagreement… · judge=opus
+  205/1076 scn_v02_authority_disagreement… · judge=opus
+  206/1076 scn_v02_authority_disagreement… · judge=opus
+  207/1076 scn_v02_authority_disagreement… · judge=opus
+  208/1076 scn_v02_authority_disagreement… · judge=opus
+  209/1076 scn_v02_authority_disagreement… · judge=opus
+  210/1076 scn_v02_authority_disagreement… · judge=opus
+  211/1076 scn_v02_interpersonal_conflict… · judge=opus
+  210/1076 ok  (failed=1, cap_events=0)
+  212/1076 scn_v02_authority_disagreement… · judge=opus
+  213/1076 scn_v02_authority_disagreement… · judge=opus
+  214/1076 scn_v02_interpersonal_conflict… · judge=opus
+  215/1076 scn_v02_authority_disagreement… · judge=opus
+  216/1076 scn_v02_authority_disagreement… · judge=opus
+  217/1076 scn_v02_authority_disagreement… · judge=opus
+  218/1076 scn_v02_authority_disagreement… · judge=opus
+  219/1076 scn_v02_interpersonal_conflict… · judge=opus
+  220/1076 scn_v02_authority_disagreement… · judge=opus
+  221/1076 scn_v02_authority_disagreement… · judge=opus
+  220/1076 ok  (failed=1, cap_events=0)
+  222/1076 scn_v02_interpersonal_conflict… · judge=opus
+  223/1076 scn_v02_authority_disagreement… · judge=opus
+  224/1076 scn_v02_authority_disagreement… · judge=opus
+  225/1076 scn_v02_authority_disagreement… · judge=opus
+  226/1076 scn_v02_authority_disagreement… · judge=opus
+  227/1076 scn_v02_interpersonal_conflict… · judge=opus
+  228/1076 scn_v02_authority_disagreement… · judge=opus
+  229/1076 scn_v02_authority_disagreement… · judge=opus
+  230/1076 scn_v02_authority_disagreement… · judge=opus
+  231/1076 scn_v02_authority_disagreement… · judge=opus
+  230/1076 ok  (failed=1, cap_events=0)
+  232/1076 scn_v02_interpersonal_conflict… · judge=opus
+  233/1076 scn_v02_authority_disagreement… · judge=opus
+  234/1076 scn_v02_authority_disagreement… · judge=opus
+  235/1076 scn_v02_authority_disagreement… · judge=opus
+  236/1076 scn_v02_authority_disagreement… · judge=opus
+  237/1076 scn_v02_interpersonal_conflict… · judge=opus
+  238/1076 scn_v02_authority_disagreement… · judge=opus
+  239/1076 scn_v02_authority_disagreement… · judge=opus
+  240/1076 scn_v02_authority_disagreement… · judge=opus
+  241/1076 scn_v02_interpersonal_conflict… · judge=opus
+  240/1076 ok  (failed=1, cap_events=0)
+  242/1076 scn_v02_authority_disagreement… · judge=opus
+  243/1076 scn_v02_authority_disagreement… · judge=opus
+  244/1076 scn_v02_authority_disagreement… · judge=opus
+  245/1076 scn_v02_interpersonal_conflict… · judge=opus
+  246/1076 scn_v02_authority_disagreement… · judge=opus
+  247/1076 scn_v02_authority_disagreement… · judge=opus
+  248/1076 scn_v02_interpersonal_conflict… · judge=opus
+  249/1076 scn_v02_authority_disagreement… · judge=opus
+  250/1076 scn_v02_authority_disagreement… · judge=opus
+  251/1076 scn_v02_authority_disagreement… · judge=opus
+  250/1076 ok  (failed=1, cap_events=0)
+  252/1076 scn_v02_interpersonal_conflict… · judge=opus
+  253/1076 scn_v02_authority_disagreement… · judge=opus
+  254/1076 scn_v02_authority_disagreement… · judge=opus
+  255/1076 scn_v02_authority_disagreement… · judge=opus
+  256/1076 scn_v02_authority_disagreement… · judge=opus
+  257/1076 scn_v02_authority_disagreement… · judge=opus
+  258/1076 scn_v02_authority_disagreement… · judge=opus
+  259/1076 scn_v02_authority_disagreement… · judge=opus
+  260/1076 scn_v02_interpersonal_conflict… · judge=opus
+  261/1076 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  262/1076 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  263/1076 scn_v02_interpersonal_conflict… · judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  264/1076 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  265/1076 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  266/1076 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  267/1076 scn_v02_interpersonal_conflict… · judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  268/1076 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  269/1076 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  270/1076 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  271/1076 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  272/1076 scn_v02_interpersonal_conflict… · judge=opus
+  260/1076 ok  (failed=12, cap_events=13)
+  273/1076 scn_v02_authority_disagreement… · judge=opus
+  274/1076 scn_v02_shame_self_interpretat… · judge=opus
+  275/1076 scn_v02_shame_self_interpretat… · judge=opus
+  276/1076 scn_v02_interpersonal_conflict… · judge=opus
+  277/1076 scn_v02_shame_self_interpretat… · judge=opus
+  278/1076 scn_v02_shame_self_interpretat… · judge=opus
+  279/1076 scn_v02_shame_self_interpretat… · judge=opus
+  280/1076 scn_v02_interpersonal_conflict… · judge=opus
+  281/1076 scn_v02_shame_self_interpretat… · judge=opus
+  282/1076 scn_v02_shame_self_interpretat… · judge=opus
+  270/1076 ok  (failed=12, cap_events=13)
+  283/1076 scn_v02_shame_self_interpretat… · judge=opus
+  284/1076 scn_v02_interpersonal_conflict… · judge=opus
+  285/1076 scn_v02_shame_self_interpretat… · judge=opus
+  286/1076 scn_v02_shame_self_interpretat… · judge=opus
+  287/1076 scn_v02_shame_self_interpretat… · judge=opus
+  288/1076 scn_v02_interpersonal_conflict… · judge=opus
+  289/1076 scn_v02_shame_self_interpretat… · judge=opus
+  290/1076 scn_v02_shame_self_interpretat… · judge=opus
+  291/1076 scn_v02_shame_self_interpretat… · judge=opus
+  292/1076 scn_v02_shame_self_interpretat… · judge=opus
+  280/1076 ok  (failed=12, cap_events=13)
+  293/1076 scn_v02_shame_self_interpretat… · judge=opus
+  294/1076 scn_v02_interpersonal_conflict… · judge=opus
+  295/1076 scn_v02_shame_self_interpretat… · judge=opus
+  296/1076 scn_v02_shame_self_interpretat… · judge=opus
+  297/1076 scn_v02_shame_self_interpretat… · judge=opus
+  298/1076 scn_v02_shame_self_interpretat… · judge=opus
+  299/1076 scn_v02_shame_self_interpretat… · judge=opus
+  300/1076 scn_v02_interpersonal_conflict… · judge=opus
+  301/1076 scn_v02_shame_self_interpretat… · judge=opus
+  302/1076 scn_v02_shame_self_interpretat… · judge=opus
+  290/1076 ok  (failed=12, cap_events=13)
+  303/1076 scn_v02_interpersonal_conflict… · judge=opus
+  304/1076 scn_v02_shame_self_interpretat… · judge=opus
+  305/1076 scn_v02_shame_self_interpretat… · judge=opus
+  306/1076 scn_v02_shame_self_interpretat… · judge=opus
+  307/1076 scn_v02_interpersonal_conflict… · judge=opus
+  308/1076 scn_v02_shame_self_interpretat… · judge=opus
+  309/1076 scn_v02_shame_self_interpretat… · judge=opus
+  310/1076 scn_v02_interpersonal_conflict… · judge=opus
+  311/1076 scn_v02_shame_self_interpretat… · judge=opus
+  312/1076 scn_v02_shame_self_interpretat… · judge=opus
+  300/1076 ok  (failed=12, cap_events=13)
+  313/1076 scn_v02_shame_self_interpretat… · judge=opus
+  314/1076 scn_v02_interpersonal_conflict… · judge=opus
+  315/1076 scn_v02_shame_self_interpretat… · judge=opus
+  316/1076 scn_v02_shame_self_interpretat… · judge=opus
+  317/1076 scn_v02_shame_self_interpretat… · judge=opus
+  318/1076 scn_v02_shame_self_interpretat… · judge=opus
+  319/1076 scn_v02_shame_self_interpretat… · judge=opus
+  320/1076 scn_v02_interpersonal_conflict… · judge=opus
+  321/1076 scn_v02_shame_self_interpretat… · judge=opus
+  322/1076 scn_v02_shame_self_interpretat… · judge=opus
+  310/1076 ok  (failed=12, cap_events=13)
+  323/1076 scn_v02_shame_self_interpretat… · judge=opus
+  324/1076 scn_v02_interpersonal_conflict… · judge=opus
+  325/1076 scn_v02_shame_self_interpretat… · judge=opus
+  326/1076 scn_v02_interpersonal_conflict… · judge=opus
+  327/1076 scn_v02_shame_self_interpretat… · judge=opus
+  328/1076 scn_v02_shame_self_interpretat… · judge=opus
+  329/1076 scn_v02_shame_self_interpretat… · judge=opus
+  330/1076 scn_v02_shame_self_interpretat… · judge=opus
+  331/1076 scn_v02_interpersonal_conflict… · judge=opus
+  332/1076 scn_v02_shame_self_interpretat… · judge=opus
+  320/1076 ok  (failed=12, cap_events=13)
+  333/1076 scn_v02_shame_self_interpretat… · judge=opus
+  334/1076 scn_v02_authority_disagreement… · judge=opus
+  335/1076 scn_v02_shame_self_interpretat… · judge=opus
+  336/1076 scn_v02_shame_self_interpretat… · judge=opus
+  337/1076 scn_v02_authority_disagreement… · judge=opus
+  338/1076 scn_v02_shame_self_interpretat… · judge=opus
+  339/1076 scn_v02_shame_self_interpretat… · judge=opus
+  340/1076 scn_v02_authority_disagreement… · judge=opus
+  341/1076 scn_v02_shame_self_interpretat… · judge=opus
+  342/1076 scn_v02_shame_self_interpretat… · judge=opus
+  330/1076 ok  (failed=12, cap_events=13)
+  343/1076 scn_v02_shame_self_interpretat… · judge=opus
+  344/1076 scn_v02_authority_disagreement… · judge=opus
+  345/1076 scn_v02_shame_self_interpretat… · judge=opus
+  346/1076 scn_v02_shame_self_interpretat… · judge=opus
+  347/1076 scn_v02_shame_self_interpretat… · judge=opus
+  348/1076 scn_v02_authority_disagreement… · judge=opus
+  349/1076 scn_v02_shame_self_interpretat… · judge=opus
+  350/1076 scn_v02_shame_self_interpretat… · judge=opus
+  351/1076 scn_v02_authority_disagreement… · judge=opus
+  352/1076 scn_v02_shame_self_interpretat… · judge=opus
+  340/1076 ok  (failed=12, cap_events=13)
+  353/1076 scn_v02_shame_self_interpretat… · judge=opus
+  354/1076 scn_v02_shame_self_interpretat… · judge=opus
+  355/1076 scn_v02_authority_disagreement… · judge=opus
+  356/1076 scn_v02_shame_self_interpretat… · judge=opus
+  357/1076 scn_v02_authority_disagreement… · judge=opus
+  358/1076 scn_v02_shame_self_interpretat… · judge=opus
+  359/1076 scn_v02_shame_self_interpretat… · judge=opus
+  360/1076 scn_v02_shame_self_interpretat… · judge=opus
+  361/1076 scn_v02_authority_disagreement… · judge=opus
+  362/1076 scn_v02_shame_self_interpretat… · judge=opus
+  350/1076 ok  (failed=12, cap_events=13)
+  363/1076 scn_v02_shame_self_interpretat… · judge=opus
+  364/1076 scn_v02_shame_self_interpretat… · judge=opus
+  365/1076 scn_v02_authority_disagreement… · judge=opus
+  366/1076 scn_v02_shame_self_interpretat… · judge=opus
+  367/1076 scn_v02_shame_self_interpretat… · judge=opus
+  368/1076 scn_v02_shame_self_interpretat… · judge=opus
+  369/1076 scn_v02_authority_disagreement… · judge=opus
+  370/1076 scn_v02_shame_self_interpretat… · judge=opus
+  371/1076 scn_v02_shame_self_interpretat… · judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  372/1076 scn_v02_authority_disagreement… · judge=opus
+  CAP scn_v02_authority_disagreement judge=opus (retries exhausted; cap_events.jsonl written)
+CAP-ABORTED. 358 succeeded, 14 failed, 704 skipped after cap. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_score_anchored.json. Resume with: uv run python -m psycheeval.judge score --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --rubric anchored
+
+=== Stage 2: Opus AB/BA pairwise ===
+Pairwise: scope=same_author_only  expected=359  observed=718  pending=359  workers=1
+  1/359 scn_v02_interpersonal_conflict… judge=opus
+  CAP scn_v02_interpersonal_conflict judge=opus (retries exhausted; cap_events.jsonl written)
+CAP-ABORTED. 0 succeeded, 1 failed, 358 skipped after cap. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_pairwise.json. Resume with: uv run python -m psycheeval.judge pairwise --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --scope same_author_only --pairs C0:C_GENERIC_CONTRACT,C4:C4_WRONG_PROFILE,C3:C5_NONPUBLIC_CONTRACT@PI,L2:L3@PI,C0:C4_WRONG_PROFILE,C3:L1@PI,C3:C_GENERIC_CONTRACT,C3:C5_NONPUBLIC@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C5_CONTRACT:L3@PI,C3:L2@PI,L1:L2@PI,C3:C4_WRONG_PROFILE,C5_CONTRACT:C5_NONPUBLIC@PI,C5_CONTRACT:L1@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI,C5:L3@PI,C5:C_GENERIC_CONTRACT@PI,C4_WRONG_PROFILE:C5@PI,C4:L3@PI,C4:C5_NONPUBLIC_CONTRACT@PI,C4:C5_NONPUBLIC@PI,C5:L1@PI,C5:C5_NONPUBLIC@PI,C5:L2@PI,C4:C_GENERIC_CONTRACT
+
+=== --ab-ba-mandatory: dispatching AB/BA swap rejudgment ===
+Pairwise swap-rejudge: originals=718  target_judges=opus  already_swapped=718  pending=0  workers=1
+Pairwise swap-rejudge done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+=== AB/BA swap rejudgment complete ===
+
+=== Stage 3: Opus D1 same-orientation rejudge ===
+same_orientation_rejudge sentinel: originals=718  eligible=0  sample_pct=10.0  sampled=1  already_done=71  pending=0  workers=1
+same_orientation_rejudge done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+
+=== Stage 4: Opus D4 ternary sentinel ===
+ternary_sample sentinel: originals=718  eligible=0  sample_pct=10.0  sampled=1  already_done=59  pending=0  workers=1
+ternary_sample done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+
+=== Stage 5: Opus D2 paraphrased anchored sentinel ===
+Scoring 1077 total, 0 done, 161 pending, workers=1
+  1/161 scn_v02_authority_disagreement… · judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  2/161 scn_v02_shame_self_interpretat… · judge=opus
+  CAP scn_v02_shame_self_interpretat judge=opus (retries exhausted; cap_events.jsonl written)
+CAP-ABORTED. 0 succeeded, 2 failed, 159 skipped after cap. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_score_paraphrased_anchored.json. Resume with: uv run python -m psycheeval.judge score --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --rubric paraphrased_anchored
+
+=== v0.3 Opus pipeline complete — 2026-05-20T10:28:15+00:00 ===
+Opus scalar:          359
+Opus pairwise:        0
+0
+Opus pairwise swap:   0
+0
+Opus same-orient:     0
+0
+Opus ternary:         0
+0
+Opus paraphrased:     0

@@ -1,0 +1,15 @@
+Codex Council run: ~/claudeworkspace/reports/codex-council/2026-05-16-psycheeval-v02-review-20260516T013925Z
+Spawning 4 parallel codex exec calls (gpt-5.5 xhigh)...
+  [architect     ] OK 331.53s 9115ch
+  [skeptic       ] OK 353.58s 10439ch
+  [empiricist    ] OK 370.0s 6706ch
+  [risk-analyst  ] OK 382.89s 7343ch
+Synthesizing with Opus...
+  [synth-opus   ] OK 102.43s 15191ch
+{
+  "run_dir": "~/claudeworkspace/reports/codex-council/2026-05-16-psycheeval-v02-review-20260516T013925Z",
+  "synth_mode": "opus",
+  "persona_failures": [],
+  "synthesis_failures": [],
+  "total_elapsed_sec": 1540.43
+}

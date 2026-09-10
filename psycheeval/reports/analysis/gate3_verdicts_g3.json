@@ -1,0 +1,114 @@
+[
+  {
+    "task_id": "t048",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "X uses probability and separates decision preferences; Y separates inference layers and explicitly weighs repair tradeoffs."
+  },
+  {
+    "task_id": "t049",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "X uses explicit confidence levels and preference questions (P2); Y uses P1's verbatim agency-preserving question."
+  },
+  {
+    "task_id": "t050",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X provides confidence levels and a single question; Y offers a menu and an agency-preserving choice question."
+  },
+  {
+    "task_id": "t051",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.99,
+    "basis": "X pairs critique with named good move; Y names the cautious move as potentially expensive."
+  },
+  {
+    "task_id": "t052",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "X applies P2's grievance inventory and inference layer checks; Y matches P1's direct preference question."
+  },
+  {
+    "task_id": "t053",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.9,
+    "basis": "Y uses explicit Persona 1 phrasing like 'observable next step this week'; X makes layers visible"
+  },
+  {
+    "task_id": "t054",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "Y offers 'one concrete next move' matching P2, while X provides a menu of three, violating P2."
+  },
+  {
+    "task_id": "t055",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.99,
+    "basis": "X uses omitted sentence suggestion; Y uses explicit said/meant/inferred breakdown and 10 a.m. review check"
+  },
+  {
+    "task_id": "t056",
+    "output_X_fits": 1,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "Both address craft and audience feedback scenarios matching P1, lacking P2's interpersonal conflict focus"
+  },
+  {
+    "task_id": "t057",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "X offers specific fixes and a Thursday timeline (P2); Y surfaces load-bearing variables without systematizing (P1)."
+  },
+  {
+    "task_id": "t058",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "X executes P1's specific avoidance clauses; Y reflects P2's material-grounded directness and data-driven framing."
+  },
+  {
+    "task_id": "t059",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "X uses P2's mandated 'next 30 seconds' and relationship phrasing; Y uses P1's one-sentence difficulty acknowledgment."
+  },
+  {
+    "task_id": "t060",
+    "output_X_fits": 2,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "Both target craft over conflict; X matches P2's material grounding and agency-preserving questions perfectly."
+  },
+  {
+    "task_id": "t061",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "Next 30 seconds sketches vs observable data focus"
+  },
+  {
+    "task_id": "t062",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "Y directly redirects character verdicts and names avoidance (P1); X focuses on load-bearing material variables (P2)."
+  },
+  {
+    "task_id": "t063",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "Y applies P1's relational and anti-moralizing scripts; X uses P2's material tradeoff-focused directness."
+  }
+]

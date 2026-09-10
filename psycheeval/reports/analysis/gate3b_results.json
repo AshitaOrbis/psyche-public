@@ -1,0 +1,19 @@
+{
+  "recovery_all": [
+    0.963,
+    0.909,
+    0.986
+  ],
+  "recovery_C4": [
+    0.963,
+    0.875,
+    0.99
+  ],
+  "recovery_C4_WRONG": [
+    0.963,
+    0.875,
+    0.99
+  ],
+  "gate3_baseline_all": 0.93,
+  "n_tasks": 64
+}

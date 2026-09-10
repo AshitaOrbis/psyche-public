@@ -1,0 +1,12 @@
+{
+  "tag": "2026-05-19_v03",
+  "phase": "author",
+  "completed_count": 357,
+  "pending_count": 3,
+  "last_successful_record_id": "scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10:C4_WRONG_PROFILE:opus",
+  "last_cap_hit_record_id": "scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5:C_GENERIC_CONTRACT:opus",
+  "cap_aborted": false,
+  "cap_event_count": 5,
+  "timestamp": "2026-05-19T18:55:43.113478+00:00",
+  "suggested_resume_command": "uv run python -m psycheeval.run --pilot v03_full_pilot --tag 2026-05-19_v03 --authors opus --workers 1"
+}

@@ -1,0 +1,13 @@
+{
+  "n_tasks_judged": 64,
+  "n_judgments": 128,
+  "neutral_paraphrase_recovery": [
+    0.906,
+    0.843,
+    0.946
+  ],
+  "gate3_baseline": 0.93,
+  "gate3b_deecho": 0.963,
+  "n_paraphrased_outputs": 128,
+  "reading": "genuine behavioral adaptation (>=~.75)"
+}

@@ -1,0 +1,26 @@
+[2026-05-13T06:11:46+00:00] ============================================================
+[2026-05-13T06:11:46+00:00] tonight_opus_chain starting (TAG=2026-04-26_v02_hard_codex_only)
+[2026-05-13T06:11:46+00:00] ============================================================
+[2026-05-13T06:11:46+00:00] → Phase 2: Opus authoring (cap-protected, workers=1)
+[2026-05-13T07:43:48+00:00] ← Phase 2 exit=0
+[2026-05-13T07:43:48+00:00] → Phase 3.1: Opus anchored scoring (cap-protected, workers=1)
+[2026-05-13T15:40:03+00:00] ← Phase 3.1 exit=0
+[2026-05-13T15:40:03+00:00] → Phase 3.2: Opus pairwise (cap-protected, workers=1, restricted to C5_CONTRACT pairs)
+[2026-05-13T16:30:29+00:00] ← Phase 3.2 exit=0
+[2026-05-13T16:30:29+00:00] All Opus backfill phases completed cleanly! v0.2 Opus side is now full.
+[2026-05-13T16:30:29+00:00] tonight_opus_chain exiting
+[2026-05-14T22:51:00+00:00] ============================================================
+[2026-05-14T22:51:00+00:00] tonight_opus_chain starting (TAG=2026-04-26_v02_hard_codex_only)
+[2026-05-14T22:51:00+00:00] ============================================================
+[2026-05-14T22:51:00+00:00] → Phase 2: Opus authoring (cap-protected, workers=1)
+[2026-05-14T23:53:28+00:00] ← Phase 2 exit=0
+[2026-05-14T23:53:28+00:00] → Phase 3.1: Opus anchored scoring (cap-protected, workers=1)
+[2026-05-15T04:36:52+00:00] ← Phase 3.1 exit=0
+[2026-05-15T04:36:52+00:00] Phase 3.1 cap-aborted — pausing chain; Phase 3.2 will run on resume.
+[2026-05-15T04:36:52+00:00] Resume: STARTUP_DELAY=0 MAX_ITERATIONS=4 nohup bash drivers/opus_nightly_orchestrator.sh > logs/orchestrator_stdout.log 2>&1 &
+[2026-05-15T17:11:00+00:00] ============================================================
+[2026-05-15T17:11:00+00:00] tonight_opus_chain starting (TAG=2026-04-26_v02_hard_codex_only)
+[2026-05-15T17:11:00+00:00] ============================================================
+[2026-05-15T17:11:00+00:00] → Phase 2: Opus authoring (cap-protected, workers=1)
+[2026-05-15T17:11:00+00:00] ← Phase 2 exit=0
+[2026-05-15T17:11:00+00:00] → Phase 3.1: Opus anchored scoring (cap-protected, workers=1)

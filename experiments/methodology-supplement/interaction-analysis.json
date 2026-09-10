@@ -1,0 +1,87 @@
+{
+  "a2_interaction": {
+    "per_domain": {
+      "N": {
+        "per_register_bias": {
+          "subject-sms": 8.6,
+          "academic": 4.1,
+          "messenger": 11.0,
+          "ai-conv": 7.7,
+          "mixed": 10.3
+        },
+        "mean_bias": 8.3,
+        "sd_bias": 2.7,
+        "cv_percent": 32.5,
+        "uniform": false
+      },
+      "E": {
+        "per_register_bias": {
+          "subject-sms": 22.8,
+          "academic": 9.6,
+          "messenger": 14.0,
+          "ai-conv": 15.2,
+          "mixed": 15.1
+        },
+        "mean_bias": 15.3,
+        "sd_bias": 4.8,
+        "cv_percent": 31.0,
+        "uniform": false
+      },
+      "O": {
+        "per_register_bias": {
+          "subject-sms": -1.2,
+          "academic": -1.6,
+          "messenger": -2.6,
+          "ai-conv": -4.8,
+          "mixed": -4.0
+        },
+        "mean_bias": -2.8,
+        "sd_bias": 1.5,
+        "cv_percent": 54.2,
+        "uniform": false
+      },
+      "A": {
+        "per_register_bias": {
+          "subject-sms": 19.2,
+          "academic": 7.5,
+          "messenger": 4.7,
+          "ai-conv": 11.1,
+          "mixed": 10.3
+        },
+        "mean_bias": 10.6,
+        "sd_bias": 5.4,
+        "cv_percent": 51.6,
+        "uniform": false
+      },
+      "C": {
+        "per_register_bias": {
+          "subject-sms": 22.8,
+          "academic": 17.4,
+          "messenger": 20.4,
+          "ai-conv": 17.3,
+          "mixed": 18.3
+        },
+        "mean_bias": 19.2,
+        "sd_bias": 2.3,
+        "cv_percent": 12.2,
+        "uniform": true
+      }
+    }
+  },
+  "a3_transportability": {
+    "pairwise_correlations": {
+      "subject-sms_vs_academic": 0.894,
+      "subject-sms_vs_messenger": 0.951,
+      "subject-sms_vs_ai-conv": 0.809,
+      "subject-sms_vs_mixed": 0.995,
+      "academic_vs_messenger": 0.756,
+      "academic_vs_ai-conv": 0.975,
+      "academic_vs_mixed": 0.855,
+      "messenger_vs_ai-conv": 0.636,
+      "messenger_vs_mixed": 0.972,
+      "ai-conv_vs_mixed": 0.767
+    },
+    "mean_correlation": 0.861,
+    "interpretation": "HIGH transportability"
+  }
+}

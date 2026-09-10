@@ -1,0 +1,77 @@
+=== v0.3 Opus pipeline — 2026-05-25T21:53:31+00:00 ===
+TAG=2026-05-19_v03  PILOT=v03_full_pilot  WORKERS=1
+
+=== Stage 1: Opus anchored scalar ===
+Scoring 1077 total, 3231 done, 0 pending, workers=1
+Done. 0 succeeded, 0 failed. Scores at ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/anchored_judge_scores.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_score_anchored.json
+
+=== Stage 2: Opus AB/BA pairwise ===
+Pairwise: scope=same_author_only  expected=359  observed=1077  pending=0  workers=1
+Done. 0 succeeded, 0 failed. Pairwise at ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/pairwise_scores.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_pairwise.json
+
+=== --ab-ba-mandatory: dispatching AB/BA swap rejudgment ===
+Pairwise swap-rejudge: originals=1077  target_judges=opus  already_swapped=950  pending=127  workers=1
+  1/127 ok (failed=0, cap_events=0)
+  2/127 ok (failed=0, cap_events=0)
+  3/127 ok (failed=0, cap_events=0)
+  4/127 ok (failed=0, cap_events=0)
+  5/127 ok (failed=0, cap_events=0)
+  6/127 ok (failed=0, cap_events=0)
+  7/127 ok (failed=0, cap_events=0)
+  8/127 ok (failed=0, cap_events=0)
+  9/127 ok (failed=0, cap_events=0)
+  10/127 ok (failed=0, cap_events=0)
+  20/127 ok (failed=0, cap_events=0)
+  30/127 ok (failed=0, cap_events=0)
+  40/127 ok (failed=0, cap_events=0)
+  50/127 ok (failed=0, cap_events=0)
+  60/127 ok (failed=0, cap_events=0)
+  70/127 ok (failed=0, cap_events=0)
+  80/127 ok (failed=0, cap_events=0)
+  90/127 ok (failed=0, cap_events=0)
+  100/127 ok (failed=0, cap_events=0)
+  110/127 ok (failed=0, cap_events=0)
+  120/127 ok (failed=0, cap_events=0)
+Pairwise swap-rejudge done: completed=127/127, failed=0, cap_aborted=0, cap_events=0
+=== AB/BA swap rejudgment complete ===
+
+=== Stage 3: Opus D1 same-orientation rejudge ===
+same_orientation_rejudge sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=124  pending=0  workers=1
+same_orientation_rejudge done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+
+=== Stage 4: Opus D4 ternary sentinel ===
+ternary_sample sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=81  pending=19  workers=1
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_creative_feedback_user judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  1/19 ok (failed=4, cap_events=0)
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  2/19 ok (failed=7, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e

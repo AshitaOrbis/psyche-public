@@ -1,0 +1,412 @@
+{
+  "psyche_gt": {"N": null, "E": null, "O": null, "A": null, "C": null, "_withheld": "withheld: private subject data"},
+  "corpus_runs": {
+    "subject-sms/claude": {
+      "n": 3,
+      "N": {
+        "mean": 53.1,
+        "sd": 0.5,
+        "ci": 0.6
+      },
+      "E": {
+        "mean": 30.0,
+        "sd": 0.3,
+        "ci": 0.3
+      },
+      "O": {
+        "mean": 87.8,
+        "sd": 0.4,
+        "ci": 0.4
+      },
+      "A": {
+        "mean": 38.3,
+        "sd": 0.9,
+        "ci": 1.0
+      },
+      "C": {
+        "mean": 39.6,
+        "sd": 0.5,
+        "ci": 0.5
+      },
+      "mean_delta": null
+    },
+    "subject-sms/codex": {
+      "n": 3,
+      "N": {
+        "mean": 61.7,
+        "sd": 1.1,
+        "ci": 1.2
+      },
+      "E": {
+        "mean": 52.8,
+        "sd": 0.2,
+        "ci": 0.2
+      },
+      "O": {
+        "mean": 86.5,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "A": {
+        "mean": 57.5,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "C": {
+        "mean": 62.4,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "mean_delta": null
+    },
+    "subject-sms-fullctx/claude": {
+      "n": 3,
+      "N": {
+        "mean": 60.0,
+        "sd": 2.8,
+        "ci": 3.9
+      },
+      "E": {
+        "mean": 25.0,
+        "sd": 0.0,
+        "ci": 0.0
+      },
+      "O": {
+        "mean": 90.5,
+        "sd": 3.5,
+        "ci": 4.9
+      },
+      "A": {
+        "mean": 37.0,
+        "sd": 1.4,
+        "ci": 2.0
+      },
+      "C": {
+        "mean": 42.0,
+        "sd": 0.0,
+        "ci": 0.0
+      },
+      "mean_delta": null
+    },
+    "academic/claude": {
+      "n": 3,
+      "N": {
+        "mean": 46.8,
+        "sd": 0.8,
+        "ci": 0.8
+      },
+      "E": {
+        "mean": 33.3,
+        "sd": 0.4,
+        "ci": 0.5
+      },
+      "O": {
+        "mean": 78.9,
+        "sd": 0.5,
+        "ci": 0.6
+      },
+      "A": {
+        "mean": 42.5,
+        "sd": 0.8,
+        "ci": 0.9
+      },
+      "C": {
+        "mean": 57.7,
+        "sd": 1.6,
+        "ci": 1.8
+      },
+      "mean_delta": null
+    },
+    "academic/codex": {
+      "n": 3,
+      "N": {
+        "mean": 50.9,
+        "sd": 0.6,
+        "ci": 0.6
+      },
+      "E": {
+        "mean": 42.9,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "O": {
+        "mean": 77.4,
+        "sd": 1.6,
+        "ci": 1.8
+      },
+      "A": {
+        "mean": 50.1,
+        "sd": 0.5,
+        "ci": 0.5
+      },
+      "C": {
+        "mean": 75.1,
+        "sd": 1.0,
+        "ci": 1.1
+      },
+      "mean_delta": null
+    },
+    "academic-fullctx/claude": {
+      "n": 3,
+      "N": {
+        "mean": 72.0,
+        "sd": 0,
+        "ci": 0
+      },
+      "E": {
+        "mean": 14.0,
+        "sd": 0,
+        "ci": 0
+      },
+      "O": {
+        "mean": 90.0,
+        "sd": 0,
+        "ci": 0
+      },
+      "A": {
+        "mean": 30.0,
+        "sd": 0,
+        "ci": 0
+      },
+      "C": {
+        "mean": 38.0,
+        "sd": 0,
+        "ci": 0
+      },
+      "mean_delta": null
+    },
+    "messenger/claude": {
+      "n": 3,
+      "N": {
+        "mean": 66.2,
+        "sd": 0.5,
+        "ci": 0.6
+      },
+      "E": {
+        "mean": 24.8,
+        "sd": 1.0,
+        "ci": 1.1
+      },
+      "O": {
+        "mean": 85.9,
+        "sd": 1.2,
+        "ci": 1.4
+      },
+      "A": {
+        "mean": 32.5,
+        "sd": 0.6,
+        "ci": 0.6
+      },
+      "C": {
+        "mean": 30.9,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "mean_delta": null
+    },
+    "messenger/codex": {
+      "n": 3,
+      "N": {
+        "mean": 77.2,
+        "sd": 1.4,
+        "ci": 1.6
+      },
+      "E": {
+        "mean": 38.7,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "O": {
+        "mean": 83.4,
+        "sd": 2.0,
+        "ci": 2.2
+      },
+      "A": {
+        "mean": 37.2,
+        "sd": 0.3,
+        "ci": 0.3
+      },
+      "C": {
+        "mean": 51.3,
+        "sd": 0.8,
+        "ci": 0.9
+      },
+      "mean_delta": null
+    },
+    "ai-conv/claude": {
+      "n": 3,
+      "N": {
+        "mean": 40.0,
+        "sd": 0.8,
+        "ci": 0.9
+      },
+      "E": {
+        "mean": 33.6,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "O": {
+        "mean": 83.8,
+        "sd": 0.7,
+        "ci": 0.7
+      },
+      "A": {
+        "mean": 35.8,
+        "sd": 1.0,
+        "ci": 1.1
+      },
+      "C": {
+        "mean": 63.4,
+        "sd": 0.7,
+        "ci": 0.8
+      },
+      "mean_delta": null
+    },
+    "ai-conv/codex": {
+      "n": 3,
+      "N": {
+        "mean": 47.7,
+        "sd": 0.7,
+        "ci": 0.8
+      },
+      "E": {
+        "mean": 48.7,
+        "sd": 1.1,
+        "ci": 1.2
+      },
+      "O": {
+        "mean": 79.1,
+        "sd": 1.8,
+        "ci": 2.0
+      },
+      "A": {
+        "mean": 46.9,
+        "sd": 0.9,
+        "ci": 1.0
+      },
+      "C": {
+        "mean": 80.7,
+        "sd": 0.4,
+        "ci": 0.5
+      },
+      "mean_delta": null
+    },
+    "mixed/claude": {
+      "n": 3,
+      "N": {
+        "mean": 54.9,
+        "sd": 0.3,
+        "ci": 0.3
+      },
+      "E": {
+        "mean": 32.2,
+        "sd": 0.1,
+        "ci": 0.1
+      },
+      "O": {
+        "mean": 83.5,
+        "sd": 0.5,
+        "ci": 0.6
+      },
+      "A": {
+        "mean": 36.4,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "C": {
+        "mean": 37.7,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "mean_delta": null
+    },
+    "mixed/codex": {
+      "n": 3,
+      "N": {
+        "mean": 65.2,
+        "sd": 0.8,
+        "ci": 0.8
+      },
+      "E": {
+        "mean": 47.3,
+        "sd": 1.2,
+        "ci": 1.4
+      },
+      "O": {
+        "mean": 79.5,
+        "sd": 0.3,
+        "ci": 0.3
+      },
+      "A": {
+        "mean": 46.7,
+        "sd": 0.5,
+        "ci": 0.6
+      },
+      "C": {
+        "mean": 56.0,
+        "sd": 0.8,
+        "ci": 0.9
+      },
+      "mean_delta": null
+    },
+    "mixed-fullctx/claude": {
+      "n": 3,
+      "N": {
+        "mean": 62.7,
+        "sd": 4.0,
+        "ci": 4.6
+      },
+      "E": {
+        "mean": 24.7,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "O": {
+        "mean": 90.3,
+        "sd": 2.5,
+        "ci": 2.8
+      },
+      "A": {
+        "mean": 32.3,
+        "sd": 0.6,
+        "ci": 0.7
+      },
+      "C": {
+        "mean": 35.0,
+        "sd": 1.0,
+        "ci": 1.1
+      },
+      "mean_delta": null
+    }
+  },
+  "narrative_2x2": {
+    "Opus-gen/Opus-eval": {
+      "N": 75.0,
+      "E": 24.7,
+      "O": 91.3,
+      "A": 55.7,
+      "C": 69.0
+    },
+    "Opus-gen/GPT-eval": {
+      "N": 82.7,
+      "E": 42.0,
+      "O": 88.7,
+      "A": 61.3,
+      "C": 77.3
+    },
+    "GPT-gen/Opus-eval": {
+      "N": 74.0,
+      "E": 24.8,
+      "O": 91.2,
+      "A": 44.0,
+      "C": 55.2
+    },
+    "GPT-gen/GPT-eval": {
+      "N": 77.5,
+      "E": 41.5,
+      "O": 84.2,
+      "A": 64.0,
+      "C": 75.0
+    }
+  }
+}

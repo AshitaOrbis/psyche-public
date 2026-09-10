@@ -1,0 +1,27 @@
+Pairwise swap-rejudge: originals=3123  target_judges=opus  already_swapped=509  pending=120  workers=1
+  1/120 ok (failed=0, cap_events=0)
+  2/120 ok (failed=0, cap_events=0)
+  3/120 ok (failed=0, cap_events=0)
+  4/120 ok (failed=0, cap_events=0)
+  5/120 ok (failed=0, cap_events=0)
+  6/120 ok (failed=0, cap_events=0)
+  7/120 ok (failed=0, cap_events=0)
+  8/120 ok (failed=0, cap_events=0)
+  9/120 ok (failed=0, cap_events=0)
+  10/120 ok (failed=0, cap_events=0)
+  20/120 ok (failed=0, cap_events=0)
+  30/120 ok (failed=0, cap_events=0)
+  40/120 ok (failed=0, cap_events=0)
+  50/120 ok (failed=0, cap_events=0)
+  60/120 ok (failed=0, cap_events=0)
+  70/120 ok (failed=0, cap_events=0)
+  80/120 ok (failed=0, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  CAP scn_v02_interpersonal_conflict judge=opus (retries exhausted; cap_events.jsonl written)
+Pairwise swap-rejudge done: completed=81/120, failed=3, cap_aborted=36, cap_events=8
+
+  Resume: uv run python -m psycheeval.judge pairwise-swap --tag 2026-04-26_v02_hard_codex_only --pilot v02_hard_pilot --judges opus --workers 1 --pairs C4:C5_CONTRACT@PI
+

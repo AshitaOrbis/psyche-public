@@ -1,0 +1,20 @@
+Run tag: 2026-04-26_v02_hard_codex_only
+Manifest: 1120 rows, 1040 already complete, workers=4
+  1/80 ok  (failed=0)
+  2/80 ok  (failed=0)
+  3/80 ok  (failed=0)
+  4/80 ok  (failed=0)
+  5/80 ok  (failed=0)
+  6/80 ok  (failed=0)
+  7/80 ok  (failed=0)
+  8/80 ok  (failed=0)
+  9/80 ok  (failed=0)
+  10/80 ok  (failed=0)
+  20/80 ok  (failed=0)
+  30/80 ok  (failed=0)
+  40/80 ok  (failed=0)
+  50/80 ok  (failed=0)
+  60/80 ok  (failed=0)
+  70/80 ok  (failed=0)
+  80/80 ok  (failed=0)
+Done. 80 succeeded, 0 failed. Outputs at ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/assistant_outputs.jsonl

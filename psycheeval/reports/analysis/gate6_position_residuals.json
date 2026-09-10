@@ -1,0 +1,194 @@
+{
+  "per_pair": {
+    "dario_armadillo/pawl_gram": {
+      "ALL": {
+        "a_rate": 0.8,
+        "a_n": 80,
+        "b_rate": 0.34177215189873417,
+        "b_n": 79,
+        "verdict": "GLOBAL-POLE"
+      },
+      "file:AB": {
+        "a_rate": 0.825,
+        "a_n": 40,
+        "b_rate": 0.358974358974359,
+        "b_n": 39,
+        "verdict": "GLOBAL-POLE"
+      },
+      "file:BA": {
+        "a_rate": 0.775,
+        "a_n": 40,
+        "b_rate": 0.325,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "C4slot:A": {
+        "a_rate": 0.775,
+        "a_n": 40,
+        "b_rate": 0.325,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "C4slot:B": {
+        "a_rate": 0.825,
+        "a_n": 40,
+        "b_rate": 0.358974358974359,
+        "b_n": 39,
+        "verdict": "GLOBAL-POLE"
+      }
+    },
+    "slalom_altar/emily_blender": {
+      "ALL": {
+        "a_rate": 0.875,
+        "a_n": 80,
+        "b_rate": 0.2875,
+        "b_n": 80,
+        "verdict": "GLOBAL-POLE"
+      },
+      "file:AB": {
+        "a_rate": 0.925,
+        "a_n": 40,
+        "b_rate": 0.4,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "file:BA": {
+        "a_rate": 0.825,
+        "a_n": 40,
+        "b_rate": 0.175,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "C4slot:A": {
+        "a_rate": 0.825,
+        "a_n": 40,
+        "b_rate": 0.175,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "C4slot:B": {
+        "a_rate": 0.925,
+        "a_n": 40,
+        "b_rate": 0.4,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      }
+    },
+    "calibration_goblin/high_agency_spiraler": {
+      "ALL": {
+        "a_rate": 0.5394736842105263,
+        "a_n": 76,
+        "b_rate": 0.4125,
+        "b_n": 80,
+        "verdict": "GLOBAL-POLE"
+      },
+      "file:AB": {
+        "a_rate": 0.5526315789473685,
+        "a_n": 38,
+        "b_rate": 0.475,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "file:BA": {
+        "a_rate": 0.5263157894736842,
+        "a_n": 38,
+        "b_rate": 0.35,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "C4slot:A": {
+        "a_rate": 0.5263157894736842,
+        "a_n": 38,
+        "b_rate": 0.35,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "C4slot:B": {
+        "a_rate": 0.5526315789473685,
+        "a_n": 38,
+        "b_rate": 0.475,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      }
+    },
+    "conflict_allergic_moralist/patient_craftsperson": {
+      "ALL": {
+        "a_rate": 0.725,
+        "a_n": 80,
+        "b_rate": 0.5375,
+        "b_n": 80,
+        "verdict": "MATCHING"
+      },
+      "file:AB": {
+        "a_rate": 0.775,
+        "a_n": 40,
+        "b_rate": 0.575,
+        "b_n": 40,
+        "verdict": "MATCHING"
+      },
+      "file:BA": {
+        "a_rate": 0.675,
+        "a_n": 40,
+        "b_rate": 0.5,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "C4slot:A": {
+        "a_rate": 0.675,
+        "a_n": 40,
+        "b_rate": 0.5,
+        "b_n": 40,
+        "verdict": "GLOBAL-POLE"
+      },
+      "C4slot:B": {
+        "a_rate": 0.775,
+        "a_n": 40,
+        "b_rate": 0.575,
+        "b_n": 40,
+        "verdict": "MATCHING"
+      }
+    }
+  },
+  "robustness": {
+    "dario_armadillo/pawl_gram": {
+      "all_verdict": "GLOBAL-POLE",
+      "subsplit_verdicts": [
+        "GLOBAL-POLE",
+        "GLOBAL-POLE",
+        "GLOBAL-POLE",
+        "GLOBAL-POLE"
+      ],
+      "stable_across_all_splits": true
+    },
+    "slalom_altar/emily_blender": {
+      "all_verdict": "GLOBAL-POLE",
+      "subsplit_verdicts": [
+        "GLOBAL-POLE",
+        "GLOBAL-POLE",
+        "GLOBAL-POLE",
+        "GLOBAL-POLE"
+      ],
+      "stable_across_all_splits": true
+    },
+    "calibration_goblin/high_agency_spiraler": {
+      "all_verdict": "GLOBAL-POLE",
+      "subsplit_verdicts": [
+        "GLOBAL-POLE",
+        "GLOBAL-POLE",
+        "GLOBAL-POLE",
+        "GLOBAL-POLE"
+      ],
+      "stable_across_all_splits": true
+    },
+    "conflict_allergic_moralist/patient_craftsperson": {
+      "all_verdict": "MATCHING",
+      "subsplit_verdicts": [
+        "MATCHING",
+        "GLOBAL-POLE",
+        "GLOBAL-POLE",
+        "MATCHING"
+      ],
+      "stable_across_all_splits": false
+    }
+  }
+}

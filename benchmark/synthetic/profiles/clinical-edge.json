@@ -1,0 +1,253 @@
+{
+  "scores": {
+    "ipip-neo-120": {
+      "instrumentId": "ipip-neo-120",
+      "scores": [
+        {
+          "scaleId": "N",
+          "scaleName": "Neuroticism",
+          "raw": 99,
+          "normalized": 78,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "E",
+          "scaleName": "Extraversion",
+          "raw": 41,
+          "normalized": 18,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "O",
+          "scaleName": "Openness",
+          "raw": 77,
+          "normalized": 55,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "A",
+          "scaleName": "Agreeableness",
+          "raw": 58,
+          "normalized": 35,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "C",
+          "scaleName": "Conscientiousness",
+          "raw": 53,
+          "normalized": 30,
+          "itemCount": 24
+        }
+      ]
+    },
+    "crt-7": {
+      "instrumentId": "crt-7",
+      "scores": [
+        {
+          "scaleId": "crt-analytic",
+          "scaleName": "Analytic Thinking",
+          "raw": 3,
+          "normalized": 43,
+          "itemCount": 7
+        }
+      ]
+    },
+    "ncs-18": {
+      "instrumentId": "ncs-18",
+      "scores": [
+        {
+          "scaleId": "ncs",
+          "scaleName": "Need for Cognition",
+          "raw": 48,
+          "normalized": 42,
+          "itemCount": 18
+        }
+      ]
+    },
+    "rosenberg": {
+      "instrumentId": "rosenberg",
+      "scores": [
+        {
+          "scaleId": "self-esteem",
+          "scaleName": "Self-Esteem",
+          "raw": 15,
+          "normalized": 17,
+          "itemCount": 10
+        }
+      ]
+    },
+    "sd3": {
+      "instrumentId": "sd3",
+      "scores": [
+        {
+          "scaleId": "mach",
+          "scaleName": "Machiavellianism",
+          "raw": 27,
+          "normalized": 50,
+          "itemCount": 9
+        },
+        {
+          "scaleId": "narc",
+          "scaleName": "Narcissism",
+          "raw": 16,
+          "normalized": 19,
+          "itemCount": 9
+        },
+        {
+          "scaleId": "psych",
+          "scaleName": "Psychopathy",
+          "raw": 20,
+          "normalized": 31,
+          "itemCount": 9
+        }
+      ]
+    },
+    "phq9-gad7": {
+      "instrumentId": "phq9-gad7",
+      "scores": [
+        {
+          "scaleId": "phq9",
+          "scaleName": "Depression (PHQ-9)",
+          "raw": 20,
+          "normalized": 74,
+          "itemCount": 9
+        },
+        {
+          "scaleId": "gad7",
+          "scaleName": "Anxiety (GAD-7)",
+          "raw": 15,
+          "normalized": 71,
+          "itemCount": 7
+        }
+      ]
+    },
+    "ecr-r": {
+      "instrumentId": "ecr-r",
+      "scores": [
+        {
+          "scaleId": "anxiety",
+          "scaleName": "Attachment Anxiety",
+          "raw": 95,
+          "normalized": 71,
+          "itemCount": 18
+        },
+        {
+          "scaleId": "avoidance",
+          "scaleName": "Attachment Avoidance",
+          "raw": 80,
+          "normalized": 57,
+          "itemCount": 18
+        }
+      ]
+    },
+    "erq-10": {
+      "instrumentId": "erq-10",
+      "scores": [
+        {
+          "scaleId": "reappraisal",
+          "scaleName": "Cognitive Reappraisal",
+          "raw": 18,
+          "normalized": 33,
+          "itemCount": 6
+        },
+        {
+          "scaleId": "suppression",
+          "scaleName": "Expressive Suppression",
+          "raw": 22,
+          "normalized": 75,
+          "itemCount": 4
+        }
+      ]
+    },
+    "iri-28": {
+      "instrumentId": "iri-28",
+      "scores": [
+        {
+          "scaleId": "pt",
+          "scaleName": "Perspective Taking",
+          "raw": 12,
+          "normalized": 43,
+          "itemCount": 7
+        },
+        {
+          "scaleId": "fs",
+          "scaleName": "Fantasy Scale",
+          "raw": 16,
+          "normalized": 57,
+          "itemCount": 7
+        },
+        {
+          "scaleId": "ec",
+          "scaleName": "Empathic Concern",
+          "raw": 14,
+          "normalized": 50,
+          "itemCount": 7
+        },
+        {
+          "scaleId": "pd",
+          "scaleName": "Personal Distress",
+          "raw": 22,
+          "normalized": 79,
+          "itemCount": 7
+        }
+      ]
+    },
+    "grit-s": {
+      "instrumentId": "grit-s",
+      "scores": [
+        {
+          "scaleId": "perseverance",
+          "scaleName": "Perseverance of Effort",
+          "raw": 10,
+          "normalized": 38,
+          "itemCount": 4
+        },
+        {
+          "scaleId": "interest",
+          "scaleName": "Consistency of Interest",
+          "raw": 7,
+          "normalized": 19,
+          "itemCount": 4
+        }
+      ]
+    },
+    "bpns-9": {
+      "instrumentId": "bpns-9",
+      "scores": [
+        {
+          "scaleId": "autonomy",
+          "scaleName": "Autonomy",
+          "raw": 11,
+          "normalized": 44,
+          "itemCount": 3
+        },
+        {
+          "scaleId": "competence",
+          "scaleName": "Competence",
+          "raw": 7,
+          "normalized": 22,
+          "itemCount": 3
+        },
+        {
+          "scaleId": "relatedness",
+          "scaleName": "Relatedness",
+          "raw": 8,
+          "normalized": 28,
+          "itemCount": 3
+        }
+      ]
+    }
+  },
+  "interviews": [
+    "Okay. Honest. Here goes.\n\nI'm someone who looks mostly normal on the outside \u2014 I go to work, I pay rent, I keep my apartment reasonably clean, at least by my standards. But underneath that there's this constant noise. Like a low-frequency hum that never quite goes away. Some days it's barely there and I can almost forget about it, and other days it's so loud I can't think about anything else.\n\nI'm twenty-nine. I work data entry for a logistics company. It's boring but I don't hate it, which is about the best I've been able to manage. I don't really have ambitions in the way other people seem to. I used to, I think, but those got burned out of me during a period in my early twenties that I don't really know how to summarize without it sounding like a bad movie. Let's just say there was a lot of drinking, some things I put in my body that I shouldn't have, and a night in a hospital that I'm grateful I don't remember clearly.\n\nI'm not great with people. Not in a rude way \u2014 I just don't have the energy for it most of the time. Conversations exhaust me. I overthink everything I said for hours afterward. I have maybe two people I'd call actual friends, and even with them I'm always half-convinced they're just tolerating me. My therapist says that's the depression talking, not reality. Maybe she's right. It doesn't change how it feels.\n\nI'm smart enough, I think. Not brilliant. I read a lot, mostly psychology and philosophy, which is probably just me trying to figure out my own brain through the back door. I like music \u2014 making it, not performing it. I have a keyboard in my living room that I play when things get really bad. It's one of the only things that actually helps.\n\nI'm not a good person or a bad person. I'm just a person who's still here, which some days feels like enough and other days feels like not nearly enough.",
+    "What I'm most proud of is genuinely hard to say because my brain immediately tries to disqualify anything I come up with. But if I'm being honest \u2014 I'm proud that I'm alive. That sounds dramatic, and I hate how it sounds, but it's true. There was a period about four years ago where I genuinely did not expect to make it to thirty. I was drinking every day, cutting to feel something other than the numbness, and I had a plan. I won't go into the details of the plan because I don't think about it anymore and I don't want to start. But I had one. And then I didn't go through with it, and then I ended up in a program, and then slowly, painfully, I started putting pieces back together.\n\nSo yeah. I'm proud I'm still here. I'm proud I've been sober for three years. I'm proud that I can sit in a room with another person and have a conversation without wanting to crawl out of my skin, most of the time.\n\nWhat I'm least proud of is harder because there's a lot to choose from. I think the thing that sits heaviest is how I treated people during the worst years. My mom especially. She tried so hard to help me, and I pushed her away with both hands. I said things to her that I can still hear word for word, and I can see her face when I said them. We're okay now, mostly, but I know she walks on eggshells around me. She watches me too closely. And I can't blame her for that because I gave her every reason to.\n\nI'm also not proud of how much time I've lost. I look at people my age who have careers, relationships, direction \u2014 and I'm just... here. Working a job a high schooler could do. No partner. No plan. I know comparison is supposed to be the thief of joy, but it's hard not to notice the gap.",
+    "My first instinct in conflict is to shut down. Just go completely blank. It's not that I don't feel anything \u2014 it's that I feel too much too fast and I can't sort through it in real time. So I go quiet, which people usually interpret as me being cold or passive-aggressive, but really I'm just drowning internally and trying not to say something I'll regret.\n\nWhen I can't shut down \u2014 when someone pushes past my silence and keeps going \u2014 I get sharp. Not yelling, not violent, nothing like that. Just precise and cutting. I know exactly where people's soft spots are, probably because I spend so much time cataloguing my own. And when I'm backed into a corner I'll go for them. I'm not proud of it. I've worked on it in therapy a lot. My therapist calls it a \"protective response\" which I think is a nice way of saying I'm an asshole when I'm scared.\n\nThe problem is that after any conflict, no matter how small, I spiral. I replay the conversation dozens of times. I convince myself that I've destroyed the relationship, that the other person hates me, that I'm fundamentally toxic. Even when I know intellectually that it was just a normal disagreement about something that doesn't matter. My body doesn't get the memo. My chest gets tight, my stomach drops, I can't sleep.\n\nSo mostly I just avoid it. I don't voice opinions that might cause friction. I don't push back on things at work even when I should. I let people make decisions for me because the cost of asserting myself feels higher than the cost of just going along. I know this isn't healthy. I know it feeds into the depression and the low self-worth. But knowing something isn't the same as being able to change it. The gap between understanding a pattern and breaking it is enormous, and I'm somewhere in the middle of that gap.",
+    "About two months ago my therapist suggested I might benefit from a different medication. Not switching entirely, but adding something \u2014 she called it augmentation. And she wanted me to talk to a psychiatrist about it rather than just going through my GP.\n\nThat doesn't sound like a big decision. But for me it was enormous.\n\nPart of it is practical \u2014 seeing a psychiatrist means new intake forms, telling the whole story again from scratch to a stranger. The substance use, the self-harm, the hospitalization. Every time I do that I feel like I'm applying for something and I might get rejected. Like they'll look at the full picture and decide I'm too much or not enough or the wrong kind of broken for whatever they're offering.\n\nBut the deeper thing is that changing medication feels like admitting that what I'm doing isn't working. And I've built my entire sense of stability on the idea that I've figured it out \u2014 therapy, meds, routine, the keyboard, no alcohol. That's the formula. If the formula needs adjusting it means the formula was wrong, which means maybe I'm not as okay as I've been telling myself.\n\nI sat on it for three weeks before I called. Then I made the appointment and canceled it. Then I made it again. My therapist was patient about it, which honestly made me feel worse because patience from other people always feels like they're managing me.\n\nI did eventually go. The psychiatrist was fine. She added a low dose of something and said we'd check in after six weeks. And nothing terrible happened. But the decision itself \u2014 the act of admitting I needed to change something \u2014 took more out of me than anything else that month. I know that probably sounds absurd. But that's what it's like living in a brain that treats every adjustment as evidence of failure.",
+    "What gives me energy: being alone. That's the honest answer, even though it sounds pathological. When I'm alone in my apartment with no obligations and no one expecting anything from me, I can actually breathe. I play keyboard. I read. I watch documentaries about things that have nothing to do with my life \u2014 deep ocean creatures, the history of cartography, how things are manufactured in factories. There's something calming about learning how things work when your own internal machinery feels permanently broken.\n\nWalks help, but only solo. Early morning, before people are out. There's a trail near my apartment that goes along a creek, and in the winter when it's still dark at seven, I'll walk it with headphones on and it's the closest thing I have to feeling okay. Not happy exactly. Just... settled.\n\nMusic gives me energy but it also takes it. Playing keyboard is one of the only times I feel competent at something. But if I try to do something beyond my ability and fail at it, the frustration hits me way harder than it should. I'll stop playing for days. Everything is like that \u2014 the things that sustain me are also the things that can break me if they go slightly wrong.\n\nWhat drains me: other people, mostly. I don't mean that in a misanthropic way. I care about people. But being around them requires a level of performance that exhausts me. Smiling when I don't feel like it. Answering \"how are you\" with something other than the truth. Small talk. Office social events. Having to seem normal.\n\nObligations drain me. Even ones I've chosen. If I commit to something on a Saturday, I'll dread it all week. Not because I don't want to do it, but because having something in the future that I'm supposed to show up for creates this low-grade anxiety that never fully resolves until the thing is over. My calendar being empty is one of my greatest sources of peace, which I realize is not how most people feel.",
+    "Five years ago I was a different person. Or maybe not different \u2014 maybe I was the same person with all the worst settings turned up and all the protective ones turned off.\n\nI was twenty-four, drinking most nights, sometimes alone, sometimes not. I'd started cutting again after a few years of not doing it. I wasn't eating regularly. I'd lost a job \u2014 not my first \u2014 because I just stopped showing up. Not dramatically, not a breakdown at work. I just... didn't go. For days, then weeks. Nobody called to check. I guess they just processed my termination and moved on.\n\nThe thing that changed me was the hospitalization. I don't talk about this much, but you said be honest. I took a bunch of pills one night \u2014 not quite a serious attempt, more like I stopped caring enough to not take them. I ended up in the ER, then a psych hold for seventy-two hours, then an outpatient program. And somewhere in that program, sitting in a circle of other people who were also falling apart, I had this moment where I thought: I'm going to die doing this. Not in a poetic way. Just as a fact. The trajectory was clear.\n\nI got sober after that. Not immediately \u2014 it took another few months and a relapse. But I got there. I found a therapist I actually trust, which took trying four who I didn't. I started medication. I got the data entry job, which felt like the smallest possible thing, but it was the first time in years I'd been employed for more than three months straight.\n\nThe change wasn't a transformation. It's more like... I went from actively drowning to treading water. I'm still in the water. I'm still tired. But I'm not going under. And honestly, compared to where I was, treading water is miraculous. I just wish it didn't still feel so hard.",
+    "I have two close friends. Really close \u2014 the kind of close that only happens when someone has seen you at absolute rock bottom and didn't leave.\n\nWhat they'd say they value about me: I think they'd say I'm honest. Uncomfortably so. I don't do the social thing where you pretend everything's fine. If I'm doing badly, they know, because I either tell them or I go quiet and they know what the quiet means. My friend Dani once said I'm the only person she's ever met who actually means it when I ask how she's doing. I think that's because I know what it's like to have nobody ask.\n\nThey'd also probably say I'm loyal. When I'm in, I'm in. I've sat with Dani through her own bad times \u2014 a breakup, a scare with her mom's health \u2014 and I show up for that because I know what it feels like when nobody shows up.\n\nWhat they'd want me to change: everything else, probably. They'd want me to stop canceling plans at the last minute. I do it constantly. I agree to something, then the day comes and the anxiety is too much and I text some excuse. They're understanding about it, but I can tell it wears on them. I can see it in how they phrase invitations now \u2014 casual, no pressure, \"only if you're up for it.\" Which is kind and also devastating because it means they've adjusted their expectations of me downward.\n\nThey'd want me to stop apologizing for existing. I apologize constantly. For being late, for being quiet, for taking too long to respond to a text, for having an opinion. Dani has literally said \"stop saying sorry\" so many times it's become a joke between us, except it isn't really a joke.\n\nThey'd want me to believe them when they say they care about me. I know they do. I just can't hold onto it. It's like trying to carry water in my hands \u2014 the knowledge leaks out as fast as they pour it in.",
+    "Uncertainty makes me sick. Not figuratively \u2014 my stomach actually knots up, my jaw clenches, I get this buzzing sensation in my chest that won't go away until whatever uncertain thing resolves itself one way or another. Waiting for test results, waiting to hear back about something, not knowing if someone is upset with me \u2014 it's all the same physiological response. My body treats ambiguity as danger.\n\nThe worst is interpersonal uncertainty. If someone sends me a text that could be read two ways, I will agonize over it for hours. I screenshot it and zoom in like I'm analyzing evidence. I draft responses and delete them. I ask myself what tone they meant, what they were feeling when they wrote it, whether the period at the end of \"Okay.\" means they're angry. It's exhausting and I know it's irrational but the knowing doesn't stop it.\n\nProfessional uncertainty is bad too. If I don't know what's expected of me at work, I freeze. I'd rather be given explicit instructions for a boring task than vague guidance for an interesting one. Ambiguity feels like a trap \u2014 like there's a right answer I'm supposed to know and I'm going to be judged for not knowing it.\n\nThere's a small part of me \u2014 the part connected to whatever openness I have left \u2014 that can sometimes appreciate not knowing. Like when I'm reading about physics or cosmology and the answer is genuinely \"we don't know yet.\" That kind of uncertainty feels different because it's impersonal. Nobody's going to reject me for not knowing how dark matter works.\n\nBut anything that touches my sense of self, my relationships, my stability \u2014 uncertainty about those things is unbearable. I build routines specifically to minimize it. I eat the same meals. I take the same routes. I create a little scaffolding of predictability so that when the unpredictable stuff hits, I have something to hold onto. It's not a great system but it's mine.",
+    "Psychology. Specifically the stuff about how brains go wrong and how people try to fix them. I've read probably forty books on depression, anxiety, attachment theory, trauma responses. I could tell you the difference between CBT and DBT and ACT and psychodynamic therapy and which one works better for what and why the research is more complicated than any of them want to admit.\n\nPart of it is obvious \u2014 I'm trying to understand myself. I started reading about psychology after the hospitalization, and it was the first time anything about my own experience made sense. Learning about attachment styles and how childhood stuff shapes adult relationships \u2014 that was like finding the source code for bugs I'd been trying to fix through willpower alone.\n\nBut it goes beyond self-help. I genuinely find the science interesting. How neurotransmitters work. Why SSRIs take weeks to kick in and nobody fully knows why. How memory reconsolidation might explain why EMDR works. The replication crisis and what it means that half the studies I'm reading might not hold up. I find that honest \u2014 a field that's willing to admit it might be wrong about a lot of things.\n\nI think it matters because mental health is still something most people understand through stereotypes and movie depictions. People think depression is sadness. It's not. It's flatness. It's the inability to want anything. People think anxiety is nervousness. It's not. It's your body running threat-detection software that never stops scanning. There's a gap between what these things actually are and what people think they are, and that gap kills people. Not metaphorically.\n\nI don't talk about this stuff with most people because it makes them uncomfortable. Talking about brain chemistry and psychiatric medications at a dinner table clears the room. But you asked what I could go on about for hours, and this is it. The machinery of human suffering, and the clumsy, imperfect, sometimes miraculous ways we try to survive it.",
+    "I'd wake up late. Not because I slept well \u2014 I never sleep well \u2014 but because there's nothing pulling me out of bed and that absence of obligation is the closest thing to peace I know. Maybe nine, nine-thirty. I'd make coffee in the French press because the ritual of it is grounding \u2014 heating the water, measuring the grounds, waiting the four minutes.\n\nI'd go for a walk while it's still morning-quiet. The creek trail, headphones on, something ambient with no lyrics. An hour, maybe more. Just walking and not thinking. Or thinking, but without the usual pressure to arrive at some conclusion or decision. Just letting my brain drift.\n\nWhen I got back I'd play keyboard for a while. Not practicing, not trying to learn anything new. Just playing. Improvising. Letting whatever's in me come out through my hands without judging whether it's good. Some of the best moments of my life have been alone at that keyboard at two in the afternoon with nowhere to be.\n\nI'd read. Something dense and slow \u2014 maybe philosophy, maybe a long article about something I'll never need to know. I'd eat something simple. I wouldn't cook anything elaborate because cooking feels like an obligation even when it isn't. Crackers and cheese. A sandwich. Something that takes two minutes and doesn't require cleaning up.\n\nIn the evening I'd maybe watch a documentary. Or just sit on my balcony if the weather was decent. No phone. No notifications. No one texting to check if I'm okay, which always feels less like concern and more like surveillance, even though I know that's unfair.\n\nI'd go to bed early and I wouldn't set an alarm.\n\nI realize this sounds depressing to most people. No friends, no activities, no spontaneity. But this is what rest actually looks like for me. The absence of performance. The absence of expectation. Just me and a day and nothing I'm supposed to be doing with it. That's the dream. And the fact that my ideal day is just... quiet solitude... probably says everything about where I'm at."
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "$defs": {
+    "Condition": {
+      "enum": [
+        "C0",
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "C5",
+        "C1_padded",
+        "C4_shuffled"
+      ],
+      "title": "Condition",
+      "type": "string"
+    }
+  },
+  "description": "Kit \u00a73.5. One assistant response under one condition.",
+  "properties": {
+    "assistant_response": {
+      "title": "Assistant Response",
+      "type": "string"
+    },
+    "condition": {
+      "$ref": "#/$defs/Condition"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "notes": {
+      "default": "",
+      "title": "Notes",
+      "type": "string"
+    },
+    "output_model": {
+      "title": "Output Model",
+      "type": "string"
+    },
+    "output_model_family": {
+      "default": "",
+      "title": "Output Model Family",
+      "type": "string"
+    },
+    "output_provider_family": {
+      "default": "",
+      "title": "Output Provider Family",
+      "type": "string"
+    },
+    "output_reasoning_effort": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Output Reasoning Effort"
+    },
+    "output_wrapper": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Output Wrapper"
+    },
+    "profile_text_supplied": {
+      "description": "Empty string for C0, populated otherwise",
+      "title": "Profile Text Supplied",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "scenario_id": {
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "temperature": {
+      "default": 0.7,
+      "title": "Temperature",
+      "type": "number"
+    },
+    "tokens_in": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tokens In"
+    },
+    "tokens_out": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Tokens Out"
+    },
+    "user_id": {
+      "title": "User Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "scenario_id",
+    "user_id",
+    "condition",
+    "output_model",
+    "profile_text_supplied",
+    "assistant_response"
+  ],
+  "title": "AssistantOutput",
+  "type": "object"
+}

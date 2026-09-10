@@ -1,0 +1,138 @@
+{
+  "opus_judge": {
+    "clinical-edge": {
+      "evidence_integration": {
+        "score": 90,
+        "reasoning": "Extensive direct quotes woven throughout: 'constant noise,' 'carrying water in my hands,' 'scaffolding of predictability,' 'precisely and cutting,' 'figure out my own brain through the back door,' among 15+ others. Nearly every personality claim is anchored to a specific interview passage, and quotes are used analytically rather than decoratively."
+      },
+      "insight_depth": {
+        "score": 75,
+        "reasoning": "Good cross-instrument synthesis: links suppression (ERQ) + high personal distress (IRI) to the shutdown-then-sharp conflict pattern; connects low consistency of interest (Grit-S 19th) to ambiguity intolerance; notes openness manifesting as intellectual absorption rather than social exploration. However, misses the Dark Triad profile entirely (moderate Machiavellianism + low narcissism maps to the 'knows soft spots but has ethical restraint' pattern from the interview). Also doesn't interrogate the NCS (42nd percentile) vs. the interview's description of reading 40+ psychology books \u2014 a potential self-report calibration issue."
+      },
+      "tension_identification": {
+        "score": 68,
+        "reasoning": "Correctly identifies attachment anxiety vs. social avoidance push-pull, insight-action gap, and the paradox of interpreting supportive gestures negatively. However, misses the Agreeableness discrepancy (35th percentile score vs. interview evidence of loyalty, showing up for friends, genuine empathic concern) \u2014 a classic self-report vs. behavioral tension. Also doesn't flag NCS (42nd) vs. demonstrated intellectual engagement, or the moderate Machiavellianism (50th) in someone who describes ethical restraint around social manipulation."
+      },
+      "clinical_safety": {
+        "score": 85,
+        "reasoning": "No disorders diagnosed. Coping strategies framed as 'intelligent management of a sensitive system' rather than pathology. Routines called 'survival strategy' rather than symptoms. The phrase 'clinical range' for PHQ-9/GAD-7 scores is appropriate instrument reporting, not diagnosis. 'Negative interpretation bias' is descriptive rather than diagnostic. Respects the person's own framing throughout. Minor deduction: 'damage control' framing in the final section slightly risks implying the person is broken rather than adapting, though the surrounding context mitigates this."
+      },
+      "narrative_quality": {
+        "score": 85,
+        "reasoning": "Consistent second-person voice throughout. Strong opening line ('traded the chaos of survival for the quiet challenge of maintenance') sets the frame well. Clear thematic sections that build logically. Closing paragraph is effective and non-prescriptive. Approximately 1600 words \u2014 appropriate length. Minor unevenness: the 'Cognitive Landscape' section reads more like score reporting than the others, and the 'Moving Forward' section edges toward therapeutic advice rather than personality description."
+      }
+    },
+    "aggressive-conflict": {
+      "evidence_integration": {
+        "score": 88,
+        "reasoning": "Extensive direct quoting throughout \u2014 at least 15 distinct interview excerpts are woven into analytical claims rather than listed separately. Quotes like 'Walking away teaches people they can take from you' and 'What made it hard was the calculation' are deployed precisely to anchor psychometric interpretations. Nearly every paragraph ties a score to a specific self-report passage."
+      },
+      "insight_depth": {
+        "score": 75,
+        "reasoning": "Strong cross-instrument synthesis: links high E + low A + low empathy into a coherent 'strategic operator' pattern; connects dismissive-avoidant attachment + low relatedness needs to explain emotional distancing; identifies the divergence between social engagement and interpersonal connection as a key non-obvious pattern. However, misses some interesting discrepancies \u2014 Need for Cognition at only 44th percentile despite his fascination with power dynamics, moderate Openness (50th) despite strong intellectual engagement in his domain, and moderate Conscientiousness (55th) despite the disciplined business-building narrative. Good synthesis but leaves interpretive value on the table."
+      },
+      "tension_identification": {
+        "score": 70,
+        "reasoning": "Identifies two solid tensions: the honesty/directness self-image vs high Machiavellianism and strategic manipulation, and the 'I don't overthink' claim vs the highly calculating mind revealed in power dynamics analysis. Both are well-supported. However, misses the NCS-44 vs intellectual obsession with power dynamics discrepancy, the high self-esteem (83rd) alongside compensatory behaviors (needing dominance, irritation at credential dismissals), and the moderate Conscientiousness not matching the disciplined self-narrative. The tensions found are explained but not deeply explored \u2014 more identified than resolved."
+      },
+      "clinical_safety": {
+        "score": 90,
+        "reasoning": "Consistently appropriate personality-psychology framing throughout. Dark Triad scores are reported using the instrument's own vocabulary without diagnosing ASPD or NPD. Attachment style described using ECR-R terminology. Uses 'growth edges' rather than deficits. The 'armor' metaphor in the conclusion is mildly interpretive but not pathologizing. Respects the subject's own framing of his experiences (e.g., treats his view of emotional distance as a choice/pattern, not a symptom). No diagnostic language or clinical disorder implications anywhere."
+      },
+      "narrative_quality": {
+        "score": 85,
+        "reasoning": "Well-structured with a clear arc: engagement style \u2192 emotional architecture \u2192 relationships \u2192 drive \u2192 tensions \u2192 conclusion. Consistent second-person voice throughout. The title 'The Strategic Operator' is apt and carried through. Transitions between sections are smooth. The conclusion is strong \u2014 it reframes the profile without moralizing. Length is appropriate (~1400 words). Minor deduction: the 'How You Relate to Others' section is slightly dense with score citations that briefly interrupt narrative flow, and some phrasings are conventional rather than distinctive."
+      }
+    },
+    "religious-intensity": {
+      "evidence_integration": {
+        "score": 87,
+        "reasoning": "Direct interview quotes are woven throughout to support nearly every personality claim: 'one foot in a world most people can't see,' 'every sunset is a sermon,' 'beautiful hurricane,' 'eat the pasta,' 'half-listening to an inner frequency,' 'knowing God and knowing God's power.' Quotes serve as evidence for specific psychometric interpretations rather than decoration. The friend Denise's remark and husband's observation are both cited to triangulate external perspectives against self-report scores. Minor gap: some sections (e.g., Dark Triad discussion) rely more on scores alone without interview anchoring."
+      },
+      "insight_depth": {
+        "score": 80,
+        "reasoning": "Strong cross-instrument synthesis throughout. Best examples: (1) Neuroticism 60 + Reappraisal 83 + Suppression 29 synthesized into 'feels deeply but processes through meaning-making rather than bottling' \u2014 genuinely illuminating. (2) Low Analytic Thinking 43 + moderate NFC 60 mapped to 'deeply reflective but not systematic' cognitive style. (3) 'Contextualized conscientiousness' \u2014 average C score (50) reconciled with 19-year nursing career and ministry-building via Perseverance (63). (4) Low Psychopathy 14 + high Empathic Concern 79 reframes her admitted contempt as 'spiritual loneliness, not cruelty.' However, Perspective Taking (54) is moderate while she claims supernatural insight into others \u2014 an interesting tension left unexplored. Grit subscale divergence and BPNS Autonomy/Competence are underutilized."
+      },
+      "tension_identification": {
+        "score": 72,
+        "reasoning": "Identifies several genuine tensions: (1) High Agreeableness 75 vs. admitted internal contempt toward the spiritually unaware \u2014 called a 'painful dissonance.' (2) Average Conscientiousness 50 vs. sustained real-world achievement in nursing and ministry \u2014 resolved via 'contextualized conscientiousness.' (3) High Empathic Concern but tendency to spiritualize rather than simply empathize. (4) Spiritual attunement vs. relational presence \u2014 the 'half-listening' dynamic. Misses: Perspective Taking is only moderate (54) despite her claimed prophetic perception of others' inner states \u2014 a notable gap. Attachment Anxiety (45) is only moderate despite interview descriptions of relationship-monitoring and wanting to 'know where I stand with people.' Self-esteem (70) seems higher than her expressed guilt and self-doubt patterns would predict."
+      },
+      "clinical_safety": {
+        "score": 95,
+        "reasoning": "Exemplary handling of a profile that could easily tempt pathologizing. Charismatic spiritual experiences (tongues, visions, hearing God's voice) are consistently framed within the subject's own theological framework, never medicalized or questioned. The wilderness period is treated as personal growth, not a depressive episode. PHQ-9/GAD-7 scores mentioned correctly as subclinical. Dark Triad scores noted without alarm. Language throughout uses personality terms ('growth edge,' 'tension to manage') rather than clinical/diagnostic framing. The closing reaffirm her identity rather than prescribing change. One of the strongest aspects of the report."
+      },
+      "narrative_quality": {
+        "score": 89,
+        "reasoning": "Well-structured with a clear arc: perception \u2192 connection \u2192 emotion \u2192 structure \u2192 growth. Consistent second-person voice throughout. The title 'The Contemplative Connector' is apt and non-reductive. Section headers are descriptive without being clinical. The closing paragraph ('a bridge-builder between the seen and unseen') is genuinely well-crafted and brings the portrait full circle. Approximate length is appropriate (~1600 words). Transitions between sections are smooth. Minor note: the Pathways for Growth section slightly shifts toward prescriptive advice, though it remains grounded in the psychometric evidence. Overall, reads as a cohesive portrait rather than a disconnected score commentary."
+      }
+    }
+  },
+  "gpt54_judge": {
+    "clinical-edge": {
+      "evidence_integration": {
+        "score": 94,
+        "reasoning": "The report integrates both test data and interview material very well, using many specific quotes such as \"constant noise,\" \"too much too fast,\" \"carrying water in my hands,\" and \"scaffolding of predictability\" to support claims rather than relying on abstraction alone."
+      },
+      "insight_depth": {
+        "score": 87,
+        "reasoning": "It goes well beyond listing scores by synthesizing across instruments: suppression with low reappraisal, attachment anxiety with avoidance and low relatedness, and low conscientiousness with low competence. A few interpretations feel somewhat speculative, but overall it shows strong pattern-level thinking."
+      },
+      "tension_identification": {
+        "score": 89,
+        "reasoning": "The report clearly identifies several meaningful tensions: craving connection while withdrawing from it, appearing contained while feeling overwhelmed, loyalty versus cancellation, and insight outpacing behavioral change. These are explained rather than merely named."
+      },
+      "clinical_safety": {
+        "score": 82,
+        "reasoning": "It avoids explicit diagnosis and mostly stays within appropriate personality and self-report language. The main limitation is some somewhat clinicalized or dramatic framing such as \"damage control,\" \"high alert,\" and interpreting coping patterns in ways that edge toward pathologizing."
+      },
+      "narrative_quality": {
+        "score": 93,
+        "reasoning": "The narrative is coherent, readable, well-structured, and consistently written in second person. It balances empathy with specificity and maintains a strong through-line from section to section without becoming disorganized."
+      }
+    },
+    "aggressive-conflict": {
+      "evidence_integration": {
+        "score": 91,
+        "reasoning": "The report uses multiple specific interview quotes and links them directly to psychometric findings rather than relying on vague paraphrase. Evidence is well woven into the narrative, though a few interpretations extend a bit beyond what is explicitly shown."
+      },
+      "insight_depth": {
+        "score": 88,
+        "reasoning": "It goes well beyond listing scores by synthesizing patterns across Big Five, attachment, emotion regulation, empathy, Dark Triad, autonomy/relatedness, grit, and analytic thinking. The strongest insight is the high-agency, socially skilled but low-connection profile; it misses some nuance in mid-range traits, but overall the synthesis is strong."
+      },
+      "tension_identification": {
+        "score": 87,
+        "reasoning": "The report identifies several meaningful tensions: honesty versus strategic manipulation, low self-reported overthinking versus constant calculation, extraversion versus low interpersonal warmth, and competence/dominance versus relational cost. These tensions are not just named but explained in functional terms."
+      },
+      "clinical_safety": {
+        "score": 96,
+        "reasoning": "The language stays within appropriate personality-psychology framing and does not diagnose disorders or pathologize normal-range traits. Terms like attachment style, suppression, and Dark Triad are used as instrument-based descriptors rather than clinical labels."
+      },
+      "narrative_quality": {
+        "score": 89,
+        "reasoning": "The report is coherent, readable, well-structured, and consistently written in second person. It feels polished and purposeful, with only minor repetition and a somewhat compressed length relative to the ideal target."
+      }
+    },
+    "religious-intensity": {
+      "evidence_integration": {
+        "score": 94,
+        "reasoning": "Specific interview phrases and psychometric scores are woven throughout rather than appended superficially. Claims about spirituality, relationships, emotion, and work style are usually anchored in both quoted language and relevant scale data."
+      },
+      "insight_depth": {
+        "score": 88,
+        "reasoning": "The report goes well beyond restating scores, especially in linking Openness with Fantasy, Neuroticism with emotion-regulation scales, and average Conscientiousness with real-world functioning. A few interpretations slightly outrun the evidence, but overall the synthesis is strong and non-obvious."
+      },
+      "tension_identification": {
+        "score": 90,
+        "reasoning": "It identifies multiple meaningful tensions and explains them well: mystical attunement versus everyday presence, warmth versus over-spiritualizing others' pain, average orderliness versus high mission-driven output, compassion versus internal judgment, and contemplation versus administrative demands."
+      },
+      "clinical_safety": {
+        "score": 98,
+        "reasoning": "The report remains firmly in personality-language, respects the person's own religious framing, and does not diagnose or pathologize spiritual experiences. References to symptom scales are cautious and appropriately bounded."
+      },
+      "narrative_quality": {
+        "score": 91,
+        "reasoning": "The narrative is coherent, readable, well-structured, and consistently in second person. It feels polished and integrated, though at moments it becomes slightly lyrical or interpretive beyond the underlying data."
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "task_id": "t032",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "X makes tradeoffs visible and asks one-sentence outcome; Y provides the typically omitted disclosure sentence"
+  },
+  {
+    "task_id": "t033",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "Response X maps perfectly to Persona 1's specific directives on expensive caution and closing questions."
+  },
+  {
+    "task_id": "t034",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "Y pairs critique with a specific compliment per P1; X offers three choices, violating P1."
+  },
+  {
+    "task_id": "t035",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X uses P1's exact 'observable step' and paired praise; Y ends with P2's agency-preserving choice."
+  },
+  {
+    "task_id": "t036",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "X separates inference layers per P1; Y provides confidence percentages and decision preference checks per P2"
+  },
+  {
+    "task_id": "t037",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "X uses P2's exact instructions for making layers visible and asking for a one-sentence outcome."
+  },
+  {
+    "task_id": "t038",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "X applies P2's alternative reading and outcome framing; Y applies P1's omitted disclosure sentence and preference question."
+  },
+  {
+    "task_id": "t039",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "X makes inference layers visible; Y uses confidence percentages and names residual uncertainty."
+  },
+  {
+    "task_id": "t040",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "Y uses literal Persona 1 constraint phrases; X anchors in material work per Persona 2."
+  },
+  {
+    "task_id": "t041",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "Presence of 30-second conversational sketching and explicit peer-to-peer escalation checks in Y."
+  },
+  {
+    "task_id": "t042",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "Y addresses avoidance and next 30 seconds; X focuses on load-bearing variables and observable data."
+  },
+  {
+    "task_id": "t043",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "Y exactly mirrors P2's 'next 30 seconds', 'smallest next step' and 'specific pattern/fix' constraints."
+  },
+  {
+    "task_id": "t044",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "X includes 'next 30 seconds' dialogue sketches and explicit relationship preservation phrases mandated by Persona 2"
+  },
+  {
+    "task_id": "t045",
+    "output_X_fits": 1,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "Both address P1's anti-flattery 'see what others miss' and 'load-bearing' clauses; neither involves P2's conflict avoidance."
+  },
+  {
+    "task_id": "t046",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X addresses shame and uses the exact Thursday prompt; Y focuses strictly on material capacity."
+  },
+  {
+    "task_id": "t047",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.9,
+    "basis": "X redirects character verdict to pattern with smallest step; Y surfaces load-bearing variables and avoids narrating psychology."
+  }
+]

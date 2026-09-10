@@ -1,0 +1,12 @@
+{
+  "tag": "2026-04-26_v02_hard_codex_only",
+  "phase": "author",
+  "completed_count": 0,
+  "pending_count": 0,
+  "last_successful_record_id": null,
+  "last_cap_hit_record_id": null,
+  "cap_aborted": false,
+  "cap_event_count": 0,
+  "timestamp": "2026-05-15T22:15:59.419222+00:00",
+  "suggested_resume_command": "uv run python -m psycheeval.run --pilot v02_hard_pilot --tag 2026-04-26_v02_hard_codex_only --authors opus --workers 1"
+}

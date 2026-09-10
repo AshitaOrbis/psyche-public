@@ -1,0 +1,82 @@
+{
+  "opus_gen_opus_eval": {
+    "n": 2,
+    "means": {
+      "N": 75.7,
+      "E": 24.5,
+      "O": 89.5,
+      "A": 43.0,
+      "C": 54.8
+    },
+    "ci95": {
+      "N": 0.7,
+      "E": 1.0,
+      "O": 1.0,
+      "A": 0.6,
+      "C": 1.0
+    },
+    "mean_delta_psyche": null
+  },
+  "opus_gen_gpt_eval": {
+    "n": 3,
+    "means": {
+      "N": 81.2,
+      "E": 41.4,
+      "O": 86.7,
+      "A": 59.0,
+      "C": 79.3
+    },
+    "ci95": {
+      "N": 2.5,
+      "E": 0.3,
+      "O": 1.9,
+      "A": 1.3,
+      "C": 3.2
+    },
+    "mean_delta_psyche": null
+  },
+  "gpt_gen_opus_eval": {
+    "n": 3,
+    "means": {
+      "N": 75.1,
+      "E": 24.6,
+      "O": 90.2,
+      "A": 45.1,
+      "C": 56.3
+    },
+    "ci95": {
+      "N": 1.0,
+      "E": 0.6,
+      "O": 1.1,
+      "A": 0.4,
+      "C": 0.5
+    },
+    "mean_delta_psyche": null
+  },
+  "gpt_gen_gpt_eval": {
+    "n": 3,
+    "means": {
+      "N": 78.9,
+      "E": 39.7,
+      "O": 85.9,
+      "A": 62.3,
+      "C": 74.1
+    },
+    "ci95": {
+      "N": 2.8,
+      "E": 0.7,
+      "O": 2.0,
+      "A": 2.3,
+      "C": 0.7
+    },
+    "mean_delta_psyche": null
+  },
+  "opus_eval_ci_overlap": {
+    "N": true,
+    "E": true,
+    "O": true,
+    "A": false,
+    "C": true
+  },
+  "generators_indistinguishable": false
+}

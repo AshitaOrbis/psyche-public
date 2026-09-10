@@ -1,0 +1,44 @@
+# Dependabot configuration.
+#
+# Alerts were already on for this repo, so vulnerabilities arrived as a list on the
+# Security tab that nobody was on the hook for — 1 critical + 10 high open by 2026-07-27.
+# This file is the difference between a list and a reviewable pull request.
+#
+# Two directories, because those are the two with lockfiles: web/pnpm-lock.yaml (pnpm is
+# handled by Dependabot under the "npm" ecosystem) and analysis/uv.lock. psycheeval/ ships
+# a pyproject.toml with no lock, so registering it would produce constraint-bumping PRs
+# with no resolution behind them.
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/web"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"
+    groups:
+      # One PR for the routine stream; majors stay individual because a major is a
+      # decision, not a merge.
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+
+  - package-ecosystem: "uv"
+    directory: "/analysis"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"
+    groups:
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"

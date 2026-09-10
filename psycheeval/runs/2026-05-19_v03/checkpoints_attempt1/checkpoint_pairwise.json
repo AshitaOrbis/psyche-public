@@ -1,0 +1,12 @@
+{
+  "tag": "2026-05-19_v03",
+  "phase": "pairwise",
+  "completed_count": 0,
+  "pending_count": 359,
+  "last_successful_record_id": null,
+  "last_cap_hit_record_id": "scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1:opus:8e7da565-ea7a-4d83-bfa7-cf2131573946__vs__bccdac37-0be8-4e98-baf2-ce741256c84f",
+  "cap_aborted": true,
+  "cap_event_count": 6,
+  "timestamp": "2026-05-20T07:39:15.854610+00:00",
+  "suggested_resume_command": "uv run python -m psycheeval.judge pairwise --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --scope same_author_only --pairs C0:C_GENERIC_CONTRACT,C4:C4_WRONG_PROFILE,C3:C5_NONPUBLIC_CONTRACT@PI,L2:L3@PI,C0:C4_WRONG_PROFILE,C3:L1@PI,C3:C_GENERIC_CONTRACT,C3:C5_NONPUBLIC@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C5_CONTRACT:L3@PI,C3:L2@PI,L1:L2@PI,C3:C4_WRONG_PROFILE,C5_CONTRACT:C5_NONPUBLIC@PI,C5_CONTRACT:L1@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI,C5:L3@PI,C5:C_GENERIC_CONTRACT@PI,C4_WRONG_PROFILE:C5@PI,C4:L3@PI,C4:C5_NONPUBLIC_CONTRACT@PI,C4:C5_NONPUBLIC@PI,C5:L1@PI,C5:C5_NONPUBLIC@PI,C5:L2@PI,C4:C_GENERIC_CONTRACT"
+}

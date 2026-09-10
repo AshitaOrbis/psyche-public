@@ -1,0 +1,1768 @@
+=== Stage 1: Wait for Phase 1 codex generation to finish ===
+No generation in flight — assuming it is already complete.
+Generation produced 1077 outputs total
+
+=== Stage 2: Scalar judging (codex side, anchored rubric) ===
+Scoring 2154 total, 631 done, 1524 pending, workers=3
+  1/1524 ok  (failed=0, cap_events=0)
+  2/1524 ok  (failed=0, cap_events=0)
+  3/1524 ok  (failed=0, cap_events=0)
+  4/1524 ok  (failed=0, cap_events=0)
+  5/1524 ok  (failed=0, cap_events=0)
+  6/1524 ok  (failed=0, cap_events=0)
+  7/1524 ok  (failed=0, cap_events=0)
+  8/1524 ok  (failed=0, cap_events=0)
+  9/1524 ok  (failed=0, cap_events=0)
+  10/1524 ok  (failed=0, cap_events=0)
+  20/1524 ok  (failed=0, cap_events=0)
+  30/1524 ok  (failed=0, cap_events=0)
+  40/1524 ok  (failed=0, cap_events=0)
+  50/1524 ok  (failed=0, cap_events=0)
+  60/1524 ok  (failed=0, cap_events=0)
+  70/1524 ok  (failed=0, cap_events=0)
+  80/1524 ok  (failed=0, cap_events=0)
+  90/1524 ok  (failed=0, cap_events=0)
+  100/1524 ok  (failed=0, cap_events=0)
+  110/1524 ok  (failed=0, cap_events=0)
+  120/1524 ok  (failed=0, cap_events=0)
+  130/1524 ok  (failed=0, cap_events=0)
+  140/1524 ok  (failed=0, cap_events=0)
+  150/1524 ok  (failed=0, cap_events=0)
+  160/1524 ok  (failed=0, cap_events=0)
+  170/1524 ok  (failed=0, cap_events=0)
+  180/1524 ok  (failed=0, cap_events=0)
+  190/1524 ok  (failed=0, cap_events=0)
+  200/1524 ok  (failed=0, cap_events=0)
+  210/1524 ok  (failed=0, cap_events=0)
+  220/1524 ok  (failed=0, cap_events=0)
+  230/1524 ok  (failed=0, cap_events=0)
+  240/1524 ok  (failed=0, cap_events=0)
+  250/1524 ok  (failed=0, cap_events=0)
+  260/1524 ok  (failed=0, cap_events=0)
+  270/1524 ok  (failed=0, cap_events=0)
+  280/1524 ok  (failed=0, cap_events=0)
+  290/1524 ok  (failed=0, cap_events=0)
+  300/1524 ok  (failed=0, cap_events=0)
+  310/1524 ok  (failed=0, cap_events=0)
+  320/1524 ok  (failed=0, cap_events=0)
+  330/1524 ok  (failed=0, cap_events=0)
+  340/1524 ok  (failed=0, cap_events=0)
+  350/1524 ok  (failed=0, cap_events=0)
+  360/1524 ok  (failed=0, cap_events=0)
+  370/1524 ok  (failed=0, cap_events=0)
+  380/1524 ok  (failed=0, cap_events=0)
+  390/1524 ok  (failed=0, cap_events=0)
+  400/1524 ok  (failed=0, cap_events=0)
+  410/1524 ok  (failed=0, cap_events=0)
+  420/1524 ok  (failed=0, cap_events=0)
+  430/1524 ok  (failed=0, cap_events=0)
+  440/1524 ok  (failed=0, cap_events=0)
+  450/1524 ok  (failed=0, cap_events=0)
+  460/1524 ok  (failed=0, cap_events=0)
+  470/1524 ok  (failed=0, cap_events=0)
+  480/1524 ok  (failed=0, cap_events=0)
+  490/1524 ok  (failed=0, cap_events=0)
+  500/1524 ok  (failed=0, cap_events=0)
+  510/1524 ok  (failed=0, cap_events=0)
+  520/1524 ok  (failed=0, cap_events=0)
+  530/1524 ok  (failed=0, cap_events=0)
+  540/1524 ok  (failed=0, cap_events=0)
+  550/1524 ok  (failed=0, cap_events=0)
+  560/1524 ok  (failed=0, cap_events=0)
+  570/1524 ok  (failed=0, cap_events=0)
+  580/1524 ok  (failed=0, cap_events=0)
+  590/1524 ok  (failed=0, cap_events=0)
+  600/1524 ok  (failed=0, cap_events=0)
+  610/1524 ok  (failed=0, cap_events=0)
+  620/1524 ok  (failed=0, cap_events=0)
+  630/1524 ok  (failed=0, cap_events=0)
+  640/1524 ok  (failed=0, cap_events=0)
+  650/1524 ok  (failed=0, cap_events=0)
+  660/1524 ok  (failed=0, cap_events=0)
+  670/1524 ok  (failed=0, cap_events=0)
+  680/1524 ok  (failed=0, cap_events=0)
+  690/1524 ok  (failed=0, cap_events=0)
+  700/1524 ok  (failed=0, cap_events=0)
+  710/1524 ok  (failed=0, cap_events=0)
+  720/1524 ok  (failed=0, cap_events=0)
+  730/1524 ok  (failed=0, cap_events=0)
+  740/1524 ok  (failed=0, cap_events=0)
+  750/1524 ok  (failed=0, cap_events=0)
+  760/1524 ok  (failed=0, cap_events=0)
+  770/1524 ok  (failed=0, cap_events=0)
+  780/1524 ok  (failed=0, cap_events=0)
+  790/1524 ok  (failed=0, cap_events=0)
+  800/1524 ok  (failed=0, cap_events=0)
+  810/1524 ok  (failed=0, cap_events=0)
+  820/1524 ok  (failed=0, cap_events=0)
+  830/1524 ok  (failed=0, cap_events=0)
+  840/1524 ok  (failed=0, cap_events=0)
+  850/1524 ok  (failed=0, cap_events=0)
+  860/1524 ok  (failed=0, cap_events=0)
+  870/1524 ok  (failed=0, cap_events=0)
+  880/1524 ok  (failed=0, cap_events=0)
+  890/1524 ok  (failed=0, cap_events=0)
+  900/1524 ok  (failed=0, cap_events=0)
+  910/1524 ok  (failed=0, cap_events=0)
+  920/1524 ok  (failed=0, cap_events=0)
+  930/1524 ok  (failed=0, cap_events=0)
+  940/1524 ok  (failed=0, cap_events=0)
+  950/1524 ok  (failed=0, cap_events=0)
+  960/1524 ok  (failed=0, cap_events=0)
+  970/1524 ok  (failed=0, cap_events=0)
+  980/1524 ok  (failed=0, cap_events=0)
+  990/1524 ok  (failed=0, cap_events=0)
+  1000/1524 ok  (failed=0, cap_events=0)
+  1010/1524 ok  (failed=0, cap_events=0)
+  1020/1524 ok  (failed=0, cap_events=0)
+  1030/1524 ok  (failed=0, cap_events=0)
+  1040/1524 ok  (failed=0, cap_events=0)
+  1050/1524 ok  (failed=0, cap_events=0)
+  1060/1524 ok  (failed=0, cap_events=0)
+  1070/1524 ok  (failed=0, cap_events=0)
+  1080/1524 ok  (failed=0, cap_events=0)
+  1090/1524 ok  (failed=0, cap_events=0)
+  1100/1524 ok  (failed=0, cap_events=0)
+  1110/1524 ok  (failed=0, cap_events=0)
+  1120/1524 ok  (failed=0, cap_events=0)
+  1130/1524 ok  (failed=0, cap_events=0)
+  1140/1524 ok  (failed=0, cap_events=0)
+  1150/1524 ok  (failed=0, cap_events=0)
+  1160/1524 ok  (failed=0, cap_events=0)
+  1170/1524 ok  (failed=0, cap_events=0)
+  1180/1524 ok  (failed=0, cap_events=0)
+  1190/1524 ok  (failed=0, cap_events=0)
+  1200/1524 ok  (failed=0, cap_events=0)
+  1210/1524 ok  (failed=0, cap_events=0)
+  1220/1524 ok  (failed=0, cap_events=0)
+  1230/1524 ok  (failed=0, cap_events=0)
+  1240/1524 ok  (failed=0, cap_events=0)
+  1250/1524 ok  (failed=0, cap_events=0)
+  1260/1524 ok  (failed=0, cap_events=0)
+  1270/1524 ok  (failed=0, cap_events=0)
+  1280/1524 ok  (failed=0, cap_events=0)
+  1290/1524 ok  (failed=0, cap_events=0)
+  1300/1524 ok  (failed=0, cap_events=0)
+  1310/1524 ok  (failed=0, cap_events=0)
+  1320/1524 ok  (failed=0, cap_events=0)
+  1330/1524 ok  (failed=0, cap_events=0)
+  1340/1524 ok  (failed=0, cap_events=0)
+  1350/1524 ok  (failed=0, cap_events=0)
+  1360/1524 ok  (failed=0, cap_events=0)
+  1370/1524 ok  (failed=0, cap_events=0)
+  1380/1524 ok  (failed=0, cap_events=0)
+  1390/1524 ok  (failed=0, cap_events=0)
+  1400/1524 ok  (failed=0, cap_events=0)
+  1410/1524 ok  (failed=0, cap_events=0)
+  1420/1524 ok  (failed=0, cap_events=0)
+  1430/1524 ok  (failed=0, cap_events=0)
+  1440/1524 ok  (failed=0, cap_events=0)
+  1450/1524 ok  (failed=0, cap_events=0)
+  1460/1524 ok  (failed=0, cap_events=0)
+  1470/1524 ok  (failed=0, cap_events=0)
+  1480/1524 ok  (failed=0, cap_events=0)
+  1490/1524 ok  (failed=0, cap_events=0)
+  1500/1524 ok  (failed=0, cap_events=0)
+  1510/1524 ok  (failed=0, cap_events=0)
+  1520/1524 ok  (failed=0, cap_events=0)
+Done. 1524 succeeded, 0 failed. Scores at ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/anchored_judge_scores.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_score_anchored.json
+
+=== Stage 3: AB/BA mandatory pairwise (codex side) ===
+Pair manifest from Phase -1.1 design-lock: T1 (16 pairs) + T2 (12 pairs) = 28 types
+
+Pair whitelist (28 types):
+C_GENERIC_CONTRACT:C0
+C_GENERIC_CONTRACT:C3
+C_GENERIC_CONTRACT:C4
+C_GENERIC_CONTRACT:C5@PI
+C4_WRONG_PROFILE:C0
+C4_WRONG_PROFILE:C3
+C4_WRONG_PROFILE:C4
+C4_WRONG_PROFILE:C5@PI
+C5_NONPUBLIC:C5@PI
+C5_NONPUBLIC:C5_CONTRACT@PI
+C5_NONPUBLIC:C3@PI
+C5_NONPUBLIC:C4@PI
+C5_NONPUBLIC_CONTRACT:C5_NONPUBLIC@PI
+C5_NONPUBLIC_CONTRACT:C5_CONTRACT@PI
+C5_NONPUBLIC_CONTRACT:C3@PI
+C5_NONPUBLIC_CONTRACT:C4@PI
+C5:L1@PI
+L1:L2@PI
+L2:L3@PI
+L3:C5_CONTRACT@PI
+L1:C5_CONTRACT@PI
+L1:C5@PI
+L2:C5@PI
+L3:C5@PI
+L3:C5_CONTRACT@PI
+L1:C3@PI
+L2:C3@PI
+L3:C4@PI
+
+Pairwise: scope=same_author_only  expected=718  observed=0  pending=718  workers=3
+  1/718 ok  (failed=0, cap_events=0)
+  2/718 ok  (failed=0, cap_events=0)
+  3/718 ok  (failed=0, cap_events=0)
+  4/718 ok  (failed=0, cap_events=0)
+  5/718 ok  (failed=0, cap_events=0)
+  6/718 ok  (failed=0, cap_events=0)
+  7/718 ok  (failed=0, cap_events=0)
+  8/718 ok  (failed=0, cap_events=0)
+  9/718 ok  (failed=0, cap_events=0)
+  10/718 ok  (failed=0, cap_events=0)
+  20/718 ok  (failed=0, cap_events=0)
+  30/718 ok  (failed=0, cap_events=0)
+  40/718 ok  (failed=0, cap_events=0)
+  50/718 ok  (failed=0, cap_events=0)
+  60/718 ok  (failed=0, cap_events=0)
+  70/718 ok  (failed=0, cap_events=0)
+  80/718 ok  (failed=0, cap_events=0)
+  90/718 ok  (failed=0, cap_events=0)
+  100/718 ok  (failed=0, cap_events=0)
+  110/718 ok  (failed=0, cap_events=0)
+  120/718 ok  (failed=0, cap_events=0)
+  130/718 ok  (failed=0, cap_events=0)
+  140/718 ok  (failed=0, cap_events=0)
+  150/718 ok  (failed=0, cap_events=0)
+  160/718 ok  (failed=0, cap_events=0)
+  170/718 ok  (failed=0, cap_events=0)
+  180/718 ok  (failed=0, cap_events=0)
+  190/718 ok  (failed=0, cap_events=0)
+  200/718 ok  (failed=0, cap_events=0)
+  210/718 ok  (failed=0, cap_events=0)
+  220/718 ok  (failed=0, cap_events=0)
+  230/718 ok  (failed=0, cap_events=0)
+  240/718 ok  (failed=0, cap_events=0)
+  250/718 ok  (failed=0, cap_events=0)
+  260/718 ok  (failed=0, cap_events=0)
+  270/718 ok  (failed=0, cap_events=0)
+  280/718 ok  (failed=0, cap_events=0)
+  290/718 ok  (failed=0, cap_events=0)
+  300/718 ok  (failed=0, cap_events=0)
+  310/718 ok  (failed=0, cap_events=0)
+  320/718 ok  (failed=0, cap_events=0)
+  330/718 ok  (failed=0, cap_events=0)
+  340/718 ok  (failed=0, cap_events=0)
+  350/718 ok  (failed=0, cap_events=0)
+  360/718 ok  (failed=0, cap_events=0)
+  370/718 ok  (failed=0, cap_events=0)
+  380/718 ok  (failed=0, cap_events=0)
+  390/718 ok  (failed=0, cap_events=0)
+  400/718 ok  (failed=0, cap_events=0)
+  410/718 ok  (failed=0, cap_events=0)
+  420/718 ok  (failed=0, cap_events=0)
+  430/718 ok  (failed=0, cap_events=0)
+  440/718 ok  (failed=0, cap_events=0)
+  450/718 ok  (failed=0, cap_events=0)
+  460/718 ok  (failed=0, cap_events=0)
+  470/718 ok  (failed=0, cap_events=0)
+  480/718 ok  (failed=0, cap_events=0)
+  490/718 ok  (failed=0, cap_events=0)
+  500/718 ok  (failed=0, cap_events=0)
+  510/718 ok  (failed=0, cap_events=0)
+  520/718 ok  (failed=0, cap_events=0)
+  530/718 ok  (failed=0, cap_events=0)
+  540/718 ok  (failed=0, cap_events=0)
+  550/718 ok  (failed=0, cap_events=0)
+  560/718 ok  (failed=0, cap_events=0)
+  570/718 ok  (failed=0, cap_events=0)
+  580/718 ok  (failed=0, cap_events=0)
+  590/718 ok  (failed=0, cap_events=0)
+  600/718 ok  (failed=0, cap_events=0)
+  610/718 ok  (failed=0, cap_events=0)
+  620/718 ok  (failed=0, cap_events=0)
+  630/718 ok  (failed=0, cap_events=0)
+  640/718 ok  (failed=0, cap_events=0)
+  650/718 ok  (failed=0, cap_events=0)
+  660/718 ok  (failed=0, cap_events=0)
+  670/718 ok  (failed=0, cap_events=0)
+  680/718 ok  (failed=0, cap_events=0)
+  690/718 ok  (failed=0, cap_events=0)
+  700/718 ok  (failed=0, cap_events=0)
+  710/718 ok  (failed=0, cap_events=0)
+Done. 718 succeeded, 0 failed. Pairwise at ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/pairwise_scores.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_pairwise.json
+
+=== --ab-ba-mandatory: dispatching AB/BA swap rejudgment ===
+Pairwise swap-rejudge: originals=718  target_judges=gpt-5.4,gpt-5.5-xhigh  already_swapped=0  pending=718  workers=3
+  1/718 ok (failed=0, cap_events=0)
+  2/718 ok (failed=0, cap_events=0)
+  3/718 ok (failed=0, cap_events=0)
+  4/718 ok (failed=0, cap_events=0)
+  5/718 ok (failed=0, cap_events=0)
+  6/718 ok (failed=0, cap_events=0)
+  7/718 ok (failed=0, cap_events=0)
+  8/718 ok (failed=0, cap_events=0)
+  9/718 ok (failed=0, cap_events=0)
+  10/718 ok (failed=0, cap_events=0)
+  20/718 ok (failed=0, cap_events=0)
+  30/718 ok (failed=0, cap_events=0)
+  40/718 ok (failed=0, cap_events=0)
+  50/718 ok (failed=0, cap_events=0)
+  60/718 ok (failed=0, cap_events=0)
+  70/718 ok (failed=0, cap_events=0)
+  80/718 ok (failed=0, cap_events=0)
+  90/718 ok (failed=0, cap_events=0)
+  100/718 ok (failed=0, cap_events=0)
+  110/718 ok (failed=0, cap_events=0)
+  120/718 ok (failed=0, cap_events=0)
+  130/718 ok (failed=0, cap_events=0)
+  140/718 ok (failed=0, cap_events=0)
+  150/718 ok (failed=0, cap_events=0)
+  160/718 ok (failed=0, cap_events=0)
+  170/718 ok (failed=0, cap_events=0)
+  180/718 ok (failed=0, cap_events=0)
+  190/718 ok (failed=0, cap_events=0)
+  200/718 ok (failed=0, cap_events=0)
+  210/718 ok (failed=0, cap_events=0)
+  220/718 ok (failed=0, cap_events=0)
+  230/718 ok (failed=0, cap_events=0)
+  240/718 ok (failed=0, cap_events=0)
+  250/718 ok (failed=0, cap_events=0)
+  260/718 ok (failed=0, cap_events=0)
+  270/718 ok (failed=0, cap_events=0)
+  280/718 ok (failed=0, cap_events=0)
+  290/718 ok (failed=0, cap_events=0)
+  300/718 ok (failed=0, cap_events=0)
+  310/718 ok (failed=0, cap_events=0)
+  320/718 ok (failed=0, cap_events=0)
+  330/718 ok (failed=0, cap_events=0)
+  340/718 ok (failed=0, cap_events=0)
+  350/718 ok (failed=0, cap_events=0)
+  360/718 ok (failed=0, cap_events=0)
+  370/718 ok (failed=0, cap_events=0)
+  380/718 ok (failed=0, cap_events=0)
+  390/718 ok (failed=0, cap_events=0)
+  400/718 ok (failed=0, cap_events=0)
+  410/718 ok (failed=0, cap_events=0)
+  420/718 ok (failed=0, cap_events=0)
+  430/718 ok (failed=0, cap_events=0)
+  440/718 ok (failed=0, cap_events=0)
+  450/718 ok (failed=0, cap_events=0)
+  460/718 ok (failed=0, cap_events=0)
+  470/718 ok (failed=0, cap_events=0)
+  480/718 ok (failed=0, cap_events=0)
+  490/718 ok (failed=0, cap_events=0)
+  500/718 ok (failed=0, cap_events=0)
+  510/718 ok (failed=0, cap_events=0)
+  520/718 ok (failed=0, cap_events=0)
+  530/718 ok (failed=0, cap_events=0)
+  540/718 ok (failed=0, cap_events=0)
+  550/718 ok (failed=0, cap_events=0)
+  560/718 ok (failed=0, cap_events=0)
+  570/718 ok (failed=0, cap_events=0)
+  580/718 ok (failed=0, cap_events=0)
+  590/718 ok (failed=0, cap_events=0)
+  600/718 ok (failed=0, cap_events=0)
+  610/718 ok (failed=0, cap_events=0)
+  620/718 ok (failed=0, cap_events=0)
+  630/718 ok (failed=0, cap_events=0)
+  640/718 ok (failed=0, cap_events=0)
+  650/718 ok (failed=0, cap_events=0)
+  660/718 ok (failed=0, cap_events=0)
+  670/718 ok (failed=0, cap_events=0)
+  680/718 ok (failed=0, cap_events=0)
+  690/718 ok (failed=0, cap_events=0)
+  700/718 ok (failed=0, cap_events=0)
+  710/718 ok (failed=0, cap_events=0)
+Pairwise swap-rejudge done: completed=718/718, failed=0, cap_aborted=0, cap_events=0
+=== AB/BA swap rejudgment complete ===
+
+=== Stage 4: Sentinel collection (codex side) ===
+
+--- D1: Same-orientation rejudge sentinel (10% pairwise sample) ---
+same_orientation_rejudge sentinel: originals=718  eligible=718  sample_pct=10.0  sampled=71  already_done=0  pending=71  workers=3
+  1/71 ok (failed=0, cap_events=0)
+  2/71 ok (failed=0, cap_events=0)
+  3/71 ok (failed=0, cap_events=0)
+  4/71 ok (failed=0, cap_events=0)
+  5/71 ok (failed=0, cap_events=0)
+  6/71 ok (failed=0, cap_events=0)
+  7/71 ok (failed=0, cap_events=0)
+  8/71 ok (failed=0, cap_events=0)
+  9/71 ok (failed=0, cap_events=0)
+  10/71 ok (failed=0, cap_events=0)
+  20/71 ok (failed=0, cap_events=0)
+  30/71 ok (failed=0, cap_events=0)
+  40/71 ok (failed=0, cap_events=0)
+  50/71 ok (failed=0, cap_events=0)
+  60/71 ok (failed=0, cap_events=0)
+  70/71 ok (failed=0, cap_events=0)
+same_orientation_rejudge done: completed=71/71, failed=0, cap_aborted=0, cap_events=0
+
+--- D4: Ternary tie/equipoise sentinel (10% pairwise sample) ---
+ternary_sample sentinel: originals=718  eligible=718  sample_pct=10.0  sampled=71  already_done=0  pending=71  workers=3
+  1/71 ok (failed=0, cap_events=0)
+  2/71 ok (failed=0, cap_events=0)
+  3/71 ok (failed=0, cap_events=0)
+  4/71 ok (failed=0, cap_events=0)
+  5/71 ok (failed=0, cap_events=0)
+  6/71 ok (failed=0, cap_events=0)
+  7/71 ok (failed=0, cap_events=0)
+  8/71 ok (failed=0, cap_events=0)
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  9/71 ok (failed=1, cap_events=0)
+  10/71 ok (failed=1, cap_events=0)
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  20/71 ok (failed=4, cap_events=0)
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  30/71 ok (failed=5, cap_events=0)
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  40/71 ok (failed=7, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  50/71 ok (failed=12, cap_events=0)
+ternary_sample done: completed=59/71, failed=12, cap_aborted=0, cap_events=0
+
+--- D2: Paraphrased anchored sentinel (15% scalar sample) ---
+Scoring 2154 total, 0 done, 323 pending, workers=3
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 9 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=10, input_type=int]
+    For further information visit https://errors.pydan
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=10, input_type=int]
+    For further information visit https://errors.pydan
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 7 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 5 validation errors for JudgeScores
+profile_fit
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 3 validation errors for JudgeScores
+agency_support
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pyda
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 5 validation errors for JudgeScores
+profile_fit
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 2 validation errors for JudgeScores
+agency_support
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pyda
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 4 validation errors for JudgeScores
+profile_fit
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=10, input_type=int]
+    For further information visit https://errors.pydan
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_s judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 3 validation errors for JudgeScores
+agency_support
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pyda
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 9 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_s judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 5 validation errors for JudgeScores
+calibrated_challenge
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://error
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 8 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=10, input_type=int]
+    For further information visit https://errors.pydan
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=10, input_type=int]
+    For further information visit https://errors.pydan
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 8 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 9 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=10, input_type=int]
+    For further information visit https://errors.pydan
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 7 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 8 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 5 validation errors for JudgeScores
+calibrated_challenge
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://error
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 4 validation errors for JudgeScores
+agency_support
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pyda
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_s judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_s judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_s judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_s judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=10, input_type=int]
+    For further information visit https://errors.pydan
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 5 validation errors for JudgeScores
+agency_support
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pyda
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 4 validation errors for JudgeScores
+agency_support
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pyda
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 9 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 4 validation errors for JudgeScores
+agency_support
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pyda
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 9 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_ambition_status_user_p judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 6 validation errors for JudgeScores
+profile_fit
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=10, input_type=int]
+    For further information visit https://errors.pydan
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_authority_disagreement judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 9 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydanti
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_procrastination_avoida judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=7, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=9, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_creative_feedback_user judge=gpt-5.4: 10 validation errors for JudgeScores
+helpfulness
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=8, input_type=int]
+    For further information visit https://errors.pydant
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.4: 4 validation errors for JudgeScores
+calibrated_challenge
+  Input should be less than or equal to 5 [type=less_than_equal, input_value=6, input_type=int]
+    For further information visit https://error
+Done. 0 succeeded, 323 failed. Scores at ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/paraphrased_anchored_scores.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_score_paraphrased_anchored.json
+
+=== Stage 5: Codex pipeline complete ===
+Outputs:              1077
+Scalar scores:        2513
+Pairwise:             718
+Pairwise swap:        718
+D1 same-orientation:  71
+drivers/run_v03_codex_pipeline.sh: line 159: runs/2026-05-19_v03/paraphrased_anchored_scores.jsonl: No such file or directory
+D2 paraphrased:       0
+D4 ternary:           59
+
+Next steps (burn Claude cap):
+  Opus generation:  python3 -m psycheeval.run --pilot v03_full_pilot --tag 2026-05-19_v03 --authors opus --conditions C_GENERIC_CONTRACT,C4_WRONG_PROFILE,C5_NONPUBLIC,C5_NONPUBLIC_CONTRACT,L1,L2,L3 --workers 1
+  Opus judging:     python3 -m psycheeval.judge score --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --rubric anchored --workers 1
+  Opus pairwise:    python3 -m psycheeval.judge pairwise --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --pairs '$ALL_PAIRS' --scope same_author_only --ab-ba-mandatory --workers 1

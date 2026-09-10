@@ -1,0 +1,18 @@
+[
+  {"task_id": "t032", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X makes tradeoffs visible and asks for desired outcome; Y explicitly provides the missing disclosure sentence."},
+  {"task_id": "t033", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 0.95, "basis": "X applies the expensive caution clause (P1); Y uses confidence levels and next observable steps (P2)."},
+  {"task_id": "t034", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.95, "basis": "Y pairs critique with a specifically named thing done well, matching Persona 1's explicit critique rule."},
+  {"task_id": "t035", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 0.95, "basis": "X explicitly asks for next observable move this week and names a precise positive behavior."},
+  {"task_id": "t036", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "X uses said/meant/inferred layers and unconsidered interpretations; Y leads with explicit confidence levels."},
+  {"task_id": "t037", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.95, "basis": "X explicitly executes P2's exact clauses: inference layers, one-sentence outcome, repairable versus sharper cost tradeoff, 10am review"},
+  {"task_id": "t038", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X matches P2's alternative readings and tradeoff costs; Y matches P1's omitted disclosure sentence."},
+  {"task_id": "t039", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X separates inference layers per P2; Y gives probability recommendation and top residual uncertainty per P1."},
+  {"task_id": "t040", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "Y uses exact phrasing from Persona 1 repair clauses; X focuses on Persona 2 craft elements."},
+  {"task_id": "t041", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "Y uses exact Persona 2 phrases like 'next 30 seconds' and 'peer-to-peer... not just drafted'"},
+  {"task_id": "t042", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "Y includes the 30-second sketch, not drafted escalation check, and smallest step closing mandated by Persona 1"},
+  {"task_id": "t043", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "Y includes the next 30 seconds sketch and redirects from shame, explicitly matching Persona 2."},
+  {"task_id": "t044", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X explicitly sketches the 'next 30 seconds' and uses Persona 2's exact repair clause phrases."},
+  {"task_id": "t045", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError — Gemini Pro quota exhausted, resets in ~20h"},
+  {"task_id": "t046", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError — Gemini Pro quota exhausted, resets in ~20h"},
+  {"task_id": "t047", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError — Gemini Pro quota exhausted, resets in ~20h"}
+]

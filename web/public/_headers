@@ -1,0 +1,8 @@
+# Cloudflare Pages security headers for the Psyche web app.
+# The app is fully client-side: scripts, styles, and item-bank JSON are all
+# same-origin; no external connections are made by app code.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

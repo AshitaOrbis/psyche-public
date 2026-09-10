@@ -1,0 +1,5 @@
+# Generated results (large, contain raw model outputs)
+results/
+
+# Node
+node_modules/

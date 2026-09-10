@@ -1,0 +1,30 @@
+Traceback (most recent call last):
+  File "~/claudeworkspace/psyche/psycheeval/src/psycheeval/io.py", line 22, in read_jsonl
+    yield model.model_validate_json(line)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.local/lib/python3.12/site-packages/pydantic/main.py", line 766, in model_validate_json
+    return cls.__pydantic_validator__.validate_json(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for PairwiseScore
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='\x00\x00\x00\x00\x00\x00...x00\x00\x00\x00\x00\x00', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "~/claudeworkspace/psyche/psycheeval/src/psycheeval/judge.py", line 1563, in <module>
+    main()
+  File "~/claudeworkspace/psyche/psycheeval/src/psycheeval/judge.py", line 1514, in main
+    pairwise_all(
+  File "~/claudeworkspace/psyche/psycheeval/src/psycheeval/judge.py", line 1304, in pairwise_all
+    observed, observed_count = observed_pairwise_keys(run_tag)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/claudeworkspace/psyche/psycheeval/src/psycheeval/judge.py", line 621, in observed_pairwise_keys
+    for ps in read_jsonl(out_path, PairwiseScore):
+  File "~/claudeworkspace/psyche/psycheeval/src/psycheeval/io.py", line 24, in read_jsonl
+    raise ValueError(f"{path}:{i} failed validation: {e}") from e
+ValueError: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/pairwise_scores.jsonl:14118 failed validation: 1 validation error for PairwiseScore
+  Invalid JSON: expected value at line 1 column 1 [type=json_invalid, input_value='\x00\x00\x00\x00\x00\x00...x00\x00\x00\x00\x00\x00', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.12/v/json_invalid

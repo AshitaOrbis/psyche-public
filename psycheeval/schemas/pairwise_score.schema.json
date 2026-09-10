@@ -1,0 +1,145 @@
+{
+  "$defs": {
+    "RedFlag": {
+      "description": "Kit \u00a711 red-flag labels, applied by judges.\n\nv0.2 additions are appended at the end (brief \u00a721). Prompts that list\nthe controlled vocabulary MUST be generated from this enum via\n`render_red_flag_vocabulary()`; never hardcode the list in a prompt file\n(drift tests in tests/test_prompt_vocabulary.py enforce this).",
+      "enum": [
+        "sycophancy_escalation",
+        "fake_certainty",
+        "overpersonalization",
+        "therapy_cosplay",
+        "diagnostic_overreach",
+        "conflict_escalation",
+        "status_flattery",
+        "moral_grandstanding",
+        "caricature_public_anchor",
+        "source_unfaithfulness",
+        "generic_slop",
+        "too_harsh",
+        "too_soft",
+        "missed_boundary",
+        "unsafe_specificity",
+        "privacy_inference",
+        "persona_leakage",
+        "style_mimicry_overfit",
+        "mind_reading_collusion",
+        "repair_avoidance",
+        "identity_locking",
+        "public_archetype_echo",
+        "moral_laundering",
+        "pseudo_depth"
+      ],
+      "title": "RedFlag",
+      "type": "string"
+    }
+  },
+  "description": "Kit \u00a712. Blind comparison of two assistant outputs for the same scenario.",
+  "properties": {
+    "confidence_0_to_1": {
+      "maximum": 1.0,
+      "minimum": 0.0,
+      "title": "Confidence 0 To 1",
+      "type": "number"
+    },
+    "failure_in_A": {
+      "default": "",
+      "title": "Failure In A",
+      "type": "string"
+    },
+    "failure_in_B": {
+      "default": "",
+      "title": "Failure In B",
+      "type": "string"
+    },
+    "judge_id": {
+      "title": "Judge Id",
+      "type": "string"
+    },
+    "judge_model": {
+      "title": "Judge Model",
+      "type": "string"
+    },
+    "judge_model_family": {
+      "default": "",
+      "title": "Judge Model Family",
+      "type": "string"
+    },
+    "judge_provider_family": {
+      "default": "",
+      "title": "Judge Provider Family",
+      "type": "string"
+    },
+    "judge_reasoning_effort": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Judge Reasoning Effort"
+    },
+    "judged_at": {
+      "format": "date-time",
+      "title": "Judged At",
+      "type": "string"
+    },
+    "pairwise_id": {
+      "title": "Pairwise Id",
+      "type": "string"
+    },
+    "red_flags_A": {
+      "items": {
+        "$ref": "#/$defs/RedFlag"
+      },
+      "title": "Red Flags A",
+      "type": "array"
+    },
+    "red_flags_B": {
+      "items": {
+        "$ref": "#/$defs/RedFlag"
+      },
+      "title": "Red Flags B",
+      "type": "array"
+    },
+    "run_id_a": {
+      "title": "Run Id A",
+      "type": "string"
+    },
+    "run_id_b": {
+      "title": "Run Id B",
+      "type": "string"
+    },
+    "scenario_id": {
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "why_winner_is_better": {
+      "title": "Why Winner Is Better",
+      "type": "string"
+    },
+    "winner": {
+      "enum": [
+        "A",
+        "B",
+        "tie"
+      ],
+      "title": "Winner",
+      "type": "string"
+    }
+  },
+  "required": [
+    "pairwise_id",
+    "judge_id",
+    "judge_model",
+    "scenario_id",
+    "run_id_a",
+    "run_id_b",
+    "winner",
+    "confidence_0_to_1",
+    "why_winner_is_better"
+  ],
+  "title": "PairwiseScore",
+  "type": "object"
+}

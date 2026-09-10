@@ -1,0 +1,12 @@
+{
+  "tag": "2026-04-26_v02_hard_codex_only",
+  "phase": "score_anchored",
+  "completed_count": 0,
+  "pending_count": 0,
+  "last_successful_record_id": null,
+  "last_cap_hit_record_id": null,
+  "cap_aborted": false,
+  "cap_event_count": 0,
+  "timestamp": "2026-07-19T02:15:46.284017+00:00",
+  "suggested_resume_command": "uv run python -m psycheeval.judge score --tag 2026-04-26_v02_hard_codex_only --pilot v02_hard_pilot --judges opus --workers 4 --rubric anchored"
+}

@@ -1,0 +1,41 @@
+{
+  "method": "simplified_variance_decomposition",
+  "per_domain": {
+    "N": {
+      "eta2_evaluator": 0.1552,
+      "eta2_register": 0.8411,
+      "eta2_residual": 0.0038,
+      "evaluator_bias": 8.3
+    },
+    "E": {
+      "eta2_evaluator": 0.771,
+      "eta2_register": 0.2246,
+      "eta2_residual": 0.0044,
+      "evaluator_bias": 15.3
+    },
+    "O": {
+      "eta2_evaluator": 0.1571,
+      "eta2_register": 0.7785,
+      "eta2_residual": 0.0644,
+      "evaluator_bias": -2.8
+    },
+    "A": {
+      "eta2_evaluator": 0.5071,
+      "eta2_register": 0.487,
+      "eta2_residual": 0.0059,
+      "evaluator_bias": 10.6
+    },
+    "C": {
+      "eta2_evaluator": 0.3971,
+      "eta2_register": 0.601,
+      "eta2_residual": 0.0019,
+      "evaluator_bias": 19.3
+    }
+  },
+  "rope_test": {
+    "generator_effect_mean": 1.82,
+    "rope_bound": 3.0,
+    "inside_rope": true,
+    "verdict": "NEGLIGIBLE"
+  }
+}

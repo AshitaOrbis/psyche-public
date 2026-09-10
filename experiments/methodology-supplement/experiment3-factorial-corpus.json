@@ -1,0 +1,34 @@
+{
+  "experiment": "factorial_corpus_evaluation",
+  "date": "2026-03-25",
+  "note": "Full factorial: 5 sources × 2 models × 3 runs (chunked) + 3 sources × Opus full-context × 3 runs. Replaces stale corpus.jsonl with ingested/ data. SMS-inclusive sampling. Key names (subject_sms etc) are pipeline-internal level identifiers matching --level flags in analyze_narratives.py.",
+  "psyche_gt": {"N": null, "E": null, "O": null, "A": null, "C": null, "_withheld": "withheld: private subject data"},
+  "systematic_biases_gpt_minus_opus": {
+    "subject_sms": {"N": 8.6, "E": 22.8, "O": -1.3, "A": 19.2, "C": 22.8},
+    "academic": {"N": 4.1, "E": 9.6, "O": -1.5, "A": 7.6, "C": 17.4},
+    "messenger": {"N": 11.0, "E": 13.9, "O": -2.5, "A": 4.7, "C": 20.4},
+    "ai_conv": {"N": 7.7, "E": 15.1, "O": -4.7, "A": 11.1, "C": 17.3},
+    "mixed": {"N": 10.3, "E": 15.1, "O": -4.0, "A": 10.3, "C": 18.3},
+    "mean": {"N": 8.3, "E": 15.3, "O": -2.8, "A": 10.6, "C": 19.2}
+  },
+  "context_effect_opus_fullctx_minus_chunked": {
+    "subject_sms": {"delta_mean_abs": 0.8, "direction": "worse"},
+    "academic": {"delta_mean_abs": 10.0, "direction": "much_worse"},
+    "mixed": {"delta_mean_abs": 3.7, "direction": "worse"}
+  },
+  "corpus_means": {
+    "subject_sms_opus": {"N": 53.1, "E": 30.0, "O": 87.8, "A": 38.3, "C": 39.6, "delta_psyche": null},
+    "subject_sms_gpt": {"N": 61.7, "E": 52.8, "O": 86.5, "A": 57.5, "C": 62.4, "delta_psyche": null},
+    "academic_opus": {"N": 46.8, "E": 33.3, "O": 78.9, "A": 42.5, "C": 57.7, "delta_psyche": null},
+    "academic_gpt": {"N": 50.9, "E": 42.9, "O": 77.4, "A": 50.1, "C": 75.1, "delta_psyche": null},
+    "messenger_opus": {"N": 66.2, "E": 24.8, "O": 85.9, "A": 32.5, "C": 30.9, "delta_psyche": null},
+    "messenger_gpt": {"N": 77.2, "E": 38.7, "O": 83.4, "A": 37.2, "C": 51.3, "delta_psyche": null},
+    "ai_conv_opus": {"N": 40.0, "E": 33.6, "O": 83.8, "A": 35.8, "C": 63.4, "delta_psyche": null},
+    "ai_conv_gpt": {"N": 47.7, "E": 48.7, "O": 79.1, "A": 46.9, "C": 80.7, "delta_psyche": null},
+    "mixed_opus": {"N": 54.9, "E": 32.2, "O": 83.5, "A": 36.4, "C": 37.7, "delta_psyche": null},
+    "mixed_gpt": {"N": 65.2, "E": 47.3, "O": 79.5, "A": 46.7, "C": 56.0, "delta_psyche": null}
+  },
+  "total_runs": 39,
+  "runs_opus": 24,
+  "runs_gpt": 15
+}

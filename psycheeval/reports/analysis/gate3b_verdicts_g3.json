@@ -1,0 +1,18 @@
+[
+  {"task_id": "t048", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "X gives confidence levels and separates truth from preference; Y isolates inference layers and details draft tradeoffs."},
+  {"task_id": "t049", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X uses explicit confidence estimate (P2); Y challenges safe move as potentially expensive (P1)."},
+  {"task_id": "t050", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 0.95, "basis": "X provides confidence levels and separates truth from preference; Y hands choice back from a menu."},
+  {"task_id": "t051", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "X uses confidence levels and names a positive move; Y flags cautious moves as potentially expensive."},
+  {"task_id": "t052", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X distinguishes happened vs inferred layers and explicitly flags a 'grievance inventory', directly matching Persona 2."},
+  {"task_id": "t053", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.95, "basis": "Y uses P1's 'observable next step' phrase; X ends with a P2 agency-preserving question."},
+  {"task_id": "t054", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 0.95, "basis": "Y declines frame proposing specific alternative filter; X ends with an agency-preserving multiple-choice question."},
+  {"task_id": "t055", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "Y uses the 10 a.m. review, inference layers, and tradeoffs; X suggests an omitted sentence."},
+  {"task_id": "t056", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "X grounds in material craft problems; Y targets avoidance and flags constructed interiors as preemptive cover."},
+  {"task_id": "t057", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X uses Persona 2's exact 'Thursday' phrasing and specific fix; Y obeys Persona 1's anti-systematization rule."},
+  {"task_id": "t058", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "X uses Persona 1's specific clauses on cowardice, 30 seconds, and care. Y is direct, work-focused."},
+  {"task_id": "t059", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X uses Persona 2's 'next 30 seconds' structure; Y uses Persona 1's one-sentence difficulty naming."},
+  {"task_id": "t060", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.95, "basis": "X offers material-grounded critique (P2); Y diagnoses psychological shields and asks permission to sharpen (P1)."},
+  {"task_id": "t061", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X explicitly uses 'next 30 seconds' and 'said the thing' matching Persona 2 repair clauses."},
+  {"task_id": "t062", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError — Gemini Pro quota exhausted, resets ~20h"},
+  {"task_id": "t063", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError — Gemini Pro quota exhausted, resets ~20h"}
+]

@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "design": "8 behavioral-fit axes, each a reciprocal pair (2 poles). Poles chosen so neither is generically 'better' under default assistant norms; the deterministic pole-balance screen (|Δ global-desirability|<0.15) gates which pairs survive to mass generation. Seeds are expanded to full behavioral briefs (used for BOTH generation-conditioning and target-conditioned judging).",
+    "privacy": "no real names; abstract behavioral handles only",
+    "brief_target_words": 320
+  },
+  "pairs": [
+    {
+      "pair_id": "pp_directness",
+      "axis": "directness of feedback",
+      "axis_description": "how candid vs cushioned the person wants critique and bad news",
+      "personas": [
+        {"id": "blunt_seeker", "pole": "wants unvarnished directness",
+         "essence": "Wants the unvarnished read first; treats hedging and cushioning as condescension that wastes their time.",
+         "tells": ["asks 'just tell me straight'", "impatient with caveats before the point", "trusts criticism more than praise"],
+         "serves": ["lead with the blunt assessment", "name the flaw plainly then the fix", "skip the compliment sandwich"],
+         "alienates": ["softening with 'one small thing to maybe consider'", "burying the verdict under reassurance", "over-qualifying"]},
+        {"id": "cushioned_seeker", "pole": "wants warmth-first framing",
+         "essence": "Hears blunt critique as harshness and shuts down; needs the relational frame and what's working before what isn't.",
+         "tells": ["deflates under flat criticism", "reads tone closely", "re-engages when acknowledged first"],
+         "serves": ["acknowledge effort/intent first", "frame critique as collaborative", "pair each flaw with what's salvageable"],
+         "alienates": ["leading with the harshest read", "clinical bluntness", "critique with no relational frame"]}
+      ]
+    },
+    {
+      "pair_id": "pp_decision",
+      "axis": "decision support shape",
+      "axis_description": "whether the person wants a fan of options or a single recommended call",
+      "personas": [
+        {"id": "options_weigher", "pole": "wants options + tradeoffs",
+         "essence": "Wants the option space and tradeoffs laid out so they can decide; a single recommendation feels presumptuous and pre-empts their judgment.",
+         "tells": ["asks 'what are my options'", "wants the reasoning to evaluate it themselves", "resents being steered"],
+         "serves": ["lay out 2-4 options with honest tradeoffs", "surface the decision axes", "let them choose"],
+         "alienates": ["jumping to 'you should do X'", "hiding the alternatives", "a single answer with no fan-out"]},
+        {"id": "recommendation_wanter", "pole": "wants one clear call",
+         "essence": "Wants a clear recommended action with the why; an option menu reads as the assistant dodging the hard part and leaves them stuck.",
+         "tells": ["asks 'what would you do'", "paralyzed by too many choices", "wants a default to react to"],
+         "serves": ["give one recommended call up front", "then the brief why", "offer the runner-up only if close"],
+         "alienates": ["a menu with no recommendation", "'it depends' with no lean", "forcing them to adjudicate tradeoffs"]}
+      ]
+    },
+    {
+      "pair_id": "pp_affect",
+      "axis": "emotion-first vs task-first",
+      "axis_description": "whether feelings get acknowledged before problem-solving",
+      "personas": [
+        {"id": "feelings_first", "pole": "wants emotional acknowledgment first",
+         "essence": "Needs the emotional reality named before any fixing; jumping straight to solutions reads as cold and unseen.",
+         "tells": ["leads with how it feels", "withdraws if rushed to solutions", "settles once acknowledged"],
+         "serves": ["acknowledge the feeling first and specifically", "then move to the problem", "validate before advising"],
+         "alienates": ["immediate solutioning", "treating distress as a ticket to close", "skipping the human beat"]},
+        {"id": "task_first", "pole": "wants the problem solved first",
+         "essence": "Wants the problem addressed; emotional acknowledgment feels like stalling or being managed, and lands as condescending.",
+         "tells": ["'I don't need a pep talk, I need a fix'", "irritated by validation", "calms by making progress"],
+         "serves": ["go straight to the concrete fix", "treat them as capable", "keep affect minimal and real"],
+         "alienates": ["leading with 'that sounds really hard'", "process-the-feelings detours", "therapeutic framing"]}
+      ]
+    },
+    {
+      "pair_id": "pp_risk",
+      "axis": "risk posture",
+      "axis_description": "bias-to-action vs surface-the-downside",
+      "personas": [
+        {"id": "bold_mover", "pole": "bias to action, risk-tolerant",
+         "essence": "Wants momentum and a bias to action; exhaustive risk-listing reads as hand-wringing that kills the move.",
+         "tells": ["'let's just ship it'", "impatient with worst-cases", "energized by forward motion"],
+         "serves": ["back the move, then the one real risk", "keep caveats proportionate", "frame around upside and speed"],
+         "alienates": ["leading with everything that could go wrong", "demanding more analysis", "treating boldness as recklessness"]},
+        {"id": "cautious_checker", "pole": "surface risks, reversibility-first",
+         "essence": "Wants failure modes named and reversibility checked before committing; bias-to-action feels reckless and unsafe.",
+         "tells": ["'what could go wrong'", "wants a fallback", "uneasy without due diligence"],
+         "serves": ["surface the key failure modes", "check reversibility and exits", "endorse only after the downside is mapped"],
+         "alienates": ["'just go for it'", "minimizing real risks", "rushing past due diligence"]}
+      ]
+    },
+    {
+      "pair_id": "pp_challenge",
+      "axis": "challenge vs reassurance",
+      "axis_description": "whether the person wants their reasoning stress-tested or steadied",
+      "personas": [
+        {"id": "challenge_seeker", "pole": "wants pushback / stress-test",
+         "essence": "Wants their thinking attacked at its weak points; agreement and reassurance feel useless and a little insulting.",
+         "tells": ["'poke holes in this'", "bored by agreement", "sharpens under counter-argument"],
+         "serves": ["steelman the opposing case", "name the weakest link", "withhold agreement until earned"],
+         "alienates": ["validating to be nice", "agreeing too fast", "cushioning the counter-argument away"]},
+        {"id": "reassurance_seeker", "pole": "wants steadying / validation",
+         "essence": "Is often deciding while shaky; well-meant pushback when fragile lands as piling on and erodes the confidence to act.",
+         "tells": ["seeks confirmation they're not crazy", "destabilized by hard challenge", "acts once steadied"],
+         "serves": ["affirm what's sound first", "raise concerns gently and few", "build the confidence to move"],
+         "alienates": ["devil's-advocate when they're fragile", "stacking objections", "withholding any reassurance"]}
+      ]
+    },
+    {
+      "pair_id": "pp_depth",
+      "axis": "depth vs brevity",
+      "axis_description": "full reasoning vs bottom-line-first",
+      "personas": [
+        {"id": "thorough_reader", "pole": "wants depth + caveats",
+         "essence": "Wants the full reasoning, caveats and edge cases; terse bottom-line answers feel dismissive and untrustworthy.",
+         "tells": ["asks 'why', then 'why' again", "distrusts unshown work", "reads the footnotes"],
+         "serves": ["show the reasoning chain", "name the caveats and edge cases", "give the complete picture"],
+         "alienates": ["one-line verdicts", "hiding the working", "'just trust me'"]},
+        {"id": "bottomline_reader", "pole": "wants brevity",
+         "essence": "Wants the answer in the first sentence and will ask for more if needed; long reasoning reads as noise burying the point.",
+         "tells": ["skims to the conclusion", "'TL;DR?'", "frustrated by preamble"],
+         "serves": ["answer in the first sentence", "support in <=3 lines", "offer depth only on request"],
+         "alienates": ["long wind-up before the point", "exhaustive caveats", "making them dig for the answer"]}
+      ]
+    },
+    {
+      "pair_id": "pp_autonomy",
+      "axis": "autonomy vs scaffolding",
+      "axis_description": "treat-as-expert vs explicit step-by-step",
+      "personas": [
+        {"id": "autonomy_expert", "pole": "wants to be treated as the expert",
+         "essence": "Is highly capable in-domain and wants peer-level engagement; step-by-step hand-holding reads as condescending.",
+         "tells": ["'I know the basics, skip them'", "bristles at over-explanation", "wants the non-obvious"],
+         "serves": ["assume competence", "go straight to the non-obvious", "engage as a peer"],
+         "alienates": ["explaining fundamentals they know", "numbered baby-steps", "over-scaffolding"]},
+        {"id": "scaffold_seeker", "pole": "wants explicit guidance",
+         "essence": "Is out of their depth and wants explicit structure and steps; assuming expertise leaves them lost and ashamed to ask.",
+         "tells": ["'walk me through it'", "lost without steps", "afraid to reveal they're confused"],
+         "serves": ["give explicit ordered steps", "define terms as you go", "check understanding without condescending"],
+         "alienates": ["assuming background they lack", "jargon with no glossing", "'you've got this' with no map"]}
+      ]
+    },
+    {
+      "pair_id": "pp_planning",
+      "axis": "structure vs exploration",
+      "axis_description": "concrete-plan-now vs think-out-loud-first",
+      "personas": [
+        {"id": "planful_closer", "pole": "wants concrete structure/plan",
+         "essence": "Wants a concrete plan, checklist or structure to act on; open-ended exploration feels unmoored and anxiety-making.",
+         "tells": ["'just give me the plan'", "wants next actions", "uneasy with open loops"],
+         "serves": ["produce a concrete plan/checklist", "order the steps", "close the loop with next actions"],
+         "alienates": ["open-ended musing", "leaving it unresolved", "exploring instead of deciding"]},
+        {"id": "exploratory_thinker", "pole": "wants to explore possibilities",
+         "essence": "Thinks by exploring possibilities out loud; premature structure feels constraining and forecloses the good idea.",
+         "tells": ["'let's think about this'", "resists early closure", "generative when given room"],
+         "serves": ["explore the space with them", "hold options open", "defer structure until the shape emerges"],
+         "alienates": ["forcing a plan too early", "shutting down tangents", "premature convergence"]}
+      ]
+    }
+  ]
+}

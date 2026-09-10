@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-05-05",
+  "decision_reference": "D2 — restricted C5_CONTRACT pairwise scope",
+  "plan_doc": "docs/v0_2_plan_extended_2026-05-05.md",
+  "rationale": "v0.2 covers the load-bearing C5_CONTRACT comparisons {C3, C4, C5} only. Full all-vs-all C5_CONTRACT pairwise was deferred to save ~60% of pairwise call count. The omission affects breadth, not the core C5 mechanism test. These edges are backfillable in v0.3 or later without redesigning the experiment.",
+  "covered_in_v0_2": [
+    {"pair": ["C5_CONTRACT", "C3"], "purpose": "tests whether source packet + contract beats simpler explicit contract"},
+    {"pair": ["C5_CONTRACT", "C4"], "purpose": "tests whether source packet + contract beats or hurts the normal behavioral contract"},
+    {"pair": ["C5_CONTRACT", "C5"], "purpose": "tests whether adding a contract repairs source-packet fragility — the load-bearing comparison for C5_CONTRACT"}
+  ],
+  "deferred_edges": [
+    {
+      "pair": ["C5_CONTRACT", "C0"],
+      "purpose": "tests whether C5_CONTRACT beats no-profile baseline; expected yes given C5 already does, but worth confirming",
+      "scope_notes": "PI-only (both conditions PI-only by design)",
+      "estimated_calls_per_judge": 960,
+      "judges": 3,
+      "estimated_total_calls": 2880,
+      "priority_for_backfill": "low"
+    },
+    {
+      "pair": ["C5_CONTRACT", "C1"],
+      "purpose": "tests whether C5_CONTRACT beats trait-labels condition",
+      "scope_notes": "PI-only",
+      "estimated_calls_per_judge": 960,
+      "judges": 3,
+      "estimated_total_calls": 2880,
+      "priority_for_backfill": "low"
+    },
+    {
+      "pair": ["C5_CONTRACT", "C1_padded"],
+      "purpose": "C1_padded is a length control for C1; pair is informative only after the basic C5_CONTRACT vs C1 result is known",
+      "scope_notes": "PI-only",
+      "estimated_calls_per_judge": 960,
+      "judges": 3,
+      "estimated_total_calls": 2880,
+      "priority_for_backfill": "low"
+    },
+    {
+      "pair": ["C5_CONTRACT", "C4_shuffled"],
+      "purpose": "C4_shuffled is a structure control for C4; pair is informative only after the basic C5_CONTRACT vs C4 result is known",
+      "scope_notes": "PI-only",
+      "estimated_calls_per_judge": 960,
+      "judges": 3,
+      "estimated_total_calls": 2880,
+      "priority_for_backfill": "low"
+    }
+  ],
+  "deferred_total_pairwise_calls": 11520,
+  "covered_total_pairwise_calls": 8640,
+  "savings_percent": 57.1,
+  "backfill_command_template": "uv run python -m psycheeval.judge pairwise --tag <v0.2-tag> --pilot v02_hard_pilot --pairs <PAIR_A>,<PAIR_B> --judges gpt-5.4,gpt-5.5,opus --workers 1",
+  "notes": [
+    "These edges are NOT bugs in v0.2 coverage. They are intentional deferrals.",
+    "If v0.2 results raise a question that requires a deferred edge (e.g., 'does C5_CONTRACT also beat C0/C1?'), backfill that specific edge with the command template above.",
+    "Workers must be 1 for any Opus-side backfill (per the cap-burn hardening posture)."
+  ]
+}

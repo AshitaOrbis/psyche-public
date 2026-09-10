@@ -1,0 +1,17 @@
+=== Stage 1: Wait for Phase 1 codex generation to finish ===
+No generation in flight — assuming it is already complete.
+Generation produced 1077 outputs total
+
+=== Stage 2: Scalar judging (codex side, anchored rubric) ===
+Scoring 2154 total, 604 done, 1550 pending, workers=3
+  1/1550 ok  (failed=0, cap_events=0)
+  2/1550 ok  (failed=0, cap_events=0)
+  3/1550 ok  (failed=0, cap_events=0)
+  4/1550 ok  (failed=0, cap_events=0)
+  5/1550 ok  (failed=0, cap_events=0)
+  6/1550 ok  (failed=0, cap_events=0)
+  7/1550 ok  (failed=0, cap_events=0)
+  8/1550 ok  (failed=0, cap_events=0)
+  9/1550 ok  (failed=0, cap_events=0)
+  10/1550 ok  (failed=0, cap_events=0)
+  20/1550 ok  (failed=0, cap_events=0)

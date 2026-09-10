@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "design": "30 scenarios stratified by trait-divergence (how much the ideal response depends on WHO the person is). HIGH = charged/personal/decisional, fit-style strongly determines the right reply; LOW = neutral/factual, persona barely moves the ideal answer; MED = in between. H5 predicts the correct>opposite gap is monotone in this stratum. Seeds expanded to natural first-person user messages.",
+    "counts": {"high": 10, "med": 10, "low": 10}
+  },
+  "scenarios": [
+    {"id": "s_h01", "stakes": "high", "seed": "I got an offer to leave my stable senior role to co-found a startup with an ex-colleague. Equity, no salary for a year, my partner is anxious. Deciding this week."},
+    {"id": "s_h02", "stakes": "high", "seed": "My closest friend told me something I said hurt them deeply, and I genuinely don't think I did anything wrong. I have to reply to their message tonight."},
+    {"id": "s_h03", "stakes": "high", "seed": "I think I have to let go of someone on my team who's well-liked but consistently underperforming. I keep putting off the conversation."},
+    {"id": "s_h04", "stakes": "high", "seed": "I've been offered a promotion that means managing people for the first time, but I'd lose the hands-on work I love. I have to answer by Friday."},
+    {"id": "s_h05", "stakes": "high", "seed": "My aging parent wants to move in with us. My spouse is hesitant and I feel torn between obligation and our own family's needs."},
+    {"id": "s_h06", "stakes": "high", "seed": "I poured six months into a project and just got feedback that it fundamentally doesn't work. I don't know whether to salvage or scrap it."},
+    {"id": "s_h07", "stakes": "high", "seed": "I'm thinking of confronting a mentor who took more credit than they deserved for my work. It could damage a relationship I value."},
+    {"id": "s_h08", "stakes": "high", "seed": "We're deciding whether to take on significant debt to buy a house at the top of our budget in a market that might be peaking."},
+    {"id": "s_h09", "stakes": "high", "seed": "A recruiter offered me a role at a competitor for 40% more. I like my current team and just got handed a big project. I have a week to respond."},
+    {"id": "s_h10", "stakes": "high", "seed": "I've been masking burnout for months and my work is slipping. I'm scared that if I tell my manager I'll be seen as unreliable."},
+
+    {"id": "s_m01", "stakes": "med", "seed": "I want to start strength training but I'm overwhelmed by conflicting advice online. Where should I actually begin?"},
+    {"id": "s_m02", "stakes": "med", "seed": "I'm preparing for a salary negotiation next week and I'm not sure how aggressive to be or how to frame my ask."},
+    {"id": "s_m03", "stakes": "med", "seed": "I keep procrastinating on a side project I say I care about. I don't know if it's the project or me."},
+    {"id": "s_m04", "stakes": "med", "seed": "I have to give critical feedback to a peer on a draft and I want it to actually land without blowing up the working relationship."},
+    {"id": "s_m05", "stakes": "med", "seed": "I'm choosing between two apartments — one cheaper and further out, one pricier near everything. Help me think it through."},
+    {"id": "s_m06", "stakes": "med", "seed": "I want to learn to cook properly but I've tried before and quit. How do I make it stick this time?"},
+    {"id": "s_m07", "stakes": "med", "seed": "I'm planning a two-week trip and can't decide between one country deeply or three countries fast."},
+    {"id": "s_m08", "stakes": "med", "seed": "I've been asked to give a 20-minute talk at a meetup and I'm not sure how to structure it or what to cut."},
+    {"id": "s_m09", "stakes": "med", "seed": "I want to set up a budgeting system but every app I've tried I've abandoned within a month."},
+    {"id": "s_m10", "stakes": "med", "seed": "My teenager is losing interest in school and I'm not sure whether to push, back off, or do something else entirely."},
+
+    {"id": "s_l01", "stakes": "low", "seed": "What's the practical difference between TCP and UDP?"},
+    {"id": "s_l02", "stakes": "low", "seed": "How does compound interest actually work? A simple example would help."},
+    {"id": "s_l03", "stakes": "low", "seed": "What's the difference between a virus and bacteria?"},
+    {"id": "s_l04", "stakes": "low", "seed": "Can you explain what a tariff is and who pays it?"},
+    {"id": "s_l05", "stakes": "low", "seed": "What's the difference between espresso, a latte, and a cappuccino?"},
+    {"id": "s_l06", "stakes": "low", "seed": "How do noise-cancelling headphones work?"},
+    {"id": "s_l07", "stakes": "low", "seed": "What does 'machine learning model overfitting' mean in plain terms?"},
+    {"id": "s_l08", "stakes": "low", "seed": "What's the difference between weather and climate?"},
+    {"id": "s_l09", "stakes": "low", "seed": "How does a bill become law in a parliamentary system, roughly?"},
+    {"id": "s_l10", "stakes": "low", "seed": "What's the difference between RAM and storage on a computer?"}
+  ]
+}

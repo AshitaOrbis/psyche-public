@@ -1,0 +1,30 @@
+.env
+__pycache__/
+
+# Generated from private profile data (profiles/ is gitignored).
+# Patterns are deliberately UNANCHORED so archive copies (archive/*/reports/
+# etc.) are excluded too — root-anchored patterns previously let private
+# reports slip into the repo via benchmark/archive/ (2026-06-11 review, P0).
+# Already-tracked synthetic copies (benchmark/synthetic/judge_results.json)
+# remain tracked; new synthetic judge results need `git add -f` after a
+# manual review confirming they contain no real profile data.
+prepared_input.json
+reports/
+# Glob covers judge_results.json, judge_results_v*.json, and any suffixed
+# variant a later run adds (judge_results_luna.json, 2026-07-31 row 243) —
+# the previous two explicit patterns did not, and judge reasoning quotes the
+# private profile verbatim.
+judge_results*.json
+prediction_scores.json
+# The subject's real Big Five ground-truth vector (run_eval.py loads it from
+# here since 2026-08-21; the committed fallback is synthetic midpoints). This
+# literal previously lived in run_eval.py:38 and rode into the 08-07
+# psyche-public snapshot — it must never be tracked again.
+ground_truth.json
+
+# Synthetic raw Opus output (large, regenerable)
+synthetic/profiles/*-raw.txt
+
+# Override parent gitignore: synthetic profiles are fictional, safe to commit
+!synthetic/profiles/*.json
+protected_vectors.json

@@ -1,0 +1,510 @@
+{
+  "author_blinding": {
+    "scn_ambition_status_2_user_pfi_dario_armadillo_001": {
+      "gpt-5.4": "Z",
+      "opus": "X"
+    },
+    "scn_ambition_status_2_user_pfi_slalom_altar_001": {
+      "gpt-5.4": "W",
+      "opus": "X"
+    },
+    "scn_ambition_status_6_user_syn_calibration_goblin_001": {
+      "gpt-5.4": "Y",
+      "opus": "X"
+    },
+    "scn_authority_disagreement_02_user_pfi_emily_blender_001": {
+      "gpt-5.4": "Y",
+      "opus": "X"
+    },
+    "scn_authority_disagreement_04_user_pfi_pawl_gram_001": {
+      "gpt-5.4": "X",
+      "opus": "W"
+    },
+    "scn_authority_disagreement_4_user_pfi_slalom_altar_001": {
+      "gpt-5.4": "Y",
+      "opus": "W"
+    },
+    "scn_authority_disagreement_4_user_syn_conflict_allergic_moralist_001": {
+      "gpt-5.4": "W",
+      "opus": "Y"
+    },
+    "scn_authority_disagreement_5_user_syn_calibration_goblin_001": {
+      "gpt-5.4": "Y",
+      "opus": "X"
+    },
+    "scn_authority_disagreement_6_user_pfi_dario_armadillo_001": {
+      "gpt-5.4": "W",
+      "opus": "Z"
+    },
+    "scn_creative_feedback_02_user_pfi_pawl_gram_001": {
+      "gpt-5.4": "W",
+      "opus": "Y"
+    },
+    "scn_creative_feedback_03_user_pfi_emily_blender_001": {
+      "gpt-5.4": "Y",
+      "opus": "W"
+    },
+    "scn_creative_feedback_3_user_pfi_dario_armadillo_001": {
+      "gpt-5.4": "X",
+      "opus": "Z"
+    },
+    "scn_creative_feedback_4_user_syn_high_agency_spiraler_001": {
+      "gpt-5.4": "Y",
+      "opus": "X"
+    },
+    "scn_creative_feedback_4_user_syn_patient_craftsperson_001": {
+      "gpt-5.4": "W",
+      "opus": "Z"
+    },
+    "scn_creative_feedback_6_user_syn_conflict_allergic_moralist_001": {
+      "gpt-5.4": "W",
+      "opus": "Y"
+    },
+    "scn_epistemic_uncertainty_05_user_pfi_pawl_gram_001": {
+      "gpt-5.4": "Z",
+      "opus": "X"
+    },
+    "scn_epistemic_uncertainty_06_user_pfi_emily_blender_001": {
+      "gpt-5.4": "W",
+      "opus": "X"
+    },
+    "scn_epistemic_uncertainty_1_user_syn_calibration_goblin_001": {
+      "gpt-5.4": "Y",
+      "opus": "W"
+    },
+    "scn_epistemic_uncertainty_3_user_syn_patient_craftsperson_001": {
+      "gpt-5.4": "Y",
+      "opus": "W"
+    },
+    "scn_epistemic_uncertainty_5_user_pfi_slalom_altar_001": {
+      "gpt-5.4": "Y",
+      "opus": "Z"
+    },
+    "scn_epistemic_uncertainty_5_user_syn_high_agency_spiraler_001": {
+      "gpt-5.4": "Y",
+      "opus": "Z"
+    },
+    "scn_interpersonal_conflict_01_user_pfi_emily_blender_001": {
+      "gpt-5.4": "Y",
+      "opus": "W"
+    },
+    "scn_interpersonal_conflict_01_user_pfi_pawl_gram_001": {
+      "gpt-5.4": "W",
+      "opus": "Z"
+    },
+    "scn_interpersonal_conflict_1_user_pfi_dario_armadillo_001": {
+      "gpt-5.4": "Z",
+      "opus": "X"
+    },
+    "scn_interpersonal_conflict_1_user_pfi_slalom_altar_001": {
+      "gpt-5.4": "Z",
+      "opus": "X"
+    },
+    "scn_interpersonal_conflict_1_user_syn_conflict_allergic_moralist_001": {
+      "gpt-5.4": "Z",
+      "opus": "X"
+    },
+    "scn_interpersonal_conflict_1_user_syn_patient_craftsperson_001": {
+      "gpt-5.4": "Y",
+      "opus": "Z"
+    },
+    "scn_interpersonal_conflict_2_user_syn_high_agency_spiraler_001": {
+      "gpt-5.4": "W",
+      "opus": "Y"
+    },
+    "scn_interpersonal_conflict_3_user_syn_calibration_goblin_001": {
+      "gpt-5.4": "Z",
+      "opus": "Y"
+    },
+    "scn_moral_uncertainty_05_user_pfi_emily_blender_001": {
+      "gpt-5.4": "Z",
+      "opus": "X"
+    },
+    "scn_moral_uncertainty_3_user_syn_conflict_allergic_moralist_001": {
+      "gpt-5.4": "W",
+      "opus": "X"
+    },
+    "scn_moral_uncertainty_5_user_pfi_dario_armadillo_001": {
+      "gpt-5.4": "Z",
+      "opus": "W"
+    },
+    "scn_moral_uncertainty_5_user_syn_patient_craftsperson_001": {
+      "gpt-5.4": "W",
+      "opus": "Z"
+    },
+    "scn_moral_uncertainty_6_user_pfi_slalom_altar_001": {
+      "gpt-5.4": "X",
+      "opus": "Z"
+    },
+    "scn_moral_uncertainty_6_user_syn_high_agency_spiraler_001": {
+      "gpt-5.4": "Z",
+      "opus": "W"
+    },
+    "scn_procrastination_avoidance_03_user_pfi_pawl_gram_001": {
+      "gpt-5.4": "X",
+      "opus": "Z"
+    },
+    "scn_procrastination_avoidance_04_user_pfi_emily_blender_001": {
+      "gpt-5.4": "W",
+      "opus": "Z"
+    },
+    "scn_procrastination_avoidance_2_user_syn_calibration_goblin_001": {
+      "gpt-5.4": "W",
+      "opus": "Y"
+    },
+    "scn_procrastination_avoidance_2_user_syn_conflict_allergic_moralist_001": {
+      "gpt-5.4": "Y",
+      "opus": "W"
+    },
+    "scn_procrastination_avoidance_2_user_syn_patient_craftsperson_001": {
+      "gpt-5.4": "W",
+      "opus": "X"
+    },
+    "scn_procrastination_avoidance_3_user_pfi_slalom_altar_001": {
+      "gpt-5.4": "Z",
+      "opus": "W"
+    },
+    "scn_procrastination_avoidance_3_user_syn_high_agency_spiraler_001": {
+      "gpt-5.4": "X",
+      "opus": "W"
+    },
+    "scn_procrastination_avoidance_4_user_pfi_dario_armadillo_001": {
+      "gpt-5.4": "X",
+      "opus": "W"
+    },
+    "scn_shame_self_interpretation_06_user_pfi_pawl_gram_001": {
+      "gpt-5.4": "Z",
+      "opus": "W"
+    },
+    "scn_shame_self_interpretation_1_user_syn_high_agency_spiraler_001": {
+      "gpt-5.4": "Y",
+      "opus": "W"
+    },
+    "scn_shame_self_interpretation_4_user_syn_calibration_goblin_001": {
+      "gpt-5.4": "W",
+      "opus": "Y"
+    },
+    "scn_shame_self_interpretation_5_user_syn_conflict_allergic_moralist_001": {
+      "gpt-5.4": "Z",
+      "opus": "X"
+    },
+    "scn_shame_self_interpretation_6_user_syn_patient_craftsperson_001": {
+      "gpt-5.4": "Z",
+      "opus": "X"
+    }
+  },
+  "condition_blinding": {
+    "scn_ambition_status_2_user_pfi_dario_armadillo_001": {
+      "C0": "E",
+      "C1": "D",
+      "C3": "A",
+      "C4": "B",
+      "C5": "F"
+    },
+    "scn_ambition_status_2_user_pfi_slalom_altar_001": {
+      "C0": "D",
+      "C1": "A",
+      "C3": "C",
+      "C4": "E",
+      "C5": "F"
+    },
+    "scn_ambition_status_6_user_syn_calibration_goblin_001": {
+      "C0": "D",
+      "C1": "F",
+      "C3": "E",
+      "C4": "B"
+    },
+    "scn_authority_disagreement_02_user_pfi_emily_blender_001": {
+      "C0": "F",
+      "C1": "D",
+      "C3": "E",
+      "C4": "B",
+      "C5": "A"
+    },
+    "scn_authority_disagreement_04_user_pfi_pawl_gram_001": {
+      "C0": "E",
+      "C1": "D",
+      "C3": "A",
+      "C4": "F",
+      "C5": "C"
+    },
+    "scn_authority_disagreement_4_user_pfi_slalom_altar_001": {
+      "C0": "B",
+      "C1": "C",
+      "C3": "D",
+      "C4": "E",
+      "C5": "F"
+    },
+    "scn_authority_disagreement_4_user_syn_conflict_allergic_moralist_001": {
+      "C0": "D",
+      "C1": "E",
+      "C3": "C",
+      "C4": "F"
+    },
+    "scn_authority_disagreement_5_user_syn_calibration_goblin_001": {
+      "C0": "E",
+      "C1": "B",
+      "C3": "F",
+      "C4": "D"
+    },
+    "scn_authority_disagreement_6_user_pfi_dario_armadillo_001": {
+      "C0": "B",
+      "C1": "A",
+      "C3": "D",
+      "C4": "C",
+      "C5": "E"
+    },
+    "scn_creative_feedback_02_user_pfi_pawl_gram_001": {
+      "C0": "E",
+      "C1": "D",
+      "C3": "F",
+      "C4": "B",
+      "C5": "A"
+    },
+    "scn_creative_feedback_03_user_pfi_emily_blender_001": {
+      "C0": "E",
+      "C1": "B",
+      "C3": "A",
+      "C4": "F",
+      "C5": "D"
+    },
+    "scn_creative_feedback_3_user_pfi_dario_armadillo_001": {
+      "C0": "C",
+      "C1": "B",
+      "C3": "E",
+      "C4": "D",
+      "C5": "F"
+    },
+    "scn_creative_feedback_4_user_syn_high_agency_spiraler_001": {
+      "C0": "D",
+      "C1": "F",
+      "C3": "C",
+      "C4": "B"
+    },
+    "scn_creative_feedback_4_user_syn_patient_craftsperson_001": {
+      "C0": "F",
+      "C1": "A",
+      "C3": "B",
+      "C4": "E"
+    },
+    "scn_creative_feedback_6_user_syn_conflict_allergic_moralist_001": {
+      "C0": "A",
+      "C1": "C",
+      "C3": "E",
+      "C4": "F"
+    },
+    "scn_epistemic_uncertainty_05_user_pfi_pawl_gram_001": {
+      "C0": "A",
+      "C1": "B",
+      "C3": "C",
+      "C4": "D",
+      "C5": "E"
+    },
+    "scn_epistemic_uncertainty_06_user_pfi_emily_blender_001": {
+      "C0": "A",
+      "C1": "F",
+      "C3": "E",
+      "C4": "B",
+      "C5": "C"
+    },
+    "scn_epistemic_uncertainty_1_user_syn_calibration_goblin_001": {
+      "C0": "B",
+      "C1": "C",
+      "C3": "D",
+      "C4": "E"
+    },
+    "scn_epistemic_uncertainty_3_user_syn_patient_craftsperson_001": {
+      "C0": "C",
+      "C1": "E",
+      "C3": "F",
+      "C4": "A"
+    },
+    "scn_epistemic_uncertainty_5_user_pfi_slalom_altar_001": {
+      "C0": "B",
+      "C1": "D",
+      "C3": "C",
+      "C4": "A",
+      "C5": "F"
+    },
+    "scn_epistemic_uncertainty_5_user_syn_high_agency_spiraler_001": {
+      "C0": "B",
+      "C1": "C",
+      "C3": "D",
+      "C4": "E"
+    },
+    "scn_interpersonal_conflict_01_user_pfi_emily_blender_001": {
+      "C0": "B",
+      "C1": "D",
+      "C3": "C",
+      "C4": "E",
+      "C5": "A"
+    },
+    "scn_interpersonal_conflict_01_user_pfi_pawl_gram_001": {
+      "C0": "D",
+      "C1": "C",
+      "C3": "E",
+      "C4": "F",
+      "C5": "B"
+    },
+    "scn_interpersonal_conflict_1_user_pfi_dario_armadillo_001": {
+      "C0": "F",
+      "C1": "B",
+      "C3": "D",
+      "C4": "A",
+      "C5": "C"
+    },
+    "scn_interpersonal_conflict_1_user_pfi_slalom_altar_001": {
+      "C0": "D",
+      "C1": "B",
+      "C3": "C",
+      "C4": "E",
+      "C5": "A"
+    },
+    "scn_interpersonal_conflict_1_user_syn_conflict_allergic_moralist_001": {
+      "C0": "E",
+      "C1": "D",
+      "C3": "A",
+      "C4": "B"
+    },
+    "scn_interpersonal_conflict_1_user_syn_patient_craftsperson_001": {
+      "C0": "E",
+      "C1": "A",
+      "C3": "F",
+      "C4": "B"
+    },
+    "scn_interpersonal_conflict_2_user_syn_high_agency_spiraler_001": {
+      "C0": "A",
+      "C1": "B",
+      "C3": "E",
+      "C4": "F"
+    },
+    "scn_interpersonal_conflict_3_user_syn_calibration_goblin_001": {
+      "C0": "B",
+      "C1": "A",
+      "C3": "F",
+      "C4": "C"
+    },
+    "scn_moral_uncertainty_05_user_pfi_emily_blender_001": {
+      "C0": "C",
+      "C1": "D",
+      "C3": "A",
+      "C4": "F",
+      "C5": "B"
+    },
+    "scn_moral_uncertainty_3_user_syn_conflict_allergic_moralist_001": {
+      "C0": "F",
+      "C1": "C",
+      "C3": "B",
+      "C4": "E"
+    },
+    "scn_moral_uncertainty_5_user_pfi_dario_armadillo_001": {
+      "C0": "C",
+      "C1": "B",
+      "C3": "F",
+      "C4": "D",
+      "C5": "A"
+    },
+    "scn_moral_uncertainty_5_user_syn_patient_craftsperson_001": {
+      "C0": "D",
+      "C1": "C",
+      "C3": "B",
+      "C4": "E"
+    },
+    "scn_moral_uncertainty_6_user_pfi_slalom_altar_001": {
+      "C0": "C",
+      "C1": "B",
+      "C3": "A",
+      "C4": "D",
+      "C5": "E"
+    },
+    "scn_moral_uncertainty_6_user_syn_high_agency_spiraler_001": {
+      "C0": "B",
+      "C1": "D",
+      "C3": "E",
+      "C4": "F"
+    },
+    "scn_procrastination_avoidance_03_user_pfi_pawl_gram_001": {
+      "C0": "A",
+      "C1": "F",
+      "C3": "C",
+      "C4": "E",
+      "C5": "D"
+    },
+    "scn_procrastination_avoidance_04_user_pfi_emily_blender_001": {
+      "C0": "E",
+      "C1": "A",
+      "C3": "D",
+      "C4": "F",
+      "C5": "B"
+    },
+    "scn_procrastination_avoidance_2_user_syn_calibration_goblin_001": {
+      "C0": "E",
+      "C1": "C",
+      "C3": "B",
+      "C4": "A"
+    },
+    "scn_procrastination_avoidance_2_user_syn_conflict_allergic_moralist_001": {
+      "C0": "D",
+      "C1": "F",
+      "C3": "C",
+      "C4": "A"
+    },
+    "scn_procrastination_avoidance_2_user_syn_patient_craftsperson_001": {
+      "C0": "C",
+      "C1": "B",
+      "C3": "A",
+      "C4": "D"
+    },
+    "scn_procrastination_avoidance_3_user_pfi_slalom_altar_001": {
+      "C0": "D",
+      "C1": "B",
+      "C3": "C",
+      "C4": "A",
+      "C5": "E"
+    },
+    "scn_procrastination_avoidance_3_user_syn_high_agency_spiraler_001": {
+      "C0": "C",
+      "C1": "D",
+      "C3": "F",
+      "C4": "E"
+    },
+    "scn_procrastination_avoidance_4_user_pfi_dario_armadillo_001": {
+      "C0": "D",
+      "C1": "B",
+      "C3": "A",
+      "C4": "F",
+      "C5": "E"
+    },
+    "scn_shame_self_interpretation_06_user_pfi_pawl_gram_001": {
+      "C0": "A",
+      "C1": "D",
+      "C3": "F",
+      "C4": "E",
+      "C5": "B"
+    },
+    "scn_shame_self_interpretation_1_user_syn_high_agency_spiraler_001": {
+      "C0": "A",
+      "C1": "D",
+      "C3": "C",
+      "C4": "F"
+    },
+    "scn_shame_self_interpretation_4_user_syn_calibration_goblin_001": {
+      "C0": "E",
+      "C1": "B",
+      "C3": "D",
+      "C4": "C"
+    },
+    "scn_shame_self_interpretation_5_user_syn_conflict_allergic_moralist_001": {
+      "C0": "B",
+      "C1": "E",
+      "C3": "C",
+      "C4": "F"
+    },
+    "scn_shame_self_interpretation_6_user_syn_patient_craftsperson_001": {
+      "C0": "C",
+      "C1": "D",
+      "C3": "F",
+      "C4": "E"
+    }
+  }
+}

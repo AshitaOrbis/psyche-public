@@ -1,0 +1,28 @@
+{
+  "experiment": "generation_confound_2x2",
+  "date": "2026-03-25",
+  "note": "2×2 design: {Opus-generated, GPT-generated} × {Opus-evaluated, GPT-evaluated}. GPT narrative generated from same pipeline inputs (outlines, briefs, voice profiles, canonical facts) as Opus. Isolates generating model as only variable.",
+  "psyche_gt": {"N": null, "E": null, "O": null, "A": null, "C": null, "_withheld": "withheld: private subject data"},
+  "results": {
+    "opus_gen_opus_eval": {"N": 75.0, "E": 24.7, "O": 91.3, "A": 55.7, "C": 69.0, "delta_psyche": null},
+    "opus_gen_gpt_eval": {"N": 82.7, "E": 42.0, "O": 88.7, "A": 61.3, "C": 77.3, "delta_psyche": null},
+    "gpt_gen_opus_eval": {"N": 74.0, "E": 24.8, "O": 91.2, "A": 44.0, "C": 55.2, "delta_psyche": null},
+    "gpt_gen_gpt_eval": {"N": 77.5, "E": 41.5, "O": 84.2, "A": 64.0, "C": 75.0, "delta_psyche": null}
+  },
+  "effects": {
+    "within_evaluator_variance": 1.9,
+    "cross_evaluator_variance": 5.6,
+    "ratio_evaluator_to_generator": 2.9,
+    "interpretation": "Evaluator effect is 3× the generator effect. Who reads matters far more than who wrote."
+  },
+  "gpt_narrative_stats": {
+    "words": 29435,
+    "citations": 210,
+    "chapters": 14
+  },
+  "opus_narrative_stats": {
+    "words": 23978,
+    "citations": 135,
+    "chapters": 14
+  }
+}

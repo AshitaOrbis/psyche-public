@@ -1,0 +1,83 @@
+{
+  "experiment": "followup_ablations",
+  "date": "2026-03-27",
+  "note": "E1-E6 follow-up experiments from cross-model analysis. E1 and E3 are the highest-impact findings.",
+
+  "e1_fullcontext_anchoring_ablation": {
+    "question": "Does the full-context 'brooding intellectual' pattern come from temporal anchoring or text volume?",
+    "conditions": {
+      "chunked_baseline": {"N": 53.1, "E": 30.0, "O": 87.8, "A": 38.3, "C": 39.6, "delta_psyche": null, "runs": 3},
+      "fullctx_ordered": {"N": 60.0, "E": 25.0, "O": 90.5, "A": 37.0, "C": 42.0, "delta_psyche": null, "runs": 2},
+      "fullctx_shuffled": {"N": 62.0, "E": 26.0, "O": 92.0, "A": 38.0, "C": 37.5, "delta_psyche": null, "runs": 2},
+      "first_quarter": {"N": 56.8, "E": 27.8, "O": 88.4, "A": 37.8, "C": 39.1, "delta_psyche": null, "runs": 3},
+      "last_quarter": {"N": 47.7, "E": 37.0, "O": 84.7, "A": 44.7, "C": 40.0, "delta_psyche": null, "runs": 1}
+    },
+    "verdict": "NOT temporal anchoring. Shuffled full-context reproduces the same polarization as ordered (N+8.9, E-4.0 vs ordered N+6.9, E-5.0). The mechanism is text volume, not recency/primacy.",
+    "secondary_finding": "First-quarter is closest to the chunked baseline (deltas against the private reference profile are withheld). Last-quarter shows higher E (37.0 vs 30.0). The biographical reading of that shift is withheld: it is an inference about a private individual's life, not a temporal-slicing result."
+  },
+
+  "e2_o_facet_falsification": {
+    "question": "Is O stability a ceiling artifact or genuine trait stability?",
+    "verdict": "PARTIALLY FALSIFIED. O domain stability is driven primarily by O5_Ideas at ceiling (range 7.5 across registers). O4_Actions varies 28.2 points. Domain-level compression is an aggregation artifact of one dominant facet, not uniform stability.",
+    "facet_ranges": {"O1_fantasy": 14.4, "O2_aesthetics": 15.4, "O3_feelings": 11.7, "O4_actions": 28.2, "O5_ideas": 7.5, "O6_values": 9.1}
+  },
+
+  "e3_narrative_2x2_replication": {
+    "question": "Do the A (-11.7) and C (-13.8) generator effects survive replication?",
+    "opus_eval_replicated": {
+      "opus_gen": {"N": 75.7, "E": 24.5, "O": 89.5, "A": 43.0, "C": 54.8, "runs": 2},
+      "gpt_gen": {"N": 75.1, "E": 24.6, "O": 90.2, "A": 45.1, "C": 56.3, "runs": 3}
+    },
+    "original_single_run": {
+      "opus_gen": {"A": 55.7, "C": 69.0},
+      "gpt_gen": {"A": 44.0, "C": 55.2}
+    },
+    "verdict": "GENERATOR EFFECTS ARE NOISE. Original A delta was -11.7, replicated is +2.1. Original C delta was -13.8, replicated is +1.5. The single-run Opus-gen scores (A=55.7, C=69.0) were outliers. Under replication, both generators produce nearly identical profiles when read by Opus.",
+    "gpt_eval_status": "running (6 runs in background)"
+  },
+
+  "e4_facet_analysis": {
+    "reference": "facet-analysis.json (same directory)",
+    "top_finding": "C2_Order drops 41.5 points in GPT-gen narrative (Opus-eval). But E3 replication suggests this may also be noise from a single-run outlier."
+  },
+
+  "e6_emotional_density": {
+    "correlation": 0.108,
+    "verdict": "NOT SUPPORTED. Emotional content intensity does not predict GPT E inflation."
+  },
+
+  "e5_debiased_prompt": {
+    "status": "COMPLETE",
+    "runs": 3,
+    "means": {"N": 53.3, "E": 29.0, "O": 86.7, "A": 39.3, "C": 39.3},
+    "verdict": "MITIGATED. Debiased prompt nearly eliminates full-context polarization. N shift reduced from +6.9 to +0.2, E from -5.0 to -1.0, O from +2.7 to -1.1, C from +2.4 to -0.3. All domains return to within ~1 pt of chunked baseline. The 'brooding intellectual' pattern is a prompt-addressable attentional anchoring effect.",
+    "note": "Prompt appended: 'weight mundane/neutral passages as heavily as emotionally intense passages. Do not anchor on the most salient or dramatic moments.'"
+  },
+
+  "e3_replicated_2x2": {
+    "note": "UPDATED with full replication (2-3 runs per cell, all 4 cells complete)",
+    "replicated_cells": {
+      "opus_gen_opus_eval": {"N": 75.7, "E": 24.5, "O": 89.5, "A": 43.0, "C": 54.8, "runs": 2, "delta_psyche": null},
+      "opus_gen_gpt_eval": {"N": 81.2, "E": 41.4, "O": 86.7, "A": 59.0, "C": 79.3, "runs": 3, "delta_psyche": null},
+      "gpt_gen_opus_eval": {"N": 75.1, "E": 24.6, "O": 90.2, "A": 45.1, "C": 56.3, "runs": 3, "delta_psyche": null},
+      "gpt_gen_gpt_eval": {"N": 78.9, "E": 39.7, "O": 85.9, "A": 62.3, "C": 74.1, "runs": 3, "delta_psyche": null}
+    },
+    "replicated_effects": {
+      "mean_generator_effect": 1.8,
+      "mean_evaluator_effect": 12.4,
+      "ratio": "6.8x (up from original 3x estimate)"
+    },
+    "original_outliers_identified": {
+      "opus_gen_opus_eval_A": "55.7 → 43.0 under replication (-12.7, original was outlier)",
+      "opus_gen_opus_eval_C": "69.0 → 54.8 under replication (-14.2, original was outlier)"
+    },
+    "verdict": "GENERATOR EFFECT CONFIRMED NEGLIGIBLE. Mean 1.8 pts (unchanged from original). EVALUATOR EFFECT MUCH LARGER THAN ORIGINALLY ESTIMATED: 12.4 pts (vs original 5.6). The original 3x ratio was depressed by single-run outliers in one cell; true ratio is ~7x."
+  },
+
+  "implications_for_existing_claims": {
+    "generation_confound_is_small": "CONFIRMED AND STRENGTHENED. Generator effect = 1.8 pts under replication, consistent across evaluators. The original 'large A/C generator effects' (11.7 and 13.8 pts) were single-run outliers that collapsed to <2 pts under replication.",
+    "evaluator_dominates_generator": "DRAMATICALLY STRENGTHENED. Ratio is 6.8x (not 3x). Evaluator effects of 12.4 pts mean vs generator effects of 1.8 pts. E (+16 pts) and A (+17 pts) are the largest evaluator-dependent domains.",
+    "full_context_anchoring": "CLARIFIED AND FIXABLE. The effect is about text volume, not temporal order (shuffling doesn't help). But a debiased prompt ('weight mundane passages equally') almost fully mitigates it, returning all domains to within ~1 pt of chunked baseline.",
+    "original_single_run_data_unreliable": "The Opus-gen/Opus-eval single run had A=55.7 and C=69.0 — both >12 pts above replicated means. Posts citing these specific numbers need correction."
+  }
+}

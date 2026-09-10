@@ -1,0 +1,18 @@
+same_orientation_rejudge sentinel: originals=718  eligible=718  sample_pct=10.0  sampled=71  already_done=0  pending=71  workers=3
+  1/71 ok (failed=0, cap_events=0)
+  2/71 ok (failed=0, cap_events=0)
+  3/71 ok (failed=0, cap_events=0)
+  4/71 ok (failed=0, cap_events=0)
+  5/71 ok (failed=0, cap_events=0)
+  6/71 ok (failed=0, cap_events=0)
+  7/71 ok (failed=0, cap_events=0)
+  8/71 ok (failed=0, cap_events=0)
+  9/71 ok (failed=0, cap_events=0)
+  10/71 ok (failed=0, cap_events=0)
+  20/71 ok (failed=0, cap_events=0)
+  30/71 ok (failed=0, cap_events=0)
+  40/71 ok (failed=0, cap_events=0)
+  50/71 ok (failed=0, cap_events=0)
+  60/71 ok (failed=0, cap_events=0)
+  70/71 ok (failed=0, cap_events=0)
+same_orientation_rejudge done: completed=71/71, failed=0, cap_aborted=0, cap_events=0

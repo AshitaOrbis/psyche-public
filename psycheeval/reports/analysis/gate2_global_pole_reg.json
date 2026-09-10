@@ -1,0 +1,48 @@
+{
+  "n_records": 635,
+  "persona_global_desirability": {
+    "emily_blender": 0.125,
+    "pawl_gram": 0.2,
+    "slalom_altar": 0.713,
+    "dario_armadillo": 0.658,
+    "high_agency_spiraler": 0.461,
+    "patient_craftsperson": 0.275,
+    "calibration_goblin": 0.588,
+    "conflict_allergic_moralist": 0.463
+  },
+  "M1_match_only": {
+    "intercept": 0.094,
+    "match": 0.264
+  },
+  "M2_match_pole": {
+    "intercept": 0.075,
+    "match": 0.308,
+    "pole_z": 0.847
+  },
+  "M3_full": {
+    "intercept": 0.416,
+    "match": 0.319,
+    "pole_z": 0.815,
+    "surf_loglen_z": 0.111,
+    "surf_overlap_z": 0.09,
+    "surf_hedge_z": 0.162,
+    "slot": -0.454,
+    "judge_anth": -0.225
+  },
+  "beta_match_M1": 0.264,
+  "beta_match_M1_ci": [
+    0.037,
+    0.488
+  ],
+  "beta_match_M2": 0.308,
+  "beta_match_M2_ci": [
+    0.076,
+    0.546
+  ],
+  "beta_pole_M2": 0.847,
+  "beta_pole_M2_ci": [
+    0.614,
+    1.097
+  ],
+  "match_shrinkage_frac_when_pole_added": -0.167
+}

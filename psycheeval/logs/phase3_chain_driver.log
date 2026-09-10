@@ -1,0 +1,8 @@
+[2026-05-06T07:39:06+00:00] phase3_opus_judging_pipeline starting
+[2026-05-06T07:39:06+00:00] waiting for Opus authoring pid=3538464
+[2026-05-06T13:41:06+00:00] Opus authoring pid=3538464 exited
+[2026-05-06T13:41:06+00:00] launching phase3.1 opus anchored scoring
+[2026-05-07T04:20:12+00:00] phase3.1 exit=0
+[2026-05-07T04:20:12+00:00] launching phase3.2 opus pairwise (restricted scope, same_author_only)
+[2026-05-07T07:07:32+00:00] phase3.2 exit=0
+[2026-05-07T07:07:32+00:00] phase3 opus chain finished (score_rc=0, pw_rc=0)

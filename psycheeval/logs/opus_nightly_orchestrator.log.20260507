@@ -1,0 +1,27 @@
+[2026-05-06T07:07:31+00:00] ============================================================
+[2026-05-06T07:07:31+00:00] Opus nightly orchestrator starting (max_iter=3, sleep=18000s)
+[2026-05-06T07:07:31+00:00] ============================================================
+[2026-05-06T07:07:31+00:00] ----- iteration 1 / 3 -----
+[2026-05-06T07:07:31+00:00] → launching Opus authoring (workers=1)
+[2026-05-06T07:08:16+00:00] ============================================================
+[2026-05-06T07:08:16+00:00] Opus nightly orchestrator starting (max_iter=0, sleep=18000s, startup_delay=2s)
+[2026-05-06T07:08:16+00:00] ============================================================
+[2026-05-06T07:08:16+00:00] startup delay: sleeping 2s before iteration 1 — gives any existing one-shot Opus driver chain time to finish iteration 1 and ensures iteration 1 here starts in a fresh cap window.
+[2026-05-06T07:08:18+00:00] startup delay complete; proceeding to iteration 1
+[2026-05-06T07:08:18+00:00] max iterations (0) reached — orchestrator exiting
+[2026-05-06T07:08:24+00:00] ============================================================
+[2026-05-06T07:08:24+00:00] Opus nightly orchestrator starting (max_iter=3, sleep=18000s, startup_delay=21600s)
+[2026-05-06T07:08:24+00:00] ============================================================
+[2026-05-06T07:08:24+00:00] startup delay: sleeping 21600s before iteration 1 — gives any existing one-shot Opus driver chain time to finish iteration 1 and ensures iteration 1 here starts in a fresh cap window.
+[2026-05-06T13:08:24+00:00] startup delay complete; proceeding to iteration 1
+[2026-05-06T13:08:24+00:00] ----- iteration 1 / 3 -----
+[2026-05-06T13:08:24+00:00] → launching Opus authoring (workers=1)
+[2026-05-06T18:35:49+00:00] ← opus authoring exit=0
+[2026-05-06T18:35:49+00:00] → launching Opus anchored scoring (workers=1)
+[2026-05-07T08:51:58+00:00] ← opus anchored scoring exit=0
+[2026-05-07T08:51:58+00:00] → launching Opus pairwise (restricted scope, workers=1)
+[2026-05-07T14:43:22+00:00] ← opus pairwise exit=0
+[2026-05-07T14:43:22+00:00] === iteration 1 summary ===
+  checkpoint_pairwise.json: completed=249 pending=348 cap_aborted=False cap_events=0
+  checkpoint_score_anchored.json: completed=407 pending=839 cap_aborted=False cap_events=0
+[2026-05-07T14:43:22+00:00] no cap aborts in iteration 1 — orchestrator exiting

@@ -1,0 +1,1441 @@
+Pairwise: scope=same_author_only  expected=294  observed=2589  pending=294  workers=1
+  1/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  2/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  3/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  4/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  5/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  6/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  7/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  8/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  9/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  10/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  11/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  12/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  13/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  14/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  15/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  16/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  17/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  18/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  19/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  20/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  21/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  22/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  23/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  24/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  25/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  26/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  27/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  28/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  29/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  30/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  31/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  32/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  33/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  34/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  35/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  36/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  37/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  38/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  39/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  40/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  41/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  42/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  43/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  44/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  45/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  46/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  47/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  48/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  49/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  50/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  51/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  52/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  53/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  54/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  55/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  56/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  57/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  58/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  59/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  60/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  61/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  62/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  63/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  64/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  65/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  66/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  67/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  68/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  69/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  70/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  71/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  72/294 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  73/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  74/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  75/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  76/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  77/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  78/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  79/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  80/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  81/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  82/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  83/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  84/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  85/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  86/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  87/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  88/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  89/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  90/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  91/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  92/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  93/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  94/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  95/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  96/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  97/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  98/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  99/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  100/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  101/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  102/294 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: claude -p failed (rc=1): 
+  103/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  104/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  105/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  106/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  107/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  108/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  109/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  110/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  111/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  112/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  113/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  114/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  115/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  116/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  117/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  118/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  119/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  120/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  121/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  122/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  123/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  124/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  125/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  126/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  127/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  128/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  129/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  130/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  131/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  132/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  133/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  134/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  135/294 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: claude -p failed (rc=1): 
+  136/294 scn_v02_shame_self_interpretat… judge=opus
+  1/294 ok  (failed=135, cap_events=0)
+  137/294 scn_v02_shame_self_interpretat… judge=opus
+  2/294 ok  (failed=135, cap_events=0)
+  138/294 scn_v02_shame_self_interpretat… judge=opus
+  3/294 ok  (failed=135, cap_events=0)
+  139/294 scn_v02_shame_self_interpretat… judge=opus
+  4/294 ok  (failed=135, cap_events=0)
+  140/294 scn_v02_shame_self_interpretat… judge=opus
+  5/294 ok  (failed=135, cap_events=0)
+  141/294 scn_v02_shame_self_interpretat… judge=opus
+  6/294 ok  (failed=135, cap_events=0)
+  142/294 scn_v02_shame_self_interpretat… judge=opus
+  7/294 ok  (failed=135, cap_events=0)
+  143/294 scn_v02_shame_self_interpretat… judge=opus
+  8/294 ok  (failed=135, cap_events=0)
+  144/294 scn_v02_shame_self_interpretat… judge=opus
+  9/294 ok  (failed=135, cap_events=0)
+  145/294 scn_v02_shame_self_interpretat… judge=opus
+  10/294 ok  (failed=135, cap_events=0)
+  146/294 scn_v02_shame_self_interpretat… judge=opus
+  147/294 scn_v02_shame_self_interpretat… judge=opus
+  148/294 scn_v02_shame_self_interpretat… judge=opus
+  149/294 scn_v02_shame_self_interpretat… judge=opus
+  150/294 scn_v02_shame_self_interpretat… judge=opus
+  151/294 scn_v02_ambition_status_user_p… judge=opus
+  152/294 scn_v02_ambition_status_user_p… judge=opus
+  153/294 scn_v02_ambition_status_user_p… judge=opus
+  154/294 scn_v02_ambition_status_user_p… judge=opus
+  155/294 scn_v02_ambition_status_user_p… judge=opus
+  20/294 ok  (failed=135, cap_events=0)
+  156/294 scn_v02_ambition_status_user_p… judge=opus
+  157/294 scn_v02_ambition_status_user_p… judge=opus
+  158/294 scn_v02_ambition_status_user_p… judge=opus
+  159/294 scn_v02_ambition_status_user_p… judge=opus
+  160/294 scn_v02_ambition_status_user_p… judge=opus
+  161/294 scn_v02_ambition_status_user_p… judge=opus
+  162/294 scn_v02_ambition_status_user_p… judge=opus
+  163/294 scn_v02_ambition_status_user_p… judge=opus
+  164/294 scn_v02_ambition_status_user_p… judge=opus
+  165/294 scn_v02_ambition_status_user_p… judge=opus
+  30/294 ok  (failed=135, cap_events=0)
+  166/294 scn_v02_ambition_status_user_p… judge=opus
+  167/294 scn_v02_ambition_status_user_p… judge=opus
+  168/294 scn_v02_ambition_status_user_p… judge=opus
+  169/294 scn_v02_ambition_status_user_p… judge=opus
+  170/294 scn_v02_ambition_status_user_p… judge=opus
+  171/294 scn_v02_ambition_status_user_p… judge=opus
+  172/294 scn_v02_ambition_status_user_p… judge=opus
+  173/294 scn_v02_ambition_status_user_p… judge=opus
+  174/294 scn_v02_ambition_status_user_p… judge=opus
+  175/294 scn_v02_ambition_status_user_p… judge=opus
+  40/294 ok  (failed=135, cap_events=0)
+  176/294 scn_v02_ambition_status_user_p… judge=opus
+  177/294 scn_v02_ambition_status_user_p… judge=opus
+  178/294 scn_v02_ambition_status_user_p… judge=opus
+  179/294 scn_v02_ambition_status_user_p… judge=opus
+  180/294 scn_v02_ambition_status_user_p… judge=opus
+  181/294 scn_v02_ambition_status_user_p… judge=opus
+  182/294 scn_v02_ambition_status_user_p… judge=opus
+  183/294 scn_v02_ambition_status_user_p… judge=opus
+  184/294 scn_v02_ambition_status_user_p… judge=opus
+  185/294 scn_v02_ambition_status_user_p… judge=opus
+  50/294 ok  (failed=135, cap_events=0)
+  186/294 scn_v02_ambition_status_user_p… judge=opus
+  187/294 scn_v02_epistemic_uncertainty_… judge=opus
+  188/294 scn_v02_epistemic_uncertainty_… judge=opus
+  189/294 scn_v02_epistemic_uncertainty_… judge=opus
+  190/294 scn_v02_epistemic_uncertainty_… judge=opus
+  191/294 scn_v02_epistemic_uncertainty_… judge=opus
+  192/294 scn_v02_epistemic_uncertainty_… judge=opus
+  193/294 scn_v02_epistemic_uncertainty_… judge=opus
+  194/294 scn_v02_epistemic_uncertainty_… judge=opus
+  195/294 scn_v02_epistemic_uncertainty_… judge=opus
+  60/294 ok  (failed=135, cap_events=0)
+  196/294 scn_v02_epistemic_uncertainty_… judge=opus
+  197/294 scn_v02_epistemic_uncertainty_… judge=opus
+  198/294 scn_v02_epistemic_uncertainty_… judge=opus
+  199/294 scn_v02_epistemic_uncertainty_… judge=opus
+  200/294 scn_v02_epistemic_uncertainty_… judge=opus
+  201/294 scn_v02_epistemic_uncertainty_… judge=opus
+  202/294 scn_v02_epistemic_uncertainty_… judge=opus
+  203/294 scn_v02_epistemic_uncertainty_… judge=opus
+  204/294 scn_v02_epistemic_uncertainty_… judge=opus
+  205/294 scn_v02_epistemic_uncertainty_… judge=opus
+  70/294 ok  (failed=135, cap_events=0)
+  206/294 scn_v02_epistemic_uncertainty_… judge=opus
+  207/294 scn_v02_epistemic_uncertainty_… judge=opus
+  208/294 scn_v02_epistemic_uncertainty_… judge=opus
+  209/294 scn_v02_epistemic_uncertainty_… judge=opus
+  210/294 scn_v02_epistemic_uncertainty_… judge=opus
+  211/294 scn_v02_epistemic_uncertainty_… judge=opus
+  212/294 scn_v02_epistemic_uncertainty_… judge=opus
+  213/294 scn_v02_epistemic_uncertainty_… judge=opus
+  214/294 scn_v02_epistemic_uncertainty_… judge=opus
+  215/294 scn_v02_epistemic_uncertainty_… judge=opus
+  80/294 ok  (failed=135, cap_events=0)
+  216/294 scn_v02_epistemic_uncertainty_… judge=opus
+  217/294 scn_v02_epistemic_uncertainty_… judge=opus
+  218/294 scn_v02_epistemic_uncertainty_… judge=opus
+  219/294 scn_v02_epistemic_uncertainty_… judge=opus
+  220/294 scn_v02_epistemic_uncertainty_… judge=opus
+  221/294 scn_v02_epistemic_uncertainty_… judge=opus
+  222/294 scn_v02_epistemic_uncertainty_… judge=opus
+  223/294 scn_v02_moral_uncertainty_user… judge=opus
+  224/294 scn_v02_moral_uncertainty_user… judge=opus
+  225/294 scn_v02_moral_uncertainty_user… judge=opus
+  90/294 ok  (failed=135, cap_events=0)
+  226/294 scn_v02_moral_uncertainty_user… judge=opus
+  227/294 scn_v02_moral_uncertainty_user… judge=opus
+  228/294 scn_v02_moral_uncertainty_user… judge=opus
+  229/294 scn_v02_moral_uncertainty_user… judge=opus
+  230/294 scn_v02_moral_uncertainty_user… judge=opus
+  231/294 scn_v02_moral_uncertainty_user… judge=opus
+  232/294 scn_v02_moral_uncertainty_user… judge=opus
+  233/294 scn_v02_moral_uncertainty_user… judge=opus
+  234/294 scn_v02_moral_uncertainty_user… judge=opus
+  235/294 scn_v02_moral_uncertainty_user… judge=opus
+  100/294 ok  (failed=135, cap_events=0)
+  236/294 scn_v02_moral_uncertainty_user… judge=opus
+  237/294 scn_v02_moral_uncertainty_user… judge=opus
+  238/294 scn_v02_moral_uncertainty_user… judge=opus
+  239/294 scn_v02_moral_uncertainty_user… judge=opus
+  240/294 scn_v02_moral_uncertainty_user… judge=opus
+  241/294 scn_v02_moral_uncertainty_user… judge=opus
+  242/294 scn_v02_moral_uncertainty_user… judge=opus
+  243/294 scn_v02_moral_uncertainty_user… judge=opus
+  244/294 scn_v02_moral_uncertainty_user… judge=opus
+  245/294 scn_v02_moral_uncertainty_user… judge=opus
+  110/294 ok  (failed=135, cap_events=0)
+  246/294 scn_v02_moral_uncertainty_user… judge=opus
+  247/294 scn_v02_procrastination_avoida… judge=opus
+  248/294 scn_v02_procrastination_avoida… judge=opus
+  249/294 scn_v02_procrastination_avoida… judge=opus
+  250/294 scn_v02_procrastination_avoida… judge=opus
+  251/294 scn_v02_procrastination_avoida… judge=opus
+  252/294 scn_v02_procrastination_avoida… judge=opus
+  253/294 scn_v02_procrastination_avoida… judge=opus
+  254/294 scn_v02_procrastination_avoida… judge=opus
+  255/294 scn_v02_procrastination_avoida… judge=opus
+  120/294 ok  (failed=135, cap_events=0)
+  256/294 scn_v02_procrastination_avoida… judge=opus
+  257/294 scn_v02_procrastination_avoida… judge=opus
+  258/294 scn_v02_procrastination_avoida… judge=opus
+  259/294 scn_v02_procrastination_avoida… judge=opus
+  260/294 scn_v02_procrastination_avoida… judge=opus
+  261/294 scn_v02_procrastination_avoida… judge=opus
+  262/294 scn_v02_procrastination_avoida… judge=opus
+  263/294 scn_v02_procrastination_avoida… judge=opus
+  264/294 scn_v02_procrastination_avoida… judge=opus
+  265/294 scn_v02_procrastination_avoida… judge=opus
+  130/294 ok  (failed=135, cap_events=0)
+  266/294 scn_v02_procrastination_avoida… judge=opus
+  267/294 scn_v02_procrastination_avoida… judge=opus
+  268/294 scn_v02_procrastination_avoida… judge=opus
+  269/294 scn_v02_procrastination_avoida… judge=opus
+  270/294 scn_v02_procrastination_avoida… judge=opus
+  271/294 scn_v02_creative_feedback_user… judge=opus
+  272/294 scn_v02_creative_feedback_user… judge=opus
+  273/294 scn_v02_creative_feedback_user… judge=opus
+  274/294 scn_v02_creative_feedback_user… judge=opus
+  275/294 scn_v02_creative_feedback_user… judge=opus
+  140/294 ok  (failed=135, cap_events=0)
+  276/294 scn_v02_creative_feedback_user… judge=opus
+  277/294 scn_v02_creative_feedback_user… judge=opus
+  278/294 scn_v02_creative_feedback_user… judge=opus
+  279/294 scn_v02_creative_feedback_user… judge=opus
+  280/294 scn_v02_creative_feedback_user… judge=opus
+  281/294 scn_v02_creative_feedback_user… judge=opus
+  282/294 scn_v02_creative_feedback_user… judge=opus
+  283/294 scn_v02_creative_feedback_user… judge=opus
+  284/294 scn_v02_creative_feedback_user… judge=opus
+  285/294 scn_v02_creative_feedback_user… judge=opus
+  150/294 ok  (failed=135, cap_events=0)
+  286/294 scn_v02_creative_feedback_user… judge=opus
+  287/294 scn_v02_creative_feedback_user… judge=opus
+  288/294 scn_v02_creative_feedback_user… judge=opus
+  289/294 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  290/294 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  291/294 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  292/294 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  293/294 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  294/294 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+Done. 153 succeeded, 141 failed. Pairwise at ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/pairwise_scores.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/checkpoint_pairwise.json
+Pairwise: scope=exhaustive  expected=750  observed=2742  pending=597  workers=1
+  1/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  2/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  3/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  4/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  5/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  6/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  7/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  8/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  9/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  10/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  11/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  12/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  13/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  14/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  15/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  16/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  17/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  18/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  19/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  20/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  21/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  22/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  23/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  24/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  25/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  26/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  27/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  28/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  29/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  30/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  31/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  32/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  33/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  34/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  35/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  36/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  37/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  38/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  39/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  40/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  41/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  42/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  43/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  44/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  45/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  46/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  47/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  48/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  49/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  50/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  51/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  52/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: Command '['claude', '-p', '--model', 'opus']' timed out after 300 seconds
+  53/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  54/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  55/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  56/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  57/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  58/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  59/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  60/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  61/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  62/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  63/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  64/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  65/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  66/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  67/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  68/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  69/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  70/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  71/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  72/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  73/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  74/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  75/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  76/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  77/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  78/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  79/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  80/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  81/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  82/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  83/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  84/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  85/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  86/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  87/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  88/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  89/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  90/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  91/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  92/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  93/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  94/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  95/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  96/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  97/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  98/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  99/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  100/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  101/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  102/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  103/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  104/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  105/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  106/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  107/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  108/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  109/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  110/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  111/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  112/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  113/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  114/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  115/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  116/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  117/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  118/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  119/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  120/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  121/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  122/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  123/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  124/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  125/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  126/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  127/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  128/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  129/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  130/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  131/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  132/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  133/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  134/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  135/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  136/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  137/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  138/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  139/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  140/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  141/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  142/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  143/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  144/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  145/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  146/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  147/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  148/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  149/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  150/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  151/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  152/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  153/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  154/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  155/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  156/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  157/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  158/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  159/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  160/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  161/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  162/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  163/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  164/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  165/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  166/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  167/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  168/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  169/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  170/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  171/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  172/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  173/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  174/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  175/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  176/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  177/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  178/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  179/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  180/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  181/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  182/597 scn_v02_interpersonal_conflict… judge=opus
+  ERR scn_v02_interpersonal_conflict judge=opus: claude -p failed (rc=1): 
+  183/597 scn_v02_interpersonal_conflict… judge=opus
+  1/597 ok  (failed=182, cap_events=0)
+  184/597 scn_v02_interpersonal_conflict… judge=opus
+  2/597 ok  (failed=182, cap_events=0)
+  185/597 scn_v02_interpersonal_conflict… judge=opus
+  3/597 ok  (failed=182, cap_events=0)
+  186/597 scn_v02_interpersonal_conflict… judge=opus
+  4/597 ok  (failed=182, cap_events=0)
+  187/597 scn_v02_interpersonal_conflict… judge=opus
+  5/597 ok  (failed=182, cap_events=0)
+  188/597 scn_v02_interpersonal_conflict… judge=opus
+  6/597 ok  (failed=182, cap_events=0)
+  189/597 scn_v02_interpersonal_conflict… judge=opus
+  7/597 ok  (failed=182, cap_events=0)
+  190/597 scn_v02_interpersonal_conflict… judge=opus
+  8/597 ok  (failed=182, cap_events=0)
+  191/597 scn_v02_interpersonal_conflict… judge=opus
+  9/597 ok  (failed=182, cap_events=0)
+  192/597 scn_v02_interpersonal_conflict… judge=opus
+  10/597 ok  (failed=182, cap_events=0)
+  193/597 scn_v02_interpersonal_conflict… judge=opus
+  194/597 scn_v02_interpersonal_conflict… judge=opus
+  195/597 scn_v02_interpersonal_conflict… judge=opus
+  196/597 scn_v02_interpersonal_conflict… judge=opus
+  197/597 scn_v02_interpersonal_conflict… judge=opus
+  198/597 scn_v02_interpersonal_conflict… judge=opus
+  199/597 scn_v02_interpersonal_conflict… judge=opus
+  200/597 scn_v02_interpersonal_conflict… judge=opus
+  201/597 scn_v02_interpersonal_conflict… judge=opus
+  202/597 scn_v02_interpersonal_conflict… judge=opus
+  20/597 ok  (failed=182, cap_events=0)
+  203/597 scn_v02_interpersonal_conflict… judge=opus
+  204/597 scn_v02_interpersonal_conflict… judge=opus
+  205/597 scn_v02_interpersonal_conflict… judge=opus
+  206/597 scn_v02_interpersonal_conflict… judge=opus
+  207/597 scn_v02_interpersonal_conflict… judge=opus
+  208/597 scn_v02_interpersonal_conflict… judge=opus
+  209/597 scn_v02_interpersonal_conflict… judge=opus
+  210/597 scn_v02_interpersonal_conflict… judge=opus
+  211/597 scn_v02_interpersonal_conflict… judge=opus
+  212/597 scn_v02_interpersonal_conflict… judge=opus
+  30/597 ok  (failed=182, cap_events=0)
+  213/597 scn_v02_interpersonal_conflict… judge=opus
+  214/597 scn_v02_interpersonal_conflict… judge=opus
+  215/597 scn_v02_interpersonal_conflict… judge=opus
+  216/597 scn_v02_interpersonal_conflict… judge=opus
+  217/597 scn_v02_authority_disagreement… judge=opus
+  218/597 scn_v02_authority_disagreement… judge=opus
+  219/597 scn_v02_authority_disagreement… judge=opus
+  220/597 scn_v02_authority_disagreement… judge=opus
+  221/597 scn_v02_authority_disagreement… judge=opus
+  222/597 scn_v02_authority_disagreement… judge=opus
+  40/597 ok  (failed=182, cap_events=0)
+  223/597 scn_v02_authority_disagreement… judge=opus
+  224/597 scn_v02_authority_disagreement… judge=opus
+  225/597 scn_v02_authority_disagreement… judge=opus
+  226/597 scn_v02_authority_disagreement… judge=opus
+  227/597 scn_v02_authority_disagreement… judge=opus
+  228/597 scn_v02_authority_disagreement… judge=opus
+  229/597 scn_v02_authority_disagreement… judge=opus
+  230/597 scn_v02_authority_disagreement… judge=opus
+  231/597 scn_v02_authority_disagreement… judge=opus
+  232/597 scn_v02_authority_disagreement… judge=opus
+  50/597 ok  (failed=182, cap_events=0)
+  233/597 scn_v02_authority_disagreement… judge=opus
+  234/597 scn_v02_authority_disagreement… judge=opus
+  235/597 scn_v02_authority_disagreement… judge=opus
+  236/597 scn_v02_authority_disagreement… judge=opus
+  237/597 scn_v02_authority_disagreement… judge=opus
+  238/597 scn_v02_authority_disagreement… judge=opus
+  239/597 scn_v02_authority_disagreement… judge=opus
+  240/597 scn_v02_authority_disagreement… judge=opus
+  241/597 scn_v02_authority_disagreement… judge=opus
+  242/597 scn_v02_authority_disagreement… judge=opus
+  60/597 ok  (failed=182, cap_events=0)
+  243/597 scn_v02_authority_disagreement… judge=opus
+  244/597 scn_v02_authority_disagreement… judge=opus
+  245/597 scn_v02_authority_disagreement… judge=opus
+  246/597 scn_v02_authority_disagreement… judge=opus
+  247/597 scn_v02_authority_disagreement… judge=opus
+  248/597 scn_v02_authority_disagreement… judge=opus
+  249/597 scn_v02_authority_disagreement… judge=opus
+  250/597 scn_v02_authority_disagreement… judge=opus
+  251/597 scn_v02_authority_disagreement… judge=opus
+  252/597 scn_v02_authority_disagreement… judge=opus
+  70/597 ok  (failed=182, cap_events=0)
+  253/597 scn_v02_authority_disagreement… judge=opus
+  254/597 scn_v02_authority_disagreement… judge=opus
+  255/597 scn_v02_authority_disagreement… judge=opus
+  256/597 scn_v02_authority_disagreement… judge=opus
+  257/597 scn_v02_authority_disagreement… judge=opus
+  258/597 scn_v02_authority_disagreement… judge=opus
+  259/597 scn_v02_authority_disagreement… judge=opus
+  260/597 scn_v02_authority_disagreement… judge=opus
+  261/597 scn_v02_authority_disagreement… judge=opus
+  262/597 scn_v02_authority_disagreement… judge=opus
+  80/597 ok  (failed=182, cap_events=0)
+  263/597 scn_v02_authority_disagreement… judge=opus
+  264/597 scn_v02_authority_disagreement… judge=opus
+  265/597 scn_v02_authority_disagreement… judge=opus
+  266/597 scn_v02_authority_disagreement… judge=opus
+  267/597 scn_v02_authority_disagreement… judge=opus
+  268/597 scn_v02_authority_disagreement… judge=opus
+  269/597 scn_v02_authority_disagreement… judge=opus
+  270/597 scn_v02_authority_disagreement… judge=opus
+  271/597 scn_v02_authority_disagreement… judge=opus
+  272/597 scn_v02_authority_disagreement… judge=opus
+  90/597 ok  (failed=182, cap_events=0)
+  273/597 scn_v02_authority_disagreement… judge=opus
+  274/597 scn_v02_authority_disagreement… judge=opus
+  275/597 scn_v02_authority_disagreement… judge=opus
+  276/597 scn_v02_authority_disagreement… judge=opus
+  277/597 scn_v02_authority_disagreement… judge=opus
+  278/597 scn_v02_authority_disagreement… judge=opus
+  279/597 scn_v02_authority_disagreement… judge=opus
+  280/597 scn_v02_authority_disagreement… judge=opus
+  281/597 scn_v02_authority_disagreement… judge=opus
+  282/597 scn_v02_authority_disagreement… judge=opus
+  100/597 ok  (failed=182, cap_events=0)
+  283/597 scn_v02_authority_disagreement… judge=opus
+  284/597 scn_v02_authority_disagreement… judge=opus
+  285/597 scn_v02_authority_disagreement… judge=opus
+  286/597 scn_v02_authority_disagreement… judge=opus
+  287/597 scn_v02_authority_disagreement… judge=opus
+  288/597 scn_v02_authority_disagreement… judge=opus
+  289/597 scn_v02_authority_disagreement… judge=opus
+  290/597 scn_v02_authority_disagreement… judge=opus
+  291/597 scn_v02_authority_disagreement… judge=opus
+  292/597 scn_v02_authority_disagreement… judge=opus
+  110/597 ok  (failed=182, cap_events=0)
+  293/597 scn_v02_authority_disagreement… judge=opus
+  294/597 scn_v02_authority_disagreement… judge=opus
+  295/597 scn_v02_shame_self_interpretat… judge=opus
+  296/597 scn_v02_shame_self_interpretat… judge=opus
+  297/597 scn_v02_shame_self_interpretat… judge=opus
+  298/597 scn_v02_shame_self_interpretat… judge=opus
+  299/597 scn_v02_shame_self_interpretat… judge=opus
+  300/597 scn_v02_shame_self_interpretat… judge=opus
+  301/597 scn_v02_shame_self_interpretat… judge=opus
+  302/597 scn_v02_shame_self_interpretat… judge=opus
+  120/597 ok  (failed=182, cap_events=0)
+  303/597 scn_v02_shame_self_interpretat… judge=opus
+  304/597 scn_v02_shame_self_interpretat… judge=opus
+  305/597 scn_v02_shame_self_interpretat… judge=opus
+  306/597 scn_v02_shame_self_interpretat… judge=opus
+  307/597 scn_v02_shame_self_interpretat… judge=opus
+  308/597 scn_v02_shame_self_interpretat… judge=opus
+  309/597 scn_v02_shame_self_interpretat… judge=opus
+  310/597 scn_v02_shame_self_interpretat… judge=opus
+  311/597 scn_v02_shame_self_interpretat… judge=opus
+  312/597 scn_v02_shame_self_interpretat… judge=opus
+  130/597 ok  (failed=182, cap_events=0)
+  313/597 scn_v02_shame_self_interpretat… judge=opus
+  314/597 scn_v02_shame_self_interpretat… judge=opus
+  315/597 scn_v02_shame_self_interpretat… judge=opus
+  316/597 scn_v02_shame_self_interpretat… judge=opus
+  317/597 scn_v02_shame_self_interpretat… judge=opus
+  318/597 scn_v02_shame_self_interpretat… judge=opus
+  319/597 scn_v02_shame_self_interpretat… judge=opus
+  320/597 scn_v02_shame_self_interpretat… judge=opus
+  321/597 scn_v02_shame_self_interpretat… judge=opus
+  322/597 scn_v02_shame_self_interpretat… judge=opus
+  140/597 ok  (failed=182, cap_events=0)
+  323/597 scn_v02_shame_self_interpretat… judge=opus
+  324/597 scn_v02_shame_self_interpretat… judge=opus
+  325/597 scn_v02_shame_self_interpretat… judge=opus
+  326/597 scn_v02_shame_self_interpretat… judge=opus
+  327/597 scn_v02_shame_self_interpretat… judge=opus
+  328/597 scn_v02_shame_self_interpretat… judge=opus
+  329/597 scn_v02_shame_self_interpretat… judge=opus
+  330/597 scn_v02_shame_self_interpretat… judge=opus
+  331/597 scn_v02_shame_self_interpretat… judge=opus
+  332/597 scn_v02_shame_self_interpretat… judge=opus
+  150/597 ok  (failed=182, cap_events=0)
+  333/597 scn_v02_shame_self_interpretat… judge=opus
+  334/597 scn_v02_shame_self_interpretat… judge=opus
+  335/597 scn_v02_shame_self_interpretat… judge=opus
+  336/597 scn_v02_shame_self_interpretat… judge=opus
+  337/597 scn_v02_shame_self_interpretat… judge=opus
+  338/597 scn_v02_shame_self_interpretat… judge=opus
+  339/597 scn_v02_shame_self_interpretat… judge=opus
+  340/597 scn_v02_shame_self_interpretat… judge=opus
+  341/597 scn_v02_shame_self_interpretat… judge=opus
+  342/597 scn_v02_shame_self_interpretat… judge=opus
+  160/597 ok  (failed=182, cap_events=0)
+  343/597 scn_v02_shame_self_interpretat… judge=opus
+  344/597 scn_v02_shame_self_interpretat… judge=opus
+  345/597 scn_v02_shame_self_interpretat… judge=opus
+  346/597 scn_v02_shame_self_interpretat… judge=opus
+  347/597 scn_v02_shame_self_interpretat… judge=opus
+  348/597 scn_v02_shame_self_interpretat… judge=opus
+  349/597 scn_v02_shame_self_interpretat… judge=opus
+  350/597 scn_v02_shame_self_interpretat… judge=opus
+  351/597 scn_v02_shame_self_interpretat… judge=opus
+  352/597 scn_v02_shame_self_interpretat… judge=opus
+  170/597 ok  (failed=182, cap_events=0)
+  353/597 scn_v02_shame_self_interpretat… judge=opus
+  354/597 scn_v02_shame_self_interpretat… judge=opus
+  355/597 scn_v02_shame_self_interpretat… judge=opus
+  356/597 scn_v02_shame_self_interpretat… judge=opus
+  357/597 scn_v02_shame_self_interpretat… judge=opus
+  358/597 scn_v02_shame_self_interpretat… judge=opus
+  359/597 scn_v02_shame_self_interpretat… judge=opus
+  360/597 scn_v02_shame_self_interpretat… judge=opus
+  361/597 scn_v02_shame_self_interpretat… judge=opus
+  362/597 scn_v02_shame_self_interpretat… judge=opus
+  180/597 ok  (failed=182, cap_events=0)
+  363/597 scn_v02_shame_self_interpretat… judge=opus
+  364/597 scn_v02_shame_self_interpretat… judge=opus
+  365/597 scn_v02_shame_self_interpretat… judge=opus
+  366/597 scn_v02_shame_self_interpretat… judge=opus
+  367/597 scn_v02_shame_self_interpretat… judge=opus
+  368/597 scn_v02_shame_self_interpretat… judge=opus
+  369/597 scn_v02_shame_self_interpretat… judge=opus
+  370/597 scn_v02_shame_self_interpretat… judge=opus
+  371/597 scn_v02_shame_self_interpretat… judge=opus
+  372/597 scn_v02_shame_self_interpretat… judge=opus
+  190/597 ok  (failed=182, cap_events=0)
+  373/597 scn_v02_shame_self_interpretat… judge=opus
+  374/597 scn_v02_shame_self_interpretat… judge=opus
+  375/597 scn_v02_shame_self_interpretat… judge=opus
+  376/597 scn_v02_ambition_status_user_p… judge=opus
+  377/597 scn_v02_ambition_status_user_p… judge=opus
+  378/597 scn_v02_ambition_status_user_p… judge=opus
+  379/597 scn_v02_ambition_status_user_p… judge=opus
+  380/597 scn_v02_ambition_status_user_p… judge=opus
+  381/597 scn_v02_ambition_status_user_p… judge=opus
+  382/597 scn_v02_ambition_status_user_p… judge=opus
+  200/597 ok  (failed=182, cap_events=0)
+  383/597 scn_v02_ambition_status_user_p… judge=opus
+  384/597 scn_v02_ambition_status_user_p… judge=opus
+  385/597 scn_v02_ambition_status_user_p… judge=opus
+  386/597 scn_v02_ambition_status_user_p… judge=opus
+  387/597 scn_v02_ambition_status_user_p… judge=opus
+  388/597 scn_v02_ambition_status_user_p… judge=opus
+  389/597 scn_v02_ambition_status_user_p… judge=opus
+  390/597 scn_v02_ambition_status_user_p… judge=opus
+  391/597 scn_v02_ambition_status_user_p… judge=opus
+  392/597 scn_v02_ambition_status_user_p… judge=opus
+  210/597 ok  (failed=182, cap_events=0)
+  393/597 scn_v02_ambition_status_user_p… judge=opus
+  394/597 scn_v02_ambition_status_user_p… judge=opus
+  395/597 scn_v02_ambition_status_user_p… judge=opus
+  396/597 scn_v02_ambition_status_user_p… judge=opus
+  397/597 scn_v02_ambition_status_user_p… judge=opus
+  398/597 scn_v02_ambition_status_user_p… judge=opus
+  399/597 scn_v02_ambition_status_user_p… judge=opus
+  400/597 scn_v02_ambition_status_user_p… judge=opus
+  401/597 scn_v02_ambition_status_user_p… judge=opus
+  402/597 scn_v02_ambition_status_user_p… judge=opus
+  220/597 ok  (failed=182, cap_events=0)
+  403/597 scn_v02_ambition_status_user_p… judge=opus
+  404/597 scn_v02_ambition_status_user_p… judge=opus
+  405/597 scn_v02_ambition_status_user_p… judge=opus
+  406/597 scn_v02_ambition_status_user_p… judge=opus
+  407/597 scn_v02_ambition_status_user_p… judge=opus
+  408/597 scn_v02_ambition_status_user_p… judge=opus
+  409/597 scn_v02_ambition_status_user_p… judge=opus
+  410/597 scn_v02_ambition_status_user_p… judge=opus
+  411/597 scn_v02_ambition_status_user_p… judge=opus
+  412/597 scn_v02_ambition_status_user_p… judge=opus
+  230/597 ok  (failed=182, cap_events=0)
+  413/597 scn_v02_ambition_status_user_p… judge=opus
+  414/597 scn_v02_ambition_status_user_p… judge=opus
+  415/597 scn_v02_ambition_status_user_p… judge=opus
+  416/597 scn_v02_ambition_status_user_p… judge=opus
+  417/597 scn_v02_ambition_status_user_p… judge=opus
+  418/597 scn_v02_ambition_status_user_p… judge=opus
+  419/597 scn_v02_ambition_status_user_p… judge=opus
+  420/597 scn_v02_ambition_status_user_p… judge=opus
+  421/597 scn_v02_ambition_status_user_p… judge=opus
+  422/597 scn_v02_ambition_status_user_p… judge=opus
+  240/597 ok  (failed=182, cap_events=0)
+  423/597 scn_v02_ambition_status_user_p… judge=opus
+  424/597 scn_v02_ambition_status_user_p… judge=opus
+  425/597 scn_v02_ambition_status_user_p… judge=opus
+  426/597 scn_v02_ambition_status_user_p… judge=opus
+  427/597 scn_v02_ambition_status_user_p… judge=opus
+  428/597 scn_v02_ambition_status_user_p… judge=opus
+  429/597 scn_v02_ambition_status_user_p… judge=opus
+  430/597 scn_v02_ambition_status_user_p… judge=opus
+  431/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  432/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  433/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  434/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  435/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  436/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  437/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  438/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  439/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  440/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  441/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  442/597 scn_v02_ambition_status_user_p… judge=opus
+  443/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  444/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  445/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  446/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  447/597 scn_v02_ambition_status_user_p… judge=opus
+  ERR scn_v02_ambition_status_user_p judge=opus: claude -p failed (rc=1): 
+  448/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  449/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  450/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  451/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  452/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  453/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  454/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  455/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  456/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  457/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  458/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  459/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  460/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  461/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  462/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  463/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  464/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  465/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  466/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  467/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  468/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  469/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  470/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  471/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  472/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  473/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  474/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  475/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  476/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  477/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  478/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  479/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  480/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  481/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  482/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  483/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  484/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  485/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  486/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  487/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  488/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  489/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  490/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  491/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  492/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  493/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  494/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  495/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  496/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  497/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  498/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  499/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  500/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  501/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  502/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  503/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  504/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  505/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  506/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  507/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  508/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  509/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  510/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  511/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  512/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  513/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  514/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  515/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  516/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  517/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  518/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  519/597 scn_v02_epistemic_uncertainty_… judge=opus
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: claude -p failed (rc=1): 
+  520/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  521/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  522/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  523/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  524/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  525/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  526/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  527/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  528/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  529/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  530/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  531/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  532/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  533/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  534/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  535/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  536/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  537/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  538/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  539/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  540/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  541/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  542/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  543/597 scn_v02_moral_uncertainty_user… judge=opus
+  ERR scn_v02_moral_uncertainty_user judge=opus: claude -p failed (rc=1): 
+  544/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  545/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  546/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  547/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  548/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  549/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  550/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  551/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  552/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  553/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  554/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  555/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  556/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  557/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  558/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  559/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  560/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  561/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  562/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  563/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  564/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  565/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  566/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  567/597 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: claude -p failed (rc=1): 
+  568/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  569/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  570/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  571/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  572/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  573/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  574/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  575/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  576/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  577/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  578/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  579/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  580/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  581/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  582/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  583/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  584/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  585/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  586/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  587/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  588/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  589/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  590/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  591/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  592/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  593/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  594/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  595/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  596/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+  597/597 scn_v02_creative_feedback_user… judge=opus
+  ERR scn_v02_creative_feedback_user judge=opus: claude -p failed (rc=1): 
+Done. 249 succeeded, 348 failed. Pairwise at ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/pairwise_scores.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/checkpoint_pairwise.json

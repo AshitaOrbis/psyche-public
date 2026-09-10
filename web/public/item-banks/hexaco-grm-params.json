@@ -1,0 +1,5402 @@
+[
+  {
+    "id": "CAT-HH1-001",
+    "text": "[Sincerity item 1]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.2211,
+    "thresholds": [
+      -0.3981,
+      -0.008,
+      0.292,
+      0.7525
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-002",
+    "text": "[Sincerity item 2]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.425,
+    "thresholds": [
+      -0.5484,
+      -0.2484,
+      0.5308,
+      0.8308
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-003",
+    "text": "[Sincerity item 3]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": true,
+    "discrimination": 1.7488,
+    "thresholds": [
+      -0.8431,
+      -0.5431,
+      0.298,
+      1.2099
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-004",
+    "text": "[Sincerity item 4]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.1347,
+    "thresholds": [
+      -1.8159,
+      -0.0872,
+      0.5339,
+      0.8339
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-005",
+    "text": "[Sincerity item 5]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.1207,
+    "thresholds": [
+      -1.0143,
+      -0.2178,
+      0.6332,
+      2.3774
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-006",
+    "text": "[Sincerity item 6]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": true,
+    "discrimination": 1.7687,
+    "thresholds": [
+      -1.3077,
+      -0.3968,
+      0.074,
+      1.489
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-007",
+    "text": "[Sincerity item 7]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.0424,
+    "thresholds": [
+      -1.3107,
+      -0.3846,
+      0.3064,
+      1.2935
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-008",
+    "text": "[Sincerity item 8]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.3639,
+    "thresholds": [
+      -1.1493,
+      -0.8493,
+      -0.5493,
+      -0.2493
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-009",
+    "text": "[Sincerity item 9]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": true,
+    "discrimination": 1.753,
+    "thresholds": [
+      -1.5245,
+      -0.7686,
+      0.313,
+      0.613
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-010",
+    "text": "[Sincerity item 10]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.4928,
+    "thresholds": [
+      -1.6174,
+      -0.9897,
+      0.6356,
+      0.9356
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-011",
+    "text": "[Sincerity item 11]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.4333,
+    "thresholds": [
+      -1.7223,
+      -0.3823,
+      0.0735,
+      1.4644
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-012",
+    "text": "[Sincerity item 12]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": true,
+    "discrimination": 0.874,
+    "thresholds": [
+      -0.9652,
+      -0.0667,
+      0.6938,
+      1.1404
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-013",
+    "text": "[Sincerity item 13]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.7204,
+    "thresholds": [
+      -1.1695,
+      -0.8695,
+      -0.4486,
+      0.2389
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-014",
+    "text": "[Sincerity item 14]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": false,
+    "discrimination": 1.6955,
+    "thresholds": [
+      -1.3877,
+      -0.3277,
+      0.8712,
+      1.4735
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH1-015",
+    "text": "[Sincerity item 15]",
+    "dimensionId": "HH1",
+    "dimensionName": "Sincerity",
+    "reverse": true,
+    "discrimination": 1.4576,
+    "thresholds": [
+      -0.8846,
+      0.7878,
+      1.1402,
+      2.757
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-001",
+    "text": "[Fairness item 1]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 1.4775,
+    "thresholds": [
+      -1.35,
+      -0.2268,
+      0.9858,
+      1.2858
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-002",
+    "text": "[Fairness item 2]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 0.8105,
+    "thresholds": [
+      -1.3089,
+      -0.1553,
+      0.1447,
+      1.1938
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-003",
+    "text": "[Fairness item 3]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": true,
+    "discrimination": 1.3752,
+    "thresholds": [
+      -1.3197,
+      -0.9389,
+      0.1865,
+      0.4865
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-004",
+    "text": "[Fairness item 4]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 1.3005,
+    "thresholds": [
+      -0.1253,
+      0.1845,
+      0.6333,
+      0.9333
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-005",
+    "text": "[Fairness item 5]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 1.7617,
+    "thresholds": [
+      0.5441,
+      0.8441,
+      1.5838,
+      1.8838
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-006",
+    "text": "[Fairness item 6]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": true,
+    "discrimination": 1.2553,
+    "thresholds": [
+      -1.0618,
+      0.1602,
+      0.4602,
+      1.1066
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-007",
+    "text": "[Fairness item 7]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 1.4968,
+    "thresholds": [
+      -0.4596,
+      -0.1596,
+      0.1826,
+      0.7671
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-008",
+    "text": "[Fairness item 8]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 1.6492,
+    "thresholds": [
+      -1.2051,
+      -0.8993,
+      1.4728,
+      2.4675
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-009",
+    "text": "[Fairness item 9]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": true,
+    "discrimination": 1.0439,
+    "thresholds": [
+      -2.3461,
+      -0.9263,
+      0.27,
+      0.57
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-010",
+    "text": "[Fairness item 10]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 1.0319,
+    "thresholds": [
+      -0.8217,
+      -0.5217,
+      -0.2217,
+      0.3588
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-011",
+    "text": "[Fairness item 11]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 0.8292,
+    "thresholds": [
+      -0.8304,
+      -0.5304,
+      -0.2304,
+      0.0696
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-012",
+    "text": "[Fairness item 12]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": true,
+    "discrimination": 1.5047,
+    "thresholds": [
+      -0.3353,
+      0.1297,
+      0.4582,
+      1.6067
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-013",
+    "text": "[Fairness item 13]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 0.9018,
+    "thresholds": [
+      -0.5082,
+      -0.2082,
+      0.4462,
+      0.9824
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-014",
+    "text": "[Fairness item 14]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": false,
+    "discrimination": 1.0624,
+    "thresholds": [
+      -1.0339,
+      -0.7339,
+      -0.4339,
+      0.7963
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH2-015",
+    "text": "[Fairness item 15]",
+    "dimensionId": "HH2",
+    "dimensionName": "Fairness",
+    "reverse": true,
+    "discrimination": 1.4113,
+    "thresholds": [
+      -1.1439,
+      -0.79,
+      -0.4807,
+      0.7828
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-001",
+    "text": "[Greed-Avoidance item 1]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 1.6137,
+    "thresholds": [
+      -0.8084,
+      -0.3166,
+      -0.0166,
+      0.2834
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-002",
+    "text": "[Greed-Avoidance item 2]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 0.9339,
+    "thresholds": [
+      0.576,
+      0.876,
+      1.176,
+      1.476
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-003",
+    "text": "[Greed-Avoidance item 3]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": true,
+    "discrimination": 1.3108,
+    "thresholds": [
+      -0.4774,
+      -0.1774,
+      0.2677,
+      0.5677
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-004",
+    "text": "[Greed-Avoidance item 4]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 1.4355,
+    "thresholds": [
+      -1.3497,
+      -0.501,
+      -0.0008,
+      1.2724
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-005",
+    "text": "[Greed-Avoidance item 5]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 1.2896,
+    "thresholds": [
+      -0.3164,
+      0.1006,
+      0.5528,
+      0.8528
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-006",
+    "text": "[Greed-Avoidance item 6]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": true,
+    "discrimination": 1.159,
+    "thresholds": [
+      -2.3633,
+      0.0326,
+      0.5409,
+      1.0265
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-007",
+    "text": "[Greed-Avoidance item 7]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 1.3054,
+    "thresholds": [
+      -1.6514,
+      -1.3514,
+      0.048,
+      0.9678
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-008",
+    "text": "[Greed-Avoidance item 8]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 1.2887,
+    "thresholds": [
+      -0.8292,
+      0.0577,
+      0.3577,
+      0.6577
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-009",
+    "text": "[Greed-Avoidance item 9]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": true,
+    "discrimination": 1.0749,
+    "thresholds": [
+      -1.5884,
+      -0.5901,
+      -0.1421,
+      0.4365
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-010",
+    "text": "[Greed-Avoidance item 10]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 1.5659,
+    "thresholds": [
+      -0.4665,
+      -0.1507,
+      1.136,
+      1.436
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-011",
+    "text": "[Greed-Avoidance item 11]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 1.6233,
+    "thresholds": [
+      -1.2461,
+      0.4118,
+      1.3806,
+      1.6806
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-012",
+    "text": "[Greed-Avoidance item 12]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": true,
+    "discrimination": 1.3464,
+    "thresholds": [
+      -1.4616,
+      -0.0298,
+      0.4639,
+      0.8044
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-013",
+    "text": "[Greed-Avoidance item 13]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 1.0977,
+    "thresholds": [
+      -1.0694,
+      -0.0047,
+      1.093,
+      1.5
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-014",
+    "text": "[Greed-Avoidance item 14]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": false,
+    "discrimination": 1.2391,
+    "thresholds": [
+      -0.0656,
+      0.2344,
+      1.7276,
+      2.0276
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH3-015",
+    "text": "[Greed-Avoidance item 15]",
+    "dimensionId": "HH3",
+    "dimensionName": "Greed-Avoidance",
+    "reverse": true,
+    "discrimination": 1.3879,
+    "thresholds": [
+      -0.9309,
+      -0.4463,
+      -0.1463,
+      1.2706
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-001",
+    "text": "[Modesty item 1]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 0.9392,
+    "thresholds": [
+      0.1833,
+      0.4833,
+      0.7833,
+      1.0833
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-002",
+    "text": "[Modesty item 2]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 1.0811,
+    "thresholds": [
+      -0.8583,
+      -0.5583,
+      -0.2353,
+      0.0647
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-003",
+    "text": "[Modesty item 3]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": true,
+    "discrimination": 1.0673,
+    "thresholds": [
+      -2.2648,
+      -0.4039,
+      -0.1039,
+      1.8266
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-004",
+    "text": "[Modesty item 4]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 1.7628,
+    "thresholds": [
+      -2.1846,
+      -0.0948,
+      0.4983,
+      2.0066
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-005",
+    "text": "[Modesty item 5]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 0.9269,
+    "thresholds": [
+      -1.8228,
+      -0.5651,
+      -0.2651,
+      0.5051
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-006",
+    "text": "[Modesty item 6]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": true,
+    "discrimination": 1.5615,
+    "thresholds": [
+      -1.0372,
+      -0.6994,
+      -0.3994,
+      -0.0994
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-007",
+    "text": "[Modesty item 7]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 1.2142,
+    "thresholds": [
+      -1.3531,
+      -0.3024,
+      0.3225,
+      0.6225
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-008",
+    "text": "[Modesty item 8]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 1.3156,
+    "thresholds": [
+      -1.6666,
+      -0.4141,
+      1.7956,
+      2.3102
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-009",
+    "text": "[Modesty item 9]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": true,
+    "discrimination": 1.1273,
+    "thresholds": [
+      -1.6108,
+      -0.1755,
+      0.1245,
+      1.7248
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-010",
+    "text": "[Modesty item 10]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 1.2584,
+    "thresholds": [
+      -0.8081,
+      -0.4838,
+      0.4791,
+      1.1399
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-011",
+    "text": "[Modesty item 11]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 1.0178,
+    "thresholds": [
+      -0.6237,
+      -0.2182,
+      0.2952,
+      1.8647
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-012",
+    "text": "[Modesty item 12]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": true,
+    "discrimination": 1.1378,
+    "thresholds": [
+      -1.1405,
+      -0.8405,
+      -0.5405,
+      0.0844
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-013",
+    "text": "[Modesty item 13]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 1.4826,
+    "thresholds": [
+      -1.0844,
+      0.1372,
+      0.4372,
+      0.7372
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-014",
+    "text": "[Modesty item 14]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": false,
+    "discrimination": 0.9242,
+    "thresholds": [
+      -0.8414,
+      0.0107,
+      0.6754,
+      2.5182
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-HH4-015",
+    "text": "[Modesty item 15]",
+    "dimensionId": "HH4",
+    "dimensionName": "Modesty",
+    "reverse": true,
+    "discrimination": 1.0023,
+    "thresholds": [
+      -0.4928,
+      -0.1928,
+      0.1072,
+      0.4072
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-001",
+    "text": "[Fearfulness item 1]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 1.7327,
+    "thresholds": [
+      -0.2192,
+      0.0808,
+      0.9643,
+      1.4415
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-002",
+    "text": "[Fearfulness item 2]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 1.7038,
+    "thresholds": [
+      -0.5299,
+      0.5086,
+      0.8665,
+      1.4572
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-003",
+    "text": "[Fearfulness item 3]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": true,
+    "discrimination": 1.0341,
+    "thresholds": [
+      -1.2927,
+      -0.8728,
+      0.0078,
+      1.1382
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-004",
+    "text": "[Fearfulness item 4]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 0.9327,
+    "thresholds": [
+      0.0899,
+      0.3899,
+      1.4927,
+      1.7927
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-005",
+    "text": "[Fearfulness item 5]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 1.6171,
+    "thresholds": [
+      -0.0779,
+      0.2585,
+      0.5585,
+      1.0447
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-006",
+    "text": "[Fearfulness item 6]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": true,
+    "discrimination": 1.1831,
+    "thresholds": [
+      -0.7998,
+      -0.4615,
+      -0.0561,
+      1.902
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-007",
+    "text": "[Fearfulness item 7]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 0.9371,
+    "thresholds": [
+      -1.6546,
+      0.2457,
+      2.1088,
+      2.4088
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-008",
+    "text": "[Fearfulness item 8]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 0.9429,
+    "thresholds": [
+      -0.8714,
+      -0.5714,
+      -0.1281,
+      0.1719
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-009",
+    "text": "[Fearfulness item 9]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": true,
+    "discrimination": 1.5224,
+    "thresholds": [
+      -1.2948,
+      -0.4129,
+      -0.1129,
+      0.8023
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-010",
+    "text": "[Fearfulness item 10]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 1.66,
+    "thresholds": [
+      -1.3344,
+      0.0205,
+      0.3205,
+      0.6205
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-011",
+    "text": "[Fearfulness item 11]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 1.184,
+    "thresholds": [
+      -0.1989,
+      0.514,
+      0.814,
+      1.114
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-012",
+    "text": "[Fearfulness item 12]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": true,
+    "discrimination": 0.8842,
+    "thresholds": [
+      -1.3554,
+      -1.0554,
+      -0.7554,
+      -0.4457
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-013",
+    "text": "[Fearfulness item 13]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 1.4905,
+    "thresholds": [
+      -1.1971,
+      -0.3851,
+      0.8457,
+      1.1457
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-014",
+    "text": "[Fearfulness item 14]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": false,
+    "discrimination": 1.3095,
+    "thresholds": [
+      -0.837,
+      -0.0113,
+      0.7182,
+      2.012
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM1-015",
+    "text": "[Fearfulness item 15]",
+    "dimensionId": "EM1",
+    "dimensionName": "Fearfulness",
+    "reverse": true,
+    "discrimination": 1.7547,
+    "thresholds": [
+      -1.3426,
+      -0.4889,
+      0.0035,
+      0.3035
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-001",
+    "text": "[Anxiety item 1]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 1.3283,
+    "thresholds": [
+      -0.4112,
+      -0.1112,
+      0.4869,
+      2.9152
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-002",
+    "text": "[Anxiety item 2]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 1.6608,
+    "thresholds": [
+      -1.5479,
+      -0.867,
+      -0.567,
+      -0.267
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-003",
+    "text": "[Anxiety item 3]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": true,
+    "discrimination": 1.7545,
+    "thresholds": [
+      -0.182,
+      0.118,
+      0.418,
+      0.718
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-004",
+    "text": "[Anxiety item 4]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 0.8398,
+    "thresholds": [
+      -1.4062,
+      -0.0584,
+      0.6545,
+      1.639
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-005",
+    "text": "[Anxiety item 5]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 1.301,
+    "thresholds": [
+      -1.3412,
+      0.614,
+      0.914,
+      1.214
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-006",
+    "text": "[Anxiety item 6]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": true,
+    "discrimination": 1.416,
+    "thresholds": [
+      -0.6723,
+      -0.1479,
+      0.1521,
+      0.8485
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-007",
+    "text": "[Anxiety item 7]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 1.6081,
+    "thresholds": [
+      -1.4172,
+      -1.1172,
+      -0.8172,
+      -0.2256
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-008",
+    "text": "[Anxiety item 8]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 1.4811,
+    "thresholds": [
+      -1.9206,
+      -0.2431,
+      0.6251,
+      1.4172
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-009",
+    "text": "[Anxiety item 9]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": true,
+    "discrimination": 0.8579,
+    "thresholds": [
+      -1.3117,
+      0.3957,
+      0.6957,
+      0.9957
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-010",
+    "text": "[Anxiety item 10]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 1.1093,
+    "thresholds": [
+      -1.6407,
+      -0.0857,
+      1.0699,
+      1.3699
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-011",
+    "text": "[Anxiety item 11]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 1.5015,
+    "thresholds": [
+      -1.7298,
+      -0.2518,
+      1.2745,
+      2.1194
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-012",
+    "text": "[Anxiety item 12]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": true,
+    "discrimination": 1.5208,
+    "thresholds": [
+      -0.7761,
+      0.1537,
+      0.4537,
+      0.7537
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-013",
+    "text": "[Anxiety item 13]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 1.6864,
+    "thresholds": [
+      -0.746,
+      -0.2419,
+      0.0581,
+      0.3581
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-014",
+    "text": "[Anxiety item 14]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": false,
+    "discrimination": 0.8639,
+    "thresholds": [
+      -1.2746,
+      -0.3075,
+      0.5131,
+      0.9754
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM2-015",
+    "text": "[Anxiety item 15]",
+    "dimensionId": "EM2",
+    "dimensionName": "Anxiety",
+    "reverse": true,
+    "discrimination": 1.1601,
+    "thresholds": [
+      -1.2936,
+      -0.5172,
+      0.0032,
+      0.5671
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-001",
+    "text": "[Dependence item 1]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 0.9029,
+    "thresholds": [
+      -1.4322,
+      -0.7174,
+      0.1613,
+      1.1815
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-002",
+    "text": "[Dependence item 2]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 0.844,
+    "thresholds": [
+      -0.9673,
+      -0.5682,
+      0.1734,
+      0.4879
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-003",
+    "text": "[Dependence item 3]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": true,
+    "discrimination": 0.9501,
+    "thresholds": [
+      -2.0938,
+      -0.8274,
+      -0.5274,
+      1.7922
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-004",
+    "text": "[Dependence item 4]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 1.5407,
+    "thresholds": [
+      -1.3803,
+      -0.7706,
+      0.4276,
+      0.8017
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-005",
+    "text": "[Dependence item 5]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 1.0713,
+    "thresholds": [
+      -2.1549,
+      -0.0276,
+      0.4541,
+      0.8525
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-006",
+    "text": "[Dependence item 6]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": true,
+    "discrimination": 0.9793,
+    "thresholds": [
+      -2.6603,
+      -0.1075,
+      0.3623,
+      0.9453
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-007",
+    "text": "[Dependence item 7]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 1.2651,
+    "thresholds": [
+      -0.5925,
+      -0.2925,
+      1.1224,
+      1.8908
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-008",
+    "text": "[Dependence item 8]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 0.808,
+    "thresholds": [
+      -0.4639,
+      0.3929,
+      1.2268,
+      1.5268
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-009",
+    "text": "[Dependence item 9]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": true,
+    "discrimination": 1.2639,
+    "thresholds": [
+      -0.9779,
+      -0.6528,
+      -0.3528,
+      0.0934
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-010",
+    "text": "[Dependence item 10]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 1.7004,
+    "thresholds": [
+      -0.7483,
+      0.0412,
+      0.3412,
+      1.0265
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-011",
+    "text": "[Dependence item 11]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 1.033,
+    "thresholds": [
+      -1.7124,
+      -1.0894,
+      1.5726,
+      1.8726
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-012",
+    "text": "[Dependence item 12]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": true,
+    "discrimination": 0.8015,
+    "thresholds": [
+      -1.6239,
+      -1.0696,
+      -0.4637,
+      -0.0668
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-013",
+    "text": "[Dependence item 13]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 1.3298,
+    "thresholds": [
+      0.0865,
+      1.1607,
+      1.4607,
+      3.1663
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-014",
+    "text": "[Dependence item 14]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": false,
+    "discrimination": 1.5117,
+    "thresholds": [
+      -0.7285,
+      0.9676,
+      1.2676,
+      1.8804
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM3-015",
+    "text": "[Dependence item 15]",
+    "dimensionId": "EM3",
+    "dimensionName": "Dependence",
+    "reverse": true,
+    "discrimination": 1.5008,
+    "thresholds": [
+      -1.8856,
+      0.2279,
+      0.5279,
+      1.946
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-001",
+    "text": "[Sentimentality item 1]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 0.9335,
+    "thresholds": [
+      -0.973,
+      -0.4417,
+      -0.1417,
+      0.1678
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-002",
+    "text": "[Sentimentality item 2]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 1.7642,
+    "thresholds": [
+      -0.7135,
+      0.0646,
+      0.7751,
+      1.6486
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-003",
+    "text": "[Sentimentality item 3]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": true,
+    "discrimination": 1.5007,
+    "thresholds": [
+      -0.8713,
+      -0.0804,
+      0.2196,
+      0.5196
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-004",
+    "text": "[Sentimentality item 4]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 1.0027,
+    "thresholds": [
+      -1.3023,
+      0.2479,
+      0.5479,
+      0.8479
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-005",
+    "text": "[Sentimentality item 5]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 1.2661,
+    "thresholds": [
+      -1.0314,
+      -0.1504,
+      0.6655,
+      0.9655
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-006",
+    "text": "[Sentimentality item 6]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": true,
+    "discrimination": 1.1083,
+    "thresholds": [
+      -0.0476,
+      0.5032,
+      0.8348,
+      1.2729
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-007",
+    "text": "[Sentimentality item 7]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 1.6264,
+    "thresholds": [
+      -0.7645,
+      -0.2711,
+      0.0289,
+      0.4581
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-008",
+    "text": "[Sentimentality item 8]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 0.8912,
+    "thresholds": [
+      -1.4984,
+      -0.127,
+      0.173,
+      0.9377
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-009",
+    "text": "[Sentimentality item 9]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": true,
+    "discrimination": 1.0602,
+    "thresholds": [
+      -0.9051,
+      -0.0147,
+      0.2853,
+      0.6201
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-010",
+    "text": "[Sentimentality item 10]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 1.5481,
+    "thresholds": [
+      -0.5176,
+      0.001,
+      0.301,
+      1.1135
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-011",
+    "text": "[Sentimentality item 11]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 0.812,
+    "thresholds": [
+      -2.4906,
+      1.2692,
+      1.5692,
+      1.8692
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-012",
+    "text": "[Sentimentality item 12]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": true,
+    "discrimination": 1.1722,
+    "thresholds": [
+      -1.0505,
+      -0.7505,
+      -0.4505,
+      -0.1505
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-013",
+    "text": "[Sentimentality item 13]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 1.6127,
+    "thresholds": [
+      -0.6225,
+      0.0499,
+      0.3617,
+      0.8857
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-014",
+    "text": "[Sentimentality item 14]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": false,
+    "discrimination": 0.9288,
+    "thresholds": [
+      -1.0562,
+      -0.1448,
+      0.2575,
+      1.5559
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EM4-015",
+    "text": "[Sentimentality item 15]",
+    "dimensionId": "EM4",
+    "dimensionName": "Sentimentality",
+    "reverse": true,
+    "discrimination": 1.261,
+    "thresholds": [
+      -0.9025,
+      0.4364,
+      0.7364,
+      1.1366
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-001",
+    "text": "[Social Self-Esteem item 1]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 0.8295,
+    "thresholds": [
+      -0.5625,
+      -0.251,
+      0.1416,
+      0.628
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-002",
+    "text": "[Social Self-Esteem item 2]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 1.0799,
+    "thresholds": [
+      -0.5502,
+      -0.2502,
+      0.0498,
+      0.3498
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-003",
+    "text": "[Social Self-Esteem item 3]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": true,
+    "discrimination": 1.0951,
+    "thresholds": [
+      -1.0764,
+      0.3029,
+      0.6644,
+      0.9644
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-004",
+    "text": "[Social Self-Esteem item 4]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 0.9372,
+    "thresholds": [
+      -1.3931,
+      -0.2279,
+      0.649,
+      1.9744
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-005",
+    "text": "[Social Self-Esteem item 5]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 1.6022,
+    "thresholds": [
+      -2.8968,
+      -0.9244,
+      0.1879,
+      0.8386
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-006",
+    "text": "[Social Self-Esteem item 6]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": true,
+    "discrimination": 1.3445,
+    "thresholds": [
+      -2.198,
+      -0.9915,
+      -0.0149,
+      0.2851
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-007",
+    "text": "[Social Self-Esteem item 7]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 0.9798,
+    "thresholds": [
+      -1.0576,
+      -0.2949,
+      0.6383,
+      1.3771
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-008",
+    "text": "[Social Self-Esteem item 8]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 0.8586,
+    "thresholds": [
+      -3.9373,
+      -0.0653,
+      0.4182,
+      1.2261
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-009",
+    "text": "[Social Self-Esteem item 9]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": true,
+    "discrimination": 1.774,
+    "thresholds": [
+      -0.1908,
+      0.8607,
+      1.1826,
+      1.8309
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-010",
+    "text": "[Social Self-Esteem item 10]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 1.7173,
+    "thresholds": [
+      0.3698,
+      1.1541,
+      1.9004,
+      3.1492
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-011",
+    "text": "[Social Self-Esteem item 11]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 1.5974,
+    "thresholds": [
+      -1.17,
+      -0.5143,
+      0.3506,
+      1.5122
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-012",
+    "text": "[Social Self-Esteem item 12]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": true,
+    "discrimination": 1.3925,
+    "thresholds": [
+      -1.4512,
+      -0.1231,
+      0.2051,
+      0.535
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-013",
+    "text": "[Social Self-Esteem item 13]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 1.5006,
+    "thresholds": [
+      -0.5957,
+      -0.2957,
+      0.0043,
+      1.2185
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-014",
+    "text": "[Social Self-Esteem item 14]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": false,
+    "discrimination": 1.788,
+    "thresholds": [
+      -0.7883,
+      -0.421,
+      0.8568,
+      1.1568
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX1-015",
+    "text": "[Social Self-Esteem item 15]",
+    "dimensionId": "EX1",
+    "dimensionName": "Social Self-Esteem",
+    "reverse": true,
+    "discrimination": 0.8903,
+    "thresholds": [
+      -0.0365,
+      0.2635,
+      0.5635,
+      0.8635
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-001",
+    "text": "[Social Boldness item 1]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 1.7179,
+    "thresholds": [
+      -2.1926,
+      -0.4622,
+      0.1588,
+      0.5044
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-002",
+    "text": "[Social Boldness item 2]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 1.6443,
+    "thresholds": [
+      -1.9099,
+      -1.1557,
+      -0.0939,
+      0.2061
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-003",
+    "text": "[Social Boldness item 3]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": true,
+    "discrimination": 1.5744,
+    "thresholds": [
+      -1.6316,
+      -0.2372,
+      0.9377,
+      1.2377
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-004",
+    "text": "[Social Boldness item 4]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 1.7419,
+    "thresholds": [
+      -0.3657,
+      -0.0657,
+      0.2815,
+      0.5815
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-005",
+    "text": "[Social Boldness item 5]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 0.9575,
+    "thresholds": [
+      -0.5613,
+      -0.2613,
+      1.4034,
+      1.7034
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-006",
+    "text": "[Social Boldness item 6]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": true,
+    "discrimination": 0.9742,
+    "thresholds": [
+      -0.7603,
+      -0.3001,
+      1.5084,
+      1.8084
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-007",
+    "text": "[Social Boldness item 7]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 1.0232,
+    "thresholds": [
+      -0.5338,
+      -0.2338,
+      0.0662,
+      1.431
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-008",
+    "text": "[Social Boldness item 8]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 0.9273,
+    "thresholds": [
+      -2.4164,
+      -0.3233,
+      -0.0233,
+      0.9456
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-009",
+    "text": "[Social Boldness item 9]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": true,
+    "discrimination": 1.7943,
+    "thresholds": [
+      -1.8029,
+      -1.3517,
+      -0.0557,
+      0.2505
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-010",
+    "text": "[Social Boldness item 10]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 1.7675,
+    "thresholds": [
+      -0.2133,
+      0.2348,
+      0.5348,
+      1.2697
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-011",
+    "text": "[Social Boldness item 11]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 1.5453,
+    "thresholds": [
+      0.2142,
+      1.0267,
+      1.8103,
+      2.834
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-012",
+    "text": "[Social Boldness item 12]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": true,
+    "discrimination": 0.8887,
+    "thresholds": [
+      -1.3805,
+      -0.7109,
+      -0.364,
+      0.8235
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-013",
+    "text": "[Social Boldness item 13]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 1.0652,
+    "thresholds": [
+      -0.02,
+      0.28,
+      0.58,
+      0.88
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-014",
+    "text": "[Social Boldness item 14]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": false,
+    "discrimination": 0.8013,
+    "thresholds": [
+      -1.2246,
+      -0.4009,
+      1.0669,
+      2.0389
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX2-015",
+    "text": "[Social Boldness item 15]",
+    "dimensionId": "EX2",
+    "dimensionName": "Social Boldness",
+    "reverse": true,
+    "discrimination": 1.2931,
+    "thresholds": [
+      -0.9091,
+      0.68,
+      0.98,
+      1.28
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-001",
+    "text": "[Sociability item 1]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 1.6641,
+    "thresholds": [
+      -1.2388,
+      -0.8886,
+      0.2041,
+      0.5041
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-002",
+    "text": "[Sociability item 2]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 1.6458,
+    "thresholds": [
+      -0.2439,
+      0.0561,
+      0.3747,
+      0.8415
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-003",
+    "text": "[Sociability item 3]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": true,
+    "discrimination": 0.9701,
+    "thresholds": [
+      -2.0446,
+      -1.1508,
+      -0.6226,
+      1.1442
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-004",
+    "text": "[Sociability item 4]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 0.8931,
+    "thresholds": [
+      -1.1454,
+      -0.7682,
+      -0.2495,
+      0.0505
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-005",
+    "text": "[Sociability item 5]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 1.7424,
+    "thresholds": [
+      0.2547,
+      0.5547,
+      1.069,
+      1.8076
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-006",
+    "text": "[Sociability item 6]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": true,
+    "discrimination": 1.0056,
+    "thresholds": [
+      -1.5933,
+      -0.2828,
+      0.5692,
+      1.4371
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-007",
+    "text": "[Sociability item 7]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 1.0653,
+    "thresholds": [
+      -0.1449,
+      0.3996,
+      0.7221,
+      1.2396
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-008",
+    "text": "[Sociability item 8]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 1.6399,
+    "thresholds": [
+      -0.7504,
+      0.367,
+      0.667,
+      0.967
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-009",
+    "text": "[Sociability item 9]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": true,
+    "discrimination": 1.462,
+    "thresholds": [
+      -0.5394,
+      -0.2394,
+      0.0985,
+      0.6041
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-010",
+    "text": "[Sociability item 10]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 1.0918,
+    "thresholds": [
+      -0.3608,
+      0.9397,
+      1.2397,
+      1.6771
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-011",
+    "text": "[Sociability item 11]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 1.2891,
+    "thresholds": [
+      -0.615,
+      -0.315,
+      -0.015,
+      0.285
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-012",
+    "text": "[Sociability item 12]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": true,
+    "discrimination": 1.6855,
+    "thresholds": [
+      -0.7407,
+      -0.0933,
+      0.7948,
+      1.1147
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-013",
+    "text": "[Sociability item 13]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 1.0262,
+    "thresholds": [
+      -1.4838,
+      -0.0415,
+      0.2585,
+      0.5585
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-014",
+    "text": "[Sociability item 14]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": false,
+    "discrimination": 0.8857,
+    "thresholds": [
+      -0.694,
+      -0.2443,
+      1.0381,
+      1.3381
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX3-015",
+    "text": "[Sociability item 15]",
+    "dimensionId": "EX3",
+    "dimensionName": "Sociability",
+    "reverse": true,
+    "discrimination": 1.3536,
+    "thresholds": [
+      -1.5546,
+      -1.0801,
+      0.6059,
+      0.9976
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-001",
+    "text": "[Liveliness item 1]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.6669,
+    "thresholds": [
+      -2.0402,
+      -0.4011,
+      0.0603,
+      0.3603
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-002",
+    "text": "[Liveliness item 2]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.7028,
+    "thresholds": [
+      -1.1514,
+      -0.8514,
+      -0.2626,
+      1.4555
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-003",
+    "text": "[Liveliness item 3]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": true,
+    "discrimination": 1.4775,
+    "thresholds": [
+      -0.6155,
+      -0.3155,
+      -0.0155,
+      0.2845
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-004",
+    "text": "[Liveliness item 4]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.7844,
+    "thresholds": [
+      -0.3163,
+      0.7364,
+      1.0364,
+      1.7903
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-005",
+    "text": "[Liveliness item 5]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.7883,
+    "thresholds": [
+      -3.1568,
+      -1.3589,
+      -1.0589,
+      1.3568
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-006",
+    "text": "[Liveliness item 6]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": true,
+    "discrimination": 1.0579,
+    "thresholds": [
+      -1.1779,
+      0.4051,
+      0.9046,
+      1.877
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-007",
+    "text": "[Liveliness item 7]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.1974,
+    "thresholds": [
+      -1.9635,
+      -0.3701,
+      0.5284,
+      0.8284
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-008",
+    "text": "[Liveliness item 8]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.5866,
+    "thresholds": [
+      -0.9053,
+      -0.6053,
+      -0.3053,
+      0.5007
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-009",
+    "text": "[Liveliness item 9]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": true,
+    "discrimination": 0.9482,
+    "thresholds": [
+      -1.4347,
+      -0.8846,
+      -0.5846,
+      2.114
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-010",
+    "text": "[Liveliness item 10]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.3627,
+    "thresholds": [
+      -0.8951,
+      -0.2038,
+      0.4867,
+      0.7867
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-011",
+    "text": "[Liveliness item 11]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.2109,
+    "thresholds": [
+      -0.8555,
+      -0.2141,
+      0.0859,
+      0.7731
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-012",
+    "text": "[Liveliness item 12]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": true,
+    "discrimination": 1.0754,
+    "thresholds": [
+      -0.2638,
+      0.0362,
+      0.8473,
+      1.1473
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-013",
+    "text": "[Liveliness item 13]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.6896,
+    "thresholds": [
+      -2.2514,
+      -0.3609,
+      -0.0601,
+      0.6421
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-014",
+    "text": "[Liveliness item 14]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": false,
+    "discrimination": 1.697,
+    "thresholds": [
+      -0.2654,
+      0.2338,
+      0.7665,
+      1.8292
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-EX4-015",
+    "text": "[Liveliness item 15]",
+    "dimensionId": "EX4",
+    "dimensionName": "Liveliness",
+    "reverse": true,
+    "discrimination": 1.2916,
+    "thresholds": [
+      -0.429,
+      -0.129,
+      0.171,
+      0.471
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-001",
+    "text": "[Forgiveness item 1]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 1.7742,
+    "thresholds": [
+      -1.7514,
+      -0.1264,
+      0.6541,
+      1.0307
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-002",
+    "text": "[Forgiveness item 2]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 1.4456,
+    "thresholds": [
+      -1.4693,
+      0.262,
+      0.6374,
+      0.9374
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-003",
+    "text": "[Forgiveness item 3]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": true,
+    "discrimination": 1.5595,
+    "thresholds": [
+      -1.3744,
+      -0.5857,
+      -0.0564,
+      1.2457
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-004",
+    "text": "[Forgiveness item 4]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 1.1111,
+    "thresholds": [
+      -1.6539,
+      -0.5395,
+      -0.023,
+      1.2223
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-005",
+    "text": "[Forgiveness item 5]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 0.8289,
+    "thresholds": [
+      -0.6473,
+      0.3937,
+      0.6937,
+      1.7707
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-006",
+    "text": "[Forgiveness item 6]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": true,
+    "discrimination": 1.2564,
+    "thresholds": [
+      -0.7693,
+      -0.2795,
+      1.3592,
+      1.8414
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-007",
+    "text": "[Forgiveness item 7]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 1.3051,
+    "thresholds": [
+      -0.3866,
+      -0.0866,
+      0.2134,
+      0.9476
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-008",
+    "text": "[Forgiveness item 8]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 1.394,
+    "thresholds": [
+      -0.793,
+      -0.4817,
+      0.8885,
+      1.8161
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-009",
+    "text": "[Forgiveness item 9]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": true,
+    "discrimination": 0.9635,
+    "thresholds": [
+      -1.0232,
+      -0.7232,
+      -0.3071,
+      1.3105
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-010",
+    "text": "[Forgiveness item 10]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 1.1866,
+    "thresholds": [
+      -0.4313,
+      0.6781,
+      1.1129,
+      1.9249
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-011",
+    "text": "[Forgiveness item 11]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 1.4474,
+    "thresholds": [
+      -0.7115,
+      -0.3475,
+      -0.0475,
+      0.2525
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-012",
+    "text": "[Forgiveness item 12]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": true,
+    "discrimination": 1.5803,
+    "thresholds": [
+      -0.762,
+      -0.1329,
+      0.1671,
+      1.2264
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-013",
+    "text": "[Forgiveness item 13]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 1.4011,
+    "thresholds": [
+      -0.8032,
+      0.0405,
+      0.3405,
+      0.7616
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-014",
+    "text": "[Forgiveness item 14]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": false,
+    "discrimination": 1.767,
+    "thresholds": [
+      -0.8205,
+      -0.5205,
+      -0.2205,
+      0.6487
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG1-015",
+    "text": "[Forgiveness item 15]",
+    "dimensionId": "AG1",
+    "dimensionName": "Forgiveness",
+    "reverse": true,
+    "discrimination": 1.052,
+    "thresholds": [
+      -1.471,
+      -0.8984,
+      0.3124,
+      0.6124
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-001",
+    "text": "[Gentleness item 1]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 0.9023,
+    "thresholds": [
+      -1.4698,
+      -0.8067,
+      -0.1065,
+      0.5356
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-002",
+    "text": "[Gentleness item 2]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 1.4473,
+    "thresholds": [
+      -0.652,
+      -0.352,
+      0.2282,
+      0.5282
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-003",
+    "text": "[Gentleness item 3]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": true,
+    "discrimination": 1.7884,
+    "thresholds": [
+      -1.5368,
+      -1.2368,
+      -0.1103,
+      1.572
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-004",
+    "text": "[Gentleness item 4]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 1.6924,
+    "thresholds": [
+      -2.1344,
+      -0.172,
+      0.2082,
+      0.5434
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-005",
+    "text": "[Gentleness item 5]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 1.6054,
+    "thresholds": [
+      -1.2812,
+      -0.9812,
+      -0.6812,
+      0.4374
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-006",
+    "text": "[Gentleness item 6]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": true,
+    "discrimination": 1.5213,
+    "thresholds": [
+      -2.865,
+      -1.9365,
+      -0.0616,
+      1.0396
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-007",
+    "text": "[Gentleness item 7]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 1.1883,
+    "thresholds": [
+      -0.5837,
+      -0.2837,
+      0.3454,
+      1.5307
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-008",
+    "text": "[Gentleness item 8]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 1.5265,
+    "thresholds": [
+      -2.1251,
+      0.2137,
+      0.5137,
+      1.2183
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-009",
+    "text": "[Gentleness item 9]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": true,
+    "discrimination": 1.4719,
+    "thresholds": [
+      -1.9303,
+      -1.6303,
+      -0.0888,
+      1.1028
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-010",
+    "text": "[Gentleness item 10]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 0.9811,
+    "thresholds": [
+      -0.0988,
+      0.3012,
+      0.6012,
+      1.815
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-011",
+    "text": "[Gentleness item 11]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 1.5629,
+    "thresholds": [
+      -0.2217,
+      0.3714,
+      0.6714,
+      1.3775
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-012",
+    "text": "[Gentleness item 12]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": true,
+    "discrimination": 1.1553,
+    "thresholds": [
+      -0.8716,
+      -0.5716,
+      -0.0312,
+      0.2688
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-013",
+    "text": "[Gentleness item 13]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 1.0606,
+    "thresholds": [
+      -1.9721,
+      -0.5334,
+      0.3693,
+      1.8778
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-014",
+    "text": "[Gentleness item 14]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": false,
+    "discrimination": 1.3836,
+    "thresholds": [
+      -0.7543,
+      -0.1318,
+      0.3611,
+      0.9051
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG2-015",
+    "text": "[Gentleness item 15]",
+    "dimensionId": "AG2",
+    "dimensionName": "Gentleness",
+    "reverse": true,
+    "discrimination": 1.6675,
+    "thresholds": [
+      -0.6197,
+      0.5698,
+      0.8698,
+      1.8504
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-001",
+    "text": "[Flexibility item 1]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 0.9374,
+    "thresholds": [
+      -1.9739,
+      -0.9198,
+      0.3152,
+      0.9763
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-002",
+    "text": "[Flexibility item 2]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 1.2576,
+    "thresholds": [
+      -1.1373,
+      -0.6425,
+      0.2091,
+      1.45
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-003",
+    "text": "[Flexibility item 3]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": true,
+    "discrimination": 1.431,
+    "thresholds": [
+      0.0237,
+      0.6296,
+      0.9296,
+      1.2715
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-004",
+    "text": "[Flexibility item 4]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 1.5612,
+    "thresholds": [
+      -1.6947,
+      0.1111,
+      0.8323,
+      1.483
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-005",
+    "text": "[Flexibility item 5]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 0.888,
+    "thresholds": [
+      -2.1298,
+      -1.0658,
+      -0.7658,
+      1.4791
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-006",
+    "text": "[Flexibility item 6]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": true,
+    "discrimination": 1.1833,
+    "thresholds": [
+      -0.1176,
+      0.1824,
+      0.4824,
+      0.7824
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-007",
+    "text": "[Flexibility item 7]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 1.1222,
+    "thresholds": [
+      -1.2577,
+      -0.6235,
+      -0.3235,
+      0.3248
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-008",
+    "text": "[Flexibility item 8]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 1.0488,
+    "thresholds": [
+      -0.8616,
+      -0.3192,
+      0.6782,
+      0.9782
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-009",
+    "text": "[Flexibility item 9]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": true,
+    "discrimination": 1.3887,
+    "thresholds": [
+      -0.2473,
+      0.7913,
+      1.0913,
+      1.6159
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-010",
+    "text": "[Flexibility item 10]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 1.5278,
+    "thresholds": [
+      -2.1264,
+      -0.7466,
+      -0.4466,
+      2.5047
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-011",
+    "text": "[Flexibility item 11]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 1.1427,
+    "thresholds": [
+      -0.5479,
+      0.7681,
+      1.0681,
+      2.2526
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-012",
+    "text": "[Flexibility item 12]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": true,
+    "discrimination": 1.7182,
+    "thresholds": [
+      -0.5915,
+      -0.2915,
+      0.0085,
+      0.4108
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-013",
+    "text": "[Flexibility item 13]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 1.5341,
+    "thresholds": [
+      -0.9698,
+      -0.5144,
+      -0.2144,
+      1.0781
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-014",
+    "text": "[Flexibility item 14]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": false,
+    "discrimination": 0.8374,
+    "thresholds": [
+      -0.5382,
+      -0.2382,
+      0.0618,
+      0.5488
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG3-015",
+    "text": "[Flexibility item 15]",
+    "dimensionId": "AG3",
+    "dimensionName": "Flexibility",
+    "reverse": true,
+    "discrimination": 1.7947,
+    "thresholds": [
+      -1.239,
+      -0.7649,
+      0.1893,
+      1.5182
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-001",
+    "text": "[Patience item 1]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 1.2168,
+    "thresholds": [
+      -0.9191,
+      -0.5691,
+      0.0924,
+      0.8604
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-002",
+    "text": "[Patience item 2]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 1.4952,
+    "thresholds": [
+      -1.2526,
+      -0.7767,
+      -0.4767,
+      -0.1767
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-003",
+    "text": "[Patience item 3]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": true,
+    "discrimination": 1.07,
+    "thresholds": [
+      -0.4279,
+      -0.1279,
+      0.1721,
+      0.4721
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-004",
+    "text": "[Patience item 4]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 1.5188,
+    "thresholds": [
+      0.3317,
+      0.6317,
+      0.9317,
+      1.2317
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-005",
+    "text": "[Patience item 5]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 0.9997,
+    "thresholds": [
+      -0.0992,
+      0.4662,
+      1.2129,
+      1.5129
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-006",
+    "text": "[Patience item 6]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": true,
+    "discrimination": 1.0954,
+    "thresholds": [
+      0.287,
+      0.611,
+      1.1355,
+      2.2442
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-007",
+    "text": "[Patience item 7]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 1.1306,
+    "thresholds": [
+      -1.0488,
+      0.0257,
+      1.4922,
+      1.7922
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-008",
+    "text": "[Patience item 8]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 1.469,
+    "thresholds": [
+      -1.5993,
+      -0.1178,
+      0.2573,
+      0.5573
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-009",
+    "text": "[Patience item 9]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": true,
+    "discrimination": 0.9013,
+    "thresholds": [
+      -0.0596,
+      0.2404,
+      0.7246,
+      1.0246
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-010",
+    "text": "[Patience item 10]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 1.2643,
+    "thresholds": [
+      0.2033,
+      0.5033,
+      0.8033,
+      1.1033
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-011",
+    "text": "[Patience item 11]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 1.6016,
+    "thresholds": [
+      -0.6288,
+      0.9471,
+      1.3937,
+      1.6937
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-012",
+    "text": "[Patience item 12]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": true,
+    "discrimination": 0.8459,
+    "thresholds": [
+      -1.1828,
+      0.4505,
+      0.8258,
+      1.1258
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-013",
+    "text": "[Patience item 13]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 1.2377,
+    "thresholds": [
+      -1.4806,
+      -1.1806,
+      1.0129,
+      1.5325
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-014",
+    "text": "[Patience item 14]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": false,
+    "discrimination": 0.9829,
+    "thresholds": [
+      -2.0789,
+      -0.135,
+      0.9779,
+      1.4949
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-AG4-015",
+    "text": "[Patience item 15]",
+    "dimensionId": "AG4",
+    "dimensionName": "Patience",
+    "reverse": true,
+    "discrimination": 1.6507,
+    "thresholds": [
+      -1.3762,
+      -0.4687,
+      0.1423,
+      0.4462
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-001",
+    "text": "[Organization item 1]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 1.4962,
+    "thresholds": [
+      0.5591,
+      0.8608,
+      1.1608,
+      2.2293
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-002",
+    "text": "[Organization item 2]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 1.3908,
+    "thresholds": [
+      -1.4258,
+      0.4091,
+      0.7091,
+      1.0091
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-003",
+    "text": "[Organization item 3]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": true,
+    "discrimination": 1.1586,
+    "thresholds": [
+      -2.2877,
+      0.2735,
+      1.4225,
+      1.7225
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-004",
+    "text": "[Organization item 4]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 0.9307,
+    "thresholds": [
+      -0.2604,
+      0.0396,
+      0.3396,
+      0.6396
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-005",
+    "text": "[Organization item 5]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 1.0616,
+    "thresholds": [
+      -1.536,
+      -0.7474,
+      -0.4474,
+      1.4361
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-006",
+    "text": "[Organization item 6]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": true,
+    "discrimination": 1.3766,
+    "thresholds": [
+      -2.534,
+      -1.0968,
+      -0.7959,
+      -0.4386
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-007",
+    "text": "[Organization item 7]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 1.3231,
+    "thresholds": [
+      -0.6427,
+      -0.3427,
+      -0.0427,
+      0.2573
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-008",
+    "text": "[Organization item 8]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 1.1457,
+    "thresholds": [
+      -1.0836,
+      -0.7836,
+      -0.4404,
+      0.6785
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-009",
+    "text": "[Organization item 9]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": true,
+    "discrimination": 1.7878,
+    "thresholds": [
+      0.4828,
+      1.0731,
+      1.3731,
+      1.6731
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-010",
+    "text": "[Organization item 10]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 1.6519,
+    "thresholds": [
+      -0.7414,
+      -0.2886,
+      0.0389,
+      0.3389
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-011",
+    "text": "[Organization item 11]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 1.7701,
+    "thresholds": [
+      -0.7963,
+      -0.4963,
+      0.2208,
+      0.6746
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-012",
+    "text": "[Organization item 12]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": true,
+    "discrimination": 1.035,
+    "thresholds": [
+      -1.8669,
+      -1.5669,
+      0.457,
+      0.757
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-013",
+    "text": "[Organization item 13]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 1.2471,
+    "thresholds": [
+      -0.3822,
+      -0.0822,
+      0.796,
+      1.096
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-014",
+    "text": "[Organization item 14]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": false,
+    "discrimination": 1.2123,
+    "thresholds": [
+      -0.0173,
+      0.2827,
+      0.736,
+      1.1454
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO1-015",
+    "text": "[Organization item 15]",
+    "dimensionId": "CO1",
+    "dimensionName": "Organization",
+    "reverse": true,
+    "discrimination": 1.4191,
+    "thresholds": [
+      -0.4008,
+      0.3996,
+      1.1222,
+      1.4376
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-001",
+    "text": "[Diligence item 1]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 1.7504,
+    "thresholds": [
+      -0.2183,
+      0.1864,
+      0.4864,
+      1.085
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-002",
+    "text": "[Diligence item 2]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 1.3602,
+    "thresholds": [
+      -1.3242,
+      -0.8738,
+      -0.5738,
+      -0.2738
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-003",
+    "text": "[Diligence item 3]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": true,
+    "discrimination": 0.914,
+    "thresholds": [
+      -1.022,
+      -0.7069,
+      0.0414,
+      1.5805
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-004",
+    "text": "[Diligence item 4]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 1.7644,
+    "thresholds": [
+      -0.3168,
+      -0.0168,
+      0.2832,
+      1.173
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-005",
+    "text": "[Diligence item 5]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 0.9642,
+    "thresholds": [
+      -0.4681,
+      -0.0845,
+      1.0091,
+      1.3091
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-006",
+    "text": "[Diligence item 6]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": true,
+    "discrimination": 1.4109,
+    "thresholds": [
+      -0.8642,
+      0.6889,
+      0.9889,
+      2.1321
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-007",
+    "text": "[Diligence item 7]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 1.5814,
+    "thresholds": [
+      -1.9635,
+      -0.4672,
+      -0.0989,
+      1.1701
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-008",
+    "text": "[Diligence item 8]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 1.6375,
+    "thresholds": [
+      -1.459,
+      -1.159,
+      -0.859,
+      0.4485
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-009",
+    "text": "[Diligence item 9]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": true,
+    "discrimination": 1.7562,
+    "thresholds": [
+      -0.3098,
+      -0.0098,
+      0.7793,
+      1.0793
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-010",
+    "text": "[Diligence item 10]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 1.7353,
+    "thresholds": [
+      -2.251,
+      -0.9743,
+      -0.118,
+      0.6082
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-011",
+    "text": "[Diligence item 11]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 0.9772,
+    "thresholds": [
+      -1.4261,
+      -0.7672,
+      0.685,
+      0.985
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-012",
+    "text": "[Diligence item 12]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": true,
+    "discrimination": 1.4005,
+    "thresholds": [
+      -2.0876,
+      -0.796,
+      0.877,
+      1.8484
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-013",
+    "text": "[Diligence item 13]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 1.7159,
+    "thresholds": [
+      -0.7971,
+      -0.4971,
+      0.0621,
+      2.5853
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-014",
+    "text": "[Diligence item 14]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": false,
+    "discrimination": 1.2528,
+    "thresholds": [
+      -1.5801,
+      -0.5132,
+      0.6902,
+      0.9902
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO2-015",
+    "text": "[Diligence item 15]",
+    "dimensionId": "CO2",
+    "dimensionName": "Diligence",
+    "reverse": true,
+    "discrimination": 1.0989,
+    "thresholds": [
+      -2.2746,
+      -1.894,
+      -0.5958,
+      -0.2958
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-001",
+    "text": "[Perfectionism item 1]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.4326,
+    "thresholds": [
+      -0.2321,
+      0.4249,
+      0.8906,
+      1.3329
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-002",
+    "text": "[Perfectionism item 2]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.4724,
+    "thresholds": [
+      -0.3065,
+      -0.0065,
+      1.1437,
+      1.4437
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-003",
+    "text": "[Perfectionism item 3]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": true,
+    "discrimination": 1.4943,
+    "thresholds": [
+      -0.6855,
+      -0.2175,
+      0.4449,
+      0.9162
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-004",
+    "text": "[Perfectionism item 4]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.3706,
+    "thresholds": [
+      -1.9188,
+      -0.9019,
+      -0.517,
+      -0.0257
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-005",
+    "text": "[Perfectionism item 5]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.0859,
+    "thresholds": [
+      -1.4884,
+      -0.224,
+      0.076,
+      1.0433
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-006",
+    "text": "[Perfectionism item 6]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": true,
+    "discrimination": 0.9453,
+    "thresholds": [
+      -0.5924,
+      -0.2924,
+      0.0076,
+      0.3076
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-007",
+    "text": "[Perfectionism item 7]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.0866,
+    "thresholds": [
+      -0.7788,
+      -0.305,
+      -0.005,
+      1.9124
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-008",
+    "text": "[Perfectionism item 8]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.5536,
+    "thresholds": [
+      0.3698,
+      1.2082,
+      1.6096,
+      1.9096
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-009",
+    "text": "[Perfectionism item 9]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": true,
+    "discrimination": 1.5395,
+    "thresholds": [
+      -1.2366,
+      -0.6827,
+      -0.2766,
+      1.088
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-010",
+    "text": "[Perfectionism item 10]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.5843,
+    "thresholds": [
+      -1.963,
+      -1.1693,
+      -0.7852,
+      0.2487
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-011",
+    "text": "[Perfectionism item 11]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.1876,
+    "thresholds": [
+      -0.7332,
+      -0.4332,
+      1.1705,
+      2.6281
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-012",
+    "text": "[Perfectionism item 12]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": true,
+    "discrimination": 0.813,
+    "thresholds": [
+      -1.9824,
+      -0.0117,
+      0.3901,
+      1.3921
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-013",
+    "text": "[Perfectionism item 13]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.63,
+    "thresholds": [
+      -1.3423,
+      -1.0061,
+      -0.7061,
+      1.3264
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-014",
+    "text": "[Perfectionism item 14]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": false,
+    "discrimination": 1.3466,
+    "thresholds": [
+      -1.3778,
+      -1.0465,
+      -0.1857,
+      0.8138
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO3-015",
+    "text": "[Perfectionism item 15]",
+    "dimensionId": "CO3",
+    "dimensionName": "Perfectionism",
+    "reverse": true,
+    "discrimination": 0.9774,
+    "thresholds": [
+      -0.5867,
+      -0.2642,
+      0.5533,
+      1.066
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-001",
+    "text": "[Prudence item 1]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 1.1772,
+    "thresholds": [
+      -1.1488,
+      0.5538,
+      0.9062,
+      1.2062
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-002",
+    "text": "[Prudence item 2]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 1.055,
+    "thresholds": [
+      -0.7626,
+      0.3253,
+      0.6253,
+      1.3755
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-003",
+    "text": "[Prudence item 3]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": true,
+    "discrimination": 1.1226,
+    "thresholds": [
+      -1.1009,
+      -0.8009,
+      0.7291,
+      2.2037
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-004",
+    "text": "[Prudence item 4]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 1.2906,
+    "thresholds": [
+      -0.8547,
+      -0.5547,
+      -0.2547,
+      0.1856
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-005",
+    "text": "[Prudence item 5]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 1.02,
+    "thresholds": [
+      -1.0365,
+      -0.0335,
+      0.2665,
+      0.5665
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-006",
+    "text": "[Prudence item 6]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": true,
+    "discrimination": 1.337,
+    "thresholds": [
+      0.205,
+      0.505,
+      0.805,
+      1.105
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-007",
+    "text": "[Prudence item 7]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 1.1608,
+    "thresholds": [
+      -3.3126,
+      -0.6427,
+      0.3292,
+      1.6388
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-008",
+    "text": "[Prudence item 8]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 1.6237,
+    "thresholds": [
+      -0.9484,
+      -0.5297,
+      -0.0157,
+      0.2843
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-009",
+    "text": "[Prudence item 9]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": true,
+    "discrimination": 1.7045,
+    "thresholds": [
+      -1.0526,
+      -0.7526,
+      -0.3869,
+      1.4646
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-010",
+    "text": "[Prudence item 10]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 1.1209,
+    "thresholds": [
+      -1.2138,
+      -0.9138,
+      0.8193,
+      2.0802
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-011",
+    "text": "[Prudence item 11]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 1.0828,
+    "thresholds": [
+      -1.2739,
+      -0.9739,
+      1.2746,
+      1.5773
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-012",
+    "text": "[Prudence item 12]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": true,
+    "discrimination": 1.2456,
+    "thresholds": [
+      0.4245,
+      0.7245,
+      1.1236,
+      2.0574
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-013",
+    "text": "[Prudence item 13]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 1.7482,
+    "thresholds": [
+      -0.1179,
+      0.1821,
+      1.241,
+      2.1724
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-014",
+    "text": "[Prudence item 14]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": false,
+    "discrimination": 0.8655,
+    "thresholds": [
+      -1.5121,
+      -0.8272,
+      -0.5272,
+      0.6946
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-CO4-015",
+    "text": "[Prudence item 15]",
+    "dimensionId": "CO4",
+    "dimensionName": "Prudence",
+    "reverse": true,
+    "discrimination": 0.9039,
+    "thresholds": [
+      -1.514,
+      -0.366,
+      -0.066,
+      1.7085
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-001",
+    "text": "[Aesthetic Appreciation item 1]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 1.4466,
+    "thresholds": [
+      -0.6126,
+      0.6304,
+      0.9304,
+      1.5403
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-002",
+    "text": "[Aesthetic Appreciation item 2]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 1.1317,
+    "thresholds": [
+      -1.229,
+      0.1746,
+      0.4746,
+      0.7746
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-003",
+    "text": "[Aesthetic Appreciation item 3]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": true,
+    "discrimination": 1.375,
+    "thresholds": [
+      -1.0757,
+      0.1083,
+      0.766,
+      1.066
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-004",
+    "text": "[Aesthetic Appreciation item 4]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 1.233,
+    "thresholds": [
+      -1.398,
+      -0.311,
+      0.1585,
+      1.4874
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-005",
+    "text": "[Aesthetic Appreciation item 5]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 1.4183,
+    "thresholds": [
+      -1.3264,
+      -0.3699,
+      -0.0699,
+      0.2301
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-006",
+    "text": "[Aesthetic Appreciation item 6]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": true,
+    "discrimination": 1.728,
+    "thresholds": [
+      -0.1349,
+      0.4034,
+      1.0876,
+      1.3876
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-007",
+    "text": "[Aesthetic Appreciation item 7]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 1.5653,
+    "thresholds": [
+      -0.9598,
+      -0.6598,
+      -0.3598,
+      0.3827
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-008",
+    "text": "[Aesthetic Appreciation item 8]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 1.3335,
+    "thresholds": [
+      -1.2007,
+      0.3693,
+      0.6693,
+      0.9693
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-009",
+    "text": "[Aesthetic Appreciation item 9]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": true,
+    "discrimination": 1.7601,
+    "thresholds": [
+      -0.9143,
+      0.9287,
+      1.2287,
+      1.5287
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-010",
+    "text": "[Aesthetic Appreciation item 10]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 1.5293,
+    "thresholds": [
+      -1.7073,
+      -1.2014,
+      -0.42,
+      1.7479
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-011",
+    "text": "[Aesthetic Appreciation item 11]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 0.9232,
+    "thresholds": [
+      -2.3579,
+      -0.5606,
+      0.0426,
+      1.3469
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-012",
+    "text": "[Aesthetic Appreciation item 12]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": true,
+    "discrimination": 1.1047,
+    "thresholds": [
+      -2.1626,
+      -0.5737,
+      -0.0231,
+      0.8574
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-013",
+    "text": "[Aesthetic Appreciation item 13]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 1.4459,
+    "thresholds": [
+      -0.5906,
+      -0.0467,
+      0.3463,
+      1.8656
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-014",
+    "text": "[Aesthetic Appreciation item 14]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": false,
+    "discrimination": 0.9943,
+    "thresholds": [
+      -1.5633,
+      0.7496,
+      1.17,
+      1.629
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP1-015",
+    "text": "[Aesthetic Appreciation item 15]",
+    "dimensionId": "OP1",
+    "dimensionName": "Aesthetic Appreciation",
+    "reverse": true,
+    "discrimination": 1.7324,
+    "thresholds": [
+      -0.7887,
+      -0.2544,
+      0.0456,
+      1.1115
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-001",
+    "text": "[Inquisitiveness item 1]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 0.8674,
+    "thresholds": [
+      -0.8935,
+      0.0721,
+      0.9305,
+      1.3116
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-002",
+    "text": "[Inquisitiveness item 2]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 0.9282,
+    "thresholds": [
+      -1.5692,
+      -1.2692,
+      -0.3805,
+      -0.0805
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-003",
+    "text": "[Inquisitiveness item 3]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": true,
+    "discrimination": 1.1178,
+    "thresholds": [
+      -1.3182,
+      -0.454,
+      0.4224,
+      1.2445
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-004",
+    "text": "[Inquisitiveness item 4]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 1.3656,
+    "thresholds": [
+      -0.5746,
+      -0.0886,
+      0.2114,
+      0.656
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-005",
+    "text": "[Inquisitiveness item 5]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 1.0462,
+    "thresholds": [
+      -1.7627,
+      0.292,
+      0.748,
+      1.6148
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-006",
+    "text": "[Inquisitiveness item 6]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": true,
+    "discrimination": 0.9343,
+    "thresholds": [
+      -2.039,
+      -0.9171,
+      -0.219,
+      0.2181
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-007",
+    "text": "[Inquisitiveness item 7]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 1.1055,
+    "thresholds": [
+      -1.5052,
+      -1.1924,
+      -0.5893,
+      -0.1983
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-008",
+    "text": "[Inquisitiveness item 8]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 1.6587,
+    "thresholds": [
+      -0.1732,
+      0.7928,
+      1.0928,
+      2.0782
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-009",
+    "text": "[Inquisitiveness item 9]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": true,
+    "discrimination": 0.8765,
+    "thresholds": [
+      -0.2515,
+      0.0485,
+      0.3485,
+      0.6485
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-010",
+    "text": "[Inquisitiveness item 10]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 1.3819,
+    "thresholds": [
+      -1.1051,
+      -0.7033,
+      0.7497,
+      1.0533
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-011",
+    "text": "[Inquisitiveness item 11]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 1.3435,
+    "thresholds": [
+      -0.9424,
+      -0.009,
+      0.291,
+      1.1303
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-012",
+    "text": "[Inquisitiveness item 12]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": true,
+    "discrimination": 1.0233,
+    "thresholds": [
+      -1.6099,
+      -0.2848,
+      0.2255,
+      1.0811
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-013",
+    "text": "[Inquisitiveness item 13]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 1.3104,
+    "thresholds": [
+      -1.6561,
+      -1.0123,
+      -0.7123,
+      0.7134
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-014",
+    "text": "[Inquisitiveness item 14]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": false,
+    "discrimination": 1.6065,
+    "thresholds": [
+      -1.0829,
+      -0.4541,
+      -0.1541,
+      0.1459
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP2-015",
+    "text": "[Inquisitiveness item 15]",
+    "dimensionId": "OP2",
+    "dimensionName": "Inquisitiveness",
+    "reverse": true,
+    "discrimination": 0.9791,
+    "thresholds": [
+      -0.4648,
+      -0.1648,
+      1.3922,
+      1.6922
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-001",
+    "text": "[Creativity item 1]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 1.2835,
+    "thresholds": [
+      -0.4439,
+      -0.1439,
+      0.1561,
+      0.5449
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-002",
+    "text": "[Creativity item 2]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 1.1694,
+    "thresholds": [
+      -0.5187,
+      0.1809,
+      0.6562,
+      0.9562
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-003",
+    "text": "[Creativity item 3]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": true,
+    "discrimination": 1.2697,
+    "thresholds": [
+      -0.2959,
+      0.0041,
+      0.3041,
+      0.8785
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-004",
+    "text": "[Creativity item 4]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 1.5037,
+    "thresholds": [
+      -1.8645,
+      -0.6732,
+      -0.2519,
+      0.3974
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-005",
+    "text": "[Creativity item 5]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 1.3444,
+    "thresholds": [
+      -0.9646,
+      0.6705,
+      1.0901,
+      1.3901
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-006",
+    "text": "[Creativity item 6]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": true,
+    "discrimination": 1.6355,
+    "thresholds": [
+      -0.9664,
+      -0.6634,
+      -0.1016,
+      1.0064
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-007",
+    "text": "[Creativity item 7]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 1.1529,
+    "thresholds": [
+      -1.3529,
+      -0.8533,
+      0.1527,
+      0.7786
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-008",
+    "text": "[Creativity item 8]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 1.3018,
+    "thresholds": [
+      0.3866,
+      0.6866,
+      0.9866,
+      1.2866
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-009",
+    "text": "[Creativity item 9]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": true,
+    "discrimination": 1.0115,
+    "thresholds": [
+      -0.4913,
+      -0.1024,
+      0.3662,
+      0.8749
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-010",
+    "text": "[Creativity item 10]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 1.0303,
+    "thresholds": [
+      -1.4797,
+      -1.1339,
+      0.1323,
+      0.5985
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-011",
+    "text": "[Creativity item 11]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 1.0107,
+    "thresholds": [
+      0.0417,
+      0.3417,
+      1.0018,
+      1.6063
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-012",
+    "text": "[Creativity item 12]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": true,
+    "discrimination": 1.3735,
+    "thresholds": [
+      0.3177,
+      0.7467,
+      1.1952,
+      1.4952
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-013",
+    "text": "[Creativity item 13]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 0.8559,
+    "thresholds": [
+      -0.3508,
+      -0.0327,
+      0.6292,
+      1.3062
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-014",
+    "text": "[Creativity item 14]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": false,
+    "discrimination": 1.3636,
+    "thresholds": [
+      -0.6941,
+      -0.3941,
+      0.1861,
+      1.5837
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP3-015",
+    "text": "[Creativity item 15]",
+    "dimensionId": "OP3",
+    "dimensionName": "Creativity",
+    "reverse": true,
+    "discrimination": 0.8857,
+    "thresholds": [
+      -2.9816,
+      -0.4529,
+      0.411,
+      0.9853
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-001",
+    "text": "[Unconventionality item 1]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 1.6304,
+    "thresholds": [
+      -1.4339,
+      -1.0534,
+      -0.5726,
+      0.2714
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-002",
+    "text": "[Unconventionality item 2]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 1.4596,
+    "thresholds": [
+      -0.6045,
+      -0.1462,
+      0.9181,
+      1.5983
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-003",
+    "text": "[Unconventionality item 3]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": true,
+    "discrimination": 1.3906,
+    "thresholds": [
+      0.1248,
+      0.4248,
+      0.7248,
+      1.0248
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-004",
+    "text": "[Unconventionality item 4]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 1.6596,
+    "thresholds": [
+      -1.043,
+      -0.0286,
+      0.2714,
+      0.5714
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-005",
+    "text": "[Unconventionality item 5]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 1.2759,
+    "thresholds": [
+      -1.1564,
+      -0.212,
+      0.088,
+      0.388
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-006",
+    "text": "[Unconventionality item 6]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": true,
+    "discrimination": 0.9175,
+    "thresholds": [
+      -1.4923,
+      -1.1348,
+      -0.5252,
+      0.0588
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-007",
+    "text": "[Unconventionality item 7]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 1.697,
+    "thresholds": [
+      -1.4299,
+      -0.9527,
+      -0.1328,
+      0.2253
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-008",
+    "text": "[Unconventionality item 8]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 0.8434,
+    "thresholds": [
+      -1.6711,
+      -0.7094,
+      -0.1345,
+      0.5698
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-009",
+    "text": "[Unconventionality item 9]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": true,
+    "discrimination": 1.1812,
+    "thresholds": [
+      -1.5406,
+      -1.2406,
+      -0.8729,
+      0.1119
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-010",
+    "text": "[Unconventionality item 10]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 0.8977,
+    "thresholds": [
+      0.2171,
+      0.7591,
+      1.0591,
+      1.9676
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-011",
+    "text": "[Unconventionality item 11]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 1.0833,
+    "thresholds": [
+      -0.7167,
+      0.5875,
+      0.8875,
+      1.4576
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-012",
+    "text": "[Unconventionality item 12]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": true,
+    "discrimination": 1.5894,
+    "thresholds": [
+      -0.4418,
+      -0.1418,
+      0.1582,
+      1.4565
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-013",
+    "text": "[Unconventionality item 13]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 1.4878,
+    "thresholds": [
+      -0.3816,
+      0.8179,
+      1.1179,
+      1.4179
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-014",
+    "text": "[Unconventionality item 14]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": false,
+    "discrimination": 1.0536,
+    "thresholds": [
+      -0.8295,
+      -0.5295,
+      0.6001,
+      0.9001
+    ],
+    "numCategories": 5
+  },
+  {
+    "id": "CAT-OP4-015",
+    "text": "[Unconventionality item 15]",
+    "dimensionId": "OP4",
+    "dimensionName": "Unconventionality",
+    "reverse": true,
+    "discrimination": 1.4806,
+    "thresholds": [
+      -1.122,
+      -0.822,
+      0.0323,
+      0.3323
+    ],
+    "numCategories": 5
+  }
+]

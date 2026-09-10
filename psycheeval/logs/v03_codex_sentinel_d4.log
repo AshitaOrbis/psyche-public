@@ -1,0 +1,64 @@
+ternary_sample sentinel: originals=718  eligible=718  sample_pct=10.0  sampled=71  already_done=0  pending=71  workers=3
+  1/71 ok (failed=0, cap_events=0)
+  2/71 ok (failed=0, cap_events=0)
+  3/71 ok (failed=0, cap_events=0)
+  4/71 ok (failed=0, cap_events=0)
+  5/71 ok (failed=0, cap_events=0)
+  6/71 ok (failed=0, cap_events=0)
+  7/71 ok (failed=0, cap_events=0)
+  8/71 ok (failed=0, cap_events=0)
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  9/71 ok (failed=1, cap_events=0)
+  10/71 ok (failed=1, cap_events=0)
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_moral_uncertainty_user judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  20/71 ok (failed=4, cap_events=0)
+  ERR scn_v02_epistemic_uncertainty_ judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  30/71 ok (failed=5, cap_events=0)
+  ERR scn_v02_creative_feedback_user judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  40/71 ok (failed=7, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=gpt-5.5-xhigh: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=gpt-5.4: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  50/71 ok (failed=12, cap_events=0)
+ternary_sample done: completed=59/71, failed=12, cap_aborted=0, cap_events=0

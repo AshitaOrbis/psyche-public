@@ -1,0 +1,12 @@
+{
+  "tag": "2026-05-19_v03",
+  "phase": "score_anchored",
+  "completed_count": 358,
+  "pending_count": 718,
+  "last_successful_record_id": "b26d2cc7-3ec9-4280-be3e-3a30d935a848:opus",
+  "last_cap_hit_record_id": "c2b9905a-a461-4fc7-8963-c87bf5588eb5:opus",
+  "cap_aborted": true,
+  "cap_event_count": 21,
+  "timestamp": "2026-05-20T05:44:18.265434+00:00",
+  "suggested_resume_command": "uv run python -m psycheeval.judge score --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --rubric anchored"
+}

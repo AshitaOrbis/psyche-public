@@ -1,0 +1,110 @@
+v0.3 Cluster-Bootstrap Power Simulation for D5 TOST
+================================================================================
+Source: reports/metrics_2026-04-26_v02_hard_codex_only.json
+Pairs analyzed: ['C3_vs_C5_CONTRACT', 'C4_vs_C5_CONTRACT']
+Margins: [3, 5, 7] pp
+Bootstrap resamples per CI: 500
+Power simulations per scenario: 100
+
+ICC scenarios: 0.0 (no clustering, optimistic) and 0.30 (moderate clustering, realistic)
+
+
+================================================================================
+## C3_vs_C5_CONTRACT
+================================================================================
+v0.2 observed: n_records=288, n_clusters=120, records/cluster=2
+  controlled_lo_win=0.5009, CI=[0.4358, 0.5657]
+  Distance from 0.5: 0.09pp
+
+  n_clusters=120 (total_n=240):
+    ICC=0.00, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±5pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±7pp, true=0.5: power = 11.0% [4.9%, 17.1%]
+
+    ICC=0.30, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±5pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±7pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+
+  n_clusters=240 (total_n=480):
+    ICC=0.00, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±5pp, true=0.5: power = 19.0% [11.3%, 26.7%]
+    ICC=0.00, margin±7pp, true=0.5: power = 72.0% [63.2%, 80.8%]
+
+    ICC=0.30, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±5pp, true=0.5: power = 1.0% [0.0%, 3.0%]
+    ICC=0.30, margin±7pp, true=0.5: power = 57.0% [47.3%, 66.7%]
+
+  n_clusters=360 (total_n=720):
+    ICC=0.00, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±5pp, true=0.5: power = 50.0% [40.2%, 59.8%]
+    ICC=0.00, margin±7pp, true=0.5: power = 93.0% [88.0%, 98.0%]
+
+    ICC=0.30, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±5pp, true=0.5: power = 22.0% [13.9%, 30.1%]
+    ICC=0.30, margin±7pp, true=0.5: power = 80.0% [72.2%, 87.8%]
+
+  n_clusters=500 (total_n=1000):
+    ICC=0.00, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±5pp, true=0.5: power = 77.0% [68.8%, 85.2%]
+    ICC=0.00, margin±7pp, true=0.5: power = 99.0% [97.0%, 100.0%]
+
+    ICC=0.30, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±5pp, true=0.5: power = 59.0% [49.4%, 68.6%]
+    ICC=0.30, margin±7pp, true=0.5: power = 97.0% [93.7%, 100.0%]
+
+
+================================================================================
+## C4_vs_C5_CONTRACT
+================================================================================
+v0.2 observed: n_records=288, n_clusters=120, records/cluster=2
+  controlled_lo_win=0.4818, CI=[0.4127, 0.5480]
+  Distance from 0.5: 1.82pp
+
+  n_clusters=120 (total_n=240):
+    ICC=0.00, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±5pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±7pp, true=0.5: power = 11.0% [4.9%, 17.1%]
+
+    ICC=0.30, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±5pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±7pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+
+  n_clusters=240 (total_n=480):
+    ICC=0.00, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±5pp, true=0.5: power = 19.0% [11.3%, 26.7%]
+    ICC=0.00, margin±7pp, true=0.5: power = 72.0% [63.2%, 80.8%]
+
+    ICC=0.30, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±5pp, true=0.5: power = 1.0% [0.0%, 3.0%]
+    ICC=0.30, margin±7pp, true=0.5: power = 57.0% [47.3%, 66.7%]
+
+  n_clusters=360 (total_n=720):
+    ICC=0.00, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±5pp, true=0.5: power = 50.0% [40.2%, 59.8%]
+    ICC=0.00, margin±7pp, true=0.5: power = 93.0% [88.0%, 98.0%]
+
+    ICC=0.30, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±5pp, true=0.5: power = 22.0% [13.9%, 30.1%]
+    ICC=0.30, margin±7pp, true=0.5: power = 80.0% [72.2%, 87.8%]
+
+  n_clusters=500 (total_n=1000):
+    ICC=0.00, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.00, margin±5pp, true=0.5: power = 77.0% [68.8%, 85.2%]
+    ICC=0.00, margin±7pp, true=0.5: power = 99.0% [97.0%, 100.0%]
+
+    ICC=0.30, margin±3pp, true=0.5: power = 0.0% [0.0%, 0.0%]
+    ICC=0.30, margin±5pp, true=0.5: power = 59.0% [49.4%, 68.6%]
+    ICC=0.30, margin±7pp, true=0.5: power = 97.0% [93.7%, 100.0%]
+
+
+================================================================================
+INTERPRETATION GUIDE
+================================================================================
+- 'power if true=0.5' = best-case power: probability of declaring equivalence
+  when the truth is exactly equivalent. <80% means even ideal conditions can't
+  decide equivalence at that margin / n / ICC.
+- ICC=0.0 (no clustering): each record is fully independent. Optimistic upper bound.
+- ICC=0.30 (moderate clustering): realistic for persona x scenario x author cell structure.
+- Compare power across n_clusters columns to see how much expansion improves decidability.
+- D5 'decidable' = power at chosen margin reaches >=80% under realistic ICC.
+

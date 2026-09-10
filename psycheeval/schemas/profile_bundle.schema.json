@@ -1,0 +1,138 @@
+{
+  "$defs": {
+    "ProfileConditionText": {
+      "properties": {
+        "confidence_notes": {
+          "default": "",
+          "title": "Confidence Notes",
+          "type": "string"
+        },
+        "profile_text": {
+          "title": "Profile Text",
+          "type": "string"
+        },
+        "source_limitations": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Limitations"
+        }
+      },
+      "required": [
+        "profile_text"
+      ],
+      "title": "ProfileConditionText",
+      "type": "object"
+    },
+    "ProfileConditions": {
+      "properties": {
+        "C1_padded": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProfileConditionText"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "C1_trait_labels": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProfileConditionText"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "C2_narrative": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProfileConditionText"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "C3_behavioral_contract": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProfileConditionText"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "C4_behavioral_contract_anti_sycophancy": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProfileConditionText"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "C4_shuffled": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProfileConditionText"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "C5_source_packet_informed": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ProfileConditionText"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "ProfileConditions",
+      "type": "object"
+    }
+  },
+  "description": "Kit \u00a73.3. Contains C1-C5 profile formats for a user. C0 is absence.",
+  "properties": {
+    "profile_bundle_id": {
+      "title": "Profile Bundle Id",
+      "type": "string"
+    },
+    "profile_conditions": {
+      "$ref": "#/$defs/ProfileConditions"
+    },
+    "user_id": {
+      "title": "User Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "profile_bundle_id",
+    "user_id",
+    "profile_conditions"
+  ],
+  "title": "ProfileBundle",
+  "type": "object"
+}

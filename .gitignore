@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+.venv/
+
+# Build
+dist/
+*.pyc
+__pycache__/
+
+# Private data (never commit)
+/profiles/
+web/public/profiles/
+web/dev-data/
+data/raw/
+data/ingested/
+data/sampled/
+web/public/seed-data.json
+web/public/profile.json
+web/test-results/
+analysis/psyche_analysis/__pycache__/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+
+# Test coverage
+coverage/
+.vitest/
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Runtime cruft (kept on disk, excluded from history)
+.claude/scheduled_tasks.lock
+*.pid
+experiments/ai-assessment/logs/
+experiments/methodology-supplement/additional-runs/eval-runs.log

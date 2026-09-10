@@ -1,0 +1,193 @@
+=== v0.3 Opus pipeline — 2026-05-25T22:45:36+00:00 ===
+TAG=2026-05-19_v03  PILOT=v03_full_pilot  WORKERS=1
+
+=== Stage 1: Opus anchored scalar ===
+Scoring 1077 total, 3231 done, 0 pending, workers=1
+Done. 0 succeeded, 0 failed. Scores at ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/anchored_judge_scores.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_score_anchored.json
+
+=== Stage 2: Opus AB/BA pairwise ===
+Pairwise: scope=same_author_only  expected=359  observed=1077  pending=0  workers=1
+Done. 0 succeeded, 0 failed. Pairwise at ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/pairwise_scores.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_pairwise.json
+
+=== --ab-ba-mandatory: dispatching AB/BA swap rejudgment ===
+Pairwise swap-rejudge: originals=1077  target_judges=opus  already_swapped=1077  pending=0  workers=1
+Pairwise swap-rejudge done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+=== AB/BA swap rejudgment complete ===
+
+=== Stage 3: Opus D1 same-orientation rejudge ===
+same_orientation_rejudge sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=124  pending=0  workers=1
+same_orientation_rejudge done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+
+=== Stage 4: Opus D4 ternary sentinel ===
+ternary_sample sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=83  pending=17  workers=1
+  1/17 ok (failed=0, cap_events=0)
+  2/17 ok (failed=0, cap_events=0)
+  3/17 ok (failed=0, cap_events=0)
+  4/17 ok (failed=0, cap_events=0)
+  5/17 ok (failed=0, cap_events=0)
+  6/17 ok (failed=0, cap_events=0)
+  7/17 ok (failed=0, cap_events=0)
+  8/17 ok (failed=0, cap_events=0)
+  9/17 ok (failed=0, cap_events=0)
+  10/17 ok (failed=0, cap_events=0)
+ternary_sample done: completed=17/17, failed=0, cap_aborted=0, cap_events=0
+
+=== Stage 5: Opus D2 paraphrased anchored sentinel ===
+Scoring 1077 total, 521 done, 131 pending, workers=1
+  1/131 scn_v02_procrastination_avoida… · judge=opus
+  1/131 ok  (failed=0, cap_events=0)
+  2/131 scn_v02_ambition_status_user_p… · judge=opus
+  2/131 ok  (failed=0, cap_events=0)
+  3/131 scn_v02_shame_self_interpretat… · judge=opus
+  3/131 ok  (failed=0, cap_events=0)
+  4/131 scn_v02_creative_feedback_user… · judge=opus
+  4/131 ok  (failed=0, cap_events=0)
+  5/131 scn_v02_creative_feedback_user… · judge=opus
+  5/131 ok  (failed=0, cap_events=0)
+  6/131 scn_v02_authority_disagreement… · judge=opus
+  6/131 ok  (failed=0, cap_events=0)
+  7/131 scn_v02_procrastination_avoida… · judge=opus
+  7/131 ok  (failed=0, cap_events=0)
+  8/131 scn_v02_authority_disagreement… · judge=opus
+  8/131 ok  (failed=0, cap_events=0)
+  9/131 scn_v02_ambition_status_user_s… · judge=opus
+  9/131 ok  (failed=0, cap_events=0)
+  10/131 scn_v02_shame_self_interpretat… · judge=opus
+  10/131 ok  (failed=0, cap_events=0)
+  11/131 scn_v02_ambition_status_user_s… · judge=opus
+  12/131 scn_v02_procrastination_avoida… · judge=opus
+  13/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  14/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  15/131 scn_v02_interpersonal_conflict… · judge=opus
+  16/131 scn_v02_ambition_status_user_s… · judge=opus
+  17/131 scn_v02_shame_self_interpretat… · judge=opus
+  18/131 scn_v02_authority_disagreement… · judge=opus
+  19/131 scn_v02_interpersonal_conflict… · judge=opus
+  20/131 scn_v02_interpersonal_conflict… · judge=opus
+  20/131 ok  (failed=0, cap_events=0)
+  21/131 scn_v02_shame_self_interpretat… · judge=opus
+  22/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  23/131 scn_v02_interpersonal_conflict… · judge=opus
+  24/131 scn_v02_authority_disagreement… · judge=opus
+  25/131 scn_v02_interpersonal_conflict… · judge=opus
+  26/131 scn_v02_interpersonal_conflict… · judge=opus
+  27/131 scn_v02_ambition_status_user_p… · judge=opus
+  28/131 scn_v02_ambition_status_user_p… · judge=opus
+  29/131 scn_v02_shame_self_interpretat… · judge=opus
+  30/131 scn_v02_creative_feedback_user… · judge=opus
+  30/131 ok  (failed=0, cap_events=0)
+  31/131 scn_v02_ambition_status_user_p… · judge=opus
+  32/131 scn_v02_creative_feedback_user… · judge=opus
+  33/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  34/131 scn_v02_shame_self_interpretat… · judge=opus
+  35/131 scn_v02_ambition_status_user_p… · judge=opus
+  36/131 scn_v02_moral_uncertainty_user… · judge=opus
+  37/131 scn_v02_interpersonal_conflict… · judge=opus
+  38/131 scn_v02_authority_disagreement… · judge=opus
+  39/131 scn_v02_interpersonal_conflict… · judge=opus
+  40/131 scn_v02_ambition_status_user_p… · judge=opus
+  40/131 ok  (failed=0, cap_events=0)
+  41/131 scn_v02_ambition_status_user_p… · judge=opus
+  42/131 scn_v02_interpersonal_conflict… · judge=opus
+  43/131 scn_v02_interpersonal_conflict… · judge=opus
+  44/131 scn_v02_interpersonal_conflict… · judge=opus
+  45/131 scn_v02_ambition_status_user_p… · judge=opus
+  46/131 scn_v02_moral_uncertainty_user… · judge=opus
+  47/131 scn_v02_shame_self_interpretat… · judge=opus
+  48/131 scn_v02_interpersonal_conflict… · judge=opus
+  49/131 scn_v02_shame_self_interpretat… · judge=opus
+  50/131 scn_v02_procrastination_avoida… · judge=opus
+  50/131 ok  (failed=0, cap_events=0)
+  51/131 scn_v02_creative_feedback_user… · judge=opus
+  52/131 scn_v02_interpersonal_conflict… · judge=opus
+  53/131 scn_v02_shame_self_interpretat… · judge=opus
+  54/131 scn_v02_interpersonal_conflict… · judge=opus
+  55/131 scn_v02_shame_self_interpretat… · judge=opus
+  56/131 scn_v02_interpersonal_conflict… · judge=opus
+  57/131 scn_v02_shame_self_interpretat… · judge=opus
+  58/131 scn_v02_ambition_status_user_p… · judge=opus
+  59/131 scn_v02_interpersonal_conflict… · judge=opus
+  60/131 scn_v02_procrastination_avoida… · judge=opus
+  60/131 ok  (failed=0, cap_events=0)
+  61/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  62/131 scn_v02_authority_disagreement… · judge=opus
+  63/131 scn_v02_shame_self_interpretat… · judge=opus
+  64/131 scn_v02_shame_self_interpretat… · judge=opus
+  65/131 scn_v02_authority_disagreement… · judge=opus
+  66/131 scn_v02_moral_uncertainty_user… · judge=opus
+  67/131 scn_v02_procrastination_avoida… · judge=opus
+  68/131 scn_v02_creative_feedback_user… · judge=opus
+  69/131 scn_v02_shame_self_interpretat… · judge=opus
+  70/131 scn_v02_procrastination_avoida… · judge=opus
+  70/131 ok  (failed=0, cap_events=0)
+  71/131 scn_v02_shame_self_interpretat… · judge=opus
+  72/131 scn_v02_creative_feedback_user… · judge=opus
+  73/131 scn_v02_shame_self_interpretat… · judge=opus
+  74/131 scn_v02_shame_self_interpretat… · judge=opus
+  75/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  76/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  77/131 scn_v02_authority_disagreement… · judge=opus
+  78/131 scn_v02_procrastination_avoida… · judge=opus
+  79/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  80/131 scn_v02_authority_disagreement… · judge=opus
+  80/131 ok  (failed=0, cap_events=0)
+  81/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  82/131 scn_v02_procrastination_avoida… · judge=opus
+  83/131 scn_v02_shame_self_interpretat… · judge=opus
+  84/131 scn_v02_shame_self_interpretat… · judge=opus
+  85/131 scn_v02_shame_self_interpretat… · judge=opus
+  86/131 scn_v02_creative_feedback_user… · judge=opus
+  87/131 scn_v02_procrastination_avoida… · judge=opus
+  88/131 scn_v02_authority_disagreement… · judge=opus
+  89/131 scn_v02_interpersonal_conflict… · judge=opus
+  90/131 scn_v02_interpersonal_conflict… · judge=opus
+  90/131 ok  (failed=0, cap_events=0)
+  91/131 scn_v02_shame_self_interpretat… · judge=opus
+  92/131 scn_v02_ambition_status_user_s… · judge=opus
+  93/131 scn_v02_ambition_status_user_p… · judge=opus
+  94/131 scn_v02_shame_self_interpretat… · judge=opus
+  95/131 scn_v02_authority_disagreement… · judge=opus
+  96/131 scn_v02_interpersonal_conflict… · judge=opus
+  97/131 scn_v02_ambition_status_user_p… · judge=opus
+  98/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  99/131 scn_v02_shame_self_interpretat… · judge=opus
+  100/131 scn_v02_procrastination_avoida… · judge=opus
+  100/131 ok  (failed=0, cap_events=0)
+  101/131 scn_v02_creative_feedback_user… · judge=opus
+  102/131 scn_v02_creative_feedback_user… · judge=opus
+  103/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  104/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  105/131 scn_v02_shame_self_interpretat… · judge=opus
+  106/131 scn_v02_authority_disagreement… · judge=opus
+  107/131 scn_v02_shame_self_interpretat… · judge=opus
+  108/131 scn_v02_shame_self_interpretat… · judge=opus
+  109/131 scn_v02_shame_self_interpretat… · judge=opus
+  110/131 scn_v02_authority_disagreement… · judge=opus
+  110/131 ok  (failed=0, cap_events=0)
+  111/131 scn_v02_shame_self_interpretat… · judge=opus
+  112/131 scn_v02_moral_uncertainty_user… · judge=opus
+  113/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  114/131 scn_v02_ambition_status_user_p… · judge=opus
+  115/131 scn_v02_authority_disagreement… · judge=opus
+  116/131 scn_v02_interpersonal_conflict… · judge=opus
+  117/131 scn_v02_authority_disagreement… · judge=opus
+  118/131 scn_v02_interpersonal_conflict… · judge=opus
+  119/131 scn_v02_shame_self_interpretat… · judge=opus
+  120/131 scn_v02_epistemic_uncertainty_… · judge=opus
+  120/131 ok  (failed=0, cap_events=0)
+  121/131 scn_v02_creative_feedback_user… · judge=opus
+  122/131 scn_v02_interpersonal_conflict… · judge=opus
+  123/131 scn_v02_shame_self_interpretat… · judge=opus
+  124/131 scn_v02_interpersonal_conflict… · judge=opus
+  125/131 scn_v02_shame_self_interpretat… · judge=opus
+  126/131 scn_v02_ambition_status_user_s… · judge=opus
+  CAP scn_v02_ambition_status_user_s judge=opus (retries exhausted; cap_events.jsonl written)
+CAP-ABORTED. 125 succeeded, 1 failed, 5 skipped after cap. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_score_paraphrased_anchored.json. Resume with: uv run python -m psycheeval.judge score --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --rubric paraphrased_anchored
+
+=== v0.3 Opus pipeline complete — 2026-05-26T01:39:39+00:00 ===
+Opus scalar:          1077
+Opus pairwise:        359
+Opus pairwise swap:   359
+Opus same-orient:     53
+Opus ternary:         41
+Opus paraphrased:     323

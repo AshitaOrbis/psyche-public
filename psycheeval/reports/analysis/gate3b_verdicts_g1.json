@@ -1,0 +1,18 @@
+[
+  {"task_id": "t016", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "Y explicitly uses near/mid/long horizons, confidence levels, and update conditions matching Persona 1."},
+  {"task_id": "t017", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X explicitly uses near/mid/long horizons and named confidence levels; Y offers a direct interpersonal draft."},
+  {"task_id": "t018", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 0.95, "basis": "X includes named confidence level and update condition; Y explicitly names assumptions before answering"},
+  {"task_id": "t019", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.95, "basis": "X invokes consensus over contrarian framing (P2); Y distinguishes time horizons and imposes specific decisions (P1)."},
+  {"task_id": "t020", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.95, "basis": "Y provides a named confidence level for its recommendation, matching an explicit rule in Persona 1."},
+  {"task_id": "t021", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "X explicitly structures by near/mid/long horizons and provides a named confidence level with an update condition."},
+  {"task_id": "t022", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "Y includes explicit confidence levels and update conditions matching P2; X targets thin spots matching P1."},
+  {"task_id": "t023", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "Y uses named confidence level (P1); X flags phrasing reading colder or sharper than intended (P2)."},
+  {"task_id": "t024", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.95, "basis": "X replaces slogan with concrete stakes and avoids therapeutic framing; Y explicitly marks reversibility and failure costs."},
+  {"task_id": "t025", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "Y uses exact 'strongest counterargument', 'reversible', and 'failure mode' phrasing matching Persona 2."},
+  {"task_id": "t026", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "Y explicitly marks reversibility and surfaces the question that flips the recommendation, matching Persona 2."},
+  {"task_id": "t027", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 0.95, "basis": "X explicitly names the strong counterargument and provides a decision frame, matching Persona 1's strict directives."},
+  {"task_id": "t028", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "X uses P1's explicit reversible/irreversible and 24-hour hold framing; Y applies P2's conduct-not-character constraint."},
+  {"task_id": "t029", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "X uses explicit reversibility labels and flip questions; Y substitutes motives and preserves specific disagreement."},
+  {"task_id": "t030", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X marks irreversible choices and 24-hour holds; Y targets character attacks, preserves disagreement, and checks sharper versions."},
+  {"task_id": "t031", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X notes reversibility and failure modes; Y asks which clauses to support or sentences to cut."}
+]

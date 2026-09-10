@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# uv
+uv.lock
+
+# Test/cache
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+
+# Private/secrets
+.env
+.env.local
+
+# Runs — keep structure, not outputs (tracked per-run)
+runs/*/assistant_outputs.jsonl.tmp
+runs/*/raw/
+
+# Private anchor metadata — real names kept internal only, never published
+data/anchors_private.jsonl
+
+# Macos/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Recovery artifacts from the v0.3 judging corruption episode — kept on disk
+# (never-delete), excluded from git history as transient snapshots.
+runs/*/_pre_pool_backup/
+runs/*/*.precorruption
+
+# Phase A per-call resumable checkpoints (reproducible intermediates)
+reports/analysis/*.checkpoint.jsonl
+runs/2026-05-19_v03/phaseB1_human_rater_key.SECRET.json
+runs/2026-05-19_v03/phaseB1_rater.html
+data/phaseB2/_*.checkpoint.jsonl
+
+# bq-1191 / bq-1314: CLI-failure diagnostics record hashes and lengths only
+# and now write outside this repo (OS temp dir), but keep this path ignored
+# in case a future call site regresses back to logging into the tree.
+logs/claude_cli_failures.jsonl

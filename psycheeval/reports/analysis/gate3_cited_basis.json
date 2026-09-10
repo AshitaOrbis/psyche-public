@@ -1,0 +1,46 @@
+{
+  "method": "transparent keyword/regex rubric; single-coder (script); per-item emitted for review",
+  "n_tasks": 64,
+  "reproduces_published_gate3": true,
+  "bucket_distribution": {
+    "behavioral": 43,
+    "mixed": 18,
+    "surface": 3,
+    "unclear": 0
+  },
+  "explicit_echo_cue_rate": 0.328,
+  "recovery_by_bucket": {
+    "behavioral": [
+      0.907,
+      0.827,
+      0.952
+    ],
+    "mixed": [
+      0.972,
+      0.858,
+      0.995
+    ],
+    "surface": [
+      1.0,
+      0.61,
+      1.0
+    ],
+    "unclear": [
+      null,
+      null,
+      null
+    ]
+  },
+  "recovery_echo_vs_nonecho": {
+    "echo": [
+      0.976,
+      0.877,
+      0.996
+    ],
+    "nonecho": [
+      0.907,
+      0.827,
+      0.952
+    ]
+  }
+}

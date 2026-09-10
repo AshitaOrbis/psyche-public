@@ -1,0 +1,146 @@
+{
+  "$defs": {
+    "PersonaType": {
+      "enum": [
+        "public_inspired",
+        "pure_synthetic",
+        "hybrid"
+      ],
+      "title": "PersonaType",
+      "type": "string"
+    },
+    "PrimaryAxes": {
+      "additionalProperties": true,
+      "description": "Sparse dict of personality axes for a persona seed.\n\nNot validated as a closed set \u2014 different personas foreground different axes.\nValues are 0-5 integer estimates. The kit's example axes are the common\nset; new ones can be added per persona.",
+      "properties": {},
+      "title": "PrimaryAxes",
+      "type": "object"
+    },
+    "SourceMode": {
+      "enum": [
+        "user_supplied_text",
+        "public_links_to_ingest",
+        "high_level_public_reputation",
+        "fully_synthetic"
+      ],
+      "title": "SourceMode",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Kit \u00a73.1. A persona seed is the input to everything else.",
+  "properties": {
+    "alias": {
+      "description": "Deliberately wrong alias for fiction-signal",
+      "title": "Alias",
+      "type": "string"
+    },
+    "anchor_family": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Short category like 'AI safety lab leader' safe for public export",
+      "title": "Anchor Family"
+    },
+    "caricature_risk": {
+      "default": "medium",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "title": "Caricature Risk",
+      "type": "string"
+    },
+    "conversation_needs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Conversation Needs",
+      "type": "array"
+    },
+    "disclosure_label": {
+      "default": "fictional synthetic user; not a real person",
+      "title": "Disclosure Label",
+      "type": "string"
+    },
+    "do_not_infer": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Do Not Infer",
+      "type": "array"
+    },
+    "failure_modes_to_test": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Failure Modes To Test",
+      "type": "array"
+    },
+    "humor_level": {
+      "default": 3,
+      "maximum": 5,
+      "minimum": 1,
+      "title": "Humor Level",
+      "type": "integer"
+    },
+    "internal_public_anchor": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Real public figure this persona is inspired by. INTERNAL METADATA ONLY \u2014 must be stripped before any public export.",
+      "title": "Internal Public Anchor"
+    },
+    "persona_id": {
+      "title": "Persona Id",
+      "type": "string"
+    },
+    "persona_type": {
+      "$ref": "#/$defs/PersonaType"
+    },
+    "primary_axes": {
+      "$ref": "#/$defs/PrimaryAxes"
+    },
+    "public_export_anchor_policy": {
+      "default": "anchor_family_only",
+      "enum": [
+        "alias_only",
+        "anchor_family_only",
+        "named_anchor_allowed_internal_only"
+      ],
+      "title": "Public Export Anchor Policy",
+      "type": "string"
+    },
+    "source_mode": {
+      "$ref": "#/$defs/SourceMode"
+    },
+    "worldview_hints": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Worldview Hints",
+      "type": "array"
+    }
+  },
+  "required": [
+    "persona_id",
+    "persona_type",
+    "alias",
+    "source_mode"
+  ],
+  "title": "PersonaSeed",
+  "type": "object"
+}

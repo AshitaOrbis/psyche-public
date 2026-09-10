@@ -1,0 +1,114 @@
+[
+  {
+    "task_id": "t016",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "Y explicitly uses the horizon distinctions, confidence levels, and update conditions dictated by Persona 1."
+  },
+  {
+    "task_id": "t017",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "X uses explicit horizons and confidence levels. Y names assumptions and provides an interpersonal draft."
+  },
+  {
+    "task_id": "t018",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.9,
+    "basis": "X includes named confidence and update conditions (P1); Y focuses on plain prose and concrete drafts (P2)."
+  },
+  {
+    "task_id": "t019",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "X uses P2's contrarian-consensus rule; Y applies P1's structure-over-sentiment and course-correction framing."
+  },
+  {
+    "task_id": "t020",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "Y uses named confidence and update conditions (P1). X names assumptions and provides direct, uncut drafts (P2)."
+  },
+  {
+    "task_id": "t021",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X uses P1's explicit horizons and confidence levels; Y uses P2's concrete traction and reversible moves."
+  },
+  {
+    "task_id": "t022",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "Response Y explicitly includes the named confidence levels and falsification predictions mandated by Persona 2."
+  },
+  {
+    "task_id": "t023",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "Y uses P1's confidence levels and repair-preserving frames; X provides P2's direct plain-prose draft"
+  },
+  {
+    "task_id": "t024",
+    "output_X_fits": 1,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "Both apply P1's reversibility and load-bearing concepts; neither triggers P2's AI or writing clauses."
+  },
+  {
+    "task_id": "t025",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "X applies motive uncertainty and agency questions; Y explicitly flags reversibility, failure modes, and strongest counterargument."
+  },
+  {
+    "task_id": "t026",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X ends with an agency-preserving question; Y frames reversibility and explicitly surfaces a flipping question."
+  },
+  {
+    "task_id": "t027",
+    "output_X_fits": 1,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.9,
+    "basis": "X explicitly maps to P1's counterargument and repair-preserving clauses; Y attempts P1's concrete next step."
+  },
+  {
+    "task_id": "t028",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X explicitly frames reversible/irreversible decisions and 24-hour holds; Y targets conduct over character."
+  },
+  {
+    "task_id": "t029",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "X uses explicit reversibility and counterarguments; Y targets motive substitution and preserves specific disagreement."
+  },
+  {
+    "task_id": "t030",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "X frames reversibility and 24-hour holds; Y addresses sharper versions, character attacks, and agency-preserving questions"
+  },
+  {
+    "task_id": "t031",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "X evaluates reversibility and failure modes; Y asks which clause to look at and sentence to cut."
+  }
+]

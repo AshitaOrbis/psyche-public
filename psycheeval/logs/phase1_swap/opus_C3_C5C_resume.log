@@ -1,0 +1,14 @@
+Pairwise swap-rejudge: originals=3123  target_judges=opus  already_swapped=787  pending=38  workers=1
+  1/38 ok (failed=0, cap_events=0)
+  2/38 ok (failed=0, cap_events=0)
+  3/38 ok (failed=0, cap_events=0)
+  4/38 ok (failed=0, cap_events=0)
+  5/38 ok (failed=0, cap_events=0)
+  6/38 ok (failed=0, cap_events=0)
+  7/38 ok (failed=0, cap_events=0)
+  8/38 ok (failed=0, cap_events=0)
+  9/38 ok (failed=0, cap_events=0)
+  10/38 ok (failed=0, cap_events=0)
+  20/38 ok (failed=0, cap_events=0)
+  30/38 ok (failed=0, cap_events=0)
+Pairwise swap-rejudge done: completed=38/38, failed=0, cap_aborted=0, cap_events=0

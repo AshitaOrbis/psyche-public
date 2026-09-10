@@ -1,0 +1,157 @@
+{
+  "summary": {
+    "judge": "opus",
+    "filter": "decisive_gpt",
+    "n_tasks_scored": 10,
+    "mean_fit_gap_C4_minus_CWRONG": 0.4,
+    "mean_quality_gap_C4_minus_CWRONG": -0.2,
+    "mean_fit_C4": 5.6,
+    "mean_fit_CWRONG": 5.2,
+    "mean_quality_C4": 5.5,
+    "mean_quality_CWRONG": 5.7,
+    "corr_quality_fit_across_outputs": 0.722,
+    "fit_gap_gt_quality_gap": true
+  },
+  "results": [
+    {
+      "task_id": "t016",
+      "scores": {
+        "X": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        },
+        "Y": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        }
+      },
+      "author_fam": "openai"
+    },
+    {
+      "task_id": "t013",
+      "scores": {
+        "X": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        },
+        "Y": {
+          "general_quality": 5,
+          "fit_to_person": 5
+        }
+      },
+      "author_fam": "openai"
+    },
+    {
+      "task_id": "t021",
+      "scores": {
+        "X": {
+          "general_quality": 5,
+          "fit_to_person": 4
+        },
+        "Y": {
+          "general_quality": 5,
+          "fit_to_person": 5
+        }
+      },
+      "author_fam": "openai"
+    },
+    {
+      "task_id": "t023",
+      "scores": {
+        "X": {
+          "general_quality": 5,
+          "fit_to_person": 5
+        },
+        "Y": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        }
+      },
+      "author_fam": "openai"
+    },
+    {
+      "task_id": "t039",
+      "scores": {
+        "X": {
+          "general_quality": 5,
+          "fit_to_person": 4
+        },
+        "Y": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        }
+      },
+      "author_fam": "openai"
+    },
+    {
+      "task_id": "t048",
+      "scores": {
+        "X": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        },
+        "Y": {
+          "general_quality": 5,
+          "fit_to_person": 6
+        }
+      },
+      "author_fam": "openai"
+    },
+    {
+      "task_id": "t049",
+      "scores": {
+        "X": {
+          "general_quality": 6,
+          "fit_to_person": 5
+        },
+        "Y": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        }
+      },
+      "author_fam": "openai"
+    },
+    {
+      "task_id": "t051",
+      "scores": {
+        "X": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        },
+        "Y": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        }
+      },
+      "author_fam": "openai"
+    },
+    {
+      "task_id": "t052",
+      "scores": {
+        "X": {
+          "general_quality": 6,
+          "fit_to_person": 6
+        },
+        "Y": {
+          "general_quality": 5,
+          "fit_to_person": 4
+        }
+      },
+      "author_fam": "openai"
+    },
+    {
+      "task_id": "t061",
+      "scores": {
+        "X": {
+          "general_quality": 6,
+          "fit_to_person": 5
+        },
+        "Y": {
+          "general_quality": 5,
+          "fit_to_person": 5
+        }
+      },
+      "author_fam": "openai"
+    }
+  ]
+}

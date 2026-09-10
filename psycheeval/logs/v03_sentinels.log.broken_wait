@@ -1,0 +1,113 @@
+=== Waiting for main codex orchestrator (PID 3141240) to finish ===
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T14:19:43+00:00 — outputs=96, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T14:29:43+00:00 — outputs=154, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T14:39:43+00:00 — outputs=205, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T14:49:43+00:00 — outputs=258, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T14:59:43+00:00 — outputs=312, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T15:09:43+00:00 — outputs=362, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T15:19:43+00:00 — outputs=418, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T15:29:43+00:00 — outputs=473, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T15:39:43+00:00 — outputs=524, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T15:49:43+00:00 — outputs=581, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T15:59:43+00:00 — outputs=647, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T16:09:43+00:00 — outputs=696, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T16:19:43+00:00 — outputs=739, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T16:29:43+00:00 — outputs=778, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T16:39:43+00:00 — outputs=819, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 31: runs/2026-05-19_v03/anchored_judge_scores.jsonl: No such file or directory
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T16:49:43+00:00 — outputs=862, scalar=0, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T16:59:43+00:00 — outputs=891, scalar=5, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T17:09:43+00:00 — outputs=904, scalar=25, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T17:19:43+00:00 — outputs=918, scalar=43, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T17:29:43+00:00 — outputs=934, scalar=65, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T17:39:43+00:00 — outputs=955, scalar=85, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T17:49:43+00:00 — outputs=977, scalar=104, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T17:59:43+00:00 — outputs=995, scalar=121, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T18:09:43+00:00 — outputs=1011, scalar=137, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T18:19:43+00:00 — outputs=1024, scalar=154, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T18:29:43+00:00 — outputs=1038, scalar=168, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T18:39:43+00:00 — outputs=1054, scalar=186, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T18:49:43+00:00 — outputs=1066, scalar=209, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T18:59:43+00:00 — outputs=1077, scalar=226, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T19:09:43+00:00 — outputs=1077, scalar=244, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T19:19:43+00:00 — outputs=1077, scalar=262, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T19:29:43+00:00 — outputs=1077, scalar=280, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T19:39:43+00:00 — outputs=1077, scalar=299, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T19:49:43+00:00 — outputs=1077, scalar=320, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T19:59:43+00:00 — outputs=1077, scalar=343, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T20:09:43+00:00 — outputs=1077, scalar=364, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T20:19:43+00:00 — outputs=1077, scalar=385, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T20:29:43+00:00 — outputs=1077, scalar=405, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T20:39:43+00:00 — outputs=1077, scalar=424, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T20:49:43+00:00 — outputs=1077, scalar=445, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T20:59:43+00:00 — outputs=1077, scalar=466, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T21:09:43+00:00 — outputs=1077, scalar=487, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T21:19:43+00:00 — outputs=1077, scalar=506, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T21:29:43+00:00 — outputs=1077, scalar=524, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T21:39:43+00:00 — outputs=1077, scalar=543, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T21:49:43+00:00 — outputs=1077, scalar=564, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T21:59:43+00:00 — outputs=1077, scalar=581, pairwise=0
+drivers/run_v03_sentinels_after.sh: line 32: runs/2026-05-19_v03/pairwise_scores.jsonl: No such file or directory
+  2026-05-19T22:09:43+00:00 — outputs=1077, scalar=601, pairwise=0

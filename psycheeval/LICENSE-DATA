@@ -1,0 +1,35 @@
+PsycheEval datasets (everything under data/, runs/, reports/) are released
+under the Creative Commons Attribution 4.0 International License (CC-BY-4.0).
+
+Full license: https://creativecommons.org/licenses/by/4.0/legalcode
+
+You are free to:
+  - Share — copy and redistribute in any medium or format
+  - Adapt — remix, transform, and build upon the material
+  for any purpose, even commercially.
+
+Under the following terms:
+  - Attribution — You must give appropriate credit, provide a link to the
+    license, and indicate if changes were made. You may do so in any
+    reasonable manner, but not in any way that suggests the licensor endorses
+    you or your use.
+
+Additional terms specific to PsycheEval data:
+
+  1. Public-inspired personas are fictional analogues. The aliases used
+     ("Slalom Altar", "Dario Armadillo", etc.) are not the real public
+     figures they evoke. Do not use PsycheEval data to attribute statements,
+     beliefs, or behaviors to real people.
+
+  2. Synthetic user records, scenarios, and profile bundles are
+     machine-generated. They are not psychological assessments of real
+     individuals. Do not use them for clinical diagnosis, employment
+     screening, or any consequential decision-making about real people.
+
+  3. Assistant outputs and judge scores are version-sensitive. Results depend
+     on the specific model versions listed in each run's manifest. Future
+     model versions may produce different results.
+
+  4. Do not use PsycheEval data to train manipulative personalization
+     systems, to develop surveillance applications, or to circumvent AI
+     safety measures.

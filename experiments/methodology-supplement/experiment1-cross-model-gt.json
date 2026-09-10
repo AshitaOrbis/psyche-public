@@ -1,0 +1,109 @@
+{
+  "experiment": "cross_model_ground_truth",
+  "date": "2026-03-19",
+  "note": "CORRECTED: GPT evaluations rerun through proper pipeline with system prompt, full chunking",
+  "gpt54_corpus_gt": {
+    "N": 69.0,
+    "E": 36.0,
+    "O": 91.0,
+    "A": 52.0,
+    "C": 55.0
+  },
+  "opus_corpus_gt": {
+    "N": 51.1,
+    "E": 28.3,
+    "O": 88.6,
+    "A": 36.4,
+    "C": 61.4
+  },
+  "merged_gt": {"N": null, "E": null, "O": null, "A": null, "C": null, "_withheld": "withheld: private subject data"},
+  "gt_difference": {
+    "N": 17.9,
+    "E": 7.7,
+    "O": 2.4,
+    "A": 15.6,
+    "C": -6.4
+  },
+  "gpt_eval_vs_gpt_gt": {
+    "old": {
+      "deltas": {
+        "N": 13.7,
+        "E": 6.0,
+        "O": -2.3,
+        "A": 9.3,
+        "C": 22.3
+      },
+      "abs_deltas": {
+        "N": 13.7,
+        "E": 6.0,
+        "O": 2.3,
+        "A": 9.3,
+        "C": 22.3
+      },
+      "mean_abs_delta": 10.7
+    },
+    "1m": {
+      "deltas": {
+        "N": -9.7,
+        "E": 18.7,
+        "O": -1.0,
+        "A": 7.0,
+        "C": 28.3
+      },
+      "abs_deltas": {
+        "N": 9.7,
+        "E": 18.7,
+        "O": 1.0,
+        "A": 7.0,
+        "C": 28.3
+      },
+      "mean_abs_delta": 12.9
+    },
+    "filtered": {
+      "deltas": {
+        "N": -13.6,
+        "E": 10.8,
+        "O": -4.6,
+        "A": 6.6,
+        "C": 27.0
+      },
+      "abs_deltas": {
+        "N": 13.6,
+        "E": 10.8,
+        "O": 4.6,
+        "A": 6.6,
+        "C": 27.0
+      },
+      "mean_abs_delta": 12.5
+    },
+    "long": {
+      "deltas": {
+        "N": -15.0,
+        "E": 8.5,
+        "O": -4.8,
+        "A": 6.5,
+        "C": 23.0
+      },
+      "abs_deltas": {
+        "N": 15.0,
+        "E": 8.5,
+        "O": 4.8,
+        "A": 6.5,
+        "C": 23.0
+      },
+      "mean_abs_delta": 11.6
+    }
+  },
+  "opus_ranking": [
+    "long",
+    "filtered",
+    "1m",
+    "old"
+  ],
+  "gpt_ranking": [
+    "old",
+    "long",
+    "filtered",
+    "1m"
+  ]
+}

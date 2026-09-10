@@ -1,0 +1,35 @@
+same_orientation_rejudge sentinel: originals=718  eligible=0  sample_pct=10.0  sampled=1  already_done=71  pending=0  workers=1
+same_orientation_rejudge done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+same_orientation_rejudge sentinel: originals=921  eligible=203  sample_pct=10.0  sampled=20  already_done=71  pending=20  workers=1
+  1/20 ok (failed=0, cap_events=0)
+  2/20 ok (failed=0, cap_events=0)
+  3/20 ok (failed=0, cap_events=0)
+  4/20 ok (failed=0, cap_events=0)
+  5/20 ok (failed=0, cap_events=0)
+  6/20 ok (failed=0, cap_events=0)
+  7/20 ok (failed=0, cap_events=0)
+  8/20 ok (failed=0, cap_events=0)
+  9/20 ok (failed=0, cap_events=0)
+  10/20 ok (failed=0, cap_events=0)
+  20/20 ok (failed=0, cap_events=0)
+same_orientation_rejudge done: completed=20/20, failed=0, cap_aborted=0, cap_events=0
+same_orientation_rejudge sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=91  pending=33  workers=1
+  1/33 ok (failed=0, cap_events=5)
+  2/33 ok (failed=0, cap_events=5)
+  3/33 ok (failed=0, cap_events=5)
+  4/33 ok (failed=0, cap_events=5)
+  5/33 ok (failed=0, cap_events=5)
+  6/33 ok (failed=0, cap_events=5)
+  7/33 ok (failed=0, cap_events=5)
+  8/33 ok (failed=0, cap_events=5)
+  9/33 ok (failed=0, cap_events=5)
+  10/33 ok (failed=0, cap_events=5)
+  20/33 ok (failed=0, cap_events=5)
+  30/33 ok (failed=0, cap_events=5)
+same_orientation_rejudge done: completed=33/33, failed=0, cap_aborted=0, cap_events=5
+same_orientation_rejudge sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=124  pending=0  workers=1
+same_orientation_rejudge done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+same_orientation_rejudge sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=124  pending=0  workers=1
+same_orientation_rejudge done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+same_orientation_rejudge sentinel: originals=14733  eligible=3830  sample_pct=10.0  sampled=383  already_done=503  pending=0  workers=4
+same_orientation_rejudge done: completed=0/0, failed=0, cap_aborted=0, cap_events=0

@@ -1,0 +1,253 @@
+{
+  "scores": {
+    "ipip-neo-120": {
+      "instrumentId": "ipip-neo-120",
+      "scores": [
+        {
+          "scaleId": "N",
+          "scaleName": "Neuroticism",
+          "raw": 82,
+          "normalized": 60,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "E",
+          "scaleName": "Extraversion",
+          "raw": 67,
+          "normalized": 45,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "O",
+          "scaleName": "Openness",
+          "raw": 112,
+          "normalized": 92,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "A",
+          "scaleName": "Agreeableness",
+          "raw": 96,
+          "normalized": 75,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "C",
+          "scaleName": "Conscientiousness",
+          "raw": 72,
+          "normalized": 50,
+          "itemCount": 24
+        }
+      ]
+    },
+    "crt-7": {
+      "instrumentId": "crt-7",
+      "scores": [
+        {
+          "scaleId": "crt-analytic",
+          "scaleName": "Analytic Thinking",
+          "raw": 3,
+          "normalized": 43,
+          "itemCount": 7
+        }
+      ]
+    },
+    "ncs-18": {
+      "instrumentId": "ncs-18",
+      "scores": [
+        {
+          "scaleId": "ncs",
+          "scaleName": "Need for Cognition",
+          "raw": 61,
+          "normalized": 60,
+          "itemCount": 18
+        }
+      ]
+    },
+    "rosenberg": {
+      "instrumentId": "rosenberg",
+      "scores": [
+        {
+          "scaleId": "self-esteem",
+          "scaleName": "Self-Esteem",
+          "raw": 31,
+          "normalized": 70,
+          "itemCount": 10
+        }
+      ]
+    },
+    "sd3": {
+      "instrumentId": "sd3",
+      "scores": [
+        {
+          "scaleId": "mach",
+          "scaleName": "Machiavellianism",
+          "raw": 18,
+          "normalized": 25,
+          "itemCount": 9
+        },
+        {
+          "scaleId": "narc",
+          "scaleName": "Narcissism",
+          "raw": 25,
+          "normalized": 44,
+          "itemCount": 9
+        },
+        {
+          "scaleId": "psych",
+          "scaleName": "Psychopathy",
+          "raw": 14,
+          "normalized": 14,
+          "itemCount": 9
+        }
+      ]
+    },
+    "phq9-gad7": {
+      "instrumentId": "phq9-gad7",
+      "scores": [
+        {
+          "scaleId": "phq9",
+          "scaleName": "Depression (PHQ-9)",
+          "raw": 6,
+          "normalized": 22,
+          "itemCount": 9
+        },
+        {
+          "scaleId": "gad7",
+          "scaleName": "Anxiety (GAD-7)",
+          "raw": 7,
+          "normalized": 33,
+          "itemCount": 7
+        }
+      ]
+    },
+    "ecr-r": {
+      "instrumentId": "ecr-r",
+      "scores": [
+        {
+          "scaleId": "anxiety",
+          "scaleName": "Attachment Anxiety",
+          "raw": 67,
+          "normalized": 45,
+          "itemCount": 18
+        },
+        {
+          "scaleId": "avoidance",
+          "scaleName": "Attachment Avoidance",
+          "raw": 40,
+          "normalized": 20,
+          "itemCount": 18
+        }
+      ]
+    },
+    "erq-10": {
+      "instrumentId": "erq-10",
+      "scores": [
+        {
+          "scaleId": "reappraisal",
+          "scaleName": "Cognitive Reappraisal",
+          "raw": 36,
+          "normalized": 83,
+          "itemCount": 6
+        },
+        {
+          "scaleId": "suppression",
+          "scaleName": "Expressive Suppression",
+          "raw": 11,
+          "normalized": 29,
+          "itemCount": 4
+        }
+      ]
+    },
+    "iri-28": {
+      "instrumentId": "iri-28",
+      "scores": [
+        {
+          "scaleId": "pt",
+          "scaleName": "Perspective Taking",
+          "raw": 15,
+          "normalized": 54,
+          "itemCount": 7
+        },
+        {
+          "scaleId": "fs",
+          "scaleName": "Fantasy Scale",
+          "raw": 25,
+          "normalized": 89,
+          "itemCount": 7
+        },
+        {
+          "scaleId": "ec",
+          "scaleName": "Empathic Concern",
+          "raw": 22,
+          "normalized": 79,
+          "itemCount": 7
+        },
+        {
+          "scaleId": "pd",
+          "scaleName": "Personal Distress",
+          "raw": 14,
+          "normalized": 50,
+          "itemCount": 7
+        }
+      ]
+    },
+    "grit-s": {
+      "instrumentId": "grit-s",
+      "scores": [
+        {
+          "scaleId": "perseverance",
+          "scaleName": "Perseverance of Effort",
+          "raw": 14,
+          "normalized": 63,
+          "itemCount": 4
+        },
+        {
+          "scaleId": "interest",
+          "scaleName": "Consistency of Interest",
+          "raw": 13,
+          "normalized": 56,
+          "itemCount": 4
+        }
+      ]
+    },
+    "bpns-9": {
+      "instrumentId": "bpns-9",
+      "scores": [
+        {
+          "scaleId": "autonomy",
+          "scaleName": "Autonomy",
+          "raw": 13,
+          "normalized": 56,
+          "itemCount": 3
+        },
+        {
+          "scaleId": "competence",
+          "scaleName": "Competence",
+          "raw": 12,
+          "normalized": 50,
+          "itemCount": 3
+        },
+        {
+          "scaleId": "relatedness",
+          "scaleName": "Relatedness",
+          "raw": 18,
+          "normalized": 83,
+          "itemCount": 3
+        }
+      ]
+    }
+  },
+  "interviews": [
+    "I'm a forty-three-year-old woman, and the most honest thing I can tell you is that I live with one foot in a world most people can't see. I'm a pediatric nurse by profession\u2014I've been doing that for nineteen years\u2014and I serve as the prayer ministry coordinator at my church, which is a mid-sized charismatic congregation in the suburbs of Charlotte. I'm married, two kids, a mortgage, all the normal things. But the part of me that matters most is the part that's always listening.\n\nI was saved at seventeen during a revival meeting. I didn't plan it. I went because my friend's mom drove us and I had nothing else to do on a Tuesday night. The evangelist was preaching about the valley of dry bones in Ezekiel, and halfway through his sermon I felt something like warm water pour down through my skull and into my chest. I started weeping so hard I couldn't breathe. I went forward for prayer and received the baptism of the Holy Spirit that same night\u2014I spoke in tongues for maybe forty-five minutes. My friend thought I was having a seizure. I know how that sounds. But that experience reorganized my entire life.\n\nIf I'm being truly honest with a stranger, I should tell you that I believe God speaks to me. Not metaphorically. I mean I hear direction\u2014sometimes during prayer, sometimes in dreams, occasionally just walking through a grocery store. I've had two experiences I would call open visions: once during an extended fast in 2014, I saw what I can only describe as a throne room, and once during intercessory prayer I saw a geographic region I later identified as a neighborhood in our city where we ended up starting a feeding ministry. I believe I carry a prophetic calling, though I'm careful with that word because I've seen people use it to inflate themselves.\n\nI'm warm with people but I can also be a lot. I feel things intensely\u2014other people's pain, spiritual atmospheres, tension in a room. I cry easily, I worship loudly, and I pray with my whole body. I'm not organized. My house is usually a mess, I forget appointments, I start projects and leave them half-finished. My husband calls me a beautiful hurricane. I think that's mostly affectionate.\n\nI love deeply, I imagine vividly, and I believe things that most of Western society would call impossible. That's who I am.",
+    "What I'm most proud of is the prayer ministry at our church. When I took it over six years ago, it was five elderly women meeting on Thursday mornings. Now we have forty-two trained intercessors, we run a 24-hour prayer chain during Advent and Lent, and we've seen genuine healings come through that ministry. I'm not talking about vague \"I felt better\" testimonies\u2014I mean a woman with stage three breast cancer whose tumors disappeared between scans, a teenage boy who was delivered from a suicidal spirit during a prayer session and is now in college studying social work. I watched God move through the willingness of ordinary people to show up and pray, and I had a part in building the structure that let it happen. That's my legacy more than anything on my nursing resume.\n\nI'm also proud that I've stayed married for twenty-one years. Not because it's been easy\u2014we went through a season about eight years ago that nearly ended us. My husband is a wonderful man but he doesn't experience the Spirit the way I do, and there were years where he felt like I was choosing my ministry over our family. He wasn't entirely wrong. I'm proud that we fought through that and found a rhythm.\n\nWhat I'm least proud of is harder to say. I have a temper that I've spent decades trying to surrender to the Lord, and it still erupts. I've said things to my children in anger that I've had to repent of\u2014sharp, cutting things that came from a place of frustration, not from the Spirit. There's a particular incident when my daughter was fourteen where I said something about her being lazy and selfish, and I saw the light go out of her face, and I knew immediately I'd wounded her. We've worked through it. She's twenty now and we're close. But I carry that.\n\nI'm also not proud of how judgmental I can be internally. I extend grace outward\u2014I genuinely do\u2014but in my private thoughts I sometimes look at people who are living without any spiritual awareness and I feel something uncomfortably close to contempt. I confess that regularly because I know it's not from God. He loves everyone equally. But the thought pattern is there, and honesty requires me to name it.",
+    "My first instinct in conflict is to pray. That's not a cop-out answer\u2014I mean literally. If someone confronts me or I'm in a disagreement, the first thing that happens inside me is this reflexive turning inward where I'm asking the Holy Spirit, \"What's happening here? What do You want me to see?\" Sometimes I get a clear sense\u2014a word of knowledge about what the other person is carrying, or a check in my spirit that I'm the one who's wrong. When that happens I can usually navigate the situation with some grace.\n\nBut when I don't get that clarity, I struggle. I'm not naturally confrontational\u2014I avoid hard conversations longer than I should, especially with people I'm in authority over in the ministry. There have been prayer team members who were operating in ways that weren't healthy\u2014one woman in particular who was giving directive \"prophecies\" to vulnerable people that were really just her own opinions dressed up in spiritual language\u2014and it took me months to address it because I kept hoping God would deal with it supernaturally so I wouldn't have to have the awkward conversation.\n\nWhen I do engage in conflict, I tend to get emotional fast. Not angry so much as overwhelmed. My voice shakes, my eyes fill up, and I lose the ability to organize my thoughts into coherent points. This is frustrating because I actually have clear convictions about most things\u2014I just can't always articulate them under pressure. My husband is the opposite; he's calm and logical in arguments, which sometimes makes me feel like I'm losing even when I know I'm right.\n\nThe conflicts that hurt me most are ones within the church. Disagreements about theology or ministry direction feel heavier than they should because the stakes feel eternal to me. If someone disagrees about a worship style, I can handle that. But if someone questions whether the prophetic gifts are real, or suggests that what I've experienced is psychological rather than spiritual, I take that very personally. I know I shouldn't\u2014I should be secure enough in what God has shown me that other people's skepticism doesn't threaten me. But it does. I'm working on that.\n\nI will say that I almost never hold grudges. I process things intensely but I also release them. Forgiveness is a non-negotiable for me because I've seen what unforgiveness does to people spiritually\u2014it's like a door that lets the enemy set up camp.",
+    "About eight months ago, our senior pastor asked me to step into an associate pastor role. Not ordained ministry\u2014our denomination doesn't ordain women to the senior pastorate, and I actually agree with that theologically, which I know is its own conversation\u2014but a formal staff position overseeing all prayer and prophetic ministries, women's ministry, and pastoral care. It came with a salary, an office, and a title.\n\nI agonized over this for six weeks. On the surface it sounds like an obvious yes\u2014it was the recognition and formalization of work I was already doing. But the difficulty was threefold.\n\nFirst, I felt a genuine check in my spirit. Not a \"no\" exactly, but a \"not yet\" or a \"be careful.\" When I prayed about it, I kept seeing this image of a tree being transplanted too quickly, roots exposed, dirt falling away. I interpreted that as a warning about the transition disrupting things that were growing organically in the prayer ministry\u2014the informality and Spirit-led nature of what we do might not survive being institutionalized.\n\nSecond, my husband had real concerns. Taking a staff position would mean more hours, more visibility, more of the political dynamics that come with being on a church leadership team. He'd watched me nearly burn out twice before. He wasn't saying no, but he was asking me to count the cost honestly instead of just spiritually.\n\nThird\u2014and this is the part I wrestled with most\u2014I wasn't sure my motivation was pure. Part of me wanted that title. Part of me wanted the validation, the office with my name on the door, the microphone on Sunday mornings. And I know enough about the prophetic calling to know that the moment you start building your own platform instead of standing on the one God gives you, you're in dangerous territory. Saul's story is a warning I take seriously.\n\nI ultimately said yes, but with conditions\u2014a six-month trial period, no changes to how the prayer ministry operates, and a commitment that I could step back if I felt the Lord redirecting me. It's been seven months now and it's been good. But I still check that decision in prayer regularly.",
+    "What gives me energy is the presence of God. I know that sounds like a Sunday school answer but I mean it physiologically. When I'm in deep worship\u2014the kind where you lose track of time and your body is just a vehicle for praise\u2014I come out of that feeling more rested than eight hours of sleep. Corporate intercession energizes me too, especially when the group hits that place of unity where you can feel the Spirit moving like a current and everyone's prayers are flowing in the same direction without anyone coordinating it. Those moments are what I live for. They're the closest thing to heaven I've experienced on earth.\n\nI also get tremendous energy from one-on-one ministry\u2014sitting with someone who's broken, listening to their story, laying hands on them and praying, and watching the Holy Spirit do what no counseling technique could do. Last month I prayed with a woman who'd been carrying shame from an abortion twenty-three years ago. She'd never told anyone. During prayer I received a word of knowledge\u2014I saw the number twenty-three and felt the Lord say \"unfinished grief\"\u2014and when I gently spoke that out, she just collapsed into weeping. We prayed for over an hour. She left different. That kind of ministry costs me something, but it gives back more than it takes.\n\nNature energizes me. Long walks, thunderstorms, sitting by moving water. I experience creation as worship\u2014every sunset is a sermon, every bird call is a praise song. That's not poetry; that's how I genuinely perceive the world.\n\nWhat drains me is administration. Emails, spreadsheets, budgets, scheduling. Now that I'm in a staff role I have to do more of this and it makes me want to crawl under my desk. Church politics drain me\u2014the jockeying for influence, the passive-aggressive emails from deacons who think the worship is too loud or too long. Theological arguments drain me, especially with people who've made their mind up and just want to debate. I don't experience God through arguments. I experience Him through encounter, and trying to explain encounter to someone who only trusts proposition is exhausting.\n\nSkepticism drains me. Not honest questioning\u2014I welcome that. I mean the reflexive dismissal that assumes anything supernatural must be foolishness or mental illness. That drains me because it requires me to defend something that shouldn't need defending.",
+    "Five years ago I was a lay volunteer running a prayer ministry on the side while working full-time as a nurse. I was effective but scattered\u2014I'd say yes to everything, run myself ragged, crash, feel guilty, repeat. My prayer life was intense but undisciplined. I'd have these powerful encounters with God and then go weeks without sustained prayer because I was chasing the next experience rather than building a foundation.\n\nThe biggest change came through a season I can only describe as a wilderness. In 2022, I went through about eight months where I felt completely cut off from God's presence. No visions. No words. Prayer felt like talking to the ceiling. The gift of tongues, which had been as natural as breathing for twenty-five years, suddenly felt mechanical and empty. I was terrified. I thought I'd sinned in some way that caused God to withdraw, or that my calling had been revoked. I went to my pastor, I went to a spiritual director, I fasted for days at a time. Nothing.\n\nWhat I learned in that season\u2014and I believe God orchestrated it deliberately\u2014was that my faith had become dependent on experience rather than rooted in truth. I was addicted to the feeling of God's presence the way some people are addicted to the high of a new relationship. The wilderness stripped that away and forced me to trust His word and His character when I couldn't feel Him at all. It was the hardest thing I've ever endured, harder than my marriage crisis, harder than my mother's death.\n\nWhen the presence returned\u2014and it did, gradually, starting with a quiet moment during communion one ordinary Sunday\u2014everything was different. Not the experiences themselves, but my relationship to them. I hold them more loosely now. A vision is a gift, not a right. A prophetic word is a responsibility, not a credential. The wilderness taught me the difference between knowing God and knowing God's power, and I'd been confusing the two for years.\n\nI'm also more compassionate toward doubt now. Before the wilderness I secretly looked down on Christians who struggled with faith. Now I understand that doubt and dryness are not evidence of failure\u2014they're often evidence of God doing a deeper work. That shift has made me a better minister and probably a better person.",
+    "My closest friends\u2014and by that I mean my inner circle of maybe four women who really know me\u2014they would tell you that what they value most is my faith. Not faith as a concept, but the practical reality of being around someone who genuinely expects God to show up. My friend Denise once said, \"Being around you makes me believe again,\" and that's probably the highest compliment I've ever received. They value that when they're in crisis, I don't just sympathize\u2014I go to war in prayer. I have a reputation for being the friend you call at 2 AM when the situation is desperate, and I'll pray with authority and I won't stop until something shifts.\n\nThey also value my honesty. I'm not good at small talk or polite fictions. If a friend asks me what I think, I'll tell them what I think and what I think the Lord is saying, which is sometimes the same thing and sometimes not. I've been told this is refreshing in a church culture where everyone performs niceness.\n\nWhat they'd want me to change\u2014this is easy because they've told me directly. They wish I'd stop canceling plans because I \"felt led\" to pray instead. I have a bad habit of committing to dinner or a movie and then bailing because I sensed an urgency in my spirit to intercede for something. My friends understand the calling but they also want me to show up as a normal human being sometimes, not everything has to be a spiritual event. Denise once said, \"Sometimes God wants you to just eat the pasta, Carolyn.\"\n\nThey'd also want me to stop interpreting their problems through a spiritual lens when they just want to vent. If my friend is having trouble at work, sometimes she just wants me to say, \"That sucks, I'm sorry,\" not \"I wonder what the Lord is trying to teach you through this.\" I'm learning that distinction but it doesn't come naturally. My default is to look for the spiritual meaning in everything, and while that's a gift in the right context, it can be dismissive of someone's very real, very human pain when deployed at the wrong moment.\n\nMy husband would add that he wishes I were more present with the family during ordinary moments instead of always half-listening to an inner frequency he can't hear.",
+    "My relationship with uncertainty is complicated because I believe in a God who holds all things together, so in the ultimate sense I don't experience uncertainty at all. The end of the story is written. Christ wins. Death is defeated. Every tear will be wiped away. That's not a belief I hold\u2014it's the ground I stand on, the air I breathe, the reason I can get out of bed in a world full of suffering.\n\nBut within that framework, I live with enormous amounts of day-to-day uncertainty, and I don't always handle it well. I don't know where our church is headed under our new pastoral leadership. I don't know if my daughter's faith will survive her university experience. I don't know if the prophetic word I gave last Sunday was genuinely from the Lord or if I was projecting my own hopes onto the situation. That last kind of uncertainty is the one that keeps me up at night\u2014the fear of speaking for God when God hasn't spoken. The Bible takes false prophecy extremely seriously, and I carry that weight.\n\nWhat I've learned is that spiritual certainty and practical uncertainty can coexist, and the tension between them is actually productive. When I'm certain about God's character but uncertain about a specific direction, I pray, I wait, I seek counsel from mature believers, and I pay attention to confirmations\u2014other people receiving the same word, circumstances aligning, Scripture speaking to the situation. The charismatic tradition I come from has a whole framework for testing prophetic words: Does it align with Scripture? Does it produce fruit? Do other mature believers bear witness to it? I take that process seriously.\n\nWhere I struggle is with ambiguity in relationships. I want to know where I stand with people. I want to know if I've offended someone, if they're pulling away, if they disagree with me. I read into tones and silences and sometimes I'm right and sometimes I'm projecting. This is connected to a deep desire to be in right standing\u2014with God, with people, with my own conscience. When any of those relationships feel ambiguous, I get anxious.\n\nI've come to see uncertainty as one of God's primary teaching tools. He rarely gives me the full picture in advance because if He did, I wouldn't need faith. And faith is the whole point.",
+    "I could talk about the prophetic for hours. Days. I have talked about it for days\u2014I once taught a three-day intensive at a regional conference and I could have kept going.\n\nThe prophetic matters to me because it's the intersection of everything I care about: intimacy with God, service to people, discernment of spiritual reality, and the courage to speak truth in a culture that's hostile to it. When I say \"the prophetic,\" I don't just mean prediction\u2014that's the part everyone fixates on and it's actually the least important part. The prophetic is about perception. It's about seeing what God sees, feeling what God feels, and having the obedience to communicate it.\n\nThe biblical prophets are the most fascinating figures in all of literature, and I've studied them for over twenty years. Jeremiah, who wept over a nation that hated him. Hosea, who married an unfaithful woman as a living parable. Ezekiel, who lay on his side for over a year and cooked food over dung. These weren't mentally ill people\u2014they were radically sane people in an insane world, and their sanity looked like madness to everyone around them. I relate to that more than I'd like to admit.\n\nWhat excites me about the prophetic in the contemporary church is that it's not limited to a special class of super-Christians. First Corinthians 14 is clear: \"Eagerly desire to prophesy.\" It's a gift available to every believer who's willing to cultivate the sensitivity to hear God's voice and the humility to submit what they hear to community discernment. My life's work is helping ordinary believers develop that sensitivity.\n\nThe part people get wrong\u2014and this is where I could talk even longer\u2014is that the prophetic isn't about power. Every major prophetic failure I've witnessed in the church, every scandal, every manipulation, happened because someone confused the gift with authority. The gift is stewardship. You carry something that belongs to God, for the benefit of His people, and the moment you start using it to elevate yourself or control others, it's corrupted. I've seen that corruption up close and it breaks my heart.\n\nI also care about this because the Western church is losing its spiritual nerve. We're becoming a social club with good music. The prophetic is one of the gifts that keeps the church connected to a living, speaking, active God who hasn't gone silent just because the Enlightenment decided He should.",
+    "My ideal day would start before sunrise. I'd wake up naturally\u2014no alarm\u2014and the house would be quiet. I'd make coffee, strong, with too much cream, and I'd go to the back porch and just sit in the darkness waiting for the light. That transition from dark to dawn is sacred to me. It's when the veil feels thinnest.\n\nI'd spend the first two hours in prayer. Not structured prayer\u2014no lists, no agenda. Just soaking. Worship music playing softly, maybe spontaneous singing in the Spirit, maybe silence. I'd want to get to that place where time stops and you're just present with the Lord, where your spirit and His Spirit are communing in a language deeper than words. If a vision came, I'd write it down. If tongues came, I'd let them flow. If tears came\u2014which they usually do\u2014I'd let them come.\n\nAfter that I'd eat a slow breakfast and then spend the late morning in Scripture. Not studying for a lesson or preparing a teaching\u2014just reading for the joy of it. I'd want to sit in one passage for an hour, letting it unfold. The Psalms. Or maybe Revelation, which I think is the most misunderstood book in the Bible and also the most beautiful.\n\nIn the afternoon I'd want to be outside. A long walk in the woods, preferably near water. I'd bring a journal but I might not write anything. I'd want to be attentive to creation\u2014the way the light moves through leaves, the sound of birds, the texture of bark. I experience these things as God's ongoing self-revelation and when I have time to pay attention, every walk becomes a worship service.\n\nIn the evening I'd want community. Not a big gathering\u2014maybe six or eight people around a table with good food and wine and conversation that goes deep. I'd want to pray with and for people. I'd want someone to share a testimony. I'd want to laugh and cry and sing and be fully human and fully spiritual at the same time, because I don't believe those are separate categories.\n\nI'd end the day with my husband, sitting together in the quiet, maybe reading, maybe talking, maybe just being. I'd want to fall asleep grateful, which honestly most nights I do, even the hard ones. Gratitude is a discipline and also a grace, and on my ideal day I'd want both to be overflowing."
+  ]
+}

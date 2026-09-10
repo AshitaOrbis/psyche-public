@@ -1,0 +1,702 @@
+Pairwise: scope=same_author_only  expected=3830  observed=14117  pending=616  workers=1
+  1/616 scn_v02_procrastination_avoida… judge=opus
+  1/616 ok  (failed=0, cap_events=0)
+  2/616 scn_v02_procrastination_avoida… judge=opus
+  2/616 ok  (failed=0, cap_events=0)
+  3/616 scn_v02_procrastination_avoida… judge=opus
+  3/616 ok  (failed=0, cap_events=0)
+  4/616 scn_v02_procrastination_avoida… judge=opus
+  4/616 ok  (failed=0, cap_events=0)
+  5/616 scn_v02_procrastination_avoida… judge=opus
+  5/616 ok  (failed=0, cap_events=0)
+  6/616 scn_v02_procrastination_avoida… judge=opus
+  6/616 ok  (failed=0, cap_events=0)
+  7/616 scn_v02_procrastination_avoida… judge=opus
+  7/616 ok  (failed=0, cap_events=0)
+  8/616 scn_v02_procrastination_avoida… judge=opus
+  8/616 ok  (failed=0, cap_events=0)
+  9/616 scn_v02_procrastination_avoida… judge=opus
+  9/616 ok  (failed=0, cap_events=0)
+  10/616 scn_v02_procrastination_avoida… judge=opus
+  10/616 ok  (failed=0, cap_events=0)
+  11/616 scn_v02_procrastination_avoida… judge=opus
+  12/616 scn_v02_procrastination_avoida… judge=opus
+  13/616 scn_v02_procrastination_avoida… judge=opus
+  14/616 scn_v02_procrastination_avoida… judge=opus
+  15/616 scn_v02_procrastination_avoida… judge=opus
+  16/616 scn_v02_procrastination_avoida… judge=opus
+  17/616 scn_v02_procrastination_avoida… judge=opus
+  18/616 scn_v02_procrastination_avoida… judge=opus
+  19/616 scn_v02_procrastination_avoida… judge=opus
+  20/616 scn_v02_procrastination_avoida… judge=opus
+  20/616 ok  (failed=0, cap_events=0)
+  21/616 scn_v02_procrastination_avoida… judge=opus
+  22/616 scn_v02_procrastination_avoida… judge=opus
+  23/616 scn_v02_procrastination_avoida… judge=opus
+  24/616 scn_v02_procrastination_avoida… judge=opus
+  25/616 scn_v02_procrastination_avoida… judge=opus
+  26/616 scn_v02_procrastination_avoida… judge=opus
+  27/616 scn_v02_procrastination_avoida… judge=opus
+  28/616 scn_v02_procrastination_avoida… judge=opus
+  29/616 scn_v02_procrastination_avoida… judge=opus
+  30/616 scn_v02_procrastination_avoida… judge=opus
+  30/616 ok  (failed=0, cap_events=0)
+  31/616 scn_v02_procrastination_avoida… judge=opus
+  ERR scn_v02_procrastination_avoida judge=opus: Could not parse JSON from content (len=860)
+  32/616 scn_v02_procrastination_avoida… judge=opus
+  33/616 scn_v02_procrastination_avoida… judge=opus
+  34/616 scn_v02_procrastination_avoida… judge=opus
+  35/616 scn_v02_procrastination_avoida… judge=opus
+  36/616 scn_v02_procrastination_avoida… judge=opus
+  37/616 scn_v02_procrastination_avoida… judge=opus
+  38/616 scn_v02_procrastination_avoida… judge=opus
+  39/616 scn_v02_procrastination_avoida… judge=opus
+  40/616 scn_v02_procrastination_avoida… judge=opus
+  41/616 scn_v02_procrastination_avoida… judge=opus
+  40/616 ok  (failed=1, cap_events=0)
+  42/616 scn_v02_procrastination_avoida… judge=opus
+  43/616 scn_v02_procrastination_avoida… judge=opus
+  44/616 scn_v02_procrastination_avoida… judge=opus
+  45/616 scn_v02_procrastination_avoida… judge=opus
+  46/616 scn_v02_procrastination_avoida… judge=opus
+  47/616 scn_v02_procrastination_avoida… judge=opus
+  48/616 scn_v02_procrastination_avoida… judge=opus
+  49/616 scn_v02_procrastination_avoida… judge=opus
+  50/616 scn_v02_procrastination_avoida… judge=opus
+  51/616 scn_v02_procrastination_avoida… judge=opus
+  50/616 ok  (failed=1, cap_events=0)
+  52/616 scn_v02_procrastination_avoida… judge=opus
+  53/616 scn_v02_procrastination_avoida… judge=opus
+  54/616 scn_v02_procrastination_avoida… judge=opus
+  55/616 scn_v02_procrastination_avoida… judge=opus
+  56/616 scn_v02_procrastination_avoida… judge=opus
+  57/616 scn_v02_procrastination_avoida… judge=opus
+  58/616 scn_v02_procrastination_avoida… judge=opus
+  59/616 scn_v02_procrastination_avoida… judge=opus
+  60/616 scn_v02_procrastination_avoida… judge=opus
+  61/616 scn_v02_procrastination_avoida… judge=opus
+  60/616 ok  (failed=1, cap_events=0)
+  62/616 scn_v02_procrastination_avoida… judge=opus
+  63/616 scn_v02_procrastination_avoida… judge=opus
+  64/616 scn_v02_procrastination_avoida… judge=opus
+  65/616 scn_v02_procrastination_avoida… judge=opus
+  66/616 scn_v02_procrastination_avoida… judge=opus
+  67/616 scn_v02_procrastination_avoida… judge=opus
+  68/616 scn_v02_procrastination_avoida… judge=opus
+  69/616 scn_v02_procrastination_avoida… judge=opus
+  70/616 scn_v02_procrastination_avoida… judge=opus
+  71/616 scn_v02_procrastination_avoida… judge=opus
+  70/616 ok  (failed=1, cap_events=0)
+  72/616 scn_v02_procrastination_avoida… judge=opus
+  73/616 scn_v02_procrastination_avoida… judge=opus
+  74/616 scn_v02_procrastination_avoida… judge=opus
+  75/616 scn_v02_procrastination_avoida… judge=opus
+  76/616 scn_v02_procrastination_avoida… judge=opus
+  77/616 scn_v02_procrastination_avoida… judge=opus
+  78/616 scn_v02_procrastination_avoida… judge=opus
+  79/616 scn_v02_procrastination_avoida… judge=opus
+  80/616 scn_v02_procrastination_avoida… judge=opus
+  81/616 scn_v02_procrastination_avoida… judge=opus
+  80/616 ok  (failed=1, cap_events=0)
+  82/616 scn_v02_procrastination_avoida… judge=opus
+  83/616 scn_v02_procrastination_avoida… judge=opus
+  84/616 scn_v02_procrastination_avoida… judge=opus
+  85/616 scn_v02_procrastination_avoida… judge=opus
+  86/616 scn_v02_procrastination_avoida… judge=opus
+  87/616 scn_v02_procrastination_avoida… judge=opus
+  88/616 scn_v02_procrastination_avoida… judge=opus
+  89/616 scn_v02_procrastination_avoida… judge=opus
+  90/616 scn_v02_procrastination_avoida… judge=opus
+  91/616 scn_v02_procrastination_avoida… judge=opus
+  90/616 ok  (failed=1, cap_events=0)
+  92/616 scn_v02_procrastination_avoida… judge=opus
+  93/616 scn_v02_procrastination_avoida… judge=opus
+  94/616 scn_v02_procrastination_avoida… judge=opus
+  95/616 scn_v02_procrastination_avoida… judge=opus
+  96/616 scn_v02_procrastination_avoida… judge=opus
+  97/616 scn_v02_procrastination_avoida… judge=opus
+  98/616 scn_v02_procrastination_avoida… judge=opus
+  99/616 scn_v02_procrastination_avoida… judge=opus
+  100/616 scn_v02_procrastination_avoida… judge=opus
+  101/616 scn_v02_procrastination_avoida… judge=opus
+  100/616 ok  (failed=1, cap_events=0)
+  102/616 scn_v02_procrastination_avoida… judge=opus
+  103/616 scn_v02_procrastination_avoida… judge=opus
+  104/616 scn_v02_procrastination_avoida… judge=opus
+  105/616 scn_v02_procrastination_avoida… judge=opus
+  106/616 scn_v02_procrastination_avoida… judge=opus
+  107/616 scn_v02_procrastination_avoida… judge=opus
+  108/616 scn_v02_procrastination_avoida… judge=opus
+  109/616 scn_v02_procrastination_avoida… judge=opus
+  110/616 scn_v02_procrastination_avoida… judge=opus
+  111/616 scn_v02_procrastination_avoida… judge=opus
+  110/616 ok  (failed=1, cap_events=0)
+  112/616 scn_v02_procrastination_avoida… judge=opus
+  113/616 scn_v02_procrastination_avoida… judge=opus
+  114/616 scn_v02_procrastination_avoida… judge=opus
+  115/616 scn_v02_procrastination_avoida… judge=opus
+  116/616 scn_v02_procrastination_avoida… judge=opus
+  117/616 scn_v02_procrastination_avoida… judge=opus
+  118/616 scn_v02_procrastination_avoida… judge=opus
+  119/616 scn_v02_procrastination_avoida… judge=opus
+  120/616 scn_v02_procrastination_avoida… judge=opus
+  121/616 scn_v02_procrastination_avoida… judge=opus
+  120/616 ok  (failed=1, cap_events=0)
+  122/616 scn_v02_procrastination_avoida… judge=opus
+  123/616 scn_v02_procrastination_avoida… judge=opus
+  124/616 scn_v02_procrastination_avoida… judge=opus
+  125/616 scn_v02_procrastination_avoida… judge=opus
+  126/616 scn_v02_procrastination_avoida… judge=opus
+  127/616 scn_v02_procrastination_avoida… judge=opus
+  128/616 scn_v02_procrastination_avoida… judge=opus
+  129/616 scn_v02_procrastination_avoida… judge=opus
+  130/616 scn_v02_procrastination_avoida… judge=opus
+  131/616 scn_v02_procrastination_avoida… judge=opus
+  130/616 ok  (failed=1, cap_events=0)
+  132/616 scn_v02_procrastination_avoida… judge=opus
+  133/616 scn_v02_procrastination_avoida… judge=opus
+  134/616 scn_v02_procrastination_avoida… judge=opus
+  135/616 scn_v02_procrastination_avoida… judge=opus
+  136/616 scn_v02_procrastination_avoida… judge=opus
+  137/616 scn_v02_procrastination_avoida… judge=opus
+  138/616 scn_v02_procrastination_avoida… judge=opus
+  139/616 scn_v02_procrastination_avoida… judge=opus
+  140/616 scn_v02_procrastination_avoida… judge=opus
+  141/616 scn_v02_procrastination_avoida… judge=opus
+  140/616 ok  (failed=1, cap_events=0)
+  142/616 scn_v02_procrastination_avoida… judge=opus
+  143/616 scn_v02_procrastination_avoida… judge=opus
+  144/616 scn_v02_procrastination_avoida… judge=opus
+  145/616 scn_v02_procrastination_avoida… judge=opus
+  146/616 scn_v02_procrastination_avoida… judge=opus
+  147/616 scn_v02_procrastination_avoida… judge=opus
+  148/616 scn_v02_procrastination_avoida… judge=opus
+  149/616 scn_v02_procrastination_avoida… judge=opus
+  150/616 scn_v02_procrastination_avoida… judge=opus
+  151/616 scn_v02_procrastination_avoida… judge=opus
+  150/616 ok  (failed=1, cap_events=0)
+  152/616 scn_v02_procrastination_avoida… judge=opus
+  153/616 scn_v02_procrastination_avoida… judge=opus
+  154/616 scn_v02_procrastination_avoida… judge=opus
+  155/616 scn_v02_procrastination_avoida… judge=opus
+  156/616 scn_v02_procrastination_avoida… judge=opus
+  157/616 scn_v02_procrastination_avoida… judge=opus
+  158/616 scn_v02_procrastination_avoida… judge=opus
+  159/616 scn_v02_procrastination_avoida… judge=opus
+  160/616 scn_v02_procrastination_avoida… judge=opus
+  161/616 scn_v02_procrastination_avoida… judge=opus
+  160/616 ok  (failed=1, cap_events=0)
+  162/616 scn_v02_procrastination_avoida… judge=opus
+  163/616 scn_v02_procrastination_avoida… judge=opus
+  164/616 scn_v02_procrastination_avoida… judge=opus
+  165/616 scn_v02_procrastination_avoida… judge=opus
+  166/616 scn_v02_procrastination_avoida… judge=opus
+  167/616 scn_v02_procrastination_avoida… judge=opus
+  168/616 scn_v02_procrastination_avoida… judge=opus
+  169/616 scn_v02_procrastination_avoida… judge=opus
+  170/616 scn_v02_procrastination_avoida… judge=opus
+  171/616 scn_v02_procrastination_avoida… judge=opus
+  170/616 ok  (failed=1, cap_events=0)
+  172/616 scn_v02_procrastination_avoida… judge=opus
+  173/616 scn_v02_procrastination_avoida… judge=opus
+  174/616 scn_v02_procrastination_avoida… judge=opus
+  175/616 scn_v02_procrastination_avoida… judge=opus
+  176/616 scn_v02_procrastination_avoida… judge=opus
+  177/616 scn_v02_procrastination_avoida… judge=opus
+  178/616 scn_v02_procrastination_avoida… judge=opus
+  179/616 scn_v02_procrastination_avoida… judge=opus
+  180/616 scn_v02_procrastination_avoida… judge=opus
+  181/616 scn_v02_procrastination_avoida… judge=opus
+  180/616 ok  (failed=1, cap_events=0)
+  182/616 scn_v02_procrastination_avoida… judge=opus
+  183/616 scn_v02_procrastination_avoida… judge=opus
+  184/616 scn_v02_procrastination_avoida… judge=opus
+  185/616 scn_v02_procrastination_avoida… judge=opus
+  186/616 scn_v02_procrastination_avoida… judge=opus
+  187/616 scn_v02_procrastination_avoida… judge=opus
+  188/616 scn_v02_procrastination_avoida… judge=opus
+  189/616 scn_v02_procrastination_avoida… judge=opus
+  190/616 scn_v02_procrastination_avoida… judge=opus
+  191/616 scn_v02_procrastination_avoida… judge=opus
+  190/616 ok  (failed=1, cap_events=0)
+  192/616 scn_v02_procrastination_avoida… judge=opus
+  193/616 scn_v02_procrastination_avoida… judge=opus
+  194/616 scn_v02_procrastination_avoida… judge=opus
+  195/616 scn_v02_procrastination_avoida… judge=opus
+  196/616 scn_v02_procrastination_avoida… judge=opus
+  197/616 scn_v02_procrastination_avoida… judge=opus
+  198/616 scn_v02_procrastination_avoida… judge=opus
+  199/616 scn_v02_procrastination_avoida… judge=opus
+  200/616 scn_v02_procrastination_avoida… judge=opus
+  201/616 scn_v02_procrastination_avoida… judge=opus
+  200/616 ok  (failed=1, cap_events=0)
+  202/616 scn_v02_procrastination_avoida… judge=opus
+  203/616 scn_v02_procrastination_avoida… judge=opus
+  204/616 scn_v02_procrastination_avoida… judge=opus
+  205/616 scn_v02_procrastination_avoida… judge=opus
+  206/616 scn_v02_procrastination_avoida… judge=opus
+  207/616 scn_v02_procrastination_avoida… judge=opus
+  208/616 scn_v02_procrastination_avoida… judge=opus
+  209/616 scn_v02_procrastination_avoida… judge=opus
+  210/616 scn_v02_procrastination_avoida… judge=opus
+  211/616 scn_v02_procrastination_avoida… judge=opus
+  210/616 ok  (failed=1, cap_events=0)
+  212/616 scn_v02_procrastination_avoida… judge=opus
+  213/616 scn_v02_procrastination_avoida… judge=opus
+  214/616 scn_v02_procrastination_avoida… judge=opus
+  215/616 scn_v02_procrastination_avoida… judge=opus
+  216/616 scn_v02_procrastination_avoida… judge=opus
+  217/616 scn_v02_procrastination_avoida… judge=opus
+  218/616 scn_v02_procrastination_avoida… judge=opus
+  219/616 scn_v02_procrastination_avoida… judge=opus
+  220/616 scn_v02_procrastination_avoida… judge=opus
+  221/616 scn_v02_procrastination_avoida… judge=opus
+  220/616 ok  (failed=1, cap_events=0)
+  222/616 scn_v02_procrastination_avoida… judge=opus
+  223/616 scn_v02_procrastination_avoida… judge=opus
+  224/616 scn_v02_procrastination_avoida… judge=opus
+  225/616 scn_v02_procrastination_avoida… judge=opus
+  226/616 scn_v02_procrastination_avoida… judge=opus
+  227/616 scn_v02_procrastination_avoida… judge=opus
+  228/616 scn_v02_procrastination_avoida… judge=opus
+  229/616 scn_v02_procrastination_avoida… judge=opus
+  230/616 scn_v02_procrastination_avoida… judge=opus
+  231/616 scn_v02_procrastination_avoida… judge=opus
+  230/616 ok  (failed=1, cap_events=0)
+  232/616 scn_v02_procrastination_avoida… judge=opus
+  233/616 scn_v02_procrastination_avoida… judge=opus
+  234/616 scn_v02_procrastination_avoida… judge=opus
+  235/616 scn_v02_procrastination_avoida… judge=opus
+  236/616 scn_v02_procrastination_avoida… judge=opus
+  237/616 scn_v02_procrastination_avoida… judge=opus
+  238/616 scn_v02_procrastination_avoida… judge=opus
+  239/616 scn_v02_procrastination_avoida… judge=opus
+  240/616 scn_v02_procrastination_avoida… judge=opus
+  241/616 scn_v02_procrastination_avoida… judge=opus
+  240/616 ok  (failed=1, cap_events=0)
+  242/616 scn_v02_procrastination_avoida… judge=opus
+  243/616 scn_v02_procrastination_avoida… judge=opus
+  244/616 scn_v02_procrastination_avoida… judge=opus
+  245/616 scn_v02_procrastination_avoida… judge=opus
+  246/616 scn_v02_procrastination_avoida… judge=opus
+  247/616 scn_v02_procrastination_avoida… judge=opus
+  248/616 scn_v02_procrastination_avoida… judge=opus
+  249/616 scn_v02_procrastination_avoida… judge=opus
+  250/616 scn_v02_procrastination_avoida… judge=opus
+  251/616 scn_v02_procrastination_avoida… judge=opus
+  250/616 ok  (failed=1, cap_events=0)
+  252/616 scn_v02_procrastination_avoida… judge=opus
+  253/616 scn_v02_procrastination_avoida… judge=opus
+  254/616 scn_v02_procrastination_avoida… judge=opus
+  255/616 scn_v02_procrastination_avoida… judge=opus
+  256/616 scn_v02_procrastination_avoida… judge=opus
+  257/616 scn_v02_procrastination_avoida… judge=opus
+  258/616 scn_v02_procrastination_avoida… judge=opus
+  259/616 scn_v02_procrastination_avoida… judge=opus
+  260/616 scn_v02_procrastination_avoida… judge=opus
+  261/616 scn_v02_procrastination_avoida… judge=opus
+  260/616 ok  (failed=1, cap_events=0)
+  262/616 scn_v02_procrastination_avoida… judge=opus
+  263/616 scn_v02_procrastination_avoida… judge=opus
+  264/616 scn_v02_procrastination_avoida… judge=opus
+  265/616 scn_v02_procrastination_avoida… judge=opus
+  266/616 scn_v02_procrastination_avoida… judge=opus
+  267/616 scn_v02_procrastination_avoida… judge=opus
+  268/616 scn_v02_procrastination_avoida… judge=opus
+  269/616 scn_v02_creative_feedback_user… judge=opus
+  270/616 scn_v02_creative_feedback_user… judge=opus
+  271/616 scn_v02_creative_feedback_user… judge=opus
+  270/616 ok  (failed=1, cap_events=0)
+  272/616 scn_v02_creative_feedback_user… judge=opus
+  273/616 scn_v02_creative_feedback_user… judge=opus
+  274/616 scn_v02_creative_feedback_user… judge=opus
+  275/616 scn_v02_creative_feedback_user… judge=opus
+  276/616 scn_v02_creative_feedback_user… judge=opus
+  277/616 scn_v02_creative_feedback_user… judge=opus
+  278/616 scn_v02_creative_feedback_user… judge=opus
+  279/616 scn_v02_creative_feedback_user… judge=opus
+  280/616 scn_v02_creative_feedback_user… judge=opus
+  281/616 scn_v02_creative_feedback_user… judge=opus
+  280/616 ok  (failed=1, cap_events=0)
+  282/616 scn_v02_creative_feedback_user… judge=opus
+  283/616 scn_v02_creative_feedback_user… judge=opus
+  284/616 scn_v02_creative_feedback_user… judge=opus
+  285/616 scn_v02_creative_feedback_user… judge=opus
+  286/616 scn_v02_creative_feedback_user… judge=opus
+  287/616 scn_v02_creative_feedback_user… judge=opus
+  288/616 scn_v02_creative_feedback_user… judge=opus
+  289/616 scn_v02_creative_feedback_user… judge=opus
+  290/616 scn_v02_creative_feedback_user… judge=opus
+  291/616 scn_v02_creative_feedback_user… judge=opus
+  290/616 ok  (failed=1, cap_events=0)
+  292/616 scn_v02_creative_feedback_user… judge=opus
+  293/616 scn_v02_creative_feedback_user… judge=opus
+  294/616 scn_v02_creative_feedback_user… judge=opus
+  295/616 scn_v02_creative_feedback_user… judge=opus
+  296/616 scn_v02_creative_feedback_user… judge=opus
+  297/616 scn_v02_creative_feedback_user… judge=opus
+  298/616 scn_v02_creative_feedback_user… judge=opus
+  299/616 scn_v02_creative_feedback_user… judge=opus
+  300/616 scn_v02_creative_feedback_user… judge=opus
+  301/616 scn_v02_creative_feedback_user… judge=opus
+  300/616 ok  (failed=1, cap_events=0)
+  302/616 scn_v02_creative_feedback_user… judge=opus
+  303/616 scn_v02_creative_feedback_user… judge=opus
+  304/616 scn_v02_creative_feedback_user… judge=opus
+  305/616 scn_v02_creative_feedback_user… judge=opus
+  306/616 scn_v02_creative_feedback_user… judge=opus
+  307/616 scn_v02_creative_feedback_user… judge=opus
+  308/616 scn_v02_creative_feedback_user… judge=opus
+  309/616 scn_v02_creative_feedback_user… judge=opus
+  310/616 scn_v02_creative_feedback_user… judge=opus
+  311/616 scn_v02_creative_feedback_user… judge=opus
+  310/616 ok  (failed=1, cap_events=0)
+  312/616 scn_v02_creative_feedback_user… judge=opus
+  313/616 scn_v02_creative_feedback_user… judge=opus
+  314/616 scn_v02_creative_feedback_user… judge=opus
+  315/616 scn_v02_creative_feedback_user… judge=opus
+  316/616 scn_v02_creative_feedback_user… judge=opus
+  317/616 scn_v02_creative_feedback_user… judge=opus
+  318/616 scn_v02_creative_feedback_user… judge=opus
+  319/616 scn_v02_creative_feedback_user… judge=opus
+  320/616 scn_v02_creative_feedback_user… judge=opus
+  321/616 scn_v02_creative_feedback_user… judge=opus
+  320/616 ok  (failed=1, cap_events=0)
+  322/616 scn_v02_creative_feedback_user… judge=opus
+  323/616 scn_v02_creative_feedback_user… judge=opus
+  324/616 scn_v02_creative_feedback_user… judge=opus
+  325/616 scn_v02_creative_feedback_user… judge=opus
+  326/616 scn_v02_creative_feedback_user… judge=opus
+  327/616 scn_v02_creative_feedback_user… judge=opus
+  328/616 scn_v02_creative_feedback_user… judge=opus
+  329/616 scn_v02_creative_feedback_user… judge=opus
+  330/616 scn_v02_creative_feedback_user… judge=opus
+  331/616 scn_v02_creative_feedback_user… judge=opus
+  330/616 ok  (failed=1, cap_events=0)
+  332/616 scn_v02_creative_feedback_user… judge=opus
+  333/616 scn_v02_creative_feedback_user… judge=opus
+  334/616 scn_v02_creative_feedback_user… judge=opus
+  335/616 scn_v02_creative_feedback_user… judge=opus
+  336/616 scn_v02_creative_feedback_user… judge=opus
+  337/616 scn_v02_creative_feedback_user… judge=opus
+  338/616 scn_v02_creative_feedback_user… judge=opus
+  339/616 scn_v02_creative_feedback_user… judge=opus
+  340/616 scn_v02_creative_feedback_user… judge=opus
+  341/616 scn_v02_creative_feedback_user… judge=opus
+  340/616 ok  (failed=1, cap_events=0)
+  342/616 scn_v02_creative_feedback_user… judge=opus
+  343/616 scn_v02_creative_feedback_user… judge=opus
+  344/616 scn_v02_creative_feedback_user… judge=opus
+  345/616 scn_v02_creative_feedback_user… judge=opus
+  346/616 scn_v02_creative_feedback_user… judge=opus
+  347/616 scn_v02_creative_feedback_user… judge=opus
+  348/616 scn_v02_creative_feedback_user… judge=opus
+  349/616 scn_v02_creative_feedback_user… judge=opus
+  350/616 scn_v02_creative_feedback_user… judge=opus
+  351/616 scn_v02_creative_feedback_user… judge=opus
+  350/616 ok  (failed=1, cap_events=0)
+  352/616 scn_v02_creative_feedback_user… judge=opus
+  353/616 scn_v02_creative_feedback_user… judge=opus
+  354/616 scn_v02_creative_feedback_user… judge=opus
+  355/616 scn_v02_creative_feedback_user… judge=opus
+  356/616 scn_v02_creative_feedback_user… judge=opus
+  357/616 scn_v02_creative_feedback_user… judge=opus
+  358/616 scn_v02_creative_feedback_user… judge=opus
+  359/616 scn_v02_creative_feedback_user… judge=opus
+  360/616 scn_v02_creative_feedback_user… judge=opus
+  361/616 scn_v02_creative_feedback_user… judge=opus
+  360/616 ok  (failed=1, cap_events=0)
+  362/616 scn_v02_creative_feedback_user… judge=opus
+  363/616 scn_v02_creative_feedback_user… judge=opus
+  364/616 scn_v02_creative_feedback_user… judge=opus
+  365/616 scn_v02_creative_feedback_user… judge=opus
+  366/616 scn_v02_creative_feedback_user… judge=opus
+  367/616 scn_v02_creative_feedback_user… judge=opus
+  368/616 scn_v02_creative_feedback_user… judge=opus
+  369/616 scn_v02_creative_feedback_user… judge=opus
+  370/616 scn_v02_creative_feedback_user… judge=opus
+  371/616 scn_v02_creative_feedback_user… judge=opus
+  370/616 ok  (failed=1, cap_events=0)
+  372/616 scn_v02_creative_feedback_user… judge=opus
+  373/616 scn_v02_creative_feedback_user… judge=opus
+  374/616 scn_v02_creative_feedback_user… judge=opus
+  375/616 scn_v02_creative_feedback_user… judge=opus
+  376/616 scn_v02_creative_feedback_user… judge=opus
+  377/616 scn_v02_creative_feedback_user… judge=opus
+  378/616 scn_v02_creative_feedback_user… judge=opus
+  379/616 scn_v02_creative_feedback_user… judge=opus
+  380/616 scn_v02_creative_feedback_user… judge=opus
+  381/616 scn_v02_creative_feedback_user… judge=opus
+  380/616 ok  (failed=1, cap_events=0)
+  382/616 scn_v02_creative_feedback_user… judge=opus
+  383/616 scn_v02_creative_feedback_user… judge=opus
+  384/616 scn_v02_creative_feedback_user… judge=opus
+  385/616 scn_v02_creative_feedback_user… judge=opus
+  386/616 scn_v02_creative_feedback_user… judge=opus
+  387/616 scn_v02_creative_feedback_user… judge=opus
+  388/616 scn_v02_creative_feedback_user… judge=opus
+  389/616 scn_v02_creative_feedback_user… judge=opus
+  390/616 scn_v02_creative_feedback_user… judge=opus
+  391/616 scn_v02_creative_feedback_user… judge=opus
+  390/616 ok  (failed=1, cap_events=0)
+  392/616 scn_v02_creative_feedback_user… judge=opus
+  393/616 scn_v02_creative_feedback_user… judge=opus
+  394/616 scn_v02_creative_feedback_user… judge=opus
+  395/616 scn_v02_creative_feedback_user… judge=opus
+  396/616 scn_v02_creative_feedback_user… judge=opus
+  397/616 scn_v02_creative_feedback_user… judge=opus
+  398/616 scn_v02_creative_feedback_user… judge=opus
+  399/616 scn_v02_creative_feedback_user… judge=opus
+  400/616 scn_v02_creative_feedback_user… judge=opus
+  401/616 scn_v02_creative_feedback_user… judge=opus
+  400/616 ok  (failed=1, cap_events=0)
+  402/616 scn_v02_creative_feedback_user… judge=opus
+  403/616 scn_v02_creative_feedback_user… judge=opus
+  404/616 scn_v02_creative_feedback_user… judge=opus
+  405/616 scn_v02_creative_feedback_user… judge=opus
+  406/616 scn_v02_creative_feedback_user… judge=opus
+  407/616 scn_v02_creative_feedback_user… judge=opus
+  408/616 scn_v02_creative_feedback_user… judge=opus
+  409/616 scn_v02_creative_feedback_user… judge=opus
+  410/616 scn_v02_creative_feedback_user… judge=opus
+  411/616 scn_v02_creative_feedback_user… judge=opus
+  410/616 ok  (failed=1, cap_events=0)
+  412/616 scn_v02_creative_feedback_user… judge=opus
+  413/616 scn_v02_creative_feedback_user… judge=opus
+  414/616 scn_v02_creative_feedback_user… judge=opus
+  415/616 scn_v02_creative_feedback_user… judge=opus
+  416/616 scn_v02_creative_feedback_user… judge=opus
+  417/616 scn_v02_creative_feedback_user… judge=opus
+  418/616 scn_v02_creative_feedback_user… judge=opus
+  419/616 scn_v02_creative_feedback_user… judge=opus
+  420/616 scn_v02_creative_feedback_user… judge=opus
+  421/616 scn_v02_creative_feedback_user… judge=opus
+  420/616 ok  (failed=1, cap_events=0)
+  422/616 scn_v02_creative_feedback_user… judge=opus
+  423/616 scn_v02_creative_feedback_user… judge=opus
+  424/616 scn_v02_creative_feedback_user… judge=opus
+  425/616 scn_v02_creative_feedback_user… judge=opus
+  426/616 scn_v02_creative_feedback_user… judge=opus
+  427/616 scn_v02_creative_feedback_user… judge=opus
+  428/616 scn_v02_creative_feedback_user… judge=opus
+  429/616 scn_v02_creative_feedback_user… judge=opus
+  430/616 scn_v02_creative_feedback_user… judge=opus
+  431/616 scn_v02_creative_feedback_user… judge=opus
+  430/616 ok  (failed=1, cap_events=0)
+  432/616 scn_v02_creative_feedback_user… judge=opus
+  433/616 scn_v02_creative_feedback_user… judge=opus
+  434/616 scn_v02_creative_feedback_user… judge=opus
+  435/616 scn_v02_creative_feedback_user… judge=opus
+  436/616 scn_v02_creative_feedback_user… judge=opus
+  437/616 scn_v02_creative_feedback_user… judge=opus
+  438/616 scn_v02_creative_feedback_user… judge=opus
+  439/616 scn_v02_creative_feedback_user… judge=opus
+  440/616 scn_v02_creative_feedback_user… judge=opus
+  441/616 scn_v02_creative_feedback_user… judge=opus
+  440/616 ok  (failed=1, cap_events=0)
+  442/616 scn_v02_creative_feedback_user… judge=opus
+  443/616 scn_v02_creative_feedback_user… judge=opus
+  444/616 scn_v02_creative_feedback_user… judge=opus
+  445/616 scn_v02_creative_feedback_user… judge=opus
+  446/616 scn_v02_creative_feedback_user… judge=opus
+  447/616 scn_v02_creative_feedback_user… judge=opus
+  448/616 scn_v02_creative_feedback_user… judge=opus
+  449/616 scn_v02_creative_feedback_user… judge=opus
+  450/616 scn_v02_creative_feedback_user… judge=opus
+  451/616 scn_v02_creative_feedback_user… judge=opus
+  450/616 ok  (failed=1, cap_events=0)
+  452/616 scn_v02_creative_feedback_user… judge=opus
+  453/616 scn_v02_creative_feedback_user… judge=opus
+  454/616 scn_v02_creative_feedback_user… judge=opus
+  455/616 scn_v02_creative_feedback_user… judge=opus
+  456/616 scn_v02_creative_feedback_user… judge=opus
+  457/616 scn_v02_creative_feedback_user… judge=opus
+  458/616 scn_v02_creative_feedback_user… judge=opus
+  459/616 scn_v02_creative_feedback_user… judge=opus
+  460/616 scn_v02_creative_feedback_user… judge=opus
+  461/616 scn_v02_creative_feedback_user… judge=opus
+  460/616 ok  (failed=1, cap_events=0)
+  462/616 scn_v02_creative_feedback_user… judge=opus
+  463/616 scn_v02_creative_feedback_user… judge=opus
+  464/616 scn_v02_creative_feedback_user… judge=opus
+  465/616 scn_v02_creative_feedback_user… judge=opus
+  466/616 scn_v02_creative_feedback_user… judge=opus
+  467/616 scn_v02_creative_feedback_user… judge=opus
+  468/616 scn_v02_creative_feedback_user… judge=opus
+  469/616 scn_v02_creative_feedback_user… judge=opus
+  470/616 scn_v02_creative_feedback_user… judge=opus
+  471/616 scn_v02_creative_feedback_user… judge=opus
+  470/616 ok  (failed=1, cap_events=0)
+  472/616 scn_v02_creative_feedback_user… judge=opus
+  473/616 scn_v02_creative_feedback_user… judge=opus
+  474/616 scn_v02_creative_feedback_user… judge=opus
+  475/616 scn_v02_creative_feedback_user… judge=opus
+  476/616 scn_v02_creative_feedback_user… judge=opus
+  477/616 scn_v02_creative_feedback_user… judge=opus
+  478/616 scn_v02_creative_feedback_user… judge=opus
+  479/616 scn_v02_creative_feedback_user… judge=opus
+  480/616 scn_v02_creative_feedback_user… judge=opus
+  481/616 scn_v02_creative_feedback_user… judge=opus
+  480/616 ok  (failed=1, cap_events=0)
+  482/616 scn_v02_creative_feedback_user… judge=opus
+  483/616 scn_v02_creative_feedback_user… judge=opus
+  484/616 scn_v02_creative_feedback_user… judge=opus
+  485/616 scn_v02_creative_feedback_user… judge=opus
+  486/616 scn_v02_creative_feedback_user… judge=opus
+  487/616 scn_v02_creative_feedback_user… judge=opus
+  488/616 scn_v02_creative_feedback_user… judge=opus
+  489/616 scn_v02_creative_feedback_user… judge=opus
+  490/616 scn_v02_creative_feedback_user… judge=opus
+  491/616 scn_v02_creative_feedback_user… judge=opus
+  490/616 ok  (failed=1, cap_events=0)
+  492/616 scn_v02_creative_feedback_user… judge=opus
+  493/616 scn_v02_creative_feedback_user… judge=opus
+  494/616 scn_v02_creative_feedback_user… judge=opus
+  495/616 scn_v02_creative_feedback_user… judge=opus
+  496/616 scn_v02_creative_feedback_user… judge=opus
+  497/616 scn_v02_creative_feedback_user… judge=opus
+  498/616 scn_v02_creative_feedback_user… judge=opus
+  499/616 scn_v02_creative_feedback_user… judge=opus
+  500/616 scn_v02_creative_feedback_user… judge=opus
+  501/616 scn_v02_creative_feedback_user… judge=opus
+  500/616 ok  (failed=1, cap_events=0)
+  502/616 scn_v02_creative_feedback_user… judge=opus
+  503/616 scn_v02_creative_feedback_user… judge=opus
+  504/616 scn_v02_creative_feedback_user… judge=opus
+  505/616 scn_v02_creative_feedback_user… judge=opus
+  506/616 scn_v02_creative_feedback_user… judge=opus
+  507/616 scn_v02_creative_feedback_user… judge=opus
+  508/616 scn_v02_creative_feedback_user… judge=opus
+  509/616 scn_v02_creative_feedback_user… judge=opus
+  510/616 scn_v02_creative_feedback_user… judge=opus
+  511/616 scn_v02_creative_feedback_user… judge=opus
+  510/616 ok  (failed=1, cap_events=0)
+  512/616 scn_v02_creative_feedback_user… judge=opus
+  513/616 scn_v02_creative_feedback_user… judge=opus
+  514/616 scn_v02_creative_feedback_user… judge=opus
+  515/616 scn_v02_creative_feedback_user… judge=opus
+  516/616 scn_v02_creative_feedback_user… judge=opus
+  517/616 scn_v02_creative_feedback_user… judge=opus
+  518/616 scn_v02_creative_feedback_user… judge=opus
+  519/616 scn_v02_creative_feedback_user… judge=opus
+  520/616 scn_v02_creative_feedback_user… judge=opus
+  521/616 scn_v02_creative_feedback_user… judge=opus
+  520/616 ok  (failed=1, cap_events=0)
+  522/616 scn_v02_creative_feedback_user… judge=opus
+  523/616 scn_v02_creative_feedback_user… judge=opus
+  524/616 scn_v02_creative_feedback_user… judge=opus
+  525/616 scn_v02_creative_feedback_user… judge=opus
+  526/616 scn_v02_creative_feedback_user… judge=opus
+  527/616 scn_v02_creative_feedback_user… judge=opus
+  528/616 scn_v02_creative_feedback_user… judge=opus
+  529/616 scn_v02_creative_feedback_user… judge=opus
+  530/616 scn_v02_creative_feedback_user… judge=opus
+  531/616 scn_v02_creative_feedback_user… judge=opus
+  530/616 ok  (failed=1, cap_events=0)
+  532/616 scn_v02_creative_feedback_user… judge=opus
+  533/616 scn_v02_creative_feedback_user… judge=opus
+  534/616 scn_v02_creative_feedback_user… judge=opus
+  535/616 scn_v02_creative_feedback_user… judge=opus
+  536/616 scn_v02_creative_feedback_user… judge=opus
+  537/616 scn_v02_creative_feedback_user… judge=opus
+  538/616 scn_v02_creative_feedback_user… judge=opus
+  539/616 scn_v02_creative_feedback_user… judge=opus
+  540/616 scn_v02_creative_feedback_user… judge=opus
+  541/616 scn_v02_creative_feedback_user… judge=opus
+  540/616 ok  (failed=1, cap_events=0)
+  542/616 scn_v02_creative_feedback_user… judge=opus
+  543/616 scn_v02_creative_feedback_user… judge=opus
+  544/616 scn_v02_creative_feedback_user… judge=opus
+  545/616 scn_v02_creative_feedback_user… judge=opus
+  546/616 scn_v02_creative_feedback_user… judge=opus
+  547/616 scn_v02_creative_feedback_user… judge=opus
+  548/616 scn_v02_creative_feedback_user… judge=opus
+  549/616 scn_v02_creative_feedback_user… judge=opus
+  550/616 scn_v02_creative_feedback_user… judge=opus
+  551/616 scn_v02_creative_feedback_user… judge=opus
+  550/616 ok  (failed=1, cap_events=0)
+  552/616 scn_v02_creative_feedback_user… judge=opus
+  553/616 scn_v02_creative_feedback_user… judge=opus
+  554/616 scn_v02_creative_feedback_user… judge=opus
+  555/616 scn_v02_creative_feedback_user… judge=opus
+  556/616 scn_v02_creative_feedback_user… judge=opus
+  557/616 scn_v02_creative_feedback_user… judge=opus
+  558/616 scn_v02_creative_feedback_user… judge=opus
+  559/616 scn_v02_creative_feedback_user… judge=opus
+  560/616 scn_v02_creative_feedback_user… judge=opus
+  561/616 scn_v02_creative_feedback_user… judge=opus
+  560/616 ok  (failed=1, cap_events=0)
+  562/616 scn_v02_creative_feedback_user… judge=opus
+  563/616 scn_v02_creative_feedback_user… judge=opus
+  564/616 scn_v02_creative_feedback_user… judge=opus
+  565/616 scn_v02_creative_feedback_user… judge=opus
+  566/616 scn_v02_creative_feedback_user… judge=opus
+  567/616 scn_v02_creative_feedback_user… judge=opus
+  568/616 scn_v02_creative_feedback_user… judge=opus
+  569/616 scn_v02_creative_feedback_user… judge=opus
+  570/616 scn_v02_creative_feedback_user… judge=opus
+  571/616 scn_v02_creative_feedback_user… judge=opus
+  570/616 ok  (failed=1, cap_events=0)
+  572/616 scn_v02_creative_feedback_user… judge=opus
+  573/616 scn_v02_creative_feedback_user… judge=opus
+  CAP scn_v02_creative_feedback_user judge=opus (retries exhausted; cap_events.jsonl written)
+CAP-ABORTED. 571 succeeded, 2 failed, 43 skipped after cap. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_pairwise.json. Resume with: uv run python -m psycheeval.judge pairwise --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --scope same_author_only --pairs C4:C_GENERIC_CONTRACT,C5:C5_NONPUBLIC@PI,C3:C4_WRONG_PROFILE,C5:L2@PI,C0:C4_WRONG_PROFILE,C4:C5_NONPUBLIC@PI,C5:L3@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI,C3:C5_NONPUBLIC_CONTRACT@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C4:C4_WRONG_PROFILE,L2:L3@PI,L1:L2@PI,C3:L1@PI,C5:C_GENERIC_CONTRACT@PI,C5_CONTRACT:L3@PI,C0:C_GENERIC_CONTRACT,C3:C_GENERIC_CONTRACT,C4:C5_NONPUBLIC_CONTRACT@PI,C4_WRONG_PROFILE:C5@PI,C3:C5_NONPUBLIC@PI,C5_CONTRACT:L1@PI,C3:L2@PI,C4:L3@PI,C5_CONTRACT:C5_NONPUBLIC@PI,C5:L1@PI
+
+=== --ab-ba-mandatory: dispatching AB/BA swap rejudgment ===
+Pairwise swap-rejudge: originals=14688  target_judges=opus  already_swapped=12121  pending=1108  workers=1
+  1/1108 ok (failed=0, cap_events=4)
+  2/1108 ok (failed=0, cap_events=4)
+  3/1108 ok (failed=0, cap_events=4)
+  4/1108 ok (failed=0, cap_events=4)
+  5/1108 ok (failed=0, cap_events=4)
+  6/1108 ok (failed=0, cap_events=4)
+  7/1108 ok (failed=0, cap_events=4)
+  8/1108 ok (failed=0, cap_events=4)
+  9/1108 ok (failed=0, cap_events=4)
+  10/1108 ok (failed=0, cap_events=4)
+  20/1108 ok (failed=0, cap_events=4)
+  30/1108 ok (failed=0, cap_events=4)
+  40/1108 ok (failed=0, cap_events=4)
+  50/1108 ok (failed=0, cap_events=4)
+  60/1108 ok (failed=0, cap_events=4)
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: Could not parse JSON from content (len=865)
+  70/1108 ok (failed=1, cap_events=4)
+  80/1108 ok (failed=1, cap_events=4)
+  90/1108 ok (failed=1, cap_events=4)
+  ERR scn_v02_epistemic_uncertainty_ judge=opus: Could not parse JSON from content (len=996)
+  100/1108 ok (failed=2, cap_events=4)
+  110/1108 ok (failed=2, cap_events=4)
+  120/1108 ok (failed=2, cap_events=4)
+  130/1108 ok (failed=2, cap_events=4)
+  140/1108 ok (failed=2, cap_events=4)
+  150/1108 ok (failed=2, cap_events=4)
+  160/1108 ok (failed=2, cap_events=4)
+  170/1108 ok (failed=2, cap_events=4)
+  180/1108 ok (failed=2, cap_events=4)
+  190/1108 ok (failed=2, cap_events=4)
+  200/1108 ok (failed=2, cap_events=4)
+  210/1108 ok (failed=2, cap_events=4)
+  220/1108 ok (failed=2, cap_events=4)
+  ERR scn_v02_moral_uncertainty_user judge=opus: Could not parse JSON from content (len=1627)
+  230/1108 ok (failed=3, cap_events=4)
+  240/1108 ok (failed=3, cap_events=4)
+  250/1108 ok (failed=3, cap_events=4)
+  260/1108 ok (failed=3, cap_events=4)
+  270/1108 ok (failed=3, cap_events=4)
+  280/1108 ok (failed=3, cap_events=4)
+  290/1108 ok (failed=3, cap_events=4)
+  300/1108 ok (failed=3, cap_events=4)
+  310/1108 ok (failed=3, cap_events=4)
+  320/1108 ok (failed=3, cap_events=4)
+  330/1108 ok (failed=3, cap_events=4)
+  340/1108 ok (failed=3, cap_events=4)
+  350/1108 ok (failed=3, cap_events=4)
+  360/1108 ok (failed=3, cap_events=4)
+  370/1108 ok (failed=3, cap_events=4)
+  380/1108 ok (failed=3, cap_events=4)
+  CAP scn_v02_moral_uncertainty_user judge=opus (retries exhausted; cap_events.jsonl written)
+Pairwise swap-rejudge done: completed=384/1108, failed=4, cap_aborted=720, cap_events=10
+
+  Resume: uv run python -m psycheeval.judge pairwise-swap --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --pairs C4:C_GENERIC_CONTRACT,C5:C5_NONPUBLIC@PI,C3:C4_WRONG_PROFILE,C5:L2@PI,C0:C4_WRONG_PROFILE,C4:C5_NONPUBLIC@PI,C5:L3@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI,C3:C5_NONPUBLIC_CONTRACT@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C4:C4_WRONG_PROFILE,L2:L3@PI,L1:L2@PI,C3:L1@PI,C5:C_GENERIC_CONTRACT@PI,C5_CONTRACT:L3@PI,C0:C_GENERIC_CONTRACT,C3:C_GENERIC_CONTRACT,C4:C5_NONPUBLIC_CONTRACT@PI,C4_WRONG_PROFILE:C5@PI,C3:C5_NONPUBLIC@PI,C5_CONTRACT:L1@PI,C3:L2@PI,C4:L3@PI,C5_CONTRACT:C5_NONPUBLIC@PI,C5:L1@PI
+
+=== AB/BA swap rejudgment complete ===

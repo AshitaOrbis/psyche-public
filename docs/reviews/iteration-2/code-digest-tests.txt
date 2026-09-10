@@ -1,0 +1,1007 @@
+========== web/tests/cat-controller.test.ts ==========
+import { describe, it, expect } from "vitest";
+import type { GRMItem } from "../src/scoring/grm-engine";
+import {
+  initCATSession,
+  getNextItem,
+  registerResponse,
+  getCATProgress,
+  catSessionToScores,
+  DEFAULT_STOPPING,
+} from "../src/scoring/cat-controller";
+
+// Build a small item bank for testing: 2 dimensions, 5 items each
+function makeBank(): GRMItem[] {
+  const items: GRMItem[] = [];
+  for (const dim of ["D1", "D2"]) {
+    for (let i = 0; i < 5; i++) {
+      items.push({
+        id: `${dim}-${i}`,
+        text: `Item ${dim}-${i}`,
+        discrimination: 1.2 + i * 0.1,
+        thresholds: [-1.5, -0.5, 0.5, 1.5],
+        numCategories: 5,
+        dimensionId: dim,
+      });
+    }
+  }
+  return items;
+}
+
+describe("CAT Controller", () => {
+  describe("initCATSession", () => {
+    it("creates sessions for all dimensions", () => {
+      const bank = makeBank();
+      const session = initCATSession("test-cat", bank);
+      expect(session.dimensions.size).toBe(2);
+      expect(session.dimensionOrder).toContain("D1");
+      expect(session.dimensionOrder).toContain("D2");
+      expect(session.complete).toBe(false);
+    });
+
+    it("skips dimension if fixed-form SE meets threshold", () => {
+      const bank = makeBank();
+      const fixedScores = [
+        { scaleId: "D1", scaleName: "D1", raw: 0, normalized: 50, itemCount: 10, theta: 0.5, se: 0.2 },
+      ];
+      const session = initCATSession("test-cat", bank, fixedScores);
+      // D1 should be skipped (SE 0.2 < threshold 0.30)
+      expect(session.dimensionOrder).not.toContain("D1");
+      expect(session.dimensionOrder).toContain("D2");
+    });
+
+    it("uses fixed-form theta as prior", () => {
+      const bank = makeBank();
+      const fixedScores = [
+        { scaleId: "D1", scaleName: "D1", raw: 0, normalized: 70, itemCount: 10, theta: 0.8, se: 0.4 },
+      ];
+      const session = initCATSession("test-cat", bank, fixedScores);
+      const d1 = session.dimensions.get("D1")!;
+      expect(d1.priorMean).toBe(0.8);
+      expect(d1.priorSD).toBe(0.4);
+    });
+  });
+
+  describe("getNextItem", () => {
+    it("returns an item from the first dimension", () => {
+      const bank = makeBank();
+      const session = initCATSession("test-cat", bank);
+      const next = getNextItem(session, bank);
+      expect(next).not.toBeNull();
+      expect(next!.dimensionId).toBe(session.dimensionOrder[0]);
+    });
+
+    it("returns null when session is complete", () => {
+      const bank = makeBank();
+      const session = initCATSession("test-cat", bank);
+      const completeSession = { ...session, complete: true };
+      expect(getNextItem(completeSession, bank)).toBeNull();
+    });
+
+    it("returns updated session state", () => {
+      const bank = makeBank();
+      const session = initCATSession("test-cat", bank);
+      const next = getNextItem(session, bank);
+      expect(next).not.toBeNull();
+      expect(next!.session).toBeDefined();
+      // Original session should not be mutated
+      expect(session.currentDimensionIndex).toBe(0);
+    });
+  });
+
+  describe("registerResponse", () => {
+    it("updates theta and SE, returns new session", () => {
+      const bank = makeBank();
+      let session = initCATSession("test-cat", bank);
+      const dimId = session.dimensionOrder[0]!;
+      const initialSE = session.dimensions.get(dimId)!.se;
+
+      const next = getNextItem(session, bank)!;
+      session = next.session;
+      session = registerResponse(session, bank, next.item.id, 3);
+
+      const dim = session.dimensions.get(dimId)!;
+      expect(dim.administered).toHaveLength(1);
+      expect(dim.se).toBeLessThanOrEqual(initialSE);
+      expect(session.totalItemsAdministered).toBe(1);
+    });
+
+    it("marks dimension complete at maxItems", () => {
+      const bank = makeBank();
+      const stopping = { ...DEFAULT_STOPPING, maxItems: 3, minItems: 1 };
+      let session = initCATSession("test-cat", bank, undefined, undefined, stopping);
+      const dimId = session.dimensionOrder[0]!;
+
+      // Administer 3 items
+      for (let i = 0; i < 3; i++) {
+        const next = getNextItem(session, bank);
+        if (!next) break;
+        session = next.session;
+        session = registerResponse(session, bank, next.item.id, 3, stopping);
+      }
+
+      const dim = session.dimensions.get(dimId)!;
+      expect(dim.complete).toBe(true);
+    });
+
+    it("ignores duplicate item submissions", () => {
+      const bank = makeBank();
+      let session = initCATSession("test-cat", bank);
+
+      const next = getNextItem(session, bank)!;
+      session = next.session;
+      session = registerResponse(session, bank, next.item.id, 3);
+      expect(session.totalItemsAdministered).toBe(1);
+
+      // Submit same item again — should be ignored
+      const session2 = registerResponse(session, bank, next.item.id, 4);
+      expect(session2.totalItemsAdministered).toBe(1);
+      expect(session2).toBe(session); // Same reference — no mutation
+    });
+  });
+
+  describe("getCATProgress", () => {
+    it("returns progress for all dimensions", () => {
+      const bank = makeBank();
+      const session = initCATSession("test-cat", bank);
+      const progress = getCATProgress(session);
+      expect(progress).toHaveLength(2);
+      expect(progress[0]!.dimensionId).toBeDefined();
+      expect(progress[0]!.se).toBeGreaterThan(0);
+    });
+  });
+
+  describe("catSessionToScores", () => {
+    it("converts session to ScaleScore array", () => {
+      const bank = makeBank();
+      let session = initCATSession("test-cat", bank);
+
+      // Administer a few items
+      for (let i = 0; i < 3; i++) {
+        const next = getNextItem(session, bank);
+        if (!next) break;
+        session = next.session;
+        session = registerResponse(session, bank, next.item.id, 3);
+      }
+
+      const scores = catSessionToScores(session);
+      expect(scores).toHaveLength(2);
+      for (const score of scores) {
+        expect(score.theta).toBeDefined();
+        expect(score.se).toBeDefined();
+        expect(score.normalized).toBeGreaterThanOrEqual(0);
+        expect(score.normalized).toBeLessThanOrEqual(100);
+      }
+    });
+  });
+
+  describe("full session lifecycle", () => {
+    it("completes when all dimensions reach stopping criteria", () => {
+      const bank = makeBank();
+      const stopping = { seThreshold: 0.30, minItems: 2, maxItems: 4 };
+      let session = initCATSession("test-cat", bank, undefined, undefined, stopping);
+
+      let iterations = 0;
+      while (!session.complete && iterations < 20) {
+        const next = getNextItem(session, bank);
+        if (!next) break;
+        session = next.session;
+        session = registerResponse(session, bank, next.item.id, 2, stopping);
+        iterations++;
+      }
+
+      expect(session.complete).toBe(true);
+      expect(iterations).toBeLessThanOrEqual(8); // 4 max per dim * 2 dims
+      expect(iterations).toBeGreaterThanOrEqual(4); // 2 min per dim * 2 dims
+    });
+  });
+});
+
+========== web/tests/grm-engine.test.ts ==========
+import { describe, it, expect } from "vitest";
+import {
+  categoryProbability,
+  categoryProbabilities,
+  itemInformation,
+  estimateTheta,
+  thetaToPercentile,
+  selectNextItem,
+  type GRMItem,
+  type CATResponse,
+} from "../src/scoring/grm-engine";
+
+// Standard test item with typical personality-scale parameters
+const testItem: GRMItem = {
+  id: "test-001",
+  text: "I am the life of the party.",
+  discrimination: 1.5,
+  thresholds: [-1.5, -0.5, 0.5, 1.5],
+  numCategories: 5,
+  dimensionId: "E1",
+};
+
+describe("GRM Engine", () => {
+  describe("categoryProbability", () => {
+    it("probabilities sum to 1", () => {
+      const thetas = [-2, -1, 0, 1, 2];
+      for (const theta of thetas) {
+        let sum = 0;
+        for (let k = 0; k < testItem.numCategories; k++) {
+          sum += categoryProbability(testItem, theta, k);
+        }
+        expect(sum).toBeCloseTo(1.0, 4);
+      }
+    });
+
+    it("extreme low theta favors lowest category", () => {
+      const p0 = categoryProbability(testItem, -4, 0);
+      const p4 = categoryProbability(testItem, -4, 4);
+      expect(p0).toBeGreaterThan(0.9);
+      expect(p4).toBeLessThan(0.01);
+    });
+
+    it("extreme high theta favors highest category", () => {
+      const p0 = categoryProbability(testItem, 4, 0);
+      const p4 = categoryProbability(testItem, 4, 4);
+      expect(p0).toBeLessThan(0.01);
+      expect(p4).toBeGreaterThan(0.9);
+    });
+
+    it("theta at threshold shifts modal category", () => {
+      // At theta = b2 (-0.5), categories 0+1 should dominate over 3+4
+      const probs = categoryProbabilities(testItem, -0.5);
+      const lowerSum = probs[0]! + probs[1]!;
+      const upperSum = probs[3]! + probs[4]!;
+      expect(lowerSum).toBeGreaterThan(upperSum);
+    });
+  });
+
+  describe("categoryProbabilities", () => {
+    it("returns array of correct length", () => {
+      const probs = categoryProbabilities(testItem, 0);
+      expect(probs).toHaveLength(5);
+    });
+
+    it("normalized probabilities sum to 1", () => {
+      const probs = categoryProbabilities(testItem, 0.7);
+      const sum = probs.reduce((a, b) => a + b, 0);
+      expect(sum).toBeCloseTo(1.0, 6);
+    });
+  });
+
+  describe("itemInformation", () => {
+    it("information is non-negative", () => {
+      for (const theta of [-3, -1, 0, 1, 3]) {
+        expect(itemInformation(testItem, theta)).toBeGreaterThanOrEqual(0);
+      }
+    });
+
+    it("higher discrimination gives more information", () => {
+      const lowDisc: GRMItem = { ...testItem, discrimination: 0.5 };
+      const highDisc: GRMItem = { ...testItem, discrimination: 2.0 };
+      expect(itemInformation(highDisc, 0)).toBeGreaterThan(itemInformation(lowDisc, 0));
+    });
+
+    it("information peaks near thresholds", () => {
+      // Information should be higher near thresholds than at extremes
+      const infoCenter = itemInformation(testItem, 0);
+      const infoExtreme = itemInformation(testItem, 4);
+      expect(infoCenter).toBeGreaterThan(infoExtreme);
+    });
+  });
+
+  describe("estimateTheta", () => {
+    it("returns prior with no responses", () => {
+      const result = estimateTheta([], [], 0.5, 1.0);
+      expect(result.theta).toBe(0.5);
+      expect(result.se).toBe(1.0);
+    });
+
+    it("high responses increase theta estimate", () => {
+      const items = [testItem];
+      const responses: CATResponse[] = [{ itemId: "test-001", category: 4 }];
+      const result = estimateTheta(items, responses);
+      expect(result.theta).toBeGreaterThan(0);
+    });
+
+    it("low responses decrease theta estimate", () => {
+      const items = [testItem];
+      const responses: CATResponse[] = [{ itemId: "test-001", category: 0 }];
+      const result = estimateTheta(items, responses);
+      expect(result.theta).toBeLessThan(0);
+    });
+
+    it("more items reduce SE", () => {
+      const items: GRMItem[] = Array.from({ length: 5 }, (_, i) => ({
+        ...testItem,
+        id: `item-${i}`,
+      }));
+      const responses1: CATResponse[] = [{ itemId: "item-0", category: 3 }];
+      const responses5: CATResponse[] = items.map((item) => ({
+        itemId: item.id,
+        category: 3,
+      }));
+
+      const result1 = estimateTheta(items.slice(0, 1), responses1);
+      const result5 = estimateTheta(items, responses5);
+      expect(result5.se).toBeLessThan(result1.se);
+    });
+
+    it("converges toward true theta with enough items", () => {
+      // Simulate respondent with true theta = 1.0
+      const trueTheta = 1.0;
+      const items: GRMItem[] = Array.from({ length: 12 }, (_, i) => ({
+        ...testItem,
+        id: `conv-${i}`,
+        // Vary discrimination slightly
+        discrimination: 1.2 + Math.random() * 0.6,
+      }));
+
+      // Generate "expected" responses for theta=1.0
+      // At theta=1.0 with thresholds [-1.5,-0.5,0.5,1.5], category 3 is most likely
+      const responses: CATResponse[] = items.map((item) => ({
+        itemId: item.id,
+        category: 3, // Consistently high response
+      }));
+
+      const result = estimateTheta(items, responses);
+      // Should be within ~0.5 of true theta with 12 items
+      expect(Math.abs(result.theta - trueTheta)).toBeLessThan(0.5);
+    });
+  });
+
+  describe("thetaToPercentile", () => {
+    it("theta=0 maps to 50th percentile", () => {
+      expect(thetaToPercentile(0)).toBe(50);
+    });
+
+    it("theta=1 maps to ~84th percentile", () => {
+      const p = thetaToPercentile(1.0);
+      expect(p).toBeGreaterThan(83);
+      expect(p).toBeLessThan(85);
+    });
+
+    it("theta=-1 maps to ~16th percentile", () => {
+      const p = thetaToPercentile(-1.0);
+      expect(p).toBeGreaterThan(15);
+      expect(p).toBeLessThan(17);
+    });
+
+    it("extremes clamp to 0 and 100", () => {
+      expect(thetaToPercentile(-7)).toBe(0);
+      expect(thetaToPercentile(7)).toBe(100);
+    });
+
+    it("is approximately symmetric", () => {
+      const pos = thetaToPercentile(1.5);
+      const neg = thetaToPercentile(-1.5);
+      expect(Math.abs(pos + neg - 100)).toBeLessThan(0.5);
+    });
+  });
+
+  describe("selectNextItem", () => {
+    it("selects most informative item", () => {
+      const bank: GRMItem[] = [
+        { ...testItem, id: "low", discrimination: 0.5 },
+        { ...testItem, id: "high", discrimination: 2.0 },
+      ];
+      const result = selectNextItem(bank, 0, new Set());
+      expect(result?.id).toBe("high");
+    });
+
+    it("excludes administered items", () => {
+      const bank: GRMItem[] = [
+        { ...testItem, id: "a", discrimination: 2.0 },
+        { ...testItem, id: "b", discrimination: 1.0 },
+      ];
+      const result = selectNextItem(bank, 0, new Set(["a"]));
+      expect(result?.id).toBe("b");
+    });
+
+    it("returns null when all items administered", () => {
+      const bank: GRMItem[] = [{ ...testItem, id: "only" }];
+      const result = selectNextItem(bank, 0, new Set(["only"]));
+      expect(result).toBeNull();
+    });
+  });
+});
+
+========== web/tests/ipip-neo-120.test.ts ==========
+import { describe, it, expect } from "vitest";
+import "../src/instruments/ipip-neo-120";
+import { getInstrument } from "../src/instruments/registry";
+import type { InstrumentSession, ItemResponse } from "../src/instruments/types";
+
+describe("IPIP-NEO-120 instrument", () => {
+  const registered = getInstrument("ipip-neo-120")!;
+  const { instrument, score } = registered;
+
+  it("is registered with correct metadata", () => {
+    expect(instrument).toBeDefined();
+    expect(instrument.id).toBe("ipip-neo-120");
+    expect(instrument.itemCount).toBe(120);
+    expect(instrument.items).toHaveLength(120);
+  });
+
+  it("has 5 domain scales and 30 facet scales", () => {
+    const domains = instrument.scales.filter((s) => !s.parentId);
+    const facets = instrument.scales.filter((s) => s.parentId);
+    expect(domains).toHaveLength(5);
+    expect(facets).toHaveLength(30);
+  });
+
+  it("each facet has exactly 4 items", () => {
+    const facetItemCounts = new Map<string, number>();
+    for (const item of instrument.items) {
+      facetItemCounts.set(item.scaleId, (facetItemCounts.get(item.scaleId) ?? 0) + 1);
+    }
+    for (const [facetId, count] of facetItemCounts) {
+      expect(count, `Facet ${facetId} should have 4 items`).toBe(4);
+    }
+  });
+
+  it("scores all 5 domains on neutral responses", () => {
+    const responses: ItemResponse[] = instrument.items.map((item) => ({
+      itemId: item.id,
+      value: 3, // neutral
+      timestamp: 0,
+    }));
+
+    const session: InstrumentSession = {
+      instrumentId: "ipip-neo-120",
+      startedAt: 0,
+      completedAt: 1,
+      responses,
+    };
+
+    const result = score(instrument, session);
+
+    // Should have 5 domain + 30 facet scores
+    expect(result.scores).toHaveLength(35);
+
+    // All domain scores should be ~50 (neutral)
+    const domains = result.scores.filter((s) => s.scaleId.length === 1);
+    expect(domains).toHaveLength(5);
+
+    for (const d of domains) {
+      expect(d.normalized).toBeCloseTo(50, 0);
+    }
+  });
+
+  it("scores high on all-5 responses", () => {
+    const responses: ItemResponse[] = instrument.items.map((item) => ({
+      itemId: item.id,
+      value: 5, // max agreement
+      timestamp: 0,
+    }));
+
+    const session: InstrumentSession = {
+      instrumentId: "ipip-neo-120",
+      startedAt: 0,
+      completedAt: 1,
+      responses,
+    };
+
+    const result = score(instrument, session);
+    const domains = result.scores.filter((s) => s.scaleId.length === 1);
+
+    // Reversed items will get low scores, so domains won't be 100
+    // But unreversed facets should be 100
+    for (const d of domains) {
+      // Should be somewhere between 0-100, not all 100 due to reverse coding
+      expect(d.normalized).toBeGreaterThan(0);
+      expect(d.normalized).toBeLessThanOrEqual(100);
+    }
+  });
+});
+
+========== web/tests/ipip-neo-60.test.ts ==========
+import { describe, it, expect } from "vitest";
+import "../src/instruments/ipip-neo-60";
+import { getInstrument } from "../src/instruments/registry";
+import type { InstrumentSession, ItemResponse } from "../src/instruments/types";
+
+describe("IPIP-NEO-60 instrument", () => {
+  const registered = getInstrument("ipip-neo-60")!;
+  const { instrument, score } = registered;
+
+  it("is registered with correct metadata", () => {
+    expect(instrument).toBeDefined();
+    expect(instrument.id).toBe("ipip-neo-60");
+    expect(instrument.itemCount).toBe(60);
+    expect(instrument.items).toHaveLength(60);
+  });
+
+  it("has 5 domain scales and 30 facet scales", () => {
+    const domains = instrument.scales.filter((s) => !s.parentId);
+    const facets = instrument.scales.filter((s) => s.parentId);
+    expect(domains).toHaveLength(5);
+    expect(facets).toHaveLength(30);
+  });
+
+  it("each facet has exactly 2 items", () => {
+    const facetItemCounts = new Map<string, number>();
+    for (const item of instrument.items) {
+      facetItemCounts.set(item.scaleId, (facetItemCounts.get(item.scaleId) ?? 0) + 1);
+    }
+    for (const [facetId, count] of facetItemCounts) {
+      expect(count, `Facet ${facetId} should have 2 items`).toBe(2);
+    }
+  });
+
+  it("scores all 5 domains on neutral responses", () => {
+    const responses: ItemResponse[] = instrument.items.map((item) => ({
+      itemId: item.id,
+      value: 3,
+      timestamp: 0,
+    }));
+
+    const session: InstrumentSession = {
+      instrumentId: "ipip-neo-60",
+      startedAt: 0,
+      completedAt: 1,
+      responses,
+    };
+
+    const result = score(instrument, session);
+
+    // Should have 5 domain + 30 facet scores
+    expect(result.scores).toHaveLength(35);
+
+    const domains = result.scores.filter((s) => s.scaleId.length === 1);
+    expect(domains).toHaveLength(5);
+
+    for (const d of domains) {
+      expect(d.normalized).toBeCloseTo(50, 0);
+    }
+  });
+});
+
+========== web/tests/item-banks.test.ts ==========
+import { describe, it, expect } from "vitest";
+import type { GRMItem } from "../src/scoring/grm-engine";
+import big5Bank from "../public/item-banks/big5-grm-params.json";
+import hexacoBank from "../public/item-banks/hexaco-grm-params.json";
+
+function assertGRMItem(item: unknown, index: number): void {
+  const obj = item as Record<string, unknown>;
+  expect(obj.id, `item[${index}].id`).toBeTypeOf("string");
+  expect(obj.text, `item[${index}].text`).toBeTypeOf("string");
+  expect(obj.discrimination, `item[${index}].discrimination`).toBeTypeOf("number");
+  expect(obj.thresholds, `item[${index}].thresholds`).toBeInstanceOf(Array);
+  expect(obj.numCategories, `item[${index}].numCategories`).toBeTypeOf("number");
+  expect(obj.dimensionId, `item[${index}].dimensionId`).toBeTypeOf("string");
+
+  const grm = obj as unknown as GRMItem;
+  expect(grm.discrimination).toBeGreaterThan(0);
+  expect(grm.thresholds.length).toBe(grm.numCategories - 1);
+  // Thresholds should be ordered
+  for (let i = 1; i < grm.thresholds.length; i++) {
+    expect(grm.thresholds[i]).toBeGreaterThanOrEqual(grm.thresholds[i - 1]!);
+  }
+}
+
+describe("Item Bank JSON Schema", () => {
+  it("big5-grm-params.json matches GRMItem interface", () => {
+    expect(big5Bank.length).toBeGreaterThan(0);
+    for (let i = 0; i < big5Bank.length; i++) {
+      assertGRMItem(big5Bank[i], i);
+    }
+  });
+
+  it("hexaco-grm-params.json matches GRMItem interface", () => {
+    expect(hexacoBank.length).toBeGreaterThan(0);
+    for (let i = 0; i < hexacoBank.length; i++) {
+      assertGRMItem(hexacoBank[i], i);
+    }
+  });
+
+  it("big5 bank has no legacy itemId/itemText fields", () => {
+    for (const item of big5Bank) {
+      const obj = item as Record<string, unknown>;
+      expect(obj).not.toHaveProperty("itemId");
+      expect(obj).not.toHaveProperty("itemText");
+    }
+  });
+
+  it("hexaco bank has no legacy itemId/itemText fields", () => {
+    for (const item of hexacoBank) {
+      const obj = item as Record<string, unknown>;
+      expect(obj).not.toHaveProperty("itemId");
+      expect(obj).not.toHaveProperty("itemText");
+    }
+  });
+});
+
+========== web/tests/scoring.test.ts ==========
+import { describe, it, expect } from "vitest";
+import { scoreLikert, scoreBinary } from "../src/scoring/engine";
+import type { Instrument, InstrumentSession } from "../src/instruments/types";
+
+function makeInstrument(items: { id: string; scaleId: string; reversed?: boolean }[]): Instrument {
+  return {
+    id: "test",
+    name: "Test",
+    shortName: "T",
+    description: "",
+    citation: "",
+    itemCount: items.length,
+    estimatedMinutes: 1,
+    scales: [
+      { id: "A", name: "Scale A" },
+      { id: "B", name: "Scale B" },
+    ],
+    items: items.map((i) => ({
+      ...i,
+      text: "test item",
+      response: { type: "likert" as const, min: 1, max: 5, labels: [] },
+    })),
+  };
+}
+
+describe("scoreLikert", () => {
+  it("computes mean score for a scale", () => {
+    const inst = makeInstrument([
+      { id: "a1", scaleId: "A" },
+      { id: "a2", scaleId: "A" },
+      { id: "b1", scaleId: "B" },
+    ]);
+
+    const session: InstrumentSession = {
+      instrumentId: "test",
+      startedAt: 0,
+      responses: [
+        { itemId: "a1", value: 4, timestamp: 0 },
+        { itemId: "a2", value: 2, timestamp: 0 },
+        { itemId: "b1", value: 5, timestamp: 0 },
+      ],
+    };
+
+    const result = scoreLikert(inst, session);
+    const scaleA = result.scores.find((s) => s.scaleId === "A")!;
+    const scaleB = result.scores.find((s) => s.scaleId === "B")!;
+
+    expect(scaleA.raw).toBe(3); // (4+2)/2
+    expect(scaleA.normalized).toBe(50); // (3-1)/(5-1)*100
+    expect(scaleA.itemCount).toBe(2);
+    expect(scaleB.raw).toBe(5);
+    expect(scaleB.normalized).toBe(100);
+  });
+
+  it("reverse scores items", () => {
+    const inst = makeInstrument([
+      { id: "a1", scaleId: "A" },
+      { id: "a2", scaleId: "A", reversed: true },
+    ]);
+
+    const session: InstrumentSession = {
+      instrumentId: "test",
+      startedAt: 0,
+      responses: [
+        { itemId: "a1", value: 5, timestamp: 0 }, // straight: 5
+        { itemId: "a2", value: 5, timestamp: 0 }, // reversed: 1+5-5 = 1
+      ],
+    };
+
+    const result = scoreLikert(inst, session);
+    const scaleA = result.scores.find((s) => s.scaleId === "A")!;
+
+    // Mean of (5 + 1) / 2 = 3
+    expect(scaleA.raw).toBe(3);
+    expect(scaleA.normalized).toBe(50);
+  });
+
+  it("handles missing responses gracefully", () => {
+    const inst = makeInstrument([
+      { id: "a1", scaleId: "A" },
+      { id: "a2", scaleId: "A" },
+    ]);
+
+    const session: InstrumentSession = {
+      instrumentId: "test",
+      startedAt: 0,
+      responses: [{ itemId: "a1", value: 4, timestamp: 0 }],
+    };
+
+    const result = scoreLikert(inst, session);
+    const scaleA = result.scores.find((s) => s.scaleId === "A")!;
+
+    // Only one response, mean is just that value
+    expect(scaleA.raw).toBe(4);
+    expect(scaleA.itemCount).toBe(1);
+  });
+});
+
+// --- scoreBinary tests ---
+
+function makeBinaryInstrument(items: { id: string; scaleId: string; reversed?: boolean }[]): Instrument {
+  return {
+    id: "test-binary",
+    name: "Test Binary",
+    shortName: "TB",
+    description: "",
+    citation: "",
+    itemCount: items.length,
+    estimatedMinutes: 1,
+    scales: [
+      { id: "A", name: "Scale A" },
+      { id: "B", name: "Scale B" },
+    ],
+    items: items.map((i) => ({
+      ...i,
+      text: "test item",
+      response: { type: "binary" as const, labels: ["True", "False"] },
+    })),
+  };
+}
+
+describe("scoreBinary", () => {
+  it("computes mean score for a scale", () => {
+    const inst = makeBinaryInstrument([
+      { id: "a1", scaleId: "A" },
+      { id: "a2", scaleId: "A" },
+      { id: "b1", scaleId: "B" },
+    ]);
+
+    const session: InstrumentSession = {
+      instrumentId: "test-binary",
+      startedAt: 0,
+      responses: [
+        { itemId: "a1", value: 1, timestamp: 0 }, // True
+        { itemId: "a2", value: 0, timestamp: 0 }, // False
+        { itemId: "b1", value: 1, timestamp: 0 }, // True
+      ],
+    };
+
+    const result = scoreBinary(inst, session);
+    const scaleA = result.scores.find((s) => s.scaleId === "A")!;
+    const scaleB = result.scores.find((s) => s.scaleId === "B")!;
+
+    expect(scaleA.raw).toBe(0.5); // (1+0)/2
+    expect(scaleA.normalized).toBe(50); // 0.5 * 100
+    expect(scaleA.itemCount).toBe(2);
+    expect(scaleB.raw).toBe(1);
+    expect(scaleB.normalized).toBe(100);
+  });
+
+  it("reverse scores binary items", () => {
+    const inst = makeBinaryInstrument([
+      { id: "a1", scaleId: "A" },
+      { id: "a2", scaleId: "A", reversed: true },
+    ]);
+
+    const session: InstrumentSession = {
+      instrumentId: "test-binary",
+      startedAt: 0,
+      responses: [
+        { itemId: "a1", value: 1, timestamp: 0 }, // straight: 1
+        { itemId: "a2", value: 1, timestamp: 0 }, // reversed: 1-1 = 0
+      ],
+    };
+
+    const result = scoreBinary(inst, session);
+    const scaleA = result.scores.find((s) => s.scaleId === "A")!;
+
+    expect(scaleA.raw).toBe(0.5); // (1 + 0) / 2
+    expect(scaleA.normalized).toBe(50);
+  });
+
+  it("returns empty scores when all responses missing", () => {
+    const inst = makeBinaryInstrument([
+      { id: "a1", scaleId: "A" },
+      { id: "a2", scaleId: "A" },
+    ]);
+
+    const session: InstrumentSession = {
+      instrumentId: "test-binary",
+      startedAt: 0,
+      responses: [],
+    };
+
+    const result = scoreBinary(inst, session);
+    expect(result.scores).toHaveLength(0);
+  });
+
+  it("binary reverser (1-v) differs from Likert reverser (max+min-v)", () => {
+    // Binary: reversed value of 1 = 1-1 = 0
+    // Likert (1-5): reversed value of 5 = 1+5-5 = 1
+    // These are fundamentally different operations, verify both produce correct results
+
+    const binaryInst = makeBinaryInstrument([
+      { id: "a1", scaleId: "A", reversed: true },
+    ]);
+    const binarySession: InstrumentSession = {
+      instrumentId: "test-binary",
+      startedAt: 0,
+      responses: [{ itemId: "a1", value: 1, timestamp: 0 }],
+    };
+    const binaryResult = scoreBinary(binaryInst, binarySession);
+    expect(binaryResult.scores[0]!.raw).toBe(0); // 1 - 1 = 0
+
+    const likertInst = makeInstrument([
+      { id: "a1", scaleId: "A", reversed: true },
+    ]);
+    const likertSession: InstrumentSession = {
+      instrumentId: "test",
+      startedAt: 0,
+      responses: [{ itemId: "a1", value: 5, timestamp: 0 }],
+    };
+    const likertResult = scoreLikert(likertInst, likertSession);
+    expect(likertResult.scores[0]!.raw).toBe(1); // 1 + 5 - 5 = 1
+  });
+});
+
+========== web/tests/tiers.test.ts ==========
+import { describe, it, expect } from "vitest";
+import "../src/instruments/init";
+import { getInstrumentsForTier } from "../src/instruments/tiers";
+import { getInstrument } from "../src/instruments/registry";
+
+describe("Tier configuration", () => {
+  it("lite tier has 15 instruments", () => {
+    const ids = getInstrumentsForTier("lite");
+    expect(ids).toHaveLength(15);
+    expect(ids).toContain("ipip-neo-60");
+    expect(ids).toContain("crt-7");
+    expect(ids).toContain("open-ended");
+    // Should NOT contain standard/heavy instruments
+    expect(ids).not.toContain("ipip-neo-300");
+    expect(ids).not.toContain("ipip-neo-120");
+    expect(ids).not.toContain("hexaco-60");
+    expect(ids).not.toContain("hexaco-200");
+  });
+
+  it("standard tier has 20 instruments", () => {
+    const ids = getInstrumentsForTier("standard");
+    expect(ids).toHaveLength(20);
+    // NEO-60 replaced by NEO-300
+    expect(ids).not.toContain("ipip-neo-60");
+    expect(ids).toContain("ipip-neo-300");
+    // HEXACO-60 added
+    expect(ids).toContain("hexaco-60");
+    // Phase 6 Standard additions
+    expect(ids).toContain("swls");
+    expect(ids).toContain("aaq-ii");
+    expect(ids).toContain("dweck-itis");
+    expect(ids).toContain("cei-ii");
+    // Lite instruments still present
+    expect(ids).toContain("crt-7");
+    expect(ids).toContain("grit-s");
+    expect(ids).toContain("open-ended");
+  });
+
+  it("heavy tier has correct instruments with replacements", () => {
+    const ids = getInstrumentsForTier("heavy");
+    // NEO-120 added alongside NEO-300 (not replacing)
+    expect(ids).toContain("ipip-neo-120");
+    expect(ids).toContain("ipip-neo-300");
+    // HEXACO-60 replaced by HEXACO-200
+    expect(ids).not.toContain("hexaco-60");
+    expect(ids).toContain("hexaco-200");
+    // Extended instruments replaced by longer forms
+    expect(ids).not.toContain("grit-s");
+    expect(ids).toContain("grit-o");
+    expect(ids).not.toContain("bpns-9");
+    expect(ids).toContain("bpns-21");
+    expect(ids).not.toContain("loc-ie4");
+    expect(ids).toContain("levenson-ipc-24");
+    expect(ids).not.toContain("self-monitoring-18");
+    expect(ids).toContain("snyder-sm-25");
+    // CAT instruments (Heavy only)
+    expect(ids).toContain("cat-big5");
+    expect(ids).toContain("cat-hexaco");
+    // Phase 6 Heavy additions
+    expect(ids).toContain("aot-13");
+    expect(ids).toContain("ius-12");
+    expect(ids).toContain("scs-26");
+    expect(ids).toContain("mfq-2");
+    expect(ids).toContain("frost-mps");
+    expect(ids).toContain("maas");
+    expect(ids).toContain("authenticity");
+    expect(ids).toContain("tangney-scs");
+    expect(ids).toContain("maximization");
+    expect(ids).toContain("ztpi");
+    // Standard instruments carry through
+    expect(ids).toContain("swls");
+    expect(ids).toContain("aaq-ii");
+    expect(ids).toContain("dweck-itis");
+    expect(ids).toContain("cei-ii");
+    // Lite instruments that aren't replaced persist
+    expect(ids).toContain("crt-7");
+    expect(ids).toContain("open-ended");
+  });
+
+  it("all tier instruments are registered", () => {
+    for (const tier of ["lite", "standard", "heavy"] as const) {
+      const ids = getInstrumentsForTier(tier);
+      for (const id of ids) {
+        const registered = getInstrument(id);
+        expect(registered, `Instrument ${id} should be registered (tier: ${tier})`).toBeDefined();
+      }
+    }
+  });
+
+  it("tiers are additive (standard includes lite instruments)", () => {
+    const lite = getInstrumentsForTier("lite");
+    const standard = getInstrumentsForTier("standard");
+    // All lite instruments that aren't replaced should be in standard
+    for (const id of lite) {
+      if (id !== "ipip-neo-60") {
+        // NEO-60 is replaced by NEO-300
+        expect(standard, `${id} from lite should be in standard`).toContain(id);
+      }
+    }
+  });
+});
+
+========== web/package.json ==========
+{
+  "name": "psyche-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    "./types": "./src/instruments/types.ts",
+    "./registry": "./src/instruments/registry.ts",
+    "./tiers": "./src/instruments/tiers.ts",
+    "./scoring": "./src/scoring/engine.ts",
+    "./init-lite": "./src/instruments/init-lite.ts",
+    "./init-standard": "./src/instruments/init-standard.ts",
+    "./open-ended": "./src/instruments/open-ended.ts"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@alheimsins/b5-costa-mccrae-300-ipip-neo-pi-r": "^4.0.2",
+    "b5-johnson-120-ipip-neo-pi-r": "^1.1.23",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.0",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.0.0",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "jsdom": "^26.0.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
+  }
+}
+
+========== web/tsconfig.json ==========
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "types": ["vite/client"]
+  },
+  "include": ["src"]
+}
+

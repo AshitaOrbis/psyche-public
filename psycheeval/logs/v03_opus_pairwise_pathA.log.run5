@@ -1,0 +1,333 @@
+Pairwise: scope=same_author_only  expected=3830  observed=12921  pending=1812  workers=1
+  1/1812 scn_v02_shame_self_interpretat… judge=opus
+  1/1812 ok  (failed=0, cap_events=0)
+  2/1812 scn_v02_shame_self_interpretat… judge=opus
+  2/1812 ok  (failed=0, cap_events=0)
+  3/1812 scn_v02_shame_self_interpretat… judge=opus
+  3/1812 ok  (failed=0, cap_events=0)
+  4/1812 scn_v02_shame_self_interpretat… judge=opus
+  4/1812 ok  (failed=0, cap_events=0)
+  5/1812 scn_v02_shame_self_interpretat… judge=opus
+  5/1812 ok  (failed=0, cap_events=0)
+  6/1812 scn_v02_shame_self_interpretat… judge=opus
+  6/1812 ok  (failed=0, cap_events=0)
+  7/1812 scn_v02_shame_self_interpretat… judge=opus
+  7/1812 ok  (failed=0, cap_events=0)
+  8/1812 scn_v02_shame_self_interpretat… judge=opus
+  8/1812 ok  (failed=0, cap_events=0)
+  9/1812 scn_v02_shame_self_interpretat… judge=opus
+  9/1812 ok  (failed=0, cap_events=0)
+  10/1812 scn_v02_shame_self_interpretat… judge=opus
+  10/1812 ok  (failed=0, cap_events=0)
+  11/1812 scn_v02_shame_self_interpretat… judge=opus
+  12/1812 scn_v02_shame_self_interpretat… judge=opus
+  13/1812 scn_v02_shame_self_interpretat… judge=opus
+  14/1812 scn_v02_shame_self_interpretat… judge=opus
+  15/1812 scn_v02_shame_self_interpretat… judge=opus
+  16/1812 scn_v02_shame_self_interpretat… judge=opus
+  17/1812 scn_v02_shame_self_interpretat… judge=opus
+  18/1812 scn_v02_shame_self_interpretat… judge=opus
+  19/1812 scn_v02_shame_self_interpretat… judge=opus
+  20/1812 scn_v02_shame_self_interpretat… judge=opus
+  20/1812 ok  (failed=0, cap_events=0)
+  21/1812 scn_v02_shame_self_interpretat… judge=opus
+  22/1812 scn_v02_shame_self_interpretat… judge=opus
+  23/1812 scn_v02_shame_self_interpretat… judge=opus
+  24/1812 scn_v02_shame_self_interpretat… judge=opus
+  25/1812 scn_v02_shame_self_interpretat… judge=opus
+  26/1812 scn_v02_shame_self_interpretat… judge=opus
+  27/1812 scn_v02_shame_self_interpretat… judge=opus
+  28/1812 scn_v02_shame_self_interpretat… judge=opus
+  29/1812 scn_v02_shame_self_interpretat… judge=opus
+  30/1812 scn_v02_shame_self_interpretat… judge=opus
+  30/1812 ok  (failed=0, cap_events=0)
+  31/1812 scn_v02_shame_self_interpretat… judge=opus
+  32/1812 scn_v02_shame_self_interpretat… judge=opus
+  33/1812 scn_v02_shame_self_interpretat… judge=opus
+  34/1812 scn_v02_shame_self_interpretat… judge=opus
+  35/1812 scn_v02_shame_self_interpretat… judge=opus
+  36/1812 scn_v02_shame_self_interpretat… judge=opus
+  37/1812 scn_v02_shame_self_interpretat… judge=opus
+  38/1812 scn_v02_shame_self_interpretat… judge=opus
+  39/1812 scn_v02_shame_self_interpretat… judge=opus
+  40/1812 scn_v02_shame_self_interpretat… judge=opus
+  40/1812 ok  (failed=0, cap_events=0)
+  41/1812 scn_v02_shame_self_interpretat… judge=opus
+  42/1812 scn_v02_shame_self_interpretat… judge=opus
+  43/1812 scn_v02_shame_self_interpretat… judge=opus
+  44/1812 scn_v02_shame_self_interpretat… judge=opus
+  45/1812 scn_v02_shame_self_interpretat… judge=opus
+  46/1812 scn_v02_shame_self_interpretat… judge=opus
+  47/1812 scn_v02_shame_self_interpretat… judge=opus
+  48/1812 scn_v02_shame_self_interpretat… judge=opus
+  49/1812 scn_v02_shame_self_interpretat… judge=opus
+  50/1812 scn_v02_shame_self_interpretat… judge=opus
+  50/1812 ok  (failed=0, cap_events=0)
+  51/1812 scn_v02_shame_self_interpretat… judge=opus
+  52/1812 scn_v02_shame_self_interpretat… judge=opus
+  53/1812 scn_v02_shame_self_interpretat… judge=opus
+  54/1812 scn_v02_shame_self_interpretat… judge=opus
+  55/1812 scn_v02_shame_self_interpretat… judge=opus
+  56/1812 scn_v02_shame_self_interpretat… judge=opus
+  57/1812 scn_v02_shame_self_interpretat… judge=opus
+  58/1812 scn_v02_shame_self_interpretat… judge=opus
+  59/1812 scn_v02_shame_self_interpretat… judge=opus
+  60/1812 scn_v02_shame_self_interpretat… judge=opus
+  60/1812 ok  (failed=0, cap_events=0)
+  61/1812 scn_v02_shame_self_interpretat… judge=opus
+  62/1812 scn_v02_shame_self_interpretat… judge=opus
+  63/1812 scn_v02_shame_self_interpretat… judge=opus
+  64/1812 scn_v02_shame_self_interpretat… judge=opus
+  65/1812 scn_v02_shame_self_interpretat… judge=opus
+  66/1812 scn_v02_shame_self_interpretat… judge=opus
+  67/1812 scn_v02_shame_self_interpretat… judge=opus
+  68/1812 scn_v02_shame_self_interpretat… judge=opus
+  69/1812 scn_v02_shame_self_interpretat… judge=opus
+  70/1812 scn_v02_shame_self_interpretat… judge=opus
+  70/1812 ok  (failed=0, cap_events=0)
+  71/1812 scn_v02_shame_self_interpretat… judge=opus
+  72/1812 scn_v02_shame_self_interpretat… judge=opus
+  73/1812 scn_v02_ambition_status_user_p… judge=opus
+  74/1812 scn_v02_ambition_status_user_p… judge=opus
+  75/1812 scn_v02_ambition_status_user_p… judge=opus
+  76/1812 scn_v02_ambition_status_user_p… judge=opus
+  77/1812 scn_v02_ambition_status_user_p… judge=opus
+  78/1812 scn_v02_ambition_status_user_p… judge=opus
+  79/1812 scn_v02_ambition_status_user_p… judge=opus
+  80/1812 scn_v02_ambition_status_user_p… judge=opus
+  80/1812 ok  (failed=0, cap_events=0)
+  81/1812 scn_v02_ambition_status_user_p… judge=opus
+  82/1812 scn_v02_ambition_status_user_p… judge=opus
+  83/1812 scn_v02_ambition_status_user_p… judge=opus
+  84/1812 scn_v02_ambition_status_user_p… judge=opus
+  85/1812 scn_v02_ambition_status_user_p… judge=opus
+  86/1812 scn_v02_ambition_status_user_p… judge=opus
+  87/1812 scn_v02_ambition_status_user_p… judge=opus
+  88/1812 scn_v02_ambition_status_user_p… judge=opus
+  89/1812 scn_v02_ambition_status_user_p… judge=opus
+  90/1812 scn_v02_ambition_status_user_p… judge=opus
+  90/1812 ok  (failed=0, cap_events=0)
+  91/1812 scn_v02_ambition_status_user_p… judge=opus
+  92/1812 scn_v02_ambition_status_user_p… judge=opus
+  93/1812 scn_v02_ambition_status_user_p… judge=opus
+  94/1812 scn_v02_ambition_status_user_p… judge=opus
+  95/1812 scn_v02_ambition_status_user_p… judge=opus
+  96/1812 scn_v02_ambition_status_user_p… judge=opus
+  97/1812 scn_v02_ambition_status_user_p… judge=opus
+  98/1812 scn_v02_ambition_status_user_p… judge=opus
+  99/1812 scn_v02_ambition_status_user_p… judge=opus
+  100/1812 scn_v02_ambition_status_user_p… judge=opus
+  100/1812 ok  (failed=0, cap_events=0)
+  101/1812 scn_v02_ambition_status_user_p… judge=opus
+  102/1812 scn_v02_ambition_status_user_p… judge=opus
+  103/1812 scn_v02_ambition_status_user_p… judge=opus
+  104/1812 scn_v02_ambition_status_user_p… judge=opus
+  105/1812 scn_v02_ambition_status_user_p… judge=opus
+  106/1812 scn_v02_ambition_status_user_p… judge=opus
+  107/1812 scn_v02_ambition_status_user_p… judge=opus
+  108/1812 scn_v02_ambition_status_user_p… judge=opus
+  109/1812 scn_v02_ambition_status_user_p… judge=opus
+  110/1812 scn_v02_ambition_status_user_p… judge=opus
+  110/1812 ok  (failed=0, cap_events=0)
+  111/1812 scn_v02_ambition_status_user_p… judge=opus
+  112/1812 scn_v02_ambition_status_user_p… judge=opus
+  113/1812 scn_v02_ambition_status_user_p… judge=opus
+  114/1812 scn_v02_ambition_status_user_p… judge=opus
+  115/1812 scn_v02_ambition_status_user_p… judge=opus
+  116/1812 scn_v02_ambition_status_user_p… judge=opus
+  117/1812 scn_v02_ambition_status_user_p… judge=opus
+  118/1812 scn_v02_ambition_status_user_p… judge=opus
+  119/1812 scn_v02_ambition_status_user_p… judge=opus
+  120/1812 scn_v02_ambition_status_user_p… judge=opus
+  120/1812 ok  (failed=0, cap_events=0)
+  121/1812 scn_v02_ambition_status_user_p… judge=opus
+  122/1812 scn_v02_ambition_status_user_p… judge=opus
+  123/1812 scn_v02_ambition_status_user_p… judge=opus
+  124/1812 scn_v02_ambition_status_user_p… judge=opus
+  125/1812 scn_v02_ambition_status_user_p… judge=opus
+  126/1812 scn_v02_ambition_status_user_p… judge=opus
+  127/1812 scn_v02_ambition_status_user_p… judge=opus
+  128/1812 scn_v02_ambition_status_user_p… judge=opus
+  129/1812 scn_v02_ambition_status_user_p… judge=opus
+  130/1812 scn_v02_ambition_status_user_p… judge=opus
+  130/1812 ok  (failed=0, cap_events=0)
+  131/1812 scn_v02_ambition_status_user_p… judge=opus
+  132/1812 scn_v02_ambition_status_user_p… judge=opus
+  133/1812 scn_v02_ambition_status_user_p… judge=opus
+  134/1812 scn_v02_ambition_status_user_p… judge=opus
+  135/1812 scn_v02_ambition_status_user_p… judge=opus
+  136/1812 scn_v02_ambition_status_user_p… judge=opus
+  137/1812 scn_v02_ambition_status_user_p… judge=opus
+  138/1812 scn_v02_ambition_status_user_p… judge=opus
+  139/1812 scn_v02_ambition_status_user_p… judge=opus
+  140/1812 scn_v02_ambition_status_user_p… judge=opus
+  140/1812 ok  (failed=0, cap_events=0)
+  141/1812 scn_v02_ambition_status_user_p… judge=opus
+  142/1812 scn_v02_ambition_status_user_p… judge=opus
+  143/1812 scn_v02_ambition_status_user_p… judge=opus
+  144/1812 scn_v02_ambition_status_user_p… judge=opus
+  145/1812 scn_v02_ambition_status_user_p… judge=opus
+  146/1812 scn_v02_ambition_status_user_p… judge=opus
+  147/1812 scn_v02_ambition_status_user_p… judge=opus
+  148/1812 scn_v02_ambition_status_user_p… judge=opus
+  149/1812 scn_v02_ambition_status_user_p… judge=opus
+  150/1812 scn_v02_ambition_status_user_p… judge=opus
+  150/1812 ok  (failed=0, cap_events=0)
+  151/1812 scn_v02_ambition_status_user_p… judge=opus
+  152/1812 scn_v02_ambition_status_user_p… judge=opus
+  153/1812 scn_v02_ambition_status_user_p… judge=opus
+  154/1812 scn_v02_ambition_status_user_p… judge=opus
+  155/1812 scn_v02_ambition_status_user_p… judge=opus
+  156/1812 scn_v02_ambition_status_user_p… judge=opus
+  157/1812 scn_v02_ambition_status_user_p… judge=opus
+  158/1812 scn_v02_ambition_status_user_p… judge=opus
+  159/1812 scn_v02_ambition_status_user_p… judge=opus
+  160/1812 scn_v02_ambition_status_user_p… judge=opus
+  160/1812 ok  (failed=0, cap_events=0)
+  161/1812 scn_v02_ambition_status_user_p… judge=opus
+  162/1812 scn_v02_ambition_status_user_p… judge=opus
+  163/1812 scn_v02_ambition_status_user_p… judge=opus
+  164/1812 scn_v02_ambition_status_user_p… judge=opus
+  165/1812 scn_v02_ambition_status_user_p… judge=opus
+  166/1812 scn_v02_ambition_status_user_p… judge=opus
+  167/1812 scn_v02_ambition_status_user_p… judge=opus
+  168/1812 scn_v02_ambition_status_user_p… judge=opus
+  169/1812 scn_v02_ambition_status_user_p… judge=opus
+  170/1812 scn_v02_ambition_status_user_p… judge=opus
+  170/1812 ok  (failed=0, cap_events=0)
+  171/1812 scn_v02_ambition_status_user_p… judge=opus
+  172/1812 scn_v02_ambition_status_user_p… judge=opus
+  173/1812 scn_v02_ambition_status_user_p… judge=opus
+  174/1812 scn_v02_ambition_status_user_p… judge=opus
+  175/1812 scn_v02_ambition_status_user_p… judge=opus
+  176/1812 scn_v02_ambition_status_user_p… judge=opus
+  177/1812 scn_v02_ambition_status_user_p… judge=opus
+  178/1812 scn_v02_ambition_status_user_p… judge=opus
+  179/1812 scn_v02_ambition_status_user_p… judge=opus
+  180/1812 scn_v02_ambition_status_user_p… judge=opus
+  180/1812 ok  (failed=0, cap_events=0)
+  181/1812 scn_v02_ambition_status_user_p… judge=opus
+  182/1812 scn_v02_ambition_status_user_p… judge=opus
+  183/1812 scn_v02_ambition_status_user_p… judge=opus
+  184/1812 scn_v02_ambition_status_user_p… judge=opus
+  185/1812 scn_v02_ambition_status_user_p… judge=opus
+  186/1812 scn_v02_ambition_status_user_p… judge=opus
+  187/1812 scn_v02_ambition_status_user_p… judge=opus
+  188/1812 scn_v02_ambition_status_user_p… judge=opus
+  189/1812 scn_v02_ambition_status_user_p… judge=opus
+  190/1812 scn_v02_ambition_status_user_p… judge=opus
+  190/1812 ok  (failed=0, cap_events=0)
+  191/1812 scn_v02_ambition_status_user_p… judge=opus
+  192/1812 scn_v02_ambition_status_user_p… judge=opus
+  193/1812 scn_v02_ambition_status_user_p… judge=opus
+  194/1812 scn_v02_ambition_status_user_p… judge=opus
+  195/1812 scn_v02_ambition_status_user_p… judge=opus
+  196/1812 scn_v02_ambition_status_user_p… judge=opus
+  197/1812 scn_v02_ambition_status_user_p… judge=opus
+  198/1812 scn_v02_ambition_status_user_p… judge=opus
+  199/1812 scn_v02_ambition_status_user_p… judge=opus
+  200/1812 scn_v02_ambition_status_user_p… judge=opus
+  200/1812 ok  (failed=0, cap_events=0)
+  201/1812 scn_v02_ambition_status_user_p… judge=opus
+  202/1812 scn_v02_ambition_status_user_p… judge=opus
+  203/1812 scn_v02_ambition_status_user_p… judge=opus
+  204/1812 scn_v02_ambition_status_user_p… judge=opus
+  205/1812 scn_v02_ambition_status_user_p… judge=opus
+  206/1812 scn_v02_ambition_status_user_p… judge=opus
+  207/1812 scn_v02_ambition_status_user_p… judge=opus
+  208/1812 scn_v02_ambition_status_user_p… judge=opus
+  209/1812 scn_v02_ambition_status_user_p… judge=opus
+  210/1812 scn_v02_ambition_status_user_p… judge=opus
+  210/1812 ok  (failed=0, cap_events=0)
+  211/1812 scn_v02_ambition_status_user_p… judge=opus
+  212/1812 scn_v02_ambition_status_user_p… judge=opus
+  213/1812 scn_v02_ambition_status_user_p… judge=opus
+  214/1812 scn_v02_ambition_status_user_p… judge=opus
+  215/1812 scn_v02_ambition_status_user_p… judge=opus
+  216/1812 scn_v02_ambition_status_user_p… judge=opus
+  217/1812 scn_v02_ambition_status_user_p… judge=opus
+  218/1812 scn_v02_ambition_status_user_p… judge=opus
+  219/1812 scn_v02_ambition_status_user_p… judge=opus
+  220/1812 scn_v02_ambition_status_user_p… judge=opus
+  220/1812 ok  (failed=0, cap_events=0)
+  221/1812 scn_v02_ambition_status_user_p… judge=opus
+  222/1812 scn_v02_ambition_status_user_p… judge=opus
+  223/1812 scn_v02_ambition_status_user_p… judge=opus
+  224/1812 scn_v02_ambition_status_user_p… judge=opus
+  225/1812 scn_v02_ambition_status_user_p… judge=opus
+  226/1812 scn_v02_ambition_status_user_p… judge=opus
+  227/1812 scn_v02_ambition_status_user_p… judge=opus
+  228/1812 scn_v02_ambition_status_user_p… judge=opus
+  229/1812 scn_v02_ambition_status_user_p… judge=opus
+  230/1812 scn_v02_ambition_status_user_p… judge=opus
+  230/1812 ok  (failed=0, cap_events=0)
+  231/1812 scn_v02_ambition_status_user_p… judge=opus
+  232/1812 scn_v02_ambition_status_user_p… judge=opus
+  233/1812 scn_v02_ambition_status_user_p… judge=opus
+  234/1812 scn_v02_ambition_status_user_p… judge=opus
+  235/1812 scn_v02_ambition_status_user_p… judge=opus
+  236/1812 scn_v02_ambition_status_user_p… judge=opus
+  237/1812 scn_v02_ambition_status_user_p… judge=opus
+  238/1812 scn_v02_ambition_status_user_p… judge=opus
+  239/1812 scn_v02_ambition_status_user_p… judge=opus
+  240/1812 scn_v02_ambition_status_user_p… judge=opus
+  240/1812 ok  (failed=0, cap_events=0)
+  241/1812 scn_v02_ambition_status_user_p… judge=opus
+  CAP scn_v02_ambition_status_user_p judge=opus (retries exhausted; cap_events.jsonl written)
+CAP-ABORTED. 240 succeeded, 1 failed, 1571 skipped after cap. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_pairwise.json. Resume with: uv run python -m psycheeval.judge pairwise --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --scope same_author_only --pairs C4_WRONG_PROFILE:C5@PI,C3:L1@PI,C3:C4_WRONG_PROFILE,C3:C5_NONPUBLIC_CONTRACT@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI,C4:C_GENERIC_CONTRACT,C4:C4_WRONG_PROFILE,C5:L3@PI,C4:C5_NONPUBLIC@PI,L2:L3@PI,C5_CONTRACT:L1@PI,C5_CONTRACT:C5_NONPUBLIC@PI,C5:C_GENERIC_CONTRACT@PI,C5:L2@PI,C4:C5_NONPUBLIC_CONTRACT@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C3:L2@PI,L1:L2@PI,C5:L1@PI,C4:L3@PI,C5:C5_NONPUBLIC@PI,C0:C_GENERIC_CONTRACT,C5_CONTRACT:L3@PI,C3:C_GENERIC_CONTRACT,C3:C5_NONPUBLIC@PI,C0:C4_WRONG_PROFILE
+
+=== --ab-ba-mandatory: dispatching AB/BA swap rejudgment ===
+Pairwise swap-rejudge: originals=13161  target_judges=opus  already_swapped=11304  pending=398  workers=1
+  1/398 ok (failed=0, cap_events=5)
+  2/398 ok (failed=0, cap_events=5)
+  3/398 ok (failed=0, cap_events=5)
+  4/398 ok (failed=0, cap_events=5)
+  5/398 ok (failed=0, cap_events=5)
+  6/398 ok (failed=0, cap_events=5)
+  7/398 ok (failed=0, cap_events=5)
+  8/398 ok (failed=0, cap_events=5)
+  9/398 ok (failed=0, cap_events=5)
+  10/398 ok (failed=0, cap_events=5)
+  20/398 ok (failed=0, cap_events=5)
+  30/398 ok (failed=0, cap_events=5)
+  40/398 ok (failed=0, cap_events=5)
+  50/398 ok (failed=0, cap_events=5)
+  60/398 ok (failed=0, cap_events=5)
+  70/398 ok (failed=0, cap_events=5)
+  80/398 ok (failed=0, cap_events=5)
+  90/398 ok (failed=0, cap_events=5)
+  100/398 ok (failed=0, cap_events=5)
+  110/398 ok (failed=0, cap_events=5)
+  120/398 ok (failed=0, cap_events=5)
+  130/398 ok (failed=0, cap_events=5)
+  140/398 ok (failed=0, cap_events=5)
+  150/398 ok (failed=0, cap_events=5)
+  160/398 ok (failed=0, cap_events=5)
+  170/398 ok (failed=0, cap_events=5)
+  180/398 ok (failed=0, cap_events=5)
+  190/398 ok (failed=0, cap_events=5)
+  200/398 ok (failed=0, cap_events=5)
+  210/398 ok (failed=0, cap_events=5)
+  220/398 ok (failed=0, cap_events=5)
+  230/398 ok (failed=0, cap_events=5)
+  240/398 ok (failed=0, cap_events=5)
+  250/398 ok (failed=0, cap_events=5)
+  260/398 ok (failed=0, cap_events=5)
+  270/398 ok (failed=0, cap_events=5)
+  280/398 ok (failed=0, cap_events=5)
+  290/398 ok (failed=0, cap_events=5)
+  300/398 ok (failed=0, cap_events=5)
+  310/398 ok (failed=0, cap_events=5)
+  320/398 ok (failed=0, cap_events=5)
+  330/398 ok (failed=0, cap_events=5)
+  340/398 ok (failed=0, cap_events=5)
+  350/398 ok (failed=0, cap_events=5)
+  360/398 ok (failed=0, cap_events=5)
+  370/398 ok (failed=0, cap_events=5)
+  380/398 ok (failed=0, cap_events=5)
+  CAP scn_v02_ambition_status_user_p judge=opus (retries exhausted; cap_events.jsonl written)
+Pairwise swap-rejudge done: completed=386/398, failed=1, cap_aborted=11, cap_events=11
+
+  Resume: uv run python -m psycheeval.judge pairwise-swap --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --pairs C4_WRONG_PROFILE:C5@PI,C3:L1@PI,C3:C4_WRONG_PROFILE,C3:C5_NONPUBLIC_CONTRACT@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI,C4:C_GENERIC_CONTRACT,C4:C4_WRONG_PROFILE,C5:L3@PI,C4:C5_NONPUBLIC@PI,L2:L3@PI,C5_CONTRACT:L1@PI,C5_CONTRACT:C5_NONPUBLIC@PI,C5:C_GENERIC_CONTRACT@PI,C5:L2@PI,C4:C5_NONPUBLIC_CONTRACT@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C3:L2@PI,L1:L2@PI,C5:L1@PI,C4:L3@PI,C5:C5_NONPUBLIC@PI,C0:C_GENERIC_CONTRACT,C5_CONTRACT:L3@PI,C3:C_GENERIC_CONTRACT,C3:C5_NONPUBLIC@PI,C0:C4_WRONG_PROFILE
+
+=== AB/BA swap rejudgment complete ===

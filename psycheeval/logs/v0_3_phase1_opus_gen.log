@@ -1,0 +1,413 @@
+Run tag: 2026-05-19_v03
+Manifest: 360 rows, 30 already complete, workers=1
+  1/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C_GENERIC_CONTRACT · opus
+  1/360 ok  (failed=0, cap_events=0)
+  2/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C4_WRONG_PROFILE · opus
+  2/360 ok  (failed=0, cap_events=0)
+  3/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C5_NONPUBLIC · opus
+  3/360 ok  (failed=0, cap_events=0)
+  4/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C5_NONPUBLIC_CONTRACT · opus
+  4/360 ok  (failed=0, cap_events=0)
+  5/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · L1 · opus
+  5/360 ok  (failed=0, cap_events=0)
+  6/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · L2 · opus
+  6/360 ok  (failed=0, cap_events=0)
+  7/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · L3 · opus
+  7/360 ok  (failed=0, cap_events=0)
+  8/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C_GENERIC_CONTRACT · opus
+  8/360 ok  (failed=0, cap_events=0)
+  9/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C4_WRONG_PROFILE · opus
+  9/360 ok  (failed=0, cap_events=0)
+  10/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C5_NONPUBLIC · opus
+  10/360 ok  (failed=0, cap_events=0)
+  11/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C5_NONPUBLIC_CONTRACT · opus
+  12/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · L1 · opus
+  13/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · L2 · opus
+  14/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · L3 · opus
+  15/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C_GENERIC_CONTRACT · opus
+  16/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C4_WRONG_PROFILE · opus
+  17/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C5_NONPUBLIC · opus
+  18/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C5_NONPUBLIC_CONTRACT · opus
+  19/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · L1 · opus
+  20/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · L2 · opus
+  20/360 ok  (failed=0, cap_events=0)
+  21/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · L3 · opus
+  22/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C_GENERIC_CONTRACT · opus
+  23/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C4_WRONG_PROFILE · opus
+  24/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C5_NONPUBLIC · opus
+  25/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C5_NONPUBLIC_CONTRACT · opus
+  26/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · L1 · opus
+  27/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · L2 · opus
+  28/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · L3 · opus
+  29/360 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_1 · C_GENERIC_CONTRACT · opus
+  30/360 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_1 · C4_WRONG_PROFILE · opus
+  30/360 ok  (failed=0, cap_events=0)
+  31/360 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_1 · C_GENERIC_CONTRACT · opus
+  32/360 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_1 · C4_WRONG_PROFILE · opus
+  33/360 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_1 · C_GENERIC_CONTRACT · opus
+  34/360 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_1 · C4_WRONG_PROFILE · opus
+  35/360 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_1 · C_GENERIC_CONTRACT · opus
+  36/360 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_1 · C4_WRONG_PROFILE · opus
+  37/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C_GENERIC_CONTRACT · opus
+  38/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C4_WRONG_PROFILE · opus
+  39/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C5_NONPUBLIC · opus
+  40/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C5_NONPUBLIC_CONTRACT · opus
+  40/360 ok  (failed=0, cap_events=0)
+  41/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · L1 · opus
+  42/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · L2 · opus
+  43/360 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · L3 · opus
+  44/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C_GENERIC_CONTRACT · opus
+  45/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C4_WRONG_PROFILE · opus
+  46/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C5_NONPUBLIC · opus
+  47/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C5_NONPUBLIC_CONTRACT · opus
+  48/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · L1 · opus
+  49/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · L2 · opus
+  50/360 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · L3 · opus
+  50/360 ok  (failed=0, cap_events=0)
+  51/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C_GENERIC_CONTRACT · opus
+  52/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C4_WRONG_PROFILE · opus
+  53/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C5_NONPUBLIC · opus
+  54/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C5_NONPUBLIC_CONTRACT · opus
+  55/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · L1 · opus
+  56/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · L2 · opus
+  57/360 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · L3 · opus
+  58/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C_GENERIC_CONTRACT · opus
+  59/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C4_WRONG_PROFILE · opus
+  60/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C5_NONPUBLIC · opus
+  60/360 ok  (failed=0, cap_events=0)
+  61/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C5_NONPUBLIC_CONTRACT · opus
+  62/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · L1 · opus
+  63/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · L2 · opus
+  64/360 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · L3 · opus
+  65/360 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_2 · C_GENERIC_CONTRACT · opus
+  66/360 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_2 · C4_WRONG_PROFILE · opus
+  67/360 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_2 · C_GENERIC_CONTRACT · opus
+  68/360 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_2 · C4_WRONG_PROFILE · opus
+  69/360 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_2 · C_GENERIC_CONTRACT · opus
+  70/360 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_2 · C4_WRONG_PROFILE · opus
+  70/360 ok  (failed=0, cap_events=0)
+  71/360 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_2 · C_GENERIC_CONTRACT · opus
+  72/360 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_2 · C4_WRONG_PROFILE · opus
+  73/360 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C_GENERIC_CONTRACT · opus
+  74/360 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C4_WRONG_PROFILE · opus
+  75/360 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C5_NONPUBLIC · opus
+  76/360 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C5_NONPUBLIC_CONTRACT · opus
+  77/360 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · L1 · opus
+  78/360 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · L2 · opus
+  79/360 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · L3 · opus
+  80/360 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C_GENERIC_CONTRACT · opus
+  80/360 ok  (failed=0, cap_events=0)
+  81/360 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C4_WRONG_PROFILE · opus
+  82/360 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C5_NONPUBLIC · opus
+  83/360 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C5_NONPUBLIC_CONTRACT · opus
+  84/360 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · L1 · opus
+  85/360 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · L2 · opus
+  86/360 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · L3 · opus
+  87/360 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C_GENERIC_CONTRACT · opus
+  88/360 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C4_WRONG_PROFILE · opus
+  89/360 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C5_NONPUBLIC · opus
+  90/360 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C5_NONPUBLIC_CONTRACT · opus
+  90/360 ok  (failed=0, cap_events=0)
+  91/360 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · L1 · opus
+  92/360 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · L2 · opus
+  93/360 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · L3 · opus
+  94/360 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C_GENERIC_CONTRACT · opus
+  95/360 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C4_WRONG_PROFILE · opus
+  96/360 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C5_NONPUBLIC · opus
+  97/360 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C5_NONPUBLIC_CONTRACT · opus
+  98/360 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · L1 · opus
+  99/360 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · L2 · opus
+  100/360 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · L3 · opus
+  100/360 ok  (failed=0, cap_events=0)
+  101/360 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C_GENERIC_CONTRACT · opus
+  102/360 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C4_WRONG_PROFILE · opus
+  103/360 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C_GENERIC_CONTRACT · opus
+  104/360 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C4_WRONG_PROFILE · opus
+  105/360 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C_GENERIC_CONTRACT · opus
+  106/360 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C4_WRONG_PROFILE · opus
+  107/360 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C_GENERIC_CONTRACT · opus
+  108/360 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C4_WRONG_PROFILE · opus
+  109/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C_GENERIC_CONTRACT · opus
+  110/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C4_WRONG_PROFILE · opus
+  110/360 ok  (failed=0, cap_events=0)
+  111/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C5_NONPUBLIC · opus
+  112/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C5_NONPUBLIC_CONTRACT · opus
+  113/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · L1 · opus
+  114/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · L2 · opus
+  115/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · L3 · opus
+  116/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C_GENERIC_CONTRACT · opus
+  117/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C4_WRONG_PROFILE · opus
+  118/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C5_NONPUBLIC · opus
+  119/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C5_NONPUBLIC_CONTRACT · opus
+  120/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · L1 · opus
+  120/360 ok  (failed=0, cap_events=0)
+  121/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · L2 · opus
+  122/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · L3 · opus
+  123/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C_GENERIC_CONTRACT · opus
+  124/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C4_WRONG_PROFILE · opus
+  125/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C5_NONPUBLIC · opus
+  126/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C5_NONPUBLIC_CONTRACT · opus
+  127/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · L1 · opus
+  128/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · L2 · opus
+  129/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · L3 · opus
+  130/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C_GENERIC_CONTRACT · opus
+  130/360 ok  (failed=0, cap_events=0)
+  131/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C4_WRONG_PROFILE · opus
+  132/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C5_NONPUBLIC · opus
+  133/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C5_NONPUBLIC_CONTRACT · opus
+  134/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · L1 · opus
+  135/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · L2 · opus
+  136/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · L3 · opus
+  137/360 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C_GENERIC_CONTRACT · opus
+  138/360 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C4_WRONG_PROFILE · opus
+  139/360 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C_GENERIC_CONTRACT · opus
+  140/360 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C4_WRONG_PROFILE · opus
+  140/360 ok  (failed=0, cap_events=0)
+  141/360 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C_GENERIC_CONTRACT · opus
+  142/360 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C4_WRONG_PROFILE · opus
+  143/360 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C_GENERIC_CONTRACT · opus
+  144/360 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C4_WRONG_PROFILE · opus
+  145/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C_GENERIC_CONTRACT · opus
+  146/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C4_WRONG_PROFILE · opus
+  147/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C5_NONPUBLIC · opus
+  148/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C5_NONPUBLIC_CONTRACT · opus
+  149/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · L1 · opus
+  150/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · L2 · opus
+  150/360 ok  (failed=0, cap_events=0)
+  151/360 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · L3 · opus
+  152/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C_GENERIC_CONTRACT · opus
+  153/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C4_WRONG_PROFILE · opus
+  154/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C5_NONPUBLIC · opus
+  155/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C5_NONPUBLIC_CONTRACT · opus
+  156/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · L1 · opus
+  157/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · L2 · opus
+  158/360 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · L3 · opus
+  159/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C_GENERIC_CONTRACT · opus
+  160/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C4_WRONG_PROFILE · opus
+  160/360 ok  (failed=0, cap_events=0)
+  161/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C5_NONPUBLIC · opus
+  162/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C5_NONPUBLIC_CONTRACT · opus
+  163/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · L1 · opus
+  164/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · L2 · opus
+  165/360 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · L3 · opus
+  166/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C_GENERIC_CONTRACT · opus
+  167/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C4_WRONG_PROFILE · opus
+  168/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C5_NONPUBLIC · opus
+  169/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C5_NONPUBLIC_CONTRACT · opus
+  170/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · L1 · opus
+  170/360 ok  (failed=0, cap_events=0)
+  171/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · L2 · opus
+  172/360 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · L3 · opus
+  ERR scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 L3 opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  173/360 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C_GENERIC_CONTRACT · opus
+  ERR scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 C_GENERIC_CONTRACT opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  174/360 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C4_WRONG_PROFILE · opus
+  ERR scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 C4_WRONG_PROFILE opus: claude -p failed (rc=1; stderr_len=0; stdout_len=22): You've hit your limit
+
+  175/360 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C_GENERIC_CONTRACT · opus
+  176/360 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C4_WRONG_PROFILE · opus
+  177/360 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C_GENERIC_CONTRACT · opus
+  178/360 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C4_WRONG_PROFILE · opus
+  179/360 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C_GENERIC_CONTRACT · opus
+  180/360 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C4_WRONG_PROFILE · opus
+  181/360 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C_GENERIC_CONTRACT · opus
+  182/360 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C4_WRONG_PROFILE · opus
+  183/360 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C5_NONPUBLIC · opus
+  180/360 ok  (failed=3, cap_events=5)
+  184/360 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C5_NONPUBLIC_CONTRACT · opus
+  185/360 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · L1 · opus
+  186/360 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · L2 · opus
+  187/360 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · L3 · opus
+  188/360 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C_GENERIC_CONTRACT · opus
+  189/360 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C4_WRONG_PROFILE · opus
+  190/360 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C5_NONPUBLIC · opus
+  191/360 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C5_NONPUBLIC_CONTRACT · opus
+  192/360 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · L1 · opus
+  193/360 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · L2 · opus
+  190/360 ok  (failed=3, cap_events=5)
+  194/360 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · L3 · opus
+  195/360 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C_GENERIC_CONTRACT · opus
+  196/360 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C4_WRONG_PROFILE · opus
+  197/360 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C5_NONPUBLIC · opus
+  198/360 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C5_NONPUBLIC_CONTRACT · opus
+  199/360 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · L1 · opus
+  200/360 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · L2 · opus
+  201/360 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · L3 · opus
+  202/360 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C_GENERIC_CONTRACT · opus
+  203/360 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C4_WRONG_PROFILE · opus
+  200/360 ok  (failed=3, cap_events=5)
+  204/360 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C5_NONPUBLIC · opus
+  205/360 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C5_NONPUBLIC_CONTRACT · opus
+  206/360 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · L1 · opus
+  207/360 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · L2 · opus
+  208/360 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · L3 · opus
+  209/360 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C_GENERIC_CONTRACT · opus
+  210/360 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C4_WRONG_PROFILE · opus
+  211/360 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C_GENERIC_CONTRACT · opus
+  212/360 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C4_WRONG_PROFILE · opus
+  213/360 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C_GENERIC_CONTRACT · opus
+  210/360 ok  (failed=3, cap_events=5)
+  214/360 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C4_WRONG_PROFILE · opus
+  215/360 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C_GENERIC_CONTRACT · opus
+  216/360 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C4_WRONG_PROFILE · opus
+  217/360 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C_GENERIC_CONTRACT · opus
+  218/360 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C4_WRONG_PROFILE · opus
+  219/360 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C5_NONPUBLIC · opus
+  220/360 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C5_NONPUBLIC_CONTRACT · opus
+  221/360 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · L1 · opus
+  222/360 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · L2 · opus
+  223/360 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · L3 · opus
+  220/360 ok  (failed=3, cap_events=5)
+  224/360 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C_GENERIC_CONTRACT · opus
+  225/360 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C4_WRONG_PROFILE · opus
+  226/360 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C5_NONPUBLIC · opus
+  227/360 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C5_NONPUBLIC_CONTRACT · opus
+  228/360 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · L1 · opus
+  229/360 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · L2 · opus
+  230/360 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · L3 · opus
+  231/360 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C_GENERIC_CONTRACT · opus
+  232/360 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C4_WRONG_PROFILE · opus
+  233/360 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C5_NONPUBLIC · opus
+  230/360 ok  (failed=3, cap_events=5)
+  234/360 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C5_NONPUBLIC_CONTRACT · opus
+  235/360 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · L1 · opus
+  236/360 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · L2 · opus
+  237/360 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · L3 · opus
+  238/360 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C_GENERIC_CONTRACT · opus
+  239/360 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C4_WRONG_PROFILE · opus
+  240/360 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C5_NONPUBLIC · opus
+  241/360 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C5_NONPUBLIC_CONTRACT · opus
+  242/360 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · L1 · opus
+  243/360 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · L2 · opus
+  240/360 ok  (failed=3, cap_events=5)
+  244/360 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · L3 · opus
+  245/360 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C_GENERIC_CONTRACT · opus
+  246/360 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C4_WRONG_PROFILE · opus
+  247/360 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C_GENERIC_CONTRACT · opus
+  248/360 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C4_WRONG_PROFILE · opus
+  249/360 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C_GENERIC_CONTRACT · opus
+  250/360 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C4_WRONG_PROFILE · opus
+  251/360 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C_GENERIC_CONTRACT · opus
+  252/360 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C4_WRONG_PROFILE · opus
+  253/360 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C_GENERIC_CONTRACT · opus
+  250/360 ok  (failed=3, cap_events=5)
+  254/360 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C4_WRONG_PROFILE · opus
+  255/360 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C5_NONPUBLIC · opus
+  256/360 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C5_NONPUBLIC_CONTRACT · opus
+  257/360 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · L1 · opus
+  258/360 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · L2 · opus
+  259/360 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · L3 · opus
+  260/360 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C_GENERIC_CONTRACT · opus
+  261/360 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C4_WRONG_PROFILE · opus
+  262/360 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C5_NONPUBLIC · opus
+  263/360 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C5_NONPUBLIC_CONTRACT · opus
+  260/360 ok  (failed=3, cap_events=5)
+  264/360 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · L1 · opus
+  265/360 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · L2 · opus
+  266/360 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · L3 · opus
+  267/360 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C_GENERIC_CONTRACT · opus
+  268/360 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C4_WRONG_PROFILE · opus
+  269/360 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C5_NONPUBLIC · opus
+  270/360 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C5_NONPUBLIC_CONTRACT · opus
+  271/360 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · L1 · opus
+  272/360 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · L2 · opus
+  273/360 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · L3 · opus
+  270/360 ok  (failed=3, cap_events=5)
+  274/360 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C_GENERIC_CONTRACT · opus
+  275/360 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C4_WRONG_PROFILE · opus
+  276/360 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C5_NONPUBLIC · opus
+  277/360 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C5_NONPUBLIC_CONTRACT · opus
+  278/360 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · L1 · opus
+  279/360 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · L2 · opus
+  280/360 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · L3 · opus
+  281/360 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C_GENERIC_CONTRACT · opus
+  282/360 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C4_WRONG_PROFILE · opus
+  283/360 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C_GENERIC_CONTRACT · opus
+  280/360 ok  (failed=3, cap_events=5)
+  284/360 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C4_WRONG_PROFILE · opus
+  285/360 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C_GENERIC_CONTRACT · opus
+  286/360 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C4_WRONG_PROFILE · opus
+  287/360 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C_GENERIC_CONTRACT · opus
+  288/360 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C4_WRONG_PROFILE · opus
+  289/360 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C_GENERIC_CONTRACT · opus
+  290/360 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C4_WRONG_PROFILE · opus
+  291/360 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5_NONPUBLIC · opus
+  292/360 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5_NONPUBLIC_CONTRACT · opus
+  293/360 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · L1 · opus
+  290/360 ok  (failed=3, cap_events=5)
+  294/360 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · L2 · opus
+  295/360 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · L3 · opus
+  296/360 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C_GENERIC_CONTRACT · opus
+  297/360 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C4_WRONG_PROFILE · opus
+  298/360 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5_NONPUBLIC · opus
+  299/360 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5_NONPUBLIC_CONTRACT · opus
+  300/360 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · L1 · opus
+  301/360 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · L2 · opus
+  302/360 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · L3 · opus
+  303/360 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C_GENERIC_CONTRACT · opus
+  300/360 ok  (failed=3, cap_events=5)
+  304/360 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C4_WRONG_PROFILE · opus
+  305/360 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5_NONPUBLIC · opus
+  306/360 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5_NONPUBLIC_CONTRACT · opus
+  307/360 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · L1 · opus
+  308/360 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · L2 · opus
+  309/360 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · L3 · opus
+  310/360 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C_GENERIC_CONTRACT · opus
+  311/360 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C4_WRONG_PROFILE · opus
+  312/360 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5_NONPUBLIC · opus
+  313/360 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5_NONPUBLIC_CONTRACT · opus
+  310/360 ok  (failed=3, cap_events=5)
+  314/360 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · L1 · opus
+  315/360 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · L2 · opus
+  316/360 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · L3 · opus
+  317/360 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C_GENERIC_CONTRACT · opus
+  318/360 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C4_WRONG_PROFILE · opus
+  319/360 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C_GENERIC_CONTRACT · opus
+  320/360 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C4_WRONG_PROFILE · opus
+  321/360 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C_GENERIC_CONTRACT · opus
+  322/360 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C4_WRONG_PROFILE · opus
+  323/360 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C_GENERIC_CONTRACT · opus
+  320/360 ok  (failed=3, cap_events=5)
+  324/360 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C4_WRONG_PROFILE · opus
+  325/360 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C_GENERIC_CONTRACT · opus
+  326/360 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C4_WRONG_PROFILE · opus
+  327/360 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5_NONPUBLIC · opus
+  328/360 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5_NONPUBLIC_CONTRACT · opus
+  329/360 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · L1 · opus
+  330/360 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · L2 · opus
+  331/360 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · L3 · opus
+  332/360 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C_GENERIC_CONTRACT · opus
+  333/360 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C4_WRONG_PROFILE · opus
+  330/360 ok  (failed=3, cap_events=5)
+  334/360 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5_NONPUBLIC · opus
+  335/360 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5_NONPUBLIC_CONTRACT · opus
+  336/360 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · L1 · opus
+  337/360 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · L2 · opus
+  338/360 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · L3 · opus
+  339/360 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C_GENERIC_CONTRACT · opus
+  340/360 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C4_WRONG_PROFILE · opus
+  341/360 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5_NONPUBLIC · opus
+  342/360 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5_NONPUBLIC_CONTRACT · opus
+  343/360 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · L1 · opus
+  340/360 ok  (failed=3, cap_events=5)
+  344/360 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · L2 · opus
+  345/360 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · L3 · opus
+  346/360 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C_GENERIC_CONTRACT · opus
+  347/360 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C4_WRONG_PROFILE · opus
+  348/360 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5_NONPUBLIC · opus
+  349/360 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5_NONPUBLIC_CONTRACT · opus
+  350/360 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · L1 · opus
+  351/360 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · L2 · opus
+  352/360 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · L3 · opus
+  353/360 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C_GENERIC_CONTRACT · opus
+  350/360 ok  (failed=3, cap_events=5)
+  354/360 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C4_WRONG_PROFILE · opus
+  355/360 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C_GENERIC_CONTRACT · opus
+  356/360 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C4_WRONG_PROFILE · opus
+  357/360 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C_GENERIC_CONTRACT · opus
+  358/360 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C4_WRONG_PROFILE · opus
+  359/360 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C_GENERIC_CONTRACT · opus
+  360/360 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C4_WRONG_PROFILE · opus
+Done. 357 succeeded, 3 failed. Outputs at ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/assistant_outputs.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_author.json

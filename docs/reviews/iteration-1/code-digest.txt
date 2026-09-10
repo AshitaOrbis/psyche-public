@@ -1,0 +1,4982 @@
+# Psyche Codebase Review Digest
+# Generated: 2026-03-21T01:25:15+00:00
+
+========== web/src/instruments/types.ts ==========
+/** Tier levels for the instrument battery */
+export type Tier = 'lite' | 'standard' | 'heavy';
+
+/** Response format for an item */
+export type ResponseFormat =
+  | { type: "likert"; min: number; max: number; labels: string[] }
+  | { type: "binary"; labels: [string, string] }
+  | { type: "numeric" }
+  | { type: "text"; minWords?: number }
+  | { type: "multiple-choice"; options: string[] };
+
+/** A single test item */
+export interface Item {
+  id: string;
+  text: string;
+  response: ResponseFormat;
+  /** Scale/domain this item belongs to */
+  scaleId: string;
+  /** If true, score is reversed before aggregation */
+  reversed?: boolean;
+}
+
+/** A measurement scale (e.g. a Big Five domain or facet) */
+export interface Scale {
+  id: string;
+  name: string;
+  description?: string;
+  /** Parent scale ID for facets */
+  parentId?: string;
+}
+
+/** Score interpretation tier */
+export interface ScoreTier {
+  min: number;
+  max: number;
+  label: string;
+  description: string;
+}
+
+/** A complete instrument definition */
+export interface Instrument {
+  id: string;
+  name: string;
+  shortName: string;
+  description: string;
+  citation: string;
+  itemCount: number;
+  estimatedMinutes: number;
+  scales: Scale[];
+  items: Item[];
+  /** Interpretation tiers per scale */
+  interpretations?: Record<string, ScoreTier[]>;
+}
+
+/** A single response to an item */
+export interface ItemResponse {
+  itemId: string;
+  value: number | string;
+  timestamp: number;
+}
+
+/** Completed session for an instrument */
+export interface InstrumentSession {
+  instrumentId: string;
+  startedAt: number;
+  completedAt?: number;
+  responses: ItemResponse[];
+}
+
+/** Computed score for a scale */
+export interface ScaleScore {
+  scaleId: string;
+  scaleName: string;
+  raw: number;
+  /** Normalized to 0-100 */
+  normalized: number;
+  /** Number of items that contributed */
+  itemCount: number;
+  /** Cronbach's alpha if computable */
+  alpha?: number;
+  /** IRT theta estimate (CAT only) */
+  theta?: number;
+  /** Standard error of theta (CAT only) */
+  se?: number;
+  /** Number of items administered (CAT only) */
+  itemsAdministered?: number;
+}
+
+/** Full results for an instrument */
+export interface InstrumentResult {
+  instrumentId: string;
+  completedAt: number;
+  scores: ScaleScore[];
+}
+
+========== web/src/instruments/registry.ts ==========
+import type { Instrument, InstrumentSession, InstrumentResult } from "./types";
+
+type ScoringFn = (
+  instrument: Instrument,
+  session: InstrumentSession
+) => InstrumentResult;
+
+interface RegisteredInstrument {
+  instrument: Instrument;
+  score: ScoringFn;
+}
+
+const registry = new Map<string, RegisteredInstrument>();
+
+export function registerInstrument(
+  instrument: Instrument,
+  score: ScoringFn
+): void {
+  registry.set(instrument.id, { instrument, score });
+}
+
+export function getInstrument(id: string): RegisteredInstrument | undefined {
+  return registry.get(id);
+}
+
+export function getAllInstruments(): RegisteredInstrument[] {
+  return Array.from(registry.values());
+}
+
+export function getInstrumentIds(): string[] {
+  return Array.from(registry.keys());
+}
+
+/** Check if an instrument is adaptive (CAT-based) */
+export function isAdaptiveInstrument(id: string): boolean {
+  const reg = registry.get(id);
+  return reg ? "adaptive" in reg.instrument && (reg.instrument as Record<string, unknown>).adaptive === true : false;
+}
+
+========== web/src/instruments/tiers.ts ==========
+/**
+ * Tier configuration for the instrument battery.
+ *
+ * Tiers are additive: Standard includes Lite instruments (with replacements),
+ * Heavy includes Standard instruments (with replacements).
+ *
+ * The `replaces` map handles instruments superseded by a strictly better version.
+ * Heavy adds NEO-120 alongside NEO-300 (not replacing it) for cross-instrument comparison.
+ */
+
+import type { Tier } from "./types";
+
+interface TierDef {
+  /** Instruments added at this tier level */
+  instruments: string[];
+  /** Instruments replaced by better versions: old -> new */
+  replaces: Record<string, string>;
+}
+
+const TIER_DEFS: Record<Tier, TierDef> = {
+  lite: {
+    instruments: [
+      "ipip-neo-60",
+      "crt-7",
+      "ncs-18",
+      "rosenberg",
+      "sd3",
+      "phq9-gad7",
+      "ecr-r",
+      "erq-10",
+      "iri-28",
+      "self-monitoring-18",
+      "loc-ie4",
+      "grit-s",
+      "riasec-48",
+      "bpns-9",
+      "open-ended",
+    ],
+    replaces: {},
+  },
+  standard: {
+    instruments: [
+      "ipip-neo-300",
+      "hexaco-60",
+      "swls",
+      "aaq-ii",
+      "dweck-itis",
+      "cei-ii",
+    ],
+    replaces: {
+      "ipip-neo-60": "ipip-neo-300",
+    },
+  },
+  heavy: {
+    instruments: [
+      "ipip-neo-120",
+      "hexaco-200",
+      "grit-o",
+      "bpns-21",
+      "levenson-ipc-24",
+      "snyder-sm-25",
+      "cat-big5",
+      "cat-hexaco",
+      "aot-13",
+      "ius-12",
+      "scs-26",
+      "mfq-2",
+      "frost-mps",
+      "maas",
+      "authenticity",
+      "tangney-scs",
+      "maximization",
+      "ztpi",
+    ],
+    replaces: {
+      "hexaco-60": "hexaco-200",
+      "grit-s": "grit-o",
+      "bpns-9": "bpns-21",
+      "loc-ie4": "levenson-ipc-24",
+      "self-monitoring-18": "snyder-sm-25",
+    },
+  },
+};
+
+/** Ordered list of tiers from lowest to highest */
+const TIER_ORDER: Tier[] = ["lite", "standard", "heavy"];
+
+/**
+ * Get the list of instrument IDs for a given tier.
+ *
+ * Accumulates instruments from lite through the target tier,
+ * applying replacement rules at each level.
+ */
+export function getInstrumentsForTier(tier: Tier): string[] {
+  const instruments = new Set<string>();
+  const targetIdx = TIER_ORDER.indexOf(tier);
+
+  for (let i = 0; i <= targetIdx; i++) {
+    const def = TIER_DEFS[TIER_ORDER[i]!]!;
+
+    // Apply replacements: remove old instruments
+    for (const oldId of Object.keys(def.replaces)) {
+      instruments.delete(oldId);
+    }
+
+    // Add new instruments
+    for (const id of def.instruments) {
+      instruments.add(id);
+    }
+  }
+
+  return Array.from(instruments);
+}
+
+/** Estimated item counts and times per tier */
+export const TIER_META: Record<Tier, { label: string; estimatedItems: string; estimatedTime: string }> = {
+  lite: { label: "Lite", estimatedItems: "~260 items", estimatedTime: "~35 min" },
+  standard: { label: "Standard", estimatedItems: "~590 items", estimatedTime: "~80 min" },
+  heavy: { label: "Heavy", estimatedItems: "~1,130+ items", estimatedTime: "~160 min" },
+};
+
+/** Instrument category groupings for display */
+export const INSTRUMENT_CATEGORIES: { name: string; instrumentIds: string[] }[] = [
+  { name: "Personality", instrumentIds: ["ipip-neo-60", "ipip-neo-120", "ipip-neo-300", "hexaco-60", "hexaco-200", "cat-big5", "cat-hexaco"] },
+  { name: "Cognitive", instrumentIds: ["crt-7", "ncs-18", "aot-13", "dweck-itis"] },
+  { name: "Wellbeing", instrumentIds: ["phq9-gad7", "rosenberg", "swls", "scs-26", "maas"] },
+  { name: "Interpersonal", instrumentIds: ["ecr-r", "iri-28", "self-monitoring-18", "snyder-sm-25", "authenticity"] },
+  { name: "Self-Regulation", instrumentIds: ["erq-10", "tangney-scs", "aaq-ii", "frost-mps"] },
+  { name: "Motivation", instrumentIds: ["grit-s", "grit-o", "bpns-9", "bpns-21", "loc-ie4", "levenson-ipc-24", "riasec-48", "cei-ii"] },
+  { name: "Values & Morals", instrumentIds: ["sd3", "mfq-2"] },
+  { name: "Decision Style", instrumentIds: ["maximization", "ius-12", "ztpi"] },
+  { name: "Qualitative", instrumentIds: ["open-ended"] },
+];
+
+========== web/src/instruments/init.ts ==========
+// Side-effect imports to register all instruments.
+// Add new instruments here as they are implemented.
+
+// Phase 1:
+import "./ipip-neo-120";
+
+// Phase 2:
+import "./crt-7";
+import "./ncs-18";
+import "./rosenberg";
+import "./sd3";
+import "./phq9-gad7";
+import "./open-ended";
+
+// Phase 3 — Extended Battery:
+import "./ipip-neo-300";
+import "./hexaco-60";
+import "./ecr-r";
+import "./erq-10";
+import "./iri-28";
+import "./self-monitoring-18";
+import "./loc-ie4";
+import "./grit-s";
+import "./riasec-48";
+import "./bpns-9";
+
+// Phase 4 — Tiered Battery (Lite + Heavy):
+import "./ipip-neo-60";      // Lite Big Five
+import "./hexaco-200";        // Heavy HEXACO
+import "./grit-o";            // Heavy Grit
+import "./bpns-21";           // Heavy Needs
+import "./levenson-ipc-24";   // Heavy LOC
+import "./snyder-sm-25";      // Heavy Self-Monitoring
+
+// Phase 5 — Computerized Adaptive Testing (Heavy only):
+import "./cat-big5";          // Adaptive Big Five
+import "./cat-hexaco";        // Adaptive HEXACO
+
+// Phase 6 — Extended Assessment Battery (Standard + Heavy):
+import "./swls";              // Standard: Life Satisfaction
+import "./aaq-ii";            // Standard: Psychological Flexibility
+import "./dweck-itis";        // Standard: Growth Mindset
+import "./cei-ii";            // Standard: Curiosity
+import "./aot-13";            // Heavy: Open-Minded Thinking
+import "./ius-12";            // Heavy: Intolerance of Uncertainty
+import "./scs-26";            // Heavy: Self-Compassion
+import "./mfq-2";             // Heavy: Moral Foundations
+import "./frost-mps";         // Heavy: Perfectionism
+import "./maas";              // Heavy: Mindfulness
+import "./authenticity";      // Heavy: Authenticity
+import "./tangney-scs";       // Heavy: Self-Control
+import "./maximization";      // Heavy: Maximization
+import "./ztpi";              // Heavy: Time Perspective
+
+========== web/src/instruments/init-standard.ts ==========
+// Side-effect imports to register Standard tier instruments.
+// Includes all Lite instruments plus Standard-tier additions.
+
+import "./init-lite";
+import "./ipip-neo-300";
+import "./hexaco-60";
+import "./swls";
+import "./aaq-ii";
+import "./dweck-itis";
+import "./cei-ii";
+
+========== web/src/instruments/init-lite.ts ==========
+// Side-effect imports to register Lite tier instruments only.
+// Base layer imported by init-standard.ts (and eventually init-heavy.ts).
+
+import "./ipip-neo-60";
+import "./crt-7";
+import "./ncs-18";
+import "./rosenberg";
+import "./sd3";
+import "./phq9-gad7";
+import "./ecr-r";
+import "./erq-10";
+import "./iri-28";
+import "./self-monitoring-18";
+import "./loc-ie4";
+import "./grit-s";
+import "./riasec-48";
+import "./bpns-9";
+import "./open-ended";
+
+========== web/src/scoring/engine.ts ==========
+import type {
+  Instrument,
+  InstrumentSession,
+  InstrumentResult,
+  ScaleScore,
+  Item,
+  ItemResponse,
+} from "../instruments/types";
+import type { CATSession } from "./cat-controller";
+import { catSessionToScores } from "./cat-controller";
+
+/**
+ * Generic binary (True/False) scoring engine.
+ * True = 1, False = 0; reverse scoring supported.
+ */
+export function scoreBinary(
+  instrument: Instrument,
+  session: InstrumentSession
+): InstrumentResult {
+  const responseMap = new Map<string, ItemResponse>();
+  for (const r of session.responses) {
+    responseMap.set(r.itemId, r);
+  }
+
+  const scaleItems = new Map<string, { item: Item; value: number }[]>();
+
+  for (const item of instrument.items) {
+    const resp = responseMap.get(item.id);
+    if (!resp || typeof resp.value !== "number") continue;
+
+    let value = resp.value; // 1 = first label (True), 0 = second label (False)
+    if (item.reversed) {
+      value = 1 - value;
+    }
+
+    const existing = scaleItems.get(item.scaleId) ?? [];
+    existing.push({ item, value });
+    scaleItems.set(item.scaleId, existing);
+  }
+
+  const scores: ScaleScore[] = [];
+  for (const scale of instrument.scales) {
+    const items = scaleItems.get(scale.id);
+    if (!items || items.length === 0) continue;
+
+    const raw = items.reduce((sum, i) => sum + i.value, 0) / items.length;
+    const normalized = raw * 100; // 0-1 → 0-100
+
+    scores.push({
+      scaleId: scale.id,
+      scaleName: scale.name,
+      raw,
+      normalized,
+      itemCount: items.length,
+    });
+  }
+
+  return {
+    instrumentId: instrument.id,
+    completedAt: session.completedAt ?? Date.now(),
+    scores,
+  };
+}
+
+/**
+ * Generic Likert scoring engine.
+ * Handles reverse scoring, scale aggregation, and normalization.
+ */
+export function scoreLikert(
+  instrument: Instrument,
+  session: InstrumentSession
+): InstrumentResult {
+  const responseMap = new Map<string, ItemResponse>();
+  for (const r of session.responses) {
+    responseMap.set(r.itemId, r);
+  }
+
+  const scaleItems = new Map<string, { item: Item; value: number }[]>();
+
+  for (const item of instrument.items) {
+    const resp = responseMap.get(item.id);
+    if (!resp || typeof resp.value !== "number") continue;
+
+    let value = resp.value;
+    if (item.reversed && item.response.type === "likert") {
+      const { min, max } = item.response;
+      value = max + min - value;
+    }
+
+    const existing = scaleItems.get(item.scaleId) ?? [];
+    existing.push({ item, value });
+    scaleItems.set(item.scaleId, existing);
+  }
+
+  const scores: ScaleScore[] = [];
+  for (const scale of instrument.scales) {
+    const items = scaleItems.get(scale.id);
+    if (!items || items.length === 0) continue;
+
+    const raw = items.reduce((sum, i) => sum + i.value, 0) / items.length;
+
+    // Normalize assuming all items share the same response format
+    const firstItem = instrument.items.find((i) => i.scaleId === scale.id);
+    let normalized = raw;
+    if (firstItem?.response.type === "likert") {
+      const { min, max } = firstItem.response;
+      normalized = ((raw - min) / (max - min)) * 100;
+    }
+
+    scores.push({
+      scaleId: scale.id,
+      scaleName: scale.name,
+      raw,
+      normalized,
+      itemCount: items.length,
+    });
+  }
+
+  return {
+    instrumentId: instrument.id,
+    completedAt: session.completedAt ?? Date.now(),
+    scores,
+  };
+}
+
+/**
+ * Convert a completed CAT session into an InstrumentResult.
+ * Theta estimates are converted to 0-100 percentile scores via normal CDF.
+ */
+export function scoreAdaptive(
+  instrumentId: string,
+  catSession: CATSession,
+  scaleNames?: Map<string, string>,
+): InstrumentResult {
+  const scores = catSessionToScores(catSession);
+  // Map scale names if provided
+  if (scaleNames) {
+    for (const score of scores) {
+      score.scaleName = scaleNames.get(score.scaleId) ?? score.scaleId;
+    }
+  }
+  return {
+    instrumentId,
+    completedAt: Date.now(),
+    scores,
+  };
+}
+
+========== web/src/scoring/grm-engine.ts ==========
+/**
+ * Graded Response Model (GRM) engine for Computerized Adaptive Testing.
+ *
+ * Implements Samejima's (1969) GRM for polytomous items (e.g., 5-point Likert).
+ * Uses Expected A Posteriori (EAP) estimation with Gauss-Hermite quadrature.
+ *
+ * Mathematical basis:
+ *   P*(k|θ) = 1 / (1 + exp(-a * (θ - b_k)))
+ *   P(X=k|θ) = P*(k|θ) - P*(k+1|θ)  where P*(0)=1, P*(K)=0
+ *   I(θ) = a² * Σ_k [P'(X=k|θ)² / P(X=k|θ)]
+ */
+
+/** IRT parameters for a single GRM item. */
+export interface GRMItem {
+  /** Unique item identifier */
+  id: string;
+  /** Item text for display */
+  text: string;
+  /** Discrimination parameter (a > 0) */
+  discrimination: number;
+  /** Threshold parameters [b₁, b₂, ..., b_{K-1}], strictly ordered */
+  thresholds: number[];
+  /** Number of response categories (e.g., 5 for 1-5 Likert) */
+  numCategories: number;
+  /** Dimension/facet this item measures */
+  dimensionId: string;
+  /** Whether to reverse-score this item */
+  reverse?: boolean;
+}
+
+/** Response to a CAT item. */
+export interface CATResponse {
+  itemId: string;
+  /** 0-indexed category (0 = lowest, numCategories-1 = highest) */
+  category: number;
+}
+
+/** Quadrature point for EAP estimation. */
+interface QuadPoint {
+  theta: number;
+  weight: number;
+}
+
+// ── Constants ──────────────────────────────────────────────────
+
+const CLAMP_MIN = 1e-10;
+const CLAMP_MAX = 1 - 1e-10;
+const QUAD_RANGE = 4.0; // ±4 SD
+const QUAD_POINTS = 41;  // Odd for symmetry
+
+// ── Core GRM Functions ─────────────────────────────────────────
+
+/**
+ * Cumulative probability P*(k|θ) = 1 / (1 + exp(-a*(θ - b_k))).
+ * P*(0) = 1, P*(K) = 0 by convention.
+ */
+function cumulativeProb(item: GRMItem, theta: number, k: number): number {
+  if (k <= 0) return 1.0;
+  if (k >= item.numCategories) return 0.0;
+  const threshold = item.thresholds[k - 1];
+  if (threshold === undefined) return 0.0;
+  const z = item.discrimination * (theta - threshold);
+  // Numerically stable logistic
+  if (z > 30) return 1.0;
+  if (z < -30) return 0.0;
+  return 1.0 / (1.0 + Math.exp(-z));
+}
+
+/**
+ * Category probability P(X=k|θ) = P*(k) - P*(k+1).
+ * Returns a clamped value in [CLAMP_MIN, CLAMP_MAX].
+ */
+export function categoryProbability(item: GRMItem, theta: number, category: number): number {
+  const pStar = cumulativeProb(item, theta, category);
+  const pStarNext = cumulativeProb(item, theta, category + 1);
+  return Math.max(CLAMP_MIN, Math.min(CLAMP_MAX, pStar - pStarNext));
+}
+
+/**
+ * All category probabilities for an item. Normalized to sum to 1.
+ */
+export function categoryProbabilities(item: GRMItem, theta: number): number[] {
+  const probs: number[] = [];
+  let sum = 0;
+  for (let k = 0; k < item.numCategories; k++) {
+    const p = categoryProbability(item, theta, k);
+    probs.push(p);
+    sum += p;
+  }
+  // Normalize
+  if (sum > 0) {
+    for (let i = 0; i < probs.length; i++) {
+      probs[i] = probs[i]! / sum;
+    }
+  }
+  return probs;
+}
+
+/**
+ * Fisher information I(θ) for a single item.
+ * Uses numerical approximation via category probabilities.
+ *
+ * I(θ) = a² * Σ_k [(P*_k(1-P*_k) - P*_{k+1}(1-P*_{k+1}))² / P(X=k)]
+ */
+export function itemInformation(item: GRMItem, theta: number): number {
+  const a = item.discrimination;
+  let info = 0;
+  for (let k = 0; k < item.numCategories; k++) {
+    const pk = categoryProbability(item, theta, k);
+    const pStarK = cumulativeProb(item, theta, k);
+    const pStarK1 = cumulativeProb(item, theta, k + 1);
+    // Derivative terms
+    const dPstarK = pStarK * (1 - pStarK);
+    const dPstarK1 = pStarK1 * (1 - pStarK1);
+    const numerator = (dPstarK - dPstarK1) ** 2;
+    info += numerator / pk;
+  }
+  return a * a * info;
+}
+
+/**
+ * Total test information at θ for a set of items.
+ */
+export function testInformation(items: GRMItem[], theta: number): number {
+  return items.reduce((sum, item) => sum + itemInformation(item, theta), 0);
+}
+
+// ── Theta Estimation ───────────────────────────────────────────
+
+/**
+ * Build quadrature grid for EAP estimation.
+ * Uses equidistant points with normal prior weights.
+ */
+function buildQuadGrid(
+  priorMean: number,
+  priorSD: number,
+  nPoints: number = QUAD_POINTS,
+  range: number = QUAD_RANGE,
+): QuadPoint[] {
+  const points: QuadPoint[] = [];
+  const lo = priorMean - range * priorSD;
+  const hi = priorMean + range * priorSD;
+  const step = (hi - lo) / (nPoints - 1);
+
+  let totalWeight = 0;
+  for (let i = 0; i < nPoints; i++) {
+    const theta = lo + i * step;
+    const z = (theta - priorMean) / priorSD;
+    const weight = Math.exp(-0.5 * z * z);
+    points.push({ theta, weight });
+    totalWeight += weight;
+  }
+  // Normalize weights
+  for (const p of points) {
+    p.weight /= totalWeight;
+  }
+  return points;
+}
+
+/**
+ * Expected A Posteriori (EAP) theta estimation.
+ *
+ * Computes posterior mean of θ given observed responses and a normal prior.
+ * Uses Gauss-Hermite quadrature for numerical integration.
+ *
+ * Returns { theta, se } where se is the posterior standard deviation.
+ */
+export function estimateTheta(
+  items: GRMItem[],
+  responses: CATResponse[],
+  priorMean: number = 0,
+  priorSD: number = 1,
+): { theta: number; se: number } {
+  if (responses.length === 0) {
+    return { theta: priorMean, se: priorSD };
+  }
+
+  const responseMap = new Map<string, number>();
+  for (const r of responses) {
+    responseMap.set(r.itemId, r.category);
+  }
+
+  const grid = buildQuadGrid(priorMean, priorSD);
+
+  // Compute log-likelihood at each quadrature point
+  const logLikelihoods: number[] = [];
+  let maxLL = -Infinity;
+
+  for (const point of grid) {
+    let logL = 0;
+    for (const item of items) {
+      const cat = responseMap.get(item.id);
+      if (cat === undefined) continue;
+      const p = categoryProbability(item, point.theta, cat);
+      logL += Math.log(p);
+    }
+    logLikelihoods.push(logL);
+    if (logL > maxLL) maxLL = logL;
+  }
+
+  // Compute posterior (prior * likelihood) with log-sum-exp for stability
+  let posteriorSum = 0;
+  let thetaSum = 0;
+  let thetaSqSum = 0;
+
+  for (let i = 0; i < grid.length; i++) {
+    const point = grid[i]!;
+    const logL = logLikelihoods[i]!;
+    // posterior ∝ prior_weight * exp(logL - maxLL)
+    const posterior = point.weight * Math.exp(logL - maxLL);
+    posteriorSum += posterior;
+    thetaSum += point.theta * posterior;
+    thetaSqSum += point.theta * point.theta * posterior;
+  }
+
+  if (posteriorSum === 0) {
+    return { theta: priorMean, se: priorSD };
+  }
+
+  const thetaHat = thetaSum / posteriorSum;
+  const variance = thetaSqSum / posteriorSum - thetaHat * thetaHat;
+  const se = Math.sqrt(Math.max(0, variance));
+
+  return { theta: thetaHat, se: se || priorSD };
+}
+
+// ── Utility ────────────────────────────────────────────────────
+
+/**
+ * Convert IRT theta to 0-100 percentile scale via normal CDF.
+ * theta=0 → 50, theta=1 → ~84, theta=-1 → ~16.
+ *
+ * Uses Abramowitz & Stegun approximation (7-digit accuracy).
+ */
+export function thetaToPercentile(theta: number): number {
+  if (theta < -6) return 0;
+  if (theta > 6) return 100;
+
+  const t = 1.0 / (1.0 + 0.2316419 * Math.abs(theta));
+  const d = 0.3989422804014327; // 1/sqrt(2π)
+  const p = d * Math.exp(-0.5 * theta * theta);
+  const poly = t * (0.319381530 + t * (-0.356563782 + t * (1.781477937 + t * (-1.821255978 + t * 1.330274429))));
+  const cdf = theta >= 0 ? 1.0 - p * poly : p * poly;
+  return Math.round(cdf * 1000) / 10; // One decimal place
+}
+
+/**
+ * Select the most informative item for a given theta from an item bank,
+ * excluding already-administered items.
+ */
+export function selectNextItem(
+  bank: GRMItem[],
+  theta: number,
+  administered: Set<string>,
+): GRMItem | null {
+  let bestItem: GRMItem | null = null;
+  let bestInfo = -Infinity;
+
+  for (const item of bank) {
+    if (administered.has(item.id)) continue;
+    const info = itemInformation(item, theta);
+    if (info > bestInfo) {
+      bestInfo = info;
+      bestItem = item;
+    }
+  }
+  return bestItem;
+}
+
+========== web/src/scoring/cat-controller.ts ==========
+/**
+ * CAT Controller — orchestrates per-facet adaptive testing.
+ *
+ * Manages multiple independent mini-CATs (one per dimension/facet).
+ * Uses fixed-form theta as informative prior when available.
+ * Excludes fixed-form items from the CAT item pool.
+ */
+
+import type { GRMItem, CATResponse } from "./grm-engine";
+import { estimateTheta, thetaToPercentile, selectNextItem } from "./grm-engine";
+import type { ScaleScore } from "../instruments/types";
+
+/** Stopping criteria for adaptive testing. */
+export interface StoppingCriteria {
+  /** Target standard error (stop when SE ≤ this) */
+  seThreshold: number;
+  /** Minimum items per dimension before stopping is allowed */
+  minItems: number;
+  /** Maximum items per dimension (hard stop) */
+  maxItems: number;
+}
+
+/** State for a single dimension's CAT session. */
+export interface DimensionSession {
+  dimensionId: string;
+  /** Current theta estimate */
+  theta: number;
+  /** Current standard error */
+  se: number;
+  /** Items administered for this dimension */
+  administered: CATResponse[];
+  /** Set of administered item IDs */
+  administeredIds: Set<string>;
+  /** Whether this dimension is complete */
+  complete: boolean;
+  /** Prior theta (from fixed-form if available) */
+  priorMean: number;
+  /** Prior SD (from fixed-form SE if available) */
+  priorSD: number;
+}
+
+/** Full CAT session state. */
+export interface CATSession {
+  instrumentId: string;
+  /** Per-dimension sessions */
+  dimensions: Map<string, DimensionSession>;
+  /** Order in which dimensions are tested */
+  dimensionOrder: string[];
+  /** Index of current dimension being tested */
+  currentDimensionIndex: number;
+  /** Total items administered across all dimensions */
+  totalItemsAdministered: number;
+  /** Whether the entire CAT is complete */
+  complete: boolean;
+}
+
+/** Default stopping criteria for personality assessment. */
+export const DEFAULT_STOPPING: StoppingCriteria = {
+  seThreshold: 0.30,
+  minItems: 3,
+  maxItems: 10,
+};
+
+/**
+ * Initialize a CAT session for a set of dimensions.
+ *
+ * @param instrumentId - Identifier for this CAT instrument
+ * @param itemBank - Full item bank with GRM parameters
+ * @param fixedFormScores - Optional scores from fixed-form instruments (theta estimates used as priors)
+ * @param fixedFormItemIds - Item IDs from fixed-form instruments to exclude from CAT pool
+ * @param stopping - Stopping criteria
+ */
+export function initCATSession(
+  instrumentId: string,
+  itemBank: GRMItem[],
+  fixedFormScores?: ScaleScore[],
+  fixedFormItemIds?: Set<string>,
+  stopping: StoppingCriteria = DEFAULT_STOPPING,
+): CATSession {
+  // Group items by dimension
+  const dimensionItems = new Map<string, GRMItem[]>();
+  for (const item of itemBank) {
+    // Skip items already administered in fixed form
+    if (fixedFormItemIds?.has(item.id)) continue;
+    const items = dimensionItems.get(item.dimensionId) ?? [];
+    items.push(item);
+    dimensionItems.set(item.dimensionId, items);
+  }
+
+  // Build dimension sessions
+  const dimensions = new Map<string, DimensionSession>();
+  const dimensionOrder: string[] = [];
+
+  // Build fixed-form theta lookup
+  const fixedTheta = new Map<string, { theta: number; se: number }>();
+  if (fixedFormScores) {
+    for (const score of fixedFormScores) {
+      if (score.theta !== undefined && score.se !== undefined) {
+        fixedTheta.set(score.scaleId, { theta: score.theta, se: score.se });
+      }
+    }
+  }
+
+  for (const [dimId] of dimensionItems) {
+    // Skip dimension if fixed-form already meets SE threshold
+    const prior = fixedTheta.get(dimId);
+    if (prior && prior.se <= stopping.seThreshold) {
+      continue; // Fixed form good enough, skip CAT for this facet
+    }
+
+    const priorMean = prior?.theta ?? 0;
+    const priorSD = prior?.se ?? 1;
+
+    dimensions.set(dimId, {
+      dimensionId: dimId,
+      theta: priorMean,
+      se: priorSD,
+      administered: [],
+      administeredIds: new Set(),
+      complete: false,
+      priorMean,
+      priorSD,
+    });
+    dimensionOrder.push(dimId);
+  }
+
+  return {
+    instrumentId,
+    dimensions,
+    dimensionOrder,
+    currentDimensionIndex: 0,
+    totalItemsAdministered: 0,
+    complete: dimensionOrder.length === 0,
+  };
+}
+
+/**
+ * Get the next item to administer.
+ * Returns null if all dimensions are complete.
+ */
+export function getNextItem(
+  session: CATSession,
+  itemBank: GRMItem[],
+): { item: GRMItem; dimensionId: string } | null {
+  if (session.complete) return null;
+
+  // Find next incomplete dimension
+  while (session.currentDimensionIndex < session.dimensionOrder.length) {
+    const dimId = session.dimensionOrder[session.currentDimensionIndex]!;
+    const dimSession = session.dimensions.get(dimId);
+    if (!dimSession) {
+      session.currentDimensionIndex++;
+      continue;
+    }
+
+    if (dimSession.complete) {
+      session.currentDimensionIndex++;
+      continue;
+    }
+
+    // Filter bank to this dimension
+    const dimBank = itemBank.filter(
+      (item) => item.dimensionId === dimId && !dimSession.administeredIds.has(item.id),
+    );
+
+    if (dimBank.length === 0) {
+      dimSession.complete = true;
+      session.currentDimensionIndex++;
+      continue;
+    }
+
+    const nextItem = selectNextItem(dimBank, dimSession.theta, dimSession.administeredIds);
+    if (!nextItem) {
+      dimSession.complete = true;
+      session.currentDimensionIndex++;
+      continue;
+    }
+
+    return { item: nextItem, dimensionId: dimId };
+  }
+
+  // All dimensions complete
+  session.complete = true;
+  return null;
+}
+
+/**
+ * Register a response and update theta estimate.
+ */
+export function registerResponse(
+  session: CATSession,
+  itemBank: GRMItem[],
+  itemId: string,
+  category: number,
+  stopping: StoppingCriteria = DEFAULT_STOPPING,
+): void {
+  // Find which dimension this item belongs to
+  const item = itemBank.find((i) => i.id === itemId);
+  if (!item) return;
+
+  const dimSession = session.dimensions.get(item.dimensionId);
+  if (!dimSession) return;
+
+  // Record response
+  const response: CATResponse = { itemId, category };
+  dimSession.administered.push(response);
+  dimSession.administeredIds.add(itemId);
+  session.totalItemsAdministered++;
+
+  // Get all items for this dimension that have been administered
+  const administeredItems = itemBank.filter(
+    (i) => i.dimensionId === item.dimensionId && dimSession.administeredIds.has(i.id),
+  );
+
+  // Re-estimate theta
+  const estimate = estimateTheta(
+    administeredItems,
+    dimSession.administered,
+    dimSession.priorMean,
+    dimSession.priorSD,
+  );
+  dimSession.theta = estimate.theta;
+  dimSession.se = estimate.se;
+
+  // Check stopping criteria
+  const nItems = dimSession.administered.length;
+  if (nItems >= stopping.maxItems) {
+    dimSession.complete = true;
+  } else if (nItems >= stopping.minItems && estimate.se <= stopping.seThreshold) {
+    dimSession.complete = true;
+  }
+
+  // If current dimension complete, advance to next
+  if (dimSession.complete) {
+    session.currentDimensionIndex++;
+    // Check if all dimensions are done
+    if ([...session.dimensions.values()].every((d) => d.complete)) {
+      session.complete = true;
+    }
+  }
+}
+
+/**
+ * Get progress summary for all dimensions.
+ */
+export function getCATProgress(session: CATSession): {
+  dimensionId: string;
+  theta: number;
+  se: number;
+  itemsAdministered: number;
+  complete: boolean;
+  percentile: number;
+}[] {
+  return session.dimensionOrder.map((dimId) => {
+    const dim = session.dimensions.get(dimId)!;
+    return {
+      dimensionId: dimId,
+      theta: dim.theta,
+      se: dim.se,
+      itemsAdministered: dim.administered.length,
+      complete: dim.complete,
+      percentile: thetaToPercentile(dim.theta),
+    };
+  });
+}
+
+/**
+ * Convert completed CAT session to ScaleScore array for storage.
+ */
+export function catSessionToScores(session: CATSession): ScaleScore[] {
+  const scores: ScaleScore[] = [];
+  for (const [dimId, dim] of session.dimensions) {
+    scores.push({
+      scaleId: dimId,
+      scaleName: dimId, // Will be mapped to proper names by the instrument definition
+      raw: dim.theta,
+      normalized: thetaToPercentile(dim.theta),
+      itemCount: dim.administered.length,
+      theta: dim.theta,
+      se: dim.se,
+      itemsAdministered: dim.administered.length,
+    });
+  }
+  return scores;
+}
+
+========== web/src/state/store.ts ==========
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
+import type {
+  InstrumentSession,
+  InstrumentResult,
+  ItemResponse,
+  Tier,
+} from "../instruments/types";
+import { getInstrument } from "../instruments/registry";
+
+interface PsycheState {
+  /** Active sessions keyed by instrument ID */
+  sessions: Record<string, InstrumentSession>;
+  /** Computed results keyed by instrument ID */
+  results: Record<string, InstrumentResult>;
+  /** Current instrument being taken */
+  activeInstrumentId: string | null;
+  /** Current item index within the active instrument */
+  currentItemIndex: number;
+  /** Selected tier for the instrument battery */
+  selectedTier: Tier;
+
+  // Actions
+  setTier: (tier: Tier) => void;
+  startInstrument: (instrumentId: string) => void;
+  recordResponse: (response: ItemResponse) => void;
+  advanceItem: () => void;
+  goBackItem: () => void;
+  completeInstrument: (result: InstrumentResult) => void;
+  setActiveInstrument: (id: string | null) => void;
+  resetInstrument: (instrumentId: string) => void;
+  exportData: () => string;
+  importData: (json: string) => void;
+}
+
+export const usePsycheStore = create<PsycheState>()(
+  persist(
+    (set, get) => ({
+      sessions: {},
+      results: {},
+      activeInstrumentId: null,
+      currentItemIndex: 0,
+      selectedTier: "standard",
+
+      setTier: (tier) => set(() => ({ selectedTier: tier })),
+
+      startInstrument: (instrumentId) =>
+        set((state) => ({
+          activeInstrumentId: instrumentId,
+          currentItemIndex: 0,
+          sessions: {
+            ...state.sessions,
+            [instrumentId]: state.sessions[instrumentId] ?? {
+              instrumentId,
+              startedAt: Date.now(),
+              responses: [],
+            },
+          },
+        })),
+
+      recordResponse: (response) =>
+        set((state) => {
+          const id = state.activeInstrumentId;
+          if (!id) return state;
+          const session = state.sessions[id];
+          if (!session) return state;
+
+          // Replace existing response for this item or append
+          const existing = session.responses.findIndex(
+            (r) => r.itemId === response.itemId
+          );
+          const responses = [...session.responses];
+          if (existing >= 0) {
+            responses[existing] = response;
+          } else {
+            responses.push(response);
+          }
+
+          return {
+            sessions: {
+              ...state.sessions,
+              [id]: { ...session, responses },
+            },
+          };
+        }),
+
+      advanceItem: () =>
+        set((state) => ({
+          currentItemIndex: state.currentItemIndex + 1,
+        })),
+
+      goBackItem: () =>
+        set((state) => ({
+          currentItemIndex: Math.max(0, state.currentItemIndex - 1),
+        })),
+
+      completeInstrument: (result) =>
+        set((state) => {
+          const id = state.activeInstrumentId;
+          if (!id) return state;
+          const session = state.sessions[id];
+          if (!session) return state;
+
+          return {
+            activeInstrumentId: null,
+            currentItemIndex: 0,
+            sessions: {
+              ...state.sessions,
+              [id]: { ...session, completedAt: Date.now() },
+            },
+            results: {
+              ...state.results,
+              [id]: result,
+            },
+          };
+        }),
+
+      setActiveInstrument: (id) =>
+        set(() => ({
+          activeInstrumentId: id,
+          currentItemIndex: 0,
+        })),
+
+      resetInstrument: (instrumentId) =>
+        set((state) => {
+          const { [instrumentId]: _s, ...sessions } = state.sessions;
+          const { [instrumentId]: _r, ...results } = state.results;
+          return { sessions, results };
+        }),
+
+      exportData: () => {
+        const { sessions, results, selectedTier } = get();
+        return JSON.stringify({ sessions, results, selectedTier, exportedAt: Date.now() }, null, 2);
+      },
+
+      importData: (json) => {
+        const data = JSON.parse(json);
+        if (data.sessions && data.results) {
+          // Merge with existing data (don't overwrite completed results)
+          const currentState = get();
+          const mergedSessions = { ...data.sessions, ...currentState.sessions };
+          const mergedResults = { ...data.results, ...currentState.results };
+          set({ sessions: mergedSessions, results: mergedResults });
+          // Auto-score any sessions that have all responses but no result
+          autoScoreCompleted();
+        }
+      },
+    }),
+    {
+      name: "psyche-store",
+      onRehydrateStorage: () => (state) => {
+        // Always try to merge seed data (fills in any missing sessions/results)
+        fetch("/seed-data.json")
+          .then((r) => (r.ok ? r.json() : null))
+          .then((data) => {
+            if (data?.sessions) {
+              const current = usePsycheStore.getState();
+              const seedSessionCount = Object.keys(data.sessions).length;
+              const currentSessionCount = Object.keys(current.sessions).length;
+              if (seedSessionCount > currentSessionCount) {
+                usePsycheStore.setState({
+                  sessions: { ...data.sessions, ...current.sessions },
+                  results: { ...(data.results ?? {}), ...current.results },
+                });
+              }
+              autoScoreCompleted();
+            }
+          })
+          .catch(() => {
+            // No seed file or fetch failed — still auto-score existing data
+            if (state) autoScoreCompleted();
+          });
+      },
+    }
+  )
+);
+
+/** Score any sessions that have all responses but no result yet. */
+function autoScoreCompleted(): void {
+  const { sessions, results } = usePsycheStore.getState();
+  const newResults: Record<string, InstrumentResult> = {};
+
+  for (const [id, session] of Object.entries(sessions)) {
+    if (results[id]) continue; // already scored
+    const registered = getInstrument(id);
+    if (!registered) continue; // instrument not in registry
+    const { instrument, score } = registered;
+    if (session.responses.length >= instrument.items.length) {
+      try {
+        newResults[id] = score(instrument, session);
+      } catch {
+        // scoring failed — skip
+      }
+    }
+  }
+
+  if (Object.keys(newResults).length > 0) {
+    const current = usePsycheStore.getState();
+    usePsycheStore.setState({
+      results: { ...current.results, ...newResults },
+      sessions: Object.fromEntries(
+        Object.entries(current.sessions).map(([id, s]) =>
+          newResults[id] ? [id, { ...s, completedAt: s.completedAt ?? Date.now() }] : [id, s]
+        )
+      ),
+    });
+  }
+}
+
+========== web/src/instruments/phq9-gad7.ts ==========
+import type { Instrument, InstrumentSession, InstrumentResult } from "./types";
+import { registerInstrument } from "./registry";
+
+/**
+ * PHQ-9 (Patient Health Questionnaire) + GAD-7 (Generalized Anxiety Disorder)
+ * Kroenke et al. (2001) / Spitzer et al. (2006)
+ * Clinical screening tools for depression and anxiety.
+ */
+
+const PHQ9_ITEMS = [
+  "Little interest or pleasure in doing things",
+  "Feeling down, depressed, or hopeless",
+  "Trouble falling or staying asleep, or sleeping too much",
+  "Feeling tired or having little energy",
+  "Poor appetite or overeating",
+  "Feeling bad about yourself — or that you are a failure or have let yourself or your family down",
+  "Trouble concentrating on things, such as reading the newspaper or watching television",
+  "Moving or speaking so slowly that other people could have noticed? Or the opposite — being so fidgety or restless that you have been moving around a lot more than usual",
+  "Thoughts that you would be better off dead or of hurting yourself in some way",
+];
+
+const GAD7_ITEMS = [
+  "Feeling nervous, anxious, or on edge",
+  "Not being able to stop or control worrying",
+  "Worrying too much about different things",
+  "Trouble relaxing",
+  "Being so restless that it's hard to sit still",
+  "Becoming easily annoyed or irritable",
+  "Feeling afraid as if something awful might happen",
+];
+
+const phq9Gad7: Instrument = {
+  id: "phq9-gad7",
+  name: "PHQ-9 + GAD-7",
+  shortName: "PHQ/GAD",
+  description:
+    "Brief screening tools for depression (PHQ-9) and generalized anxiety (GAD-7). Over the last 2 weeks, how often have you been bothered by the following?",
+  citation:
+    "Kroenke, K., Spitzer, R. L., & Williams, J. B. (2001). The PHQ-9. J Gen Intern Med, 16(9), 606-613.",
+  itemCount: 16,
+  estimatedMinutes: 3,
+  scales: [
+    { id: "phq9", name: "Depression (PHQ-9)" },
+    { id: "gad7", name: "Anxiety (GAD-7)" },
+  ],
+  items: [
+    ...PHQ9_ITEMS.map((text, idx) => ({
+      id: `phq9-${idx + 1}`,
+      text,
+      response: {
+        type: "likert" as const,
+        min: 0,
+        max: 3,
+        labels: ["Not at all", "Several days", "More than half the days", "Nearly every day"],
+      },
+      scaleId: "phq9",
+    })),
+    ...GAD7_ITEMS.map((text, idx) => ({
+      id: `gad7-${idx + 1}`,
+      text,
+      response: {
+        type: "likert" as const,
+        min: 0,
+        max: 3,
+        labels: ["Not at all", "Several days", "More than half the days", "Nearly every day"],
+      },
+      scaleId: "gad7",
+    })),
+  ],
+};
+
+/** PHQ-9 and GAD-7 use sum scoring (not mean) */
+function scorePhqGad(instrument: Instrument, session: InstrumentSession): InstrumentResult {
+  const responseMap = new Map(session.responses.map((r) => [r.itemId, r]));
+
+  const phq9Sum = PHQ9_ITEMS.reduce((sum, _, idx) => {
+    const r = responseMap.get(`phq9-${idx + 1}`);
+    return sum + (typeof r?.value === "number" ? r.value : 0);
+  }, 0);
+
+  const gad7Sum = GAD7_ITEMS.reduce((sum, _, idx) => {
+    const r = responseMap.get(`gad7-${idx + 1}`);
+    return sum + (typeof r?.value === "number" ? r.value : 0);
+  }, 0);
+
+  return {
+    instrumentId: instrument.id,
+    completedAt: session.completedAt ?? Date.now(),
+    scores: [
+      {
+        scaleId: "phq9",
+        scaleName: "Depression (PHQ-9)",
+        raw: phq9Sum,
+        normalized: (phq9Sum / 27) * 100, // max = 9 items * 3
+        itemCount: 9,
+      },
+      {
+        scaleId: "gad7",
+        scaleName: "Anxiety (GAD-7)",
+        raw: gad7Sum,
+        normalized: (gad7Sum / 21) * 100, // max = 7 items * 3
+        itemCount: 7,
+      },
+    ],
+  };
+}
+
+registerInstrument(phq9Gad7, scorePhqGad);
+
+export default phq9Gad7;
+
+========== web/src/instruments/ipip-neo-60.ts ==========
+import type { Instrument, Item, Scale } from "./types";
+import { registerInstrument } from "./registry";
+import { scoreLikert } from "../scoring/engine";
+import questionsData from "b5-johnson-120-ipip-neo-pi-r/data/en/questions.json";
+
+/**
+ * IPIP-NEO-60 (Lite tier Big Five)
+ * 60-item measure of Big Five personality with 30 facets (2 items per facet).
+ * Subset of the Johnson 120-item IPIP-NEO pool (public domain).
+ *
+ * Item selection: first 2 items per facet from the 120-item pool.
+ * Domain alpha ~0.72-0.78 (adequate for screening).
+ * Facet-level reliability is low (~0.50-0.65) with only 2 items.
+ *
+ * Source: Maples-Keller, J. L., et al. (2019). Development of a 60-item form
+ * of the IPIP NEO. Assessment.
+ */
+
+const DOMAINS: Record<string, { name: string; description: string }> = {
+  N: { name: "Neuroticism", description: "Tendency to experience negative emotions such as anxiety, anger, and depression." },
+  E: { name: "Extraversion", description: "Tendency to seek stimulation in the company of others and to experience positive emotions." },
+  O: { name: "Openness", description: "Tendency to be imaginative, creative, and open to new experiences and ideas." },
+  A: { name: "Agreeableness", description: "Tendency to be compassionate, cooperative, and trusting toward others." },
+  C: { name: "Conscientiousness", description: "Tendency to be organized, dependable, disciplined, and goal-oriented." },
+};
+
+const FACETS: Record<string, string[]> = {
+  N: ["Anxiety", "Anger", "Depression", "Self-Consciousness", "Immoderation", "Vulnerability"],
+  E: ["Friendliness", "Gregariousness", "Assertiveness", "Activity Level", "Excitement-Seeking", "Cheerfulness"],
+  O: ["Imagination", "Artistic Interests", "Emotionality", "Adventurousness", "Intellect", "Liberalism"],
+  A: ["Trust", "Morality", "Altruism", "Cooperation", "Modesty", "Sympathy"],
+  C: ["Self-Efficacy", "Orderliness", "Dutifulness", "Achievement-Striving", "Self-Discipline", "Cautiousness"],
+};
+
+function buildScales(): Scale[] {
+  const scales: Scale[] = [];
+  for (const [domainKey, meta] of Object.entries(DOMAINS)) {
+    scales.push({ id: domainKey, name: meta.name, description: meta.description });
+    const facetNames = FACETS[domainKey]!;
+    for (let i = 0; i < facetNames.length; i++) {
+      scales.push({ id: `${domainKey}${i + 1}`, name: facetNames[i]!, parentId: domainKey });
+    }
+  }
+  return scales;
+}
+
+interface RawQuestion {
+  id: string;
+  text: string;
+  keyed: "plus" | "minus";
+  domain: string;
+  facet: number;
+}
+
+/**
+ * Select 2 items per facet from the 120-item pool.
+ * Takes the first 2 items for each domain+facet combination.
+ */
+function buildItems(): Item[] {
+  const all = questionsData as RawQuestion[];
+  const selected: RawQuestion[] = [];
+
+  for (const domain of Object.keys(DOMAINS)) {
+    for (let facet = 1; facet <= 6; facet++) {
+      const facetItems = all.filter((q) => q.domain === domain && q.facet === facet);
+      selected.push(...facetItems.slice(0, 2));
+    }
+  }
+
+  return selected.map((q) => ({
+    id: q.id,
+    text: q.text,
+    response: {
+      type: "likert" as const,
+      min: 1,
+      max: 5,
+      labels: ["Very Inaccurate", "Moderately Inaccurate", "Neither", "Moderately Accurate", "Very Accurate"],
+    },
+    scaleId: `${q.domain}${q.facet}`,
+    reversed: q.keyed === "minus",
+  }));
+}
+
+const ipipNeo60: Instrument = {
+  id: "ipip-neo-60",
+  name: "IPIP-NEO-60",
+  shortName: "Big Five (Brief)",
+  description:
+    "Brief Big Five personality measure with 30 facets (2 items per facet). Adequate for screening; use NEO-120 or NEO-300 for higher precision.",
+  citation:
+    "Maples-Keller, J. L., Williamson, R. L., Sleep, C. E., Carter, N. T., Campbell, W. K., & Miller, J. D. (2019). Using item response theory to develop a 60-item representation of the NEO PI-R. Assessment, 26(1), 15-29.",
+  itemCount: 60,
+  estimatedMinutes: 8,
+  scales: buildScales(),
+  items: buildItems(),
+};
+
+registerInstrument(ipipNeo60, (instrument, session) => {
+  const facetResult = scoreLikert(instrument, session);
+  const domainScores = Object.keys(DOMAINS).map((domainKey) => {
+    const facetScores = facetResult.scores.filter(
+      (s) => s.scaleId.startsWith(domainKey) && s.scaleId.length > 1
+    );
+    const avgNorm = facetScores.length > 0
+      ? facetScores.reduce((sum, s) => sum + s.normalized, 0) / facetScores.length
+      : 0;
+    const avgRaw = facetScores.length > 0
+      ? facetScores.reduce((sum, s) => sum + s.raw, 0) / facetScores.length
+      : 0;
+    return {
+      scaleId: domainKey,
+      scaleName: DOMAINS[domainKey]!.name,
+      raw: avgRaw,
+      normalized: avgNorm,
+      itemCount: facetScores.reduce((sum, s) => sum + s.itemCount, 0),
+    };
+  });
+  return {
+    instrumentId: instrument.id,
+    completedAt: session.completedAt ?? Date.now(),
+    scores: [...domainScores, ...facetResult.scores],
+  };
+});
+
+export default ipipNeo60;
+
+========== web/src/instruments/crt-7.ts ==========
+import type { Instrument, InstrumentSession, InstrumentResult } from "./types";
+import { registerInstrument } from "./registry";
+
+/**
+ * Cognitive Reflection Test (CRT-7)
+ * Extended version by Toplak et al. (2014)
+ * Tests analytical vs intuitive thinking
+ */
+
+const crt7: Instrument = {
+  id: "crt-7",
+  name: "Cognitive Reflection Test (CRT-7)",
+  shortName: "CRT",
+  description:
+    "Measures tendency to override intuitive but incorrect responses with reflective, correct ones.",
+  citation:
+    "Toplak, M. E., West, R. F., & Stanovich, K. E. (2014). Assessing miserly information processing. Thinking & Reasoning, 20(2), 219-243.",
+  itemCount: 7,
+  estimatedMinutes: 5,
+  scales: [
+    { id: "crt-analytic", name: "Analytic Thinking" },
+  ],
+  items: [
+    {
+      id: "crt-1",
+      text: "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost? (in cents)",
+      response: { type: "numeric" },
+      scaleId: "crt-analytic",
+    },
+    {
+      id: "crt-2",
+      text: "If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets? (in minutes)",
+      response: { type: "numeric" },
+      scaleId: "crt-analytic",
+    },
+    {
+      id: "crt-3",
+      text: "In a lake, there is a patch of lily pads. Every day, the patch doubles in size. If it takes 48 days for the patch to cover the entire lake, how long would it take for the patch to cover half of the lake? (in days)",
+      response: { type: "numeric" },
+      scaleId: "crt-analytic",
+    },
+    {
+      id: "crt-4",
+      text: "If John can drink one barrel of water in 6 days, and Mary can drink one barrel of water in 12 days, how long would it take them to drink one barrel of water together? (in days)",
+      response: { type: "numeric" },
+      scaleId: "crt-analytic",
+    },
+    {
+      id: "crt-5",
+      text: "Jerry received both the 15th highest and the 15th lowest mark in the class. How many students are in the class?",
+      response: { type: "numeric" },
+      scaleId: "crt-analytic",
+    },
+    {
+      id: "crt-6",
+      text: "A man buys a pig for $60, sells it for $70, buys it back for $80, and sells it finally for $90. How much has he made? (in dollars)",
+      response: { type: "numeric" },
+      scaleId: "crt-analytic",
+    },
+    {
+      id: "crt-7",
+      text: "Simon decided to invest $8,000 in the stock market one day early in 2008. Six months after he invested, on July 17, the stocks he had purchased were down 50%. Fortunately for Simon, from July 17 to October 17, the stocks he had purchased went up 75%. At this point, Simon has: (a) broken even in the stock market, (b) is ahead of where he began, (c) has lost money. Enter a, b, or c.",
+      response: { type: "text" },
+      scaleId: "crt-analytic",
+    },
+  ],
+};
+
+/** Correct answers for CRT-7 */
+const CORRECT_ANSWERS: Record<string, (value: number | string) => boolean> = {
+  "crt-1": (v) => Number(v) === 5,
+  "crt-2": (v) => Number(v) === 5,
+  "crt-3": (v) => Number(v) === 47,
+  "crt-4": (v) => Number(v) === 4,
+  "crt-5": (v) => Number(v) === 29,
+  "crt-6": (v) => Number(v) === 20,
+  "crt-7": (v) => String(v).toLowerCase().trim() === "c",
+};
+
+function scoreCrt(instrument: Instrument, session: InstrumentSession): InstrumentResult {
+  let correct = 0;
+  for (const resp of session.responses) {
+    const checker = CORRECT_ANSWERS[resp.itemId];
+    if (checker?.(resp.value)) {
+      correct++;
+    }
+  }
+
+  return {
+    instrumentId: instrument.id,
+    completedAt: session.completedAt ?? Date.now(),
+    scores: [
+      {
+        scaleId: "crt-analytic",
+        scaleName: "Analytic Thinking",
+        raw: correct,
+        normalized: (correct / 7) * 100,
+        itemCount: session.responses.length,
+      },
+    ],
+  };
+}
+
+registerInstrument(crt7, scoreCrt);
+
+export default crt7;
+
+========== web/src/instruments/open-ended.ts ==========
+import type { Instrument, InstrumentSession, InstrumentResult } from "./types";
+import { registerInstrument } from "./registry";
+
+/**
+ * Open-Ended Qualitative Prompts
+ * Semi-structured self-reflection questions for qualitative analysis.
+ * No scoring — responses are exported for LLM analysis.
+ */
+
+const PROMPTS = [
+  "Describe yourself as you would to a stranger who will never see you. Be as honest as possible.",
+  "What are you most proud of? What are you least proud of?",
+  "How do you typically respond to conflict or disagreement?",
+  "Describe a decision you made recently that you found difficult. What made it hard?",
+  "What gives you energy? What drains you?",
+  "How have you changed in the last five years? What caused the change?",
+  "What do your closest friends value most about you? What do they wish you'd change?",
+  "Describe your relationship with uncertainty and ambiguity.",
+  "What topic could you talk about for hours? Why does it matter to you?",
+  "If you could design your ideal day with no obligations, what would it look like?",
+];
+
+const openEnded: Instrument = {
+  id: "open-ended",
+  name: "Self-Reflection Prompts",
+  shortName: "Reflection",
+  description:
+    "Open-ended questions for qualitative personality analysis. No right answers — write freely.",
+  citation: "Custom instrument for qualitative triangulation.",
+  itemCount: PROMPTS.length,
+  estimatedMinutes: 15,
+  scales: [{ id: "qualitative", name: "Qualitative Responses" }],
+  items: PROMPTS.map((text, idx) => ({
+    id: `open-${idx + 1}`,
+    text,
+    response: { type: "text" as const, minWords: 30 },
+    scaleId: "qualitative",
+  })),
+};
+
+/** No scoring — just record completeness */
+function scoreOpenEnded(_instrument: Instrument, session: InstrumentSession): InstrumentResult {
+  const answered = session.responses.filter(
+    (r) => typeof r.value === "string" && r.value.trim().length > 0
+  ).length;
+
+  const totalWords = session.responses.reduce((sum, r) => {
+    if (typeof r.value === "string") {
+      return sum + r.value.trim().split(/\s+/).length;
+    }
+    return sum;
+  }, 0);
+
+  return {
+    instrumentId: "open-ended",
+    completedAt: session.completedAt ?? Date.now(),
+    scores: [
+      {
+        scaleId: "qualitative",
+        scaleName: "Qualitative Responses",
+        raw: answered,
+        normalized: (answered / PROMPTS.length) * 100,
+        itemCount: answered,
+      },
+      {
+        scaleId: "word-count",
+        scaleName: "Total Word Count",
+        raw: totalWords,
+        normalized: Math.min((totalWords / 1000) * 100, 100), // 1000 words = 100%
+        itemCount: answered,
+      },
+    ],
+  };
+}
+
+registerInstrument(openEnded, scoreOpenEnded);
+
+export default openEnded;
+
+========== web/src/instruments/cat-big5.ts ==========
+/**
+ * CAT Big Five — Adaptive personality assessment using IRT.
+ *
+ * Loads GRM item bank at runtime and runs per-facet adaptive testing.
+ * Heavy tier only. Uses fixed-form NEO-300 theta as informative prior.
+ */
+
+import { registerInstrument } from "./registry";
+import type { Instrument, InstrumentResult, InstrumentSession } from "./types";
+
+const FACET_NAMES: Record<string, string> = {
+  N1: "Anxiety", N2: "Anger", N3: "Depression",
+  N4: "Self-Consciousness", N5: "Immoderation", N6: "Vulnerability",
+  E1: "Friendliness", E2: "Gregariousness", E3: "Assertiveness",
+  E4: "Activity Level", E5: "Excitement-Seeking", E6: "Cheerfulness",
+  O1: "Imagination", O2: "Artistic Interests", O3: "Emotionality",
+  O4: "Adventurousness", O5: "Intellect", O6: "Liberalism",
+  A1: "Trust", A2: "Morality", A3: "Altruism",
+  A4: "Cooperation", A5: "Modesty", A6: "Sympathy",
+  C1: "Self-Efficacy", C2: "Orderliness", C3: "Dutifulness",
+  C4: "Achievement-Striving", C5: "Self-Discipline", C6: "Cautiousness",
+};
+
+const DOMAIN_NAMES: Record<string, string> = {
+  N: "Neuroticism", E: "Extraversion", O: "Openness",
+  A: "Agreeableness", C: "Conscientiousness",
+};
+
+// Use intersection type to add adaptive flag beyond the Instrument interface
+const instrument = {
+  id: "cat-big5",
+  name: "CAT Big Five (Adaptive)",
+  shortName: "CAT-B5",
+  description: "Computerized Adaptive Testing for Big Five personality facets using IRT Graded Response Model. Adapts item selection to maximize measurement precision per facet.",
+  citation: "SAPA Project (Condon & Revelle, 2014). GRM: Samejima (1969).",
+  itemCount: 0, // Dynamic — depends on stopping criteria
+  estimatedMinutes: 15,
+  adaptive: true as const,
+  // Scales: 5 domains + 30 facets
+  scales: [
+    ...Object.entries(DOMAIN_NAMES).map(([id, name]) => ({ id, name })),
+    ...Object.entries(FACET_NAMES).map(([id, name]) => ({
+      id,
+      name,
+      parentId: id[0],
+    })),
+  ],
+  items: [] as Instrument["items"],
+} satisfies Instrument & { adaptive: true };
+
+// CAT instruments don't use the standard scoring function —
+// scoring is handled by the CATController + scoreAdaptive().
+// This placeholder returns empty results if called directly.
+function scoreCATPlaceholder(
+  _instrument: Instrument,
+  _session: InstrumentSession,
+): InstrumentResult {
+  return {
+    instrumentId: "cat-big5",
+    completedAt: Date.now(),
+    scores: [],
+  };
+}
+
+registerInstrument(instrument, scoreCATPlaceholder);
+
+export { FACET_NAMES as CAT_BIG5_FACET_NAMES, DOMAIN_NAMES as CAT_BIG5_DOMAIN_NAMES };
+
+========== web/src/instruments/cat-hexaco.ts ==========
+/**
+ * CAT HEXACO — Adaptive HEXACO assessment using IRT.
+ *
+ * Loads GRM item bank at runtime and runs per-facet adaptive testing.
+ * Heavy tier only. Uses fixed-form HEXACO-200 theta as informative prior.
+ */
+
+import { registerInstrument } from "./registry";
+import type { Instrument, InstrumentResult, InstrumentSession } from "./types";
+
+const FACET_NAMES: Record<string, string> = {
+  HH1: "Sincerity", HH2: "Fairness", HH3: "Greed-Avoidance", HH4: "Modesty",
+  EM1: "Fearfulness", EM2: "Anxiety", EM3: "Dependence", EM4: "Sentimentality",
+  EX1: "Social Self-Esteem", EX2: "Social Boldness", EX3: "Sociability", EX4: "Liveliness",
+  AG1: "Forgiveness", AG2: "Gentleness", AG3: "Flexibility", AG4: "Patience",
+  CO1: "Organization", CO2: "Diligence", CO3: "Perfectionism", CO4: "Prudence",
+  OP1: "Aesthetic Appreciation", OP2: "Inquisitiveness", OP3: "Creativity", OP4: "Unconventionality",
+};
+
+const DOMAIN_NAMES: Record<string, string> = {
+  HH: "Honesty-Humility", EM: "Emotionality", EX: "Extraversion",
+  AG: "Agreeableness", CO: "Conscientiousness", OP: "Openness",
+};
+
+const instrument = {
+  id: "cat-hexaco",
+  name: "CAT HEXACO (Adaptive)",
+  shortName: "CAT-HX",
+  description: "Computerized Adaptive Testing for HEXACO personality facets using IRT Graded Response Model.",
+  citation: "SAPA Project. HEXACO: Lee & Ashton (2004). GRM: Samejima (1969).",
+  itemCount: 0,
+  estimatedMinutes: 10,
+  adaptive: true as const,
+  scales: [
+    ...Object.entries(DOMAIN_NAMES).map(([id, name]) => ({ id, name })),
+    ...Object.entries(FACET_NAMES).map(([id, name]) => ({
+      id,
+      name,
+      parentId: id.slice(0, 2),
+    })),
+  ],
+  items: [] as Instrument["items"],
+} satisfies Instrument & { adaptive: true };
+
+function scoreCATPlaceholder(
+  _instrument: Instrument,
+  _session: InstrumentSession,
+): InstrumentResult {
+  return {
+    instrumentId: "cat-hexaco",
+    completedAt: Date.now(),
+    scores: [],
+  };
+}
+
+registerInstrument(instrument, scoreCATPlaceholder);
+
+export { FACET_NAMES as CAT_HEXACO_FACET_NAMES, DOMAIN_NAMES as CAT_HEXACO_DOMAIN_NAMES };
+
+========== web/src/instruments/hexaco-60.ts ==========
+import type { Instrument } from "./types";
+import { registerInstrument } from "./registry";
+import { scoreLikert } from "../scoring/engine";
+
+/**
+ * HEXACO-60 (IPIP version)
+ * 60-item measure of 6 personality factors including Honesty-Humility.
+ * Source: IPIP representation of HEXACO (ipip.ori.org) — public domain.
+ * Ashton & Lee (2009). The HEXACO-60: A short measure of the major dimensions of personality.
+ */
+
+interface HexacoItem {
+  text: string;
+  scale: string;
+  reversed: boolean;
+}
+
+const SCALES = [
+  { id: "hh", name: "Honesty-Humility", description: "Sincerity, fairness, greed avoidance, modesty" },
+  { id: "em", name: "Emotionality", description: "Fearfulness, anxiety, dependence, sentimentality" },
+  { id: "ex", name: "Extraversion", description: "Social self-esteem, social boldness, sociability, liveliness" },
+  { id: "ag", name: "Agreeableness", description: "Forgiveness, gentleness, flexibility, patience" },
+  { id: "co", name: "Conscientiousness", description: "Organization, diligence, perfectionism, prudence" },
+  { id: "op", name: "Openness to Experience", description: "Aesthetic appreciation, inquisitiveness, creativity, unconventionality" },
+];
+
+// HEXACO-60 IPIP items (public domain from ipip.ori.org)
+const ITEMS: HexacoItem[] = [
+  // Honesty-Humility (10 items)
+  { text: "I would never accept a bribe, even if it were very large.", scale: "hh", reversed: false },
+  { text: "I would be tempted to use counterfeit money, if I were sure I could get away with it.", scale: "hh", reversed: true },
+  { text: "If I knew that I could never get caught, I would be willing to steal a million dollars.", scale: "hh", reversed: true },
+  { text: "I would never take things that aren't mine.", scale: "hh", reversed: false },
+  { text: "I would like to be seen driving around in a very expensive car.", scale: "hh", reversed: true },
+  { text: "I would get a lot of pleasure from owning expensive luxury goods.", scale: "hh", reversed: true },
+  { text: "Having a lot of money is not especially important to me.", scale: "hh", reversed: false },
+  { text: "I think that I am entitled to more respect than the average person is.", scale: "hh", reversed: true },
+  { text: "I want people to know that I am an important person of high status.", scale: "hh", reversed: true },
+  { text: "I am an ordinary person who is no better than others.", scale: "hh", reversed: false },
+
+  // Emotionality (10 items)
+  { text: "I would feel afraid if I had to travel in bad weather conditions.", scale: "em", reversed: false },
+  { text: "I don't mind doing jobs that involve dangerous work.", scale: "em", reversed: true },
+  { text: "When it comes to physical danger, I am very fearful.", scale: "em", reversed: false },
+  { text: "Even in an emergency I wouldn't feel like panicking.", scale: "em", reversed: true },
+  { text: "I sometimes can't help worrying about little things.", scale: "em", reversed: false },
+  { text: "I worry a lot less than most people do.", scale: "em", reversed: true },
+  { text: "I can handle difficult situations without needing emotional support from anyone else.", scale: "em", reversed: true },
+  { text: "Whenever I feel worried about something, I want to share my concern with another person.", scale: "em", reversed: false },
+  { text: "I feel like crying when I see other people crying.", scale: "em", reversed: false },
+  { text: "I remain unemotional even in situations where most people get very sentimental.", scale: "em", reversed: true },
+
+  // Extraversion (10 items)
+  { text: "I feel reasonably satisfied with myself overall.", scale: "ex", reversed: false },
+  { text: "I think most people like some aspects of my personality.", scale: "ex", reversed: false },
+  { text: "I feel that I am an unpopular person.", scale: "ex", reversed: true },
+  { text: "I sometimes feel that I am a worthless person.", scale: "ex", reversed: true },
+  { text: "In social situations, I'm usually the one who makes the first move.", scale: "ex", reversed: false },
+  { text: "When I'm in a group of people, I'm often the one who speaks on behalf of the group.", scale: "ex", reversed: false },
+  { text: "I tend to feel quite self-conscious when speaking in front of a group of people.", scale: "ex", reversed: true },
+  { text: "I prefer jobs that involve active social interaction to those that involve working alone.", scale: "ex", reversed: false },
+  { text: "The first thing that I always do in a new place is to make friends.", scale: "ex", reversed: false },
+  { text: "On most days, I feel cheerful and optimistic.", scale: "ex", reversed: false },
+
+  // Agreeableness (10 items)
+  { text: "I rarely hold a grudge, even against people who have badly wronged me.", scale: "ag", reversed: false },
+  { text: "My attitude toward people who have treated me badly is 'forgive and forget'.", scale: "ag", reversed: false },
+  { text: "If someone has cheated me once, I will always feel suspicious of that person.", scale: "ag", reversed: true },
+  { text: "I find it hard to fully forgive someone who has done something mean to me.", scale: "ag", reversed: true },
+  { text: "I tend to be lenient in judging other people.", scale: "ag", reversed: false },
+  { text: "People sometimes tell me that I am too critical of others.", scale: "ag", reversed: true },
+  { text: "Even when people make a lot of mistakes, I rarely say anything negative.", scale: "ag", reversed: false },
+  { text: "People sometimes tell me that I'm too stubborn.", scale: "ag", reversed: true },
+  { text: "I am usually quite flexible in my opinions when people disagree with me.", scale: "ag", reversed: false },
+  { text: "When people tell me that I'm wrong, my first reaction is to argue with them.", scale: "ag", reversed: true },
+
+  // Conscientiousness (10 items)
+  { text: "I plan ahead and organize things, to avoid scrambling at the last minute.", scale: "co", reversed: false },
+  { text: "I often push myself very hard when trying to achieve a goal.", scale: "co", reversed: false },
+  { text: "When working on something, I don't pay much attention to small details.", scale: "co", reversed: true },
+  { text: "I make a lot of mistakes because I don't think before I act.", scale: "co", reversed: true },
+  { text: "People often call me a perfectionist.", scale: "co", reversed: false },
+  { text: "I prefer to do whatever comes to mind, rather than stick to a plan.", scale: "co", reversed: true },
+  { text: "I do only the minimum amount of work needed to get by.", scale: "co", reversed: true },
+  { text: "When working, I sometimes have difficulties due to being disorganized.", scale: "co", reversed: true },
+  { text: "I always try to be accurate in my work, even at the expense of time.", scale: "co", reversed: false },
+  { text: "When I have a deadline, I often leave things to the last minute.", scale: "co", reversed: true },
+
+  // Openness to Experience (10 items)
+  { text: "I would be quite bored by a visit to an art gallery.", scale: "op", reversed: true },
+  { text: "I would enjoy creating a work of art, such as a novel, a song, or a painting.", scale: "op", reversed: false },
+  { text: "If I had the opportunity, I would like to attend a classical music concert.", scale: "op", reversed: false },
+  { text: "Sometimes I like to just watch the wind as it blows through the trees.", scale: "op", reversed: false },
+  { text: "I enjoy looking at maps of different places.", scale: "op", reversed: false },
+  { text: "I think of myself as a somewhat eccentric person.", scale: "op", reversed: false },
+  { text: "I find it boring to discuss philosophy.", scale: "op", reversed: true },
+  { text: "People have often told me that I have a good imagination.", scale: "op", reversed: false },
+  { text: "I like people who have unconventional views.", scale: "op", reversed: false },
+  { text: "I have never really enjoyed looking through an encyclopedia.", scale: "op", reversed: true },
+];
+
+const hexaco60: Instrument = {
+  id: "hexaco-60",
+  name: "HEXACO-60",
+  shortName: "HEXACO",
+  description:
+    "6-factor personality model including Honesty-Humility, which is not measured by the Big Five. Provides a complementary perspective to NEO instruments.",
+  citation:
+    "Ashton, M. C., & Lee, K. (2009). The HEXACO-60: A short measure of the major dimensions of personality. Journal of Personality Assessment, 91, 340-345. IPIP items from ipip.ori.org.",
+  itemCount: 60,
+  estimatedMinutes: 8,
+  scales: SCALES,
+  items: ITEMS.map((item, idx) => ({
+    id: `hexaco-${idx + 1}`,
+    text: item.text,
+    response: {
+      type: "likert" as const,
+      min: 1,
+      max: 5,
+      labels: [
+        "Strongly Disagree",
+        "Disagree",
+        "Neutral",
+        "Agree",
+        "Strongly Agree",
+      ],
+    },
+    scaleId: item.scale,
+    reversed: item.reversed,
+  })),
+};
+
+registerInstrument(hexaco60, scoreLikert);
+
+export default hexaco60;
+
+========== web/src/instruments/sd3.ts ==========
+import type { Instrument } from "./types";
+import { registerInstrument } from "./registry";
+import { scoreLikert } from "../scoring/engine";
+
+/**
+ * Short Dark Triad (SD3)
+ * Jones & Paulhus (2014)
+ * 27 items measuring Machiavellianism, Narcissism, and Psychopathy.
+ */
+
+interface SD3Item {
+  text: string;
+  scale: "mach" | "narc" | "psych";
+  reversed: boolean;
+}
+
+const ITEMS: SD3Item[] = [
+  // Machiavellianism (9 items)
+  { text: "It's not wise to tell your secrets.", scale: "mach", reversed: false },
+  { text: "I like to use clever manipulation to get my way.", scale: "mach", reversed: false },
+  { text: "Whatever it takes, you must get the important people on your side.", scale: "mach", reversed: false },
+  { text: "Avoid direct conflict with others because they may be useful in the future.", scale: "mach", reversed: false },
+  { text: "It's wise to keep track of information that you can use against people later.", scale: "mach", reversed: false },
+  { text: "You should wait for the right time to get back at people.", scale: "mach", reversed: false },
+  { text: "There are things you should hide from other people to preserve your reputation.", scale: "mach", reversed: false },
+  { text: "Make sure your plans benefit yourself, not others.", scale: "mach", reversed: false },
+  { text: "Most people can be manipulated.", scale: "mach", reversed: false },
+
+  // Narcissism (9 items)
+  { text: "People see me as a natural leader.", scale: "narc", reversed: false },
+  { text: "I hate being the center of attention.", scale: "narc", reversed: true },
+  { text: "Many group activities tend to be dull without me.", scale: "narc", reversed: false },
+  { text: "I know that I am special because everyone keeps telling me so.", scale: "narc", reversed: false },
+  { text: "I like to get acquainted with important people.", scale: "narc", reversed: false },
+  { text: "I feel embarrassed if someone compliments me.", scale: "narc", reversed: true },
+  { text: "I have been compared to famous people.", scale: "narc", reversed: false },
+  { text: "I am an average person.", scale: "narc", reversed: true },
+  { text: "I insist on getting the respect I deserve.", scale: "narc", reversed: false },
+
+  // Psychopathy (9 items)
+  { text: "I like to get revenge on authorities.", scale: "psych", reversed: false },
+  { text: "I avoid dangerous situations.", scale: "psych", reversed: true },
+  { text: "Payback needs to be quick and nasty.", scale: "psych", reversed: false },
+  { text: "People often say I'm out of control.", scale: "psych", reversed: false },
+  { text: "It's true that I can be mean to others.", scale: "psych", reversed: false },
+  { text: "People who mess with me always regret it.", scale: "psych", reversed: false },
+  { text: "I have never gotten into trouble with the law.", scale: "psych", reversed: true },
+  { text: "I enjoy having sex with people I hardly know.", scale: "psych", reversed: false },
+  { text: "I'll say anything to get what I want.", scale: "psych", reversed: false },
+];
+
+const sd3: Instrument = {
+  id: "sd3",
+  name: "Short Dark Triad (SD3)",
+  shortName: "Dark Triad",
+  description:
+    "Measures three socially aversive personality traits: Machiavellianism, Narcissism, and Psychopathy.",
+  citation:
+    "Jones, D. N., & Paulhus, D. L. (2014). Introducing the Short Dark Triad (SD3). Assessment, 21(1), 28-41.",
+  itemCount: 27,
+  estimatedMinutes: 5,
+  scales: [
+    { id: "mach", name: "Machiavellianism" },
+    { id: "narc", name: "Narcissism" },
+    { id: "psych", name: "Psychopathy" },
+  ],
+  items: ITEMS.map((item, idx) => ({
+    id: `sd3-${idx + 1}`,
+    text: item.text,
+    response: {
+      type: "likert" as const,
+      min: 1,
+      max: 5,
+      labels: [
+        "Strongly Disagree",
+        "Disagree",
+        "Neither",
+        "Agree",
+        "Strongly Agree",
+      ],
+    },
+    scaleId: item.scale,
+    reversed: item.reversed,
+  })),
+};
+
+registerInstrument(sd3, scoreLikert);
+
+export default sd3;
+
+
+# ===== NEXT.JS INTEGRATION =====
+
+========== tier-3-nextjs/src/app/psyche/page.tsx ==========
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import MCPSetupGuide from '@/components/psyche/MCPSetupGuide';
+
+export const metadata: Metadata = {
+  title: 'Psyche — Personality Assessment | Ashita Orbis',
+  description: 'Free, anonymous personality assessment combining up to 20 validated psychometric instruments with AI-analyzed interview responses. Lite (~35 min) or Standard (~80 min) tiers.',
+  openGraph: {
+    title: 'Psyche — Personality Assessment',
+    description: 'Free, anonymous personality assessment. Up to 20 validated instruments + AI interview analysis. Lite or Standard tiers.',
+    url: 'https://app.ashitaorbis.com/psyche',
+  },
+};
+
+const LITE_INSTRUMENTS = [
+  { name: 'IPIP-NEO-60', desc: 'Big Five personality (60 items)' },
+  { name: 'CRT-7', desc: 'Cognitive reflection (7 items)' },
+  { name: 'NCS-18', desc: 'Need for cognition (18 items)' },
+  { name: 'Rosenberg', desc: 'Self-esteem (10 items)' },
+  { name: 'SD3', desc: 'Dark Triad (27 items)' },
+  { name: 'PHQ-9 + GAD-7', desc: 'Depression + anxiety screening (16 items)' },
+  { name: 'ECR-R', desc: 'Attachment style (36 items)' },
+  { name: 'ERQ-10', desc: 'Emotion regulation (10 items)' },
+  { name: 'IRI-28', desc: 'Empathy (28 items)' },
+  { name: 'Self-Monitoring', desc: 'Social flexibility (18 items)' },
+  { name: 'LOC IE-4', desc: 'Locus of control (4 items)' },
+  { name: 'Grit-S', desc: 'Perseverance (8 items)' },
+  { name: 'RIASEC-48', desc: 'Vocational interests (48 items)' },
+  { name: 'BPNS-9', desc: 'Basic psychological needs (9 items)' },
+  { name: 'Open-Ended', desc: '10 self-reflection prompts' },
+];
+
+const STANDARD_ADDITIONS = [
+  { name: 'IPIP-NEO-300', desc: 'Big Five — 30 facets, 10 items each (replaces NEO-60)' },
+  { name: 'HEXACO-60', desc: '6-factor personality incl. Honesty-Humility (60 items)' },
+  { name: 'SWLS', desc: 'Life satisfaction (5 items)' },
+  { name: 'AAQ-II', desc: 'Psychological flexibility (7 items)' },
+  { name: 'Dweck ITIS', desc: 'Growth mindset (8 items)' },
+  { name: 'CEI-II', desc: 'Curiosity & exploration (10 items)' },
+];
+
+export default function PsycheLanding() {
+  return (
+    <main className="max-w-4xl mx-auto px-4 py-12 md:py-20">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-[var(--font-heading)] text-[var(--color-text)] mb-4">
+          Psyche
+        </h1>
+        <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+          A personality assessment that combines validated psychometric instruments with
+          AI-analyzed interview responses to build a comprehensive profile.
+        </p>
+      </div>
+
+      {/* Tier selector */}
+      <div className="grid md:grid-cols-2 gap-4 mb-12">
+        <div className="glass-card p-6 rounded-xl relative">
+          <span className="absolute top-3 right-3 text-[0.65rem] px-2 py-0.5 rounded-full bg-[var(--color-primary)] text-[var(--color-bg)] font-medium">
+            Default
+          </span>
+          <h2 className="text-xl font-[var(--font-heading)] text-[var(--color-text)] mb-3">Lite</h2>
+          <div className="flex gap-6 mb-3">
+            <div>
+              <span className="text-2xl text-[var(--color-primary)]">15</span>
+              <span className="text-xs text-[var(--color-text-muted)] ml-1">Instruments</span>
+            </div>
+            <div>
+              <span className="text-2xl text-[var(--color-primary)]">~260</span>
+              <span className="text-xs text-[var(--color-text-muted)] ml-1">Items</span>
+            </div>
+            <div>
+              <span className="text-2xl text-[var(--color-primary)]">~35</span>
+              <span className="text-xs text-[var(--color-text-muted)] ml-1">Min</span>
+            </div>
+          </div>
+          <p className="text-xs text-[var(--color-text-muted)] mb-4">
+            Core personality, cognition, wellbeing, and motivation. Plus 10 interview questions.
+          </p>
+          <Link
+            href="/psyche/assess"
+            className="inline-block px-6 py-2.5 rounded-lg text-sm font-medium transition-opacity
+              bg-[var(--color-primary)] text-[var(--color-bg)] hover:opacity-90"
+          >
+            Begin Assessment
+          </Link>
+        </div>
+
+        <div className="glass-card p-6 rounded-xl">
+          <h2 className="text-xl font-[var(--font-heading)] text-[var(--color-text)] mb-3">Standard</h2>
+          <div className="flex gap-6 mb-3">
+            <div>
+              <span className="text-2xl text-[var(--color-primary)]">20</span>
+              <span className="text-xs text-[var(--color-text-muted)] ml-1">Instruments</span>
+            </div>
+            <div>
+              <span className="text-2xl text-[var(--color-primary)]">~590</span>
+              <span className="text-xs text-[var(--color-text-muted)] ml-1">Items</span>
+            </div>
+            <div>
+              <span className="text-2xl text-[var(--color-primary)]">~80</span>
+              <span className="text-xs text-[var(--color-text-muted)] ml-1">Min</span>
+            </div>
+          </div>
+          <p className="text-xs text-[var(--color-text-muted)] mb-4">
+            Upgrades Big Five to 300 items (30 facets). Adds HEXACO-60, life satisfaction, psychological flexibility, growth mindset, and curiosity.
+          </p>
+          <Link
+            href="/psyche/assess?tier=standard"
+            className="inline-block px-6 py-2.5 rounded-lg text-sm font-medium transition-opacity
+              border border-[var(--color-primary)] text-[var(--color-primary)] hover:opacity-80"
+          >
+            Begin Standard
+          </Link>
+        </div>
+      </div>
+
+      {/* How it works */}
+      <div className="glass-card p-6 md:p-8 rounded-xl mb-8">
+        <h2 className="text-xl font-[var(--font-heading)] text-[var(--color-text)] mb-4">
+          How It Works
+        </h2>
+        <div className="space-y-4 text-sm text-[var(--color-text-muted)]">
+          <div className="flex gap-4">
+            <span className="text-[var(--color-primary)] font-mono font-bold shrink-0">01</span>
+            <div>
+              <p className="text-[var(--color-text)] font-medium">Take the instruments</p>
+              <p>Validated psychometric scales — Big Five personality, cognitive reflection, empathy, attachment style, grit, vocational interests, and more. Keyboard shortcuts for speed.</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <span className="text-[var(--color-primary)] font-mono font-bold shrink-0">02</span>
+            <div>
+              <p className="text-[var(--color-text)] font-medium">Answer 10 interview questions</p>
+              <p>Open-ended self-reflection prompts that capture nuance no multiple-choice scale can.</p>
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <span className="text-[var(--color-primary)] font-mono font-bold shrink-0">03</span>
+            <div>
+              <p className="text-[var(--color-text)] font-medium">Get your AI-generated report</p>
+              <p>An AI synthesizes your quantitative scores with your interview responses into a narrative personality report.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Privacy */}
+      <div className="glass-card p-6 rounded-xl mb-8">
+        <h2 className="text-lg font-[var(--font-heading)] text-[var(--color-text)] mb-3">
+          Privacy by Design
+        </h2>
+        <div className="grid sm:grid-cols-2 gap-3 text-sm text-[var(--color-text-muted)]">
+          <div className="flex gap-2">
+            <span className="text-[var(--color-primary)] shrink-0">--</span>
+            <span>No account required</span>
+          </div>
+          <div className="flex gap-2">
+            <span className="text-[var(--color-primary)] shrink-0">--</span>
+            <span>No IP address collected</span>
+          </div>
+          <div className="flex gap-2">
+            <span className="text-[var(--color-primary)] shrink-0">--</span>
+            <span>Scores computed in your browser</span>
+          </div>
+          <div className="flex gap-2">
+            <span className="text-[var(--color-primary)] shrink-0">--</span>
+            <span>Session data auto-deletes after 7 days</span>
+          </div>
+        </div>
+      </div>
+
+      {/* MCP flow */}
+      <div className="space-y-4 mb-12">
+        <MCPSetupGuide />
+      </div>
+
+      {/* Instruments included */}
+      <div className="glass-card p-6 md:p-8 rounded-xl">
+        <h2 className="text-lg font-[var(--font-heading)] text-[var(--color-text)] mb-4">
+          Instruments Included
+        </h2>
+
+        <h3 className="text-sm font-semibold text-[var(--color-text)] mb-3">Lite Tier (15 instruments)</h3>
+        <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm mb-6">
+          {LITE_INSTRUMENTS.map(inst => (
+            <div key={inst.name} className="flex gap-2 py-1">
+              <span className="text-[var(--color-text)] font-medium shrink-0">{inst.name}</span>
+              <span className="text-[var(--color-text-muted)]">{inst.desc}</span>
+            </div>
+          ))}
+        </div>
+
+        <h3 className="text-sm font-semibold text-[var(--color-text)] mb-3">Standard Tier adds (+5 new, 1 upgrade)</h3>
+        <div className="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+          {STANDARD_ADDITIONS.map(inst => (
+            <div key={inst.name} className="flex gap-2 py-1">
+              <span className="text-[var(--color-text)] font-medium shrink-0">{inst.name}</span>
+              <span className="text-[var(--color-text-muted)]">{inst.desc}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </main>
+  );
+}
+
+========== tier-3-nextjs/src/app/psyche/assess/page.tsx ==========
+'use client';
+
+import { useEffect, useState, useCallback, useRef } from 'react';
+import { useSearchParams } from 'next/navigation';
+import type { InstrumentResult, ItemResponse, Tier } from '@/lib/psyche/types';
+import { getInstrumentsForTier } from '@/lib/psyche/tiers';
+import { getInstrument, getAllInstruments } from '@/lib/psyche/registry';
+import * as api from '@/lib/psyche/api';
+
+// Side-effect: register all Lite + Standard instruments
+import '@/lib/psyche/init-standard';
+
+import ConsentFlow, { CONSENT_TEXT_L1 } from '@/components/psyche/ConsentFlow';
+import ResearchOptIn, { CONSENT_TEXT_L2 } from '@/components/psyche/ResearchOptIn';
+import InstrumentRunner from '@/components/psyche/InstrumentRunner';
+import InterviewFlow from '@/components/psyche/InterviewFlow';
+import PsycheProgress from '@/components/psyche/PsycheProgress';
+import PsycheResults from '@/components/psyche/PsycheResults';
+import CrisisResources from '@/components/psyche/CrisisResources';
+
+type Phase = 'loading' | 'consent' | 'instruments' | 'crisis-resources' | 'interview' | 'generating' | 'results' | 'error';
+
+interface SessionState {
+  sessionId: string;
+  instrumentOrder: string[];
+  currentInstrumentIndex: number;
+  completedInstruments: Map<string, ItemResponse[]>;
+  instrumentResults: InstrumentResult[];
+  interviewResponses: Array<{ prompt_index: number; prompt_text: string; response_text: string }>;
+  reportText?: string;
+  reportLoading: boolean;
+  reportError?: string;
+  /** True if interview was already completed (e.g., via MCP) — skip website interview */
+  interviewPreCompleted: boolean;
+}
+
+const STORAGE_KEY = 'psyche-session';
+const STORAGE_VERSION = 2;
+const SESSION_TTL_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
+
+interface StoredState {
+  version: number;
+  expiresAt: number;
+  sessionId: string;
+  tier: Tier;
+  phase: Phase;
+  instrumentIndex: number;
+  completedIds: string[];
+  instrumentResponses?: Record<string, ItemResponse[]>;
+  instrumentResults?: InstrumentResult[];
+  interviewResponses?: Array<{ prompt_index: number; prompt_text: string; response_text: string }>;
+}
+
+function saveToStorage(stored: Omit<StoredState, 'version' | 'expiresAt'> & { expiresAt?: number }) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify({
+      ...stored,
+      version: STORAGE_VERSION,
+      expiresAt: stored.expiresAt ?? Date.now() + SESSION_TTL_MS,
+    }));
+  } catch {}
+}
+
+function loadFromStorage(): StoredState | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return null;
+    const stored = JSON.parse(raw) as StoredState;
+
+    if (stored.version !== STORAGE_VERSION) {
+      localStorage.removeItem(STORAGE_KEY);
+      return null;
+    }
+
+    if (Date.now() > stored.expiresAt) {
+      localStorage.removeItem(STORAGE_KEY);
+      return null;
+    }
+
+    return stored;
+  } catch {
+    return null;
+  }
+}
+
+function clearStorage() {
+  try { localStorage.removeItem(STORAGE_KEY); } catch {}
+}
+
+export default function PsycheAssess() {
+  const searchParams = useSearchParams();
+  const [phase, setPhase] = useState<Phase>('loading');
+  const [state, setState] = useState<SessionState>({
+    sessionId: '',
+    instrumentOrder: [],
+    currentInstrumentIndex: 0,
+    completedInstruments: new Map(),
+    instrumentResults: [],
+    interviewResponses: [],
+    reportLoading: false,
+    interviewPreCompleted: false,
+  });
+  const [error, setError] = useState<string>('');
+  const [tier, setTier] = useState<Tier>('lite');
+  const initRef = useRef(false);
+  const expiresAtRef = useRef<number>(Date.now() + SESSION_TTL_MS);
+
+  // Initialize session
+  useEffect(() => {
+    if (initRef.current) return;
+    initRef.current = true;
+
+    const init = async () => {
+      // Check localStorage for resumed session to determine tier
+      const stored = loadFromStorage();
+
+      // Determine tier: stored session takes priority, then URL param, then default
+      const urlTier = searchParams.get('tier');
+      const resolvedTier: Tier = stored?.tier ?? (urlTier === 'standard' ? 'standard' : 'lite');
+      setTier(resolvedTier);
+
+      const instrumentIds = getInstrumentsForTier(resolvedTier);
+      // Separate open-ended from quantitative instruments
+      const quantitative = instrumentIds.filter(id => id !== 'open-ended');
+
+      // Check for session param (MCP handoff)
+      const sessionParam = searchParams.get('session');
+      if (sessionParam) {
+        try {
+          const sessionData = await api.getSession(sessionParam);
+          if (sessionData.error) {
+            setError(sessionData.error);
+            setPhase('error');
+            return;
+          }
+          const hasInterview = !!sessionData.has_interview;
+
+          // If interview exists (MCP flow), fetch it and store locally
+          let interviewResponses: Array<{ prompt_index: number; prompt_text: string; response_text: string }> = [];
+          if (hasInterview) {
+            try {
+              const exportData = await api.exportSession(sessionParam);
+              if (exportData.interviews) {
+                interviewResponses = exportData.interviews;
+              }
+            } catch {
+              // Non-critical — interview data stays on server
+            }
+          }
+
+          setState(prev => ({
+            ...prev,
+            sessionId: sessionParam,
+            instrumentOrder: quantitative,
+            interviewPreCompleted: hasInterview,
+            interviewResponses,
+          }));
+
+          // Persist to localStorage so data survives refresh
+          const expiresAt = Date.now() + SESSION_TTL_MS;
+          expiresAtRef.current = expiresAt;
+          saveToStorage({
+            expiresAt,
+            sessionId: sessionParam,
+            tier: resolvedTier,
+            phase: 'instruments',
+            instrumentIndex: 0,
+            completedIds: [],
+            instrumentResponses: {},
+            instrumentResults: sessionData.scores_json ? JSON.parse(JSON.stringify(sessionData.scores_json)) : [],
+            interviewResponses,
+          });
+
+          // Resume based on session status
+          if (sessionData.has_report) {
+            setState(prev => ({
+              ...prev,
+              reportText: sessionData.report_text,
+              instrumentResults: sessionData.scores_json ?? [],
+            }));
+            setPhase('results');
+          } else if (sessionData.has_scores) {
+            // Scores submitted — if interview pre-done, go to results; otherwise generating
+            setPhase(hasInterview ? 'results' : 'generating');
+          } else if (sessionData.consent_given >= 1) {
+            setPhase('instruments');
+          } else {
+            setPhase('consent');
+          }
+          return;
+        } catch {
+          // Fall through to normal flow
+        }
+      }
+
+      // Check localStorage for resumed session (stored already loaded at top of init)
+      if (stored?.sessionId) {
+        try {
+          const sessionData = await api.getSession(stored.sessionId);
+          if (!sessionData.error && sessionData.status === 'active') {
+            // Rebuild completedInstruments Map from stored responses
+            const completedMap = new Map<string, ItemResponse[]>();
+            if (stored.instrumentResponses) {
+              for (const [instId, resps] of Object.entries(stored.instrumentResponses)) {
+                completedMap.set(instId, resps);
+              }
+            }
+
+            const hasStoredInterview = (stored.interviewResponses?.length ?? 0) > 0;
+            setState(prev => ({
+              ...prev,
+              sessionId: stored.sessionId,
+              instrumentOrder: quantitative,
+              currentInstrumentIndex: stored.instrumentIndex,
+              completedInstruments: completedMap,
+              instrumentResults: stored.instrumentResults ?? [],
+              interviewResponses: stored.interviewResponses ?? [],
+              interviewPreCompleted: hasStoredInterview && sessionData.source === 'mcp',
+            }));
+
+            // Preserve the TTL from the stored session
+            expiresAtRef.current = stored.expiresAt;
+
+            // If we have a report from the API, go to results
+            if (sessionData.has_report) {
+              setState(prev => ({
+                ...prev,
+                reportText: sessionData.report_text,
+                instrumentResults: sessionData.scores_json ?? prev.instrumentResults,
+              }));
+              setPhase('results');
+            } else {
+              setPhase(stored.phase);
+            }
+            return;
+          }
+        } catch {
+          // Session expired or invalid, start fresh
+        }
+      }
+
+      setState(prev => ({
+        ...prev,
+        instrumentOrder: quantitative,
+      }));
+      setPhase('consent');
+    };
+
+    init();
+  }, [searchParams]);
+
+  // Handle consent
+  const handleConsent = useCallback(async () => {
+    try {
+      const session = await api.createSession('website');
+      if (session.error) {
+        setError(session.error);
+        setPhase('error');
+        return;
+      }
+      await api.recordConsent(session.id, 1, CONSENT_TEXT_L1);
+      setState(prev => ({ ...prev, sessionId: session.id }));
+      const expiresAt = Date.now() + SESSION_TTL_MS;
+      expiresAtRef.current = expiresAt;
+      saveToStorage({ expiresAt, sessionId: session.id, tier, phase: 'instruments', instrumentIndex: 0, completedIds: [], instrumentResponses: {}, instrumentResults: [] });
+      setPhase('instruments');
+    } catch (err) {
+      setError('Failed to create session. Please try again.');
+      setPhase('error');
+    }
+  }, [tier]);
+
+  // Handle instrument completion
+  const handleInstrumentComplete = useCallback(async (responses: ItemResponse[]) => {
+    const currentId = state.instrumentOrder[state.currentInstrumentIndex];
+    if (!currentId) return;
+
+    const registered = getInstrument(currentId);
+    if (!registered) return;
+
+    // Score locally
+    const result = registered.score(registered.instrument, {
+      instrumentId: currentId,
+      startedAt: Date.now(),
+      completedAt: Date.now(),
+      responses,
+    });
+
+    // Save responses to API if research consent given
+    const apiResponses = responses.map(r => ({
+      instrument_id: currentId,
+      item_id: r.itemId,
+      value: r.value,
+    }));
+
+    // Fire and forget — don't block on response storage
+    api.saveResponses(state.sessionId, apiResponses).catch(() => {});
+
+    const newCompleted = new Map(state.completedInstruments);
+    newCompleted.set(currentId, responses);
+
+    const newResults = [...state.instrumentResults, result];
+    const nextIndex = state.currentInstrumentIndex + 1;
+
+    setState(prev => ({
+      ...prev,
+      completedInstruments: newCompleted,
+      instrumentResults: newResults,
+      currentInstrumentIndex: nextIndex,
+    }));
+
+    const completedIds = Array.from(newCompleted.keys());
+    // Serialize Map to plain object for localStorage
+    const storedResponses: Record<string, ItemResponse[]> = {};
+    for (const [instId, resps] of newCompleted.entries()) {
+      storedResponses[instId] = resps;
+    }
+    const allInstrumentsDone = nextIndex >= state.instrumentOrder.length;
+    // Persist the actual phase that will render (including crisis interstitial)
+    let nextPhase: Phase = allInstrumentsDone
+      ? (state.interviewPreCompleted ? 'results' : 'interview')
+      : 'instruments';
+    if (!allInstrumentsDone && currentId === 'phq9-gad7') {
+      nextPhase = 'crisis-resources';
+    }
+
+    saveToStorage({
+      expiresAt: expiresAtRef.current,
+      sessionId: state.sessionId,
+      tier,
+      phase: nextPhase,
+      instrumentIndex: nextIndex,
+      completedIds,
+      instrumentResponses: storedResponses,
+      instrumentResults: newResults,
+    });
+
+    if (allInstrumentsDone && state.interviewPreCompleted) {
+      api.saveScores(state.sessionId, newResults).catch(() => {});
+    }
+    setPhase(nextPhase);
+  }, [state, tier]);
+
+  // Handle interview completion
+  const handleInterviewComplete = useCallback(async (
+    responses: Array<{ prompt_index: number; prompt_text: string; response_text: string }>
+  ) => {
+    setState(prev => ({ ...prev, interviewResponses: responses }));
+
+    // Score open-ended once, build allResults locally
+    const openEnded = getInstrument('open-ended');
+    const allResults = [...state.instrumentResults];
+    if (openEnded) {
+      const oeResult = openEnded.score(openEnded.instrument, {
+        instrumentId: 'open-ended',
+        startedAt: Date.now(),
+        completedAt: Date.now(),
+        responses: responses.map((r, i) => ({
+          itemId: `open-${i + 1}`,
+          value: r.response_text,
+          timestamp: Date.now(),
+        })),
+      });
+      allResults.push(oeResult);
+      setState(prev => ({
+        ...prev,
+        instrumentResults: [...prev.instrumentResults, oeResult],
+      }));
+    }
+
+    // Persist to localStorage BEFORE network calls so data survives tab close
+    const instrumentResponses: Record<string, ItemResponse[]> = {};
+    for (const [instId, resps] of state.completedInstruments.entries()) {
+      instrumentResponses[instId] = resps;
+    }
+    saveToStorage({
+      expiresAt: expiresAtRef.current,
+      sessionId: state.sessionId,
+      tier,
+      phase: 'results',
+      instrumentIndex: state.currentInstrumentIndex,
+      completedIds: Array.from(state.completedInstruments.keys()),
+      instrumentResponses,
+      instrumentResults: allResults,
+      interviewResponses: responses,
+    });
+
+    try {
+      await api.saveInterview(state.sessionId, responses);
+      await api.saveScores(state.sessionId, allResults);
+      setPhase('results');
+    } catch {
+      // Data is safe in localStorage — proceed to results, show non-blocking error
+      setError('Failed to save to server, but your data is saved locally.');
+      setPhase('results');
+    }
+  }, [state, tier]);
+
+  // Handle report generation
+  const handleGenerateReport = useCallback(async () => {
+    setState(prev => ({ ...prev, reportLoading: true, reportError: undefined }));
+    try {
+      const result = await api.generateReport(state.sessionId);
+      if (result.error) {
+        setState(prev => ({ ...prev, reportLoading: false, reportError: result.error }));
+        return;
+      }
+      setState(prev => ({
+        ...prev,
+        reportText: result.report_text,
+        reportLoading: false,
+      }));
+    } catch {
+      setState(prev => ({
+        ...prev,
+        reportLoading: false,
+        reportError: 'Failed to generate report. Please try again.',
+      }));
+    }
+  }, [state.sessionId]);
+
+  // Handle research opt-in — upgrade consent then re-send all item responses
+  const handleResearchOptIn = useCallback(async () => {
+    try {
+      await api.recordConsent(state.sessionId, 2, CONSENT_TEXT_L2);
+
+      // Re-send all item responses now that consent >= 2 (server discarded them earlier)
+      const allResponses: Array<{ instrument_id: string; item_id: string; value: string | number }> = [];
+      for (const [instId, resps] of state.completedInstruments.entries()) {
+        for (const r of resps) {
+          allResponses.push({
+            instrument_id: instId,
+            item_id: r.itemId,
+            value: r.value,
+          });
+        }
+      }
+      if (allResponses.length > 0) {
+        api.saveResponses(state.sessionId, allResponses).catch(() => {});
+      }
+    } catch {}
+  }, [state.sessionId, state.completedInstruments]);
+
+  // Build instruments list for progress display
+  const allRegistered = getAllInstruments();
+  const tierIds = getInstrumentsForTier(tier).filter(id => id !== 'open-ended');
+  const instrumentsForProgress = tierIds
+    .map(id => allRegistered.find(r => r.instrument.id === id)?.instrument)
+    .filter(Boolean) as import('@/lib/psyche/types').Instrument[];
+
+  // Current instrument
+  const currentInstrumentId = state.instrumentOrder[state.currentInstrumentIndex];
+  const currentRegistered = currentInstrumentId ? getInstrument(currentInstrumentId) : null;
+
+  if (phase === 'loading') {
+    return (
+      <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="flex items-center justify-center gap-3 text-[var(--color-text-muted)]">
+          <div className="w-4 h-4 border-2 border-[var(--color-text-muted)] border-t-transparent rounded-full animate-spin" />
+          Loading...
+        </div>
+      </main>
+    );
+  }
+
+  if (phase === 'error') {
+    return (
+      <main className="max-w-4xl mx-auto px-4 py-12">
+        <div className="glass-card p-6 rounded-xl max-w-md mx-auto text-center">
+          <p className="text-sm text-[var(--color-accent)] mb-4">{error}</p>
+          <button
+            onClick={() => {
+              clearStorage();
+              window.location.reload();
+            }}
+            className="px-4 py-2 rounded-lg text-sm bg-[var(--color-primary)] text-[var(--color-bg)]"
+          >
+            Start Over
+          </button>
+        </div>
+      </main>
+    );
+  }
+
+  return (
+    <main className="max-w-4xl mx-auto px-4 py-8 md:py-12">
+      {phase !== 'consent' && phase !== 'results' && phase !== 'crisis-resources' && (
+        <PsycheProgress
+          instruments={instrumentsForProgress}
+          completedIds={new Set(state.completedInstruments.keys())}
+          currentId={phase === 'instruments' ? currentInstrumentId : undefined}
+          interviewComplete={phase === 'generating'}
+        />
+      )}
+
+      {phase === 'consent' && (
+        <ConsentFlow onConsent={handleConsent} />
+      )}
+
+      {phase === 'instruments' && currentRegistered && (
+        <InstrumentRunner
+          key={currentInstrumentId}
+          instrument={currentRegistered.instrument}
+          onComplete={handleInstrumentComplete}
+        />
+      )}
+
+      {phase === 'crisis-resources' && (
+        <CrisisResources
+          variant="interstitial"
+          onContinue={() => setPhase('instruments')}
+        />
+      )}
+
+      {phase === 'interview' && (
+        <InterviewFlow
+          onComplete={handleInterviewComplete}
+          existingResponses={state.interviewResponses}
+        />
+      )}
+
+      {phase === 'generating' && (
+        <div className="flex items-center justify-center gap-3 text-[var(--color-text-muted)] py-12">
+          <div className="w-4 h-4 border-2 border-[var(--color-text-muted)] border-t-transparent rounded-full animate-spin" />
+          Processing your results...
+        </div>
+      )}
+
+      {phase === 'results' && (
+        <div className="space-y-8">
+          <PsycheResults
+            results={state.instrumentResults}
+            reportText={state.reportText}
+            reportLoading={state.reportLoading}
+            reportError={state.reportError}
+            onGenerateReport={handleGenerateReport}
+            mcpSession={state.interviewPreCompleted}
+            sessionId={state.sessionId}
+          />
+          <ResearchOptIn
+            onOptIn={handleResearchOptIn}
+            onDecline={() => {}}
+          />
+        </div>
+      )}
+
+      {/* Persistent crisis footer during assessment phases */}
+      {phase !== 'consent' && phase !== 'crisis-resources' && (
+        <CrisisResources variant="footer" />
+      )}
+    </main>
+  );
+}
+
+========== tier-3-nextjs/src/lib/psyche/types.ts ==========
+/** Tier levels for the instrument battery */
+export type Tier = 'lite' | 'standard' | 'heavy';
+
+/** Response format for an item */
+export type ResponseFormat =
+  | { type: "likert"; min: number; max: number; labels: string[] }
+  | { type: "binary"; labels: [string, string] }
+  | { type: "numeric" }
+  | { type: "text"; minWords?: number }
+  | { type: "multiple-choice"; options: string[] };
+
+/** A single test item */
+export interface Item {
+  id: string;
+  text: string;
+  response: ResponseFormat;
+  /** Scale/domain this item belongs to */
+  scaleId: string;
+  /** If true, score is reversed before aggregation */
+  reversed?: boolean;
+}
+
+/** A measurement scale (e.g. a Big Five domain or facet) */
+export interface Scale {
+  id: string;
+  name: string;
+  description?: string;
+  /** Parent scale ID for facets */
+  parentId?: string;
+}
+
+/** Score interpretation tier */
+export interface ScoreTier {
+  min: number;
+  max: number;
+  label: string;
+  description: string;
+}
+
+/** A complete instrument definition */
+export interface Instrument {
+  id: string;
+  name: string;
+  shortName: string;
+  description: string;
+  citation: string;
+  itemCount: number;
+  estimatedMinutes: number;
+  scales: Scale[];
+  items: Item[];
+  /** Interpretation tiers per scale */
+  interpretations?: Record<string, ScoreTier[]>;
+}
+
+/** A single response to an item */
+export interface ItemResponse {
+  itemId: string;
+  value: number | string;
+  timestamp: number;
+}
+
+/** Completed session for an instrument */
+export interface InstrumentSession {
+  instrumentId: string;
+  startedAt: number;
+  completedAt?: number;
+  responses: ItemResponse[];
+}
+
+/** Computed score for a scale */
+export interface ScaleScore {
+  scaleId: string;
+  scaleName: string;
+  raw: number;
+  /** Normalized to 0-100 */
+  normalized: number;
+  /** Number of items that contributed */
+  itemCount: number;
+}
+
+/** Full results for an instrument */
+export interface InstrumentResult {
+  instrumentId: string;
+  completedAt: number;
+  scores: ScaleScore[];
+}
+
+========== tier-3-nextjs/src/lib/psyche/registry.ts ==========
+import type { Instrument, InstrumentSession, InstrumentResult } from "./types";
+
+type ScoringFn = (
+  instrument: Instrument,
+  session: InstrumentSession
+) => InstrumentResult;
+
+interface RegisteredInstrument {
+  instrument: Instrument;
+  score: ScoringFn;
+}
+
+const registry = new Map<string, RegisteredInstrument>();
+
+export function registerInstrument(
+  instrument: Instrument,
+  score: ScoringFn
+): void {
+  registry.set(instrument.id, { instrument, score });
+}
+
+export function getInstrument(id: string): RegisteredInstrument | undefined {
+  return registry.get(id);
+}
+
+export function getAllInstruments(): RegisteredInstrument[] {
+  return Array.from(registry.values());
+}
+
+export function getInstrumentIds(): string[] {
+  return Array.from(registry.keys());
+}
+
+========== tier-3-nextjs/src/lib/psyche/engine.ts ==========
+import type {
+  Instrument,
+  InstrumentSession,
+  InstrumentResult,
+  ScaleScore,
+  Item,
+  ItemResponse,
+} from "./types";
+
+/**
+ * Generic binary (True/False) scoring engine.
+ * True = 1, False = 0; reverse scoring supported.
+ */
+export function scoreBinary(
+  instrument: Instrument,
+  session: InstrumentSession
+): InstrumentResult {
+  const responseMap = new Map<string, ItemResponse>();
+  for (const r of session.responses) {
+    responseMap.set(r.itemId, r);
+  }
+
+  const scaleItems = new Map<string, { item: Item; value: number }[]>();
+
+  for (const item of instrument.items) {
+    const resp = responseMap.get(item.id);
+    if (!resp || typeof resp.value !== "number") continue;
+
+    let value = resp.value;
+    if (item.reversed) {
+      value = 1 - value;
+    }
+
+    const existing = scaleItems.get(item.scaleId) ?? [];
+    existing.push({ item, value });
+    scaleItems.set(item.scaleId, existing);
+  }
+
+  const scores: ScaleScore[] = [];
+  for (const scale of instrument.scales) {
+    const items = scaleItems.get(scale.id);
+    if (!items || items.length === 0) continue;
+
+    const raw = items.reduce((sum, i) => sum + i.value, 0) / items.length;
+    const normalized = raw * 100;
+
+    scores.push({
+      scaleId: scale.id,
+      scaleName: scale.name,
+      raw,
+      normalized,
+      itemCount: items.length,
+    });
+  }
+
+  return {
+    instrumentId: instrument.id,
+    completedAt: session.completedAt ?? Date.now(),
+    scores,
+  };
+}
+
+/**
+ * Generic Likert scoring engine.
+ * Handles reverse scoring, scale aggregation, and normalization.
+ */
+export function scoreLikert(
+  instrument: Instrument,
+  session: InstrumentSession
+): InstrumentResult {
+  const responseMap = new Map<string, ItemResponse>();
+  for (const r of session.responses) {
+    responseMap.set(r.itemId, r);
+  }
+
+  const scaleItems = new Map<string, { item: Item; value: number }[]>();
+
+  for (const item of instrument.items) {
+    const resp = responseMap.get(item.id);
+    if (!resp || typeof resp.value !== "number") continue;
+
+    let value = resp.value;
+    if (item.reversed && item.response.type === "likert") {
+      const { min, max } = item.response;
+      value = max + min - value;
+    }
+
+    const existing = scaleItems.get(item.scaleId) ?? [];
+    existing.push({ item, value });
+    scaleItems.set(item.scaleId, existing);
+  }
+
+  const scores: ScaleScore[] = [];
+  for (const scale of instrument.scales) {
+    const items = scaleItems.get(scale.id);
+    if (!items || items.length === 0) continue;
+
+    const raw = items.reduce((sum, i) => sum + i.value, 0) / items.length;
+
+    const firstItem = instrument.items.find((i) => i.scaleId === scale.id);
+    let normalized = raw;
+    if (firstItem?.response.type === "likert") {
+      const { min, max } = firstItem.response;
+      normalized = ((raw - min) / (max - min)) * 100;
+    }
+
+    scores.push({
+      scaleId: scale.id,
+      scaleName: scale.name,
+      raw,
+      normalized,
+      itemCount: items.length,
+    });
+  }
+
+  return {
+    instrumentId: instrument.id,
+    completedAt: session.completedAt ?? Date.now(),
+    scores,
+  };
+}
+
+========== tier-3-nextjs/src/lib/psyche/tiers.ts ==========
+// Synced from psyche/web/src/instruments/tiers.ts — must stay in sync
+// BACKLOG: Switch to psyche-web link dependency to eliminate duplication.
+import type { Tier } from "./types";
+
+interface TierDef {
+  instruments: string[];
+  replaces: Record<string, string>;
+}
+
+const TIER_DEFS: Record<Tier, TierDef> = {
+  lite: {
+    instruments: [
+      "ipip-neo-60",
+      "crt-7",
+      "ncs-18",
+      "rosenberg",
+      "sd3",
+      "phq9-gad7",
+      "ecr-r",
+      "erq-10",
+      "iri-28",
+      "self-monitoring-18",
+      "loc-ie4",
+      "grit-s",
+      "riasec-48",
+      "bpns-9",
+      "open-ended",
+    ],
+    replaces: {},
+  },
+  standard: {
+    instruments: [
+      "ipip-neo-300",
+      "hexaco-60",
+      "swls",
+      "aaq-ii",
+      "dweck-itis",
+      "cei-ii",
+    ],
+    replaces: {
+      "ipip-neo-60": "ipip-neo-300",
+    },
+  },
+  heavy: {
+    instruments: [
+      "ipip-neo-120",
+      "hexaco-200",
+      "grit-o",
+      "bpns-21",
+      "levenson-ipc-24",
+      "snyder-sm-25",
+      "cat-big5",
+      "cat-hexaco",
+      "aot-13",
+      "ius-12",
+      "scs-26",
+      "mfq-2",
+      "frost-mps",
+      "maas",
+      "authenticity",
+      "tangney-scs",
+      "maximization",
+      "ztpi",
+    ],
+    replaces: {
+      "hexaco-60": "hexaco-200",
+      "grit-s": "grit-o",
+      "bpns-9": "bpns-21",
+      "loc-ie4": "levenson-ipc-24",
+      "self-monitoring-18": "snyder-sm-25",
+    },
+  },
+};
+
+const TIER_ORDER: Tier[] = ["lite", "standard", "heavy"];
+
+export function getInstrumentsForTier(tier: Tier): string[] {
+  const instruments = new Set<string>();
+  const targetIdx = TIER_ORDER.indexOf(tier);
+
+  for (let i = 0; i <= targetIdx; i++) {
+    const def = TIER_DEFS[TIER_ORDER[i]!]!;
+    for (const oldId of Object.keys(def.replaces)) {
+      instruments.delete(oldId);
+    }
+    for (const id of def.instruments) {
+      instruments.add(id);
+    }
+  }
+
+  return Array.from(instruments);
+}
+
+export const TIER_META: Record<Tier, { label: string; estimatedItems: string; estimatedTime: string }> = {
+  lite: { label: "Lite", estimatedItems: "~260 items", estimatedTime: "~35 min" },
+  standard: { label: "Standard", estimatedItems: "~590 items", estimatedTime: "~80 min" },
+  heavy: { label: "Heavy", estimatedItems: "~1,130+ items", estimatedTime: "~160 min" },
+};
+
+========== tier-3-nextjs/src/lib/psyche/api.ts ==========
+const API_BASE = 'https://api.ashitaorbis.com';
+
+export async function createSession(source: 'website' | 'mcp' = 'website') {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ source }),
+  });
+  return res.json();
+}
+
+export async function getSession(id: string) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${id}`);
+  return res.json();
+}
+
+export async function recordConsent(sessionId: string, level: 1 | 2, consentText: string) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${sessionId}/consent`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ level, consent_text: consentText }),
+  });
+  return res.json();
+}
+
+export async function withdrawConsent(sessionId: string) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${sessionId}/consent/withdraw`, {
+    method: 'POST',
+  });
+  return res.json();
+}
+
+export async function saveResponses(sessionId: string, responses: Array<{ instrument_id: string; item_id: string; value: string | number }>) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${sessionId}/responses`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ responses }),
+  });
+  return res.json();
+}
+
+export async function saveInterview(sessionId: string, interviews: Array<{ prompt_index: number; prompt_text: string; response_text: string }>) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${sessionId}/interview`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ interviews }),
+  });
+  return res.json();
+}
+
+export async function saveScores(sessionId: string, scores: unknown) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${sessionId}/scores`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ scores }),
+  });
+  return res.json();
+}
+
+export async function generateReport(sessionId: string) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${sessionId}/report`, {
+    method: 'POST',
+  });
+  return res.json();
+}
+
+export async function exportSession(sessionId: string) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${sessionId}/export`);
+  return res.json();
+}
+
+========== tier-3-nextjs/src/lib/psyche/init.ts ==========
+// Side-effect imports to register all Lite tier instruments.
+import "./instruments/ipip-neo-60";
+import "./instruments/crt-7";
+import "./instruments/ncs-18";
+import "./instruments/rosenberg";
+import "./instruments/sd3";
+import "./instruments/phq9-gad7";
+import "./instruments/ecr-r";
+import "./instruments/erq-10";
+import "./instruments/iri-28";
+import "./instruments/self-monitoring-18";
+import "./instruments/loc-ie4";
+import "./instruments/grit-s";
+import "./instruments/riasec-48";
+import "./instruments/bpns-9";
+import "./instruments/open-ended";
+
+========== tier-3-nextjs/src/lib/psyche/init-standard.ts ==========
+// Side-effect imports to register Standard tier instruments.
+// Includes all Lite instruments plus Standard-tier additions.
+// NOTE: Synced manually from psyche/web/src/instruments/init-standard.ts
+// BACKLOG: Switch to psyche-web link dependency to eliminate duplication.
+
+import "./init";
+import "./instruments/ipip-neo-300";
+import "./instruments/hexaco-60";
+import "./instruments/swls";
+import "./instruments/aaq-ii";
+import "./instruments/dweck-itis";
+import "./instruments/cei-ii";
+
+========== tier-3-nextjs/src/components/psyche/ConsentFlow.tsx ==========
+'use client';
+
+import { useState } from 'react';
+
+const CONSENT_TEXT_L1 = `I understand that:
+- This is not a clinical assessment or diagnosis
+- My responses are anonymous: no IP address, account, device ID, or cookies are collected
+- My interview text will be transferred to and processed by a US-based LLM to generate a personality report
+- My psychometric scores are computed entirely in my browser
+- My session data is stored on US-based servers (Cloudflare) for 7 days then automatically deleted
+- I am 16 years of age or older`;
+
+interface ConsentFlowProps {
+  onConsent: () => void;
+}
+
+export default function ConsentFlow({ onConsent }: ConsentFlowProps) {
+  const [agreed, setAgreed] = useState(false);
+
+  return (
+    <div className="max-w-2xl mx-auto">
+      <div className="glass-card p-6 md:p-8 rounded-xl">
+        <h2 className="text-xl font-[var(--font-heading)] text-[var(--color-text)] mb-4">
+          Before We Begin
+        </h2>
+
+        <div className="space-y-3 text-sm text-[var(--color-text-muted)] mb-6">
+          <p>
+            Psyche is a personality assessment tool that combines validated psychometric
+            instruments with AI-analyzed interview responses to generate a comprehensive
+            personality report.
+          </p>
+
+          <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg p-4 space-y-2">
+            <p className="font-medium text-[var(--color-text)]">What you should know:</p>
+            <ul className="space-y-1.5 list-none">
+              <li className="flex gap-2">
+                <span className="text-[var(--color-text-muted)] shrink-0">--</span>
+                <span>This is <strong>not</strong> a clinical assessment or diagnosis</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-text-muted)] shrink-0">--</span>
+                <span>Fully anonymous: no IP address, no account, no device ID, no cookies</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-text-muted)] shrink-0">--</span>
+                <span>Interview text is processed by a US-based LLM to generate your report</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-text-muted)] shrink-0">--</span>
+                <span>Psychometric scores are computed entirely in your browser</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-text-muted)] shrink-0">--</span>
+                <span>Session data stored on US-based servers (Cloudflare) for 7 days, then automatically deleted</span>
+              </li>
+              <li className="flex gap-2">
+                <span className="text-[var(--color-text-muted)] shrink-0">--</span>
+                <span>You must be 16 or older to participate</span>
+              </li>
+            </ul>
+          </div>
+
+          <p>
+            The assessment takes approximately 35 minutes and includes 15 validated instruments
+            (~260 items) plus 10 interview questions.
+          </p>
+        </div>
+
+        <label className="flex items-start gap-3 cursor-pointer mb-6">
+          <input
+            type="checkbox"
+            checked={agreed}
+            onChange={(e) => setAgreed(e.target.checked)}
+            className="mt-1 w-4 h-4 accent-[var(--color-primary)]"
+          />
+          <span className="text-sm text-[var(--color-text)]">
+            I understand and want to proceed
+          </span>
+        </label>
+
+        <button
+          onClick={onConsent}
+          disabled={!agreed}
+          className="w-full py-3 px-6 rounded-lg font-medium text-sm transition-all duration-200
+            disabled:opacity-40 disabled:cursor-not-allowed
+            bg-[var(--color-primary)] text-[var(--color-bg)] hover:opacity-90"
+        >
+          Begin Assessment
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export { CONSENT_TEXT_L1 };
+
+========== tier-3-nextjs/src/components/psyche/InstrumentRunner.tsx ==========
+'use client';
+
+import { useEffect, useState, useCallback, useRef } from 'react';
+import type { Instrument, Item, ItemResponse } from '@/lib/psyche/types';
+
+interface InstrumentRunnerProps {
+  instrument: Instrument;
+  existingResponses?: ItemResponse[];
+  onComplete: (responses: ItemResponse[]) => void;
+  onProgress?: (answered: number, total: number) => void;
+}
+
+export default function InstrumentRunner({
+  instrument,
+  existingResponses = [],
+  onComplete,
+  onProgress,
+}: InstrumentRunnerProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [responses, setResponses] = useState<Map<string, ItemResponse>>(
+    () => {
+      const map = new Map<string, ItemResponse>();
+      for (const r of existingResponses) {
+        map.set(r.itemId, r);
+      }
+      return map;
+    }
+  );
+  const [numericInput, setNumericInput] = useState('');
+  const [autoAdvance, setAutoAdvance] = useState(false);
+  const pendingAdvanceRef = useRef(false);
+
+  const items = instrument.items;
+  const currentItem = items[currentIndex];
+  const totalItems = items.length;
+
+  // Report progress
+  useEffect(() => {
+    onProgress?.(responses.size, totalItems);
+  }, [responses.size, totalItems, onProgress]);
+
+  // Check completion
+  useEffect(() => {
+    if (responses.size === totalItems) {
+      onComplete(Array.from(responses.values()));
+    }
+  }, [responses.size, totalItems, onComplete]);
+
+  // Auto-advance effect: runs after response state commits
+  useEffect(() => {
+    if (!pendingAdvanceRef.current) return;
+    pendingAdvanceRef.current = false;
+
+    if (currentIndex < totalItems - 1) {
+      const timer = setTimeout(() => {
+        setCurrentIndex(prev => prev + 1);
+        setNumericInput('');
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [responses, currentIndex, totalItems]);
+
+  const advance = useCallback(() => {
+    setCurrentIndex(prev => {
+      if (prev >= totalItems - 1) return prev;
+      return prev + 1;
+    });
+    setNumericInput('');
+  }, [totalItems]);
+
+  const recordResponse = useCallback((item: Item, value: number | string) => {
+    const response: ItemResponse = {
+      itemId: item.id,
+      value,
+      timestamp: Date.now(),
+    };
+    setResponses(prev => {
+      const next = new Map(prev);
+      next.set(item.id, response);
+      return next;
+    });
+  }, []);
+
+  const recordAndAdvance = useCallback((item: Item, value: number | string) => {
+    if (autoAdvance) {
+      pendingAdvanceRef.current = true;
+    }
+    recordResponse(item, value);
+  }, [recordResponse, autoAdvance]);
+
+  const goBack = useCallback(() => {
+    setCurrentIndex(prev => {
+      if (prev <= 0) return prev;
+      return prev - 1;
+    });
+    setNumericInput('');
+  }, []);
+
+  // Handle keyboard shortcuts
+  useEffect(() => {
+    if (!currentItem) return;
+
+    const handler = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+
+      if (currentItem.response.type === 'likert') {
+        const { min, max } = currentItem.response;
+        const num = parseInt(e.key);
+        if (!isNaN(num) && num >= min && num <= max) {
+          e.preventDefault();
+          recordAndAdvance(currentItem, num);
+        }
+      }
+
+      if (currentItem.response.type === 'binary') {
+        const key = e.key.toLowerCase();
+        if (key === 't' || key === '1') {
+          e.preventDefault();
+          recordAndAdvance(currentItem, 1);
+        }
+        if (key === 'f' || key === '2') {
+          e.preventDefault();
+          recordAndAdvance(currentItem, 0);
+        }
+      }
+
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goBack();
+      }
+      if (e.key === 'ArrowRight' && responses.has(currentItem.id)) {
+        e.preventDefault();
+        advance();
+      }
+    };
+
+    document.addEventListener('keydown', handler);
+    return () => {
+      document.removeEventListener('keydown', handler);
+    };
+  }, [currentItem, recordAndAdvance, advance, goBack, responses]);
+
+  if (!currentItem) return null;
+
+  const existingResponse = responses.get(currentItem.id);
+  const progressPct = (responses.size / totalItems) * 100;
+  const hasAnswer = responses.has(currentItem.id);
+  const isLastItem = currentIndex >= totalItems - 1;
+
+  return (
+    <div className="max-w-2xl mx-auto">
+      {/* Progress bar + auto-advance toggle */}
+      <div className="mb-6">
+        <div className="flex justify-between items-center text-xs text-[var(--color-text-muted)] mb-1.5">
+          <span>{instrument.shortName}</span>
+          <div className="flex items-center gap-3">
+            <label className="flex items-center gap-1.5 cursor-pointer select-none">
+              <span className="opacity-70">Auto-advance</span>
+              <button
+                onClick={() => setAutoAdvance(prev => !prev)}
+                className={`relative w-8 h-[18px] rounded-full transition-colors ${
+                  autoAdvance
+                    ? 'bg-[var(--color-primary)]'
+                    : 'bg-[var(--color-surface-strong)]'
+                }`}
+                role="switch"
+                aria-checked={autoAdvance}
+              >
+                <span
+                  className={`absolute top-[2px] w-[14px] h-[14px] rounded-full bg-[var(--color-text)] transition-transform ${
+                    autoAdvance ? 'left-[16px]' : 'left-[2px]'
+                  }`}
+                />
+              </button>
+            </label>
+            <span>{responses.size}/{totalItems}</span>
+          </div>
+        </div>
+        <div className="h-1.5 bg-[var(--color-surface)] rounded-full overflow-hidden">
+          <div
+            className="h-full rounded-full transition-all duration-300"
+            style={{ width: `${progressPct}%`, background: 'var(--gradient-primary)' }}
+          />
+        </div>
+      </div>
+
+      {/* Question */}
+      <div className="glass-card p-6 md:p-8 rounded-xl mb-4">
+        <p className="text-xs text-[var(--color-text-muted)] mb-3">
+          Question {currentIndex + 1} of {totalItems}
+        </p>
+        <p className="text-base md:text-lg text-[var(--color-text)] leading-relaxed mb-6">
+          {currentItem.text}
+        </p>
+
+        {/* Likert scale */}
+        {currentItem.response.type === 'likert' && (() => {
+          const resp = currentItem.response as { type: 'likert'; min: number; max: number; labels: string[] };
+          const options = Array.from(
+            { length: resp.max - resp.min + 1 },
+            (_, i) => resp.min + i
+          );
+          const labels = resp.labels;
+          const isWide = options.length >= 7;
+
+          return (
+            <div>
+              {/* Endpoint labels */}
+              <div className="flex justify-between text-[0.65rem] text-[var(--color-text-muted)] mb-2 px-1">
+                <span>{labels[0]}</span>
+                <span>{labels[labels.length - 1]}</span>
+              </div>
+
+              {/* Buttons */}
+              <div
+                className={`grid ${isWide ? 'grid-cols-7 gap-1 md:gap-2' : `gap-2`}`}
+                style={!isWide ? { gridTemplateColumns: `repeat(${options.length}, minmax(0, 1fr))` } : undefined}
+              >
+                {options.map(val => (
+                  <button
+                    key={val}
+                    onClick={() => recordAndAdvance(currentItem, val)}
+                    className={`py-3 rounded-lg text-sm font-medium transition-all border min-w-0
+                      ${existingResponse?.value === val
+                        ? 'bg-[var(--color-primary)] text-[var(--color-bg)] border-[var(--color-primary)]'
+                        : 'bg-[var(--color-surface)] text-[var(--color-text)] border-[var(--color-border)] hover:border-[var(--color-text-muted)]'
+                      }`}
+                  >
+                    {val}
+                  </button>
+                ))}
+              </div>
+
+              {/* Per-button labels for wide scales on desktop */}
+              {isWide && (
+                <div className="hidden md:grid grid-cols-7 gap-2 mt-1">
+                  {labels.map((label, i) => (
+                    <span key={i} className="text-[0.55rem] text-[var(--color-text-muted)] text-center leading-tight">
+                      {label}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              <p className="text-[0.6rem] text-[var(--color-text-muted)] mt-2 text-center hidden md:block">
+                Press {resp.min}-{resp.max} on keyboard
+              </p>
+            </div>
+          );
+        })()}
+
+        {/* Binary (True/False) */}
+        {currentItem.response.type === 'binary' && (
+          <div>
+            <div className="flex gap-3">
+              {currentItem.response.labels.map((label, idx) => {
+                const val = idx === 0 ? 1 : 0;
+                return (
+                  <button
+                    key={label}
+                    onClick={() => recordAndAdvance(currentItem, val)}
+                    className={`flex-1 py-3 rounded-lg text-sm font-medium transition-all border
+                      ${existingResponse?.value === val
+                        ? 'bg-[var(--color-primary)] text-[var(--color-bg)] border-[var(--color-primary)]'
+                        : 'bg-[var(--color-surface)] text-[var(--color-text)] border-[var(--color-border)] hover:border-[var(--color-text-muted)]'
+                      }`}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-[0.6rem] text-[var(--color-text-muted)] mt-2 text-center hidden md:block">
+              Press T/F or 1/2 on keyboard
+            </p>
+          </div>
+        )}
+
+        {/* Multiple choice */}
+        {currentItem.response.type === 'multiple-choice' && (
+          <div className="space-y-2">
+            {currentItem.response.options.map((option, idx) => (
+              <button
+                key={idx}
+                onClick={() => recordAndAdvance(currentItem, idx)}
+                className={`w-full text-left px-4 py-3 rounded-lg text-sm transition-all border
+                  ${existingResponse?.value === idx
+                    ? 'bg-[var(--color-primary)] text-[var(--color-bg)] border-[var(--color-primary)]'
+                    : 'bg-[var(--color-surface)] text-[var(--color-text)] border-[var(--color-border)] hover:border-[var(--color-text-muted)]'
+                  }`}
+              >
+                <span className="font-medium mr-2 opacity-60">
+                  {String.fromCharCode(97 + idx)})
+                </span>
+                {option}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Numeric input */}
+        {currentItem.response.type === 'numeric' && (
+          <div className="flex gap-3">
+            <input
+              type="number"
+              value={numericInput}
+              onChange={(e) => setNumericInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && numericInput !== '') {
+                  recordResponse(currentItem, parseFloat(numericInput));
+                  advance();
+                }
+              }}
+              className="flex-1 px-4 py-3 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)]
+                text-[var(--color-text)] text-sm focus:outline-none focus:border-[var(--color-primary)]"
+              placeholder="Type your answer..."
+              autoFocus
+            />
+            <button
+              onClick={() => {
+                if (numericInput !== '') {
+                  recordResponse(currentItem, parseFloat(numericInput));
+                  advance();
+                }
+              }}
+              disabled={numericInput === ''}
+              className="px-6 py-3 rounded-lg text-sm font-medium transition-all
+                disabled:opacity-40 disabled:cursor-not-allowed
+                bg-[var(--color-primary)] text-[var(--color-bg)] hover:opacity-90"
+            >
+              Submit
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Navigation */}
+      <div className="flex justify-between items-center">
+        <button
+          onClick={goBack}
+          disabled={currentIndex === 0}
+          className="px-4 py-3 rounded-lg text-sm text-[var(--color-text-muted)] transition-colors
+            disabled:opacity-30 hover:text-[var(--color-text)]"
+        >
+          Back
+        </button>
+        {!autoAdvance && (
+          <button
+            onClick={advance}
+            disabled={!hasAnswer || isLastItem}
+            className="px-4 py-3 rounded-lg text-sm text-[var(--color-text-muted)] transition-colors
+              disabled:opacity-30 hover:text-[var(--color-text)]"
+          >
+            Next
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+========== tier-3-nextjs/src/components/psyche/InterviewFlow.tsx ==========
+'use client';
+
+import { useState, useCallback } from 'react';
+
+const PROMPTS = [
+  "Describe yourself as you would to a stranger who will never see you. Be as honest as possible.",
+  "What are you most proud of? What are you least proud of?",
+  "How do you typically respond to conflict or disagreement?",
+  "Describe a decision you made recently that you found difficult. What made it hard?",
+  "What gives you energy? What drains you?",
+  "How have you changed in the last five years? What caused the change?",
+  "What do your closest friends value most about you? What do they wish you'd change?",
+  "Describe your relationship with uncertainty and ambiguity.",
+  "What topic could you talk about for hours? Why does it matter to you?",
+  "If you could design your ideal day with no obligations, what would it look like?",
+];
+
+interface InterviewResponse {
+  prompt_index: number;
+  prompt_text: string;
+  response_text: string;
+}
+
+interface InterviewFlowProps {
+  onComplete: (responses: InterviewResponse[]) => void;
+  existingResponses?: InterviewResponse[];
+}
+
+export default function InterviewFlow({ onComplete, existingResponses = [] }: InterviewFlowProps) {
+  const [currentIndex, setCurrentIndex] = useState(
+    existingResponses.length > 0 ? Math.min(existingResponses.length, PROMPTS.length - 1) : 0
+  );
+  const [responses, setResponses] = useState<Map<number, string>>(() => {
+    const map = new Map<number, string>();
+    for (const r of existingResponses) {
+      map.set(r.prompt_index, r.response_text);
+    }
+    return map;
+  });
+  const [currentText, setCurrentText] = useState(responses.get(currentIndex) ?? '');
+
+  const wordCount = currentText.trim().split(/\s+/).filter(w => w.length > 0).length;
+  const minWords = 30;
+  const maxWords = 500;
+  const isValid = wordCount >= minWords;
+
+  const saveAndAdvance = useCallback(() => {
+    if (!isValid) return;
+
+    const next = new Map(responses);
+    next.set(currentIndex, currentText.trim());
+    setResponses(next);
+
+    if (currentIndex < PROMPTS.length - 1) {
+      const nextIdx = currentIndex + 1;
+      setCurrentIndex(nextIdx);
+      setCurrentText(next.get(nextIdx) ?? '');
+    } else {
+      // All done — collect responses
+      const allResponses: InterviewResponse[] = [];
+      for (let i = 0; i < PROMPTS.length; i++) {
+        const text = i === currentIndex ? currentText.trim() : (next.get(i) ?? '');
+        if (text) {
+          allResponses.push({
+            prompt_index: i,
+            prompt_text: PROMPTS[i],
+            response_text: text,
+          });
+        }
+      }
+      onComplete(allResponses);
+    }
+  }, [currentIndex, currentText, isValid, responses, onComplete]);
+
+  const goBack = useCallback(() => {
+    if (currentIndex > 0) {
+      // Save current
+      const next = new Map(responses);
+      if (currentText.trim()) {
+        next.set(currentIndex, currentText.trim());
+      }
+      setResponses(next);
+
+      const prevIdx = currentIndex - 1;
+      setCurrentIndex(prevIdx);
+      setCurrentText(next.get(prevIdx) ?? '');
+    }
+  }, [currentIndex, currentText, responses]);
+
+  const progressPct = ((responses.size + (currentText.trim() ? 0.5 : 0)) / PROMPTS.length) * 100;
+
+  return (
+    <div className="max-w-2xl mx-auto">
+      {/* Progress */}
+      <div className="mb-6">
+        <div className="flex justify-between text-xs text-[var(--color-text-muted)] mb-1.5">
+          <span>Interview</span>
+          <span>{Math.min(responses.size + 1, PROMPTS.length)}/{PROMPTS.length}</span>
+        </div>
+        <div className="h-1.5 bg-[var(--color-surface)] rounded-full overflow-hidden">
+          <div
+            className="h-full rounded-full transition-all duration-300"
+            style={{ width: `${progressPct}%`, background: 'var(--gradient-primary)' }}
+          />
+        </div>
+      </div>
+
+      {/* Prompt */}
+      <div className="glass-card p-6 md:p-8 rounded-xl mb-4">
+        <p className="text-xs text-[var(--color-text-muted)] mb-3">
+          Question {currentIndex + 1} of {PROMPTS.length}
+        </p>
+        <p className="text-base md:text-lg text-[var(--color-text)] leading-relaxed mb-6">
+          {PROMPTS[currentIndex]}
+        </p>
+
+        <textarea
+          value={currentText}
+          onChange={(e) => {
+            // Soft limit at 500 words
+            const words = e.target.value.trim().split(/\s+/).filter(w => w.length > 0).length;
+            if (words <= maxWords + 50) { // Small buffer
+              setCurrentText(e.target.value);
+            }
+          }}
+          rows={6}
+          className="w-full px-4 py-3 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)]
+            text-[var(--color-text)] text-sm leading-relaxed resize-y
+            focus:outline-none focus:border-[var(--color-primary)]
+            placeholder:text-[var(--color-text-muted)]"
+          placeholder="Write freely — there are no right answers..."
+          autoFocus
+        />
+
+        <p className="text-[0.65rem] text-[var(--color-text-muted)] mt-2 opacity-70">
+          For your privacy, please do not include your name, location, employer, or other
+          personally identifying details in your responses.
+        </p>
+
+        <div className="flex justify-between items-center mt-2">
+          <span className={`text-xs ${wordCount < minWords ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-muted)]'}`}>
+            {wordCount} / {minWords} words minimum
+            {wordCount > maxWords && (
+              <span className="text-[var(--color-accent)]"> (approaching limit)</span>
+            )}
+          </span>
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <div className="flex justify-between items-center">
+        <button
+          onClick={goBack}
+          disabled={currentIndex === 0}
+          className="px-4 py-3 rounded-lg text-sm text-[var(--color-text-muted)] transition-colors
+            disabled:opacity-30 hover:text-[var(--color-text)]"
+        >
+          Back
+        </button>
+        <button
+          onClick={saveAndAdvance}
+          disabled={!isValid}
+          className="px-6 py-3 rounded-lg text-sm font-medium transition-all
+            disabled:opacity-40 disabled:cursor-not-allowed
+            bg-[var(--color-primary)] text-[var(--color-bg)] hover:opacity-90"
+        >
+          {currentIndex < PROMPTS.length - 1 ? 'Next' : 'Finish Interview'}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export { PROMPTS as INTERVIEW_PROMPTS };
+
+========== tier-3-nextjs/src/components/psyche/PsycheProgress.tsx ==========
+'use client';
+
+import type { Instrument } from '@/lib/psyche/types';
+
+interface PsycheProgressProps {
+  instruments: Instrument[];
+  completedIds: Set<string>;
+  currentId?: string;
+  interviewComplete: boolean;
+}
+
+export default function PsycheProgress({
+  instruments,
+  completedIds,
+  currentId,
+  interviewComplete,
+}: PsycheProgressProps) {
+  const totalInstruments = instruments.length + 1; // +1 for interview
+  const completedCount = completedIds.size + (interviewComplete ? 1 : 0);
+  const progressPct = (completedCount / totalInstruments) * 100;
+
+  return (
+    <div className="mb-8">
+      <div className="flex justify-between text-xs text-[var(--color-text-muted)] mb-2">
+        <span>Overall Progress</span>
+        <span>{completedCount}/{totalInstruments} sections</span>
+      </div>
+      <div className="h-2 bg-[var(--color-surface)] rounded-full overflow-hidden mb-3">
+        <div
+          className="h-full rounded-full transition-all duration-500"
+          style={{ width: `${progressPct}%`, background: 'var(--gradient-primary)' }}
+        />
+      </div>
+      <div className="flex flex-wrap gap-1.5">
+        {instruments.map(inst => {
+          const isCompleted = completedIds.has(inst.id);
+          const isCurrent = inst.id === currentId;
+          return (
+            <span
+              key={inst.id}
+              className={`text-[0.65rem] px-2 py-1 rounded-full border transition-colors ${
+                isCompleted
+                  ? 'bg-[var(--color-primary)] text-[var(--color-bg)] border-[var(--color-primary)]'
+                  : isCurrent
+                    ? 'border-[var(--color-accent)] text-[var(--color-accent)]'
+                    : 'border-[var(--color-border)] text-[var(--color-text-muted)]'
+              }`}
+            >
+              {inst.shortName}
+            </span>
+          );
+        })}
+        <span
+          className={`text-[0.65rem] px-2 py-1 rounded-full border transition-colors ${
+            interviewComplete
+              ? 'bg-[var(--color-primary)] text-[var(--color-bg)] border-[var(--color-primary)]'
+              : !currentId && !interviewComplete && completedIds.size === instruments.length
+                ? 'border-[var(--color-accent)] text-[var(--color-accent)]'
+                : 'border-[var(--color-border)] text-[var(--color-text-muted)]'
+          }`}
+        >
+          Interview
+        </span>
+      </div>
+    </div>
+  );
+}
+
+========== tier-3-nextjs/src/components/psyche/PsycheResults.tsx ==========
+'use client';
+
+import { useState } from 'react';
+import type { InstrumentResult } from '@/lib/psyche/types';
+
+interface PsycheResultsProps {
+  results: InstrumentResult[];
+  reportText?: string;
+  reportLoading?: boolean;
+  reportError?: string;
+  onGenerateReport: () => void;
+  sessionId: string;
+  /** If true, report generation happens in Claude, not on the website */
+  mcpSession?: boolean;
+}
+
+/** Extract the narrative portion from report text (between <report> tags or full text) */
+function extractNarrative(text: string): string {
+  const match = text.match(/<report>([\s\S]*?)<\/report>/);
+  if (match) return match[1].trim();
+  // If no tags, strip JSON block and return the rest
+  return text.replace(/<json>[\s\S]*?<\/json>/g, '').trim();
+}
+
+export default function PsycheResults({
+  results,
+  reportText,
+  reportLoading,
+  reportError,
+  onGenerateReport,
+  sessionId,
+  mcpSession,
+}: PsycheResultsProps) {
+  const [expandedInstrument, setExpandedInstrument] = useState<string | null>(null);
+
+  return (
+    <div className="max-w-3xl mx-auto space-y-6">
+      <h2 className="text-2xl font-[var(--font-heading)] text-[var(--color-text)]">
+        Your Results
+      </h2>
+
+      {/* Score overview */}
+      <div className="space-y-3">
+        {results.map(result => {
+          const isExpanded = expandedInstrument === result.instrumentId;
+          // Skip open-ended from score display
+          if (result.instrumentId === 'open-ended') return null;
+
+          return (
+            <div key={result.instrumentId} className="glass-card rounded-lg overflow-hidden">
+              <button
+                onClick={() => setExpandedInstrument(isExpanded ? null : result.instrumentId)}
+                className="w-full px-4 py-3 flex items-center justify-between text-left
+                  bg-transparent border-0 cursor-pointer text-[var(--color-text)]"
+              >
+                <span className="text-sm font-medium">{result.instrumentId}</span>
+                <span className="text-xs text-[var(--color-text-muted)]">
+                  {result.scores.length} scale{result.scores.length !== 1 ? 's' : ''}
+                </span>
+              </button>
+
+              {isExpanded && (
+                <div className="px-4 pb-4 space-y-2">
+                  {result.scores.map(score => (
+                    <div key={score.scaleId}>
+                      <div className="flex justify-between text-xs mb-1">
+                        <span className="text-[var(--color-text)]">{score.scaleName}</span>
+                        <span className="text-[var(--color-text-muted)]">
+                          {Math.round(score.normalized)}%
+                        </span>
+                      </div>
+                      <div className="h-2 bg-[var(--color-surface)] rounded-full overflow-hidden">
+                        <div
+                          className="h-full rounded-full transition-all duration-500"
+                          style={{
+                            width: `${Math.max(2, score.normalized)}%`,
+                            background: 'var(--gradient-primary)',
+                          }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* AI Report */}
+      <div className="glass-card p-6 rounded-xl">
+        <h3 className="text-lg font-[var(--font-heading)] text-[var(--color-text)] mb-3">
+          AI Personality Report
+        </h3>
+
+        {!reportText && !reportLoading && !reportError && (
+          mcpSession ? (
+            <p className="text-sm text-[var(--color-text-muted)]">
+              Your scores are ready. Return to your Claude conversation and let Claude know
+              you&apos;ve finished — it will retrieve your results and generate a comprehensive
+              personality report.
+            </p>
+          ) : (
+            <div>
+              <p className="text-sm text-[var(--color-text-muted)] mb-4">
+                Generate a narrative personality report that synthesizes your scores with your
+                interview responses.
+              </p>
+              <button
+                onClick={onGenerateReport}
+                className="px-6 py-2.5 rounded-lg text-sm font-medium transition-all
+                  bg-[var(--color-primary)] text-[var(--color-bg)] hover:opacity-90"
+              >
+                Generate Report
+              </button>
+            </div>
+          )
+        )}
+
+        {reportLoading && (
+          <div className="flex items-center gap-3 text-sm text-[var(--color-text-muted)]">
+            <div className="w-4 h-4 border-2 border-[var(--color-text-muted)] border-t-transparent rounded-full animate-spin" />
+            Generating your personality report...
+          </div>
+        )}
+
+        {reportError && (
+          <div className="text-sm text-[var(--color-accent)]">
+            {reportError}
+            <button
+              onClick={onGenerateReport}
+              className="ml-3 underline hover:no-underline"
+            >
+              Try again
+            </button>
+          </div>
+        )}
+
+        {reportText && (
+          <div className="prose prose-sm max-w-none text-[var(--color-text)]">
+            {extractNarrative(reportText).split('\n\n').map((para, i) => (
+              <p key={i} className="text-sm leading-relaxed mb-3">
+                {para}
+              </p>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Export */}
+      <div className="text-center">
+        <a
+          href={`https://api.ashitaorbis.com/api/psyche/sessions/${sessionId}/export`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+        >
+          Export your data (JSON)
+        </a>
+      </div>
+    </div>
+  );
+}
+
+========== tier-3-nextjs/src/components/psyche/CrisisResources.tsx ==========
+'use client';
+
+interface CrisisResourcesProps {
+  /** 'interstitial' = shown after PHQ-9 completion, blocks until dismissed.
+   *  'footer' = subtle persistent link at bottom of assessment. */
+  variant: 'interstitial' | 'footer';
+  onContinue?: () => void;
+}
+
+const CRISIS_LINES = [
+  { region: 'US', name: '988 Suicide & Crisis Lifeline', contact: 'Call or text 988', url: 'https://988lifeline.org' },
+  { region: 'US', name: 'Crisis Text Line', contact: 'Text HOME to 741741', url: 'https://www.crisistextline.org' },
+  { region: 'Canada', name: '988 Suicide Crisis Helpline', contact: 'Call or text 988', url: 'https://988.ca' },
+  { region: 'Canada', name: 'Crisis Services Canada', contact: '1-833-456-4566', url: 'https://www.crisisservicescanada.ca' },
+  { region: 'International', name: 'International Association for Suicide Prevention', contact: 'Find your local crisis center', url: 'https://www.iasp.info/resources/Crisis_Centres/' },
+];
+
+export default function CrisisResources({ variant, onContinue }: CrisisResourcesProps) {
+  if (variant === 'footer') {
+    return (
+      <div className="text-center text-xs text-[var(--color-text-muted)] mt-8 pb-4">
+        <span>This is not a clinical tool. If you are in crisis: </span>
+        <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer"
+          className="underline hover:text-[var(--color-text)]">
+          988 Lifeline (US)
+        </a>
+        <span> / </span>
+        <a href="https://988.ca" target="_blank" rel="noopener noreferrer"
+          className="underline hover:text-[var(--color-text)]">
+          988 (Canada)
+        </a>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-2xl mx-auto">
+      <div className="glass-card p-6 md:p-8 rounded-xl">
+        <h3 className="text-lg font-[var(--font-heading)] text-[var(--color-text)] mb-3">
+          Before continuing
+        </h3>
+
+        <p className="text-sm text-[var(--color-text-muted)] mb-4">
+          The questions you just answered touch on difficult experiences including mood, anxiety,
+          and thoughts of self-harm. This tool is <strong>not a clinical assessment</strong> and
+          cannot provide a diagnosis or treatment.
+        </p>
+
+        <p className="text-sm text-[var(--color-text-muted)] mb-5">
+          If any of these questions raised concerns for you, please reach out to a professional:
+        </p>
+
+        <div className="space-y-3 mb-6">
+          {CRISIS_LINES.map((line) => (
+            <div key={line.name} className="flex items-start gap-3 text-sm">
+              <span className="text-[0.65rem] font-medium uppercase tracking-wider text-[var(--color-text-muted)] min-w-[3rem] pt-0.5 shrink-0">
+                {line.region}
+              </span>
+              <div>
+                <a
+                  href={line.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--color-text)] hover:text-[var(--color-primary)] underline"
+                >
+                  {line.name}
+                </a>
+                <span className="text-[var(--color-text-muted)]"> — {line.contact}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={onContinue}
+          className="w-full py-3 px-6 rounded-lg font-medium text-sm transition-all
+            bg-[var(--color-primary)] text-[var(--color-bg)] hover:opacity-90"
+        >
+          Continue Assessment
+        </button>
+      </div>
+    </div>
+  );
+}
+
+========== tier-3-nextjs/src/components/psyche/ResearchOptIn.tsx ==========
+'use client';
+
+import { useState } from 'react';
+
+const CONSENT_TEXT_L2 = `I agree for my anonymized scores and interview responses to be used in academic research on AI and personality assessment, including future studies. I understand that: my data is fully anonymous (no IP, account, or device identifiers are collected); I can withdraw consent during this session; after my session expires (7 days), my data can no longer be identified or withdrawn.`;
+
+interface ResearchOptInProps {
+  onOptIn: () => void;
+  onDecline: () => void;
+  totalParticipants?: number;
+}
+
+export default function ResearchOptIn({ onOptIn, onDecline, totalParticipants }: ResearchOptInProps) {
+  const [agreed, setAgreed] = useState(false);
+
+  return (
+    <div className="glass-card p-6 rounded-xl max-w-2xl mx-auto">
+      <h3 className="text-lg font-[var(--font-heading)] text-[var(--color-text)] mb-3">
+        Contribute to Research?
+      </h3>
+
+      <p className="text-sm text-[var(--color-text-muted)] mb-4">
+        We&apos;re studying whether AI models can accurately interpret personality from text.
+        Would your anonymized results contribute to this research?
+      </p>
+
+      <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg p-4 mb-4 space-y-2 text-sm">
+        <p className="text-[var(--color-text)]">
+          <strong>What we&apos;d store:</strong> your scale scores and interview text.
+        </p>
+        <p className="text-[var(--color-text)]">
+          <strong>What we never collect:</strong> your IP address, name, account, or device ID.
+          Nothing links this data to you.
+        </p>
+        <p className="text-[var(--color-text-muted)]">
+          Your results are already visible above — saying no changes nothing about your experience.
+        </p>
+      </div>
+
+      {totalParticipants && totalParticipants >= 50 && (
+        <p className="text-xs text-[var(--color-text-muted)] mb-4 italic">
+          Most people who complete the full assessment choose to contribute.
+        </p>
+      )}
+
+      <label className="flex items-start gap-3 cursor-pointer mb-4">
+        <input
+          type="checkbox"
+          checked={agreed}
+          onChange={(e) => setAgreed(e.target.checked)}
+          className="mt-1 w-4 h-4 accent-[var(--color-primary)]"
+        />
+        <span className="text-xs text-[var(--color-text)]">
+          I agree for my anonymized scores and interview responses to be used in academic research
+          on AI and personality assessment, including future studies.
+        </span>
+      </label>
+
+      <p className="text-xs text-[var(--color-text-muted)] mb-4">
+        You can withdraw this consent anytime during this session. After 7 days, your session
+        expires and we can no longer identify which data was yours.
+      </p>
+
+      <div className="flex gap-3">
+        <button
+          onClick={onOptIn}
+          disabled={!agreed}
+          className="flex-1 py-2.5 px-4 rounded-lg font-medium text-sm transition-all
+            disabled:opacity-40 disabled:cursor-not-allowed
+            bg-[var(--color-primary)] text-[var(--color-bg)] hover:opacity-90"
+        >
+          Contribute to Research
+        </button>
+        <button
+          onClick={onDecline}
+          className="flex-1 py-2.5 px-4 rounded-lg font-medium text-sm transition-all
+            border border-[var(--color-border)] text-[var(--color-text-muted)]
+            hover:text-[var(--color-text)] hover:border-[var(--color-text-muted)]"
+        >
+          No Thanks
+        </button>
+      </div>
+    </div>
+  );
+}
+
+export { CONSENT_TEXT_L2 };
+
+========== tier-3-nextjs/src/components/psyche/MCPSetupGuide.tsx ==========
+'use client';
+
+import { useState } from 'react';
+
+const MCP_URL = 'https://mcp.ashitaorbis.com/mcp';
+const CLAUDE_SETTINGS_URL = 'https://claude.ai/settings/integrations';
+
+const STARTER_PROMPT = `I'd like to take the Psyche personality assessment. Please use the take_psyche_interview tool to conduct my interview — ask me the 10 questions one at a time in a natural conversation.`;
+
+export default function MCPSetupGuide() {
+  const [copied, setCopied] = useState<'url' | 'prompt' | null>(null);
+
+  const copyToClipboard = async (text: string, label: 'url' | 'prompt') => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+    setCopied(label);
+    setTimeout(() => setCopied(null), 2000);
+  };
+
+  return (
+    <div className="glass-card p-6 rounded-xl">
+      <h3 className="text-base font-[var(--font-heading)] text-[var(--color-text)] mb-2">
+        Claude MCP Flow
+      </h3>
+      <p className="text-sm text-[var(--color-text-muted)] mb-5">
+        Have Claude conduct your interview as a natural conversation, then come back here to complete the instruments.
+        Requires a Claude Pro, Team, or Enterprise subscription.
+      </p>
+
+      <div className="space-y-5">
+        {/* Step 1: Add the connector */}
+        <div>
+          <p className="text-sm font-medium text-[var(--color-text)] mb-2">
+            Step 1: Add the MCP connector (one-time setup)
+          </p>
+          <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg p-4 text-sm text-[var(--color-text-muted)]">
+            <ol className="space-y-1.5 list-decimal list-inside">
+              <li>
+                Open{' '}
+                <a
+                  href={CLAUDE_SETTINGS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[var(--color-primary)] hover:opacity-80 underline"
+                >
+                  Claude.ai &rarr; Settings &rarr; Integrations
+                </a>
+              </li>
+              <li>Click &quot;Add More&quot;, then &quot;Custom Integration&quot;</li>
+              <li>Paste this URL and save:</li>
+            </ol>
+            <div className="mt-2 flex items-center gap-2">
+              <code className="flex-1 text-xs bg-[var(--color-bg)] px-3 py-2 rounded border border-[var(--color-border)] font-mono break-all">
+                {MCP_URL}
+              </code>
+              <button
+                onClick={() => copyToClipboard(MCP_URL, 'url')}
+                className="shrink-0 px-3 py-2 rounded text-xs font-medium transition-all
+                  border border-[var(--color-border)] hover:border-[var(--color-text-muted)]
+                  bg-[var(--color-bg)] text-[var(--color-text)]"
+              >
+                {copied === 'url' ? 'Copied!' : 'Copy'}
+              </button>
+            </div>
+            <p className="text-xs text-[var(--color-text-muted)] mt-2.5 opacity-70">
+              Works on any device — set it up at claude.ai in your browser. Connectors sync automatically to the Claude mobile app.
+            </p>
+          </div>
+        </div>
+
+        {/* Step 2: Start the interview */}
+        <div>
+          <p className="text-sm font-medium text-[var(--color-text)] mb-2">
+            Step 2: Start a conversation with Claude
+          </p>
+          <p className="text-xs text-[var(--color-text-muted)] mb-2">
+            Copy this prompt and paste it into a new Claude conversation:
+          </p>
+          <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg p-4">
+            <p className="text-sm text-[var(--color-text)] leading-relaxed mb-3">
+              &ldquo;{STARTER_PROMPT}&rdquo;
+            </p>
+            <button
+              onClick={() => copyToClipboard(STARTER_PROMPT, 'prompt')}
+              className="px-4 py-2.5 rounded-lg text-xs font-medium transition-all
+                bg-[var(--color-accent-cyan)] text-[var(--color-bg)] hover:opacity-80
+                border border-[var(--color-accent-cyan)]"
+            >
+              {copied === 'prompt' ? 'Copied!' : 'Copy Prompt to Clipboard'}
+            </button>
+          </div>
+        </div>
+
+        {/* Step 3 */}
+        <div>
+          <p className="text-sm font-medium text-[var(--color-text)] mb-2">
+            Step 3: Complete the instruments
+          </p>
+          <p className="text-sm text-[var(--color-text-muted)]">
+            After the interview, Claude will give you a link back to this site to complete the
+            quantitative instruments (~20 min). Your interview responses are already saved.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+# ===== ASTRO INTEGRATION =====
+
+========== tier-2-astro/src/lib/psyche/api.ts ==========
+const API_BASE = 'https://api.ashitaorbis.com';
+
+class ApiError extends Error {
+  constructor(public status: number, message: string) {
+    super(message);
+    this.name = 'ApiError';
+  }
+}
+
+async function fetchJson(url: string, options?: RequestInit) {
+  const res = await fetch(url, options);
+  const data = await res.json();
+  if (!res.ok) {
+    throw new ApiError(res.status, data.error || `HTTP ${res.status}`);
+  }
+  if (data.error) {
+    throw new ApiError(res.status, data.error);
+  }
+  return data;
+}
+
+// getSession intentionally does NOT throw on errors — caller handles
+// expired/missing sessions gracefully by checking sessionData.error
+export async function getSession(id: string) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${id}`);
+  return res.json();
+}
+
+export async function createSession(source: 'website' | 'mcp' = 'website') {
+  return fetchJson(`${API_BASE}/api/psyche/sessions`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ source }),
+  });
+}
+
+export async function recordConsent(sessionId: string, level: 1 | 2, consentText: string) {
+  return fetchJson(`${API_BASE}/api/psyche/sessions/${sessionId}/consent`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ level, consent_text: consentText }),
+  });
+}
+
+export async function saveResponses(sessionId: string, responses: Array<{ instrument_id: string; item_id: string; value: string | number }>) {
+  return fetchJson(`${API_BASE}/api/psyche/sessions/${sessionId}/responses`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ responses }),
+  });
+}
+
+export async function saveInterview(sessionId: string, interviews: Array<{ prompt_index: number; prompt_text: string; response_text: string }>) {
+  return fetchJson(`${API_BASE}/api/psyche/sessions/${sessionId}/interview`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ interviews }),
+  });
+}
+
+export async function saveScores(sessionId: string, scores: unknown) {
+  return fetchJson(`${API_BASE}/api/psyche/sessions/${sessionId}/scores`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ scores }),
+  });
+}
+
+export async function generateReport(sessionId: string) {
+  return fetchJson(`${API_BASE}/api/psyche/sessions/${sessionId}/report`, {
+    method: 'POST',
+  });
+}
+
+export async function exportSession(sessionId: string) {
+  const res = await fetch(`${API_BASE}/api/psyche/sessions/${sessionId}/export`);
+  return res.json();
+}
+
+========== api/src/routes/psyche.ts ==========
+import { Env, jsonResponse } from '../lib/types';
+
+// --- Report Generation Prompt ---
+
+const REPORT_PROMPT_VERSION = '1.0.0';
+
+const REPORT_SYSTEM_PROMPT = `You are a personality assessment specialist. You will receive:
+1. Psychometric instrument scores (normalized 0-100 per scale) from validated instruments
+2. Free-text interview responses to 10 self-reflection prompts
+
+Your task: Generate a comprehensive personality report that synthesizes quantitative scores with qualitative interview data.
+
+Output format:
+1. A JSON block with structured personality predictions (between <json> tags)
+2. A ~1500-word narrative report (between <report> tags)
+
+The JSON predictions should have this structure:
+{
+  "big_five": { "openness": 0-100, "conscientiousness": 0-100, "extraversion": 0-100, "agreeableness": 0-100, "neuroticism": 0-100 },
+  "key_traits": ["trait1", "trait2", ...],
+  "strengths": ["strength1", "strength2", ...],
+  "growth_areas": ["area1", "area2", ...],
+  "interview_themes": ["theme1", "theme2", ...]
+}
+
+The narrative report should:
+- Integrate quantitative scores with qualitative evidence from interview responses
+- Be written in second person ("You tend to...")
+- Avoid clinical jargon; use accessible language
+- Highlight patterns where multiple instruments converge on the same trait
+- Note any interesting tensions between self-report scores and interview content
+- Be honest but compassionate — acknowledge difficulties without pathologizing
+- Include specific quotes or paraphrases from interview responses as evidence
+
+IMPORTANT: This is NOT a clinical diagnosis. Frame all findings as personality patterns and tendencies, not disorders.
+
+When discussing behavioral patterns:
+- Describe coping strategies as learned or chosen behaviors, not as trauma responses. Even when someone describes difficult history, frame their current patterns as active strategies ("you tend to withdraw when overwhelmed") not nervous-system explanations ("your nervous system learned to stay on high alert"). The person is an agent making choices, not a body executing threat responses.
+- Use hedged language for psychological constructs ("consistent with", "suggests a pattern of") rather than categorical labels ("you are anxious-preoccupied")
+- Avoid pathologizing language in section headers — use descriptive framing ("How You Process Emotion") not clinical framing ("Anhedonic Depression", "Obsession")
+- Stay in the lane of personality description. Do not recommend therapeutic techniques or treatment constructs (e.g. "earned secure attachment", "exposure work"). Growth areas should be framed as observations, not prescriptions.`;
+
+function buildReportPrompt(scoresJson: string, interviews: { prompt_text: string; response_text: string }[]): string {
+  let prompt = '## Psychometric Scores\n\n```json\n' + scoresJson + '\n```\n\n';
+  prompt += '## Interview Responses\n\n';
+  for (const interview of interviews) {
+    prompt += `### Q: ${interview.prompt_text}\n\n${interview.response_text}\n\n`;
+  }
+  return prompt;
+}
+
+// --- Rate Limiting ---
+
+const reportRateMap = new Map<string, number[]>();
+
+function checkReportRateLimit(): boolean {
+  const now = Date.now();
+  const key = 'global';
+  const timestamps = reportRateMap.get(key) ?? [];
+  const recent = timestamps.filter(t => now - t < 3600000); // last hour
+  reportRateMap.set(key, recent);
+  return recent.length < 10;
+}
+
+function recordReportRequest(): void {
+  const key = 'global';
+  const timestamps = reportRateMap.get(key) ?? [];
+  timestamps.push(Date.now());
+  reportRateMap.set(key, timestamps);
+}
+
+// --- UUID Generation ---
+
+function generateUUID(): string {
+  return crypto.randomUUID();
+}
+
+// --- Session Validation ---
+
+async function getSession(db: D1Database, sessionId: string): Promise<Record<string, unknown> | null> {
+  const session = await db.prepare(
+    'SELECT * FROM psyche_sessions WHERE id = ?'
+  ).bind(sessionId).first();
+  return session as Record<string, unknown> | null;
+}
+
+function isSessionValid(session: Record<string, unknown>): boolean {
+  if (session.status === 'withdrawn') return false;
+  if (session.status === 'expired') return false;
+  const expiresAt = new Date(session.expires_at as string);
+  if (expiresAt < new Date()) return false;
+  return true;
+}
+
+// --- Route Handlers ---
+
+/** POST /api/psyche/sessions — Create anonymous session */
+export async function createSession(request: Request, env: Env): Promise<Response> {
+  const body = await request.json().catch(() => ({})) as Record<string, unknown>;
+  const source = (body.source === 'mcp' ? 'mcp' : 'website') as string;
+
+  const id = generateUUID();
+  const now = new Date().toISOString();
+  const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
+
+  await env.DB.prepare(
+    `INSERT INTO psyche_sessions (id, created_at, updated_at, status, expires_at, source)
+     VALUES (?, ?, ?, 'active', ?, ?)`
+  ).bind(id, now, now, expiresAt, source).run();
+
+  return jsonResponse({ id, status: 'active', expires_at: expiresAt, source }, 201);
+}
+
+/** GET /api/psyche/sessions/:id — Get session status */
+export async function getSessionStatus(sessionId: string, env: Env): Promise<Response> {
+  const session = await getSession(env.DB, sessionId);
+  if (!session) return jsonResponse({ error: 'Session not found' }, 404);
+
+  // Check expiry
+  const expiresAt = new Date(session.expires_at as string);
+  if (expiresAt < new Date() && session.status === 'active') {
+    await env.DB.prepare(
+      "UPDATE psyche_sessions SET status = 'expired', updated_at = datetime('now') WHERE id = ?"
+    ).bind(sessionId).run();
+    session.status = 'expired';
+  }
+
+  if (session.status === 'withdrawn') {
+    return jsonResponse({ id: sessionId, status: 'withdrawn' }, 403);
+  }
+
+  // Check if interview responses exist
+  const interviewCount = await env.DB.prepare(
+    'SELECT COUNT(*) as count FROM psyche_interviews WHERE session_id = ?'
+  ).bind(sessionId).first<{ count: number }>();
+
+  return jsonResponse({
+    id: session.id,
+    status: session.status,
+    consent_given: session.consent_given,
+    expires_at: session.expires_at,
+    source: session.source,
+    has_scores: !!session.scores_json,
+    has_report: !!session.report_text,
+    has_interview: (interviewCount?.count ?? 0) > 0,
+    scores_json: session.scores_json ? JSON.parse(session.scores_json as string) : null,
+    report_text: session.report_text,
+    report_model: session.report_model,
+  });
+}
+
+/** POST /api/psyche/sessions/:id/consent — Record consent level */
+export async function recordConsent(sessionId: string, request: Request, env: Env): Promise<Response> {
+  const session = await getSession(env.DB, sessionId);
+  if (!session) return jsonResponse({ error: 'Session not found' }, 404);
+  if (!isSessionValid(session)) return jsonResponse({ error: 'Session expired or withdrawn' }, 410);
+
+  const body = await request.json().catch(() => ({})) as Record<string, unknown>;
+  const level = body.level as number;
+  const consentText = body.consent_text as string;
+
+  if (level !== 1 && level !== 2) {
+    return jsonResponse({ error: 'Consent level must be 1 or 2' }, 400);
+  }
+  if (!consentText || typeof consentText !== 'string') {
+    return jsonResponse({ error: 'consent_text is required' }, 400);
+  }
+
+  await env.DB.prepare(
+    `UPDATE psyche_sessions
+     SET consent_given = ?, consent_text = ?, consent_at = datetime('now'), updated_at = datetime('now')
+     WHERE id = ?`
+  ).bind(level, consentText, sessionId).run();
+
+  return jsonResponse({ success: true, consent_given: level });
+}
+
+/** POST /api/psyche/sessions/:id/consent/withdraw — Withdraw consent */
+export async function withdrawConsent(sessionId: string, env: Env): Promise<Response> {
+  const session = await getSession(env.DB, sessionId);
+  if (!session) return jsonResponse({ error: 'Session not found' }, 404);
+
+  // Delete stored responses and interviews
+  await env.DB.prepare('DELETE FROM psyche_responses WHERE session_id = ?').bind(sessionId).run();
+  await env.DB.prepare('DELETE FROM psyche_interviews WHERE session_id = ?').bind(sessionId).run();
+
+  await env.DB.prepare(
+    `UPDATE psyche_sessions
+     SET status = 'withdrawn', withdrawal_at = datetime('now'), updated_at = datetime('now')
+     WHERE id = ?`
+  ).bind(sessionId).run();
+
+  return jsonResponse({ success: true, status: 'withdrawn' });
+}
+
+/** POST /api/psyche/sessions/:id/responses — Batch save instrument responses */
+export async function saveResponses(sessionId: string, request: Request, env: Env): Promise<Response> {
+  const session = await getSession(env.DB, sessionId);
+  if (!session) return jsonResponse({ error: 'Session not found' }, 404);
+  if (!isSessionValid(session)) return jsonResponse({ error: 'Session expired or withdrawn' }, 410);
+
+  // Only store if consent >= 2 (research)
+  if ((session.consent_given as number) < 2) {
+    return jsonResponse({ success: true, stored: false, reason: 'Research consent not given' });
+  }
+
+  const body = await request.json().catch(() => ({})) as Record<string, unknown>;
+  const responses = body.responses as Array<{ instrument_id: string; item_id: string; value: string | number }>;
+
+  if (!Array.isArray(responses) || responses.length === 0) {
+    return jsonResponse({ error: 'responses array is required' }, 400);
+  }
+
+  // Batch insert
+  const stmt = env.DB.prepare(
+    'INSERT INTO psyche_responses (session_id, instrument_id, item_id, value) VALUES (?, ?, ?, ?)'
+  );
+  const batch = responses.map(r =>
+    stmt.bind(sessionId, r.instrument_id, r.item_id, String(r.value))
+  );
+
+  await env.DB.batch(batch);
+
+  return jsonResponse({ success: true, stored: true, count: responses.length });
+}
+
+/** POST /api/psyche/sessions/:id/interview — Save interview responses */
+export async function saveInterview(sessionId: string, request: Request, env: Env): Promise<Response> {
+  const session = await getSession(env.DB, sessionId);
+  if (!session) return jsonResponse({ error: 'Session not found' }, 404);
+  if (!isSessionValid(session)) return jsonResponse({ error: 'Session expired or withdrawn' }, 410);
+
+  const rawBody = await request.text();
+  if (rawBody.length > 51200) { // 50KB limit
+    return jsonResponse({ error: 'Request body too large (max 50KB)' }, 413);
+  }
+
+  const body = JSON.parse(rawBody) as Record<string, unknown>;
+  const interviews = body.interviews as Array<{ prompt_index: number; prompt_text: string; response_text: string }>;
+
+  if (!Array.isArray(interviews) || interviews.length === 0) {
+    return jsonResponse({ error: 'interviews array is required' }, 400);
+  }
+
+  if (interviews.length > 10) {
+    return jsonResponse({ error: 'Maximum 10 interview responses' }, 400);
+  }
+
+  // Validate each interview
+  for (const interview of interviews) {
+    if (typeof interview.prompt_index !== 'number' || !interview.prompt_text || !interview.response_text) {
+      return jsonResponse({ error: 'Each interview must have prompt_index, prompt_text, and response_text' }, 400);
+    }
+    const wordCount = interview.response_text.trim().split(/\s+/).length;
+    if (wordCount < 10) {
+      return jsonResponse({ error: `Interview response ${interview.prompt_index} is too short (min 10 words)` }, 400);
+    }
+  }
+
+  const stmt = env.DB.prepare(
+    'INSERT INTO psyche_interviews (session_id, prompt_index, prompt_text, response_text, word_count) VALUES (?, ?, ?, ?, ?)'
+  );
+
+  const batch = interviews.map(i => {
+    const wordCount = i.response_text.trim().split(/\s+/).length;
+    return stmt.bind(sessionId, i.prompt_index, i.prompt_text, i.response_text, wordCount);
+  });
+
+  await env.DB.batch(batch);
+
+  return jsonResponse({ success: true, count: interviews.length });
+}
+
+/** POST /api/psyche/sessions/:id/scores — Save client-computed scores */
+export async function saveScores(sessionId: string, request: Request, env: Env): Promise<Response> {
+  const session = await getSession(env.DB, sessionId);
+  if (!session) return jsonResponse({ error: 'Session not found' }, 404);
+  if (!isSessionValid(session)) return jsonResponse({ error: 'Session expired or withdrawn' }, 410);
+
+  const body = await request.json().catch(() => ({})) as Record<string, unknown>;
+  const scores = body.scores;
+
+  if (!scores) {
+    return jsonResponse({ error: 'scores is required' }, 400);
+  }
+
+  const scoresJson = JSON.stringify(scores);
+
+  await env.DB.prepare(
+    `UPDATE psyche_sessions SET scores_json = ?, updated_at = datetime('now') WHERE id = ?`
+  ).bind(scoresJson, sessionId).run();
+
+  return jsonResponse({ success: true });
+}
+
+/** POST /api/psyche/sessions/:id/report — Generate narrative report via Kimi K2.5 */
+export async function generateReport(sessionId: string, env: Env): Promise<Response> {
+  const session = await getSession(env.DB, sessionId);
+  if (!session) return jsonResponse({ error: 'Session not found' }, 404);
+  if (!isSessionValid(session)) return jsonResponse({ error: 'Session expired or withdrawn' }, 410);
+
+  // Only 1 report per session
+  if (session.report_text) {
+    return jsonResponse({ error: 'Report already generated for this session' }, 409);
+  }
+
+  // Check scores exist
+  if (!session.scores_json) {
+    return jsonResponse({ error: 'Scores must be saved before generating a report' }, 400);
+  }
+
+  // Global rate limit
+  if (!checkReportRateLimit()) {
+    return jsonResponse(
+      { error: 'Report generation rate limit exceeded. Try again later.' },
+      429,
+    );
+  }
+
+  // Fetch interview responses
+  const interviews = await env.DB.prepare(
+    'SELECT prompt_text, response_text FROM psyche_interviews WHERE session_id = ? ORDER BY prompt_index'
+  ).bind(sessionId).all();
+
+  if (!interviews.results || interviews.results.length === 0) {
+    return jsonResponse({ error: 'Interview responses must be saved before generating a report' }, 400);
+  }
+
+  const userPrompt = buildReportPrompt(
+    session.scores_json as string,
+    interviews.results as unknown as { prompt_text: string; response_text: string }[]
+  );
+
+  recordReportRequest();
+
+  const startTime = Date.now();
+
+  // Call DeepInfra (OpenAI-compatible endpoint)
+  const aiResponse = await fetch('https://api.deepinfra.com/v1/openai/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${env.DEEPINFRA_API_KEY}`,
+    },
+    body: JSON.stringify({
+      model: 'moonshotai/Kimi-K2.5',
+      messages: [
+        { role: 'system', content: REPORT_SYSTEM_PROMPT },
+        { role: 'user', content: userPrompt },
+      ],
+      max_tokens: 4096,
+      temperature: 0.3,
+    }),
+  });
+
+  if (!aiResponse.ok) {
+    const errText = await aiResponse.text().catch(() => 'Unknown error');
+    console.error('DeepInfra error:', aiResponse.status, errText);
+    return jsonResponse(
+      { error: 'Report generation temporarily unavailable. Try again later.' },
+      503,
+    );
+  }
+
+  const aiData = await aiResponse.json() as {
+    choices: Array<{ message: { content: string } }>;
+    usage?: { prompt_tokens?: number; completion_tokens?: number };
+  };
+
+  const latencyMs = Date.now() - startTime;
+  const reportContent = aiData.choices?.[0]?.message?.content ?? '';
+  const tokensIn = aiData.usage?.prompt_tokens ?? 0;
+  const tokensOut = aiData.usage?.completion_tokens ?? 0;
+
+  // Store report in session
+  await env.DB.prepare(
+    `UPDATE psyche_sessions
+     SET report_text = ?, report_model = 'kimi-k2.5', status = 'completed', updated_at = datetime('now')
+     WHERE id = ?`
+  ).bind(reportContent, sessionId).run();
+
+  // Store evaluation for benchmarking
+  // Extract JSON predictions from report
+  let evaluationJson = '{}';
+  const jsonMatch = reportContent.match(/<json>([\s\S]*?)<\/json>/);
+  if (jsonMatch) {
+    evaluationJson = jsonMatch[1].trim();
+  }
+
+  await env.DB.prepare(
+    `INSERT INTO psyche_evaluations (session_id, model_id, model_provider, prompt_version, evaluation_json, tokens_in, tokens_out, latency_ms)
+     VALUES (?, 'kimi-k2.5', 'deepinfra', ?, ?, ?, ?, ?)`
+  ).bind(sessionId, REPORT_PROMPT_VERSION, evaluationJson, tokensIn, tokensOut, latencyMs).run();
+
+  return jsonResponse({
+    success: true,
+    report_text: reportContent,
+    report_model: 'kimi-k2.5',
+    tokens_in: tokensIn,
+    tokens_out: tokensOut,
+    latency_ms: latencyMs,
+  });
+}
+
+/** GET /api/psyche/sessions/:id/export — Export user's own data */
+export async function exportSession(sessionId: string, env: Env): Promise<Response> {
+  const session = await getSession(env.DB, sessionId);
+  if (!session) return jsonResponse({ error: 'Session not found' }, 404);
+
+  if (session.status === 'withdrawn') {
+    return jsonResponse({ error: 'Session data has been withdrawn' }, 403);
+  }
+
+  const interviews = await env.DB.prepare(
+    'SELECT prompt_index, prompt_text, response_text, word_count FROM psyche_interviews WHERE session_id = ? ORDER BY prompt_index'
+  ).bind(sessionId).all();
+
+  return jsonResponse({
+    session: {
+      id: session.id,
+      created_at: session.created_at,
+      status: session.status,
+      source: session.source,
+      consent_given: session.consent_given,
+    },
+    scores: session.scores_json ? JSON.parse(session.scores_json as string) : null,
+    report: session.report_text,
+    report_model: session.report_model,
+    interviews: interviews.results,
+  });
+}
+
+/** POST /api/psyche/cleanup — Delete expired sessions */
+export async function cleanupSessions(request: Request, env: Env): Promise<Response> {
+  const auth = request.headers.get('Authorization');
+  if (!auth || auth !== `Bearer ${env.PLAYGROUND_TOKEN}`) {
+    return jsonResponse({ error: 'Unauthorized' }, 401);
+  }
+
+  // Delete expired active sessions (keep completed ones with research consent)
+  const result = await env.DB.prepare(
+    `DELETE FROM psyche_sessions
+     WHERE expires_at < datetime('now')
+     AND status = 'active'`
+  ).run();
+
+  // Also clean up withdrawn sessions older than 24 hours
+  await env.DB.prepare(
+    `DELETE FROM psyche_sessions
+     WHERE status = 'withdrawn'
+     AND withdrawal_at < datetime('now', '-1 day')`
+  ).run();
+
+  return jsonResponse({
+    success: true,
+    deleted: result.meta?.changes ?? 0,
+  });
+}
+

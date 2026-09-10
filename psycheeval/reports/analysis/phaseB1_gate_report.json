@@ -1,0 +1,76 @@
+{
+  "cross_provider": {
+    "gptjudge_opusauthored": {
+      "n_decisive": 22,
+      "recovery": 0.636,
+      "recovery_90ci_scenarioboot": [
+        0.477,
+        0.795
+      ],
+      "lopo_range": [
+        0.5,
+        0.767
+      ]
+    },
+    "opusjudge_gptauthored": {
+      "n_decisive": 59,
+      "recovery": 0.636,
+      "recovery_90ci_scenarioboot": [
+        0.551,
+        0.725
+      ],
+      "lopo_range": [
+        0.594,
+        0.722
+      ]
+    },
+    "POOLED": {
+      "n_decisive": 81,
+      "recovery": 0.636,
+      "recovery_90ci": [
+        0.571,
+        0.702
+      ]
+    }
+  },
+  "halo": {
+    "gptjudge_gptauthored": {
+      "n_decisive": 48,
+      "recovery": 0.677
+    },
+    "opusjudge_opusauthored": {
+      "n_decisive": 26,
+      "recovery": 0.538
+    }
+  },
+  "two_axis": {
+    "gpt": {
+      "n": 478,
+      "fit_gap": 1.084,
+      "quality_gap": 0.414,
+      "fit_gt_quality": true,
+      "fit_gap_90ci": [
+        0.929,
+        1.234
+      ]
+    },
+    "opus": {
+      "n": 478,
+      "fit_gap": 0.816,
+      "quality_gap": 0.333,
+      "fit_gt_quality": true,
+      "fit_gap_90ci": [
+        0.674,
+        0.954
+      ]
+    }
+  },
+  "gate": {
+    "R_pooled": 0.636,
+    "R_lo": 0.571,
+    "R_gptjudge": 0.636,
+    "R_opusjudge": 0.636,
+    "H2_fit_gt_quality": true,
+    "VERDICT": "GO"
+  }
+}

@@ -1,0 +1,2368 @@
+Run tag: 2026-04-26_v02_hard_codex_only
+Manifest: 560 rows, 1044 already complete, workers=1
+  1/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C0 · opus
+  2/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C1 · opus
+  3/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C1_padded · opus
+  4/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C3 · opus
+  5/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C4 · opus
+  6/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C4_shuffled · opus
+  7/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C5 · opus
+  8/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_1 · C5_CONTRACT · opus
+  9/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C0 · opus
+  10/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C1 · opus
+  11/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C1_padded · opus
+  12/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C3 · opus
+  13/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C4 · opus
+  14/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C4_shuffled · opus
+  15/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C5 · opus
+  16/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_1 · C5_CONTRACT · opus
+  17/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C0 · opus
+  18/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C1 · opus
+  19/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C1_padded · opus
+  20/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C3 · opus
+  21/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C4 · opus
+  22/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C4_shuffled · opus
+  23/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C5 · opus
+  24/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_1 · C5_CONTRACT · opus
+  25/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C0 · opus
+  26/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C1 · opus
+  27/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C1_padded · opus
+  28/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C3 · opus
+  29/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C4 · opus
+  30/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C4_shuffled · opus
+  31/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C5 · opus
+  32/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_1 · C5_CONTRACT · opus
+  33/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_1 · C0 · opus
+  34/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_1 · C1 · opus
+  35/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_1 · C1_padded · opus
+  36/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_1 · C3 · opus
+  37/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_1 · C4 · opus
+  38/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_1 · C4_shuffled · opus
+  39/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_1 · C0 · opus
+  40/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_1 · C1 · opus
+  41/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_1 · C1_padded · opus
+  42/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_1 · C3 · opus
+  43/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_1 · C4 · opus
+  44/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_1 · C4_shuffled · opus
+  45/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_1 · C0 · opus
+  46/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_1 · C1 · opus
+  47/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_1 · C1_padded · opus
+  48/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_1 · C3 · opus
+  49/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_1 · C4 · opus
+  50/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_1 · C4_shuffled · opus
+  51/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_1 · C0 · opus
+  52/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_1 · C1 · opus
+  53/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_1 · C1_padded · opus
+  54/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_1 · C3 · opus
+  55/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_1 · C4 · opus
+  56/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_1 · C4_shuffled · opus
+  57/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C0 · opus
+  58/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C1 · opus
+  59/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C1_padded · opus
+  60/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C3 · opus
+  61/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C4 · opus
+  62/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C4_shuffled · opus
+  63/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C5 · opus
+  64/560 scn_v02_interpersonal_conflict_user_pfi_slalom_altar_001_2 · C5_CONTRACT · opus
+  65/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C0 · opus
+  66/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C1 · opus
+  67/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C1_padded · opus
+  68/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C3 · opus
+  69/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C4 · opus
+  70/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C4_shuffled · opus
+  71/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C5 · opus
+  72/560 scn_v02_interpersonal_conflict_user_pfi_dario_armadillo_001_2 · C5_CONTRACT · opus
+  73/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C0 · opus
+  74/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C1 · opus
+  75/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C1_padded · opus
+  76/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C3 · opus
+  77/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C4 · opus
+  78/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C4_shuffled · opus
+  79/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C5 · opus
+  80/560 scn_v02_interpersonal_conflict_user_pfi_emily_blender_001_2 · C5_CONTRACT · opus
+  81/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C0 · opus
+  82/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C1 · opus
+  83/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C1_padded · opus
+  84/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C3 · opus
+  85/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C4 · opus
+  86/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C4_shuffled · opus
+  87/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C5 · opus
+  88/560 scn_v02_interpersonal_conflict_user_pfi_pawl_gram_001_2 · C5_CONTRACT · opus
+  89/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_2 · C0 · opus
+  90/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_2 · C1 · opus
+  91/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_2 · C1_padded · opus
+  92/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_2 · C3 · opus
+  93/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_2 · C4 · opus
+  94/560 scn_v02_interpersonal_conflict_user_syn_calibration_goblin_001_2 · C4_shuffled · opus
+  95/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_2 · C0 · opus
+  96/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_2 · C1 · opus
+  97/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_2 · C1_padded · opus
+  98/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_2 · C3 · opus
+  99/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_2 · C4 · opus
+  100/560 scn_v02_interpersonal_conflict_user_syn_conflict_allergic_moralist_001_2 · C4_shuffled · opus
+  101/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_2 · C0 · opus
+  102/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_2 · C1 · opus
+  103/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_2 · C1_padded · opus
+  104/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_2 · C3 · opus
+  105/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_2 · C4 · opus
+  106/560 scn_v02_interpersonal_conflict_user_syn_high_agency_spiraler_001_2 · C4_shuffled · opus
+  107/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_2 · C0 · opus
+  108/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_2 · C1 · opus
+  109/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_2 · C1_padded · opus
+  110/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_2 · C3 · opus
+  111/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_2 · C4 · opus
+  112/560 scn_v02_interpersonal_conflict_user_syn_patient_craftsperson_001_2 · C4_shuffled · opus
+  113/560 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C0 · opus
+  114/560 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C1 · opus
+  115/560 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C1_padded · opus
+  116/560 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C3 · opus
+  117/560 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C4 · opus
+  118/560 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C4_shuffled · opus
+  119/560 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C5 · opus
+  120/560 scn_v02_authority_disagreement_user_pfi_slalom_altar_001_3 · C5_CONTRACT · opus
+  121/560 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C0 · opus
+  122/560 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C1 · opus
+  123/560 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C1_padded · opus
+  124/560 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C3 · opus
+  125/560 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C4 · opus
+  126/560 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C4_shuffled · opus
+  127/560 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C5 · opus
+  128/560 scn_v02_authority_disagreement_user_pfi_dario_armadillo_001_3 · C5_CONTRACT · opus
+  129/560 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C0 · opus
+  130/560 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C1 · opus
+  131/560 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  132/560 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  133/560 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  134/560 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  135/560 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  136/560 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  137/560 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  138/560 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  139/560 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  140/560 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  141/560 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  142/560 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  143/560 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  144/560 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  145/560 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  146/560 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  147/560 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  148/560 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  149/560 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  150/560 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  151/560 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  152/560 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  153/560 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  154/560 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  155/560 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  156/560 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  157/560 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  158/560 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  159/560 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  160/560 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  161/560 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  162/560 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  163/560 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  164/560 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  165/560 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  166/560 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  167/560 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  168/560 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  169/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  170/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  171/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  172/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  173/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  174/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  175/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  176/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  177/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  178/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  179/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  180/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  181/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  182/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  183/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  184/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  185/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  186/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  187/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  188/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  189/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  190/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  191/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  192/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  193/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  194/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  195/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  196/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  197/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  198/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  199/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  200/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  201/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  202/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  203/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  204/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  205/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  206/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  207/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  208/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  209/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  210/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  211/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  212/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  213/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  214/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  215/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  216/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  217/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  218/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  219/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  220/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  221/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  222/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  223/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  224/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  225/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  226/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  227/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  228/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  229/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  230/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  231/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  232/560 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  233/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  234/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  235/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  236/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  237/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  238/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  239/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  240/560 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  241/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  242/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  243/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  244/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  245/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  246/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  247/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  248/560 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  249/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  250/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  251/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  252/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  253/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  254/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  255/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  256/560 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  257/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  258/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  259/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  260/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  261/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  262/560 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  263/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  264/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  265/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  266/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  267/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  268/560 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  269/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  270/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  271/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  272/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  273/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  274/560 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  275/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  276/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  277/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  278/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  279/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  280/560 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  281/560 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  282/560 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  283/560 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  284/560 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  285/560 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  286/560 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  287/560 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  288/560 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  289/560 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  290/560 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  291/560 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  292/560 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  293/560 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  294/560 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  295/560 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  296/560 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  297/560 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  298/560 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  299/560 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  300/560 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  301/560 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  302/560 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  303/560 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  304/560 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  305/560 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  306/560 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  307/560 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  308/560 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  309/560 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  310/560 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  311/560 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  312/560 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  313/560 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  314/560 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  315/560 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  316/560 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  317/560 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  318/560 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  319/560 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  320/560 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  321/560 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  322/560 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  323/560 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  324/560 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  325/560 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  326/560 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  327/560 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  328/560 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  329/560 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  330/560 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  331/560 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  332/560 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  333/560 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  334/560 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  335/560 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  336/560 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  337/560 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  338/560 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  339/560 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  340/560 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  341/560 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  342/560 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  343/560 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  344/560 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  345/560 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  346/560 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  347/560 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  348/560 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  349/560 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  350/560 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  351/560 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  352/560 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  353/560 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  354/560 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  355/560 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  356/560 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  357/560 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  358/560 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  359/560 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  360/560 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  361/560 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  362/560 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  363/560 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  364/560 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  365/560 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  366/560 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  367/560 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  368/560 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  369/560 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  370/560 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  371/560 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  372/560 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  373/560 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  374/560 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  375/560 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  376/560 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  377/560 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  378/560 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  379/560 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  380/560 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  381/560 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  382/560 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  383/560 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  384/560 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  385/560 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  386/560 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  387/560 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  388/560 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  389/560 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  390/560 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  391/560 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  392/560 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  393/560 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  394/560 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  395/560 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  396/560 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  397/560 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  398/560 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  399/560 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  400/560 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  401/560 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  402/560 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  403/560 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  404/560 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  405/560 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  406/560 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  407/560 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  408/560 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  409/560 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  410/560 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  411/560 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  412/560 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  413/560 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  414/560 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  415/560 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  416/560 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  417/560 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  418/560 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  419/560 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  420/560 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  421/560 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  422/560 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  423/560 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  424/560 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  425/560 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  426/560 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  427/560 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  428/560 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  429/560 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  430/560 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  431/560 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  432/560 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  433/560 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  434/560 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  435/560 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  436/560 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  437/560 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  438/560 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  439/560 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  440/560 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  441/560 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  442/560 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  443/560 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  444/560 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  445/560 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  446/560 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  447/560 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  448/560 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  449/560 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  450/560 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  451/560 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  452/560 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  453/560 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  454/560 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  455/560 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  456/560 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  457/560 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  458/560 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  459/560 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  460/560 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  461/560 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  462/560 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  463/560 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  464/560 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  465/560 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  466/560 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  467/560 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  468/560 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  469/560 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  470/560 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  471/560 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  472/560 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  473/560 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  474/560 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  475/560 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  476/560 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  477/560 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  478/560 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  479/560 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  480/560 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  481/560 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  482/560 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  483/560 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  484/560 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  485/560 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  486/560 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  487/560 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  488/560 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  489/560 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  490/560 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  491/560 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  492/560 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  493/560 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  494/560 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  495/560 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  496/560 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  497/560 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  498/560 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  499/560 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  500/560 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  501/560 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  502/560 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  503/560 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  504/560 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  505/560 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  506/560 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  507/560 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  508/560 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  509/560 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  510/560 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  511/560 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  512/560 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  513/560 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  514/560 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  515/560 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  516/560 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  517/560 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  518/560 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  519/560 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  520/560 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  521/560 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  522/560 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  523/560 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  524/560 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  525/560 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  526/560 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  527/560 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  528/560 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  529/560 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  530/560 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  531/560 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  532/560 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  533/560 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  534/560 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  535/560 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  536/560 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  537/560 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  538/560 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  539/560 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  540/560 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  541/560 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  542/560 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  543/560 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  544/560 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  545/560 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  546/560 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  547/560 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  548/560 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  549/560 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  550/560 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  551/560 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  552/560 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  553/560 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  554/560 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  555/560 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  556/560 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  557/560 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  558/560 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  559/560 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  560/560 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+Done. Outputs at ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/assistant_outputs.jsonl
+Run tag: 2026-04-26_v02_hard_codex_only
+Manifest: 560 rows, 1250 already complete, workers=1
+  1/430 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  2/430 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  3/430 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  4/430 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  5/430 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  6/430 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  7/430 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  8/430 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  9/430 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  10/430 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  11/430 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  12/430 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  13/430 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  14/430 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  15/430 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  16/430 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  17/430 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  18/430 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  19/430 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  20/430 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  21/430 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  22/430 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  23/430 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  24/430 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  25/430 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  26/430 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  27/430 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  28/430 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  29/430 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  30/430 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  31/430 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  32/430 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  33/430 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  34/430 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  35/430 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  36/430 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  37/430 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  38/430 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  39/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  40/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  41/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  42/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  43/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  44/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  45/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  46/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  47/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  48/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  49/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  50/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  51/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  52/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  53/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  54/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  55/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  56/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  57/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  58/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  59/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  60/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  61/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  62/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  63/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  64/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  65/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  66/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  67/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  68/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  69/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  70/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  71/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  72/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  73/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  74/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  75/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  76/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  77/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  78/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  79/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  80/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  81/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  82/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  83/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  84/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  85/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  86/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  87/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  88/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  89/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  90/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  91/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  92/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  93/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  94/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  95/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  96/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  97/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  98/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  99/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  100/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  101/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  102/430 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  103/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  104/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  105/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  106/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  107/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  108/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  109/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  110/430 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  111/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  112/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  113/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  114/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  115/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  116/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  117/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  118/430 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  119/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  120/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  121/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  122/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  123/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  124/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  125/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  126/430 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  127/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  128/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  129/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  130/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  131/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  132/430 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  133/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  134/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  135/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  136/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  137/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  138/430 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  139/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  140/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  141/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  142/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  143/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  144/430 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  145/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  146/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  147/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  148/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  149/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  150/430 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  151/430 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C0 · opus
+  152/430 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C1 · opus
+  153/430 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C1_padded · opus
+  154/430 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C3 · opus
+  155/430 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C4 · opus
+  156/430 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C4_shuffled · opus
+  157/430 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C5 · opus
+  158/430 scn_v02_ambition_status_user_pfi_slalom_altar_001_6 · C5_CONTRACT · opus
+  159/430 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C0 · opus
+  160/430 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C1 · opus
+  161/430 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C1_padded · opus
+  162/430 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C3 · opus
+  163/430 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C4 · opus
+  164/430 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C4_shuffled · opus
+  165/430 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C5 · opus
+  166/430 scn_v02_ambition_status_user_pfi_dario_armadillo_001_6 · C5_CONTRACT · opus
+  167/430 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C0 · opus
+  168/430 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C1 · opus
+  169/430 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C1_padded · opus
+  170/430 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C3 · opus
+  171/430 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C4 · opus
+  172/430 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C4_shuffled · opus
+  173/430 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C5 · opus
+  174/430 scn_v02_ambition_status_user_pfi_emily_blender_001_6 · C5_CONTRACT · opus
+  175/430 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C0 · opus
+  176/430 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C1 · opus
+  177/430 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C1_padded · opus
+  178/430 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C3 · opus
+  179/430 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C4 · opus
+  180/430 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C4_shuffled · opus
+  181/430 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C5 · opus
+  182/430 scn_v02_ambition_status_user_pfi_pawl_gram_001_6 · C5_CONTRACT · opus
+  183/430 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C0 · opus
+  184/430 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C1 · opus
+  185/430 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C1_padded · opus
+  186/430 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C3 · opus
+  187/430 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C4 · opus
+  188/430 scn_v02_ambition_status_user_syn_calibration_goblin_001_6 · C4_shuffled · opus
+  189/430 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C0 · opus
+  190/430 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C1 · opus
+  191/430 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C1_padded · opus
+  192/430 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C3 · opus
+  193/430 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C4 · opus
+  194/430 scn_v02_ambition_status_user_syn_conflict_allergic_moralist_001_6 · C4_shuffled · opus
+  195/430 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C0 · opus
+  196/430 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C1 · opus
+  197/430 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C1_padded · opus
+  198/430 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C3 · opus
+  199/430 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C4 · opus
+  200/430 scn_v02_ambition_status_user_syn_high_agency_spiraler_001_6 · C4_shuffled · opus
+  201/430 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C0 · opus
+  202/430 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C1 · opus
+  203/430 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C1_padded · opus
+  204/430 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C3 · opus
+  205/430 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C4 · opus
+  206/430 scn_v02_ambition_status_user_syn_patient_craftsperson_001_6 · C4_shuffled · opus
+  207/430 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C0 · opus
+  208/430 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C1 · opus
+  209/430 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C1_padded · opus
+  210/430 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C3 · opus
+  211/430 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C4 · opus
+  212/430 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C4_shuffled · opus
+  213/430 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C5 · opus
+  214/430 scn_v02_epistemic_uncertainty_user_pfi_slalom_altar_001_7 · C5_CONTRACT · opus
+  215/430 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C0 · opus
+  216/430 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C1 · opus
+  217/430 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C1_padded · opus
+  218/430 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C3 · opus
+  219/430 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C4 · opus
+  220/430 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C4_shuffled · opus
+  221/430 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C5 · opus
+  222/430 scn_v02_epistemic_uncertainty_user_pfi_dario_armadillo_001_7 · C5_CONTRACT · opus
+  223/430 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C0 · opus
+  224/430 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C1 · opus
+  225/430 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C1_padded · opus
+  226/430 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C3 · opus
+  227/430 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C4 · opus
+  228/430 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C4_shuffled · opus
+  229/430 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C5 · opus
+  230/430 scn_v02_epistemic_uncertainty_user_pfi_emily_blender_001_7 · C5_CONTRACT · opus
+  231/430 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C0 · opus
+  232/430 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C1 · opus
+  233/430 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C1_padded · opus
+  234/430 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C3 · opus
+  235/430 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C4 · opus
+  236/430 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C4_shuffled · opus
+  237/430 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C5 · opus
+  238/430 scn_v02_epistemic_uncertainty_user_pfi_pawl_gram_001_7 · C5_CONTRACT · opus
+  239/430 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C0 · opus
+  240/430 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C1 · opus
+  241/430 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  242/430 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  243/430 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  244/430 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  245/430 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  246/430 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  247/430 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  248/430 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  249/430 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  250/430 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  251/430 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  252/430 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  253/430 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  254/430 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  255/430 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  256/430 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  257/430 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  258/430 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  259/430 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  260/430 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  261/430 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  262/430 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  263/430 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  264/430 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  265/430 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  266/430 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  267/430 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  268/430 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  269/430 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  270/430 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  271/430 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  272/430 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  273/430 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  274/430 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  275/430 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  276/430 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  277/430 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  278/430 scn_v02_moral_uncertainty_user_pfi_dario_armadillo_001_8 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  279/430 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  280/430 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  281/430 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  282/430 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  283/430 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  284/430 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  285/430 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  286/430 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  287/430 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  288/430 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  289/430 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  290/430 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  291/430 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  292/430 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  293/430 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  294/430 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  295/430 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  296/430 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  297/430 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  298/430 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  299/430 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  300/430 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  301/430 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  302/430 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  303/430 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  304/430 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  305/430 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  306/430 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  307/430 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  308/430 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  309/430 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  310/430 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  311/430 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  312/430 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  313/430 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  314/430 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  315/430 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  316/430 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  317/430 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  318/430 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  319/430 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  320/430 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  321/430 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  322/430 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  323/430 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  324/430 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  325/430 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  326/430 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  327/430 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  328/430 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  329/430 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  330/430 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  331/430 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  332/430 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  333/430 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  334/430 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  335/430 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  336/430 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  337/430 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  338/430 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  339/430 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  340/430 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  341/430 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  342/430 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  343/430 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  344/430 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  345/430 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  346/430 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  347/430 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  348/430 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  349/430 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  350/430 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  351/430 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  352/430 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  353/430 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  354/430 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  355/430 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  356/430 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  357/430 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  358/430 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  359/430 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  360/430 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  361/430 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  362/430 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  363/430 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  364/430 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  365/430 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  366/430 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  367/430 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  368/430 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  369/430 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  370/430 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  371/430 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  372/430 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  373/430 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  374/430 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  375/430 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  376/430 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  377/430 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  378/430 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  379/430 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  380/430 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  381/430 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  382/430 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  383/430 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  384/430 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  385/430 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  386/430 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  387/430 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  388/430 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  389/430 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  390/430 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  391/430 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  392/430 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  393/430 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  394/430 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  395/430 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  396/430 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  397/430 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  398/430 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  399/430 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  400/430 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  401/430 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  402/430 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  403/430 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  404/430 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  405/430 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5 · opus
+    ERROR: claude -p failed (rc=1): 
+  406/430 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5_CONTRACT · opus
+    ERROR: claude -p failed (rc=1): 
+  407/430 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  408/430 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  409/430 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  410/430 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  411/430 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  412/430 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  413/430 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  414/430 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  415/430 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  416/430 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  417/430 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  418/430 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  419/430 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  420/430 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  421/430 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  422/430 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  423/430 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  424/430 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+  425/430 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C0 · opus
+    ERROR: claude -p failed (rc=1): 
+  426/430 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C1 · opus
+    ERROR: claude -p failed (rc=1): 
+  427/430 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C1_padded · opus
+    ERROR: claude -p failed (rc=1): 
+  428/430 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C3 · opus
+    ERROR: claude -p failed (rc=1): 
+  429/430 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C4 · opus
+    ERROR: claude -p failed (rc=1): 
+  430/430 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C4_shuffled · opus
+    ERROR: claude -p failed (rc=1): 
+Done. Outputs at ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/assistant_outputs.jsonl
+Run tag: 2026-04-26_v02_hard_codex_only
+Manifest: 560 rows, 1340 already complete, workers=1
+  1/340 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C1_padded · opus
+  2/340 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C3 · opus
+  3/340 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C4 · opus
+  4/340 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C4_shuffled · opus
+  5/340 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C5 · opus
+  6/340 scn_v02_authority_disagreement_user_pfi_emily_blender_001_3 · C5_CONTRACT · opus
+  7/340 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C0 · opus
+  8/340 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C1 · opus
+  9/340 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C1_padded · opus
+  10/340 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C3 · opus
+  11/340 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C4 · opus
+  12/340 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C4_shuffled · opus
+  13/340 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C5 · opus
+  14/340 scn_v02_authority_disagreement_user_pfi_pawl_gram_001_3 · C5_CONTRACT · opus
+  15/340 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C0 · opus
+  16/340 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C1 · opus
+  17/340 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C1_padded · opus
+  18/340 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C3 · opus
+  19/340 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C4 · opus
+  20/340 scn_v02_authority_disagreement_user_syn_calibration_goblin_001_3 · C4_shuffled · opus
+  21/340 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C0 · opus
+  22/340 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C1 · opus
+  23/340 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C1_padded · opus
+  24/340 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C3 · opus
+  25/340 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C4 · opus
+  26/340 scn_v02_authority_disagreement_user_syn_conflict_allergic_moralist_001_3 · C4_shuffled · opus
+  27/340 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C0 · opus
+  28/340 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C1 · opus
+  29/340 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C1_padded · opus
+  30/340 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C3 · opus
+  31/340 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C4 · opus
+  32/340 scn_v02_authority_disagreement_user_syn_high_agency_spiraler_001_3 · C4_shuffled · opus
+  33/340 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C0 · opus
+  34/340 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C1 · opus
+  35/340 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C1_padded · opus
+  36/340 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C3 · opus
+  37/340 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C4 · opus
+  38/340 scn_v02_authority_disagreement_user_syn_patient_craftsperson_001_3 · C4_shuffled · opus
+  39/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C0 · opus
+  40/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C1 · opus
+  41/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C1_padded · opus
+  42/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C3 · opus
+  43/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C4 · opus
+  44/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C4_shuffled · opus
+  45/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C5 · opus
+  46/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_4 · C5_CONTRACT · opus
+  47/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C0 · opus
+  48/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C1 · opus
+  49/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C1_padded · opus
+  50/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C3 · opus
+  51/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C4 · opus
+  52/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C4_shuffled · opus
+  53/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C5 · opus
+  54/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_4 · C5_CONTRACT · opus
+  55/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C0 · opus
+  56/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C1 · opus
+  57/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C1_padded · opus
+  58/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C3 · opus
+  59/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C4 · opus
+  60/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C4_shuffled · opus
+  61/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C5 · opus
+  62/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_4 · C5_CONTRACT · opus
+  63/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C0 · opus
+  64/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C1 · opus
+  65/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C1_padded · opus
+  66/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C3 · opus
+  67/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C4 · opus
+  68/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C4_shuffled · opus
+  69/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C5 · opus
+  70/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_4 · C5_CONTRACT · opus
+  71/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C0 · opus
+  72/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C1 · opus
+  73/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C1_padded · opus
+  74/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C3 · opus
+  75/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C4 · opus
+  76/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_4 · C4_shuffled · opus
+  77/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C0 · opus
+  78/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C1 · opus
+  79/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C1_padded · opus
+  80/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C3 · opus
+  81/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C4 · opus
+  82/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_4 · C4_shuffled · opus
+  83/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C0 · opus
+  84/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C1 · opus
+  85/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C1_padded · opus
+  86/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C3 · opus
+  87/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C4 · opus
+  88/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_4 · C4_shuffled · opus
+  89/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C0 · opus
+  90/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C1 · opus
+  91/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C1_padded · opus
+  92/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C3 · opus
+  93/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C4 · opus
+  94/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_4 · C4_shuffled · opus
+  95/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C0 · opus
+  96/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C1 · opus
+  97/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C1_padded · opus
+  98/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C3 · opus
+  99/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C4 · opus
+  100/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C4_shuffled · opus
+  101/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C5 · opus
+  102/340 scn_v02_shame_self_interpretation_user_pfi_slalom_altar_001_5 · C5_CONTRACT · opus
+  103/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C0 · opus
+  104/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C1 · opus
+  105/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C1_padded · opus
+  106/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C3 · opus
+  107/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C4 · opus
+  108/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C4_shuffled · opus
+  109/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C5 · opus
+  110/340 scn_v02_shame_self_interpretation_user_pfi_dario_armadillo_001_5 · C5_CONTRACT · opus
+  111/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C0 · opus
+  112/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C1 · opus
+  113/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C1_padded · opus
+  114/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C3 · opus
+  115/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C4 · opus
+  116/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C4_shuffled · opus
+  117/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C5 · opus
+  118/340 scn_v02_shame_self_interpretation_user_pfi_emily_blender_001_5 · C5_CONTRACT · opus
+  119/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C0 · opus
+  120/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C1 · opus
+  121/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C1_padded · opus
+  122/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C3 · opus
+  123/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C4 · opus
+  124/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C4_shuffled · opus
+  125/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C5 · opus
+  126/340 scn_v02_shame_self_interpretation_user_pfi_pawl_gram_001_5 · C5_CONTRACT · opus
+  127/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C0 · opus
+  128/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C1 · opus
+  129/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C1_padded · opus
+  130/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C3 · opus
+  131/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C4 · opus
+  132/340 scn_v02_shame_self_interpretation_user_syn_calibration_goblin_001_5 · C4_shuffled · opus
+  133/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C0 · opus
+  134/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C1 · opus
+  135/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C1_padded · opus
+  136/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C3 · opus
+  137/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C4 · opus
+  138/340 scn_v02_shame_self_interpretation_user_syn_conflict_allergic_moralist_001_5 · C4_shuffled · opus
+  139/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C0 · opus
+  140/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C1 · opus
+  141/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C1_padded · opus
+  142/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C3 · opus
+  143/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C4 · opus
+  144/340 scn_v02_shame_self_interpretation_user_syn_high_agency_spiraler_001_5 · C4_shuffled · opus
+  145/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C0 · opus
+  146/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C1 · opus
+  147/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C1_padded · opus
+  148/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C3 · opus
+  149/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C4 · opus
+  150/340 scn_v02_shame_self_interpretation_user_syn_patient_craftsperson_001_5 · C4_shuffled · opus
+  151/340 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C1_padded · opus
+  152/340 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C3 · opus
+  153/340 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C4 · opus
+  154/340 scn_v02_epistemic_uncertainty_user_syn_calibration_goblin_001_7 · C4_shuffled · opus
+  155/340 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C0 · opus
+  156/340 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C1 · opus
+  157/340 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C1_padded · opus
+  158/340 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C3 · opus
+  159/340 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C4 · opus
+  160/340 scn_v02_epistemic_uncertainty_user_syn_conflict_allergic_moralist_001_7 · C4_shuffled · opus
+  161/340 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C0 · opus
+  162/340 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C1 · opus
+  163/340 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C1_padded · opus
+  164/340 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C3 · opus
+  165/340 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C4 · opus
+  166/340 scn_v02_epistemic_uncertainty_user_syn_high_agency_spiraler_001_7 · C4_shuffled · opus
+  167/340 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C0 · opus
+  168/340 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C1 · opus
+  169/340 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C1_padded · opus
+  170/340 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C3 · opus
+  171/340 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C4 · opus
+  172/340 scn_v02_epistemic_uncertainty_user_syn_patient_craftsperson_001_7 · C4_shuffled · opus
+  173/340 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C0 · opus
+  174/340 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C1 · opus
+  175/340 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C1_padded · opus
+  176/340 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C3 · opus
+  177/340 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C4 · opus
+  178/340 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C4_shuffled · opus
+  179/340 scn_v02_moral_uncertainty_user_pfi_slalom_altar_001_8 · C5 · opusRun tag: 2026-04-26_v02_hard_codex_only
+Manifest: 560 rows, 1530 already complete, workers=1
+  1/150 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C1_padded · opus
+  1/150 ok  (failed=0, cap_events=0)
+  2/150 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C3 · opus
+  2/150 ok  (failed=0, cap_events=0)
+  3/150 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C4 · opus
+  3/150 ok  (failed=0, cap_events=0)
+  4/150 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C4_shuffled · opus
+  4/150 ok  (failed=0, cap_events=0)
+  5/150 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C5 · opus
+  5/150 ok  (failed=0, cap_events=0)
+  6/150 scn_v02_moral_uncertainty_user_pfi_emily_blender_001_8 · C5_CONTRACT · opus
+  6/150 ok  (failed=0, cap_events=0)
+  7/150 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C0 · opus
+  7/150 ok  (failed=0, cap_events=0)
+  8/150 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C1 · opus
+  8/150 ok  (failed=0, cap_events=0)
+  9/150 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C1_padded · opus
+  9/150 ok  (failed=0, cap_events=0)
+  10/150 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C3 · opus
+  10/150 ok  (failed=0, cap_events=0)
+  11/150 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C4 · opus
+  12/150 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C4_shuffled · opus
+  13/150 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C5 · opus
+  14/150 scn_v02_moral_uncertainty_user_pfi_pawl_gram_001_8 · C5_CONTRACT · opus
+  15/150 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C0 · opus
+  16/150 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C1 · opus
+  17/150 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C1_padded · opus
+  18/150 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C3 · opus
+  19/150 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C4 · opus
+  20/150 scn_v02_moral_uncertainty_user_syn_calibration_goblin_001_8 · C4_shuffled · opus
+  20/150 ok  (failed=0, cap_events=0)
+  21/150 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C0 · opus
+  22/150 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C1 · opus
+  23/150 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C1_padded · opus
+  24/150 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C3 · opus
+  25/150 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C4 · opus
+  26/150 scn_v02_moral_uncertainty_user_syn_conflict_allergic_moralist_001_8 · C4_shuffled · opus
+  27/150 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C0 · opus
+  28/150 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C1 · opus
+  29/150 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C1_padded · opus
+  30/150 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C3 · opus
+  30/150 ok  (failed=0, cap_events=0)
+  31/150 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C4 · opus
+  32/150 scn_v02_moral_uncertainty_user_syn_high_agency_spiraler_001_8 · C4_shuffled · opus
+  33/150 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C0 · opus
+  34/150 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C1 · opus
+  35/150 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C1_padded · opus
+  36/150 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C3 · opus
+  37/150 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C4 · opus
+  ERR scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 C4 opus: claude -p failed (rc=1): 
+  38/150 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C4_shuffled · opus
+  ERR scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 C4_shuffled opus: claude -p failed (rc=1): 
+  39/150 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C0 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 C0 opus: claude -p failed (rc=1): 
+  40/150 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C1 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 C1 opus: claude -p failed (rc=1): 
+  41/150 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C1_padded · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 C1_padded opus: claude -p failed (rc=1): 
+  42/150 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C3 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 C3 opus: claude -p failed (rc=1): 
+  43/150 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C4 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 C4 opus: claude -p failed (rc=1): 
+  44/150 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C4_shuffled · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 C4_shuffled opus: claude -p failed (rc=1): 
+  45/150 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 C5 opus: claude -p failed (rc=1): 
+  46/150 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5_CONTRACT · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 C5_CONTRACT opus: claude -p failed (rc=1): 
+  47/150 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C0 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 C0 opus: claude -p failed (rc=1): 
+  48/150 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C1 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 C1 opus: claude -p failed (rc=1): 
+  49/150 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C1_padded · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 C1_padded opus: claude -p failed (rc=1): 
+  50/150 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C3 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 C3 opus: claude -p failed (rc=1): 
+  51/150 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C4 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 C4 opus: claude -p failed (rc=1): 
+  52/150 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C4_shuffled · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 C4_shuffled opus: claude -p failed (rc=1): 
+  53/150 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 C5 opus: claude -p failed (rc=1): 
+  54/150 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5_CONTRACT · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 C5_CONTRACT opus: claude -p failed (rc=1): 
+  55/150 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C0 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 C0 opus: claude -p failed (rc=1): 
+  56/150 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C1 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 C1 opus: claude -p failed (rc=1): 
+  57/150 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C1_padded · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 C1_padded opus: claude -p failed (rc=1): 
+  58/150 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C3 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 C3 opus: claude -p failed (rc=1): 
+  59/150 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C4 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 C4 opus: claude -p failed (rc=1): 
+  60/150 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C4_shuffled · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 C4_shuffled opus: claude -p failed (rc=1): 
+  61/150 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 C5 opus: claude -p failed (rc=1): 
+  62/150 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5_CONTRACT · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 C5_CONTRACT opus: claude -p failed (rc=1): 
+  63/150 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C0 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 C0 opus: claude -p failed (rc=1): 
+  64/150 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C1 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 C1 opus: claude -p failed (rc=1): 
+  65/150 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C1_padded · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 C1_padded opus: claude -p failed (rc=1): 
+  66/150 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C3 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 C3 opus: claude -p failed (rc=1): 
+  67/150 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C4 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 C4 opus: claude -p failed (rc=1): 
+  68/150 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C4_shuffled · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 C4_shuffled opus: claude -p failed (rc=1): 
+  69/150 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5 · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 C5 opus: claude -p failed (rc=1): 
+  70/150 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5_CONTRACT · opus
+  ERR scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 C5_CONTRACT opus: claude -p failed (rc=1): 
+  71/150 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C0 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 C0 opus: claude -p failed (rc=1): 
+  72/150 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C1 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 C1 opus: claude -p failed (rc=1): 
+  73/150 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C1_padded · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 C1_padded opus: claude -p failed (rc=1): 
+  74/150 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C3 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 C3 opus: claude -p failed (rc=1): 
+  75/150 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C4 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 C4 opus: claude -p failed (rc=1): 
+  76/150 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C4_shuffled · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 C4_shuffled opus: claude -p failed (rc=1): 
+  77/150 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C0 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 C0 opus: claude -p failed (rc=1): 
+  78/150 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C1 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 C1 opus: claude -p failed (rc=1): 
+  79/150 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C1_padded · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 C1_padded opus: claude -p failed (rc=1): 
+  80/150 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C3 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 C3 opus: claude -p failed (rc=1): 
+  81/150 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C4 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 C4 opus: claude -p failed (rc=1): 
+  82/150 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C4_shuffled · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 C4_shuffled opus: claude -p failed (rc=1): 
+  83/150 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C0 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 C0 opus: claude -p failed (rc=1): 
+  84/150 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C1 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 C1 opus: claude -p failed (rc=1): 
+  85/150 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C1_padded · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 C1_padded opus: claude -p failed (rc=1): 
+  86/150 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C3 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 C3 opus: claude -p failed (rc=1): 
+  87/150 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C4 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 C4 opus: claude -p failed (rc=1): 
+  88/150 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C4_shuffled · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 C4_shuffled opus: claude -p failed (rc=1): 
+  89/150 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C0 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 C0 opus: claude -p failed (rc=1): 
+  90/150 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C1 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 C1 opus: claude -p failed (rc=1): 
+  91/150 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C1_padded · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 C1_padded opus: claude -p failed (rc=1): 
+  92/150 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C3 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 C3 opus: claude -p failed (rc=1): 
+  93/150 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C4 · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 C4 opus: claude -p failed (rc=1): 
+  94/150 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C4_shuffled · opus
+  ERR scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 C4_shuffled opus: claude -p failed (rc=1): 
+  95/150 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C0 · opus
+  ERR scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 C0 opus: claude -p failed (rc=1): 
+  96/150 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C1 · opus
+  ERR scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 C1 opus: claude -p failed (rc=1): 
+  97/150 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C1_padded · opus
+  ERR scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 C1_padded opus: claude -p failed (rc=1): 
+  98/150 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C3 · opus
+  ERR scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 C3 opus: claude -p failed (rc=1): 
+  99/150 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C4 · opus
+  ERR scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 C4 opus: claude -p failed (rc=1): 
+  100/150 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C4_shuffled · opus
+  ERR scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 C4_shuffled opus: claude -p failed (rc=1): 
+  101/150 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5 · opus
+  ERR scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 C5 opus: claude -p failed (rc=1): 
+  102/150 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5_CONTRACT · opus
+  ERR scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 C5_CONTRACT opus: claude -p failed (rc=1): 
+  103/150 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C0 · opus
+  ERR scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 C0 opus: claude -p failed (rc=1): 
+  104/150 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C1 · opus
+  ERR scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 C1 opus: claude -p failed (rc=1): 
+  105/150 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C1_padded · opus
+  ERR scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 C1_padded opus: claude -p failed (rc=1): 
+  106/150 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C3 · opus
+  ERR scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 C3 opus: claude -p failed (rc=1): 
+  107/150 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C4 · opus
+  ERR scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 C4 opus: claude -p failed (rc=1): 
+  108/150 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C4_shuffled · opus
+  ERR scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 C4_shuffled opus: claude -p failed (rc=1): 
+  109/150 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5 · opus
+  ERR scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 C5 opus: claude -p failed (rc=1): 
+  110/150 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5_CONTRACT · opus
+  ERR scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 C5_CONTRACT opus: claude -p failed (rc=1): 
+  111/150 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C0 · opus
+  ERR scn_v02_creative_feedback_user_pfi_emily_blender_001_10 C0 opus: claude -p failed (rc=1): 
+  112/150 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C1 · opus
+  ERR scn_v02_creative_feedback_user_pfi_emily_blender_001_10 C1 opus: claude -p failed (rc=1): 
+  113/150 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C1_padded · opus
+  ERR scn_v02_creative_feedback_user_pfi_emily_blender_001_10 C1_padded opus: claude -p failed (rc=1): 
+  114/150 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C3 · opus
+  ERR scn_v02_creative_feedback_user_pfi_emily_blender_001_10 C3 opus: claude -p failed (rc=1): 
+  115/150 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C4 · opus
+  ERR scn_v02_creative_feedback_user_pfi_emily_blender_001_10 C4 opus: claude -p failed (rc=1): 
+  116/150 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C4_shuffled · opus
+  ERR scn_v02_creative_feedback_user_pfi_emily_blender_001_10 C4_shuffled opus: claude -p failed (rc=1): 
+  117/150 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5 · opus
+  ERR scn_v02_creative_feedback_user_pfi_emily_blender_001_10 C5 opus: claude -p failed (rc=1): 
+  118/150 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5_CONTRACT · opus
+  ERR scn_v02_creative_feedback_user_pfi_emily_blender_001_10 C5_CONTRACT opus: claude -p failed (rc=1): 
+  119/150 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C0 · opus
+  ERR scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 C0 opus: claude -p failed (rc=1): 
+  120/150 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C1 · opus
+  ERR scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 C1 opus: claude -p failed (rc=1): 
+  121/150 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C1_padded · opus
+  ERR scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 C1_padded opus: claude -p failed (rc=1): 
+  122/150 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C3 · opus
+  ERR scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 C3 opus: claude -p failed (rc=1): 
+  123/150 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C4 · opus
+  ERR scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 C4 opus: claude -p failed (rc=1): 
+  124/150 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C4_shuffled · opus
+  ERR scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 C4_shuffled opus: claude -p failed (rc=1): 
+  125/150 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5 · opus
+  ERR scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 C5 opus: claude -p failed (rc=1): 
+  126/150 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5_CONTRACT · opus
+  ERR scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 C5_CONTRACT opus: claude -p failed (rc=1): 
+  127/150 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C0 · opus
+  ERR scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 C0 opus: claude -p failed (rc=1): 
+  128/150 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C1 · opus
+  ERR scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 C1 opus: claude -p failed (rc=1): 
+  129/150 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C1_padded · opus
+  ERR scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 C1_padded opus: claude -p failed (rc=1): 
+  130/150 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C3 · opus
+  ERR scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 C3 opus: claude -p failed (rc=1): 
+  131/150 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C4 · opus
+  ERR scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 C4 opus: claude -p failed (rc=1): 
+  132/150 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C4_shuffled · opus
+  ERR scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 C4_shuffled opus: claude -p failed (rc=1): 
+  133/150 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C0 · opus
+  ERR scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 C0 opus: claude -p failed (rc=1): 
+  134/150 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C1 · opus
+  ERR scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 C1 opus: claude -p failed (rc=1): 
+  135/150 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C1_padded · opus
+  ERR scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 C1_padded opus: claude -p failed (rc=1): 
+  136/150 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C3 · opus
+  ERR scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 C3 opus: claude -p failed (rc=1): 
+  137/150 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C4 · opus
+  ERR scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 C4 opus: claude -p failed (rc=1): 
+  138/150 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C4_shuffled · opus
+  ERR scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 C4_shuffled opus: claude -p failed (rc=1): 
+  139/150 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C0 · opus
+  ERR scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 C0 opus: claude -p failed (rc=1): 
+  140/150 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C1 · opus
+  ERR scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 C1 opus: claude -p failed (rc=1): 
+  141/150 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C1_padded · opus
+  ERR scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 C1_padded opus: claude -p failed (rc=1): 
+  142/150 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C3 · opus
+  ERR scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 C3 opus: claude -p failed (rc=1): 
+  143/150 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C4 · opus
+  ERR scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 C4 opus: claude -p failed (rc=1): 
+  144/150 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C4_shuffled · opus
+  ERR scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 C4_shuffled opus: claude -p failed (rc=1): 
+  145/150 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C0 · opus
+  ERR scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 C0 opus: claude -p failed (rc=1): 
+  146/150 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C1 · opus
+  ERR scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 C1 opus: claude -p failed (rc=1): 
+  147/150 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C1_padded · opus
+  ERR scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 C1_padded opus: claude -p failed (rc=1): 
+  148/150 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C3 · opus
+  ERR scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 C3 opus: claude -p failed (rc=1): 
+  149/150 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C4 · opus
+  ERR scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 C4 opus: claude -p failed (rc=1): 
+  150/150 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C4_shuffled · opus
+  ERR scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 C4_shuffled opus: claude -p failed (rc=1): 
+Done. 36 succeeded, 114 failed. Outputs at ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/assistant_outputs.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/checkpoint_author.json
+Run tag: 2026-04-26_v02_hard_codex_only
+Manifest: 560 rows, 1566 already complete, workers=1
+  1/114 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C4 · opus
+  1/114 ok  (failed=0, cap_events=0)
+  2/114 scn_v02_moral_uncertainty_user_syn_patient_craftsperson_001_8 · C4_shuffled · opus
+  2/114 ok  (failed=0, cap_events=0)
+  3/114 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C0 · opus
+  3/114 ok  (failed=0, cap_events=0)
+  4/114 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C1 · opus
+  4/114 ok  (failed=0, cap_events=0)
+  5/114 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C1_padded · opus
+  5/114 ok  (failed=0, cap_events=0)
+  6/114 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C3 · opus
+  6/114 ok  (failed=0, cap_events=0)
+  7/114 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C4 · opus
+  7/114 ok  (failed=0, cap_events=0)
+  8/114 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C4_shuffled · opus
+  8/114 ok  (failed=0, cap_events=0)
+  9/114 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5 · opus
+  9/114 ok  (failed=0, cap_events=0)
+  10/114 scn_v02_procrastination_avoidance_user_pfi_slalom_altar_001_9 · C5_CONTRACT · opus
+  10/114 ok  (failed=0, cap_events=0)
+  11/114 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C0 · opus
+  12/114 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C1 · opus
+  13/114 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C1_padded · opus
+  14/114 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C3 · opus
+  15/114 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C4 · opus
+  16/114 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C4_shuffled · opus
+  17/114 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5 · opus
+  18/114 scn_v02_procrastination_avoidance_user_pfi_dario_armadillo_001_9 · C5_CONTRACT · opus
+  19/114 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C0 · opus
+  20/114 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C1 · opus
+  20/114 ok  (failed=0, cap_events=0)
+  21/114 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C1_padded · opus
+  22/114 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C3 · opus
+  23/114 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C4 · opus
+  24/114 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C4_shuffled · opus
+  25/114 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5 · opus
+  26/114 scn_v02_procrastination_avoidance_user_pfi_emily_blender_001_9 · C5_CONTRACT · opus
+  27/114 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C0 · opus
+  28/114 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C1 · opus
+  29/114 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C1_padded · opus
+  30/114 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C3 · opus
+  30/114 ok  (failed=0, cap_events=0)
+  31/114 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C4 · opus
+  32/114 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C4_shuffled · opus
+  33/114 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5 · opus
+  34/114 scn_v02_procrastination_avoidance_user_pfi_pawl_gram_001_9 · C5_CONTRACT · opus
+  35/114 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C0 · opus
+  36/114 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C1 · opus
+  37/114 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C1_padded · opus
+  38/114 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C3 · opus
+  39/114 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C4 · opus
+  40/114 scn_v02_procrastination_avoidance_user_syn_calibration_goblin_001_9 · C4_shuffled · opus
+  40/114 ok  (failed=0, cap_events=0)
+  41/114 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C0 · opus
+  42/114 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C1 · opus
+  43/114 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C1_padded · opus
+  44/114 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C3 · opus
+  45/114 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C4 · opus
+  46/114 scn_v02_procrastination_avoidance_user_syn_conflict_allergic_moralist_001_9 · C4_shuffled · opus
+  47/114 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C0 · opus
+  48/114 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C1 · opus
+  49/114 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C1_padded · opus
+  50/114 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C3 · opus
+  50/114 ok  (failed=0, cap_events=0)
+  51/114 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C4 · opus
+  52/114 scn_v02_procrastination_avoidance_user_syn_high_agency_spiraler_001_9 · C4_shuffled · opus
+  53/114 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C0 · opus
+  54/114 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C1 · opus
+  55/114 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C1_padded · opus
+  56/114 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C3 · opus
+  57/114 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C4 · opus
+  58/114 scn_v02_procrastination_avoidance_user_syn_patient_craftsperson_001_9 · C4_shuffled · opus
+  59/114 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C0 · opus
+  60/114 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C1 · opus
+  60/114 ok  (failed=0, cap_events=0)
+  61/114 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C1_padded · opus
+  62/114 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C3 · opus
+  63/114 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C4 · opus
+  64/114 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C4_shuffled · opus
+  65/114 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5 · opus
+  66/114 scn_v02_creative_feedback_user_pfi_slalom_altar_001_10 · C5_CONTRACT · opus
+  67/114 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C0 · opus
+  68/114 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C1 · opus
+  69/114 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C1_padded · opus
+  70/114 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C3 · opus
+  70/114 ok  (failed=0, cap_events=0)
+  71/114 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C4 · opus
+  72/114 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C4_shuffled · opus
+  73/114 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5 · opus
+  74/114 scn_v02_creative_feedback_user_pfi_dario_armadillo_001_10 · C5_CONTRACT · opus
+  75/114 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C0 · opus
+  76/114 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C1 · opus
+  77/114 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C1_padded · opus
+  78/114 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C3 · opus
+  79/114 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C4 · opus
+  80/114 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C4_shuffled · opus
+  80/114 ok  (failed=0, cap_events=0)
+  81/114 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5 · opus
+  82/114 scn_v02_creative_feedback_user_pfi_emily_blender_001_10 · C5_CONTRACT · opus
+  83/114 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C0 · opus
+  84/114 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C1 · opus
+  85/114 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C1_padded · opus
+  86/114 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C3 · opus
+  87/114 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C4 · opus
+  88/114 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C4_shuffled · opus
+  89/114 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5 · opus
+  90/114 scn_v02_creative_feedback_user_pfi_pawl_gram_001_10 · C5_CONTRACT · opus
+  90/114 ok  (failed=0, cap_events=0)
+  91/114 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C0 · opus
+  92/114 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C1 · opus
+  93/114 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C1_padded · opus
+  94/114 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C3 · opus
+  95/114 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C4 · opus
+  96/114 scn_v02_creative_feedback_user_syn_calibration_goblin_001_10 · C4_shuffled · opus
+  97/114 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C0 · opus
+  98/114 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C1 · opus
+  99/114 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C1_padded · opus
+  100/114 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C3 · opus
+  100/114 ok  (failed=0, cap_events=0)
+  101/114 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C4 · opus
+  102/114 scn_v02_creative_feedback_user_syn_conflict_allergic_moralist_001_10 · C4_shuffled · opus
+  103/114 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C0 · opus
+  104/114 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C1 · opus
+  105/114 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C1_padded · opus
+  106/114 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C3 · opus
+  107/114 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C4 · opus
+  108/114 scn_v02_creative_feedback_user_syn_high_agency_spiraler_001_10 · C4_shuffled · opus
+  109/114 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C0 · opus
+  110/114 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C1 · opus
+  110/114 ok  (failed=0, cap_events=0)
+  111/114 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C1_padded · opus
+  112/114 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C3 · opus
+  113/114 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C4 · opus
+  114/114 scn_v02_creative_feedback_user_syn_patient_craftsperson_001_10 · C4_shuffled · opus
+Done. 114 succeeded, 0 failed. Outputs at ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/assistant_outputs.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/checkpoint_author.json
+Run tag: 2026-04-26_v02_hard_codex_only
+Manifest: 560 rows, 1680 already complete, workers=1
+Done. 0 succeeded, 0 failed. Outputs at ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/assistant_outputs.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/checkpoint_author.json
+Run tag: 2026-04-26_v02_hard_codex_only
+Manifest: 560 rows, 1680 already complete, workers=1
+Done. 0 succeeded, 0 failed. Outputs at ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/assistant_outputs.jsonl. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-04-26_v02_hard_codex_only/checkpoint_author.json

@@ -1,0 +1,152 @@
+[
+  {
+    "contrast": "C4 vs C4_WRONG_PROFILE",
+    "n": 635,
+    "raw_win": 0.565,
+    "raw_ci": [
+      0.51,
+      0.617
+    ],
+    "style_balanced_win": 0.616,
+    "style_balanced_n": 138,
+    "style_balanced_ci": [
+      0.484,
+      0.73
+    ],
+    "surface_adjusted_win": 0.568,
+    "surface_adjusted_ci": [
+      0.511,
+      0.624
+    ],
+    "coef_logLen": 0.183,
+    "coef_lexOverlap": 0.272,
+    "coef_hedging": 0.091,
+    "slot_coef": 0.397,
+    "survives": true
+  },
+  {
+    "contrast": "C3 vs C4_WRONG_PROFILE",
+    "n": 636,
+    "raw_win": 0.593,
+    "raw_ci": [
+      0.538,
+      0.647
+    ],
+    "style_balanced_win": 0.675,
+    "style_balanced_n": 120,
+    "style_balanced_ci": [
+      0.553,
+      0.783
+    ],
+    "surface_adjusted_win": 0.595,
+    "surface_adjusted_ci": [
+      0.539,
+      0.651
+    ],
+    "coef_logLen": 0.221,
+    "coef_lexOverlap": 0.056,
+    "coef_hedging": -0.019,
+    "slot_coef": 0.332,
+    "survives": true
+  },
+  {
+    "contrast": "C4 vs C_GENERIC_CONTRACT",
+    "n": 635,
+    "raw_win": 0.55,
+    "raw_ci": [
+      0.495,
+      0.605
+    ],
+    "style_balanced_win": 0.616,
+    "style_balanced_n": 112,
+    "style_balanced_ci": [
+      0.45,
+      0.73
+    ],
+    "surface_adjusted_win": 0.551,
+    "surface_adjusted_ci": [
+      0.495,
+      0.61
+    ],
+    "coef_logLen": 0.07,
+    "coef_lexOverlap": 0.148,
+    "coef_hedging": 0.219,
+    "slot_coef": 0.319,
+    "survives": false
+  },
+  {
+    "contrast": "C3 vs C_GENERIC_CONTRACT",
+    "n": 635,
+    "raw_win": 0.521,
+    "raw_ci": [
+      0.469,
+      0.576
+    ],
+    "style_balanced_win": 0.53,
+    "style_balanced_n": 100,
+    "style_balanced_ci": [
+      0.37,
+      0.631
+    ],
+    "surface_adjusted_win": 0.522,
+    "surface_adjusted_ci": [
+      0.468,
+      0.58
+    ],
+    "coef_logLen": 0.315,
+    "coef_lexOverlap": 0.097,
+    "coef_hedging": 0.034,
+    "slot_coef": 0.411,
+    "survives": false
+  },
+  {
+    "contrast": "C_GENERIC_CONTRACT vs C0",
+    "n": 634,
+    "raw_win": 0.702,
+    "raw_ci": [
+      0.651,
+      0.76
+    ],
+    "style_balanced_win": 0.774,
+    "style_balanced_n": 106,
+    "style_balanced_ci": [
+      0.578,
+      0.859
+    ],
+    "surface_adjusted_win": 0.729,
+    "surface_adjusted_ci": [
+      0.675,
+      0.788
+    ],
+    "coef_logLen": 0.857,
+    "coef_lexOverlap": -0.236,
+    "coef_hedging": 0.205,
+    "slot_coef": 0.494,
+    "survives": true
+  },
+  {
+    "contrast": "C4_WRONG_PROFILE vs C0",
+    "n": 628,
+    "raw_win": 0.653,
+    "raw_ci": [
+      0.599,
+      0.708
+    ],
+    "style_balanced_win": 0.698,
+    "style_balanced_n": 106,
+    "style_balanced_ci": [
+      0.557,
+      0.835
+    ],
+    "surface_adjusted_win": 0.67,
+    "surface_adjusted_ci": [
+      0.611,
+      0.733
+    ],
+    "coef_logLen": 0.67,
+    "coef_lexOverlap": -0.567,
+    "coef_hedging": -0.084,
+    "slot_coef": 0.353,
+    "survives": true
+  }
+]

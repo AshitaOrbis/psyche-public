@@ -1,0 +1,253 @@
+{
+  "scores": {
+    "ipip-neo-120": {
+      "instrumentId": "ipip-neo-120",
+      "scores": [
+        {
+          "scaleId": "N",
+          "scaleName": "Neuroticism",
+          "raw": 53,
+          "normalized": 30,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "E",
+          "scaleName": "Extraversion",
+          "raw": 93,
+          "normalized": 72,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "O",
+          "scaleName": "Openness",
+          "raw": 72,
+          "normalized": 50,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "A",
+          "scaleName": "Agreeableness",
+          "raw": 45,
+          "normalized": 22,
+          "itemCount": 24
+        },
+        {
+          "scaleId": "C",
+          "scaleName": "Conscientiousness",
+          "raw": 77,
+          "normalized": 55,
+          "itemCount": 24
+        }
+      ]
+    },
+    "crt-7": {
+      "instrumentId": "crt-7",
+      "scores": [
+        {
+          "scaleId": "crt-analytic",
+          "scaleName": "Analytic Thinking",
+          "raw": 5,
+          "normalized": 71,
+          "itemCount": 7
+        }
+      ]
+    },
+    "ncs-18": {
+      "instrumentId": "ncs-18",
+      "scores": [
+        {
+          "scaleId": "ncs",
+          "scaleName": "Need for Cognition",
+          "raw": 50,
+          "normalized": 44,
+          "itemCount": 18
+        }
+      ]
+    },
+    "rosenberg": {
+      "instrumentId": "rosenberg",
+      "scores": [
+        {
+          "scaleId": "self-esteem",
+          "scaleName": "Self-Esteem",
+          "raw": 35,
+          "normalized": 83,
+          "itemCount": 10
+        }
+      ]
+    },
+    "sd3": {
+      "instrumentId": "sd3",
+      "scores": [
+        {
+          "scaleId": "mach",
+          "scaleName": "Machiavellianism",
+          "raw": 39,
+          "normalized": 83,
+          "itemCount": 9
+        },
+        {
+          "scaleId": "narc",
+          "scaleName": "Narcissism",
+          "raw": 34,
+          "normalized": 69,
+          "itemCount": 9
+        },
+        {
+          "scaleId": "psych",
+          "scaleName": "Psychopathy",
+          "raw": 32,
+          "normalized": 64,
+          "itemCount": 9
+        }
+      ]
+    },
+    "phq9-gad7": {
+      "instrumentId": "phq9-gad7",
+      "scores": [
+        {
+          "scaleId": "phq9",
+          "scaleName": "Depression (PHQ-9)",
+          "raw": 3,
+          "normalized": 11,
+          "itemCount": 9
+        },
+        {
+          "scaleId": "gad7",
+          "scaleName": "Anxiety (GAD-7)",
+          "raw": 2,
+          "normalized": 10,
+          "itemCount": 7
+        }
+      ]
+    },
+    "ecr-r": {
+      "instrumentId": "ecr-r",
+      "scores": [
+        {
+          "scaleId": "anxiety",
+          "scaleName": "Attachment Anxiety",
+          "raw": 40,
+          "normalized": 20,
+          "itemCount": 18
+        },
+        {
+          "scaleId": "avoidance",
+          "scaleName": "Attachment Avoidance",
+          "raw": 102,
+          "normalized": 78,
+          "itemCount": 18
+        }
+      ]
+    },
+    "erq-10": {
+      "instrumentId": "erq-10",
+      "scores": [
+        {
+          "scaleId": "reappraisal",
+          "scaleName": "Cognitive Reappraisal",
+          "raw": 26,
+          "normalized": 56,
+          "itemCount": 6
+        },
+        {
+          "scaleId": "suppression",
+          "scaleName": "Expressive Suppression",
+          "raw": 22,
+          "normalized": 75,
+          "itemCount": 4
+        }
+      ]
+    },
+    "iri-28": {
+      "instrumentId": "iri-28",
+      "scores": [
+        {
+          "scaleId": "pt",
+          "scaleName": "Perspective Taking",
+          "raw": 10,
+          "normalized": 36,
+          "itemCount": 7
+        },
+        {
+          "scaleId": "fs",
+          "scaleName": "Fantasy Scale",
+          "raw": 5,
+          "normalized": 18,
+          "itemCount": 7
+        },
+        {
+          "scaleId": "ec",
+          "scaleName": "Empathic Concern",
+          "raw": 4,
+          "normalized": 14,
+          "itemCount": 7
+        },
+        {
+          "scaleId": "pd",
+          "scaleName": "Personal Distress",
+          "raw": 3,
+          "normalized": 11,
+          "itemCount": 7
+        }
+      ]
+    },
+    "grit-s": {
+      "instrumentId": "grit-s",
+      "scores": [
+        {
+          "scaleId": "perseverance",
+          "scaleName": "Perseverance of Effort",
+          "raw": 16,
+          "normalized": 75,
+          "itemCount": 4
+        },
+        {
+          "scaleId": "interest",
+          "scaleName": "Consistency of Interest",
+          "raw": 13,
+          "normalized": 56,
+          "itemCount": 4
+        }
+      ]
+    },
+    "bpns-9": {
+      "instrumentId": "bpns-9",
+      "scores": [
+        {
+          "scaleId": "autonomy",
+          "scaleName": "Autonomy",
+          "raw": 19,
+          "normalized": 89,
+          "itemCount": 3
+        },
+        {
+          "scaleId": "competence",
+          "scaleName": "Competence",
+          "raw": 17,
+          "normalized": 78,
+          "itemCount": 3
+        },
+        {
+          "scaleId": "relatedness",
+          "scaleName": "Relatedness",
+          "raw": 6,
+          "normalized": 17,
+          "itemCount": 3
+        }
+      ]
+    }
+  },
+  "interviews": [
+    "I'm the guy who figured out early that the world doesn't give a shit about your feelings, it cares about what you can do. I'm forty-one, I run a logistics brokerage that clears about four million a year in revenue, and I built it from nothing after dropping out of a state school. I'm direct, I'm loud, and I don't waste time on small talk unless there's something in it for me. People either respect me or they hate me, and honestly both of those work fine.\n\nPhysically I'm big \u2014 six-one, two-twenty \u2014 and I've always been comfortable using that. Not in a dumb way. I played football through high school, boxed in my twenties, and I still train. I've been in real fights as an adult, more than most people would admit to. Bar situations, mostly, a couple of times at work when somebody thought they could push me. I don't go looking for it, but I don't walk away either, and I think that's an important distinction that most soft people don't understand. Walking away teaches people they can take from you.\n\nI'm good at reading rooms. I know within about thirty seconds of meeting someone what they want, what they're afraid of, and how to use both. That sounds cold when I say it out loud, but it's just how business works. Everyone is doing some version of this \u2014 I'm just honest about it. The people who pretend they're not calculating are the ones I trust least, actually.\n\nRelationships are functional for me. I have a wife, we've been together nine years, and we work because she's realistic about who I am. She doesn't try to fix me. My friends are mostly guys from the gym or from business \u2014 we don't sit around talking about our feelings. We do things. We compete. That's how men bond, in my opinion, and the culture that tells us otherwise is producing a generation of useless people.\n\nI sleep well at night. I don't overthink. I see what needs to happen and I make it happen. If you're looking for guilt or inner turmoil, you've got the wrong guy.",
+    "Most proud of: the business, no question. I started brokering freight loads out of my apartment with a burner phone and a laptop. No investors, no family money, no connections. I cold-called carriers for fourteen hours a day until I had enough margin to hire my first dispatcher. That was eight years ago. Now I've got eleven employees, a warehouse, and contracts with three Fortune 500 shippers. Every dollar in that company exists because I outworked and outmaneuvered people who had more advantages than me. That's not arrogance \u2014 it's just the record.\n\nI'm also proud that I've never been the guy who folds. I've had my jaw broken in a fight \u2014 kept going. Had a business partner steal forty thousand from me in year two \u2014 didn't cry about it, built the case, sued him, won, and made sure everyone in the industry knew what he did. Some people collect grievances. I collect wins.\n\nLeast proud of \u2014 I don't really operate in those terms, but I'll give you something. There was a period in my late twenties where I was drinking too much and I got into a situation at a bar where I hurt someone worse than the situation called for. Guy was running his mouth, I escalated it past what was necessary. He ended up in the ER. I didn't catch charges because the bouncer knew me and the other guy had swung first, but looking back, I could've just walked out. Not because I feel guilty about defending myself \u2014 I don't \u2014 but because it was sloppy. It showed a lack of control, and I value control.\n\nI also sometimes think I should've finished the degree. Not because I needed it \u2014 clearly I didn't \u2014 but because it would shut people up when they try to dismiss me as uneducated. It's a credential game and I chose not to play it. That was the right call financially, but it annoys me when some MBA who's never built anything talks down to me.",
+    "I don't avoid conflict. I think most people's problem is they treat conflict like something to be managed or defused. I treat it like information. If someone disagrees with me, good \u2014 now I know where they stand, and I can decide whether they're worth persuading or worth removing.\n\nIn business, my default is to go hard early. If a shipper tries to renegotiate rates after we've agreed, I don't \"circle back\" or \"find a middle ground.\" I tell them the rate is the rate, here's why, and if they want to find someone cheaper they're welcome to try. Nine times out of ten they stay, because they know I don't bluff and they know my service is good. The tenth time, they leave, and they usually come back in six months after whoever they switched to drops the ball. I never take them back at the old rate.\n\nWith employees, I'm more strategic about it. I've learned \u2014 and this took me longer than it should have \u2014 that screaming at someone in front of the team doesn't make them perform better, it makes them afraid and afraid people are useless. So now I do it behind closed doors. Calm voice, specific expectations, clear consequences. That's more effective. Some people call that manipulative. I call it management.\n\nPhysically, I've mellowed some since my twenties, but I still have a line. If someone puts their hands on me or someone I'm with, we're going. I don't posture, I don't give warnings. Most people have never been in a real fight and they don't understand how fast it happens when someone who knows what they're doing decides it's happening.\n\nThe thing I've noticed is that people who avoid conflict don't actually avoid it \u2014 they just delay it until it's worse. I'd rather have a hard conversation on Monday than a disaster on Friday. Weakness doesn't prevent conflict, it just ensures you lose when it arrives.",
+    "I had to fire my operations manager about two months ago. He'd been with me for five years, which in this business is a long time. He was competent \u2014 not great, but competent \u2014 and he was loyal, which I do value even if people assume I don't. The problem was he'd stopped growing. The business had outscaled him. He was making mistakes that cost us accounts, and when I tried to coach him up, he got defensive instead of adapting.\n\nWhat made it hard wasn't the emotional side. I don't lose sleep over letting someone go when the math says they need to go. What made it hard was the calculation. He knew things about my business that nobody else knew \u2014 carrier relationships, pricing history, client quirks. Replacing that institutional knowledge was going to cost me more in the short term than keeping him and absorbing his mistakes. So it was a genuine trade-off, not a clear-cut decision.\n\nI spent about two weeks thinking about it, which for me is a long time. I usually decide fast. I talked to my wife about it, which I rarely do with business stuff, because she's known this guy and his family. She told me I'd already made the decision and I was just looking for permission, which was annoyingly accurate.\n\nI brought him in on a Friday, told him straight: here's what's not working, here's what I need that you can't give me, here are your options. I gave him a decent severance because five years means something, and I helped him land at a smaller shop where his skill level is a better fit. Some people in my position would've just cut him loose. I don't think generosity is weakness \u2014 I think it's strategic. He's not going to bad-mouth me in the industry, and the next person I hire will hear that I treated the last guy fairly. That has value.\n\nThe replacement I hired is better. The short-term pain was real but it's already paying off. That's how most hard decisions work \u2014 they're only hard because people are too scared of temporary discomfort to make the obviously correct long-term play.",
+    "Energy comes from winning. That's the simplest way I can put it. Closing a deal, especially one where the other side thought they had leverage and I showed them they didn't \u2014 that's the best feeling I know. Better than sex, honestly, or at least more reliable. I also get energy from the gym. Heavy lifting, boxing \u2014 anything where I can push my body to failure and then push past it. There's a clarity in physical exertion that you can't get any other way. Your brain shuts up and your body takes over and for an hour you're just an animal doing what animals do.\n\nCompetition in general energizes me. Doesn't matter the stakes. I play poker with a group on Thursdays, and even though the buy-in is two hundred bucks \u2014 money I wouldn't notice \u2014 I play to destroy. I want to read you, outplay you, and take your chips. Some of the guys in the game treat it as social. I'm social while I'm taking their money.\n\nWhat drains me: weakness, indecision, and people who want to process their feelings instead of solving their problems. I have an employee who cries when she gets critical feedback. Every single time. She's good at her job so I keep her, but those conversations exhaust me because I have to perform a version of caring that doesn't come naturally. I don't understand why you'd cry at work. It's work. Handle it.\n\nMeetings with no agenda drain me. Networking events where people want to \"connect\" drain me. My wife's family dinners drain me \u2014 her mother is one of those people who thinks asking personal questions is the same as caring, and I'd rather sit in traffic. Small talk is the conversational equivalent of an empty calorie.\n\nI recharge by being alone or being in action. Never by being around people who want something from me emotionally. That's a withdrawal from an account I keep intentionally low.",
+    "Five years ago I was still building the business but doing it dumber. I was doing everything myself \u2014 selling, dispatching, billing, managing \u2014 because I didn't trust anyone to do it right. That's not humility, by the way, that's control issues paired with a genuine track record of people disappointing me. But it was burning me out and capping my growth, and I was smart enough to eventually see that.\n\nThe change was learning to delegate, which for me meant learning to accept that other people will do things at eighty percent of my standard and that eighty percent at scale beats a hundred percent from one person. That was a hard lesson. I still hate watching someone do something I could do better. But the math doesn't care about my feelings.\n\nI also got more strategic about how I handle people. In my early thirties I was more of a hammer \u2014 every problem looked like something to be smashed. I'd blow up at vendors, intimidate competitors, burn bridges I later needed. I still do some of that, but now it's calculated. When I raise my voice, it's because I've decided that raising my voice is the most effective tool for this specific situation, not because I lost control. There's a world of difference.\n\nMy marriage changed me too, though I'd never say that to her face. Having someone around who isn't afraid of me \u2014 and she genuinely isn't, which is one of the reasons I married her \u2014 forces a level of honesty that I wouldn't impose on myself. She calls me on my bullshit. Not the big stuff \u2014 she knows who she married \u2014 but the small stuff. When I'm being needlessly cruel. When I'm punishing someone because I can, not because they deserve it. I don't always listen, but I hear it.\n\nPhysically, I've slowed down slightly. I don't heal as fast from the gym, and I've had to accept that at forty-one I'm not the same fighter I was at twenty-eight. That bothers me more than I'll admit. I've always defined myself partly through physical capability, and the slow erosion of that is the one thing I haven't figured out how to game.",
+    "I've got maybe three people I'd call close friends, and we've been tight for ten-plus years each. They'd all say the same thing first: I'm reliable. If you're in my circle and you need something \u2014 money, a connection, someone to show up at two AM \u2014 I'm there, no questions asked. I don't do loyalty halfway. Once you're in, you're in until you do something that puts you out.\n\nThey'd also say I'm fun. People who only see me in business contexts think I'm all edges, but with my guys I'm funny, I'm generous, I'm the one organizing trips and picking up tabs. I like being the guy who makes things happen. There's a king-of-the-castle element to it that I'm self-aware enough to name \u2014 I like the role more than the generosity itself. But the effect is the same, so who cares about the motive?\n\nWhat they'd wish I'd change \u2014 my buddy Mike has told me more than once that I'm too hard on people outside the circle. He watched me dress down a waiter at a steakhouse for getting my order wrong, and afterward he said something like, \"The guy makes twelve bucks an hour, man, give him a break.\" And I get his point intellectually, but in the moment, I paid for a service and the service was wrong and I said so. I don't see why the waiter's salary is my concern. Mike thinks that makes me an asshole. I think it makes me honest.\n\nMy wife would say she wishes I were more emotionally present. She's said exactly that. She doesn't want me to change who I am fundamentally \u2014 she's clear about that \u2014 but she wants me to be in the room sometimes, not always calculating the next move. I've tried. I'm not great at it. When she talks about her day, part of my brain is always evaluating: is this a problem I need to solve, or is she just talking? And if she's just talking, I struggle to see the point.\n\nI know that's a gap. I just don't know if it's fixable, or if it matters enough to fix.",
+    "I'm better with uncertainty than most people. I think that's because I've never had the luxury of security, so I never learned to need it. When I started the business, every month was uncertain. Would carriers answer the phone? Would shippers pay their invoices? Would I make rent? That kind of uncertainty either breaks you or trains you, and it trained me.\n\nNow, I actually prefer a degree of ambiguity because it's where the advantage is. When the rules are clear and the playing field is level, everyone competes on the same terms, and that turns into a grind. When things are uncertain \u2014 a market shift, a regulatory change, a competitor going under \u2014 that's when people who can think fast and act decisively pull ahead. I've made my best deals during chaos because my competitors were still in meetings trying to figure out what was happening while I was already moving.\n\nThat said, I don't romanticize uncertainty. I control what I can. My contracts are tight, my legal is good, my financials are conservative. I don't carry debt I can't service in a downturn. I plan for worst cases not because I'm anxious but because planning is a form of offense. You're not reacting to the bad outcome \u2014 you've already priced it in, so when it hits you're the only one in the room who's calm.\n\nWhere I'm less comfortable is personal ambiguity. Emotional uncertainty \u2014 not knowing where I stand with someone, not knowing what someone wants from me \u2014 that irritates me. Not because it makes me anxious. It just feels like a waste of processing power. I prefer people who are direct about their motives so I can deal with them efficiently. The ones who are indirect or passive-aggressive, I tend to write off quickly, maybe too quickly.\n\nAmbiguity about my own motivations doesn't really exist for me. I know what I want. I want to win, I want control, and I want to be left alone when I'm not working. That clarity makes a lot of decisions simple.",
+    "Power dynamics. I could talk about it for days. Not in an academic way \u2014 I've never read a political science textbook and I don't plan to. I mean the real-world mechanics of how people get power, keep power, and lose power. In business, in relationships, in social groups, in rooms. It's the only subject I've never gotten bored of because it's always happening, right in front of you, if you know how to see it.\n\nEvery negotiation I've ever been in is a power dynamic. Every meeting. Every marriage, every friendship, every team. Someone is driving and someone is riding. The people who pretend that's not true are usually the ones riding. The egalitarian boss who \"just wants everyone's input\" \u2014 watch what happens when someone disagrees with him. The couple who says they're \"equal partners\" \u2014 look at who compromises more. Power isn't good or bad. It's like gravity. It's just there, and you can either understand it and use it or ignore it and get crushed by it.\n\nWhat I find fascinating is how few people study it intentionally. I watch people walk into negotiations without knowing their leverage position. They haven't mapped who needs what, who has alternatives, who's bluffing. They just show up and \"hope for the best.\" That's not a strategy. That's a prayer.\n\nI've been studying this since I was a kid, honestly. My old man was a mechanic who never made more than forty thousand a year, and I watched him get pushed around by everyone \u2014 his boss, his clients, my mother. He was a good man. Good men finish last unless they're also smart men. I decided early that I was going to understand the game well enough to never end up on the wrong end of it.\n\nIt matters to me because it's the closest thing to a unified theory of human behavior. Forget personality types and attachment styles and all that therapy language. Tell me where the power is and I'll tell you what everyone in the room is going to do. It's that simple, and it works every time.",
+    "I wake up at five, no alarm. That's just my clock. I make coffee \u2014 black, strong, none of that oat milk nonsense \u2014 and I sit on the back deck for about twenty minutes in silence. No phone, no email. Just the yard and the coffee and my own head. That's the only meditation I'll ever do and I won't call it that.\n\nThen I hit the gym. Two hours, not one. If I have no obligations, I'm going heavy \u2014 squats, deadlifts, bench. Then thirty minutes on the bag. I like the gym empty. Six AM, the serious people are there. No one's talking, no one's on their phone. Just iron and effort. I shower at the gym, drive to a diner I like where the waitress knows my order, and eat alone. Eggs, bacon, toast, more coffee.\n\nBy nine I'd be doing something competitive. Maybe I'd set up a poker game with higher stakes than usual \u2014 get four or five guys I respect and play all day. Or I'd go to the shooting range. I'm a good shot and it's one of the few hobbies that rewards precision and calm under pressure, which are my two best qualities.\n\nLunch is steak, somewhere with a good bar. I'd have one bourbon, maybe two. I don't drink to get drunk anymore, but I enjoy the ritual.\n\nAfternoon, I'd probably do something with my hands. I've been restoring a '71 Chevelle in the garage. I like mechanical work \u2014 it's the opposite of what I do all day. In business, nothing is simple, everyone has an angle, and results are abstract. With a car, the bolt either fits or it doesn't. The engine either turns over or it doesn't. There's a honesty to physical work that I miss.\n\nEvening, I'd grill something. My wife would be there \u2014 she's the one person whose company I don't get tired of. We'd eat outside, have a drink, and she'd talk and I'd try to listen instead of plan. I'd go to bed at ten, tired in my body, quiet in my head. That's a perfect day. No people to manage, no calls to return, no one wanting a piece of me. Just the machine running clean."
+  ]
+}

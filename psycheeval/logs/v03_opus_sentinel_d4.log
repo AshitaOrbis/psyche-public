@@ -1,0 +1,200 @@
+ternary_sample sentinel: originals=718  eligible=0  sample_pct=10.0  sampled=1  already_done=59  pending=0  workers=1
+ternary_sample done: completed=0/0, failed=0, cap_aborted=0, cap_events=0
+ternary_sample sentinel: originals=921  eligible=203  sample_pct=10.0  sampled=20  already_done=59  pending=20  workers=1
+  ERR scn_v02_ambition_status_user_p judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  1/20 ok (failed=3, cap_events=0)
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  2/20 ok (failed=6, cap_events=0)
+  3/20 ok (failed=6, cap_events=0)
+  4/20 ok (failed=6, cap_events=0)
+  5/20 ok (failed=6, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  6/20 ok (failed=10, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  7/20 ok (failed=11, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+ternary_sample done: completed=7/20, failed=13, cap_aborted=0, cap_events=0
+ternary_sample sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=66  pending=34  workers=1
+  1/34 ok (failed=0, cap_events=0)
+  2/34 ok (failed=0, cap_events=0)
+  3/34 ok (failed=0, cap_events=0)
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_creative_feedback_user judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_creative_feedback_user judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  4/34 ok (failed=6, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  5/34 ok (failed=7, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  6/34 ok (failed=8, cap_events=0)
+  7/34 ok (failed=8, cap_events=0)
+  8/34 ok (failed=8, cap_events=0)
+  9/34 ok (failed=8, cap_events=0)
+  10/34 ok (failed=8, cap_events=0)
+  ERR scn_v02_ambition_status_user_p judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_procrastination_avoida judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_moral_uncertainty_user judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+ternary_sample done: completed=15/34, failed=19, cap_aborted=0, cap_events=0
+ternary_sample sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=81  pending=19  workers=1
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_authority_disagreement judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_creative_feedback_user judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  1/19 ok (failed=4, cap_events=0)
+  ERR scn_v02_shame_self_interpretat judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+  2/19 ok (failed=7, cap_events=0)
+  ERR scn_v02_interpersonal_conflict judge=opus: 1 validation error for PairwiseScore
+winner
+  Input should be 'A', 'B' or 'tie' [type=literal_error, input_value='no_meaningful_difference', input_type=str]
+    For further information visit https://e
+ternary_sample sentinel: originals=1077  eligible=359  sample_pct=10.0  sampled=35  already_done=83  pending=17  workers=1
+  1/17 ok (failed=0, cap_events=0)
+  2/17 ok (failed=0, cap_events=0)
+  3/17 ok (failed=0, cap_events=0)
+  4/17 ok (failed=0, cap_events=0)
+  5/17 ok (failed=0, cap_events=0)
+  6/17 ok (failed=0, cap_events=0)
+  7/17 ok (failed=0, cap_events=0)
+  8/17 ok (failed=0, cap_events=0)
+  9/17 ok (failed=0, cap_events=0)
+  10/17 ok (failed=0, cap_events=0)
+ternary_sample done: completed=17/17, failed=0, cap_aborted=0, cap_events=0
+ternary_sample sentinel: originals=14733  eligible=3830  sample_pct=10.0  sampled=383  already_done=477  pending=0  workers=4
+ternary_sample done: completed=0/0, failed=0, cap_aborted=0, cap_events=0

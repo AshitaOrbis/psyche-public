@@ -1,0 +1,368 @@
+{
+  "summary": {
+    "model": "gpt-5.5",
+    "effort": "xhigh",
+    "n_tasks": 12,
+    "n_complete": 12,
+    "p_picks_target": [
+      0.75,
+      12
+    ],
+    "q_picks_opposite": [
+      0.833,
+      12
+    ],
+    "reversed_correctly": [
+      0.583,
+      12
+    ],
+    "any_flip": [
+      0.583,
+      12
+    ],
+    "subset_task_ids": [
+      "t000",
+      "t001",
+      "t016",
+      "t017",
+      "t024",
+      "t025",
+      "t008",
+      "t009",
+      "t032",
+      "t033",
+      "t048",
+      "t049"
+    ],
+    "uncond_preferred_opposite_n": 4,
+    "of_those_target_judge_now_picks_target": 0.75
+  },
+  "rows": [
+    {
+      "task_id": "t000",
+      "target": "dario_armadillo",
+      "opposite": "pawl_gram",
+      "c4_letter": "A",
+      "winner_for_P": "B",
+      "winner_for_Q": "B",
+      "p_picks_target": false,
+      "q_picks_opposite": true,
+      "reversed_correctly": false,
+      "any_flip": false,
+      "uncond_winner": "C4",
+      "why_P": "Better challenges the mainstream-vs-contrarian frame, requires fair default-view steelman, and preserves efficiency without indulging straw-opposition filtering.",
+      "why_Q": "It challenges the contrarian frame directly, preserves the valid signal about straw objections, and gives a tighter path to stress-test the theory."
+    },
+    {
+      "task_id": "t001",
+      "target": "dario_armadillo",
+      "opposite": "pawl_gram",
+      "c4_letter": "A",
+      "winner_for_P": "A",
+      "winner_for_Q": "A",
+      "p_picks_target": true,
+      "q_picks_opposite": false,
+      "reversed_correctly": false,
+      "any_flip": false,
+      "uncond_winner": "C4",
+      "why_P": "A gives immediate structure, separates time horizons, steelmans the concern, and recommends diagnose-before-kill; B withholds the plan and over-relies on questions.",
+      "why_Q": "A gives immediate traction and separates diagnosis from despair; B is calibrated but withholds the plan the stressed user explicitly asked for."
+    },
+    {
+      "task_id": "t016",
+      "target": "pawl_gram",
+      "opposite": "dario_armadillo",
+      "c4_letter": "A",
+      "winner_for_P": "B",
+      "winner_for_Q": "B",
+      "p_picks_target": false,
+      "q_picks_opposite": true,
+      "reversed_correctly": false,
+      "any_flip": false,
+      "uncond_winner": "C4_WRONG",
+      "why_P": "It narrows the identity claim, names the strongest case, challenges vague \u201creal work,\u201d and gives a smaller, more actionable test.",
+      "why_Q": "Better fit: separates time horizons, steelmans the fear, names mechanisms, gives a confidence-weighted recommendation and update condition."
+    },
+    {
+      "task_id": "t017",
+      "target": "pawl_gram",
+      "opposite": "dario_armadillo",
+      "c4_letter": "B",
+      "winner_for_P": "B",
+      "winner_for_Q": "A",
+      "p_picks_target": true,
+      "q_picks_opposite": true,
+      "reversed_correctly": true,
+      "any_flip": true,
+      "uncond_winner": "C4",
+      "why_P": "B gives a direct reversible test, concrete plan, and kill criteria without over-formatting; A fits partly but is truncated and overbuilt.",
+      "why_Q": "A better matches his decision style: steelman, named recommendation, confidence, update condition, and near/mid/long structure despite being slightly overlong."
+    },
+    {
+      "task_id": "t024",
+      "target": "slalom_altar",
+      "opposite": "emily_blender",
+      "c4_letter": "B",
+      "winner_for_P": "A",
+      "winner_for_Q": "A",
+      "p_picks_target": false,
+      "q_picks_opposite": true,
+      "reversed_correctly": false,
+      "any_flip": false,
+      "uncond_winner": "C4",
+      "why_P": "A rejects the totalizing frame, gives a concrete this-week test, and moves toward action instead of ending on a broader identity question.",
+      "why_Q": "A rejects the totalizing premise, avoids unsupported reassurance, and turns the worry into concrete evidence and an immediate agency-preserving next move."
+    },
+    {
+      "task_id": "t025",
+      "target": "slalom_altar",
+      "opposite": "emily_blender",
+      "c4_letter": "B",
+      "winner_for_P": "B",
+      "winner_for_Q": "A",
+      "p_picks_target": true,
+      "q_picks_opposite": true,
+      "reversed_correctly": true,
+      "any_flip": true,
+      "uncond_winner": "C4",
+      "why_P": "B gives a clear repair-first recommendation, names the motive leap, marks reversibility and failure mode, and converges on the key decision.",
+      "why_Q": "A better preserves the disagreement while separating action from hidden motive, and offers a sharper precise version without character attack."
+    },
+    {
+      "task_id": "t008",
+      "target": "emily_blender",
+      "opposite": "slalom_altar",
+      "c4_letter": "A",
+      "winner_for_P": "A",
+      "winner_for_Q": "B",
+      "p_picks_target": true,
+      "q_picks_opposite": true,
+      "reversed_correctly": true,
+      "any_flip": true,
+      "uncond_winner": "C4",
+      "why_P": "A handles motive uncertainty cleanly, avoids flattery, recommends evidence gathering before escalation, and ends with a specific agency-preserving next question.",
+      "why_Q": "B gives a clear recommendation, marks escalation as near-irreversible, pressure-tests the motive claim, and names the concrete failure mode."
+    },
+    {
+      "task_id": "t009",
+      "target": "emily_blender",
+      "opposite": "slalom_altar",
+      "c4_letter": "B",
+      "winner_for_P": "B",
+      "winner_for_Q": "B",
+      "p_picks_target": true,
+      "q_picks_opposite": false,
+      "reversed_correctly": false,
+      "any_flip": false,
+      "uncond_winner": "C4_WRONG",
+      "why_P": "B separates claims precisely, preserves agency, flags reputational tradeoffs, and asks for the next factual axis without moralizing or psychologizing.",
+      "why_Q": "B gives a concrete responsibility test and repair/exposure tradeoff without moralizing, matching the profile\u2019s preference for specific decision frames."
+    },
+    {
+      "task_id": "t032",
+      "target": "calibration_goblin",
+      "opposite": "high_agency_spiraler",
+      "c4_letter": "B",
+      "winner_for_P": "B",
+      "winner_for_Q": "A",
+      "p_picks_target": true,
+      "q_picks_opposite": true,
+      "reversed_correctly": true,
+      "any_flip": true,
+      "uncond_winner": "C4",
+      "why_P": "B cleanly challenges the self-serving frame while giving a repair-preserving draft that owns the user\u2019s part and adds the likely omitted disclosure.",
+      "why_Q": "A challenges zero-responsibility framing, offers repair-first and firmer drafts, makes tradeoffs explicit, and ends with an agency-preserving outcome question."
+    },
+    {
+      "task_id": "t033",
+      "target": "calibration_goblin",
+      "opposite": "high_agency_spiraler",
+      "c4_letter": "B",
+      "winner_for_P": "B",
+      "winner_for_Q": "A",
+      "p_picks_target": true,
+      "q_picks_opposite": true,
+      "reversed_correctly": true,
+      "any_flip": true,
+      "uncond_winner": "C4",
+      "why_P": "B is more calibrated: rejects the global identity claim, names the narrower avoidance mechanism, and offers one concrete weekly test without over-escalating.",
+      "why_Q": "A is more direct, pattern-aware, cost-focused, and agency-preserving; B is solid but safer and less tailored to this profile."
+    },
+    {
+      "task_id": "t048",
+      "target": "high_agency_spiraler",
+      "opposite": "calibration_goblin",
+      "c4_letter": "B",
+      "winner_for_P": "B",
+      "winner_for_Q": "A",
+      "p_picks_target": true,
+      "q_picks_opposite": true,
+      "reversed_correctly": true,
+      "any_flip": true,
+      "uncond_winner": "C4_WRONG",
+      "why_P": "B better fits motive-uncertainty and repair clauses: separates fact/inference, gives alternative readings, and shows repairable vs sharper tradeoffs.",
+      "why_Q": "A challenges the motive claim cleanly, gives a concrete next move, recommends with calibrated confidence, and separates truth from preference."
+    },
+    {
+      "task_id": "t049",
+      "target": "high_agency_spiraler",
+      "opposite": "calibration_goblin",
+      "c4_letter": "B",
+      "winner_for_P": "B",
+      "winner_for_Q": "A",
+      "p_picks_target": true,
+      "q_picks_opposite": true,
+      "reversed_correctly": true,
+      "any_flip": true,
+      "uncond_winner": "C4_WRONG",
+      "why_P": "Better fits this person: challenges the relief/quit frame, names cost of cautious retreat, uses criteria, and ends with agency-preserving commitment question.",
+      "why_Q": "A separates truth from preference, gives calibrated recommendation, asks one direct want-question, and turns lateness into a concrete next observable step."
+    }
+  ],
+  "raw": {
+    "t000|Q": {
+      "task_id": "t000",
+      "which": "Q",
+      "winner": "B",
+      "why": "It challenges the contrarian frame directly, preserves the valid signal about straw objections, and gives a tighter path to stress-test the theory."
+    },
+    "t001|Q": {
+      "task_id": "t001",
+      "which": "Q",
+      "winner": "A",
+      "why": "A gives immediate traction and separates diagnosis from despair; B is calibrated but withholds the plan the stressed user explicitly asked for."
+    },
+    "t000|P": {
+      "task_id": "t000",
+      "which": "P",
+      "winner": "B",
+      "why": "Better challenges the mainstream-vs-contrarian frame, requires fair default-view steelman, and preserves efficiency without indulging straw-opposition filtering."
+    },
+    "t016|P": {
+      "task_id": "t016",
+      "which": "P",
+      "winner": "B",
+      "why": "It narrows the identity claim, names the strongest case, challenges vague \u201creal work,\u201d and gives a smaller, more actionable test."
+    },
+    "t001|P": {
+      "task_id": "t001",
+      "which": "P",
+      "winner": "A",
+      "why": "A gives immediate structure, separates time horizons, steelmans the concern, and recommends diagnose-before-kill; B withholds the plan and over-relies on questions."
+    },
+    "t016|Q": {
+      "task_id": "t016",
+      "which": "Q",
+      "winner": "B",
+      "why": "Better fit: separates time horizons, steelmans the fear, names mechanisms, gives a confidence-weighted recommendation and update condition."
+    },
+    "t017|P": {
+      "task_id": "t017",
+      "which": "P",
+      "winner": "B",
+      "why": "B gives a direct reversible test, concrete plan, and kill criteria without over-formatting; A fits partly but is truncated and overbuilt."
+    },
+    "t017|Q": {
+      "task_id": "t017",
+      "which": "Q",
+      "winner": "A",
+      "why": "A better matches his decision style: steelman, named recommendation, confidence, update condition, and near/mid/long structure despite being slightly overlong."
+    },
+    "t024|P": {
+      "task_id": "t024",
+      "which": "P",
+      "winner": "A",
+      "why": "A rejects the totalizing frame, gives a concrete this-week test, and moves toward action instead of ending on a broader identity question."
+    },
+    "t025|P": {
+      "task_id": "t025",
+      "which": "P",
+      "winner": "B",
+      "why": "B gives a clear repair-first recommendation, names the motive leap, marks reversibility and failure mode, and converges on the key decision."
+    },
+    "t024|Q": {
+      "task_id": "t024",
+      "which": "Q",
+      "winner": "A",
+      "why": "A rejects the totalizing premise, avoids unsupported reassurance, and turns the worry into concrete evidence and an immediate agency-preserving next move."
+    },
+    "t008|Q": {
+      "task_id": "t008",
+      "which": "Q",
+      "winner": "B",
+      "why": "B gives a clear recommendation, marks escalation as near-irreversible, pressure-tests the motive claim, and names the concrete failure mode."
+    },
+    "t025|Q": {
+      "task_id": "t025",
+      "which": "Q",
+      "winner": "A",
+      "why": "A better preserves the disagreement while separating action from hidden motive, and offers a sharper precise version without character attack."
+    },
+    "t009|P": {
+      "task_id": "t009",
+      "which": "P",
+      "winner": "B",
+      "why": "B separates claims precisely, preserves agency, flags reputational tradeoffs, and asks for the next factual axis without moralizing or psychologizing."
+    },
+    "t008|P": {
+      "task_id": "t008",
+      "which": "P",
+      "winner": "A",
+      "why": "A handles motive uncertainty cleanly, avoids flattery, recommends evidence gathering before escalation, and ends with a specific agency-preserving next question."
+    },
+    "t032|P": {
+      "task_id": "t032",
+      "which": "P",
+      "winner": "B",
+      "why": "B cleanly challenges the self-serving frame while giving a repair-preserving draft that owns the user\u2019s part and adds the likely omitted disclosure."
+    },
+    "t009|Q": {
+      "task_id": "t009",
+      "which": "Q",
+      "winner": "B",
+      "why": "B gives a concrete responsibility test and repair/exposure tradeoff without moralizing, matching the profile\u2019s preference for specific decision frames."
+    },
+    "t032|Q": {
+      "task_id": "t032",
+      "which": "Q",
+      "winner": "A",
+      "why": "A challenges zero-responsibility framing, offers repair-first and firmer drafts, makes tradeoffs explicit, and ends with an agency-preserving outcome question."
+    },
+    "t033|P": {
+      "task_id": "t033",
+      "which": "P",
+      "winner": "B",
+      "why": "B is more calibrated: rejects the global identity claim, names the narrower avoidance mechanism, and offers one concrete weekly test without over-escalating."
+    },
+    "t033|Q": {
+      "task_id": "t033",
+      "which": "Q",
+      "winner": "A",
+      "why": "A is more direct, pattern-aware, cost-focused, and agency-preserving; B is solid but safer and less tailored to this profile."
+    },
+    "t048|P": {
+      "task_id": "t048",
+      "which": "P",
+      "winner": "B",
+      "why": "B better fits motive-uncertainty and repair clauses: separates fact/inference, gives alternative readings, and shows repairable vs sharper tradeoffs."
+    },
+    "t048|Q": {
+      "task_id": "t048",
+      "which": "Q",
+      "winner": "A",
+      "why": "A challenges the motive claim cleanly, gives a concrete next move, recommends with calibrated confidence, and separates truth from preference."
+    },
+    "t049|Q": {
+      "task_id": "t049",
+      "which": "Q",
+      "winner": "A",
+      "why": "A separates truth from preference, gives calibrated recommendation, asks one direct want-question, and turns lateness into a concrete next observable step."
+    },
+    "t049|P": {
+      "task_id": "t049",
+      "which": "P",
+      "winner": "B",
+      "why": "Better fits this person: challenges the relief/quit frame, names cost of cautious retreat, uses criteria, and ends with agency-preserving commitment question."
+    }
+  }
+}

@@ -1,0 +1,460 @@
+Pairwise: scope=same_author_only  expected=3830  observed=13161  pending=1572  workers=1
+  1/1572 scn_v02_ambition_status_user_p… judge=opus
+  1/1572 ok  (failed=0, cap_events=0)
+  2/1572 scn_v02_ambition_status_user_p… judge=opus
+  2/1572 ok  (failed=0, cap_events=0)
+  3/1572 scn_v02_ambition_status_user_p… judge=opus
+  3/1572 ok  (failed=0, cap_events=0)
+  4/1572 scn_v02_ambition_status_user_p… judge=opus
+  4/1572 ok  (failed=0, cap_events=0)
+  5/1572 scn_v02_ambition_status_user_p… judge=opus
+  5/1572 ok  (failed=0, cap_events=0)
+  6/1572 scn_v02_ambition_status_user_p… judge=opus
+  6/1572 ok  (failed=0, cap_events=0)
+  7/1572 scn_v02_ambition_status_user_p… judge=opus
+  7/1572 ok  (failed=0, cap_events=0)
+  8/1572 scn_v02_ambition_status_user_p… judge=opus
+  8/1572 ok  (failed=0, cap_events=0)
+  9/1572 scn_v02_ambition_status_user_p… judge=opus
+  9/1572 ok  (failed=0, cap_events=0)
+  10/1572 scn_v02_ambition_status_user_p… judge=opus
+  10/1572 ok  (failed=0, cap_events=0)
+  11/1572 scn_v02_ambition_status_user_p… judge=opus
+  12/1572 scn_v02_ambition_status_user_p… judge=opus
+  13/1572 scn_v02_ambition_status_user_p… judge=opus
+  14/1572 scn_v02_ambition_status_user_p… judge=opus
+  15/1572 scn_v02_ambition_status_user_p… judge=opus
+  16/1572 scn_v02_ambition_status_user_p… judge=opus
+  17/1572 scn_v02_ambition_status_user_p… judge=opus
+  18/1572 scn_v02_ambition_status_user_p… judge=opus
+  19/1572 scn_v02_ambition_status_user_p… judge=opus
+  20/1572 scn_v02_ambition_status_user_p… judge=opus
+  20/1572 ok  (failed=0, cap_events=0)
+  21/1572 scn_v02_ambition_status_user_p… judge=opus
+  22/1572 scn_v02_ambition_status_user_p… judge=opus
+  23/1572 scn_v02_ambition_status_user_p… judge=opus
+  24/1572 scn_v02_ambition_status_user_p… judge=opus
+  25/1572 scn_v02_ambition_status_user_p… judge=opus
+  26/1572 scn_v02_ambition_status_user_p… judge=opus
+  27/1572 scn_v02_ambition_status_user_p… judge=opus
+  28/1572 scn_v02_ambition_status_user_p… judge=opus
+  29/1572 scn_v02_ambition_status_user_p… judge=opus
+  30/1572 scn_v02_ambition_status_user_p… judge=opus
+  30/1572 ok  (failed=0, cap_events=0)
+  31/1572 scn_v02_ambition_status_user_p… judge=opus
+  32/1572 scn_v02_ambition_status_user_p… judge=opus
+  33/1572 scn_v02_ambition_status_user_p… judge=opus
+  34/1572 scn_v02_ambition_status_user_p… judge=opus
+  35/1572 scn_v02_ambition_status_user_p… judge=opus
+  36/1572 scn_v02_ambition_status_user_p… judge=opus
+  37/1572 scn_v02_ambition_status_user_p… judge=opus
+  38/1572 scn_v02_ambition_status_user_p… judge=opus
+  39/1572 scn_v02_ambition_status_user_p… judge=opus
+  40/1572 scn_v02_ambition_status_user_p… judge=opus
+  40/1572 ok  (failed=0, cap_events=0)
+  41/1572 scn_v02_ambition_status_user_p… judge=opus
+  42/1572 scn_v02_ambition_status_user_p… judge=opus
+  43/1572 scn_v02_ambition_status_user_p… judge=opus
+  44/1572 scn_v02_ambition_status_user_p… judge=opus
+  45/1572 scn_v02_ambition_status_user_p… judge=opus
+  46/1572 scn_v02_ambition_status_user_p… judge=opus
+  47/1572 scn_v02_ambition_status_user_p… judge=opus
+  48/1572 scn_v02_ambition_status_user_p… judge=opus
+  49/1572 scn_v02_ambition_status_user_p… judge=opus
+  50/1572 scn_v02_ambition_status_user_p… judge=opus
+  50/1572 ok  (failed=0, cap_events=0)
+  51/1572 scn_v02_ambition_status_user_p… judge=opus
+  52/1572 scn_v02_ambition_status_user_p… judge=opus
+  53/1572 scn_v02_ambition_status_user_p… judge=opus
+  54/1572 scn_v02_ambition_status_user_p… judge=opus
+  55/1572 scn_v02_ambition_status_user_p… judge=opus
+  56/1572 scn_v02_ambition_status_user_p… judge=opus
+  57/1572 scn_v02_ambition_status_user_p… judge=opus
+  58/1572 scn_v02_ambition_status_user_p… judge=opus
+  59/1572 scn_v02_ambition_status_user_p… judge=opus
+  60/1572 scn_v02_ambition_status_user_p… judge=opus
+  60/1572 ok  (failed=0, cap_events=0)
+  61/1572 scn_v02_ambition_status_user_p… judge=opus
+  62/1572 scn_v02_ambition_status_user_p… judge=opus
+  63/1572 scn_v02_ambition_status_user_p… judge=opus
+  64/1572 scn_v02_ambition_status_user_p… judge=opus
+  65/1572 scn_v02_ambition_status_user_p… judge=opus
+  66/1572 scn_v02_ambition_status_user_p… judge=opus
+  67/1572 scn_v02_ambition_status_user_p… judge=opus
+  68/1572 scn_v02_ambition_status_user_p… judge=opus
+  69/1572 scn_v02_ambition_status_user_p… judge=opus
+  70/1572 scn_v02_ambition_status_user_p… judge=opus
+  70/1572 ok  (failed=0, cap_events=0)
+  71/1572 scn_v02_ambition_status_user_p… judge=opus
+  72/1572 scn_v02_ambition_status_user_p… judge=opus
+  73/1572 scn_v02_ambition_status_user_p… judge=opus
+  74/1572 scn_v02_ambition_status_user_p… judge=opus
+  75/1572 scn_v02_ambition_status_user_p… judge=opus
+  76/1572 scn_v02_ambition_status_user_p… judge=opus
+  77/1572 scn_v02_ambition_status_user_p… judge=opus
+  78/1572 scn_v02_ambition_status_user_p… judge=opus
+  79/1572 scn_v02_ambition_status_user_p… judge=opus
+  80/1572 scn_v02_ambition_status_user_p… judge=opus
+  80/1572 ok  (failed=0, cap_events=0)
+  81/1572 scn_v02_ambition_status_user_p… judge=opus
+  82/1572 scn_v02_ambition_status_user_p… judge=opus
+  83/1572 scn_v02_ambition_status_user_p… judge=opus
+  84/1572 scn_v02_ambition_status_user_p… judge=opus
+  85/1572 scn_v02_ambition_status_user_p… judge=opus
+  86/1572 scn_v02_ambition_status_user_p… judge=opus
+  87/1572 scn_v02_ambition_status_user_p… judge=opus
+  88/1572 scn_v02_ambition_status_user_p… judge=opus
+  89/1572 scn_v02_ambition_status_user_p… judge=opus
+  90/1572 scn_v02_ambition_status_user_p… judge=opus
+  90/1572 ok  (failed=0, cap_events=0)
+  91/1572 scn_v02_ambition_status_user_p… judge=opus
+  92/1572 scn_v02_ambition_status_user_p… judge=opus
+  93/1572 scn_v02_ambition_status_user_p… judge=opus
+  94/1572 scn_v02_ambition_status_user_p… judge=opus
+  95/1572 scn_v02_ambition_status_user_p… judge=opus
+  96/1572 scn_v02_ambition_status_user_p… judge=opus
+  97/1572 scn_v02_ambition_status_user_p… judge=opus
+  98/1572 scn_v02_ambition_status_user_p… judge=opus
+  99/1572 scn_v02_ambition_status_user_p… judge=opus
+  100/1572 scn_v02_ambition_status_user_p… judge=opus
+  100/1572 ok  (failed=0, cap_events=0)
+  101/1572 scn_v02_ambition_status_user_p… judge=opus
+  102/1572 scn_v02_ambition_status_user_p… judge=opus
+  103/1572 scn_v02_ambition_status_user_p… judge=opus
+  104/1572 scn_v02_ambition_status_user_p… judge=opus
+  105/1572 scn_v02_ambition_status_user_p… judge=opus
+  106/1572 scn_v02_ambition_status_user_p… judge=opus
+  107/1572 scn_v02_ambition_status_user_p… judge=opus
+  108/1572 scn_v02_ambition_status_user_p… judge=opus
+  109/1572 scn_v02_ambition_status_user_s… judge=opus
+  110/1572 scn_v02_ambition_status_user_s… judge=opus
+  110/1572 ok  (failed=0, cap_events=0)
+  111/1572 scn_v02_ambition_status_user_s… judge=opus
+  112/1572 scn_v02_ambition_status_user_s… judge=opus
+  113/1572 scn_v02_ambition_status_user_s… judge=opus
+  114/1572 scn_v02_ambition_status_user_s… judge=opus
+  115/1572 scn_v02_ambition_status_user_s… judge=opus
+  116/1572 scn_v02_ambition_status_user_s… judge=opus
+  117/1572 scn_v02_ambition_status_user_s… judge=opus
+  118/1572 scn_v02_ambition_status_user_s… judge=opus
+  119/1572 scn_v02_ambition_status_user_s… judge=opus
+  120/1572 scn_v02_ambition_status_user_s… judge=opus
+  120/1572 ok  (failed=0, cap_events=0)
+  121/1572 scn_v02_ambition_status_user_s… judge=opus
+  122/1572 scn_v02_ambition_status_user_s… judge=opus
+  123/1572 scn_v02_ambition_status_user_s… judge=opus
+  124/1572 scn_v02_ambition_status_user_s… judge=opus
+  125/1572 scn_v02_ambition_status_user_s… judge=opus
+  126/1572 scn_v02_ambition_status_user_s… judge=opus
+  127/1572 scn_v02_ambition_status_user_s… judge=opus
+  128/1572 scn_v02_ambition_status_user_s… judge=opus
+  129/1572 scn_v02_ambition_status_user_s… judge=opus
+  130/1572 scn_v02_ambition_status_user_s… judge=opus
+  130/1572 ok  (failed=0, cap_events=0)
+  131/1572 scn_v02_ambition_status_user_s… judge=opus
+  132/1572 scn_v02_ambition_status_user_s… judge=opus
+  133/1572 scn_v02_ambition_status_user_s… judge=opus
+  134/1572 scn_v02_ambition_status_user_s… judge=opus
+  135/1572 scn_v02_ambition_status_user_s… judge=opus
+  136/1572 scn_v02_ambition_status_user_s… judge=opus
+  137/1572 scn_v02_ambition_status_user_s… judge=opus
+  138/1572 scn_v02_ambition_status_user_s… judge=opus
+  139/1572 scn_v02_ambition_status_user_s… judge=opus
+  140/1572 scn_v02_ambition_status_user_s… judge=opus
+  140/1572 ok  (failed=0, cap_events=0)
+  141/1572 scn_v02_ambition_status_user_s… judge=opus
+  142/1572 scn_v02_ambition_status_user_s… judge=opus
+  143/1572 scn_v02_ambition_status_user_s… judge=opus
+  144/1572 scn_v02_ambition_status_user_s… judge=opus
+  145/1572 scn_v02_ambition_status_user_s… judge=opus
+  146/1572 scn_v02_ambition_status_user_s… judge=opus
+  147/1572 scn_v02_ambition_status_user_s… judge=opus
+  148/1572 scn_v02_ambition_status_user_s… judge=opus
+  149/1572 scn_v02_ambition_status_user_s… judge=opus
+  150/1572 scn_v02_ambition_status_user_s… judge=opus
+  150/1572 ok  (failed=0, cap_events=0)
+  151/1572 scn_v02_ambition_status_user_s… judge=opus
+  152/1572 scn_v02_ambition_status_user_s… judge=opus
+  153/1572 scn_v02_ambition_status_user_s… judge=opus
+  154/1572 scn_v02_ambition_status_user_s… judge=opus
+  155/1572 scn_v02_ambition_status_user_s… judge=opus
+  156/1572 scn_v02_ambition_status_user_s… judge=opus
+  157/1572 scn_v02_ambition_status_user_s… judge=opus
+  158/1572 scn_v02_ambition_status_user_s… judge=opus
+  159/1572 scn_v02_ambition_status_user_s… judge=opus
+  160/1572 scn_v02_ambition_status_user_s… judge=opus
+  160/1572 ok  (failed=0, cap_events=0)
+  161/1572 scn_v02_ambition_status_user_s… judge=opus
+  162/1572 scn_v02_ambition_status_user_s… judge=opus
+  163/1572 scn_v02_ambition_status_user_s… judge=opus
+  164/1572 scn_v02_ambition_status_user_s… judge=opus
+  165/1572 scn_v02_ambition_status_user_s… judge=opus
+  166/1572 scn_v02_ambition_status_user_s… judge=opus
+  167/1572 scn_v02_ambition_status_user_s… judge=opus
+  168/1572 scn_v02_ambition_status_user_s… judge=opus
+  169/1572 scn_v02_ambition_status_user_s… judge=opus
+  170/1572 scn_v02_ambition_status_user_s… judge=opus
+  170/1572 ok  (failed=0, cap_events=0)
+  171/1572 scn_v02_ambition_status_user_s… judge=opus
+  172/1572 scn_v02_ambition_status_user_s… judge=opus
+  173/1572 scn_v02_ambition_status_user_s… judge=opus
+  174/1572 scn_v02_ambition_status_user_s… judge=opus
+  175/1572 scn_v02_ambition_status_user_s… judge=opus
+  176/1572 scn_v02_ambition_status_user_s… judge=opus
+  177/1572 scn_v02_ambition_status_user_s… judge=opus
+  178/1572 scn_v02_ambition_status_user_s… judge=opus
+  179/1572 scn_v02_ambition_status_user_s… judge=opus
+  180/1572 scn_v02_ambition_status_user_s… judge=opus
+  180/1572 ok  (failed=0, cap_events=0)
+  181/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  182/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  183/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  184/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  185/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  186/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  187/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  188/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  189/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  190/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  190/1572 ok  (failed=0, cap_events=0)
+  191/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  192/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  193/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  194/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  195/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  196/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  197/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  198/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  199/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  200/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  200/1572 ok  (failed=0, cap_events=0)
+  201/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  202/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  203/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  204/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  205/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  206/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  207/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  208/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  209/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  210/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  210/1572 ok  (failed=0, cap_events=0)
+  211/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  212/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  213/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  214/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  215/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  216/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  217/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  218/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  219/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  220/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  220/1572 ok  (failed=0, cap_events=0)
+  221/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  222/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  223/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  224/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  225/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  226/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  227/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  228/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  229/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  230/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  230/1572 ok  (failed=0, cap_events=0)
+  231/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  232/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  233/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  234/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  235/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  236/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  237/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  238/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  239/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  240/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  240/1572 ok  (failed=0, cap_events=0)
+  241/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  242/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  243/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  244/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  245/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  246/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  247/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  248/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  249/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  250/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  250/1572 ok  (failed=0, cap_events=0)
+  251/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  252/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  253/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  254/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  255/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  256/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  257/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  258/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  259/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  260/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  260/1572 ok  (failed=0, cap_events=0)
+  261/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  262/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  263/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  264/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  265/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  266/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  267/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  268/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  269/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  270/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  270/1572 ok  (failed=0, cap_events=0)
+  271/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  272/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  273/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  274/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  275/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  276/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  277/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  278/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  279/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  280/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  280/1572 ok  (failed=0, cap_events=0)
+  281/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  282/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  283/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  284/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  285/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  286/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  287/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  288/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  289/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  290/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  290/1572 ok  (failed=0, cap_events=0)
+  291/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  292/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  293/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  294/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  295/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  296/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  297/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  298/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  299/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  300/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  300/1572 ok  (failed=0, cap_events=0)
+  301/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  302/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  303/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  304/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  305/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  306/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  307/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  308/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  309/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  310/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  310/1572 ok  (failed=0, cap_events=0)
+  311/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  312/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  313/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  314/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  315/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  316/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  317/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  318/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  319/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  320/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  320/1572 ok  (failed=0, cap_events=0)
+  321/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  322/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  323/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  324/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  325/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  326/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  327/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  328/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  329/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  330/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  330/1572 ok  (failed=0, cap_events=0)
+  331/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  332/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  333/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  334/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  335/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  336/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  337/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  338/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  339/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  340/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  340/1572 ok  (failed=0, cap_events=0)
+  341/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  342/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  343/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  344/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  345/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  346/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  347/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  348/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  349/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  350/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  350/1572 ok  (failed=0, cap_events=0)
+  351/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  352/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  353/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  354/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  355/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  356/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  357/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  358/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  359/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  360/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  360/1572 ok  (failed=0, cap_events=0)
+  361/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  362/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  363/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  364/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  365/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  366/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  367/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  368/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  369/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  370/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  370/1572 ok  (failed=0, cap_events=0)
+  371/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  372/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  373/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  374/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  375/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  376/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  377/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  378/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  379/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  380/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  380/1572 ok  (failed=0, cap_events=0)
+  381/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  382/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  383/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  384/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  385/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  386/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  387/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  388/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  389/1572 scn_v02_epistemic_uncertainty_… judge=opus
+  CAP scn_v02_epistemic_uncertainty_ judge=opus (retries exhausted; cap_events.jsonl written)
+CAP-ABORTED. 388 succeeded, 1 failed, 1183 skipped after cap. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_pairwise.json. Resume with: uv run python -m psycheeval.judge pairwise --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --scope same_author_only --pairs C3:C4_WRONG_PROFILE,C5:C_GENERIC_CONTRACT@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C3:C_GENERIC_CONTRACT,C5:C5_NONPUBLIC@PI,C4:C5_NONPUBLIC@PI,C3:L2@PI,L2:L3@PI,C5:L3@PI,C4:L3@PI,C4:C4_WRONG_PROFILE,C3:C5_NONPUBLIC@PI,C5:L2@PI,C5_CONTRACT:C5_NONPUBLIC@PI,C5_CONTRACT:L1@PI,C3:C5_NONPUBLIC_CONTRACT@PI,C4:C_GENERIC_CONTRACT,C0:C4_WRONG_PROFILE,L1:L2@PI,C3:L1@PI,C0:C_GENERIC_CONTRACT,C5_CONTRACT:L3@PI,C4:C5_NONPUBLIC_CONTRACT@PI,C4_WRONG_PROFILE:C5@PI,C5:L1@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI
+
+=== --ab-ba-mandatory: dispatching AB/BA swap rejudgment ===
+Pairwise swap-rejudge: originals=13549  target_judges=opus  already_swapped=11690  pending=400  workers=1
+  1/400 ok (failed=0, cap_events=5)
+  2/400 ok (failed=0, cap_events=5)
+  3/400 ok (failed=0, cap_events=5)
+  4/400 ok (failed=0, cap_events=5)
+  5/400 ok (failed=0, cap_events=5)
+  6/400 ok (failed=0, cap_events=5)
+  7/400 ok (failed=0, cap_events=5)
+  8/400 ok (failed=0, cap_events=5)
+  9/400 ok (failed=0, cap_events=5)
+  10/400 ok (failed=0, cap_events=5)
+  ERR scn_v02_ambition_status_user_p judge=opus: Could not parse JSON from content (len=924)
+  20/400 ok (failed=1, cap_events=5)
+  CAP scn_v02_ambition_status_user_p judge=opus (retries exhausted; cap_events.jsonl written)
+Pairwise swap-rejudge done: completed=28/400, failed=2, cap_aborted=370, cap_events=11
+
+  Resume: uv run python -m psycheeval.judge pairwise-swap --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --pairs C3:C4_WRONG_PROFILE,C5:C_GENERIC_CONTRACT@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C3:C_GENERIC_CONTRACT,C5:C5_NONPUBLIC@PI,C4:C5_NONPUBLIC@PI,C3:L2@PI,L2:L3@PI,C5:L3@PI,C4:L3@PI,C4:C4_WRONG_PROFILE,C3:C5_NONPUBLIC@PI,C5:L2@PI,C5_CONTRACT:C5_NONPUBLIC@PI,C5_CONTRACT:L1@PI,C3:C5_NONPUBLIC_CONTRACT@PI,C4:C_GENERIC_CONTRACT,C0:C4_WRONG_PROFILE,L1:L2@PI,C3:L1@PI,C0:C_GENERIC_CONTRACT,C5_CONTRACT:L3@PI,C4:C5_NONPUBLIC_CONTRACT@PI,C4_WRONG_PROFILE:C5@PI,C5:L1@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI
+
+=== AB/BA swap rejudgment complete ===

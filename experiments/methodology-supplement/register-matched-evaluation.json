@@ -1,0 +1,65 @@
+{
+  "old": {
+    "scores": {
+      "N": 75.0,
+      "E": 24.7,
+      "O": 91.3,
+      "A": 55.7,
+      "C": 69.0
+    },
+    "delta_old_corpus_ref": 11.4,
+    "delta_sms_register_ref": 15.5,
+    "delta_psyche": null
+  },
+  "1m": {
+    "scores": {
+      "N": 55.0,
+      "E": 31.0,
+      "O": 91.0,
+      "A": 40.7,
+      "C": 67.7
+    },
+    "delta_old_corpus_ref": 3.9,
+    "delta_sms_register_ref": 7.3,
+    "delta_psyche": null
+  },
+  "filtered": {
+    "scores": {
+      "N": 55.4,
+      "E": 28.4,
+      "O": 91.8,
+      "A": 35.6,
+      "C": 57.8
+    },
+    "delta_old_corpus_ref": 2.4,
+    "delta_sms_register_ref": 5.8,
+    "delta_psyche": null
+  },
+  "long": {
+    "scores": {
+      "N": 48.5,
+      "E": 26.2,
+      "O": 89.2,
+      "A": 37.8,
+      "C": 59.8
+    },
+    "delta_old_corpus_ref": 1.7,
+    "delta_sms_register_ref": 6.1,
+    "delta_psyche": null
+  },
+  "sms_reference": {
+    "N": 53.1,
+    "E": 30.0,
+    "O": 87.8,
+    "A": 38.3,
+    "C": 39.6
+  },
+  "old_corpus_reference": {
+    "N": 51.1,
+    "E": 28.3,
+    "O": 88.6,
+    "A": 36.4,
+    "C": 61.4
+  },
+  "psyche": {"N": null, "E": null, "O": null, "A": null, "C": null, "_withheld": "withheld: private subject data"}
+}

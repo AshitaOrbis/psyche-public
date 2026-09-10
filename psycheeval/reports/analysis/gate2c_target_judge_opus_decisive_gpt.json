@@ -1,0 +1,217 @@
+{
+  "summary": {
+    "judge": "opus",
+    "filter": "decisive_gpt",
+    "n_tasks": 10,
+    "overall": {
+      "p_picks_target": [
+        0.7,
+        10
+      ],
+      "q_picks_opposite": [
+        0.8,
+        10
+      ],
+      "reversed": [
+        0.5,
+        10
+      ],
+      "flip": [
+        0.5,
+        10
+      ],
+      "decisive_recover_target_for_P": [
+        0.7,
+        10
+      ]
+    },
+    "cross_provider": {
+      "n": 10,
+      "metrics": {
+        "p_picks_target": [
+          0.7,
+          10
+        ],
+        "q_picks_opposite": [
+          0.8,
+          10
+        ],
+        "reversed": [
+          0.5,
+          10
+        ],
+        "flip": [
+          0.5,
+          10
+        ],
+        "decisive_recover_target_for_P": [
+          0.7,
+          10
+        ]
+      }
+    },
+    "same_provider_halo": null
+  },
+  "results": [
+    {
+      "task_id": "t013",
+      "which": "P",
+      "winner": "A",
+      "why": "A names the irreversible move, lists concrete alternative causes (guest limits, planning), and ends with a specific decision question; B's closing offers tone variants instead.",
+      "author_fam": "openai",
+      "target": "emily_blender"
+    },
+    {
+      "task_id": "t013",
+      "which": "Q",
+      "winner": "A",
+      "why": "A explicitly marks reversibility, names the strongest counterargument concretely, and converges on a decision frame; B asks tone-menu, weaker on reversibility framing.",
+      "author_fam": "openai",
+      "target": "emily_blender"
+    },
+    {
+      "task_id": "t016",
+      "which": "P",
+      "winner": "B",
+      "why": "B separates horizons cleanly, names the strongest version of his claim before disagreeing, and gives a sharper update condition. A is solid but less structurally honest.",
+      "author_fam": "openai",
+      "target": "pawl_gram"
+    },
+    {
+      "task_id": "t016",
+      "which": "Q",
+      "winner": "B",
+      "why": "B distinguishes near/mid/long horizons, names mechanism, states confidence with update condition, and steelmans first \u2014 matching the profile's explicit decision and critique norms.",
+      "author_fam": "openai",
+      "target": "pawl_gram"
+    },
+    {
+      "task_id": "t021",
+      "which": "P",
+      "winner": "B",
+      "why": "B names the hidden assumption upfront per challenge clause, gives sharper kill/continue criteria, and avoids A's truncated ending and confidence-meter performance.",
+      "author_fam": "openai",
+      "target": "pawl_gram"
+    },
+    {
+      "task_id": "t021",
+      "which": "Q",
+      "winner": "B",
+      "why": "B names the assumption upfront, gives explicit kill/continue criteria tied to mechanism, and avoids A's truncated ending. Both fit; B is tighter and more decision-shaped.",
+      "author_fam": "openai",
+      "target": "pawl_gram"
+    },
+    {
+      "task_id": "t023",
+      "which": "Q",
+      "winner": "B",
+      "why": "B steelmans first, names confidence and update conditions, flags adversarial-context limit, and ends with a clarifying question about which problem to solve.",
+      "author_fam": "openai",
+      "target": "pawl_gram"
+    },
+    {
+      "task_id": "t023",
+      "which": "P",
+      "winner": "B",
+      "why": "B names the hidden universalization, pushes back substantively, picks a recommendation with confidence, and asks which problem he's actually solving before drafting.",
+      "author_fam": "openai",
+      "target": "pawl_gram"
+    },
+    {
+      "task_id": "t039",
+      "which": "P",
+      "winner": "B",
+      "why": "B names the motive-inference move in the specific sentence, gives calibrated recommendation with confidence, one observable next step, and asks one direct preference question. A sprawls into menus.",
+      "author_fam": "openai",
+      "target": "calibration_goblin"
+    },
+    {
+      "task_id": "t039",
+      "which": "Q",
+      "winner": "B",
+      "why": "B separates inference from fact, gives a calibrated recommendation, keeps it tight, and ends with an agency-preserving question. A is solid but longer and truncated mid-question.",
+      "author_fam": "openai",
+      "target": "calibration_goblin"
+    },
+    {
+      "task_id": "t048",
+      "which": "P",
+      "winner": "B",
+      "why": "B explicitly separates said/meant/inferred layers, offers alternative motive with probability reasoning, and shows repairable-vs-honest tradeoff \u2014 directly satisfying motive-uncertainty and repair clauses.",
+      "author_fam": "openai",
+      "target": "high_agency_spiraler"
+    },
+    {
+      "task_id": "t048",
+      "which": "Q",
+      "winner": "A",
+      "why": "A names the motive-claim challenge cleanly, gives a confidence with residual uncertainty, and ends with the direct preference question. B does probability on motives and lectures.",
+      "author_fam": "openai",
+      "target": "high_agency_spiraler"
+    },
+    {
+      "task_id": "t049",
+      "which": "Q",
+      "winner": "A",
+      "why": "A names the preference question directly, gives confidence with residual uncertainty, offers one concrete next move. B sprawls into menus and generic frameworks.",
+      "author_fam": "openai",
+      "target": "high_agency_spiraler"
+    },
+    {
+      "task_id": "t049",
+      "which": "P",
+      "winner": "B",
+      "why": "B names the cautious-quit-as-expensive pattern per challenge clause, ends with agency-preserving commit question, and offers criteria-based decision framing without ratifying the give-up impulse.",
+      "author_fam": "openai",
+      "target": "high_agency_spiraler"
+    },
+    {
+      "task_id": "t051",
+      "which": "P",
+      "winner": "B",
+      "why": "B names the cautious-move-as-expensive pattern explicit in profile, offers concrete behavioral audit, and ends with agency-preserving question tied to suspected move.",
+      "author_fam": "openai",
+      "target": "high_agency_spiraler"
+    },
+    {
+      "task_id": "t051",
+      "which": "Q",
+      "winner": "A",
+      "why": "A names a specific move the user made well, gives calibrated confidence levels, and asks one concrete next step. B's five-question audit is a menu that risks more analysis.",
+      "author_fam": "openai",
+      "target": "high_agency_spiraler"
+    },
+    {
+      "task_id": "t052",
+      "which": "P",
+      "winner": "A",
+      "why": "A names the grievance-inventory risk, distinguishes said/meant/inferred per motive-uncertainty clause, and ends with an agency-handing question about which status he's reclaiming.",
+      "author_fam": "openai",
+      "target": "high_agency_spiraler"
+    },
+    {
+      "task_id": "t052",
+      "which": "Q",
+      "winner": "B",
+      "why": "B is tighter, names the user's part first, and asks one direct preference question. A sprawls and offers a menu rather than one move.",
+      "author_fam": "openai",
+      "target": "high_agency_spiraler"
+    },
+    {
+      "task_id": "t061",
+      "which": "P",
+      "winner": "B",
+      "why": "B refuses the talent claim by naming what's observable, stays material, ends with agency-preserving choice. A moralizes ('moral costume'), psychologizes, narrates motives.",
+      "author_fam": "openai",
+      "target": "patient_craftsperson"
+    },
+    {
+      "task_id": "t061",
+      "which": "Q",
+      "winner": "A",
+      "why": "A challenges the 'less talented' framing and 'above it' dodge, names avoidance, sketches next-30-seconds, refuses shame-drafts, and closes with an agency-preserving question. B accepts the status frame.",
+      "author_fam": "openai",
+      "target": "patient_craftsperson"
+    }
+  ]
+}

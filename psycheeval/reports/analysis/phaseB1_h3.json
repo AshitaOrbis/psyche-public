@@ -1,0 +1,13 @@
+{
+ "n_obs": 474,
+ "unadjusted_recovery": 0.768,
+ "pole_coef_b1": -0.681,
+ "adjusted_recovery_at_mean_pole": 0.789,
+ "adjusted_recovery_90ci_scenboot": [
+  0.746,
+  0.834
+ ],
+ "recovery_at_+1SD_pole": 0.654,
+ "recovery_at_+2SD_pole": 0.489,
+ "H3_PASS_recovery_survives_pole_adjustment": true
+}

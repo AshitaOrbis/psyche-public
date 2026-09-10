@@ -1,0 +1,497 @@
+Pairwise: scope=same_author_only  expected=3830  observed=12150  pending=2583  workers=1
+  1/2583 scn_v02_interpersonal_conflict… judge=opus
+  1/2583 ok  (failed=0, cap_events=0)
+  2/2583 scn_v02_authority_disagreement… judge=opus
+  2/2583 ok  (failed=0, cap_events=0)
+  3/2583 scn_v02_authority_disagreement… judge=opus
+  3/2583 ok  (failed=0, cap_events=0)
+  4/2583 scn_v02_authority_disagreement… judge=opus
+  4/2583 ok  (failed=0, cap_events=0)
+  5/2583 scn_v02_authority_disagreement… judge=opus
+  5/2583 ok  (failed=0, cap_events=0)
+  6/2583 scn_v02_authority_disagreement… judge=opus
+  6/2583 ok  (failed=0, cap_events=0)
+  7/2583 scn_v02_authority_disagreement… judge=opus
+  7/2583 ok  (failed=0, cap_events=0)
+  8/2583 scn_v02_authority_disagreement… judge=opus
+  8/2583 ok  (failed=0, cap_events=0)
+  9/2583 scn_v02_authority_disagreement… judge=opus
+  9/2583 ok  (failed=0, cap_events=0)
+  10/2583 scn_v02_authority_disagreement… judge=opus
+  10/2583 ok  (failed=0, cap_events=0)
+  11/2583 scn_v02_authority_disagreement… judge=opus
+  12/2583 scn_v02_authority_disagreement… judge=opus
+  13/2583 scn_v02_authority_disagreement… judge=opus
+  14/2583 scn_v02_authority_disagreement… judge=opus
+  15/2583 scn_v02_authority_disagreement… judge=opus
+  16/2583 scn_v02_authority_disagreement… judge=opus
+  17/2583 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: Could not parse JSON from content (len=1108)
+  18/2583 scn_v02_authority_disagreement… judge=opus
+  19/2583 scn_v02_authority_disagreement… judge=opus
+  20/2583 scn_v02_authority_disagreement… judge=opus
+  21/2583 scn_v02_authority_disagreement… judge=opus
+  20/2583 ok  (failed=1, cap_events=0)
+  22/2583 scn_v02_authority_disagreement… judge=opus
+  23/2583 scn_v02_authority_disagreement… judge=opus
+  24/2583 scn_v02_authority_disagreement… judge=opus
+  25/2583 scn_v02_authority_disagreement… judge=opus
+  26/2583 scn_v02_authority_disagreement… judge=opus
+  27/2583 scn_v02_authority_disagreement… judge=opus
+  28/2583 scn_v02_authority_disagreement… judge=opus
+  29/2583 scn_v02_authority_disagreement… judge=opus
+  30/2583 scn_v02_authority_disagreement… judge=opus
+  31/2583 scn_v02_authority_disagreement… judge=opus
+  30/2583 ok  (failed=1, cap_events=0)
+  32/2583 scn_v02_authority_disagreement… judge=opus
+  33/2583 scn_v02_authority_disagreement… judge=opus
+  34/2583 scn_v02_authority_disagreement… judge=opus
+  35/2583 scn_v02_authority_disagreement… judge=opus
+  36/2583 scn_v02_authority_disagreement… judge=opus
+  37/2583 scn_v02_authority_disagreement… judge=opus
+  38/2583 scn_v02_authority_disagreement… judge=opus
+  39/2583 scn_v02_authority_disagreement… judge=opus
+  40/2583 scn_v02_authority_disagreement… judge=opus
+  ERR scn_v02_authority_disagreement judge=opus: Command '['claude', '-p', '--model', 'opus']' timed out after 300 seconds
+  41/2583 scn_v02_authority_disagreement… judge=opus
+  42/2583 scn_v02_authority_disagreement… judge=opus
+  40/2583 ok  (failed=2, cap_events=0)
+  43/2583 scn_v02_authority_disagreement… judge=opus
+  44/2583 scn_v02_authority_disagreement… judge=opus
+  45/2583 scn_v02_authority_disagreement… judge=opus
+  46/2583 scn_v02_authority_disagreement… judge=opus
+  47/2583 scn_v02_authority_disagreement… judge=opus
+  48/2583 scn_v02_authority_disagreement… judge=opus
+  49/2583 scn_v02_authority_disagreement… judge=opus
+  50/2583 scn_v02_authority_disagreement… judge=opus
+  51/2583 scn_v02_authority_disagreement… judge=opus
+  52/2583 scn_v02_authority_disagreement… judge=opus
+  50/2583 ok  (failed=2, cap_events=0)
+  53/2583 scn_v02_authority_disagreement… judge=opus
+  54/2583 scn_v02_authority_disagreement… judge=opus
+  55/2583 scn_v02_authority_disagreement… judge=opus
+  56/2583 scn_v02_authority_disagreement… judge=opus
+  57/2583 scn_v02_authority_disagreement… judge=opus
+  58/2583 scn_v02_authority_disagreement… judge=opus
+  59/2583 scn_v02_authority_disagreement… judge=opus
+  60/2583 scn_v02_authority_disagreement… judge=opus
+  61/2583 scn_v02_authority_disagreement… judge=opus
+  62/2583 scn_v02_authority_disagreement… judge=opus
+  60/2583 ok  (failed=2, cap_events=0)
+  63/2583 scn_v02_authority_disagreement… judge=opus
+  64/2583 scn_v02_authority_disagreement… judge=opus
+  65/2583 scn_v02_authority_disagreement… judge=opus
+  66/2583 scn_v02_authority_disagreement… judge=opus
+  67/2583 scn_v02_authority_disagreement… judge=opus
+  68/2583 scn_v02_authority_disagreement… judge=opus
+  69/2583 scn_v02_authority_disagreement… judge=opus
+  70/2583 scn_v02_authority_disagreement… judge=opus
+  71/2583 scn_v02_authority_disagreement… judge=opus
+  72/2583 scn_v02_authority_disagreement… judge=opus
+  70/2583 ok  (failed=2, cap_events=0)
+  73/2583 scn_v02_authority_disagreement… judge=opus
+  74/2583 scn_v02_authority_disagreement… judge=opus
+  75/2583 scn_v02_authority_disagreement… judge=opus
+  76/2583 scn_v02_authority_disagreement… judge=opus
+  77/2583 scn_v02_authority_disagreement… judge=opus
+  78/2583 scn_v02_authority_disagreement… judge=opus
+  79/2583 scn_v02_authority_disagreement… judge=opus
+  80/2583 scn_v02_authority_disagreement… judge=opus
+  81/2583 scn_v02_authority_disagreement… judge=opus
+  82/2583 scn_v02_authority_disagreement… judge=opus
+  80/2583 ok  (failed=2, cap_events=0)
+  83/2583 scn_v02_authority_disagreement… judge=opus
+  84/2583 scn_v02_authority_disagreement… judge=opus
+  85/2583 scn_v02_authority_disagreement… judge=opus
+  86/2583 scn_v02_authority_disagreement… judge=opus
+  87/2583 scn_v02_authority_disagreement… judge=opus
+  88/2583 scn_v02_authority_disagreement… judge=opus
+  89/2583 scn_v02_authority_disagreement… judge=opus
+  90/2583 scn_v02_authority_disagreement… judge=opus
+  91/2583 scn_v02_authority_disagreement… judge=opus
+  92/2583 scn_v02_authority_disagreement… judge=opus
+  90/2583 ok  (failed=2, cap_events=0)
+  93/2583 scn_v02_authority_disagreement… judge=opus
+  94/2583 scn_v02_authority_disagreement… judge=opus
+  95/2583 scn_v02_authority_disagreement… judge=opus
+  96/2583 scn_v02_authority_disagreement… judge=opus
+  97/2583 scn_v02_authority_disagreement… judge=opus
+  98/2583 scn_v02_authority_disagreement… judge=opus
+  99/2583 scn_v02_authority_disagreement… judge=opus
+  100/2583 scn_v02_authority_disagreement… judge=opus
+  101/2583 scn_v02_authority_disagreement… judge=opus
+  102/2583 scn_v02_authority_disagreement… judge=opus
+  100/2583 ok  (failed=2, cap_events=0)
+  103/2583 scn_v02_authority_disagreement… judge=opus
+  104/2583 scn_v02_authority_disagreement… judge=opus
+  105/2583 scn_v02_authority_disagreement… judge=opus
+  106/2583 scn_v02_authority_disagreement… judge=opus
+  107/2583 scn_v02_authority_disagreement… judge=opus
+  108/2583 scn_v02_authority_disagreement… judge=opus
+  109/2583 scn_v02_authority_disagreement… judge=opus
+  110/2583 scn_v02_authority_disagreement… judge=opus
+  111/2583 scn_v02_authority_disagreement… judge=opus
+  112/2583 scn_v02_authority_disagreement… judge=opus
+  110/2583 ok  (failed=2, cap_events=0)
+  113/2583 scn_v02_authority_disagreement… judge=opus
+  114/2583 scn_v02_authority_disagreement… judge=opus
+  115/2583 scn_v02_authority_disagreement… judge=opus
+  116/2583 scn_v02_authority_disagreement… judge=opus
+  117/2583 scn_v02_authority_disagreement… judge=opus
+  118/2583 scn_v02_authority_disagreement… judge=opus
+  119/2583 scn_v02_authority_disagreement… judge=opus
+  120/2583 scn_v02_authority_disagreement… judge=opus
+  121/2583 scn_v02_authority_disagreement… judge=opus
+  122/2583 scn_v02_authority_disagreement… judge=opus
+  120/2583 ok  (failed=2, cap_events=0)
+  123/2583 scn_v02_authority_disagreement… judge=opus
+  124/2583 scn_v02_authority_disagreement… judge=opus
+  125/2583 scn_v02_authority_disagreement… judge=opus
+  126/2583 scn_v02_authority_disagreement… judge=opus
+  127/2583 scn_v02_authority_disagreement… judge=opus
+  128/2583 scn_v02_authority_disagreement… judge=opus
+  129/2583 scn_v02_authority_disagreement… judge=opus
+  130/2583 scn_v02_authority_disagreement… judge=opus
+  131/2583 scn_v02_authority_disagreement… judge=opus
+  132/2583 scn_v02_authority_disagreement… judge=opus
+  130/2583 ok  (failed=2, cap_events=0)
+  133/2583 scn_v02_authority_disagreement… judge=opus
+  134/2583 scn_v02_authority_disagreement… judge=opus
+  135/2583 scn_v02_authority_disagreement… judge=opus
+  136/2583 scn_v02_authority_disagreement… judge=opus
+  137/2583 scn_v02_authority_disagreement… judge=opus
+  138/2583 scn_v02_authority_disagreement… judge=opus
+  139/2583 scn_v02_authority_disagreement… judge=opus
+  140/2583 scn_v02_authority_disagreement… judge=opus
+  141/2583 scn_v02_authority_disagreement… judge=opus
+  142/2583 scn_v02_authority_disagreement… judge=opus
+  140/2583 ok  (failed=2, cap_events=0)
+  143/2583 scn_v02_authority_disagreement… judge=opus
+  144/2583 scn_v02_authority_disagreement… judge=opus
+  145/2583 scn_v02_authority_disagreement… judge=opus
+  146/2583 scn_v02_authority_disagreement… judge=opus
+  147/2583 scn_v02_authority_disagreement… judge=opus
+  148/2583 scn_v02_authority_disagreement… judge=opus
+  149/2583 scn_v02_authority_disagreement… judge=opus
+  150/2583 scn_v02_authority_disagreement… judge=opus
+  151/2583 scn_v02_authority_disagreement… judge=opus
+  152/2583 scn_v02_authority_disagreement… judge=opus
+  150/2583 ok  (failed=2, cap_events=0)
+  153/2583 scn_v02_authority_disagreement… judge=opus
+  154/2583 scn_v02_authority_disagreement… judge=opus
+  155/2583 scn_v02_authority_disagreement… judge=opus
+  156/2583 scn_v02_authority_disagreement… judge=opus
+  157/2583 scn_v02_shame_self_interpretat… judge=opus
+  158/2583 scn_v02_shame_self_interpretat… judge=opus
+  159/2583 scn_v02_shame_self_interpretat… judge=opus
+  160/2583 scn_v02_shame_self_interpretat… judge=opus
+  161/2583 scn_v02_shame_self_interpretat… judge=opus
+  162/2583 scn_v02_shame_self_interpretat… judge=opus
+  160/2583 ok  (failed=2, cap_events=0)
+  163/2583 scn_v02_shame_self_interpretat… judge=opus
+  164/2583 scn_v02_shame_self_interpretat… judge=opus
+  165/2583 scn_v02_shame_self_interpretat… judge=opus
+  166/2583 scn_v02_shame_self_interpretat… judge=opus
+  167/2583 scn_v02_shame_self_interpretat… judge=opus
+  168/2583 scn_v02_shame_self_interpretat… judge=opus
+  169/2583 scn_v02_shame_self_interpretat… judge=opus
+  170/2583 scn_v02_shame_self_interpretat… judge=opus
+  171/2583 scn_v02_shame_self_interpretat… judge=opus
+  172/2583 scn_v02_shame_self_interpretat… judge=opus
+  170/2583 ok  (failed=2, cap_events=0)
+  173/2583 scn_v02_shame_self_interpretat… judge=opus
+  174/2583 scn_v02_shame_self_interpretat… judge=opus
+  175/2583 scn_v02_shame_self_interpretat… judge=opus
+  176/2583 scn_v02_shame_self_interpretat… judge=opus
+  177/2583 scn_v02_shame_self_interpretat… judge=opus
+  178/2583 scn_v02_shame_self_interpretat… judge=opus
+  179/2583 scn_v02_shame_self_interpretat… judge=opus
+  180/2583 scn_v02_shame_self_interpretat… judge=opus
+  181/2583 scn_v02_shame_self_interpretat… judge=opus
+  182/2583 scn_v02_shame_self_interpretat… judge=opus
+  180/2583 ok  (failed=2, cap_events=0)
+  183/2583 scn_v02_shame_self_interpretat… judge=opus
+  184/2583 scn_v02_shame_self_interpretat… judge=opus
+  185/2583 scn_v02_shame_self_interpretat… judge=opus
+  186/2583 scn_v02_shame_self_interpretat… judge=opus
+  187/2583 scn_v02_shame_self_interpretat… judge=opus
+  188/2583 scn_v02_shame_self_interpretat… judge=opus
+  189/2583 scn_v02_shame_self_interpretat… judge=opus
+  190/2583 scn_v02_shame_self_interpretat… judge=opus
+  191/2583 scn_v02_shame_self_interpretat… judge=opus
+  192/2583 scn_v02_shame_self_interpretat… judge=opus
+  190/2583 ok  (failed=2, cap_events=0)
+  193/2583 scn_v02_shame_self_interpretat… judge=opus
+  194/2583 scn_v02_shame_self_interpretat… judge=opus
+  195/2583 scn_v02_shame_self_interpretat… judge=opus
+  196/2583 scn_v02_shame_self_interpretat… judge=opus
+  197/2583 scn_v02_shame_self_interpretat… judge=opus
+  198/2583 scn_v02_shame_self_interpretat… judge=opus
+  199/2583 scn_v02_shame_self_interpretat… judge=opus
+  200/2583 scn_v02_shame_self_interpretat… judge=opus
+  201/2583 scn_v02_shame_self_interpretat… judge=opus
+  202/2583 scn_v02_shame_self_interpretat… judge=opus
+  200/2583 ok  (failed=2, cap_events=0)
+  203/2583 scn_v02_shame_self_interpretat… judge=opus
+  204/2583 scn_v02_shame_self_interpretat… judge=opus
+  205/2583 scn_v02_shame_self_interpretat… judge=opus
+  206/2583 scn_v02_shame_self_interpretat… judge=opus
+  207/2583 scn_v02_shame_self_interpretat… judge=opus
+  208/2583 scn_v02_shame_self_interpretat… judge=opus
+  209/2583 scn_v02_shame_self_interpretat… judge=opus
+  210/2583 scn_v02_shame_self_interpretat… judge=opus
+  211/2583 scn_v02_shame_self_interpretat… judge=opus
+  212/2583 scn_v02_shame_self_interpretat… judge=opus
+  210/2583 ok  (failed=2, cap_events=0)
+  213/2583 scn_v02_shame_self_interpretat… judge=opus
+  214/2583 scn_v02_shame_self_interpretat… judge=opus
+  215/2583 scn_v02_shame_self_interpretat… judge=opus
+  216/2583 scn_v02_shame_self_interpretat… judge=opus
+  217/2583 scn_v02_shame_self_interpretat… judge=opus
+  218/2583 scn_v02_shame_self_interpretat… judge=opus
+  219/2583 scn_v02_shame_self_interpretat… judge=opus
+  220/2583 scn_v02_shame_self_interpretat… judge=opus
+  221/2583 scn_v02_shame_self_interpretat… judge=opus
+  222/2583 scn_v02_shame_self_interpretat… judge=opus
+  220/2583 ok  (failed=2, cap_events=0)
+  223/2583 scn_v02_shame_self_interpretat… judge=opus
+  224/2583 scn_v02_shame_self_interpretat… judge=opus
+  225/2583 scn_v02_shame_self_interpretat… judge=opus
+  226/2583 scn_v02_shame_self_interpretat… judge=opus
+  227/2583 scn_v02_shame_self_interpretat… judge=opus
+  228/2583 scn_v02_shame_self_interpretat… judge=opus
+  229/2583 scn_v02_shame_self_interpretat… judge=opus
+  230/2583 scn_v02_shame_self_interpretat… judge=opus
+  231/2583 scn_v02_shame_self_interpretat… judge=opus
+  232/2583 scn_v02_shame_self_interpretat… judge=opus
+  230/2583 ok  (failed=2, cap_events=0)
+  233/2583 scn_v02_shame_self_interpretat… judge=opus
+  234/2583 scn_v02_shame_self_interpretat… judge=opus
+  235/2583 scn_v02_shame_self_interpretat… judge=opus
+  236/2583 scn_v02_shame_self_interpretat… judge=opus
+  237/2583 scn_v02_shame_self_interpretat… judge=opus
+  238/2583 scn_v02_shame_self_interpretat… judge=opus
+  239/2583 scn_v02_shame_self_interpretat… judge=opus
+  240/2583 scn_v02_shame_self_interpretat… judge=opus
+  241/2583 scn_v02_shame_self_interpretat… judge=opus
+  242/2583 scn_v02_shame_self_interpretat… judge=opus
+  240/2583 ok  (failed=2, cap_events=0)
+  243/2583 scn_v02_shame_self_interpretat… judge=opus
+  244/2583 scn_v02_shame_self_interpretat… judge=opus
+  245/2583 scn_v02_shame_self_interpretat… judge=opus
+  246/2583 scn_v02_shame_self_interpretat… judge=opus
+  247/2583 scn_v02_shame_self_interpretat… judge=opus
+  248/2583 scn_v02_shame_self_interpretat… judge=opus
+  249/2583 scn_v02_shame_self_interpretat… judge=opus
+  250/2583 scn_v02_shame_self_interpretat… judge=opus
+  251/2583 scn_v02_shame_self_interpretat… judge=opus
+  252/2583 scn_v02_shame_self_interpretat… judge=opus
+  250/2583 ok  (failed=2, cap_events=0)
+  253/2583 scn_v02_shame_self_interpretat… judge=opus
+  254/2583 scn_v02_shame_self_interpretat… judge=opus
+  255/2583 scn_v02_shame_self_interpretat… judge=opus
+  256/2583 scn_v02_shame_self_interpretat… judge=opus
+  257/2583 scn_v02_shame_self_interpretat… judge=opus
+  258/2583 scn_v02_shame_self_interpretat… judge=opus
+  259/2583 scn_v02_shame_self_interpretat… judge=opus
+  260/2583 scn_v02_shame_self_interpretat… judge=opus
+  261/2583 scn_v02_shame_self_interpretat… judge=opus
+  262/2583 scn_v02_shame_self_interpretat… judge=opus
+  260/2583 ok  (failed=2, cap_events=0)
+  263/2583 scn_v02_shame_self_interpretat… judge=opus
+  264/2583 scn_v02_shame_self_interpretat… judge=opus
+  265/2583 scn_v02_shame_self_interpretat… judge=opus
+  266/2583 scn_v02_shame_self_interpretat… judge=opus
+  267/2583 scn_v02_shame_self_interpretat… judge=opus
+  268/2583 scn_v02_shame_self_interpretat… judge=opus
+  269/2583 scn_v02_shame_self_interpretat… judge=opus
+  270/2583 scn_v02_shame_self_interpretat… judge=opus
+  271/2583 scn_v02_shame_self_interpretat… judge=opus
+  272/2583 scn_v02_shame_self_interpretat… judge=opus
+  270/2583 ok  (failed=2, cap_events=0)
+  273/2583 scn_v02_shame_self_interpretat… judge=opus
+  274/2583 scn_v02_shame_self_interpretat… judge=opus
+  275/2583 scn_v02_shame_self_interpretat… judge=opus
+  276/2583 scn_v02_shame_self_interpretat… judge=opus
+  277/2583 scn_v02_shame_self_interpretat… judge=opus
+  278/2583 scn_v02_shame_self_interpretat… judge=opus
+  279/2583 scn_v02_shame_self_interpretat… judge=opus
+  280/2583 scn_v02_shame_self_interpretat… judge=opus
+  281/2583 scn_v02_shame_self_interpretat… judge=opus
+  282/2583 scn_v02_shame_self_interpretat… judge=opus
+  280/2583 ok  (failed=2, cap_events=0)
+  283/2583 scn_v02_shame_self_interpretat… judge=opus
+  284/2583 scn_v02_shame_self_interpretat… judge=opus
+  285/2583 scn_v02_shame_self_interpretat… judge=opus
+  286/2583 scn_v02_shame_self_interpretat… judge=opus
+  287/2583 scn_v02_shame_self_interpretat… judge=opus
+  288/2583 scn_v02_shame_self_interpretat… judge=opus
+  289/2583 scn_v02_shame_self_interpretat… judge=opus
+  290/2583 scn_v02_shame_self_interpretat… judge=opus
+  291/2583 scn_v02_shame_self_interpretat… judge=opus
+  292/2583 scn_v02_shame_self_interpretat… judge=opus
+  290/2583 ok  (failed=2, cap_events=0)
+  293/2583 scn_v02_shame_self_interpretat… judge=opus
+  294/2583 scn_v02_shame_self_interpretat… judge=opus
+  295/2583 scn_v02_shame_self_interpretat… judge=opus
+  296/2583 scn_v02_shame_self_interpretat… judge=opus
+  ERR scn_v02_shame_self_interpretat judge=opus: Could not parse JSON from content (len=1296)
+  297/2583 scn_v02_shame_self_interpretat… judge=opus
+  298/2583 scn_v02_shame_self_interpretat… judge=opus
+  299/2583 scn_v02_shame_self_interpretat… judge=opus
+  300/2583 scn_v02_shame_self_interpretat… judge=opus
+  301/2583 scn_v02_shame_self_interpretat… judge=opus
+  302/2583 scn_v02_shame_self_interpretat… judge=opus
+  303/2583 scn_v02_shame_self_interpretat… judge=opus
+  300/2583 ok  (failed=3, cap_events=0)
+  304/2583 scn_v02_shame_self_interpretat… judge=opus
+  305/2583 scn_v02_shame_self_interpretat… judge=opus
+  306/2583 scn_v02_shame_self_interpretat… judge=opus
+  307/2583 scn_v02_shame_self_interpretat… judge=opus
+  308/2583 scn_v02_shame_self_interpretat… judge=opus
+  309/2583 scn_v02_shame_self_interpretat… judge=opus
+  310/2583 scn_v02_shame_self_interpretat… judge=opus
+  311/2583 scn_v02_shame_self_interpretat… judge=opus
+  312/2583 scn_v02_shame_self_interpretat… judge=opus
+  313/2583 scn_v02_shame_self_interpretat… judge=opus
+  310/2583 ok  (failed=3, cap_events=0)
+  314/2583 scn_v02_shame_self_interpretat… judge=opus
+  315/2583 scn_v02_shame_self_interpretat… judge=opus
+  316/2583 scn_v02_shame_self_interpretat… judge=opus
+  317/2583 scn_v02_shame_self_interpretat… judge=opus
+  318/2583 scn_v02_shame_self_interpretat… judge=opus
+  319/2583 scn_v02_shame_self_interpretat… judge=opus
+  320/2583 scn_v02_shame_self_interpretat… judge=opus
+  321/2583 scn_v02_shame_self_interpretat… judge=opus
+  322/2583 scn_v02_shame_self_interpretat… judge=opus
+  323/2583 scn_v02_shame_self_interpretat… judge=opus
+  320/2583 ok  (failed=3, cap_events=0)
+  324/2583 scn_v02_shame_self_interpretat… judge=opus
+  325/2583 scn_v02_shame_self_interpretat… judge=opus
+  326/2583 scn_v02_shame_self_interpretat… judge=opus
+  327/2583 scn_v02_shame_self_interpretat… judge=opus
+  328/2583 scn_v02_shame_self_interpretat… judge=opus
+  329/2583 scn_v02_shame_self_interpretat… judge=opus
+  330/2583 scn_v02_shame_self_interpretat… judge=opus
+  331/2583 scn_v02_shame_self_interpretat… judge=opus
+  332/2583 scn_v02_shame_self_interpretat… judge=opus
+  333/2583 scn_v02_shame_self_interpretat… judge=opus
+  330/2583 ok  (failed=3, cap_events=0)
+  334/2583 scn_v02_shame_self_interpretat… judge=opus
+  335/2583 scn_v02_shame_self_interpretat… judge=opus
+  336/2583 scn_v02_shame_self_interpretat… judge=opus
+  337/2583 scn_v02_shame_self_interpretat… judge=opus
+  338/2583 scn_v02_shame_self_interpretat… judge=opus
+  339/2583 scn_v02_shame_self_interpretat… judge=opus
+  340/2583 scn_v02_shame_self_interpretat… judge=opus
+  341/2583 scn_v02_shame_self_interpretat… judge=opus
+  342/2583 scn_v02_shame_self_interpretat… judge=opus
+  343/2583 scn_v02_shame_self_interpretat… judge=opus
+  340/2583 ok  (failed=3, cap_events=0)
+  344/2583 scn_v02_shame_self_interpretat… judge=opus
+  345/2583 scn_v02_shame_self_interpretat… judge=opus
+  346/2583 scn_v02_shame_self_interpretat… judge=opus
+  347/2583 scn_v02_shame_self_interpretat… judge=opus
+  348/2583 scn_v02_shame_self_interpretat… judge=opus
+  349/2583 scn_v02_shame_self_interpretat… judge=opus
+  350/2583 scn_v02_shame_self_interpretat… judge=opus
+  351/2583 scn_v02_shame_self_interpretat… judge=opus
+  352/2583 scn_v02_shame_self_interpretat… judge=opus
+  353/2583 scn_v02_shame_self_interpretat… judge=opus
+  350/2583 ok  (failed=3, cap_events=0)
+  354/2583 scn_v02_shame_self_interpretat… judge=opus
+  355/2583 scn_v02_shame_self_interpretat… judge=opus
+  356/2583 scn_v02_shame_self_interpretat… judge=opus
+  357/2583 scn_v02_shame_self_interpretat… judge=opus
+  358/2583 scn_v02_shame_self_interpretat… judge=opus
+  359/2583 scn_v02_shame_self_interpretat… judge=opus
+  360/2583 scn_v02_shame_self_interpretat… judge=opus
+  361/2583 scn_v02_shame_self_interpretat… judge=opus
+  362/2583 scn_v02_shame_self_interpretat… judge=opus
+  363/2583 scn_v02_shame_self_interpretat… judge=opus
+  360/2583 ok  (failed=3, cap_events=0)
+  364/2583 scn_v02_shame_self_interpretat… judge=opus
+  365/2583 scn_v02_shame_self_interpretat… judge=opus
+  366/2583 scn_v02_shame_self_interpretat… judge=opus
+  367/2583 scn_v02_shame_self_interpretat… judge=opus
+  368/2583 scn_v02_shame_self_interpretat… judge=opus
+  369/2583 scn_v02_shame_self_interpretat… judge=opus
+  370/2583 scn_v02_shame_self_interpretat… judge=opus
+  371/2583 scn_v02_shame_self_interpretat… judge=opus
+  372/2583 scn_v02_shame_self_interpretat… judge=opus
+  373/2583 scn_v02_shame_self_interpretat… judge=opus
+  370/2583 ok  (failed=3, cap_events=0)
+  374/2583 scn_v02_shame_self_interpretat… judge=opus
+  375/2583 scn_v02_shame_self_interpretat… judge=opus
+  376/2583 scn_v02_shame_self_interpretat… judge=opus
+  377/2583 scn_v02_shame_self_interpretat… judge=opus
+  378/2583 scn_v02_shame_self_interpretat… judge=opus
+  379/2583 scn_v02_shame_self_interpretat… judge=opus
+  380/2583 scn_v02_shame_self_interpretat… judge=opus
+  381/2583 scn_v02_shame_self_interpretat… judge=opus
+  382/2583 scn_v02_shame_self_interpretat… judge=opus
+  383/2583 scn_v02_shame_self_interpretat… judge=opus
+  380/2583 ok  (failed=3, cap_events=0)
+  384/2583 scn_v02_shame_self_interpretat… judge=opus
+  385/2583 scn_v02_shame_self_interpretat… judge=opus
+  386/2583 scn_v02_shame_self_interpretat… judge=opus
+  387/2583 scn_v02_shame_self_interpretat… judge=opus
+  388/2583 scn_v02_shame_self_interpretat… judge=opus
+  CAP scn_v02_shame_self_interpretat judge=opus (retries exhausted; cap_events.jsonl written)
+CAP-ABORTED. 384 succeeded, 4 failed, 2195 skipped after cap. Checkpoint: ~/claudeworkspace/psyche/psycheeval/runs/2026-05-19_v03/checkpoint_pairwise.json. Resume with: uv run python -m psycheeval.judge pairwise --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --scope same_author_only --pairs C5:L2@PI,C4:C5_NONPUBLIC_CONTRACT@PI,C3:L2@PI,C3:C5_NONPUBLIC@PI,C5:L3@PI,C5:L1@PI,L2:L3@PI,C3:L1@PI,C5_CONTRACT:C5_NONPUBLIC@PI,C5_CONTRACT:L1@PI,C5:C_GENERIC_CONTRACT@PI,C4:C_GENERIC_CONTRACT,C3:C4_WRONG_PROFILE,C4:C5_NONPUBLIC@PI,C0:C_GENERIC_CONTRACT,L1:L2@PI,C5_CONTRACT:L3@PI,C4_WRONG_PROFILE:C5@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI,C3:C5_NONPUBLIC_CONTRACT@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C5:C5_NONPUBLIC@PI,C4:C4_WRONG_PROFILE,C4:L3@PI,C3:C_GENERIC_CONTRACT,C0:C4_WRONG_PROFILE
+
+=== --ab-ba-mandatory: dispatching AB/BA swap rejudgment ===
+Pairwise swap-rejudge: originals=12534  target_judges=opus  already_swapped=10567  pending=508  workers=1
+  1/508 ok (failed=0, cap_events=4)
+  2/508 ok (failed=0, cap_events=4)
+  3/508 ok (failed=0, cap_events=4)
+  4/508 ok (failed=0, cap_events=4)
+  5/508 ok (failed=0, cap_events=4)
+  6/508 ok (failed=0, cap_events=4)
+  7/508 ok (failed=0, cap_events=4)
+  8/508 ok (failed=0, cap_events=4)
+  9/508 ok (failed=0, cap_events=4)
+  10/508 ok (failed=0, cap_events=4)
+  20/508 ok (failed=0, cap_events=4)
+  30/508 ok (failed=0, cap_events=4)
+  40/508 ok (failed=0, cap_events=4)
+  50/508 ok (failed=0, cap_events=4)
+  60/508 ok (failed=0, cap_events=4)
+  70/508 ok (failed=0, cap_events=4)
+  80/508 ok (failed=0, cap_events=4)
+  90/508 ok (failed=0, cap_events=4)
+  100/508 ok (failed=0, cap_events=4)
+  110/508 ok (failed=0, cap_events=4)
+  120/508 ok (failed=0, cap_events=4)
+  130/508 ok (failed=0, cap_events=4)
+  140/508 ok (failed=0, cap_events=4)
+  150/508 ok (failed=0, cap_events=4)
+  160/508 ok (failed=0, cap_events=4)
+  170/508 ok (failed=0, cap_events=4)
+  180/508 ok (failed=0, cap_events=4)
+  190/508 ok (failed=0, cap_events=4)
+  200/508 ok (failed=0, cap_events=4)
+  210/508 ok (failed=0, cap_events=4)
+  220/508 ok (failed=0, cap_events=4)
+  230/508 ok (failed=0, cap_events=4)
+  240/508 ok (failed=0, cap_events=4)
+  250/508 ok (failed=0, cap_events=4)
+  260/508 ok (failed=0, cap_events=4)
+  270/508 ok (failed=0, cap_events=4)
+  280/508 ok (failed=0, cap_events=4)
+  290/508 ok (failed=0, cap_events=4)
+  300/508 ok (failed=0, cap_events=4)
+  310/508 ok (failed=0, cap_events=4)
+  320/508 ok (failed=0, cap_events=4)
+  330/508 ok (failed=0, cap_events=4)
+  340/508 ok (failed=0, cap_events=4)
+  350/508 ok (failed=0, cap_events=4)
+  360/508 ok (failed=0, cap_events=4)
+  370/508 ok (failed=0, cap_events=4)
+  380/508 ok (failed=0, cap_events=4)
+  CAP scn_v02_shame_self_interpretat judge=opus (retries exhausted; cap_events.jsonl written)
+Pairwise swap-rejudge done: completed=387/508, failed=1, cap_aborted=120, cap_events=10
+
+  Resume: uv run python -m psycheeval.judge pairwise-swap --tag 2026-05-19_v03 --pilot v03_full_pilot --judges opus --workers 1 --pairs C5:L2@PI,C4:C5_NONPUBLIC_CONTRACT@PI,C3:L2@PI,C3:C5_NONPUBLIC@PI,C5:L3@PI,C5:L1@PI,L2:L3@PI,C3:L1@PI,C5_CONTRACT:C5_NONPUBLIC@PI,C5_CONTRACT:L1@PI,C5:C_GENERIC_CONTRACT@PI,C4:C_GENERIC_CONTRACT,C3:C4_WRONG_PROFILE,C4:C5_NONPUBLIC@PI,C0:C_GENERIC_CONTRACT,L1:L2@PI,C5_CONTRACT:L3@PI,C4_WRONG_PROFILE:C5@PI,C5_NONPUBLIC:C5_NONPUBLIC_CONTRACT@PI,C3:C5_NONPUBLIC_CONTRACT@PI,C5_CONTRACT:C5_NONPUBLIC_CONTRACT@PI,C5:C5_NONPUBLIC@PI,C4:C4_WRONG_PROFILE,C4:L3@PI,C3:C_GENERIC_CONTRACT,C0:C4_WRONG_PROFILE
+
+=== AB/BA swap rejudgment complete ===

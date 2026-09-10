@@ -1,0 +1,262 @@
+{
+  "$defs": {
+    "InstrumentLikeItem": {
+      "description": "Likert-style item. Accepts `score_1_to_7` (canonical) or `score` (common LLM shorthand).",
+      "properties": {
+        "item": {
+          "title": "Item",
+          "type": "string"
+        },
+        "score_1_to_7": {
+          "maximum": 7,
+          "minimum": 1,
+          "title": "Score 1 To 7",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "item",
+        "score_1_to_7"
+      ],
+      "title": "InstrumentLikeItem",
+      "type": "object"
+    },
+    "InterviewAnswer": {
+      "properties": {
+        "answer": {
+          "title": "Answer",
+          "type": "string"
+        },
+        "question": {
+          "title": "Question",
+          "type": "string"
+        }
+      },
+      "required": [
+        "question",
+        "answer"
+      ],
+      "title": "InterviewAnswer",
+      "type": "object"
+    },
+    "LatentGroundTruth": {
+      "description": "Kit \u00a76 required ground-truth fields. This is what judges score *against*.",
+      "properties": {
+        "bad_boundary_setting": {
+          "title": "Bad Boundary Setting",
+          "type": "string"
+        },
+        "good_boundary_setting": {
+          "title": "Good Boundary Setting",
+          "type": "string"
+        },
+        "helpful_response_shape": {
+          "title": "Helpful Response Shape",
+          "type": "string"
+        },
+        "known_blind_spots": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Known Blind Spots",
+          "type": "array"
+        },
+        "overpersonalization_triggers": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Overpersonalization Triggers",
+          "type": "array"
+        },
+        "preferred_challenge_style": {
+          "title": "Preferred Challenge Style",
+          "type": "string"
+        },
+        "preferred_reassurance_style": {
+          "title": "Preferred Reassurance Style",
+          "type": "string"
+        },
+        "sycophancy_triggers": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Sycophancy Triggers",
+          "type": "array"
+        },
+        "unhelpful_response_shape": {
+          "title": "Unhelpful Response Shape",
+          "type": "string"
+        }
+      },
+      "required": [
+        "helpful_response_shape",
+        "unhelpful_response_shape",
+        "preferred_challenge_style",
+        "preferred_reassurance_style",
+        "known_blind_spots",
+        "sycophancy_triggers",
+        "overpersonalization_triggers",
+        "good_boundary_setting",
+        "bad_boundary_setting"
+      ],
+      "title": "LatentGroundTruth",
+      "type": "object"
+    },
+    "SourceSummary": {
+      "properties": {
+        "source_count": {
+          "default": 0,
+          "title": "Source Count",
+          "type": "integer"
+        },
+        "source_policy": {
+          "default": "no direct quotes; public-inspired broad traits only",
+          "title": "Source Policy",
+          "type": "string"
+        },
+        "supported_inferences": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Supported Inferences",
+          "type": "array"
+        },
+        "unsupported_inferences_to_avoid": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unsupported Inferences To Avoid",
+          "type": "array"
+        }
+      },
+      "title": "SourceSummary",
+      "type": "object"
+    },
+    "UserArtifacts": {
+      "description": "Kit \u00a73.2 user_artifacts block.",
+      "properties": {
+        "bad_day_diary": {
+          "description": "250-350 words per kit \u00a76",
+          "title": "Bad Day Diary",
+          "type": "string"
+        },
+        "conflict_reaction_note": {
+          "title": "Conflict Reaction Note",
+          "type": "string"
+        },
+        "decision_memo": {
+          "description": "400-600 words per kit \u00a76",
+          "title": "Decision Memo",
+          "type": "string"
+        },
+        "instrument_like_answers": {
+          "items": {
+            "$ref": "#/$defs/InstrumentLikeItem"
+          },
+          "title": "Instrument Like Answers",
+          "type": "array"
+        },
+        "interview_answers": {
+          "items": {
+            "$ref": "#/$defs/InterviewAnswer"
+          },
+          "title": "Interview Answers",
+          "type": "array"
+        },
+        "self_description_250w": {
+          "title": "Self Description 250W",
+          "type": "string"
+        },
+        "values_ranked": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Values Ranked",
+          "type": "array"
+        },
+        "work_style_note": {
+          "title": "Work Style Note",
+          "type": "string"
+        },
+        "writing_sample_1": {
+          "title": "Writing Sample 1",
+          "type": "string"
+        },
+        "writing_sample_2": {
+          "title": "Writing Sample 2",
+          "type": "string"
+        }
+      },
+      "required": [
+        "self_description_250w",
+        "values_ranked",
+        "work_style_note",
+        "conflict_reaction_note",
+        "bad_day_diary",
+        "decision_memo",
+        "writing_sample_1",
+        "writing_sample_2",
+        "interview_answers",
+        "instrument_like_answers"
+      ],
+      "title": "UserArtifacts",
+      "type": "object"
+    }
+  },
+  "description": "Kit \u00a73.2. The synthesized user whose behavior evaluates the assistant.",
+  "properties": {
+    "caricature_risk_note": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Caricature Risk Note"
+    },
+    "disclosure_label": {
+      "default": "synthetic fictional user",
+      "title": "Disclosure Label",
+      "type": "string"
+    },
+    "generation_date": {
+      "description": "YYYY-MM-DD",
+      "title": "Generation Date",
+      "type": "string"
+    },
+    "generation_model": {
+      "title": "Generation Model",
+      "type": "string"
+    },
+    "latent_ground_truth": {
+      "$ref": "#/$defs/LatentGroundTruth"
+    },
+    "persona_seed_id": {
+      "title": "Persona Seed Id",
+      "type": "string"
+    },
+    "source_summary": {
+      "$ref": "#/$defs/SourceSummary"
+    },
+    "user_artifacts": {
+      "$ref": "#/$defs/UserArtifacts"
+    },
+    "user_id": {
+      "title": "User Id",
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_id",
+    "persona_seed_id",
+    "generation_model",
+    "generation_date",
+    "user_artifacts",
+    "latent_ground_truth"
+  ],
+  "title": "SynthUserRecord",
+  "type": "object"
+}

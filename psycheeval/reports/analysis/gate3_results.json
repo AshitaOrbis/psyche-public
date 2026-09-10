@@ -1,0 +1,77 @@
+{
+  "n_tasks": 64,
+  "n_output_judgments": 128,
+  "generation_steering_all": [
+    0.93,
+    0.872,
+    0.963
+  ],
+  "recovery_C4": [
+    0.953,
+    0.871,
+    0.984
+  ],
+  "recovery_C4_WRONG": [
+    0.906,
+    0.81,
+    0.956
+  ],
+  "per_target_C4_alignment": {
+    "dario_armadillo": [
+      0.75,
+      0.409,
+      0.929
+    ],
+    "emily_blender": [
+      1.0,
+      0.676,
+      1.0
+    ],
+    "pawl_gram": [
+      1.0,
+      0.676,
+      1.0
+    ],
+    "slalom_altar": [
+      1.0,
+      0.676,
+      1.0
+    ],
+    "calibration_goblin": [
+      1.0,
+      0.676,
+      1.0
+    ],
+    "conflict_allergic_moralist": [
+      0.875,
+      0.529,
+      0.978
+    ],
+    "high_agency_spiraler": [
+      1.0,
+      0.676,
+      1.0
+    ],
+    "patient_craftsperson": [
+      1.0,
+      0.676,
+      1.0
+    ]
+  },
+  "gate2_judge_winrate": {
+    "dario_armadillo": 0.8,
+    "pawl_gram": 0.34,
+    "slalom_altar": 0.88,
+    "emily_blender": 0.29,
+    "calibration_goblin": 0.54,
+    "high_agency_spiraler": 0.41,
+    "conflict_allergic_moralist": 0.72,
+    "patient_craftsperson": 0.54
+  },
+  "cross_tab": {
+    "genTrue_evaltargetTrue": 45,
+    "genTrue_evaltargetFalse": 16,
+    "genFalse_evaltargetTrue": 1,
+    "genFalse_evaltargetFalse": 2
+  }
+}

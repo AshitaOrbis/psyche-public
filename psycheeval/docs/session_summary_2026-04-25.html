@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>session_summary_2026-04-25</title>
+<style>
+:root { color-scheme: light dark; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  max-width: 42em; margin: 1.25rem auto; padding: 0 1rem 4rem;
+  line-height: 1.55; font-size: 17px;
+  background: #fff; color: #1b1b1b;
+}
+@media (prefers-color-scheme: dark) {
+  body { background: #111; color: #e4e4e4; }
+  a { color: #7ab7ff; }
+  code, pre { background: #1e1e1e; color: #f0f0f0; }
+  blockquote { border-color: #444; color: #bbb; }
+  table { border-color: #333; }
+  th, td { border-color: #333; }
+  th { background: #1e1e1e; }
+}
+h1, h2, h3, h4 { line-height: 1.2; margin-top: 1.8em; }
+h1 { font-size: 1.7em; border-bottom: 1px solid rgba(128,128,128,0.3); padding-bottom: 0.3em; }
+h2 { font-size: 1.35em; border-bottom: 1px solid rgba(128,128,128,0.2); padding-bottom: 0.2em; }
+h3 { font-size: 1.15em; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+       background: rgba(128,128,128,0.12); padding: 0.1em 0.35em; border-radius: 4px;
+       font-size: 0.92em; }
+pre { background: rgba(128,128,128,0.12); padding: 0.9em 1em; border-radius: 6px;
+      overflow-x: auto; font-size: 0.9em; }
+pre code { background: transparent; padding: 0; }
+blockquote { border-left: 4px solid #ccc; margin: 1em 0; padding: 0.2em 1em; color: #555; }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.95em; }
+th, td { border: 1px solid #ddd; padding: 0.5em 0.75em; text-align: left; vertical-align: top; }
+th { background: #f5f5f5; }
+img { max-width: 100%; height: auto; }
+hr { border: none; border-top: 1px solid rgba(128,128,128,0.3); margin: 2em 0; }
+ul, ol { padding-left: 1.5em; }
+a { color: #0366d6; text-decoration: none; }
+a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<h1 id="psycheeval-session-summary">PsycheEval — Session Summary</h1>
+<p><strong>Date</strong>: 2026-04-25
+<strong>Run tag</strong>: <code>2026-04-20_micro</code>
+<strong>Posture</strong>: private notes / internal audit trail
+<strong>Scope</strong>: v0.1 brief integration + v0.2 implementation + critical drift fix</p>
+<hr />
+<h2 id="tldr">TL;DR</h2>
+<p>The pilot's central claim is now testable on multiple instruments and lands the same way on each:</p>
+<blockquote>
+<p><strong>Behavioural contracts (C3, C4) outperform source-packet personas (C5) under the cleanest comparison the pilot supports — same author, cross-provider judge, head-to-head pairwise. C3 vs C5 = 65.6% / 34.4%; C4 vs C5 = 57.6% / 42.4%. Even on home turf (PI-only with high-grounding source packets), the same ordering holds. C4's anti-sycophancy clauses give a small marginal lift over C3 in pairwise terms (56.6% / 42.1%), not a transformative one. The v0.1 finding worth carrying into v0.2: source packets may induce public-archetype echo — recognizably coherent but less scenario-specific, more generic responses.</strong></p>
+</blockquote>
+<p>This session also fixed a load-bearing drift risk in the prompt vocabulary (the v0.2 +6 red-flag labels would have silently failed to propagate) and shipped an analyzer extension that handles both 0–5 and 0–10 rubrics so v0.2 can run cleanly.</p>
+<hr />
+<h2 id="1-bug-fixed-pairwise-prompt-vs-redflag-enum-drift">1. Bug fixed: pairwise prompt vs RedFlag enum drift</h2>
+<p><strong>Problem</strong>: The first pairwise judging run failed validation on essentially every record. Both judges returned free-text descriptions like <code>"length without proportional added signal"</code> in the <code>red_flags_A</code> / <code>red_flags_B</code> arrays, which the <code>PairwiseScore</code> Pydantic model rejected as enum-invalid. The pairwise prompt (<code>07_pairwise_judge.md</code>) had never enumerated valid label names. Compounding this: the v0.2 brief adds 6 new labels, so even hardcoded lists in <code>06_judge.md</code> and the new anchored prompt would have drifted away from the Python <code>RedFlag</code> enum without anyone noticing until the data was already corrupted.</p>
+<p><strong>Fix</strong>:</p>
+<ol>
+<li><code>RedFlag</code> enum is now the single source of truth (24 labels: 18 v0.1 + 6 v0.2).</li>
+<li><code>RED_FLAG_DESCRIPTIONS</code> dict pairs a one-line description with each label.</li>
+<li><code>render_red_flag_vocabulary(style)</code> emits the controlled vocabulary in either <code>labels_only</code> or <code>labels_with_descriptions</code> form.</li>
+<li>All three prompt files now use <code>{{RED_FLAGS_VOCABULARY}}</code> / <code>{{RED_FLAGS_VOCABULARY_WITH_DESCRIPTIONS}}</code> placeholders. <code>_substitute_red_flag_vocabulary()</code> fills them at render time.</li>
+<li><code>_coerce_red_flags()</code> now returns <code>(valid, invalid)</code> rather than just dropping invalid labels. Invalid labels are appended to <code>runs/&lt;tag&gt;/validation_warnings.jsonl</code> with judge / author / condition / label / context-id / timestamp — thread-safe via a global lock. Nothing is silently erased.</li>
+<li><strong>Drift-prevention tests</strong> (<code>tests/test_prompt_vocabulary.py</code>, 8 tests):
+   - Descriptions cover the enum exactly once (no missing, no extras).
+   - Each renderer emits every enum value.
+   - Each prompt file contains the placeholder and <strong>cannot</strong> contain ≥3 backticked enum labels (catches re-introduction of hardcoded lists).
+   - Substitution leaves no placeholder behind and is idempotent.
+   - JSON schema enums for <code>JudgeScore</code>, <code>AnchoredJudgeScore</code>, <code>PairwiseScore</code> must match <code>RedFlag</code> exactly (fails CI if someone edits <code>models.py</code> without rerunning <code>psycheeval.export_schemas</code>).</li>
+</ol>
+<p><strong>Result</strong>: 0 validation errors across all subsequent judge runs. Future enum changes propagate to every prompt automatically.</p>
+<hr />
+<h2 id="2-pairwise-restart-with-parallelism">2. Pairwise restart with parallelism</h2>
+<p><strong>Problem</strong>: At ~37s per call sequential, the 3 504 pairwise calls would have taken ~6 days.</p>
+<p><strong>Fix</strong>: Added <code>ThreadPoolExecutor</code> parallelism + <code>--workers N</code> flag to both <code>score_all</code> and <code>pairwise_all</code>. Writes serialized through a lock; resume state is pre-computed once before the pool starts.</p>
+<p><strong>Outcome</strong>:</p>
+<ul>
+<li>GPT-5.4-as-judge: 1 752 / 1 752 records — <strong>complete</strong>.</li>
+<li>Opus-as-judge: hit Claude Max usage cap during the burst (4 workers was too aggressive). 888 / 1 752 records on disk after a 2-worker backfill recovered another 357. Final coverage: <strong>75% of the ideal 3 504 (2 640 pairwise records)</strong>.</li>
+<li>Cross-provider same-author pairs in the dataset: 583. PI-only same-author cross-provider: 333. These are the cells that drive the pairwise findings below.</li>
+</ul>
+<hr />
+<h2 id="3-pairwise-findings-the-load-bearing-v01-result">3. Pairwise findings (the load-bearing v0.1 result)</h2>
+<p>All numbers below are cross-provider judged + same-author paired, which is the cleanest comparison the pilot supports. Ties split 0.5 / 0.5 in win-rates.</p>
+<h3 id="per-condition-win-rate-all-personas">Per-condition win-rate (all personas)</h3>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Win rate</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C0</td>
+<td>0.274</td>
+<td>No-profile baseline; gets clobbered</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>0.430</td>
+<td>Bare trait labels — better than C0, worse than any structured profile</td>
+</tr>
+<tr>
+<td><strong>C3</strong></td>
+<td><strong>0.645</strong></td>
+<td>Behavioural contract — highest in the dataset</td>
+</tr>
+<tr>
+<td><strong>C4</strong></td>
+<td><strong>0.638</strong></td>
+<td>Contract + anti-sycophancy clauses — within noise of C3</td>
+</tr>
+<tr>
+<td>C5</td>
+<td>0.523</td>
+<td>Source-packet-informed — beats baseline / labels but loses to either contract</td>
+</tr>
+</tbody>
+</table>
+<h3 id="condition-pair-preferences-head-to-head">Condition-pair preferences (head-to-head)</h3>
+<table>
+<thead>
+<tr>
+<th>Pair</th>
+<th>n</th>
+<th>First wins</th>
+<th>Second wins</th>
+<th>Ties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C0 vs C1</td>
+<td>75</td>
+<td>0.280</td>
+<td><strong>0.693</strong></td>
+<td>0.027</td>
+</tr>
+<tr>
+<td>C0 vs C3</td>
+<td>75</td>
+<td>0.227</td>
+<td><strong>0.747</strong></td>
+<td>0.027</td>
+</tr>
+<tr>
+<td>C0 vs C4</td>
+<td>76</td>
+<td>0.263</td>
+<td><strong>0.724</strong></td>
+<td>0.013</td>
+</tr>
+<tr>
+<td>C0 vs C5</td>
+<td>33</td>
+<td>0.303</td>
+<td><strong>0.667</strong></td>
+<td>0.030</td>
+</tr>
+<tr>
+<td>C1 vs C3</td>
+<td>75</td>
+<td>0.253</td>
+<td><strong>0.747</strong></td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>C1 vs C4</td>
+<td>75</td>
+<td>0.360</td>
+<td><strong>0.640</strong></td>
+<td>0.000</td>
+</tr>
+<tr>
+<td>C1 vs C5</td>
+<td>33</td>
+<td>0.364</td>
+<td><strong>0.636</strong></td>
+<td>0.000</td>
+</tr>
+<tr>
+<td><strong>C3 vs C4</strong></td>
+<td>76</td>
+<td>0.421</td>
+<td><strong>0.566</strong></td>
+<td>0.013</td>
+</tr>
+<tr>
+<td><strong>C3 vs C5</strong></td>
+<td>32</td>
+<td><strong>0.656</strong></td>
+<td>0.344</td>
+<td>0.000</td>
+</tr>
+<tr>
+<td><strong>C4 vs C5</strong></td>
+<td>33</td>
+<td><strong>0.576</strong></td>
+<td>0.424</td>
+<td>0.000</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-the-pairwise-data-actually-shows">What the pairwise data actually shows</h3>
+<ol>
+<li><strong>Every profile beats no-profile.</strong> C0 loses every head-to-head by 36–52 points. The simplest result is the most secure: adding any user profile is better than adding none.</li>
+<li><strong>Behavioural contracts beat source-packet personas head-to-head.</strong> C3 vs C5 = 31-point margin to C3. C4 vs C5 = 15-point margin to C4. The cross-provider + same-author design is the cleanest comparison the pilot supports, and the direction is unambiguous: when the same author writes a response under a behavioural contract vs the same author writing under a source packet, the cross-provider judge prefers the behavioural-contract response more often than the reverse.</li>
+<li><strong>C4 beats C3 narrowly.</strong> 14-point margin. The anti-sycophancy / motive-uncertainty / repair clauses produce a real but modest pairwise lift over plain C3. The margin is smaller than C3-over-C5 (31 points), suggesting the load-bearing variable is "is there a behavioural contract at all," not "are there anti-sycophancy clauses on top." v0.2 will pressure-test this with the C4_shuffled length-control: if C4_shuffled also beats C3 by ~14 points, the C4-over-C3 lift is from added text, not from clause structure.</li>
+</ol>
+<h3 id="pi-only-sharpens-the-c5-picture">PI-only sharpens the C5 picture</h3>
+<p>Within the public-inspired subset (where the source packets were actually built), the same ordering holds:</p>
+<table>
+<thead>
+<tr>
+<th>Pair</th>
+<th>n</th>
+<th>First wins</th>
+<th>Second wins</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>C3 vs C4</strong></td>
+<td>33</td>
+<td>0.515</td>
+<td>0.485</td>
+</tr>
+<tr>
+<td><strong>C3 vs C5</strong></td>
+<td>32</td>
+<td><strong>0.656</strong></td>
+<td>0.344</td>
+</tr>
+<tr>
+<td><strong>C4 vs C5</strong></td>
+<td>33</td>
+<td><strong>0.576</strong></td>
+<td>0.424</td>
+</tr>
+</tbody>
+</table>
+<p>Two reads worth carrying:</p>
+<ul>
+<li><strong>C3 vs C4 within PI is essentially a tie</strong> (51.5% / 48.5%). The C4 lift over C3 in the all-persona block is being driven by pure-synthetic personas, where anti-sycophancy clauses help more, not by public-inspired ones. Public-inspired personas already produce more challenge-flavored baseline responses, so the explicit anti-sycophancy clauses have less marginal room.</li>
+<li><strong>C5 still loses to C3 by 31 points and to C4 by 15 points within PI-only — the home turf where the source packet was actually built for these personas.</strong> This is the strongest evidence in the pilot for the public-archetype-echo hypothesis: even where source packets ought to look best, behavioural contracts win.</li>
+</ul>
+<hr />
+<h2 id="4-the-c5-public-archetype-echo-synthesis">4. The C5 / public-archetype-echo synthesis</h2>
+<p>The v0.1 finding with the largest framing implications. Pulled together because it shows up on three independent instruments:</p>
+<ol>
+<li><strong>Scalar means (cross-provider, PI-only)</strong>: C5 − C4 ranges from −0.021 (<code>boundary_safety</code>) to −0.292 (<code>profile_fit</code>). C5 is worse than C4 on every dimension and red-flag rate jumps from 0.104 at C4 to 0.271 at C5.</li>
+<li><strong>Red-flag pattern (PI-only)</strong>: <code>generic_slop</code> climbs from 0.042 at C4 to 0.125 at C5 — a 3× increase. <code>style_mimicry_overfit</code> appears only at C0 and C5, never at C1/C3/C4. <code>overpersonalization</code>, <code>diagnostic_overreach</code>, <code>fake_certainty</code>, and <code>missed_boundary</code> all tick up at C5 relative to C4. The failure modes C4 suppresses are the ones C5 reintroduces.</li>
+<li><strong>Pairwise (PI-only, cross-provider, same-author)</strong>: C5 loses to C3 by 31 points and to C4 by 15 points, head-to-head.</li>
+</ol>
+<p><strong>Hypothesis</strong>: source packets help the model locate a familiar public voice and then produce advice in that voice rather than advice <em>to this user in this scenario</em>. "Founder-type advice," "rationalist-voice advice," "linguistic-rigor advice" looks coherent (which is why same-provider judges over-credit it: GPT-judging-GPT at C5 inflated interpretive-dimension scores by +0.500 to +0.583) but it's less scenario-specific and less personalized than a behavioural contract.</p>
+<p><strong>One concrete example</strong>: the failure cards include a <code>source_unfaithfulness</code> instance at C5 — a Pawl Gram scenario where the model produced unsolicited citations-from-memory that weren't in the actual source packet. That is exactly the public-archetype-echo mechanism, in vitro.</p>
+<p><strong>Implication for v0.2</strong>: source packets need to be translated into behavioural constraints before the author sees them, rather than fed through as worldview fuel. The kit §7 ingestion prompt rework is the v0.2-§8 candidate. The new red-flag label <code>public_archetype_echo</code> operationalizes the hypothesis directly so v0.2 can falsify it rather than infer it.</p>
+<hr />
+<h2 id="5-v01-report-restructure-per-brief">5. v0.1 report restructure (per brief)</h2>
+<p>The pre-revision report mixed same-provider and cross-provider judges in the main "Dimension means by condition" table — the brief's primary methodological flag. The restructure:</p>
+<ul>
+<li><strong>Primary tables: cross-provider judged only.</strong> Every Opus output scored by GPT-5.4 judge; every GPT-5.4 output scored by Opus judge. Same-provider scores excluded.</li>
+<li><strong>All-judge means demoted to Appendix A</strong>, clearly labeled secondary.</li>
+<li><strong>C5 isolated to PI-only subset.</strong> Never compared against global C0–C4 means.</li>
+<li><strong>PI-only and PS-only per-condition tables added.</strong></li>
+<li><strong>Narrative sections added</strong>: "What PsycheEval is testing," "How to read this pilot," "What this pilot can and cannot show," explicit C4 framing as a behavioural contract, fictionalized-public-anchor reframing for the public-inspired personas, softened claim language per brief §9 + §26, expanded ceiling-effect discussion, dedicated C5 / public-archetype-echo synthesis section.</li>
+<li><strong>Pairwise section</strong> populated with the tables above.</li>
+<li><strong>Pre-revision snapshot</strong> archived at <code>reports/archive/v0.1-pre-brief-revision/</code> with a MANIFEST.</li>
+</ul>
+<p>The cross-provider numbers are materially different from the old all-judge numbers in the right direction. C4 − C0 deltas are <em>larger</em> than the pre-revision report claimed (profile_fit +0.541 vs old +0.402; helpfulness +0.364 vs old +0.276). The halo was suppressing apparent improvement at the bottom of the rubric and inflating it at C5.</p>
+<hr />
+<h2 id="6-v02-implementation-status">6. v0.2 implementation status</h2>
+<p>Per the brief's "Document + implement + run v0.2 now" choice, the full pipeline is in place. <strong>Code: complete. Execution: queued (waiting on quota window).</strong></p>
+<h3 id="done-codedata">Done (code/data)</h3>
+<table>
+<thead>
+<tr>
+<th>Piece</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Condition.C1_PADDED</code>, <code>C4_SHUFFLED</code></td>
+<td>added to enum</td>
+</tr>
+<tr>
+<td><code>RedFlag</code> +6 labels (mind_reading_collusion, repair_avoidance, identity_locking, public_archetype_echo, moral_laundering, pseudo_depth)</td>
+<td>added</td>
+</tr>
+<tr>
+<td><code>prompts/06b_judge_anchored.md</code> (0–10 anchored rubric per brief §14)</td>
+<td>written</td>
+</tr>
+<tr>
+<td><code>data/v02_hard_scenarios_seed.jsonl</code> (10 hand-crafted scenarios per brief §17)</td>
+<td>written</td>
+</tr>
+<tr>
+<td><code>psycheeval.v02_prepare</code> — programmatic C1_padded + C4_shuffled builder</td>
+<td>written + executed (80 scenarios + 8 bundles materialized)</td>
+</tr>
+<tr>
+<td><code>config.PILOT_CONDITIONS</code> + <code>conditions_for()</code></td>
+<td>added</td>
+</tr>
+<tr>
+<td><code>run.py</code> per-pilot condition routing + <code>--workers N</code></td>
+<td>added</td>
+</tr>
+<tr>
+<td><code>judge.py</code> <code>--rubric anchored --workers N --pairs &lt;whitelist&gt;</code></td>
+<td>added</td>
+</tr>
+<tr>
+<td><code>AnchoredJudgeScore</code> / <code>JudgeScoresAnchored</code> models + schema export</td>
+<td>added</td>
+</tr>
+<tr>
+<td>Anchored-scores analyzer path (compute_metrics handles 0–5 and 0–10 in parallel; scales never mix)</td>
+<td>added</td>
+</tr>
+<tr>
+<td>Length-control delta blocks (C4−C1, C4−C1_PADDED, C4−C4_SHUFFLED, C4−C5 PI-only, C3−C4)</td>
+<td>added</td>
+</tr>
+<tr>
+<td>Token / character summary by condition</td>
+<td>added</td>
+</tr>
+<tr>
+<td>Targeted pairwise scope (<code>--pairs "C4:C0,C4:C1,C4:C1_padded,C4:C4_shuffled,C3:C4,C1:C1_padded,C4:C5@PI"</code>)</td>
+<td>added</td>
+</tr>
+<tr>
+<td>Synthetic fixture + analyzer end-to-end smoke test (procedural fixture, exercises every code path including length controls and v0.2 anchored block)</td>
+<td>added</td>
+</tr>
+<tr>
+<td>Drift-prevention test suite</td>
+<td>8/8 passing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Test suite: 29/29 passing.</strong></p>
+<h3 id="v02-dry-run-manifest">v0.2 dry-run manifest</h3>
+<p><code>psycheeval.run --pilot v02_hard_pilot --tag 2026-04-25_v02_hard --dry-run</code> reports <strong>1 040 outputs</strong> to generate (PI: 560, PS: 480; 80 scenarios × 6 core conditions + 1 PI extra × 2 authors).</p>
+<h3 id="pending-execution">Pending (execution)</h3>
+<pre><code class="language-bash"># Already prepared:
+uv run python -m psycheeval.v02_prepare
+
+# Queued (~3h at 4 workers, modulo Claude Max windows):
+uv run python -m psycheeval.run --pilot v02_hard_pilot --tag 2026-04-25_v02_hard --workers 4
+
+# Anchored scalar judging (~3-4h at 4 workers):
+uv run python -m psycheeval.judge score \
+  --tag 2026-04-25_v02_hard --pilot v02_hard_pilot \
+  --judges opus,gpt-5.4 --workers 4 --rubric anchored
+
+# Targeted pairwise (~3-4h at 4 workers; smaller than v0.1's all-pairs because the whitelist cuts the scope):
+uv run python -m psycheeval.judge pairwise \
+  --tag 2026-04-25_v02_hard --pilot v02_hard_pilot \
+  --judges opus,gpt-5.4 --workers 4 \
+  --pairs &quot;C4:C0,C4:C1,C4:C1_padded,C4:C4_shuffled,C3:C4,C1:C1_padded,C4:C5@PI&quot;
+
+# Analyze:
+uv run python -m psycheeval.analyze --tag 2026-04-25_v02_hard --pilot v02_hard_pilot
+</code></pre>
+<p><strong>Recommendation</strong>: start v0.2 generation when there's a clean Claude Max window (avoid contending with any v0.1 backfill). Worker count of 4 is the sweet spot for GPT-5.4; consider 2 for Opus to avoid the burst-cap that hit pairwise.</p>
+<hr />
+<h2 id="7-open-items-next-session">7. Open items / next session</h2>
+<ol>
+<li><strong>Opus pairwise backfill remainder.</strong> 864 records still missing. The two backfill bursts each hit the Claude Max window. A third pass at 1–2 workers, ideally outside peak hours, should complete it. The current 75% coverage is enough for the v0.1 conclusions above; running it to 100% would mostly tighten error bars on the per-condition cells, not change directions.</li>
+<li><strong>v0.2 generation + judging.</strong> Pipeline is ready. Estimated total wall time: ~10–14 hours of active LLM call time spread across whatever windows are available.</li>
+<li><strong>Inter-judge agreement stats.</strong> Cohen's κ on red-flag labels and Spearman on dimension scores between Opus and GPT-5.4. Not blocking but worth adding to the v0.1 report once the Opus backfill is complete.</li>
+<li><strong>Human calibration sample.</strong> Brief §18: 20–50 outputs, 2–3 raters, hardest scenario families. Tracked in BACKLOG.md as a v0.2-or-later candidate.</li>
+<li><strong>Not committed.</strong> Working tree has all the above plus earlier session work. Holding off on <code>git commit</code> until you say to bundle.</li>
+</ol>
+<hr />
+<h2 id="8-changed-files-new-files">8. Changed files / new files</h2>
+<pre><code>NEW  psycheeval/docs/v0.2_plan.md
+NEW  psycheeval/docs/session_summary_2026-04-25.md  ← this file
+NEW  psycheeval/data/v02_hard_scenarios_seed.jsonl
+NEW  psycheeval/data/v02_hard_pilot/                (scenarios + bundles + user records)
+NEW  psycheeval/prompts/06b_judge_anchored.md
+NEW  psycheeval/src/psycheeval/v02_prepare.py
+NEW  psycheeval/tests/test_prompt_vocabulary.py
+NEW  psycheeval/tests/test_analyzer_smoke.py
+NEW  psycheeval/reports/archive/v0.1-pre-brief-revision/  (snapshot + MANIFEST)
+NEW  psycheeval/schemas/anchored_judge_score.schema.json
+
+MOD  psycheeval/BACKLOG.md
+MOD  psycheeval/prompts/06_judge.md            (placeholder + drift instructions)
+MOD  psycheeval/prompts/07_pairwise_judge.md   (placeholder + drift instructions)
+MOD  psycheeval/reports/psycheeval_v0_1_micro_pilot_2026-04-20_micro.md  (full restructure + pairwise tables)
+MOD  psycheeval/reports/metrics_2026-04-20_micro.json  (cross-provider primary + anchored block)
+MOD  psycheeval/src/psycheeval/analyze.py      (refactored; 0–5 and 0–10 paths)
+MOD  psycheeval/src/psycheeval/config.py       (per-pilot condition map)
+MOD  psycheeval/src/psycheeval/judge.py        (workers, rubric, pairs whitelist, validation warnings)
+MOD  psycheeval/src/psycheeval/models.py       (Condition + RedFlag + AnchoredJudgeScore + RED_FLAG_DESCRIPTIONS + render_red_flag_vocabulary)
+MOD  psycheeval/src/psycheeval/run.py          (parallel + per-pilot conditions)
+</code></pre>
+<p><strong>Test suite</strong>: 29 / 29 passing (11 model tests + 3 manifest tests + 8 LLM helper tests + 8 prompt vocabulary tests + 2 analyzer smoke tests, with the original 5 + 3 carried forward).</p>
+</body>
+</html>

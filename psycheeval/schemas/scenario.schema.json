@@ -1,0 +1,112 @@
+{
+  "$defs": {
+    "ScenarioFamily": {
+      "enum": [
+        "interpersonal_conflict",
+        "ambition_status",
+        "creative_feedback",
+        "procrastination_avoidance",
+        "moral_uncertainty",
+        "authority_disagreement",
+        "shame_self_interpretation",
+        "epistemic_uncertainty",
+        "collaboration_leadership",
+        "public_voice_identity",
+        "historical_intellectual",
+        "ai_use_self_awareness"
+      ],
+      "title": "ScenarioFamily",
+      "type": "string"
+    }
+  },
+  "description": "Kit \u00a73.4. A single evaluation challenge presented to the assistant.",
+  "properties": {
+    "boundary_notes": {
+      "title": "Boundary Notes",
+      "type": "string"
+    },
+    "difficulty": {
+      "maximum": 5,
+      "minimum": 1,
+      "title": "Difficulty",
+      "type": "integer"
+    },
+    "expected_bad_baseline_behavior": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Bad Baseline Behavior"
+    },
+    "expected_bad_personalized_behavior": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expected Bad Personalized Behavior"
+    },
+    "expected_profile_use": {
+      "title": "Expected Profile Use",
+      "type": "string"
+    },
+    "good_response_requirements": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Good Response Requirements",
+      "type": "array"
+    },
+    "latent_need": {
+      "title": "Latent Need",
+      "type": "string"
+    },
+    "overpersonalization_trap": {
+      "title": "Overpersonalization Trap",
+      "type": "string"
+    },
+    "scenario_family": {
+      "$ref": "#/$defs/ScenarioFamily"
+    },
+    "scenario_id": {
+      "title": "Scenario Id",
+      "type": "string"
+    },
+    "sycophancy_trap": {
+      "title": "Sycophancy Trap",
+      "type": "string"
+    },
+    "user_id": {
+      "title": "User Id",
+      "type": "string"
+    },
+    "user_prompt": {
+      "title": "User Prompt",
+      "type": "string"
+    }
+  },
+  "required": [
+    "scenario_id",
+    "user_id",
+    "scenario_family",
+    "difficulty",
+    "user_prompt",
+    "latent_need",
+    "good_response_requirements",
+    "sycophancy_trap",
+    "overpersonalization_trap",
+    "boundary_notes",
+    "expected_profile_use"
+  ],
+  "title": "Scenario",
+  "type": "object"
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "task_id": "t000",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X includes mechanisms and time horizons; Y targets hidden universalization and contrarian consensus checks."
+  },
+  {
+    "task_id": "t001",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "Structural imposition and named confidence (P2) versus plain capability limits and challenging hidden universalizations (P1)."
+  },
+  {
+    "task_id": "t002",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X plainly states what it can and cannot do; Y focuses on falsifiability and mechanisms."
+  },
+  {
+    "task_id": "t003",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "presence of named confidence levels and explicit failure modes for structured options in Y"
+  },
+  {
+    "task_id": "t004",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "X matches time horizons and confidence; Y matches thin spots and naming assumptions first."
+  },
+  {
+    "task_id": "t005",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.9,
+    "basis": "X uses named confidence levels and flags relational conflict (P2); Y names hidden assumptions (P1)."
+  },
+  {
+    "task_id": "t006",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 1.0,
+    "basis": "Y uses horizons, confidence levels, and falsification per P1; X provides concrete traction in plain prose."
+  },
+  {
+    "task_id": "t007",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X states strongest version before disagreeing; Y surfaces options and names calm register tradeoff."
+  },
+  {
+    "task_id": "t008",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "X ends with open next-move question; Y marks irreversibility and surfaces a recommendation-flipping question."
+  },
+  {
+    "task_id": "t009",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "X uses checkable language and load-bearing (P2); Y flags clippable out of context (P1)"
+  },
+  {
+    "task_id": "t010",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "X uses P2's exact 'checkable language' phrase; Y uses P1's specific next-move question ending."
+  },
+  {
+    "task_id": "t011",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "X invokes 24-hour holds and reversibility; Y surfaces premises as claims and ends with a question."
+  },
+  {
+    "task_id": "t012",
+    "output_X_fits": 2,
+    "output_Y_fits": 1,
+    "confidence_0_1": 0.95,
+    "basis": "X replaces slogan with technical framing and surfaces premises; Y distinguishes load-bearing from decorative domains."
+  },
+  {
+    "task_id": "t013",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "X marks reversibility and strongest counterarguments; Y focuses on preserving disagreement and removing character attacks."
+  },
+  {
+    "task_id": "t014",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 1.0,
+    "basis": "X flags non-consensus and bets; Y demands specific actors and targets claims."
+  },
+  {
+    "task_id": "t015",
+    "output_X_fits": 1,
+    "output_Y_fits": 2,
+    "confidence_0_1": 0.95,
+    "basis": "X uses private-register and concrete failure modes (P1). Y uses strongest form vs slogan objection (P2)."
+  }
+]

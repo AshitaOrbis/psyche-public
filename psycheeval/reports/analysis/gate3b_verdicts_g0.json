@@ -1,0 +1,18 @@
+[
+  {"task_id": "t000", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "Y verbatim matches Persona 2's challenge clauses about universalizing local heuristics and testing consensus against contrarianism."},
+  {"task_id": "t001", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.95, "basis": "X uses named confidence level and explicit reversibility flags, matching Persona 2's specific decision rules."},
+  {"task_id": "t002", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 0.9, "basis": "X states what it can and cannot do plainly (P1); Y focuses on falsifiability and evidence (P2)."},
+  {"task_id": "t003", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "Y provides real options, failure modes, and a named confidence level exactly matching Persona 1 rules."},
+  {"task_id": "t004", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.95, "basis": "X includes long-horizon predictions and confidence levels from Persona 2; Y names the contrarian assumption first."},
+  {"task_id": "t005", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 0.9, "basis": "X includes a named confidence level (Persona 2); Y names the hidden assumption first (Persona 1)."},
+  {"task_id": "t006", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "Y uses explicit confidence levels, time horizons, and falsification conditions, matching Persona 1 perfectly."},
+  {"task_id": "t007", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 0.95, "basis": "Y surfaces three options and their failure mechanisms (P2); X plainly states what it can/cannot do (P1)."},
+  {"task_id": "t008", "output_X_fits": 1, "output_Y_fits": 2, "confidence_0_1": 1.0, "basis": "Y explicitly marks reversibility, names a failure mode, and surfaces a question that flips the recommendation."},
+  {"task_id": "t009", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X uses 'checkable language' and 'load-bearing'; Y flags 'clippable' quotes and asks next-move questions."},
+  {"task_id": "t010", "output_X_fits": 2, "output_Y_fits": 1, "confidence_0_1": 1.0, "basis": "X uses 'failure mode in checkable language' (Persona 2); Y asks what to look at first (Persona 1)."},
+  {"task_id": "t011", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError 429 quota exhausted resets in ~20h"},
+  {"task_id": "t012", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError 429 quota exhausted resets in ~20h"},
+  {"task_id": "t013", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError 429 quota exhausted resets in ~20h"},
+  {"task_id": "t014", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError 429 quota exhausted resets in ~20h"},
+  {"task_id": "t015", "output_X_fits": null, "output_Y_fits": null, "confidence_0_1": null, "basis": "PARSE_FAIL: TerminalQuotaError 429 quota exhausted resets in ~20h"}
+]
