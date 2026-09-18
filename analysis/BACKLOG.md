@@ -54,7 +54,7 @@ C shift (+23.4) was the truncation bug's primary casualty — academic papers (h
 | contact-b-third-person | 71.0 | 24.5 | 90.0 | 38.0 | 60.0 | **5.6** | Third-person (about the author) |
 | v2-dual-pov | — | — | — | — | — | — | Dual PoV (blended, contains an interlocutor) — withheld |
 | contact-b-dual-pov | — | — | — | — | — | — | Dual PoV (blended, contains an interlocutor) — withheld |
-_Withheld: the two interlocutor rows measure other private individuals from the subject's correspondence. No owner ruling reaches other people's derived personal data (DECISIONS `SP-owner-psychometrics-public`, 2026-08-23, explicit carve-out), so their values and the quantities that recover them are not published here. The author-perspective rows are retained under that same ruling._
+_Withheld: the two interlocutor rows measure other private individuals from the subject's correspondence. No owner ruling reaches other people's derived personal data (DECISIONS `SP-owner-psychometrics-public`, 2026-08-23, explicit carve-out), so their values and the quantities that recover them are not published here. The author-perspective rows are retained under that same ruling. These values are withheld from this revision on: the author chose to withhold them going forward rather than rebuild the repository, treating this derived comparison as outside the standing rule that personal data reaching a public repository is remedied with a new repository (DECISIONS `d-20260918-psyche-interlocutor-gap-option-a`); that rule is unchanged for profiles and personal data proper._
 
 ### Verdict: **Signal preservation supported** (Decision Matrix row 1)
 
@@ -120,7 +120,7 @@ For reference, the the author PoV analysis produced these scores:
 | v3 | 75 | 25 | 91 | 56 | 69 | 23,876 | 11.4 |
 | v2+v3 | 75 | 26 | 88 | 50 | 58 | 40,055 | 8.8 |
 
-The interlocutor PoV scores need to differ by *more* than the within-the author variance (~8-11 mean Δ against the corrected baseline) to support differentiation. A critical finding would be if ALL perspective files produce essentially the same profile (within ~5 points per dimension), which would indicate model-invariant output rather than genuine personality encoding.
+The interlocutor PoV scores need to differ by more than the within-author variance to support differentiation. _The threshold is not restated here: the verdict above reports that the interlocutor rows cleared it, so naming the number would publish a lower bound on the very magnitudes that verdict's note withholds. The author's own within-subject variance is in the table above; the calibration against the withheld rows is not._ A critical finding would be if ALL perspective files produce essentially the same profile (within ~5 points per dimension), which would indicate model-invariant output rather than genuine personality encoding.
 
 ---
 
@@ -177,7 +177,7 @@ Models: Claude Opus/Sonnet/Haiku, GPT-5.4 (xhigh), GPT-5.4 (medium), GPT-5.3 Ins
 
 ### ~~NEW-8: Third-Person Replication~~ COMPLETED (2026-04-14)
 
-3 Opus runs. Mean |Δ| = 7.1 (SD=0.3, CI [6.2, 8.0]). Third-person delta highly stable and below interlocutor delta (10.7-12.3). Supports model-as-simulator claim. Full results: `experiments/methodology-supplement/new-experiments-results.md`.
+3 Opus runs. Mean |Δ| = 7.1 (SD=0.3, CI [6.2, 8.0]). Third-person delta highly stable. Supports model-as-simulator claim. _The comparison against the interlocutor rows is withheld with their magnitudes — stating the direction of the comparison still discloses a bound on another person's derived values._ Full results: `experiments/methodology-supplement/new-experiments-results.md`.
 
 ### ~~NEW-1: Academic Slice/Shuffle Debias Test~~ COMPLETED (2026-04-14)
 

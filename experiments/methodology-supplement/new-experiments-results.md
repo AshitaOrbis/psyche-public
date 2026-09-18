@@ -2,7 +2,9 @@
 
 ## NEW-8: Third-Person Replication
 
-**Question**: Is the third-person delta (3.7-5.6) as stable as the interlocutor delta?
+**Question**: How stable is the third-person delta (3.7-5.6) under replication?
+
+_Withheld: the interlocutor rows measure other private individuals from the subject's correspondence. No owner ruling reaches other people's derived personal data (DECISIONS `SP-owner-psychometrics-public`, 2026-08-23, explicit carve-out), so their values and the interlocutor-vs-subject gap are not published here. This matches the treatment of the same rows in `analysis/BACKLOG.md` and `results-report-v3.md`. These values are withheld from this revision on: the author chose to withhold them going forward rather than rebuild the repository, treating this derived comparison as outside the standing rule that personal data reaching a public repository is remedied with a new repository (DECISIONS `d-20260918-psyche-interlocutor-gap-option-a`); that rule is unchanged for profiles and personal data proper._
 
 **Method**: 3 Opus runs on subject-third-person narrative.
 
@@ -22,7 +24,7 @@
 
 The third-person delta is **highly stable** (SD of mean |Δ| = 0.3). The mean of 7.1 is slightly higher than the prior single-run estimate of 5.6 but well within the expected evaluator variance range. Crucially:
 
-1. **Third-person delta (7.1) < Interlocutor delta (10.7-12.3)**: The narrative about the subject preserves their personality signal better than narratives from other perspectives.
+1. **Third-person delta is 7.1, and stable**: the narrative about the subject preserves their personality signal well. _The comparison against the interlocutor rows is withheld together with their magnitudes: stating which is larger still publishes a bound on another person's derived values, which is the thing being withheld._
 2. **N inflation is the main driver**: ΔN = +19-21 across all 3 runs (genre effect), while E, O, A stay close to baseline.
 3. **C shows consistent suppression**: ΔC = -6 to -10 across runs, suggesting narrative genre systematically suppresses Conscientiousness signal.
 
