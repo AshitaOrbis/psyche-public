@@ -1,7 +1,7 @@
 # Psyche Public — Ethics Protocol
 
-**Date**: 2026-03-08 (amended 2026-03-09, 2026-03-09, 2026-06-11)
-**Version**: 1.6 — 2026-08-15 amendment, two changes shipping together. (a) **Zero data retention is now pinned** on the report/persona route (`provider.zdr = true`, owner rulings `q-luna-zdr-adopt` = A and `q-psyche-provider-zdr` = A) — it had been ruled twice and implemented nowhere, so participants' written answers had been reaching the serving provider under default retention; every claim surface that said the pin was absent is corrected with it, not before it. (b) The research set is scoped to **adults only** (owner ruling `q-psyche-participants-r2` = A). Eligibility is declared in the level-2 consent and enforced server-side; the assessment itself remains open to everyone and gains no gate. Handling of false declarations and of any record discovered to be a minor's is written out in `docs/PARTICIPANT-ELIGIBILITY.md`, which this document now cites. Prior: 1.5 — 2026-08-12 amendment: corrected the report model and processor throughout (Kimi K2.5 / DeepInfra -> **GPT-5.6 Luna (OpenAI), served through OpenRouter, United States**), which this document had continued to assert after the production switch. Prior: 1.4 (2026-08-11, named-purpose retention holds); 1.3 (2026-06-11, DeepSeek V3.2 -> Kimi K2.5 and the IP-address distinction between application-level logging and hosting-provider request processing). The live consent screen is the authoritative statement of the current model; this document tracks it and is stale whenever they disagree.
+**Date**: 2026-03-08 (amended through 2026-11-20)
+**Version**: 1.8 — 2026-11-20 amendment correcting the report route. Since 18 October 2026 reports and personas are written by Claude Opus 5.5 (or Claude Haiku 5.5) through Anthropic's Claude API, with inference pinned to the United States and **without zero data retention**; this document had gone on describing the retired OpenRouter route and its zero-retention pin. It also narrows the 1.7 interview-warning passage to what is live (the fuller pre-submission warning has not shipped), and corrects two older statements that were untrue: that the MCP route involves no third-party AI processing, and that responses are anonymous. Prior: 1.7 — 2026-08-23, written-answer handling, Europe position, and privacy-contact rulings: identifying details are not detected or altered automatically; raw answers remain restricted and must be de-identified before research export or publication; the dated Europe position and the six-part contact/complaints procedure are recorded below. Prior: 1.6 — 2026-08-15, zero-data-retention pin plus adults-only research scoping. Prior: 1.5 — the number was used twice: for the 2026-08-11 correction of why the scored instruments are website-only (in the log below) and for the 2026-08-12 report model and processor correction (not listed separately in the log). Prior: 1.4 — 2026-08-11, named-purpose retention holds. The live consent screen is the authoritative statement of the current model; this document tracks it and is stale whenever they disagree.
 **Principal Investigator**: Ashita Orbis (independent researcher, Canada-based)
 
 ## Purpose
@@ -12,20 +12,32 @@ This document establishes the ethics protocol for the Psyche Public personality 
 
 Psyche Public is a personality assessment that combines 15 validated psychometric instruments (~260 items) with 10 open-ended interview questions. It is accessible through two pathways:
 
-1. **Website-only flow** (`app.ashitaorbis.com/psyche`): User completes consent, instruments, and interview on the website. An AI model (GPT-5.6 Luna, an OpenAI model served through OpenRouter, US; Kimi K2.5 via DeepInfra before the 2026-08 switch; DeepSeek V3.2 before 2026-03-19) generates narrative personality reports.
-2. **MCP hybrid flow**: User conducts the interview conversationally with Claude (via MCP connector on claude.ai), then completes quantitative instruments on the website. Claude generates the narrative report using the user's own subscription — no third-party AI processing of interview text.
+1. **Website-only flow** (`app.ashitaorbis.com/psyche`): User completes consent, instruments, and interview on the website. An AI model (Claude Opus 5.5 through Anthropic's Claude API, US, or Claude Haiku 5.5 when not enough of the month's budget for Opus 5.5 is left for the request, since 2026-10-18; GPT-5.6 Luna served through OpenRouter from the 2026-08 switch until 2026-10-18; Kimi K2.5 via DeepInfra before that; DeepSeek V3.2 before 2026-03-19) generates narrative personality reports.
+2. **MCP hybrid flow**: User conducts the interview conversationally with Claude (via MCP connector on claude.ai), then completes quantitative instruments on the website. Claude generates the narrative report in that conversation, under the user's own Claude subscription. This project makes no model request on this route; Anthropic handles the conversation under the user's own Claude terms and retention settings, not this project's, and deleting the Psyche session does not delete that conversation.
 
 The research component studies whether AI models can accurately interpret personality from text by comparing model-generated trait predictions against psychometric ground truth (validated instrument scores).
 
 ## Anonymization Approach
 
-**No identifiers are collected at any point:**
+bq-1243 correction (2026-08-23): this section previously read "No identifiers are
+collected at any point," a claim this document cannot make categorically — the stored
+interview text can itself carry a name, location, employer, or other identifying detail
+a participant chooses to type (see "Restricted handling of written answers" and
+"Identifying information in free text" below). What is true, and is the only thing this
+section claims, is narrower: **the application collects no structural/technical
+identifier of the participant**:
 - No IP addresses logged by the application. (The hosting/edge provider, Cloudflare, transiently processes standard request metadata — including IP addresses — to serve requests, as for any hosted site. The application never stores or links this metadata to session data.)
 - No user accounts or authentication
 - No cookies or browser fingerprinting
 - No device identifiers
 - No cross-session identifiers
 - Sessions identified only by UUID v4 (122 bits entropy)
+
+None of the above bears on what a participant writes. Free text is treated as
+potentially identifying until screened, never as anonymous by construction — the
+Exempt Determination Pathway below records the same correction ("pseudonymous," not
+"anonymous") and this section is brought into line with it rather than left to
+contradict it.
 
 **Data stored per session:**
 - Psychometric scale scores (aggregated, not individual items, unless research consent given)
@@ -35,15 +47,39 @@ The research component studies whether AI models can accurately interpret person
 
 **Individual item responses** (per-question answers) are stored only if the participant explicitly opts in to research contribution (Level 2 consent).
 
+## Restricted handling of written answers
+
+The interview screen shows a standing notice asking participants not to include their name,
+location, employer, or other personally identifying details in their responses. A fuller warning
+before submission, which would also name contact details and details about other people, was
+ruled on 2026-08-23 (`q-psyche-written-answers` = A+C) and **has not shipped**; until it does,
+the standing notice is the only warning shown. Identifying content is not altered at capture and
+is not blocked: the participant decides what to submit. The client uses no external name or
+identity detector; sending raw text to another service merely to detect identifiers would itself
+be an additional disclosure. Report generation remains the separately disclosed processing route,
+and it does not have zero data retention (see Report Generation Privacy below).
+
+Raw written answers are stored in the restricted production database for the report and, after
+Level 2 consent, the recorded research purpose. There is no general-purpose admin reader. The
+participant's readback requires the session ID and session secret; operational database access
+requires the production credential path used by the independent researcher. No research-export
+endpoint exists. Before any research export or publication, direct identifiers, contact details,
+and details about other people must be removed structurally from the export, and the result must
+pass the publication privacy gate plus human review. This export-stage de-identification does not
+rewrite the raw record. A participant exporting their own record is a readback, not a research
+export, and therefore receives their own stored text.
+
 ## Consent Design
 
 ### Level 1 — Pre-assessment (required to use the tool)
 
 Presented before any data collection begins. Covers:
 - Not a clinical assessment or diagnosis
-- Anonymous: no IP, no account, no device ID, no cookies
-- Interview text transferred to and processed by a named third-party model, with **zero data retention pinned** so the text is retained at neither hop (specific model, route and provider disclosed). Session data is stored in the United States; report-generation endpoints are published in more than one region and no region is pinned — see Cross-Border Data Transfer
-- Session data stored on US-based servers (Cloudflare) for 7 days, then deleted
+- No structural identifiers collected: no IP, no account, no device ID, no cookies —
+  this describes the application's own tracking, not the content of what you write;
+  your own interview answers are a separate matter, covered by the next two points
+- Interview text and scale scores sent to a named third-party model provider (Anthropic, through its Claude API; the model and route are disclosed), with every request pinned to inference in the United States. The consent states that this route **does not have zero data retention** and gives the provider's standard API retention (30 days) and its longer exceptions — see Cross-Border Data Transfer
+- Session data stored on US-based servers (Cloudflare): deleted 7 days after creation if no report is generated, kept up to 90 days if one is, longer only after the Level 2 research opt-in
 - Scores computed in browser
 - Written for adults, with no age gate: the site cannot verify age, and asking for a
   self-declaration it could not check bought nothing while costing the one visitor it was
@@ -76,7 +112,8 @@ For users who access Psyche through the Claude MCP integration, consent is obtai
 
 The MCP tool description (`take_psyche_interview`) instructs Claude to present the full consent terms before starting the interview. Claude must:
 1. Disclose that this is not a clinical assessment or diagnosis
-2. Explain anonymization (no IP, account, device ID, or cookies collected)
+2. Explain that no structural identifier is collected (no IP, account, device ID, or
+   cookies) — distinct from the identifiability of the participant's own written answers
 3. State that interview text will be stored on US-based servers (Cloudflare) and deleted 7 days later unless the user asks sooner, and that **no psychometric scales are administered on this route**. (Until 2026-08-11 this step read "psychometric scores will be computed in the user's browser." The scales are website-only for the reasons in "Why the scored instruments are website-only" below — the location of the scoring arithmetic is not one of them. The shipped tool text is in the `take_psyche_interview` description.)
 4. Obtain explicit confirmation of understanding (no age confirmation is asked for — see the
    age note below)
@@ -94,12 +131,12 @@ After the MCP user completes instruments on the website and reaches the results 
 
 | Aspect | Web-only flow | MCP hybrid flow |
 |--------|--------------|-----------------|
-| Interview text processing | GPT-5.6 Luna, served through OpenRouter (US) | Claude (Anthropic, user's own subscription) |
-| Third-party AI access | Yes (OpenRouter, and onward to its serving provider). **Zero data retention is pinned** (`provider.zdr = true`, owner rulings `q-luna-zdr-adopt` = A and `q-psyche-provider-zdr` = A), which restricts routing to endpoints retaining neither prompt nor completion — for this model, Microsoft Azure. Content is not retained at either hop; billing and abuse-prevention metadata is. | No |
+| Interview text processing | Claude Opus 5.5, or Claude Haiku 5.5 when not enough of the month's budget is left for Opus 5.5, through Anthropic's Claude API with the site's own key; inference pinned to the US | Claude (Anthropic, user's own subscription) |
+| Third-party AI access | Yes (Anthropic, through its Claude API). **No zero data retention**: under Anthropic's standard API terms, as read on 2026-10-18, inputs and outputs are deleted within 30 days, and can be kept longer in the exceptions those terms set out (see Cross-Border Data Transfer); the key's organisation shows standard 30-day retention. Billing and abuse-prevention records are Anthropic's. (2026-08-15 to 2026-10-18: GPT-5.6 Luna through OpenRouter with zero data retention pinned.) | No model request by this project; the user's own Claude subscription terms apply |
 | Report storage | Database (Cloudflare D1) | Conversation context only |
-| Privacy posture | Disclosed in L1 consent | Equivalent or stronger (no third-party AI) |
+| Privacy posture | Disclosed in L1 consent | No model request by this project; Anthropic handles the conversation under the user's own Claude terms and retention settings, and deleting the Psyche session does not delete that conversation |
 
-In the MCP flow, interview text is processed only by Claude using the user's own subscription. It is not sent to OpenRouter or any third-party model. The consent disclosure for web users explicitly names the report model and OpenRouter because that flow does involve third-party processing; this disclosure does not apply to MCP users. (The disclosure must track the current production model — GPT-5.6 Luna through OpenRouter since the 2026-08 switch.) The MCP consent text omits the OpenRouter reference because it is not applicable.
+In the MCP flow, interview text is processed only by Claude using the user's own subscription. This project makes no model request on that route and sends the text to no model provider; Anthropic handles that conversation under the user's own Claude terms and retention settings, so deleting the Psyche session removes this project's copy, not the conversation. The consent disclosure for web users explicitly names the report model and the Claude API because that flow involves processing under the site's own key; this disclosure does not apply to MCP users. (The disclosure must track the current production model — Claude Opus 5.5 and Claude Haiku 5.5 through the Claude API since 2026-10-18.) The MCP consent text omits the report-route reference because it is not applicable.
 
 ### Why the Scored Instruments Are Website-Only
 
@@ -121,16 +158,18 @@ Full analysis, including the only shape a future version could take and the empi
 
 ## Data Retention
 
-- Active sessions: 7 days, then automatically deleted
-- Completed sessions with Level 2 consent: retained for research
-- Withdrawn sessions: responses and interviews deleted immediately; session record retained with withdrawal_at timestamp
+- Active sessions (no report generated) without Level 2 consent: deleted 7 days after creation
+- Completed sessions (a report generated) without Level 2 consent: up to 90 days, then deleted
+- Sessions with Level 2 consent: retained for research for up to 24 months from the last activity, longer only while a named research purpose holds the session (holds are reviewed once a year; see version 1.4); withdrawal ends a hold
+- Copies held by the report provider: text sent for a report or persona is held by Anthropic under its API retention terms (see Cross-Border Data Transfer). Deleting or withdrawing a session removes this project's copy, not Anthropic's
+- Withdrawn sessions: item answers, interview text and evaluations deleted immediately, and the scores, report, persona and consent record cleared in the same step; the remaining content-free session record (its id, status and timestamps, including the withdrawal time) is removed by the first daily sweep that runs after the withdrawal is more than 24 hours old, so between one and two days after it
 - Excluded sessions (a record discovered to be a minor's): responses, interviews and evaluations deleted, scores/report/persona/consent nulled, any named-purpose hold released, and a content-free tombstone retained — session id, timestamps, how it came to be known, and the authorising ruling. Procedure and rationale: `docs/PARTICIPANT-ELIGIBILITY.md` §5
 - No account, name, email or device identifier is collected, so nothing held links a record to a person by construction; the residual identifiability is the participant's own written answers, which is why these records are treated as pseudonymous rather than anonymous
 
 ## Risk Assessment
 
 **Risks to participants:**
-- Minimal. Responses are anonymous; disclosure cannot reasonably place subjects at risk
+- Low. Records are session-coded and treated as pseudonymous, not anonymous (see Exempt Determination Pathway): no structural identifier is collected, but a participant's written answers are stored as written and can identify them or someone else if they include identifying details. The questions are designed so that disclosure is not reasonably expected to place subjects at risk; that cannot be guaranteed for what a participant chooses to write
 - Standard personality instruments in public domain
 - PHQ-8/GAD-7 screening items may surface distressing content — not diagnostic, disclaimer provided
 
@@ -183,7 +222,7 @@ This research is put forward for exempt status under 45 CFR 46.104(d)(2) — sur
 
 TCPS 2 applies only to research "conducted under the auspices of any institution that is eligible to receive and administer research funds from any of the three federal Agencies (CIHR, NSERC, SSHRC)." As an independent researcher with no institutional affiliation and no tri-council funding, this research is categorically outside TCPS 2's mandatory scope (Interagency Advisory Panel, Scope interpretation).
 
-Even if TCPS 2 applied, anonymous online surveys qualify for exemption from REB review under Article 2.4: "REB review is not required for research that relies exclusively on secondary use of anonymous information." The TCPS 2 glossary defines "anonymous information" as "information that never had identifiers associated with it (e.g., anonymous surveys)" — precisely this scenario.
+Even if TCPS 2 applied, anonymous online surveys qualify for exemption from REB review under Article 2.4: "REB review is not required for research that relies exclusively on secondary use of anonymous information." The TCPS 2 glossary defines "anonymous information" as "information that never had identifiers associated with it (e.g., anonymous surveys)". That definition fits the scale scores. It does not settle the written answers, which can carry identifying details a participant chooses to type; this protocol treats the records as pseudonymous rather than anonymous (see Anonymization Approach and Exempt Determination Pathway) and does not rest on this exemption for them.
 
 ### PIPEDA (Personal Information Protection and Electronic Documents Act)
 
@@ -201,17 +240,39 @@ Provincial equivalents (BC PIPA, Alberta PIPA) mirror PIPEDA's "identifiable ind
 
 Quebec's Act respecting the protection of personal information in the private sector (ARPPIPS, as amended by Law 25) defines personal information as "any information which relates to a natural person and allows that person to be identified" (s. 2).
 
-**Cross-border transfer (s. 17)**: ARPPIPS s. 17 requires a Transfer Impact Assessment and transparency notice before communicating personal information outside Quebec. These obligations are predicated on transferring "personal information." Data that is genuinely anonymous (never linked to identifiers) falls outside this definition. The consent disclosure explicitly states that interview text is "transferred to and processed on servers located in the United States" and that session data is stored on US-based servers — satisfying the transparency obligation even if the data were deemed personal.
+**Cross-border transfer (s. 17)**: ARPPIPS s. 17 requires a Transfer Impact Assessment and transparency notice before communicating personal information outside Quebec. These obligations are predicated on transferring "personal information." Data that is genuinely anonymous (never linked to identifiers) falls outside this definition. The consent disclosure states that interview text and scale scores are sent to Anthropic (US) through its Claude API with every request pinned to inference in the United States, and that session data is stored on US-based servers (Cloudflare) — satisfying the transparency obligation even if the data were deemed personal.
 
 The Quebec Anonymization Regulation (in force May 30, 2024) establishes that information is anonymous when "it is, at all times, reasonably foreseeable in the circumstances that it irreversibly no longer allows the person to be identified," assessed against correlation, individualization, and inference risks all being "very low." Psychometric scores with no linked identifiers satisfy this standard.
 
 ### Cross-Border Data Transfer
 
-Session data is stored in the United States; report generation is processed by a provider that publishes endpoints in more than one region:
+Session data is stored in the United States, and report generation is pinned to inference in the United States:
 - Session data: Cloudflare D1 (edge SQLite, US)
-- Interview text processing: OpenRouter (US), model GPT-5.6 Luna, onward to its serving provider. Since 2026-08-15 the request pins zero data retention, which narrows the serving provider for this model to Microsoft Azure and means the text is **not retained** at either hop. Azure's zero-retention endpoints for this model are published in both US and European regions, and the request does **not** pin which region serves it — so a given report may be processed outside the United States, transiently and without retention. This is a correction to the previous flat claim that all processing occurred in the US, which was never enforced by anything; whether to pin a region is an open question recorded against the Europe posture (`q-psyche-europe`).
+- Interview text processing (since 2026-10-18): Anthropic, through its Claude API, model Claude Opus 5.5 or Claude Haiku 5.5. Every request sets US-only inference (`inference_geo: "us"`); without it the API may run a request in any region Anthropic serves from. **This route does not have zero data retention.** Under Anthropic's standard terms for API traffic, as read on 2026-10-18, inputs and outputs are deleted from Anthropic's systems within 30 days, and Anthropic may access them for safety and security purposes in that time; if its automated safety systems flag a request as violating its usage policy it can keep the inputs and outputs for up to 2 years and the classification scores for up to 7 years; it may keep data longer where the law requires or where that is necessary to combat usage-policy violations; and, where its contract with this project permits, it may anonymise data for research or statistics and keep that longer. The organisation the site's key belongs to showed standard 30-day retention on the same date; zero data retention would need a separate agreement with Anthropic, which this project does not have.
+- Before that (2026-08-15 to 2026-10-18): OpenRouter (US), model GPT-5.6 Luna, onward to its serving provider, with zero data retention pinned, which narrowed the serving provider for that model to Microsoft Azure. Its zero-retention endpoints were published in US and European regions and no region was pinned, so a report from that period may have been processed outside the United States, transiently and without retention.
 
 The consent disclosure has been updated (v1.1, 2026-03-09) to explicitly state that data is "transferred to and processed on servers located in the United States" and that session data is "stored on US-based servers (Cloudflare)."
+
+### Europe position — 2026-08-23
+
+The project records and accepts the owner ruling of 2026-08-12: establishment and targeting do
+not presently reach this Canada-based project, while whether the assessment constitutes
+monitoring under GDPR Article 3(2)(b) is genuinely unresolved. That residual risk is knowingly
+accepted for this small non-commercial project. The position must be revisited if the project
+grows or begins active EU recruitment; this paragraph records the uncertainty and does not claim
+that European law is categorically inapplicable.
+
+## Privacy contact, complaints, access, and accuracy
+
+1. **Privacy-responsible person.** Ashita Orbis, the independent researcher and principal investigator, is responsible for privacy requests and can be reached publicly at `ashitaorbis@gmail.com`.
+2. **Written policies.** This protocol, `SECURITY.md`, the participant-eligibility protocol, and the live consent/data-map copy state the current handling rules; the live consent copy controls where a historical document conflicts with deployed behavior.
+3. **Complaint path.** Send a privacy complaint to `ashitaorbis@gmail.com` with “Psyche privacy complaint” in the subject. Do not include interview answers or other sensitive content in the email. Complaints must be acknowledged, investigated, and answered by the privacy-responsible person.
+4. **Access and correction procedure.** Send the session ID and session secret with the request; the secret-gated readback is the authentication check before the project locates or acts on a record. The locally stored session key currently expires seven days after session creation, so a later request may be impossible to authenticate; that mismatch remains open as `q-psyche-withdrawal-window`. A correction request is assessed against the stored record and the generated inference rather than silently rewriting the participant's raw answers.
+5. **Provider retention and deletion.** Report and persona calls go to Anthropic's Claude API from a single request builder. This route does not have zero data retention: under Anthropic's standard API terms (as read on 2026-10-18) inputs and outputs are deleted within 30 days, and can be kept longer in the exceptions those terms set out (see Cross-Border Data Transfer). Anthropic also holds billing and abuse-prevention records under its own terms. This project cannot inspect, shorten or delete provider-side copies; deleting or withdrawing a session removes this project's copy only.
+6. **Inferred information and accuracy.** The generated report and persona are inferred personal information, not facts supplied by the participant. They are subject to an accuracy duty: a challenged inference must be reviewed, corrected or clearly annotated where warranted, and never defended merely because a model produced it.
+
+Publishing this contact creates an ongoing duty to read and answer what arrives. It does not claim
+that the separate agent-managed inbox automation in `bq-1040` has been built.
 
 ### Age of Consent
 
@@ -238,6 +299,8 @@ Any changes to consent language, data collection scope, or anonymization approac
 | Date | Version | Changes |
 |------|---------|---------|
 | 2026-03-08 | 1.0 | Initial protocol |
+| 2026-11-20 | 1.8 | **Report route corrected.** Since 2026-10-18 reports and personas are written by Claude Opus 5.5, or Claude Haiku 5.5 when not enough of the month's budget for Opus 5.5 is left, through Anthropic's Claude API, with US-only inference pinned and **without zero data retention** (standard API retention: 30 days, with Anthropic's longer exceptions). The live consent copy changed with the route; this document did not, and went on stating the OpenRouter route and its zero-retention pin in the study description, the written-answers section, the Level 1 consent summary, the MCP-versus-web comparison, the cross-border section and contact item 5, all corrected here. The Level 1 summary also gains the 90-day rung for sessions with a report, and the retention section the provider-side copy. **Interview warning narrowed to what is live:** the 1.7 text said the interview screen warns before submission about contact details and details about other people; that warning has not shipped, and the live screen shows only the standing notice. **Two older statements corrected:** the MCP flow's "no third-party AI processing of interview text" (this project makes no model request there, but Anthropic handles that conversation under the participant's own Claude terms), and the risk assessment's "responses are anonymous" with the TCPS 2 note's "precisely this scenario" (the records are pseudonymous and the written answers can identify). The Data Retention section now states the research clock and named-purpose holds, what withdrawal deletes at once, and that the content-free session record goes at the first daily sweep after the withdrawal is more than 24 hours old (one to two days). The Quebec note's quotation of the consent is replaced by what the consent says today. No change to the live consent copy. |
+| 2026-08-23 | 1.7 | Enacted `q-psyche-written-answers` = A+C (the client-side interview warning it calls for had not shipped; see 1.8): complete client-side interview warning, no identifier detector or capture-time rewriting, restricted raw handling, and mandatory export/publication de-identification. Recorded `q-psyche-europe` = A as a dated accept-and-document position. Added the six-part contact, complaint, access/correction, provider-retention, and inferred-information accuracy procedure under `q-psyche-contact-page` = A. bq-1243 consistency correction (same date): the "Anonymization Approach" heading and the Level 1 / MCP consent summaries still said "no identifiers … at any point" / "Anonymous" without qualification, contradicting the "pseudonymous, not anonymous" position this same amendment already applies at the Exempt Determination Pathway. Reworded all three to scope the claim to structural/technical identifiers only and point to the free-text sections; no policy change, no change to the live consent copy. |
 | 2026-08-15 | 1.6 | **Zero data retention pinned** on the report/persona route (`provider.zdr = true`; rulings `q-luna-zdr-adopt` = A, `q-psyche-provider-zdr` = A). Ruled 2026-08-11 and again 2026-08-12, implemented 2026-08-15: both OpenRouter calls had set model and messages and nothing else, so participants' written answers were retained under the provider's defaults. Now built at a single choke point in `api/src/routes/psyche.ts` with a regression test, no non-ZDR fallback, and every disclosure surface updated **after** the config was verified. Pinning narrows the serving provider for this model to Microsoft Azure; the flat "all processing occurs in the United States" claim is corrected, because ZDR endpoints are published in US and European regions and no region is pinned. **Research set scoped to adults only** (`q-psyche-participants-r2` = A). Eligibility declared as the opening clause of the level-2 consent — merged into the consent sentence so it lands inside the frozen per-session record — and enforced at the API, which refuses a level-2 consent whose stored text lacks it. Level 1 untouched: no age gate at the door, and the 2026-08-11 ruling that removed one stands. Exempt-determination section now states the 45 CFR 46.104(b)(3) limitation that makes the scoping necessary, and drops the "anonymous survey research" characterisation in favour of the session-coded/pseudonymous framing set by the 2026-08-12 anonymity analysis. Retention section gains the `excluded` disposition. New companion document `docs/PARTICIPANT-ELIGIBILITY.md` carries the false-declaration rule, the exclusion-and-purge procedure, and the disclosure of the pre-amendment legacy cohort. |
 | 2026-08-11 | 1.5 | Corrected the record on why the scored instruments are website-only. The browser-scoring justification is retired — it fixed where an arithmetic operation happens and never guaranteed what leaves the device — and is replaced by administration fidelity, the disproportion between an unverifiable caller attestation and a 24-month research consent, and the refusal to administer depression and anxiety screens conversationally. The MCP Level 1 consent script no longer says scores are computed in the user's browser; it says no psychometric scales are administered on that route, matching the shipped tool text. No change to the rule itself. |
 | 2026-08-11 | 1.4 | Retention holds introduced: a session may be kept past the 24-month research clock only under a **named research purpose** recorded in `psyche_retention_holds` with the ruling that authorised it. First and only holds: three research-consented sessions retained for the interview-correlation study (`q-psyche-research-rows` = C). Withdrawal ends a hold. |

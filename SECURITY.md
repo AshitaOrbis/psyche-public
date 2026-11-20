@@ -58,17 +58,21 @@ corrected on 2026-08-12 (below).
 
 **The hosted battery** ([app.ashitaorbis.com/psyche](https://app.ashitaorbis.com/psyche))
 **does have a backend**: a Cloudflare Worker with a D1 database, in the United States. Scale
-items are displayed and scored in your browser and your individual item answers are not
-transmitted — only the computed scale scores, your ten written interview answers, a random
-session ID, and your report if you generate one. Those are stored server-side under a
+items are displayed and scored in your browser, and your individual item answers are not
+transmitted unless you opt in to research use at the end, which uploads them at that moment.
+Otherwise what is sent is the computed scale scores, your ten written interview answers, a
+random session ID, and your report if you generate one. Those are stored server-side under a
 published retention ladder (7 days / 90 days / research opt-in). There are no accounts, no
 cookies, and no device identifiers, and the application stores no IP address — though
 Cloudflare, as the host, processes standard request metadata including your IP in order to
-serve any request. Generating a report sends your scores and interview text to OpenRouter and
-onward to the serving provider, on a route that pins zero data retention: the request
-restricts routing to endpoints which retain neither the prompt nor the completion, so
-that content is not kept at either hop. What those two still hold is billing and
-abuse-prevention metadata about the request itself, under their policies rather than ours.
+serve any request. Generating a report sends your scores and interview text to Anthropic,
+through its Claude API, with inference pinned to the United States. **This route does not
+have zero data retention**: under Anthropic's standard API terms, as read on 18 October
+2026, that content is deleted from Anthropic's systems within 30 days, and it can be kept
+longer in the exceptions those terms set out (among them a request Anthropic's safety
+systems flag, and what the law requires), which the consent copy lists in full. Anthropic
+also keeps billing and abuse-prevention records about the request under its own policies.
+Deleting your session removes our copy, not Anthropic's.
 
 **Running this repository yourself** is the local-only case: self-report data stays in browser
 localStorage, because you supply your own storage and your own API keys.
@@ -76,6 +80,13 @@ localStorage, because you supply your own storage and your own API keys.
 For the full statement, including the retention ladder and the named processor, see
 [Live Deployment](README.md#live-deployment) in `README.md` — and the consent copy on the
 assessment, which outranks both.
+
+> **Correction, 2026-11-20.** Until this date, this section stated that report generation went
+> to OpenRouter on a route that pinned zero data retention, so that the content was kept at
+> neither hop. That stopped being true on 18 October 2026, when report generation moved to
+> Anthropic's Claude API under standard retention. The consent copy on the assessment changed
+> that day; this file and `README.md` did not. The same correction adds, above, that opting in
+> to research use uploads your individual item answers, which this section had left out.
 
 > **Correction, 2026-08-12.** Until this date, this section stated that the hosted battery had
 > "no backend of its own" and that "results stay in browser localStorage". That was false for
