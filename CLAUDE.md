@@ -7,7 +7,7 @@ Open-source framework for constructing reliable personality profiles by triangul
 | Component | Technology |
 |-----------|-----------|
 | Web App | React 19, TypeScript, Vite 6, Zustand, Recharts |
-| Report Generation | GPT-5.6 Luna via OpenRouter (production, since 2026-08-05), prompt in `psyche.ts` |
+| Report Generation | Claude Opus 5.5, with Claude Haiku 5.5 fallback, through the Claude API (production since 2026-10-18), prompt in `psyche.ts` |
 | Analysis | Python 3.12, Anthropic SDK, Empath, HuggingFace (optional) |
 | Package Mgr | pnpm (web), uv (analysis) |
 | Testing | Vitest (web), pytest (analysis) |
@@ -69,7 +69,7 @@ Continuing runs through the alias silently mixes two model versions in one datas
 
 ## Report Generation (Psyche Public)
 
-Production report generation at `app.ashitaorbis.com/psyche` uses **GPT-5.6 Luna** via OpenRouter (owner ruling 2026-08-05; previously Kimi K2.5 via DeepInfra, and before that DeepSeek V3). The system prompt includes a safety clause, at prompt version 1.3.0 since the public battery became PHQ-8 on 2026-08-11.
+Production report and optional persona generation at `app.ashitaorbis.com/psyche` uses **Claude Opus 5.5** through Anthropic's Claude API, with **Claude Haiku 5.5** when not enough of the month's budget for Opus 5.5 is left for the request; when neither fits, nothing is sent (since 2026-10-18; previously GPT-5.6 Luna via OpenRouter with zero data retention pinned, before that Kimi K2.5 via DeepInfra, and before that DeepSeek V3). Requests pin US inference. **This route does not have zero data retention**: see [Live Deployment](README.md#live-deployment) for the retention terms and the separate MCP route. The system prompt includes a safety clause, at prompt version 1.3.0 since the public battery became PHQ-8 on 2026-08-11.
 
 | Component | Location |
 |-----------|----------|

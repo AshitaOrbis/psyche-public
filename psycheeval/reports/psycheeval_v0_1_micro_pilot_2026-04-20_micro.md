@@ -54,7 +54,7 @@ The right interpretation is methodological: v0.1 tests whether the evaluation de
 | Element | Value |
 |---|---|
 | Personas | 8 (4 public-inspired + 4 pure synthetic) |
-| Source packets | 4 (all `source_grounding: high`, 7 real URLs each) |
+| Source packets | 4, 7 real URLs each; grounding **low** by this project's own rule, though the packet files say `source_grounding: high` (corrected 2026-11-22; see the note below this table) |
 | Scenarios | 48 (6 per persona, 8 families, difficulty 2–5) |
 | Profile bundles | 8 (C1–C4 for all, C5 for the 4 public-inspired) |
 | Authors | Opus 4.7, GPT-5.4 |
@@ -65,6 +65,8 @@ The right interpretation is methodological: v0.1 tests whether the evaluation de
 | Pairwise comparisons | Re-run 2026-04-24 after prompt fix (see §Pairwise) |
 | Temperature | 0.7 |
 | Blinding | Condition letters randomized per scenario; author model also blinded from judge |
+
+**Correction (2026-11-22).** This row first read "4 (all `source_grounding: high`, 7 real URLs each)". The URLs are real. Checked on 2026-11-22, 25 of the 28 served their page and none returned not-found; the other 3 refused the automated request (HTTP 403), and of those, two are registered DOIs that resolve to their publishers' pages and one, a U.S. Senate PDF, has a web-archive copy captured on 2026-11-14. But no retrieval run gathered them. On 2026-04-20 the source-hunt script ran on its fallback path, which asks GPT-5.4 for representative public material on each figure, with a URL only where the model knows a real one, and the model wrote all 28 entries; no retrieval record was kept. This project's plan (`PLAN.md` §2.4) and the module that implements it (`src/psycheeval/source_hunt.py`) define packets from that path as `source_grounding: "low"`, and the code of that date did not enforce it. In v0.1 to v0.3, the public-anchor C5 conditions and the variants built from them ran on these packets; no finding has been shown wrong. The packet files keep the label the April run wrote, for the reason given in [`data/source_packets/PROVENANCE.md`](../data/source_packets/PROVENANCE.md).
 
 ### Profile conditions
 
